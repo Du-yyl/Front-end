@@ -1,0 +1,34 @@
+<!--
+  ~ Date:2021/12/17 14:16 35
+  ~ Name:2、forin-3.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/for、for-in、for-of、forEach的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forin</title>
+
+</head>
+<body>
+<pre>
+	索引是字符串型的数字，因而不能直接进行几何运算
+	遍历顺序可能不是实际的内部顺序
+	for in会遍历数组所有的可枚举属性，包括原型。例如的原型方法method和name属性
+
+	for of 不遍历method和name,适合用来遍历数组
+</pre>
+</body>
+<script>
+	let obj = {a: '1', b: '2', c: '3', d: '4'}
+	for (let o in obj) {
+		console.log(o)    //遍历的实际上是对象的属性名称 a,b,c,d
+		console.log(obj[o])  //这个才是属性对应的值1，2，3，4
+		console.log(typeof o);
+	}
+</script>
+</html>

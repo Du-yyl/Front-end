@@ -1,0 +1,44 @@
+<!--
+  ~ Date:2021/11/25 下午1:53
+  ~ Name:4、去除字符串前后空白（自己拓展函数）.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/4、去除字符串前后空白（自己拓展函数）.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去除字符串前后空白</title>
+</head>
+<body>
+<input id="text" type="text">
+<input id="btn" type="button" value="我是按钮">
+<script>
+    /*
+    * ie11之前无法使用这个trim函数，要进行自己拓展*/
+    window.onload = () => {
+        document.getElementById('btn').onclick = function () {
+            var str1 = document.getElementById('text').value
+            str1 = str1.trim();
+            alert('-->' + str1 + '<--')
+        }
+    }
+
+    /*
+    * 自己拓展的trim函数*/
+    // String.prototype.trim = function () {
+    //     return this.replace(/^\s+/, "").replace(/\s+$/, "")
+    // }
+    // window.onload = function () {
+    //     document.getElementById('btn').onclick = function () {
+    //         var str1 = document.getElementById('text').value
+    //         str1 = str1.trim()
+    //         alert('-->' + str1 + '<--')
+    //     }
+    // }
+</script>
+</body>
+</html>

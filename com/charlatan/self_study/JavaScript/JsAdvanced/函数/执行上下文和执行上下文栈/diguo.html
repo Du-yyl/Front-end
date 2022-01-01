@@ -1,0 +1,33 @@
+<!--
+  ~ Date:2021/12/13 15:02 36
+  ~ Name:diguo.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/函数/执行上下文和执行上下文栈
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	let ans = 0;
+
+	function diGui(num) {
+		if (num < 1) {
+			return 1
+		}
+		ans += num
+		diGui(--num)
+	}
+	diGui(5)
+	alert(ans)
+</script>
+</html>

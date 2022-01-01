@@ -1,0 +1,442 @@
+<!--
+  ~ Date:2021/11/8 下午5:04
+  ~ Name:万科.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_3/day_1/operation_2/万科.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>万科</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #box {
+            /*width: 1620px;*/
+            width: 100%;
+            height: 70px;
+            background-color: whitesmoke;
+            overflow: hidden;
+        }
+
+        #img {
+            position: absolute;
+            top: 30px;
+            left: 190px;
+        }
+
+        /*    -----------------标签*/
+        #body {
+            margin-left: 530px;
+        }
+
+        .body_li {
+            list-style: none;
+            float: left;
+            word-spacing: 20px;
+            color: #666666;
+            font-weight: bold;
+            line-height: 70px;
+            text-align: center;
+            font-size: 14px;
+            width: 88px;
+            z-index: 999999999;
+            overflow: hidden;
+        }
+
+        #s2 {
+            color: white;
+        }
+
+        #dody_ul {
+            overflow: hidden;
+        }
+
+        #body {
+            /*overflow: hidden;*/
+        }
+
+        #li_1 {
+            width: 50px;
+            list-style: none;
+            float: left;
+            word-spacing: 20px;
+            color: #666666;
+            font-weight: bold;
+            line-height: 70px;
+            text-align: center;
+            font-size: 14px;
+            /*width: 88px;*/
+            z-index: 999999999;
+        }
+
+        #li_5 {
+            width: 95px;
+        }
+
+        #li_8 {
+            border-right: 1px solid #e5e5e5;
+        }
+
+        .color {
+            height: 70px;
+            width: 88px;
+            background-color: red;
+            display: inline-block;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            transition: top 300ms;
+            z-index: 0;
+        }
+
+        #c_1 {
+            height: 70px;
+            background-color: red;
+            display: inline-block;
+            position: absolute;
+            transition: top 300ms;
+            z-index: 0;
+            width: 50px;
+            left: 530px;
+            top: 0;
+            /*color: white;*/
+        }
+
+        #c_2 {
+            left: 580px;
+        }
+
+        #c_3 {
+            left: 668px;
+        }
+
+        #c_4 {
+            left: 756px;
+        }
+
+        #c_5 {
+            width: 95px;
+            left: 844px;
+        }
+
+        #c_6 {
+            left: 939px;
+        }
+
+        #c_7 {
+            left: 1027px;
+        }
+
+        #c_8 {
+            width: 89px;
+            left: 1115px;
+        }
+
+        .b1 {
+            z-index: 99999;
+            position: relative;
+        }
+
+        .body_li:hover {
+            color: white;
+        }
+
+        .body_li:hover .color {
+            top: 0;
+        }
+
+        .body_li:hover + #c_1 {
+            color: #666666;
+        }
+
+        .body_li:hover #c_1 {
+            top: 70px;
+        }
+
+        #border {
+            width: 100%;
+            height: 70px;
+            background-color: white;
+            position: absolute;
+            z-index: 99;
+            top: 70px;
+        }
+
+        /*--------灰色---------------------*/
+        #bl_ul {
+            position: relative;
+        }
+
+        .btn_1 {
+            background-color: #4c4a4f;
+            position: absolute;
+        }
+
+        .bl_li {
+            position: absolute;
+        }
+
+        #btn_1_1 {
+            position: absolute;
+            width: 900px;
+            height: 90px;
+            top: 90px;
+            left: 139px;
+            z-index: 999;
+        }
+
+        /*    -----------search*/
+        #la {
+            width: 24px;
+            height: 24px;
+            background-image: url("file/icon_search.png");
+            background-size: 24px;
+            position: absolute;
+            top: 24px;
+            left: 1240px;
+            /*background-color: black;*/
+
+        }
+
+        #la:hover {
+            background-image: url("file/search.png");
+            background-size: 24px;
+        }
+
+        /*    ------------语言*/
+        #lang {
+
+            width: 90px;
+            height: 30px;
+            position: absolute;
+            top: 26px;
+            left: 1280px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #7c7a7f;
+        }
+
+        #lang:hover {
+            color: red;
+        }
+
+        /*    -----群聊*/
+        #jian {
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            left: 1335px;
+            top: 26px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #807d83;
+            z-index: 999999999999999;
+        }
+
+        #img_1 {
+            width: 7px;
+            height: 4px;
+            position: relative;
+            left: 59px;
+            top: -9px;
+            z-index: 99999999;
+            background-image: url("file/xiajiantou.png");
+        }
+
+        #jian:hover {
+            color: red;
+        }
+
+        #jian:hover #img_1 {
+            background-image: url("file/xiajiantou-1.png");
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <img height="26" id="img" src="file/logo.png">
+    <!--    zhu ti ----------->
+    <div id="body">
+        <ul id="dody_ul">
+            <li id="li_1">
+                <span class="b1" id="s2"> 首页</span>
+                <span id="c_1"></span>
+            </li>
+            <li class="body_li" id="li_2">
+                <span class="b1"> 万科企业</span>
+                <span class="color" id="c_2"></span>
+            </li>
+            <li class="body_li" id="li_3">
+                <span class="b1"> 新闻中心</span>
+                <span class="color" id="c_3"></span>
+            </li>
+            <li class="body_li" id="li_4">
+                <span class="b1"> 产品服务</span>
+                <span class="color" id="c_4"></span>
+            </li>
+            <li class="body_li" id="li_5">
+                <span class="b1"> 投资者关系</span>
+                <span class="color" id="c_5"></span>
+            </li>
+            <li class="body_li" id="li_6">
+                <span class="b1"> 企业公民</span>
+                <span class="color" id="c_6"></span>
+            </li>
+            <li class="body_li" id="li_7">
+                <span class="b1"> 加入万科</span>
+                <span class="color" id="c_7"></span>
+            </li>
+            <li class="body_li" id="li_8">
+                <span class="b1"> 投诉建议</span>
+                <span class="color" id="c_8"></span>
+            </li>
+        </ul>
+
+        <!--        -----------hui se-->
+
+        <ul id="bl_ul">
+            <li class="bl_li" id="bl_li_1">
+                <span class="btn_1" id="btn_1_1"></span>
+                <span class="btn">
+                    <ul class="btn_ul">
+                        <li>
+                            集团介绍
+                        </li>
+                         <li>
+                            团队介绍
+                        </li>
+                        <li>
+                            大事记
+                        </li>
+                    </ul>
+                </span>
+            </li>
+            <li class="bl_li" id="bl_li_2">
+                <span class="btn_1" id="btn_1_2"></span>
+                <span class="btn">
+                    <ul class="btn_ul">
+                        <li>
+                            集团新闻
+                        </li>
+                         <li>
+                            地方动态
+                        </li>
+                        <li>
+                            媒体报道
+                        </li>
+                    </ul>
+                </span>
+            </li>
+            <li class="bl_li" id="bl_li_3">
+                <span class="btn_1" id="btn_1_3"></span>
+                <span class="btn">
+                    <ul class="btn_ul">
+                        <li>
+                            万科地产
+                        </li>
+                         <li>
+                            万物云
+                        </li>
+                        <li>
+                            印力集团
+                        </li>
+                        <li>
+                            泊寓
+                        </li>
+                         <li>
+                            万玮物流
+                        </li>
+                        <li>
+                            冰雪度假
+                        </li>
+                    </ul>
+                </span>
+            </li>
+            <li class="bl_li" id="bl_li_4">
+                <span class="btn_1" id="btn_1_4"></span>
+                <span class="btn">
+                    <ul class="btn_ul">
+                        <li>
+                            最新公告
+                        </li>
+                         <li>
+                            财务信息
+                        </li>
+                        <li>
+                            投资者推介
+                        </li>
+                        <li>
+                            投资者来访
+                        </li>
+                         <li>
+                            公司治理
+                        </li>
+                        <li>
+                            投资者教育基地
+                        </li>
+                    </ul>
+                </span>
+            </li>
+            <li class="bl_li" id="bl_li_5">
+                <span class="btn_1" id="btn_1_5"></span>
+                <span class="btn">
+                    <ul class="btn_ul">
+                        <li>
+                            社会责任报告
+                        </li>
+                         <li>
+                            万科公益基金会
+                        </li>
+                    </ul>
+                </span>
+            </li>
+            <li class="bl_li" id="bl_li_6">
+                <span class="btn_1" id="btn_1_6"></span>
+                <span class="btn">
+                    <ul class="btn_ul">
+                        <li>
+                            校园招聘
+                        </li>
+                         <li>
+                            社会招聘
+                        </li>
+                    </ul>
+                </span>
+            </li>
+
+        </ul>
+    </div>
+    <!--   --------盖住红色---------->
+    <div id="border"></div>
+    <!--    ------------------>
+    <div id="search">
+        <a href="#">
+            <div id="la">
+
+            </div>
+        </a>
+        <div id="lang">
+            中/EN
+        </div>
+        <div id="jian">
+            万科群聊
+            <div id="img_1">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

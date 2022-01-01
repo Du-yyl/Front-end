@@ -1,0 +1,41 @@
+<!--
+  ~ Date:2021/11/28 下午12:22
+  ~ Name:13、JS方法的属性名和属性值.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/13、JS方法的属性名和属性值.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法的属性名和属性值</title>
+</head>
+<body>
+<p>
+    JS中方法的属性名什么都可以 <br>
+    当使用特殊字符，如数字，文字时需要使用中括号进行访问，用点会报错
+</p>
+<script>
+    var o1 = {};
+    o1.name = 12;
+    o1["123"] = 123
+    o1["锄禾日当午"] = "汗滴禾下土"
+    console.log(o1.name)
+    console.log(o1["123"])
+    console.log(o1["锄禾日当午"])
+
+    // var n1 = "123"
+    var n1 = "锄禾日当午"
+    console.log(o1[n1])
+
+    //    in运算符
+    alert("锄禾日当午" in o1)
+
+    console.log("name" in o1)
+
+</script>
+</body>
+</html>

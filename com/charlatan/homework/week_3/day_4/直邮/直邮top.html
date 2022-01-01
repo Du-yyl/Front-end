@@ -1,0 +1,587 @@
+<!--
+  ~ Date:2021/11/11 下午7:27
+  ~ Name:直邮top.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_3/day_4/直邮/直邮top.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直邮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /*顶部背景图*/
+        #top_back {
+            position: absolute;
+            top: 0;
+            width: 1646px;
+            height: 100px;
+            background-image: url("file/picc.jpg");
+            background-size: 1646px;
+        }
+
+        #top_back:hover {
+            cursor: pointer;
+        }
+
+        /*    第二部分*/
+        #top_top {
+            width: 1646px;
+            height: 40px;
+            background-color: #171c2d;
+            position: relative;
+            top: 100px;
+        }
+
+        #top_top_left {
+            position: absolute;
+            height: 50px;
+            line-height: 50px;
+            color: rgba(232, 227, 210, 0.62);
+            font-size: 13px;
+            font-weight: lighter;
+            top: -4px;
+            left: 240px;
+        }
+
+        #top_top ul {
+            position: absolute;
+            left: 900px;
+            top: 12px;
+        }
+
+        #top_top ul li {
+            float: left;
+            color: #e8e3d2;
+            margin-left: 30px;
+            font-size: 13px;
+            font-weight: lighter;
+        }
+
+        #l2 {
+            /*position: relative;*/
+            /*top: 2px;*/
+            margin-top: 2px;
+        }
+
+        #top_top ul li:hover {
+            cursor: pointer;
+        }
+
+        /*    第三部分*/
+        #top_NavigationBar {
+            width: 1646px;
+            height: 90px;
+            position: absolute;
+            top: 140px;
+        }
+
+        #logo {
+            position: absolute;
+            top: 30px;
+            left: 160px;
+        }
+
+        #NB_ul {
+            position: absolute;
+            left: 350px;
+            top: 35px;
+        }
+
+        #NB_ul li {
+            float: left;
+            width: 90px;
+            text-align: center;
+            color: #6f6f6f;
+        }
+
+        .NB_li {
+            width: 100px;
+            height: 80px;
+            position: relative;
+            top: -30px;
+            line-height: 80px;
+            margin-left: 20px;
+            z-index: 99 !important;
+        }
+
+        #NB_l1 {
+            width: 100px;
+            height: 80px;
+            position: relative;
+            top: -30px;
+            line-height: 80px;
+            color: #2646b5 !important;
+        }
+
+        .NB_div {
+            width: 86px;
+            height: 10px;
+            background-color: white;
+            position: relative;
+            left: 3px;
+            top: -6px;
+            display: block;
+        }
+
+
+        #NB_div_1 {
+            width: 86px;
+            height: 10px;
+            background-color: #2646b5;
+            position: absolute;
+            left: 3px;
+            top: 45px;
+        }
+
+        .NB_li:hover {
+            color: #2646b5 !important;
+            cursor: pointer;
+        }
+
+        .NB_li:hover .NB_div {
+            background-color: #2344b4;
+        }
+
+
+        #NB_ul:hover #NB_div_1 {
+            background-color: white !important;
+        }
+
+        #NB_ul:hover #NB_l1 {
+            color: black !important;
+        }
+
+        #NB_l1:hover {
+            cursor: pointer;
+        }
+
+        #NB_l1:hover + #NB_div_1 {
+            cursor: pointer;
+            background-color: #2344b4 !important;
+        }
+
+        /*-----------------------*/
+        #gaoxin {
+            width: 90px;
+            /*height: 130px;*/
+            height: 0;
+            background-color: whitesmoke;
+            position: relative;
+            top: -5px;
+            left: 0;
+            overflow: hidden;
+            z-index: 999999999;
+            transition: all 1s;
+        }
+
+        #GX_ul {
+            position: relative;
+            top: 10px;
+        }
+
+        .GX_li {
+            margin-top: -5px !important;
+
+            width: 110px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+            /*top: 20px;*/
+        }
+
+        .GX_li:hover {
+            background-color: #0000d0;
+            color: white !important;
+        }
+
+        #NB_l4:hover #gaoxin {
+            height: 115px;
+        }
+
+        /*  ----------------------------------*/
+        #xueyuan {
+            width: 90px;
+            /*height: 115px;*/
+            height: 0;
+            background-color: whitesmoke;
+            position: relative;
+            top: -5px;
+            left: 0;
+            overflow: hidden;
+            transition: all 1s;
+            z-index: 999999999;
+        }
+
+        #XY_ul {
+            position: relative;
+            top: 10px;
+        }
+
+        .XY_li {
+            margin-top: -5px !important;
+
+            width: 110px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+            /*top: 20px;*/
+        }
+
+        .XY_li:hover {
+            background-color: #0000d0;
+            color: white !important;
+        }
+
+        #NB_l5:hover #xueyuan {
+            height: 120px;
+        }
+
+        /*    -----------*/
+        #guanyv {
+            width: 90px;
+            /*height: 115px;*/
+            height: 0;
+            background-color: whitesmoke;
+            position: relative;
+            top: -5px;
+            left: 0;
+            overflow: hidden;
+            transition: all 1s;
+            z-index: 999999999;
+        }
+
+        #GY_ul {
+            position: relative;
+            top: 10px;
+        }
+
+        .GY_li {
+            margin-top: -5px !important;
+
+            width: 110px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+            /*top: 20px;*/
+        }
+
+        .GY_li:hover {
+            background-color: #0000d0;
+            color: white !important;
+        }
+
+        #NB_l9:hover #guanyv {
+            height: 120px;
+        }
+
+        /*    ----------------------------------------*/
+        #Carousel {
+            width: 1646px;
+            height: 492px;
+            background-color: #CCFFFF;
+            position: relative;
+            top: 190px;
+        }
+
+        #C_span {
+            position: absolute;
+            left: 0px;
+            z-index: 2;
+        }
+
+        .img1 {
+            position: relative;
+            top: 4px;
+            left: 11px;
+            /*display: none;*/
+        }
+
+        .img2 {
+            position: relative;
+            top: 4px;
+            left: -15px;
+            /*display: none;*/
+
+        }
+
+
+        #C_span li {
+            width: 250px;
+            height: 41px;
+            background-color: rgba(0, 0, 0, 0.72);
+            line-height: 41px;
+            color: white;
+            position: relative;
+            left: 0px;
+            margin-left: 212px;
+        }
+
+        #C_span li:hover {
+            background-color: rgba(255, 255, 255, 0.59);
+            color: black;
+            cursor: pointer;
+        }
+
+        .sup {
+            color: red;
+        }
+
+        .img4 {
+            position: absolute;
+            left: 0;
+            z-index: 0;
+            transition: all 1s;
+        }
+
+        #C_img li {
+            transition: all 1s;
+        }
+
+        .yuan {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            z-index: 9999999;
+            position: relative;
+            float: left;
+            margin-left: 20px;
+            border: 2px solid whitesmoke;
+            top: 440px;
+            left: 50%;
+        }
+
+        .yuan:hover {
+            transition: 1s;
+            background-color: whitesmoke;
+        }
+
+        #Y_1:hover + #b_1 {
+            z-index: 1;
+        }
+
+        #Y_2:hover + #b_2 {
+            z-index: 1;
+        }
+
+        #Y_3:hover + #b_3 {
+            z-index: 1;
+        }
+
+        #Y_4:hover + #b_4 {
+            z-index: 1;
+        }
+
+        #Y_5:hover + #b_5 {
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+<div id="top_back"></div>
+<div id="top_top">
+    <span id="top_top_left">
+        欢迎来到IT培训的黄埔军校——智游教育！
+    </span>
+    <ul>
+        <li id="l1">
+            <img src="file/phone.png" height="16" alt="电话">
+            4006-371-555
+        </li>
+        <li id="l2">
+            0371-88888598
+        </li>
+        <li id="l3">
+            <img src="file/we.png" height="14" alt="我们">
+            联系我们
+        </li>
+        <li id="l4">
+            <img src="file/sc.png" height="14" alt="收藏">
+            加入收藏
+        </li>
+    </ul>
+</div>
+<div id="top_NavigationBar">
+    <img src="file/logo.png" height="42" alt="logo" id="logo">
+    <ul id="NB_ul">
+        <li id="NB_l1">
+            首页
+        </li>
+        <div id="NB_div_1"></div>
+        <li id="NB_l2" class="NB_li">
+            在线精品课
+            <div class="NB_div"></div>
+        </li>
+
+        <li id="NB_l3" class="NB_li">
+            专家师资
+            <div class="NB_div"></div>
+        </li>
+
+        <li id="NB_l4" class="NB_li">
+            高薪就业
+            <img src="file/箭头.png" height="8" alt="箭头" class="jiantou">
+            <div class="NB_div"></div>
+
+            <div id="gaoxin">
+                <ul id="GX_ul">
+                    <li class="GX_li">就业喜报</li>
+                    <li class="GX_li">就业渠道</li>
+                    <li class="GX_li">创业学院</li>
+                </ul>
+            </div>
+
+        </li>
+
+        <li id="NB_l5" class="NB_li">
+            学员专区
+            <img src="file/箭头.png" height="8" alt="箭头" class="jiantou">
+            <div class="NB_div"></div>
+
+            <div id="xueyuan">
+                <ul id="XY_ul">
+                    <li class="XY_li">学员感言</li>
+                    <li class="XY_li">学员作品</li>
+                    <li class="XY_li">学院活动</li>
+                </ul>
+            </div>
+
+        </li>
+
+        <li id="NB_l6" class="NB_li">
+            研发中心
+            <div class="NB_div"></div>
+        </li>
+
+        <li id="NB_l7" class="NB_li">
+            校企合作
+            <div class="NB_div"></div>
+        </li>
+
+        <li id="NB_l8" class="NB_li">
+            高等教育
+            <div class="NB_div"></div>
+        </li>
+
+        <li id="NB_l9" class="NB_li">
+            关于直邮
+            <img src="file/箭头.png" height="8" alt="箭头" class="jiantou">
+            <div class="NB_div"></div>
+
+            <div id="guanyv">
+                <ul id="GY_ul">
+                    <li class="GY_li">学员感言</li>
+                    <li class="GY_li">学员作品</li>
+                    <li class="GY_li">学院活动</li>
+                </ul>
+            </div>
+
+        </li>
+
+        <li id="NB_l10" class="NB_li">
+            直邮论坛
+            <div class="NB_div"></div>
+        </li>
+        <li id="NB_l11" class="NB_li">
+            学费学时
+            <div class="NB_div"></div>
+        </li>
+
+    </ul>
+</div>
+<div id="Carousel">
+    <ul id="C_span">
+
+        <li>
+            <img src="file/a1.png" height="20" class="img1" alt="web">
+            <img src="file/aa1.png" height="20" class="img2" alt="web">
+            Web大前端全栈开发 <sup class="sup">Hot</sup></li>
+        <li>
+            <img src="file/a3.png" height="20" class="img1">
+            <img src="file/aa3.png" alt="20" class="img2" height="20">
+            UI设计+产品经理 <sup class="sup">Hot</sup></li>
+        <li>
+            <img src="file/a5.png" height="20" class="img1">
+            <img src="file/aa5.png" alt="20" class="img2" height="20">
+            Java企业级开发 <sup class="sup">Hot</sup></li>
+        <li>
+            <img src="file/a5.png" height="20" class="img1">
+            <img src="file/aa5.png" alt="20" class="img2" height="20">
+            Java大数据开发 <sup class="sup">Hot</sup></li>
+        <li>
+            <img src="file/a6.png" height="20" class="img1">
+            <img src="file/aa6.png" alt="20" class="img2" height="20">
+            AI人工智能
+        </li>
+        <li>
+            <img src="file/a7.png" height="20" class="img1">
+            <img src="file/aa7.png" alt="20" class="img2" height="20">
+            软件测试
+        </li>
+        <li>
+            <img src="file/a8.png" height="20" class="img1">
+            <img src="file/aa8.png" alt="20" class="img2" height="20">
+            Python开发
+        </li>
+        <li>
+            <img src="file/a9.png" height="20" class="img1">
+            <img src="file/aa9.png" alt="20" class="img2" height="20">
+            Unity3D+VR开发
+        </li>
+        <li>
+            <img src="file/a10.png" height="20" class="img1">
+            <img src="file/aa10.png" alt="20" class="img2" height="20">
+            网络信息安全
+        </li>
+        <li>
+            <img src="file/a11.png" height="20" class="img1">
+            <img src="file/aa11.png" alt="20" class="img2" height="20">
+            新媒体短视频运营
+        </li>
+        <li>
+            <img src="file/a11.png" height="20" class="img1">
+            <img src="file/aa11.png" alt="20" class="img2" height="20">
+            芯片研发+人工智能
+        </li>
+        <li>
+            <img src="file/a11.png" height="20" class="img1">
+            <img src="file/aa11.png" alt="20" class="img2" height="20">
+            高等教育
+        </li>
+    </ul>
+
+    <ul id="C_img">
+        <li class="yuan" id="Y_1"></li>
+        <li class="img4" id="b_1"><img src="file/b1.jpg" height="493" width="1646px"></li>
+
+        <li class="yuan" id="Y_2"></li>
+        <li class="img4" id="b_2"><img src="file/b2.jpg" height="493" width="1646px"></li>
+
+        <li class="yuan" id="Y_3"></li>
+        <li class="img4" id="b_3"><img src="file/b3.jpg" height="493" width="1646px"></li>
+
+        <li class="yuan" id="Y_4"></li>
+        <li class="img4" id="b_4"><img src="file/b4.jpg" height="493" width="1646px"></li>
+
+        <li class="yuan" id="Y_5"></li>
+        <li class="img4" id="b_5"><img src="file/b5.jpg" height="493" width="1646px"></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--
+  ~ Date:2021/12/13 15:10 39
+  ~ Name:1、作用域.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/函数/作用域和作用域链
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作用域</title>
+
+</head>
+<body>
+<pre>
+   分类
+    全局作用域
+    函数作用域
+    没有块作用域(ES6有了)
+</pre>
+</body>
+<script>
+
+	var obj = {
+		fn2: function () {
+
+			console.log(this.fn2);
+			console.log(fn2)
+		}
+	}
+	obj.fn2()
+	
+
+</script>
+</html>

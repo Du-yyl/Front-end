@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML中嵌入JS代码的第二种方式</title>
+</head>
+<body>
+<input type="button" value="我是按钮1"/>
+<!--  使用脚本块-->
+<script type="text/javascript">
+  /*
+  * 暴漏在脚本块中的程序，会在页面打开的时候执行，并且自上而下逐行执行
+  * (这个代码不需要事件,直接执行)
+  * */
+  /*
+  * JS中脚本块在一个页面中可以出现多次;
+  * 并且出现的位置没有要求,随意;
+  * JS和Java注释一样
+  * */
+  window.alert("ni,hao")//alert函数有阻塞代码加载的作用,不点击一直不会向下加载
+  alert('nihao')
+</script>
+
+
+<input type="button" value="我是按钮"/>
+
+
+</body>
+</html>

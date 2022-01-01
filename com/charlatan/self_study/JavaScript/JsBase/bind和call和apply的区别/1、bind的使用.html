@@ -1,0 +1,69 @@
+<!--
+  ~ Date:2021/12/28 13:52 38
+  ~ Name:1、bind的使用.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/bind和call和apply的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bind的使用</title>
+
+</head>
+<body>
+<pre>
+	bind() 方法创建一个新的函数，在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，
+	而其余参数将作为新函数的参数，供调用时使用。
+
+
+	在定时器或者一个以后自动的调用的方法中，以及this指定不明时，会出现window作为调用者的时机，
+	这是因为让window调用并不是想要的结果，可以使用call以及apply进行只当调用者和要调用的回调方法
+	也能使用bind进行指定
+
+	如下例子中，指定的this，在a的块定义域中，c是可以访问到的，但是到了b中，因为是一个方法
+	是一个新的内存空间，this指向的是调用者，而最下面的调用的时候，调用者就是window，返回值会是undefined，
+	当我们要指定调用的对象时，可以在方法后调用bind方法，将指定的调用者进行传递，因为这里是能访问到this的，所以传入的参数就是this
+	就可以达到指定的结果
+
+	相对与call和apply，bind不用指定要调用的方法，只需要在指定的方法末尾传入指定的方法就行
+
+
+	call()和bind()的区别：
+		相同点：都是用来改变this的指向
+		不同点：call()改过this的指向后，会再执行函数，bind()改过this后，不执行函数，会返回一个绑定新this的函数
+</pre>
+</body>
+<script>
+
+	var a = {
+		b: function () {
+			var func = function () {
+				console.log(this.c);
+			}.bind(this)
+			func();
+		},
+		c: 'Hello!'
+	}
+	a.b();
+
+
+	//第二种绑定方法
+	function f(y, z) {
+		return this.x + y + z;
+	}
+
+
+	/*
+	这里bind方法会把它的第一个实参绑定给f函数体内的this，所以这里的this即指向{x : 1}对象，
+	从第二个参数起，会依次传递给原始函数，这里的第二个参数2，即是f函数的y参数，最后调用m(3)的时候，
+	这里的3便是最后一个参数z了，所以执行结果为1 + 2 + 3 = 6
+	* */
+	var m = f.bind({x: 1}, 2);
+	console.log(m(3));
+
+</script>
+</html>

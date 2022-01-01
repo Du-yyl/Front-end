@@ -1,0 +1,48 @@
+<!--
+  ~ Date:2021/11/17 上午9:32
+  ~ Name:获取节点的输出2.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/practice/土巴兔/获取节点的输出2.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceshi</title>
+	<style>
+        #top {
+            width: 100%;
+            height: 3000px;
+            background-color: #d7efc6;
+        }
+
+        #a {
+            width: 100%;
+            height: 50px;
+            background-color: red;
+            position: sticky;
+            top: 0;
+        }
+
+        #body {
+            width: 100%;
+            height: 3000px;
+            background-color: #CCFFFF;
+        }
+	</style>
+</head>
+<body>
+<div id="a"></div>
+<div id="top">
+	<p>
+		粘滞定位只是相对于自己的父级元素的，如果一个头部元素只是相对自己的父元素进行的粘滞定位 <br>
+		那么就会被其他的底下的元素进行挤压，使这个粘滞定位不能继续粘滞 <br>
+		所以：顶部的top应当对与整个html进行粘滞，防止底下的元素进行挤压
+	</p>
+</div>
+<div id="body"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!--
+  ~ Date:2021/12/8 9:32 45
+  ~ Name:DOM对样式操作的其他方法.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/使用JS操作样式
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作对样式操作的其他方法</title>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all .7s;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById("btn1").onclick = function () {
+                console.log(window.innerWidth);
+            }
+
+        }
+    </script>
+</head>
+<body>
+<button id="btn1" type="button">我是按钮</button>
+<div class="div1" id="div"></div>
+<!-- /#div -->
+</body>
+</html>

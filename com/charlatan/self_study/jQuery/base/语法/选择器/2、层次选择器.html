@@ -1,0 +1,61 @@
+<!--
+  ~ Date:2021/12/18 16:06 03
+  ~ Name:2、层次选择器.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base/核心/核心函数/选择器
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>层次选择器</title>
+
+</head>
+<body>
+<ul>
+	<li>AAAAA</li>
+	<li class="box">CCCCC</li>
+	<li title="hello"><span>BBBBB</span></li>
+	<li title="hello"><span>DDDD</span></li>
+	<span>EEEEE</span>
+</ul>
+<hr>
+<pre>
+	层次选择器: 查找子元素, 后代元素, 兄弟元素的选择器
+	1. ancestor descendant
+	  在给定的祖先元素下匹配所有的后代元素
+	2. parent>child
+	  在给定的父元素下匹配所有的子元素
+	3. prev+next
+	  匹配所有紧接在 prev 元素后的 next 元素
+	4. prev~siblings
+	  匹配 prev 元素之后的所有 siblings 元素
+</pre>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+	/*
+ 需求:
+ 1. 选中ul下所有的的span
+ 2. 选中ul下所有的子元素span
+ 3. 选中class为box的下一个li
+ 4. 选中ul下的class为box的元素后面的所有兄弟元素
+ */
+	$(`ul span`).css({
+		color: "red"
+	})
+	$(`ul > span`).css({
+		backgroundColor: "green"
+	})
+	$(`.box + li`).css({
+		backgroundColor: "blue"
+	})
+	$(`ul .box + ~ *`).css({
+		backgroundColor: "red"
+	})
+	
+</script>
+</html>

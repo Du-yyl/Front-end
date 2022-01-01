@@ -1,0 +1,83 @@
+<!--
+  ~ Date:2021/12/7 17:04 45
+  ~ Name:类操作方法综合.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/practice/JavaScript
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+        .s {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all .5s;
+        }
+
+        .switch {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+	</style>
+	<!-- <script>
+		 window.onload = function () {
+			 // const addClass = (iDToBeModified, theClassToBeAdded) => {
+			 //     iDToBeModified.className += " " + theClassToBeAdded
+			 // };
+			 //
+			 // const hasClass = (iDToBeModified, theClassToDelete) => {
+			 //     let exg = new RegExp('\\b '+theClassToDelete +'\\b')
+			 //     return exg.test(iDToBeModified.className);
+			 // };
+
+			 // const removeClass = (iDToBeModified, theClassToDelete) => {
+			 //     let exg = new RegExp('\\b '+theClassToDelete +'\\b')
+			 //     iDToBeModified.className = iDToBeModified.className.replace(exg,"")
+			 // };
+			 /**
+			  * 判断指定的ID中是否含有指定的class，如果有则进行删除，若没有则添加；
+			  * 通过class的更改完成指定元素的样式变换
+			  * @param variablesObtainedThroughID  获取到的指定元素的ID
+			  * @param theClassToBeModified  要添加的新的class
+			  */
+			 const dynamicAdjustmentOfClasses = (variablesObtainedThroughID, theClassToBeModified) => {
+				 let exg = new RegExp('\\b '+theClassToBeModified +'\\b')
+				 if(!exg.test(variablesObtainedThroughID.className)){
+					 variablesObtainedThroughID.className += " " + theClassToBeModified
+				 }else {
+					 variablesObtainedThroughID.className = variablesObtainedThroughID.className.replace(exg,"")
+				 }
+			 };
+			 let qwe = document.getElementById("qwe")
+			 document.getElementById("btn2").onclick = function () {
+				 dynamicAdjustmentOfClasses(qwe, "switch")
+			 }
+		 }
+	 </script>-->
+	<script src="../../../../../../../../MyTool.js"></script>
+	<script>
+		window.onload = function () {
+			let qwe = document.getElementById("qwe")
+			document.getElementById("btn2").onclick = function () {
+				dynamicAdjustmentOfClasses(qwe, "switch")
+			}
+		}
+
+
+	</script>
+</head>
+<body>
+<button id="btn2" type="button">按钮2</button>
+<div class="s" id="qwe">
+
+</div>
+<!-- /#div -->
+</body>
+</html>

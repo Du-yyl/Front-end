@@ -1,0 +1,37 @@
+<!--
+  ~ Date:2021/12/27 11:19 09
+  ~ Name:8、变量提升.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/数据类型和变量问题
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变量提升</title>
+
+</head>
+<body>
+<pre>
+	这里在函数b里的作用域里没有查找到名为a的对象或者变量，那么继续向外查找，
+	发现在全局作用域里发现了有变量a的内存地址，于是将10这个值赋值给了全局变量a。
+
+
+	当然如果为b中的内存提供a的地址，如：let a
+	那么就会将a的变量10赋值给b中的a
+</pre>
+</body>
+<script>
+
+	function b() {
+		a = 10;
+		return;
+	}
+
+	b();
+	console.log(a);
+</script>
+</html>

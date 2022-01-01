@@ -1,0 +1,95 @@
+<!--
+  ~ Date:2021/11/10 上午10:52
+  ~ Name:在JS中修改指定的class.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_3/day_2/operation_3/在JS中修改指定的class.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+    <style>
+        .box {
+            width: 701px;
+            height: 260px;
+            border: 1px solid red;
+            margin: 100px auto;
+            font-size: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .a1 {
+            width: 100px;
+            height: 260px;
+            display: inline-block;
+            position: relative;
+            z-index: 3;
+            border: 1px solid black;
+        }
+
+        .b1 {
+            background-color: rosybrown;
+        }
+
+        .b2 {
+            background-color: blue;
+        }
+
+        .b3 {
+            background-color: blueviolet;
+        }
+
+        .b4 {
+            background-color: brown;
+        }
+
+        .b5 {
+            background-color: burlywood;
+        }
+
+        .b6 {
+            background-color: green;
+        }
+
+        .b7 {
+            background-color: yellow;
+            position: absolute;
+            right: 0;
+            width: 400px;
+            z-index: 2;
+        }
+
+        .box:hover .a1 {
+            width: 50px;
+            transition: all 1s;
+        }
+
+        .box:hover .b7 {
+            width: 400px;
+        }
+
+        .a1:hover {
+            width: 400px !important;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="a1 b1"></div>
+    <div class="a1 b2"></div>
+    <div class="a1 b3"></div>
+    <div class="a1 b4"></div>
+    <div class="a1 b5"></div>
+    <div class="a1 b6"></div>
+    <div class="a1 b7"></div>
+</div>
+</body>
+</html>
+

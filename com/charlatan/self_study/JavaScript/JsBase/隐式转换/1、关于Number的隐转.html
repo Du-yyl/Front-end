@@ -1,0 +1,55 @@
+<!--
+  ~ Date:2021/12/20 10:27 24
+  ~ Name:1、关于Number的隐转.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/隐式转换
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于Number</title>
+
+</head>
+<body>
+<pre>
+	Number() 对参数进行数字转换时，遵循以下一些规则：
+		如果参数中只包含数字时，将转换为十进制数字，忽略前导 0 以及前导空格；如果数字前面为-，-会保留在转换结果中；如果数字前面为+，转换后将删掉+号；
+		如果参数中包含有效浮点数字，将转换为对应的浮点数字，忽略前导 0 以及前导空格；如果数字前面为-，-会保留在转换结果中；如果数字前面为+，转换后将删掉+号；
+		如果参数中包含有效的十六进制数字，将转换为对应大小的十进制数字；
+		如果参数为空字符串，将转换为 0；
+		如果参数为布尔值，则将 true 转换为 1，将 false 转换为 0；
+		如果参数为 null，将转换为 0；
+		如果参数为 undefined，将转换为 NaN；
+		如果参数为 Date 对象，将转换为从 1970 年 1 月 1 日到执行转换时的毫秒数；
+		如果参数为函数、包含两个元素以上的数组对象以及除 Date 对象以外的其他对象，将转换为 NaN；
+		如果在参数前面包含了除空格、+和-以外的其他特殊符号或非数字字符，或在参数中间包含了包括空格、+和-的特殊符号或非数字字符，将转换为 NaN。
+</pre>
+
+</body>
+<script>
+	console.log('字符串转数字会自动忽略前导0--->               ' + (Number('   000123')));
+	console.log('字符串转数字前面为-，-会保留在转换结果中--->    ' + (Number('-123')));
+	console.log('字符串转数字前面为+，+会自动删除--->           ' + (Number('+123')));
+	console.log('字符串转数字会自动忽略前导0--->               ' + (Number('   00.0123')));
+	console.log('字符串转数字前面为-，-会保留在转换结果中--->    ' + (Number('-1.23')));
+	console.log('字符串转数字前面为+，+会自动删除--->           ' + (Number('+12.3')));
+	console.log('           ' + (Number('')));
+	console.log('           ' + (Number([])));
+	console.log('           ' + (Number({})));
+	console.log('           ' + (Number(NaN)));
+	let a
+	console.log(Number(a));
+	var fn = function () {
+		alert(1);
+	}; //创建一个函数对象
+	console.log((Number(fn)));    //转换函数，结果为:NaN
+	console.log((Number(window))); //转换window对象，结果为:NaN
+	var d = new Date();      //创建一个Date对象
+	console.log((Number(d)));    //转换Date对象，结果为1970.1.1至执行转换时的毫秒数：1511351635179
+
+</script>
+</html>

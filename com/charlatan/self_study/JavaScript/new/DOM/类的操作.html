@@ -1,0 +1,83 @@
+<!--
+  ~ Date:2021/12/7 15:25 00
+  ~ Name:类的操作.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类的操作</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*#div1{*/
+        /*    width: 100px;*/
+        /*    height: 100px;*/
+        /*    background-color: red;*/
+        /*    position: absolute;*/
+        /*    transition: all .7s;*/
+        /*}*/
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            transition: all .7s;
+        }
+
+        .div1-switch {
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            transition: all .7s;
+        }
+
+        .div1-switch-1 {
+            height: 200px;
+            background-color: grey;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            let div1 = document.getElementById("div1")
+            let btn1 = document.getElementById("btn1")
+
+            btn1.onclick = function () {
+                /*
+                * 直接修改指定di的class，一句话完成操作
+                * 浏览器只用渲染一次页面，性能更高，并且表现和行为更贴合
+                * */
+                // div1.className = "div1-switch"
+
+                /*
+                * 上面的已经很好的解决了问题，但是有时只修改一个值，但是需要将所有属性进行重写
+                * 所以可以使用class的=进行解决
+                * */
+                div1.className = "div1 div1-switch-1"
+            }
+            document.getElementById("btn2").onclick = function () {
+                div1.className = "div1 "
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btn1" type="button">
+    我是按钮
+</button>
+<button id="btn2" type="button">
+    我是按钮2
+</button>
+<div class="div1" id="div1"></div>
+<!-- /#div1 -->
+</body>
+</html>

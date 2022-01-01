@@ -1,0 +1,56 @@
+<!--
+  ~ Date:2021/12/19 12:05 40
+  ~ Name:1、常用工具.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base/核心/核心函数/工具方法
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常用工具</title>
+
+</head>
+<body>
+<pre>
+	1. $.each(): 遍历数组或对象中的数据
+	2. $.trim(): 去除字符串两边的空格
+	3. $.type(obj): 得到数据的类型
+	4. $.isArray(obj): 判断是否是数组
+	5. $.isFunction(obj): 判断是否是函数
+	6. $.parseJSON(json) : 解析json字符串转换为js对象/数组
+</pre>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+	let nums = [1, 2, 3, 4, 5, 6, 7, 4, 2, 2, 4, 5, 6]
+	$.each(nums, function (index) {
+		console.log(nums[index]);
+	})
+	console.log("----------------------");
+	console.log($.trim("             测试          "));
+	let parameter_1 = null
+	console.log($.type(parameter_1));
+	console.log($.type($.type(parameter_1)));
+
+	console.log($.isArray(nums));
+	console.log("--------");
+	console.log($.isFunction(nums));
+
+	function means() {
+	}
+
+	console.log($.isFunction(means));
+
+	let json = nums
+	let json_1 = JSON.stringify(nums)
+	console.log(json_1);
+	console.log(typeof json_1);
+	console.log($.parseJSON(json_1));
+	
+	
+</script>
+</html>

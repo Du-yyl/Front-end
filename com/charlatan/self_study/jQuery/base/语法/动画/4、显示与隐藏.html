@@ -1,0 +1,88 @@
+<!--
+  ~ Date:2021/12/25 10:16 51
+  ~ Name:4、显示与隐藏.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base/核心/核心函数
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示与隐藏</title>
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        /*-------以上为默认设置（The above is the default setting）--------*/
+        * {
+            margin: 0;
+        }
+
+        .div1 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50px;
+            left: 10px;
+            background: red;
+            display: none;
+        }
+
+        pre {
+            position: relative;
+            top: 300px;
+        }
+	</style>
+</head>
+<body>
+<button id="btn1">瞬间显示</button>
+<button id="btn2">慢慢显示</button>
+<button id="btn3">慢慢隐藏</button>
+<button id="btn4">显示隐藏切换</button>
+
+<div class="div1"></div>
+
+<hr>
+<pre>
+	显示隐藏，默认没有动画
+	1. show(): (不)带动画的显示
+	2. hide(): (不)带动画的隐藏
+	3. toggle(): (不)带动画的切换显示/隐藏
+
+</pre>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+	let btn1 = $(`#btn1`)
+	let btn2 = $(`#btn2`)
+	let btn3 = $(`#btn3`)
+	let btn4 = $(`#btn4`)
+
+	let div = $(`.div1:eq(0)`)
+
+	btn1.click(function () {
+		div.show()
+	})
+	btn2.click(function () {
+		div.show('slow')
+	})
+	btn3.click(function () {
+		div.hide('slow')
+	})
+	btn4.click(function () {
+		div.toggle('slow')
+	})
+</script>
+</html>

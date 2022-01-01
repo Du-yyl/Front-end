@@ -1,0 +1,79 @@
+<!--
+  ~ Date:2021/11/8 下午3:06
+  ~ Name:2、下拉文本.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/practice/2、下拉文本.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉文本</title>
+	<style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+	</style>
+
+</head>
+<body>
+
+<h1>下拉菜单</h1>
+
+<p>请把鼠标移到按钮上，以打开下拉菜单。</p>
+
+<div class="dropdown">
+	<button class="dropbtn">Dropdown</button>
+	<div class="dropdown-content">
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+	</div>
+</div>
+
+<p><b>Note:</b>我们的测试链接用了 href="#"。真实的网站会用 URL。</p>
+
+</div>
+</body>
+</html>

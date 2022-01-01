@@ -1,0 +1,92 @@
+<!--
+  ~ Date:2021/12/20 11:06 37
+  ~ Name:面试题.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/隐式转换
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+<pre>
+	ToPrimitive 指对象类型（如：对象、数组）转换为原始类型的操作
+
+	当对象类型需要被转为原始类型时，它会先查找对象的 valueOf 方法，如果 valueOf 方法返回原始类型的值，则 ToPrimitive 的结果就是这个值
+	如果 valueOf 不存在或者 valueOf 方法返回的不是原始类型的值，就会尝试调用对象的 toString 方法，也就是会遵循对象的 ToString 规则，
+	然后使用 toString 的返回值作为 ToPrimitive 的结果
+
+	注意：对于不同类型的对象来说，ToPrimitive 的规则有所不同，比如 Date 对象会先调用toString，具体可以参考ECMA标准
+
+	如果 valueOf 和 toString 都没有返回原始类型的值，则会抛出异常
+
+		对象类型在 ToNumber 时会先 ToPrimitive，再根据转换后的原始类型 ToNumber
+
+
+</pre>
+</body>
+<script>
+	// const a = {
+	// 	// 定义一个属性来做累加
+	// 	i: 1,
+	// 	valueOf() {
+	// 		return this.i++
+	// 	}
+	// }
+
+	const a = {
+		// 定义一个属性来做累加
+		i: 1,
+		toString() {
+			return this.i++
+		}
+	}
+
+	console.log(a == 1 && a == 2 && a == 3);
+	console.log("---------------------------------------");
+
+
+	console.log(Number([])); // 0
+	console.log(Number(['10'])); //10
+	console.log(Number(['10', '10'])); // NaN
+
+	const obj1 = {
+		valueOf() {
+			return 100
+		},
+		toString() {
+			return 101
+		}
+	}
+	console.log(Number(obj1)); // 100
+
+	const obj2 = {
+		toString() {
+			return 102
+		}
+	}
+	console.log(Number(obj2)); // 102
+
+	const obj3 = {
+		toString() {
+			return {}
+		}
+	}
+	console.log(Number(obj3)); // TypeError
+	/*
+		Number([])， 空数组会先调用 valueOf，但返回的是数组本身，不是原始类型，所以会继续调用 toString，得到空字符串，相当于 Number('')，所以转换后的结果为 "0"
+		同理，Number(['10']) 相当于 Number('10')，得到结果 10
+		而 Number(['10', '10']) ，相当于 Number('10,10')，得到结果 NaN
+		obj1 的 valueOf 方法返回原始类型 100，所以 ToPrimitive 的结果为 100
+		obj2 没有 valueOf，但存在 toString，并且返回一个原始类型，所以 Number(obj2) 结果为 102
+		obj3 的 toString 方法返回的不是一个原始类型，无法 ToPrimitive，所以会抛出错误
+	 */
+
+</script>
+</html>

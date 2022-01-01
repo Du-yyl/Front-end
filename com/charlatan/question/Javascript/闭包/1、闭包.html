@@ -1,0 +1,44 @@
+<!--
+  ~ Date:2021/12/21 11:16 24
+  ~ Name:1、闭包.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/闭包
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+
+</head>
+<body>
+
+
+</body>
+<script>
+	<!--	输出结果    -->
+	function Foo() {
+		let i = 0
+		return function () {
+			console.log(i++);
+		}
+	}
+
+	let f1 = Foo(), f2 = Foo();
+	f1()
+	f1()
+	f2()
+
+
+	/*
+	* 题解：
+	*   代码的执行：
+	*       进行f1和f2的赋值，这里直接就运行了，这个赋值的是Foo（）中的方法
+	*       当f1第一次调用时，let i = 0 在定义时就运行了，所以当f1（）调用时，i的初始值是0
+	*       i++先赋值再自加，这里先扔出0
+	* */
+</script>
+</html>

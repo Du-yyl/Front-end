@@ -1,0 +1,61 @@
+<!--
+  ~ Date:2021/11/15 上午10:20
+  ~ Name:2、测试-伪元素实现单击换图片.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/基础/HtmlBase/伪元素/2、测试-伪元素实现单击换图片.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单击换图片</title>
+	<style>
+        #box {
+            width: 90px;
+            height: 90px;
+            background-color: lemonchiffon;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+        }
+
+        #input {
+            width: 0;
+            height: 0;
+        }
+
+        #no_checked {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+        }
+
+        #checked {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: none;
+        }
+
+        #input:checked + #checked {
+            display: block;
+        }
+
+	</style>
+</head>
+<body>
+<div id="box">
+	<label for="input" id="label">
+		<input id="input" type="checkbox">
+		<img alt="yes" height="32" id="checked" src="file/checked.png">
+		<img alt="no" height="34" id="no_checked" src="file/no-checked.png">
+
+	</label>
+</div>
+
+</body>
+</html>

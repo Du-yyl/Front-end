@@ -1,0 +1,51 @@
+<!--
+  ~ Date:2021/11/13 上午10:14
+  ~ Name:2、元素可见——overflow.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML/基础/HtmlBase/元素可见性/2、元素可见——overflow.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素的隐藏</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #d7efc6;
+            margin-top: 20px;
+        }
+
+        #box1 {
+            overflow: hidden;
+        }
+
+        #box2 {
+            overflow: visible;
+        }
+
+        #box3 {
+            overflow: scroll;
+        }
+
+        #box4 {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <p>
+        文本的溢出处理，overflow
+    </p>
+    <div class="box" id="box1">kiasuerhgieuashrfiueashrfiuhaeriufhaeirufhjaielurfhjaiuwerrhfjailowuerhfaliu</div>
+    <div class="box" id="box2">ialrwuehgfolaiuewhrfolaiuwhejrfliawjhefloijaweolifjawloiejfaowiejfolawijefao</div>
+    <div class="box" id="box3">liawuehrgoliauwehrgoilauhwerilfgauhweriolawluhegoiauehwrgopaueihrgoaileuhrgo</div>
+    <div class="box" id="box4">aielurhgoieaurhgoiauehrgoiluahergliouhaerliguhaoeirughaoeiurhgaeoiurhgieaour</div>
+</div>
+</body>
+</html>

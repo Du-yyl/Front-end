@@ -1,0 +1,637 @@
+<!--
+  ~ Date:2021/11/5 下午2:30
+  ~ Name:手游助手.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/exam/手游助手/手游助手.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手游助手</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            width: 1080px;
+            list-style-type: none;
+            /*background-color: black;*/
+        }
+
+        #asd {
+            position: absolute;
+            top: -80px;
+            left: 70px;
+        }
+
+        .li-1 {
+            width: 10px;
+            height: 70px;
+            color: white;
+            font-size: 25px;
+            line-height: 70px;
+            display: inline;
+            word-spacing: 30px;
+            margin: auto;
+            /*margin-left: 65px;*/
+        }
+
+
+        body {
+            background-color: #1d1c1f;
+        }
+
+        #box2 {
+            height: 700px;
+            width: 1400px;
+            background-color: #1d1c1f;
+            position: relative;
+            margin: 100px auto;
+        }
+
+        #top {
+            background-color: #1d1c1f;
+            width: 150px;
+            height: 50px;
+        }
+
+        #name {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-family: "微软雅黑 ", sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /*    ----------------第----er-----排------------------------*/
+        #a1 {
+            width: 100%;
+            height: 390px;
+            background-color: #1d1c1f;
+            margin-top: 20px;
+        }
+
+        .a1 {
+            height: 200px;
+            width: 220px;
+            background-color: #42424c;
+            float: left;
+            position: absolute;
+        }
+
+        #a1-1 {
+            top: 160px;
+            left: 10px;
+        }
+
+        #a1-2 {
+            top: 160px;
+            left: 240px;
+        }
+
+        #a1-3 {
+            top: 160px;
+            left: 470px;
+        }
+
+        #a1-4 {
+            top: 160px;
+            left: 700px;
+        }
+
+        #a1-5 {
+            top: 160px;
+            left: 930px;
+        }
+
+        #a1-6 {
+            top: 160px;
+            left: 1165px;
+        }
+
+        /*========图片=========*/
+        .a11 {
+            position: absolute;
+            width: 150px;
+            height: 170px;
+            /*background-color: whitesmoke;*/
+            left: 40px;
+            top: -60px;
+            z-index: 9999;
+        }
+
+        /*=========名字=========*/
+        .s1 {
+            width: 200px;
+            height: 60px;
+            /*background-color: #9d9d9d;*/
+            position: absolute;
+            top: 5px;
+            left: -5px;
+            color: white;
+            font-size: 21px;
+            text-align: left;
+            z-index: 9999;
+        }
+
+        #s11-4 {
+            font-size: 24px;
+        }
+
+        /*==========介绍========*/
+        .s2 {
+            width: 180px;
+            height: 25px;
+            /*background-color: #5bde1a;*/
+            position: absolute;
+            top: 10px;
+            left: -5px;
+            color: white;
+            text-overflow: ellipsis;
+            text-align: left;
+            display: inline;
+            line-height: 20px;
+        }
+
+        #s22-3 {
+            left: 50px;
+        }
+
+        #s22-4 {
+            left: 50px;
+        }
+
+        #s22-5 {
+            left: 40px;
+        }
+
+        /*==========下载========*/
+        .s3 {
+            width: 130px;
+            height: 60px;
+            background-color: #42424c;
+            position: absolute;
+            top: 30px;
+            left: 5px;
+            color: white;
+            font-size: 27px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 20% 0;
+        }
+
+        /*----------第二排-------------*/
+        #a2 {
+            width: 100%;
+            height: 390px;
+            background-color: #1d1c1f;
+            margin-top: 20px;
+            position: relative;
+            top: 100px;
+        }
+
+        .a2 {
+            height: 200px;
+            width: 220px;
+            background-color: #42424c;
+            float: left;
+            position: absolute;
+
+        }
+
+        #a2-1 {
+            top: 60px;
+            left: 10px;
+        }
+
+        #a2-2 {
+            top: 60px;
+            left: 240px;
+        }
+
+        #a2-3 {
+            top: 60px;
+            left: 470px;
+        }
+
+        #a2-4 {
+            top: 60px;
+            left: 700px;
+        }
+
+        #a2-5 {
+            top: 60px;
+            left: 930px;
+        }
+
+        #a2-6 {
+            top: 60px;
+            left: 1165px;
+        }
+
+        /*========图片=========*/
+        .a22 {
+            position: absolute;
+            width: 150px;
+            height: 170px;
+            /*background-color: whitesmoke;*/
+            left: 40px;
+            top: -60px;
+        }
+
+        #a22-3 {
+            border-radius: 20%;
+            background-image: url("file/a2-3.png");
+            background-size: 150px;
+            height: 150px;
+
+        }
+
+        /*=========名字=========*/
+        .s11 {
+            width: 160px;
+            height: 60px;
+            /*background-color: #9d9d9d;*/
+            position: absolute;
+            top: 105px;
+            left: 45px;
+            color: white;
+            font-size: 25px;
+            text-align: center;
+
+        }
+
+        #sa11-2 {
+            font-size: 23px;
+        }
+
+        #sa11-4 {
+            font-size: 24px;
+        }
+
+        #sa11-6 {
+            font-size: 24px;
+            text-align: left;
+        }
+
+        /*==========介绍========*/
+        .s22 {
+            width: 180px;
+            height: 25px;
+            /*background-color: #5bde1a;*/
+            position: absolute;
+            top: 160px;
+            left: 55px;
+            color: white;
+            text-overflow: ellipsis;
+            text-align: left;
+            display: inline;
+            line-height: 20px;
+        }
+
+        #sa22-1 {
+            left: 40px;
+        }
+
+        #sa22-2 {
+            left: 40px;
+        }
+
+        #sa22-4 {
+            left: 40px;
+        }
+
+        #sa22-5 {
+            left: 40px;
+        }
+
+        #sa22-6 {
+            left: 40px;
+        }
+
+        /*==========下载========*/
+        .s33 {
+            width: 130px;
+            height: 60px;
+            background-color: #42424c;
+            position: absolute;
+            top: 220px;
+            left: 55px;
+            color: white;
+            font-size: 27px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 20% 0;
+        }
+
+        /*    -------------------------------*/
+        #qwer {
+            position: fixed;
+            z-index: 99999999999999;
+            left: 1500px;
+            top: 750px;
+        }
+
+        #qwer:hover {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box2">
+    <div id="asd">
+        <ul>
+            <li class="li-1">热门游戏&nbsp;</li>
+            <li class="li-1">角色扮演&nbsp;</li>
+            <li class="li-1">动作冒险&nbsp;</li>
+            <li class="li-1">体育竞速&nbsp;</li>
+            <li class="li-1">经营策略&nbsp;</li>
+            <li class="li-1">飞行射击&nbsp;</li>
+            <li class="li-1">休闲益智&nbsp;</li>
+            <li class="li-1">棋牌中心&nbsp;</li>
+        </ul>
+    </div>
+
+    <div id="top">
+        <span id="name">动作冒险</span>
+    </div>
+
+    <div id="a1">
+        <ul>
+            <li class="a1" id="a1-1">
+                <div class="a11" id="a11-1">
+                    <img src="file/a1-1.png" height="150">
+                </div>
+                <div class="s1" id="s1-1">
+                    <span class="s11" id="s11-1">
+                        明日之后
+                    </span>
+                </div>
+                <div class="s2" id="s2-1">
+                    <span class="s22" id="s22-1">
+                    加入未知，活下去
+                    </span>
+                </div>
+                <div class="s3" id="s3-1">
+                    <span class="s33" id="s33-1">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a1-2">
+                <div class="a11" id="a11-2">
+                    <img src="file/a1-2.png" height="150">
+                </div>
+                <div class="s1" id="s1-2">
+                    <span class="s11" id="s11-2">
+                        碧蓝航线
+                    </span>
+                </div>
+                <div class="s2" id="s2-2">
+                    <span class="s22" id="s22-2">
+                        此生为舰，即刻出战
+                    </span>
+                </div>
+                <div class="s3" id="s3-2">
+                    <span class="s33" id="s33-2">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a1-3">
+                <div class="a11" id="a11-3">
+                    <img src="file/a1-3.png" height="150">
+                </div>
+                <div class="s1" id="s1-3">
+                    <span class="s11" id="s11-3">
+                        崩坏3
+                    </span>
+                </div>
+                <div class="s2" id="s2-3">
+                    <span class="s22" id="s22-3">
+                        为世界上所有美好而...
+                    </span>
+                </div>
+                <div class="s3" id="s3-3">
+                    <span class="s33" id="s33-3">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a1-4">
+                <div class="a11" id="a11-4">
+                    <img src="file/a1-4.png" height="150">
+                </div>
+                <div class="s1" id="s1-4">
+                    <span class="s11" id="s11-4">
+                        鬼泣-巅峰之战
+                    </span>
+                </div>
+                <div class="s2" id="s2-4">
+                    <span class="s22" id="s22-4">
+                        CAPCOM殿堂级动作...
+                    </span>
+                </div>
+                <div class="s3" id="s3-4">
+                    <span class="s33" id="s33-4">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a1-5">
+                <div class="a11" id="a11-5">
+                    <img src="file/a1-5.png" height="150">
+                </div>
+                <div class="s1" id="s1-5">
+                    <span class="s11" id="s11-5">
+                        魂斗罗：归来
+                    </span>
+                </div>
+                <div class="s2" id="s2-5">
+                    <span class="s22" id="s22-5">
+                        《魂斗罗：归来》经过...
+                    </span>
+                </div>
+                <div class="s3" id="s3-5">
+                    <span class="s33" id="s33-5">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a1-6">
+                <div class="a11" id="a11-6">
+                    <img src="file/a1-6.png" height="150">
+                </div>
+                <div class="s1" id="s1-6">
+                    <span class="s11" id="s11-6">
+                        灵魂潮汐
+                    </span>
+                </div>
+                <div class="s2" id="s2-6">
+                    <span class="s22" id="s22-6">
+                        在世界的彼岸等你...
+                    </span>
+                </div>
+                <div class="s3" id="s3-6">
+                    <span class="s33" id="s33-6">
+                        下载
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="a2">
+        <ul>
+            <li class="a2" id="a2-1">
+                <div class="a22" id="a22-1">
+                    <img src="file/a2-1.png" height="150">
+                </div>
+                <div class="sa12" id="s12-1">
+                    <span class="s11" id="sa11-1">
+                        罗布乐思
+                    </span>
+                </div>
+                <div class="sa22" id="s222-1">
+                    <span class="s22" id="sa22-1">
+                    超多玩法的3D沙盒创...
+                    </span>
+                </div>
+                <div class="sa32" id="s32-1">
+                    <span class="s33" id="sa33-1">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a2-2">
+                <div class="a22" id="a22-2">
+                    <img src="file/a2-2.png" height="150">
+                </div>
+                <div class="sa12" id="s12-2">
+                    <span class="s11" id="sa11-2">
+                        从零开始的异...
+                    </span>
+                </div>
+                <div class="sa22" id="s222-2">
+                    <span class="s22" id="sa22-2">
+                        正版授权，异世界之...
+                    </span>
+                </div>
+                <div class="sa32" id="s32-2">
+                    <span class="s33" id="sa33-2">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a2-3">
+                <div class="a22" id="a22-3">
+                    <!--                    <img src="file/a2-3.png" height="150">-->
+                </div>
+                <div class="sa12" id="s12-3">
+                    <span class="s11" id="sa11-3">
+                        迷你世界
+                    </span>
+                </div>
+                <div class="sa22" id="s222-3">
+                    <span class="s22" id="sa22-3">
+                        美好契约 邀你缔结
+                    </span>
+                </div>
+                <div class="sa32" id="s32-3">
+                    <span class="s33" id="sa33-3">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a2-4">
+                <div class="a22" id="a22-4">
+                    <img src="file/a2-4.png" height="150">
+                </div>
+                <div class="sa12" id="s12-4">
+                    <span class="s11" id="sa11-4">
+                        第五人格(生...
+                    </span>
+                </div>
+                <div class="sa22" id="s222-4">
+                    <span class="s22" id="sa22-4">
+                        网易首款非对称对抗...
+                    </span>
+                </div>
+                <div class="sa32" id="s32-4">
+                    <span class="s33" id="sa33-4">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a2-5">
+                <div class="a22" id="a22-5">
+                    <img src="file/a2-5.png" height="150">
+                </div>
+                <div class="sa12" id="s12-5">
+                    <span class="s11" id="sa11-5">
+                        龙之谷2
+                    </span>
+                </div>
+                <div class="sa22" id="s222-5">
+                    <span class="s22" id="sa22-5">
+                        龙之谷全新大世界正...
+                    </span>
+                </div>
+                <div class="sa32" id="s32-5">
+                    <span class="s33" id="sa33-5">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+            <li class="a1" id="a2-6">
+                <div class="a22" id="a22-6">
+                    <img src="file/a2-6.png" height="150">
+                </div>
+                <div class="sa12" id="s12-6">
+                    <span class="s11" id="sa11-6">
+                        拳皇98 终极...
+                    </span>
+                </div>
+                <div class="sa22" id="s222-6">
+                    <span class="s22" id="sa22-6">
+                        SNK正版授权拳皇卡...
+                    </span>
+                </div>
+                <div class="sa32" id="s32-6">
+                    <span class="s33" id="sa33-6">
+                        下载
+                    </span>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="bot">
+        <img src="file/anniu_jiantoushouqi.png" height="140px" id="qwer">
+    </div>
+</div>
+</body>
+</html>

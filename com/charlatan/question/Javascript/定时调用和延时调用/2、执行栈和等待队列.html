@@ -1,0 +1,31 @@
+<!--
+  ~ Date:2021/12/28 10:54 30
+  ~ Name:2、执行栈和等待队列.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/定时调用和延时调用
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>执行栈和等待队列</title>
+
+</head>
+<body>
+<pre>
+	set是异步函数，当执行完同步任务时，才会执行异步任务，即使时间时0秒，
+	它会在等待对列中进行等待，先运行同步队列中的内容
+</pre>
+</body>
+<script>
+	console.log("1");
+	setTimeout(function () {
+		console.log("2");
+	}, 0)
+	console.log("3");
+
+</script>
+</html>

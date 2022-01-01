@@ -1,0 +1,67 @@
+<!--
+  ~ Date:2021/11/24 上午9:43
+  ~ Name:4、为元素的选择规范详解.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/基础/HtmlBase/伪类/4、为元素的选择规范详解.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>为元素的选择</title>
+	<style>
+        p:nth-child(n+3):nth-child(-n+9) {
+            color: red;
+        }
+	</style>
+</head>
+<body>
+<pre>
+    :nth-child(n)    ---->选中某个元素，该元素必须是某个父元素下的第n个子元素；
+    p:nth-child(n)   ---->选中p元素，且该p元素必须是某个父元素下的第n个子元素
+
+    正方向范围
+        li:nth-child(n+6)
+        选中从第6个开始的子元素
+
+    负方向范围
+        :nth-child(-n+9)
+        选中从第1个到第9个子元素。使用 :nth-child(-n+9) ，就相当让你选中第9个和其之前的所有子元素
+
+    前后限制范围
+        :nth-child(n+4):nth-child(-n+8)
+        选中第4-8个子元素。使用 nth-child(n+4):nth-child(-n+8) 我们可以选中某一范围内子元素，上面的例子里是从第4个到第8个子元素
+
+    奇数、偶数位
+        :nth-child(odd)
+        :nth-child(even)
+
+    隔选择子元素
+        :nth-child(3n+1),
+        选择1,4,7,10
+
+    范围高级用法
+        nth-child(n+2):nth-child(odd):nth-child(-n+9)
+        使用 nth-child(n+2):nth-child(odd):nth-child(-n+9) 我们将会选中的子元素是从第2位到第9位，并且只包含奇数位。
+</pre>
+<p>测试1</p>
+<p>测试2</p>
+<p>测试3</p>
+<p>测试4</p>
+<p>测试5</p>
+<p>测试6</p>
+<p>测试7</p>
+<p>测试8</p>
+<p>测试9</p>
+<p>测试0</p>
+<p>测试1</p>
+<p>测试1</p>
+<p>测试1</p>
+<p>测试1</p>
+<p>测试1</p>
+<p>测试1</p>
+</body>
+</html>

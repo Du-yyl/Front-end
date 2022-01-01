@@ -1,0 +1,67 @@
+<!--
+  ~ Date:2021/11/13 上午9:42
+  ~ Name:4-3、解决高度塌陷.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML/基础/HtmlBase/浮动/4-3、解决高度塌陷.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解决高度塌陷</title>
+    <style>
+        #box {
+            width: 300px;
+            border: 1px solid;
+        }
+
+        #box:after {
+            content: "";
+            height: 0;
+            clear: both;
+            overflow: hidden;
+            display: block;
+            visibility: hidden;
+        }
+
+        #a {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+
+        #b {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<p>
+    使用伪元素进行清除
+</p>
+<pre>
+    #父元素:after {
+            content: "";
+            height: 0;
+            clear: both;
+            overflow: hidden;
+            display: block;
+            visibility: hidden;
+        }
+    在父元素中使用伪元素添加一个新的块元素，并且内容为空，高度是0；
+    进行清除浮动，设置溢出，并设置可见性，以达到目的
+</pre>
+
+<div id="box">
+    <div id="a"></div>
+    <div id="b"></div>
+</div>
+</body>
+</html>

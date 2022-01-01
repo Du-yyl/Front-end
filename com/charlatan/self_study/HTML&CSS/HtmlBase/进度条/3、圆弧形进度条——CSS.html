@@ -1,0 +1,98 @@
+<!--
+  ~ Date:2021/12/14 21:34 43
+  ~ Name:3、圆弧形进度条——CSS.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/HTML&CSS/HtmlBase/进度条
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>圆弧形进度条</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+
+		.g-progress {
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			/*background: conic-gradient(#FFCDB2 0, #FFCDB2 25%, #B5838D 25%, #B5838D);*/
+		}
+
+		.g-progress {
+			background: conic-gradient(#FFCDB2 0, #FFCDB2 35%, #B5838D 35%, #B5838D 0);
+		}
+
+		/*.g-progress {*/
+		/*    background: conic-gradient(#FFCDB2 0, #FFCDB2 25%, #B5838D 25%, #B5838D);*/
+		/*+ mask: radial-gradient(transparent, transparent 50 %, #000 50 %, #000 0);*/
+		/*}*/
+
+		/*.g-progress {*/
+		/*    width: 160px;*/
+		/*    height: 160px;*/
+		/*    border-radius: 50%;*/
+		/*    mask: radial-gradient(transparent, transparent 50%, #000 51%, #000 0);*/
+		/*    background: conic-gradient(*/
+		/*            #FFCDB2 0, #FFCDB2 25%,*/
+		/*            #B5838D 25%, #B5838D 50%,*/
+		/*            #673ab7 50%, #673ab7 90%,*/
+		/*            #ff5722 90.2%, #ff5722 100%*/
+		/*    );*/
+		/*}*/
+
+		#show-div {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			border-radius: 50%;
+			background-color: #ffffff;
+			font-size: 2em;
+			text-align: center;
+			line-height: 100px;
+			top: 30px;
+			left: 30px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="g-progress"></div>
+<pre>
+核心就是使用角向渐变 background: conic-gradient()：
+
+当然，这个方法有两个弊端。
+
+当然进度百分比不是类似于 0°、90°、180°、270°、360° 这类数字时，使用角向渐变时，不同颜色间的衔接处会有明显的锯齿。
+看个例子 conic-gradient(#FFCDB2 0, #FFCDB2 27%, #B5838D 27%, #B5838D)：
+
+
+
+遇到此类问题的解决方案是，在衔接处，适当留出一些渐变空间，我们简单的改造一下上述角向渐变代码：
+
+{
+  - background: conic-gradient(#FFCDB2 0, #FFCDB2 27%, #B5838D 27%, #B5838D)`
+  + background: conic-gradient(#FFCDB2 0, #FFCDB2 27%, #B5838D 27.2%, #B5838D)`
+}
+仔细看上面的代码，将从 27% 到 27% 的一个变化，改为了 从 27% 到 27.2%，这多出来的 0.2% 就是为了消除锯齿的，实际改变后的效果：
+
+
+</pre>
+</body>
+</html>

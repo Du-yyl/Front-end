@@ -1,0 +1,74 @@
+<!--
+  ~ Date:2021/11/9 下午5:05
+  ~ Name:4、宽度测试.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/practice/4、宽度测试.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 1200px;
+            height: 210px;
+            border: 1px solid yellow;
+            margin: 100px auto;
+            display: flex;
+        }
+
+        li {
+            width: 476px;
+            height: 210px;
+            border: 1px solid red;
+            list-style-type: none;
+            transition: all 0.3s;
+        }
+
+        /*.list1 {*/
+        /*    background-image: url(./c08.jpg)*/
+        /*}*/
+
+        /*.list2 {*/
+        /*    background-image: url(./c07.jpg)*/
+        /*}*/
+
+        /*.list3 {*/
+        /*    background-image: url(./c09.jpg)*/
+        /*}*/
+
+        /*.list4 {*/
+        /*    background-image: url(./c10.jpg)*/
+        /*}*/
+
+        li:hover {
+            width: 450px !important;
+            /* important优先选择 */
+        }
+
+        ul:hover li {
+            width: 250px;
+        }
+	</style>
+</head>
+<body>
+<!-- ul>li*4.list$ -->
+<ul>
+	<li class="list1"></li>
+	<li class="list2"></li>
+	<li class="list3"></li>
+	<li class="list4"></li>
+</ul>
+</body>
+</html>

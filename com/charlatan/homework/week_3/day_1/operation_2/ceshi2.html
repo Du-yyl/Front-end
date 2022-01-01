@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav {
+            width: 1000px;
+            height: 80px;
+            line-height: 80px;
+            margin: auto;
+            /* background-color: greenyellow; */
+            overflow: hidden;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        ul {
+            display: inline-block;
+            font-size: 0;
+            height: 80px;
+            position: relative;
+            top: -5px;
+
+        }
+
+        li {
+            font-size: 16px;
+            display: inline-block;
+            width: 60px;
+            height: 80px;
+            /* background-color: indianred; */
+            /* 竖直方向对齐方式 */
+            vertical-align: middle;
+        }
+
+        span {
+            display: inline-block;
+            width: 60px;
+            height: 80px;
+        }
+
+        .color {
+
+        backgroundli {
+            font-size: 16px;
+            display: inline-block;
+            width: 60px;
+            height: 80px;
+            /* background-color: indianred; */
+            /* 竖直方向对齐方式 */
+            vertical-align: middle;
+        }
+
+        span {
+            display: inline-block;
+            width: 60px;
+            height: 80px;
+        }
+
+        .color {
+            background-color: red;
+            /* 相对定位：相对于自身原来位置定位 */
+            position: relative;
+            top: 0;
+        }
+
+        li:hover .color {
+            top: -80px;
+            /* 过渡 */
+            transition: all 1s;
+        }
+
+        .font {
+            z-index: 2;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <img alt="" src="./logo.png">
+    <ul>
+        <li>
+            <span class="font">首页</span>
+            <span class="color"></span>
+        </li>
+        <li>
+            <span class="font">首页</span>
+            <span class="color"></span>
+        </li>
+        <li>
+            <span class="font">首页</span>
+            <span class="color"></span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

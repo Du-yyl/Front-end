@@ -1,0 +1,48 @@
+<!--
+  ~ Date:2021/12/21 10:11 52
+  ~ Name:1、this指向.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/this
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this和闭包</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	var color = 'green'
+	var test = {
+		color: 'blue',
+		getColor: function () {
+			var color = 'red'
+			alert(this.color)
+		}
+	}
+
+	var getColor = test.getColor;
+	getColor()
+	window.getColor()
+	test.getColor()
+	let obj = {
+		color: 'white'
+	}
+	test.getColor.apply(obj)
+
+
+	/*
+	* 答案：
+	*   第30行的调用并没有进行指定，所以是普通调用，因为this只看最后调用时最前面的赋值，
+	*   所以时window,而window的最近的属性是，green，所以输出的是green
+	*
+	*   为了测试，新增加一个对象是obj，obj有color属性，当调用getColor方法时，访问最近的是obj中的color
+	* */
+</script>
+</html>

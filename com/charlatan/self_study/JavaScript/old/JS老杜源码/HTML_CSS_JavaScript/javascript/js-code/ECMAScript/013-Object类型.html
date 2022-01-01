@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Object类型</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*
+        Object类型：
+            1、Object类型是所有类型的超类，自定义的任何类型，默认继承Object。
+            2、Object类包括哪些属性？
+                prototype属性（常用的，主要是这个）：作用是给类动态的扩展属性和函数。
+                constructor属性
+            3、Object类包括哪些函数？
+                toString()
+                valueOf()
+                toLocaleString()
+            4、在JS当中定义的类默认继承Object，会继承Object类中所有的属性以及函数。
+            换句话说，自己定义的类中也有prototype属性。
+
+            5、在JS当中怎么定义类？怎么new对象？
+                定义类的语法：
+                    第一种方式：
+                        function 类名(形参){
+
+                        }
+                    第二种方式：
+                        类名 = function(形参){
+
+                        }
+                创建对象的语法：
+                    new 构造方法名(实参); // 构造方法名和类名一致。
+    */
+    function sayHello() {
+
+    }
+
+    // 把sayHello当做一个普通的函数来调用.
+    sayHello();
+
+    // 这种方式就表示把sayHello当做一个类来创建对象.
+    var obj = new sayHello(); // obj是一个引用,保存内存地址指向堆中的对象.
+
+    // 定义一个学生类
+    function Student() {
+        alert("Student.....");
+    }
+
+    // 当做普通函数调用
+    Student();
+
+    // 当做类来创建对象
+    var stu = new Student();
+    alert(stu); // [object Object]
+
+    // JS中的类的定义,同时又是一个构造函数的定义
+    // 在JS中类的定义和构造函数的定义是放在一起来完成的.
+    function User(a, b, c) { // a b c是形参,属于局部变量.
+        // 声明属性 (this表示当前对象)
+        // User类中有三个属性:sno/sname/sage
+        this.sno = a;
+        this.sname = b;
+        this.sage = c;
+    }
+
+    // 创建对象
+    var u1 = new User(111, "zhangsan", 30);
+    // 访问对象的属性
+    alert(u1.sno);
+    alert(u1.sname);
+    alert(u1.sage);
+
+    var u2 = new User(222, "jackson", 55);
+    alert(u2.sno);
+    alert(u2.sname);
+    alert(u2.sage);
+
+    // 访问一个对象的属性,还可以使用这种语法
+    alert(u2["sno"]);
+    alert(u2["sname"]);
+    alert(u2["sage"]);
+
+    // 定义类的另一种语法
+    /*
+    Emp = function(a, b){
+        this.ename = a;
+        this.sal = b;
+    }
+    */
+
+    Emp = function (ename, sal) {
+        // 属性
+        this.ename = ename;
+        this.sal = sal;
+    }
+
+    var e1 = new Emp("SMITH", 800);
+    alert(e1["ename"] + "," + e1.sal);
+
+    Product = function (pno, pname, price) {
+        // 属性
+        this.pno = pno;
+        this.pname = pname;
+        this.price = price;
+        // 函数
+        this.getPrice = function () {
+            return this.price;
+        }
+    }
+
+    var xigua = new Product(111, "西瓜", 4.0);
+    var pri = xigua.getPrice();
+    alert(pri); // 4.0
+
+    // 可以通过prototype这个属性来给类动态扩展属性以及函数
+    Product.prototype.getPname = function () {
+        return this.pname;
+    }
+
+    // 调用后期扩展的getPname()函数
+    var pname = xigua.getPname();
+    alert(pname)
+
+    // 给String扩展一个函数
+    String.prototype.suiyi = function () {
+        alert("这是给String类型扩展的一个函数，叫做suiyi");
+    }
+
+    "abc".suiyi();
+
+</script>
+</body>
+</html>
+<!--
+	java语言怎么定义类，怎么创建对象？（强类型）
+		public class User{
+			private String username;
+			private String password;
+			public User(){
+				
+			}
+			public User(String username,String password){
+				this.username = username;
+				this.password = password;
+			}
+		}
+		User user = new User();
+		User user = new User("lisi","123");
+		
+	JS语言怎么定义类，怎么创建对象？（弱类型）
+		User = function(username,password){
+			this.username = username;
+			this.password = password;
+		}
+		var u = new User();
+		var u = new User("zhangsan");
+		var u = new User("zhangsan","123");
+-->

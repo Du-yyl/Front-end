@@ -1,0 +1,45 @@
+<!--
+  ~ Date:2021/12/24 10:31 14
+  ~ Name:5、for中let和var的储存问题.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/数据类型和变量问题
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for中let和var的储存问题</title>
+
+</head>
+<body>
+<pre>
+	解析：
+		两个程序都先运行的for循环，将同步函数执行完后再执行异步函数
+		执行过程为：
+			两个for循环首先进行遍历，进入到异步函数；
+			这时的for循环已经完成遍历，开始输出i；
+			let的作用域会在for循环时进行绑定i的状态，所以，定时器触发输出的时0和1
+			var的作用域不会进行绑定i的状态，所以当for运行完时，i的结果就是 2 ，当进行输出时，程序输出的i也是 2
+		并且第二个for循环中绑定的i是通过var进行定义的，是全局变量
+</pre>
+</body>
+<script>
+	for (let i = 0, len = 2; i < len; i++) {
+		setTimeout(function () {
+			console.log(i);
+		}, 100)
+	}
+
+
+	for (var i = 0, len = 2; i < len; i++) {
+		setTimeout(function () {
+			console.log(i);
+		}, 100)
+	}
+
+	console.log(i);
+</script>
+</html>

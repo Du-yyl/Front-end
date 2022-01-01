@@ -1,0 +1,74 @@
+<!--
+  ~ Date:2021/11/19 下午5:11
+  ~ Name:1、元素的消失方式.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/特殊问题/1、元素的消失方式.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素的消失方式</title>
+	<style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #a {
+            display: none;
+        }
+
+        #b {
+            opacity: 0;
+        }
+
+        #c {
+            margin-left: 2000px;
+        }
+
+        #d {
+            position: absolute;
+            left: 2000px;
+        }
+
+        #e {
+            width: 0;
+            height: 0;
+        }
+
+        #f {
+            visibility: hidden;
+        }
+
+        html {
+            visibility: hidden;
+        }
+	</style>
+</head>
+<body>
+<p>
+	1 不显示 display：none <br>
+	2 设置为透明 opacity：0 <br>
+	3 移出浏览器 比如margin-left：3000px，或者相对定位 left：3000px <br>
+	4 设置此元素的优先级最低 z-index:-999; <br>
+	5 设置此元素的父元素宽高都为0 <br>
+	6 不可见 visibility:hidden <br>
+	7 把此元素移出父元素，设置父元素 overflow:hidden <br>
+	8 将此元素的font-size line-height width height 都为0 <br>
+</p>
+<div id="a"></div>
+<div id="b"></div>
+<div id="c"></div>
+<div id="d"></div>
+<div id="e"></div>
+<div id="f"></div>
+<!--<div id="g"></div>-->
+<!--<div id="h"></div>-->
+<!--<div id="i"></div>-->
+</body>
+</html>

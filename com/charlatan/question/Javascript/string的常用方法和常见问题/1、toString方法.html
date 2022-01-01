@@ -1,0 +1,36 @@
+<!--
+  ~ Date:2021/12/24 10:57 51
+  ~ Name:1、toString方法.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/string的常用方法和常见问题
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>toString常见问题</title>
+
+</head>
+<body>
+<pre>
+  2.toString
+    会报错。因为JS引擎将调用的.解析成了 (2.) 这时的toString方法不会解析调用的 . ，所以报错
+
+   2 .toString();
+</pre>
+</body>
+<script>
+	2..toString();
+
+	2.
+	toString();
+
+	(2).toString();
+
+	2.
+	toString
+</script>
+</html>

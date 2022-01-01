@@ -1,0 +1,113 @@
+<!--
+  ~ Date:2021/12/14 21:41 45
+  ~ Name:4、球形进度条——CSS.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/HTML&CSS/HtmlBase/进度条
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>球形进度条</title>
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        /*-------以上为默认设置（The above is the default setting）--------*/
+
+        .container {
+            width: 200px;
+            height: 200px;
+            border: 5px solid rgb(118, 218, 255);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .wave-change {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 0;
+            top: 0;
+            animation: change 12s infinite linear;
+
+
+        }
+
+        .wave-change::after {
+            border-radius: 47% 42% 46% 44%;
+            background-color: rgba(255, 255, 255, .8);
+            transform: translate(-50%, -70%) rotate(0);
+            animation: rotate 9s linear -4s infinite;
+            z-index: 2;
+        }
+
+        .wave-change ::before, ::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: 50%;
+            background-color: rgba(255, 255, 255, .6);
+            border-radius: 45% 47% 43% 46%;
+            transform: translate(-50%, -70%) rotate(0);
+            animation: rotate 7s linear infinite;
+            z-index: 1;
+        }
+
+        .wave {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(118, 218, 255);
+            border-radius: 50%;
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: #000;
+            z-index: 10;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: translate(-50%, -70%) rotate(360deg);
+            }
+        }
+
+        @keyframes change {
+            from {
+                top: 80px;
+            }
+            to {
+                top: -120px;
+            }
+        }
+
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="wave-change"></div>
+	<div class="wave"></div>
+</div>
+</body>
+</html>

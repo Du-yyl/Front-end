@@ -1,0 +1,33 @@
+<!--
+  ~ Date:2021/12/4 10:44 23
+  ~ Name:2、JS的if是短路吗.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/条件语句
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS的if是短路吗</title>
+</head>
+<body>
+<script>
+    let a;
+    let b;
+    let c;
+    let d;
+    let e;
+    let f;
+    if (false && (a = 3)) {
+        alert("我是if我输出了")
+    }
+    if (true || (a = 3)) {
+        alert("我是if我输出了")
+    }
+    alert(a)
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+  ~ Date:2021/12/27 16:40 11
+  ~ Name:1、func构造函数实现私有属性.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/实现私有属性
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>func构造函数实现私有属性</title>
+
+</head>
+<body>
+<pre>
+	使用闭包进行创建，完美实现了——只能通过指定方法来访问指定的数据，不能使其他元素直接访问
+
+	缺点：
+		私有变量和特权函数只能在构造函数中创建。通常来讲，构造函数的功能只负责创建新对象，
+		方法应该共享于prototype上。特权函数本质上是存在于每个实例中的，而不是prototype上，增加了资源占用。
+</pre>
+</body>
+<script>
+	function Func(name, age) {
+		let _name = name
+		let _age = age
+		this.name = function () {
+			return _name
+		}
+		this.age = function () {
+			return _age
+		}
+	}
+
+
+	let c1 = new Func("张三", 12)
+	console.log(c1.name());
+	console.log(c1._name);
+</script>
+</html>

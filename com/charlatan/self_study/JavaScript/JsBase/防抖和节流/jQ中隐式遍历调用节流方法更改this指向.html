@@ -1,0 +1,137 @@
+<!--
+  ~ Date:2021/12/23 9:36 11
+  ~ Name:jQ中隐式遍历调用节流方法更改this指向.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/practice/JavaScript/小米商城
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceshi</title>
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        /*-------以上为默认设置（The above is the default setting）--------*/
+
+        li {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            margin: 20px;
+            float: left;
+        }
+
+
+	</style>
+</head>
+<body>
+<ul id="ul">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+<hr>
+<pre>
+	当使用jQ中进行调用指定的方法时，直接使用获取到的集合进行遍历，会进行隐式遍历，将事件全部进行绑定，这是点击事件发生时，能通过index（）方法准确地
+	返回指定的方法，并获取到下标
+
+	但是当为jQ绑定的事件加入防抖时，将触发的事件作为参数进行传递，在防抖的方法中进行访问，这时，当执行防抖的方法时，调用的回调函数会在防抖的方法中被调用，
+	这时，调用的this是空，默认是window，所以需要进行指定，而在防抖函数中进行调用的仍然是被点击的那个按钮，所以将this进行指定为要调用的那个函数，
+	可以完成指定的函数的绑定，使这个方法更加完善，调用的不再是window，而是调用这个方法的对象
+
+</pre>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<script>
+	let top_3_sub_lis = $(`#ul > li`)
+
+
+	// function debounce(callBack, time) {
+	// 	let flag = true
+	// 	return function () {
+	// 		time = time || 1000
+	// 		let timer = null
+	// 		if (flag) {
+	// 			flag = false
+	// 			callBack()
+	// 			timer = setTimeout(() => {
+	// 				flag = true
+	// 				clearTimeout(timer)
+	// 				console.log((this));
+	// 			}, time)
+	// 		}
+	// 	}
+	// }
+
+	/**
+	 * 防抖的方法
+	 *  【这个方法使用了
+	 *      callBack.call(this)
+	 *  使这个方法的调用指定的回调函数时，依然可以准确得返回i，并使用最原始的调用者进行调用】
+	 * @param callBack 防抖要执行的回调函数
+	 * @param time 多久执行一次
+	 * @returns {(function(): void)|*}
+	 */
+	function debounce(callBack, time) {
+		let flag = true
+		return function () {
+			time = time || 1000
+			let timer = null
+			if (flag) {
+				flag = false
+				/*
+				* 当直接进行callBack（）调用的时候，调用者默认是window的，所以为了防止这种情况出现而造成的指向不明的问题，这里直接指定调用
+				* 者是this
+				* */
+				callBack.call(this)
+				timer = setTimeout(() => {
+					flag = true
+					clearTimeout(timer)
+				}, time)
+			}
+		}
+	}
+
+
+	// top_3_sub_lis.click(function () {
+	top_3_sub_lis.click(debounce(function () {
+		console.log("点击成功");
+		console.log($(this).index());
+	}, 1000,))
+	// })
+
+
+	//	设置调用者，并将其设置为指定的调用者
+
+	// 通过原生进行指定时，每一次调用的调用者都是明确的，所以不用担心this的指向问题
+	// for (let i = 0, len = top_3_sub_lis.length; i < len; i++) {
+	// 	// top_3_sub_lis[i].onclick = function () {
+	// 	top_3_sub_lis[i].onclick = debounce(function () {
+	// 		console.log("点击成功");
+	// 		console.log(top_3_sub_lis[i]);
+	// 		console.log(i);
+	// 	}, 1000, top_3_sub_lis)
+	// }
+
+</script>
+</html>

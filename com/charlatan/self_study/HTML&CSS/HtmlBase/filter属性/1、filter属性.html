@@ -1,0 +1,64 @@
+<!--
+  ~ Date:2021/11/22 上午9:56
+  ~ Name:1、filter属性.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/基础/HtmlBase/filter属性/1、filter属性.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter属性测试</title>
+	<style>
+        #b {
+            filter: blur(5px);
+        }
+
+        #c {
+            filter: contrast(140%);
+        }
+
+        #d {
+            filter: grayscale(100%);
+        }
+
+        #e {
+            filter: hue-rotate(90deg);
+        }
+	</style>
+</head>
+<body>
+<p>
+	filter CSS属性将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像，背景和边框的渲染。
+	<br>
+	css提供了一些方法，可以完成背景虚化和灰阶转换的一些基本任务
+</p>
+<pre>
+    未经过任何改变
+</pre>
+<img alt="图片1" height="400" id="a" src="../file/text_1.jpg">
+<pre>
+    模糊处理：blur（）；
+    可以使用指定的像素值，这个值的效果很猛，所以10像素内就能达到预定效果【以下效果是5px】
+</pre>
+<img alt="图片2" height="400" id="b" src="../file/text_1.jpg">
+<pre>
+    提高饱和度,contrast（）；
+</pre>
+<img alt="图片3" height="400" id="c" src="../file/text_1.jpg">
+
+<pre>
+    改变灰阶，grayscale（）；
+    可以图片的黑白程度当数值是百分百时
+</pre>
+<img alt="图片4" height="400" id="d" src="../file/text_1.jpg">
+
+<pre>
+    色调旋转：hue-rotate（）；
+</pre>
+<img alt="图片4" height="400" id="e" src="../file/text_1.jpg">
+</body>
+</html>

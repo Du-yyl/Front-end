@@ -1,0 +1,53 @@
+<!--
+  ~ Date:2021/11/19 上午9:51
+  ~ Name:2、解决上下外边框重叠的相互影响.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/基础/HtmlBase/BFC机制/2、解决上下外边框重叠的相互影响.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>解决</title>
+	<style>
+        .c {
+            /*overflow: hidden;*/
+            /*float: left;*/
+            /*display: inline-block;*/
+            /*display: table-cell;*/
+            display: table-caption;
+        }
+
+        .a {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 100px;
+        }
+
+	</style>
+</head>
+<body>
+<p>
+	BFC(Block Formatting Context)，块级格式化上下文，是一个独立的渲染区域， <br>
+	让处于BFC内部的元素与外部的元素相互隔离，使内外元素的定位不会相互影响。
+</p>
+<p>
+	在每个元素外再进行嵌套一个外盒子，并设置父盒子的超出隐藏，用来出发BFC机制
+</p>
+<div class="c">
+	<!--region Description-->
+	<div class="a"></div>
+	<!--endregion-->
+</div>
+<div class="c">
+	<div class="a"></div>
+
+</div>
+
+
+</body>
+</html>

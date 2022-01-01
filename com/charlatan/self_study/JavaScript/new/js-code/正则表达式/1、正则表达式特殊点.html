@@ -1,0 +1,38 @@
+<!--
+  ~ Date:2021/11/30 下午2:17
+  ~ Name:1、正则表达式特殊点.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/正则表达式/1、正则表达式特殊点.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则特殊点</title>
+</head>
+<body>
+<script>
+    /*
+    * 当要查找一个字符串中是否包含某一元素可以使用正则表达式
+    * */
+    let str1 = "a"
+    /*
+    * 查找字符串中是否包含 a 或 b
+    * []    中括号中的内容也可以表示或的意思
+    * [a-z] 表示a-z任意的小写
+    * [A-z] 表示任意的字母
+    * [^a]  表示找除了a以外的所有东西
+    * */
+    let exg = /a|b/
+    let exg_1 = /[qwe]/
+    let exg_2 = /[^a]/
+    console.log(exg.test(str1))
+    console.log(exg_1.test(str1))
+    console.log(exg_2.test(str1))
+
+</script>
+</body>
+</html>

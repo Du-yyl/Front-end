@@ -1,0 +1,37 @@
+<!--
+  ~ Date:2021/12/27 10:28 09
+  ~ Name:6、函数和变量的提升.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/new/DOM
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数和变量的提升</title>
+
+</head>
+<body>
+<pre>
+	变量声明和函数声明都会被提升到作用域最高级
+	当出现同名时优先级：
+		变量声明 < 函数声明 < 变量赋值
+</pre>
+</body>
+<script>
+	var foo = function (x, y) {
+		return x - y
+	}
+
+	function foo(x, y) {
+		return x + y
+	}
+
+	
+	
+	console.log(foo(1, 2));
+</script>
+</html>

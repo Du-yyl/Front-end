@@ -1,0 +1,44 @@
+<!--
+  ~ Date:2021/11/15 下午1:36
+  ~ Name:1、伪元素的使用.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/基础/HtmlBase/伪元素/1、伪元素的使用.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪元素的使用</title>
+	<style>
+        #red {
+            width: 190px;
+            height: 130px;
+            background-color: red;
+        }
+
+        #red::after {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            display: block;
+            content: "我是在div后加的字";
+            position: absolute;
+            top: 160px;
+        }
+
+        #red::before {
+            content: "我是在div前添加的字，我的颜色可以单独设置，我的颜色是天蓝色";
+            color: #CCFFFF;
+        }
+	</style>
+</head>
+<body>
+<div id="red">
+	我是红色的div，可以使用伪元素在我的后面添加一个新的div
+</div>
+
+</body>
+</html>

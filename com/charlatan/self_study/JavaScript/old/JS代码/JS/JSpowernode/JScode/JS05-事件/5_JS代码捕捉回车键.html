@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS捕捉回车键</title>
+</head>
+<body>
+<!--  回车键的键值是13
+      ESC的键值是27   -->
+
+<script type="text/javascript">
+  /*
+  window.onload = function (){
+    document.getElementById('username').onkeydown = function (){
+      alert('111')
+    }
+  }
+  */
+
+  /*
+  window.onload = function (){
+    //  对于‘键盘事件对象‘来说，都有keyCode属性用来获取键值
+    document.getElementById('username').onkeydown = function (key){
+      alert(key.keyCode)
+    }
+  }
+  */
+
+  window.onload = function () {
+    document.getElementById('username').onkeydown = function (event) {
+      if (event.keyCode === 13) {
+        alert('登录成功')
+      }
+    }
+  }
+</script>
+<input id='username' type="text"/>
+
+</body>
+</html>

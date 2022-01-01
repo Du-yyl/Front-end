@@ -1,0 +1,49 @@
+<!--
+  ~ Date:2021/12/9 10:19 06
+  ~ Name:1、解构赋值.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/赋值
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>解构赋值</title>
+</head>
+<body>
+<pre>
+    ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。
+
+    以前，为变量赋值，只能直接指定值。
+
+    当使用解构赋值时，一个前有多个点时会被当成可变长度数组，将固定长度赋值完毕，其他元素都会在这个数组中进行保存
+
+    只要某种数据结构具有 Iterator 接口，都可以采用数组形式的解构赋值。
+
+</pre>
+</body>
+<script>
+	window.onload = function () {
+		let [a, b, c] = [1, 2, 3]
+		let [a1, b1, c1] = [12, , 32]
+		let [a2, b2, c2] = [13, 23, 33, 44]
+		let [a3, ...b3] = [111, 222, 333, 4444]
+		let nums = [1, 2, 3, 4, 5, 6, 7]
+		let [a4, b4, c4] = nums
+
+		console.log(a, b, c)
+		// 1 2 3
+		console.log(a1, b1, c1)
+		// 35 12 undefined 32
+		console.log(a2, b2, c2)
+		// 36 13 23 33
+		console.log(a3, b3)
+		// 37 111 Array(3)
+		console.log(a4, b4, c4)
+		// 38 1 2 3
+	}
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组去重</title>
+</head>
+<body>
+<script>
+	/*
+	* 数组去重*/
+	let num = [
+		1, 2, 3, 4, 5, 6, 7, 8, 12, 23, 45, 56, 78, 89, 90, 1, 1, 1, 1, 1, 1,
+		1, 2, 3, 4, 5, 6, 7, 8, 12, 23, 45, 56, 78, 89, 90, 1, 1, 1, 1, 1, 1, 1,
+	]
+	console.log(num.length)
+	let ans = []
+	for (let i = 0; i < num.length; i++) {
+		let flag = true;
+		for (j = 0; j < ans.length; j++) {
+			if (num[i] === ans[j]) {
+				flag = false
+				break;
+			}
+		}
+		if (flag) {
+			ans[j] = num[i]
+		}
+	}
+	console.log(ans)
+</script>
+</body>
+</html>

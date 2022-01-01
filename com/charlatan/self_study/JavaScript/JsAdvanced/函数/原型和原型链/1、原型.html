@@ -1,0 +1,58 @@
+<!--
+  ~ Date:2021/12/12 16:27 34
+  ~ Name:1、原型.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/函数/原型和原型链
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型</title>
+
+</head>
+<body>
+
+
+</body>
+<script type="text/javascript">
+	/*
+   1. 函数的prototype属性
+        每个函数都有一个prototype属性, 它默认指向一个Object空对象(即称为: 原型对象)
+        原型对象中有一个属性constructor, 它指向函数对象
+    2. 给原型对象添加属性(一般都是方法)
+        作用: 函数的所有实例对象自动拥有原型中的属性(方法)
+  * */
+
+	console.log(Date.prototype, typeof Date.prototype);
+
+	function Fun1() {
+		console.log("Fun1")
+	}
+
+	console.log(Fun1.prototype);
+	//默认指向一个Object空对象
+
+	// 原型对象中有一个属性constructor, 它指向函数对象
+
+	console.log(Date.prototype.constructor === Date);
+	console.log(Fun1.prototype.constructor === Fun1);
+	/*
+       * 每个对象都有一个对象的prototype属性，而prototype中也有一个属性是constructor，这个constructor指向的是这个函数自身
+       * */
+	console.log(Fun1.prototype.constructor.prototype.constructor.prototype.constructor);
+
+	//	可以使用原型添加新的属性和方法
+
+	Fun1.prototype.test = function () {
+		console.log("test");
+	}
+	let f1 = new Fun1;
+	f1.test()
+
+
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!--
+  ~ Date:2021/12/13 17:51 26
+  ~ Name:6、面试题.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/函数/闭包
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面试题</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	/*
+	 说说它们的输出情况
+	 */
+
+	//代码片段一
+	var name = "The Window";
+	var object = {
+		name: "My Object",
+		getNameFunc: function () {
+			return function () {
+				return this.name;
+			};
+		}
+	};
+	console.log(object.getNameFunc()());
+	console.log(object.getNameFunc());
+	/*
+	*   这里直接执行的函数直接调用的是object.getNameFunc()，他的返回对象是一个函数，这个函数的执行对象是window，
+	*   所以结果会返回the window
+	* */
+
+
+
+	//代码片段二
+	var name2 = "The Window";
+	var object2 = {
+		name2: "My Object",
+		getNameFunc: function () {
+			var that = this;
+			return function () {
+				return that.name2;
+			};
+		}
+	};
+	console.log(object2.getNameFunc()());
+	/*
+	* 这里调用的是和上面一样的，但是返回的是this的调用Object中的this，并进行赋值
+	* 所以这里的返回的Object中的this
+	* */
+
+</script>
+</html>

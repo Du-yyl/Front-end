@@ -1,0 +1,56 @@
+<!--
+  ~ Date:2021/12/29 16:36 02
+  ~ Name:混合.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Less/基础/less
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>普通混合</title>
+	<!--	<link rel="stylesheet" href="./css/普通混合.css">-->
+	<!--	<link rel="stylesheet" href="./css/带有参数的混合.css">-->
+	<link href="./css/带有默认值的混合.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrap">
+	<div id="inner1"></div>
+	<div id="inner2"></div>
+</div>
+<hr>
+<pre>
+	less中的混合：
+		可以指定的参数是变量的表示，表示混合匹配模式，类似函数的名字，可以通过这个名字，进行访问指定的方法
+	语法：
+		@方法（标识符1，参数1，参数2）{
+
+		}
+		@方法（标识符2，参数1，参数2）{
+
+		}
+		@方法（标识符3，参数1，参数2）{
+
+		}
+		@方法（标识符4，参数1，参数2）{
+
+		}
+	调用：
+		@方法（标识符，参数列表）
+	统一调用：
+		可以指定一个统一的方法名，@_进行指定方法统一的调用方法
+		@方法【名字和要调用的方法名字相同】（@_）{
+			代码块
+			这个代码块中的代码在每次调用时执行，可以理解为静态代码块【可以写一些，指定方法的通用属性，如宽高等】
+			但是名字必须相同
+		}
+
+
+	如：当写三角形的时候，可以指定不同的函数标识符来指定不同的三角形方向
+</pre>
+</body>
+
+</html>

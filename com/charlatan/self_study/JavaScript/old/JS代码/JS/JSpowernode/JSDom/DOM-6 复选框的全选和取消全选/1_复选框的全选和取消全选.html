@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>复选框的全选和取消全选</title>
+</head>
+<body>
+<script type="text/javascript">
+  window.onload = function () {
+    var d1 = document.getElementById('ch1')
+    //  使用标签的名字进行选择相应的标签，但是因为是多个元素，所以这个是Object数组
+    var d2 = document.getElementsByName('aihao')
+    d1.onclick = function () {
+      //  简化写法
+      for (let i = 0; i < d2.length; i++) {
+        d2[i].checked = d1.checked
+      }
+    }
+    //  这一层循环是绑定按键的，在页面加载的时候执行
+    for (let i = 0; i < d2.length; i++) {
+      //  绑定案件成功
+      d2[i].onclick = function () {
+        var c = 0
+        //  这个循环是事件，在发生鼠标单击事件的时候执行
+        //  每按一下这个按键，都会将这几个内容遍历一边，将多少个true读出来
+        for (let j = 0; j < d2.length; j++) {
+          //  如果都都是true，那么第一个是true，反之是false、
+          if (d2[j].checked === true) {
+            c++
+          }
+          d1.checked = (c === d2.length)
+        }
+      }
+    }
+  }
+</script>
+<!--  可以通过更改‘checked’的属性中的checked属性进行变量的更改-->
+<input id='ch1' type="checkbox"><br>
+<input id='ch2' name="aihao" type="checkbox" value="smoke">抽烟<br>
+<input id='ch3' name="aihao" type="checkbox" value="drink">喝酒<br>
+<input id='ch4' name="aihao" type="checkbox" value="tt">烫头<br>
+</body>
+</html>

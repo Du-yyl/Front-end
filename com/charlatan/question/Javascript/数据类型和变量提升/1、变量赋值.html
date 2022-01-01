@@ -1,0 +1,49 @@
+<!--
+  ~ Date:2021/12/21 9:45 08
+  ~ Name:1、变量赋值.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/数据类型和变量提升
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>输出结果</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	function fn(o, val) {
+		o.b = 1
+		val = 1
+	}
+
+	var obj = {
+		b: 0
+	};
+	var num = 0;
+	fn(obj, num)
+	console.log(obj.b, num);
+
+	/**
+	 * 题解：
+	 * 	function fn(o, val) {
+	 * 		o.b = 1     //这里修改的是o指向的对象，指向的还是OBJ的内存地址，所以可以完成修改
+	 * 		val = 1     //这里进行赋值的是num的字面量，并不是num的内存地址
+	 * 	}
+	 *
+	 * 	var obj = {
+	 * 		b: 0
+	 * 	};
+	 * 	var num = 0;
+	 * 	fn(obj, num)
+	 * 	console.log(obj.b, num);
+	 */
+
+</script>
+</html>

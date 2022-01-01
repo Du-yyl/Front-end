@@ -1,0 +1,100 @@
+<!--
+  ~ Date:2021/12/4 15:20 38
+  ~ Name:3、其他的元素样式操作.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/使用JS操作样式
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>其他的元素样式操作</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0f0f;
+            padding: 100px;
+            border: 10px solid;
+            margin: 30px;
+            position: absolute;
+            left: 200px;
+            top: 100px;
+        }
+        #btn1{
+            position: absolute;
+            top: 2000px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- /#btn1 -->
+<div id="div2">
+    <div id="div1"></div>
+    <!-- /#div1 -->
+</div>
+<input id="btn1" type="button" value="我是按钮1">
+<!-- /#div2 -->
+
+</body>
+<script>
+    window.onload = function () {
+        let btn1 = document.getElementById("btn1")
+        let div1 = document.getElementById("div1")
+
+        btn1.onclick = function () {
+
+            /*
+            element.clientHeight 返回元素的可见高度。
+            element.clientWidth 返回元素的可见宽度。
+                这两个返回的数值都不带有PX，可以直接用于计算
+                会将内边距和内容区的宽度，不包括边框和外边距
+
+               这两个属性都是只读的，不能继续修改
+            */
+            alert(div1.clientHeight)
+            alert(div1.clientWidth)
+            /*
+            element.offsetHeight 返回元素的高度。
+            element.offsetWidth 返回元素的宽度。
+                获取元素的整个大小，包括宽度，内边距，边框
+
+            element.offsetParent 返回元素的偏移容器。
+                返回指定元素的定位父元素
+            */
+            alert(div1.offsetWidth)
+            alert(div1.offsetHeight)
+            alert(div1.offsetParent.id)
+
+            /*
+            element.offsetLeft 返回元素的水平偏移位置。
+            element.offsetTop 返回元素的垂直偏移位置。
+                返回相对与定位的元素的开启定位的祖先元素
+            */
+            alert(div1.offsetLeft)
+            alert(div1.offsetTop)
+
+            /*
+            element.scrollHeight 返回元素的整体高度。
+            element.scrollWidth 返回元素的整体宽度。
+                获取整个滚动区域的宽度和高度
+
+            element.scrollLeft 返回元素左边缘与视图之间的距离。
+            element.scrollTop 返回元素上边缘与视图之间的距离。
+                获取到滚动条的滚动距离
+
+            当满足scrollHeight - scrollTop === clientHeight时
+                说明滚动条滚动到底了
+            */
+            alert(div1.scrollHeight)
+            alert(document.getElementsByTagName("body").scrollTop)
+        }
+
+    }
+</script>
+</html>

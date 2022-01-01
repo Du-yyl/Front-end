@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设置table的tbody</title>
+</head>
+<body>
+<script type="text/javascript">
+    // 有这些json数据
+    var data = {
+        "total": 4,
+        "emps": [
+            {"empno": 7369, "ename": "SMITH", "sal": 800.0},
+            {"empno": 7361, "ename": "SMITH2", "sal": 1800.0},
+            {"empno": 7360, "ename": "SMITH3", "sal": 2800.0},
+            {"empno": 7362, "ename": "SMITH4", "sal": 3800.0}
+        ]
+    };
+
+    // 希望把数据展示到table当中.
+    window.onload = function () {
+        var displayBtnElt = document.getElementById("displayBtn");
+        displayBtnElt.onclick = function () {
+            var emps = data.emps;
+            var html = "";
+            for (var i = 0; i < emps.length; i++) {
+                var emp = emps[i];
+                html += "<tr>";
+                html += "<td>" + emp.empno + "</td>";
+                html += "<td>" + emp.ename + "</td>";
+                html += "<td>" + emp.sal + "</td>";
+                html += "</tr>";
+            }
+            document.getElementById("emptbody").innerHTML = html;
+            document.getElementById("count").innerHTML = data.total;
+        }
+    }
+</script>
+<input id="displayBtn" type="button" value="显示员工信息列表"/>
+<h2>员工信息列表</h2>
+<hr>
+<table border="1px" width="50%">
+    <tr>
+        <th>员工编号</th>
+        <th>员工名字</th>
+        <th>员工薪资</th>
+    </tr>
+    <tbody id="emptbody">
+    <!--
+    <tr>
+        <td>7369</td>
+        <td>SMITH</td>
+        <td>800</td>
+    </tr>
+    <tr>
+        <td>7369</td>
+        <td>SMITH</td>
+        <td>800</td>
+    </tr>
+    <tr>
+        <td>7369</td>
+        <td>SMITH</td>
+        <td>800</td>
+    </tr>
+    -->
+    </tbody>
+</table>
+总共<span id="count">0</span>条数
+</body>
+</html>

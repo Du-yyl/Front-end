@@ -1,0 +1,377 @@
+<!--
+  ~ Date:2021/11/29 下午5:57
+  ~ Name:作业啊.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_7/day_1/H1/作业啊.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #box {
+            width: 1100px;
+            height: 900px;
+            background-color: #c6b2b2;
+            position: relative;
+        }
+
+        #box-div {
+            width: 850px;
+            height: 40px;
+            background-color: dodgerblue;
+            position: absolute;
+            top: 15%;
+            left: 15%;
+        }
+
+        #box-div-ul {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #box-div-ul li {
+            width: 81px;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 2px;
+            background-color: whitesmoke;
+            transition: color .5s, background-color .4s;
+        }
+
+        #box-div-ul li:hover {
+            cursor: pointer;
+            background-color: grey;
+            color: white;
+        }
+
+        #box-div-ul li:nth-child(1):after {
+            color: black;
+            width: 0;
+            height: 0;
+            display: block;
+            background-color: transparent;
+            content: "这是一个测试-1";
+            position: absolute;
+            top: 40px;
+            left: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, height .7s, background-color 1s, color .5s .7s;
+        }
+
+        #box-div-ul li:hover:nth-child(1):after {
+            width: 850px;
+            height: 70px;
+            background-color: red;
+            color: whitesmoke;
+        }
+
+        #box-div-ul li:nth-child(2):after {
+            color: black;
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            display: block;
+            content: "这是一个测试-2";
+            position: absolute;
+            top: 40px;
+            right: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, height .7s, background-color 1s, color .5s .7s;
+            /*width: 850px;*/
+            /*height: 70px;*/
+            /*background-color: red;*/
+        }
+
+        #box-div-ul li:hover:nth-child(2):after {
+            width: 850px;
+            height: 70px;
+            background-color: #ff0062;
+            color: #ff8800;
+        }
+
+        #box-div-ul li:nth-child(3):after {
+            color: black;
+            /*width: 0;*/
+            height: 0;
+            background-color: transparent;
+            display: block;
+            content: "这是一个测试-3";
+            position: absolute;
+            bottom: -70px;
+            right: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, height .7s, background-color 1s, color .5s .7s;
+            width: 850px;
+            /*height: 70px;*/
+            /*background-color: red;*/
+        }
+
+        #box-div-ul li:hover:nth-child(3):after {
+            width: 850px;
+            height: 70px;
+            background-color: #99ff00;
+            color: #ff8800;
+        }
+
+        #box-div-ul li:nth-child(4):after {
+            color: black;
+            /*width: 0;*/
+            height: 0;
+            background-color: transparent;
+            display: block;
+            content: "这是一个测试-4";
+            position: absolute;
+            top: 40px;
+            right: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, height .7s, background-color 1s, color .5s .7s;
+            width: 850px;
+            /*height: 70px;*/
+            /*background-color: red;*/
+        }
+
+        #box-div-ul li:hover:nth-child(4):after {
+            width: 850px;
+            height: 70px;
+            background-color: #8c00ff;
+            color: #00ff6f;
+        }
+
+        #box-div-ul li:nth-child(5):after {
+            color: black;
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            display: block;
+            content: "这是一个测试-5";
+            position: absolute;
+            top: 40px;
+            right: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, height .7s, background-color 1s, color .5s .7s, transform .7s ease-out;
+            /*width: 850px;*/
+            /*height: 70px;*/
+            /*background-color: red;*/
+            transform: rotate(540deg);
+            transform-origin: 0 100%;
+        }
+
+        #box-div-ul li:hover:nth-child(5):after {
+            width: 850px;
+            height: 70px;
+            background-color: #11ff00;
+            color: #000dff;
+            transform: rotate(360deg);
+            transform-origin: 0 100%;
+        }
+
+        #box-div-ul li:nth-child(6):after {
+            color: black;
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            display: block;
+            content: "这是一个测试-6";
+            position: absolute;
+            top: 110px;
+            right: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, height .7s, background-color 1s, color .5s .7s, transform .6s ease-out, top .8s ease-out .7s;
+            /*width: 850px;*/
+            /*height: 70px;*/
+            /*background-color: red;*/
+            transform: rotate(720deg);
+            transform-origin: 100% 0;
+        }
+
+        #box-div-ul li:hover:nth-child(6):after {
+            width: 850px;
+            height: 70px;
+            background-color: #deff10;
+            color: #00ff6f;
+            transform: rotate(360deg);
+            transform-origin: 100% 0;
+            top: 40px;
+        }
+
+        #box-div-ul li:nth-child(7):after {
+            color: black;
+            width: 0;
+            height: 0;
+            /*background-color: transparent;*/
+            display: block;
+            content: "这是一个测试-7";
+            position: absolute;
+            top: 110px;
+            left: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, background-color 1s, color .9s .7s, transform .6s ease-out, top .8s ease-out .7s;
+            /*width: 850px;*/
+            /*height: 70px;*/
+            background-color: red;
+            transform: rotate(720deg);
+            transform-origin: 50% 50%;
+        }
+
+        #box-div-ul li:hover:nth-child(7):after {
+            width: 850px;
+            height: 70px;
+            background-color: #deff10;
+            color: #00ff6f;
+            transform: rotate(360deg);
+            transform-origin: 50% 50%;
+            top: 40px;
+        }
+
+        #box-div-ul li:nth-child(8):after {
+            color: black;
+            width: 0;
+            height: 0;
+            /*background-color: transparent;*/
+            display: block;
+            content: "这是一个测试-8";
+            position: absolute;
+            top: -110px;
+            right: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, background-color 1s, color .9s .7s, transform .6s ease-out, top .8s ease-out .7s;
+            /*width: 850px;*/
+            /*height: 70px;*/
+            background-color: red;
+            transform: rotate(720deg);
+            transform-origin: 50% 50%;
+        }
+
+        #box-div-ul li:hover:nth-child(8):after {
+            width: 850px;
+            height: 70px;
+            background-color: rgba(16, 255, 112, 0.45);
+            color: #ffd500;
+            transform: rotate(360deg);
+            transform-origin: 50% 50%;
+            top: 40px;
+        }
+
+        #box-div-ul li:nth-child(9):after {
+            color: black;
+            width: 0;
+            height: 0;
+            /*background-color: transparent;*/
+            display: block;
+            content: "这是一个测试-9";
+            position: absolute;
+            top: -110px;
+            /*right: 0;*/
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .85s, height .1s, background-color 1s, color .9s .7s, transform .6s ease-out, top .8s ease-out .7s;
+            /*width: 850px;*/
+            /*height: 70px;*/
+            background-color: red;
+            /*transform: rotate(720deg);*/
+            /*transform-origin: 50% 50%;*/
+        }
+
+        #box-div-ul li:hover:nth-child(9):after {
+            width: 850px;
+            height: 70px;
+            background-color: rgba(231, 255, 16, 0.45);
+            color: #0066ff;
+            /*transform: rotate(360deg);*/
+            /*transform-origin: 50% 50%;*/
+            top: 40px;
+        }
+
+        #box-div-ul li:nth-child(10):after {
+            color: black;
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            display: block;
+            content: "这是一个测试-10";
+            position: absolute;
+            top: -425px;
+            left: 900px;
+
+            line-height: 70px;
+            font-size: 30px;
+            overflow: hidden;
+            transition: width .25s, background-color 1s, color .9s .9s, transform 1.2s ease-out .9s, top .6s ease-out, left .9s ease-out;
+            /*width: 850px;*/
+            /*height: 70px;*/
+            /*background-color: red;*/
+            transform: rotate(450deg);
+            transform-origin: 20% 10%;
+        }
+
+        #box-div-ul li:hover:nth-child(10):after {
+            width: 850px;
+            height: 70px;
+            background-color: rgba(176, 189, 58, 0.45);
+            color: #22ff00;
+            transform: rotate(360deg);
+            transform-origin: 50% 50%;
+            top: 40px;
+            left: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="box-div">
+        <ul id="box-div-ul">
+            <li>测试1</li>
+            <li>测试2</li>
+            <li>测试3</li>
+            <li>测试4</li>
+            <li>测试5</li>
+            <li>测试6</li>
+            <li>测试7</li>
+            <li>测试8</li>
+            <li>测试9</li>
+            <li>测试10</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

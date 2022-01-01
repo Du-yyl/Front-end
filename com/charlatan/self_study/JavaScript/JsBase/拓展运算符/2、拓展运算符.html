@@ -1,0 +1,40 @@
+<!--
+  ~ Date:2021/12/16 21:13 49
+  ~ Name:2、拓展运算符.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/拓展运算符
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拓展运算符</title>
+
+</head>
+<body>
+<pre>
+	扩展运算符（...）用于取出参数对象的所有可遍历属性，拷贝到当前对象之中。
+	这等同于使用Object.assign方法。
+
+	扩展运算符可以用于合并两个对象。
+
+	如果扩展运算符的参数是null或undefined，这个两个值会被忽略，不会报错。
+	let emptyObject = { ...null, ...undefined }; //  不报错
+</pre>
+</body>
+<script>
+
+	// let z = {a: 3, b: 4};
+	// let n = {...z};
+	// console.log(n); // { a: 3, b: 4 }
+
+
+	let ab = {...a, ...b};
+	//  等同于
+	ab = Object.assign({}, a, b);
+	console.log(ab);
+</script>
+</html>

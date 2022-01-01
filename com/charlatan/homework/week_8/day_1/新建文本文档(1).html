@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gainsboro;
+        }
+
+        ul {
+            width: 1000px;
+
+            /* background-color: black; */
+            display: flex;
+            flex-wrap: wrap;
+            /*justify-content: center;*/
+            position: absolute;
+            left: calc(50% - 500px);
+        }
+
+        li {
+            width: 200px;
+            height: 320px;
+            /* background-color: rgb(150, 63, 63); */
+            margin: 10px;
+            list-style: none;
+            background-color: ghostwhite;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all .37s;
+        }
+
+        li:hover {
+            cursor: pointer;
+            transform: translateY(-5px);
+            height: 320px;
+            box-shadow: 0 3px 3px 5px rgba(127, 118, 118, 0.45);
+
+        }
+
+        .img1 {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<script src="goodList.js"></script>
+<script>
+    document.write("<ul>");
+    for (var i = 0; i < goodList.length; i++) {
+        document.write(` 
+    <li>
+    <div>
+    <img src="${goodList[i].imageUrl}"  class="img1" alt="图片">
+    <h3>${goodList[i].title}</h3>
+    <span>${goodList[i].priceStr} </span>
+   </div>
+  </li>
+    `)
+    }
+    document.write("</ul>")
+</script>
+
+</html>

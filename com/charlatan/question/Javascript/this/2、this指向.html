@@ -1,0 +1,39 @@
+<!--
+  ~ Date:2021/12/22 9:40 59
+  ~ Name:2、this指向.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/this
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	var uname = 'window'
+	var obj = {
+		uname: 'object',
+		fnn: function () {
+			console.log(this.uname);
+			return function () {
+				console.log(this.uname);
+			}
+		}
+	}
+	obj.fnn()()
+
+	/*
+	* 题解：
+	*   第一个是函数是Object对象进行调用的，this指向的Object对象，
+	*   第二个是普通对象调用，指向的window
+	* */
+</script>
+</html>

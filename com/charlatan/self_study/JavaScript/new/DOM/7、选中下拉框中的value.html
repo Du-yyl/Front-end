@@ -1,0 +1,35 @@
+<!--
+  ~ Date:2021/11/26 下午1:15
+  ~ Name:7、选中下拉框中的value.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/7、选中下拉框中的value.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选中下拉框中value</title>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        document.getElementById('sf').onchange = function () {
+            alert(document.getElementById('sf').value)
+        }
+    }
+</script>
+<label for="sf">
+    选中下拉框中的value
+</label>
+<select id="sf" name="sf">
+    <option value="top">--请选择省份--</option>
+    <option name="sfxx" value="001">河南</option>
+    <option name="sfxx" value="002">山东</option>
+    <option name="sfxx" value="003">河北</option>
+    <option name="sfxx" value="004">陕西</option>
+</select>
+</body>
+</html>

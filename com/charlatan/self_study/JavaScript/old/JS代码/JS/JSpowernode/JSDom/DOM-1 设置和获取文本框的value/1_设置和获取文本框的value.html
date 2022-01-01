@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>设置和获取文本框的value</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  window.onload = function () {
+    document.getElementById('btn1').onclick = function () {
+      alert(document.getElementById('te1').value)
+      //  将第一个框的值赋给第二个框
+      document.getElementById('te2').value = document.getElementById('te1').value
+      //  修改text中的value
+      document.getElementById('te1').value = 'zhangsan'
+
+
+    }
+  }
+
+</script>
+
+<input id='te1' type="text" value="">
+<input id='btn1' type="button" value="按一下获取文本框中的值">
+<input id='te2' type="text" value="">
+<input onblur="alert(this.value)" type="text"/>
+</body>
+</html>

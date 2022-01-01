@@ -1,0 +1,74 @@
+<!--
+  ~ Date:2021/12/8 10:54 34
+  ~ Name:5、JS动画-1.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/使用JS操作样式
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS动画</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script>
+    // 相比过度动画和css关键帧动画，JS动画功能更强大，能做出更复杂的动画，但是动画效率极低。
+    // 所以，能用过度实现的，不用关键帧实现，能用关键帧动画实现的，不用js动画。
+
+
+    // 使用setTimeout实现setInterval效果。
+    //  在一个方法中调用执行这个方法，类似递归，但是不同的是这个有时间限制
+    function f1(){
+        console.log("f1执行了");
+        setTimeout(f1,1000);
+    }
+    f1();
+
+    //-------------------------------------------------------------
+
+
+    // requestAnimationFrame 方法，专门用于实现js动画，是h5中新增的webAPI.
+
+    // 浏览器以每秒60帧的速度进行画面刷新。
+
+    // requestAnimationFrame，参数是一个函数，这个函数会在浏览器下一次帧刷新时调用。
+    // requestAnimationFrame(function(){
+    //     console.log(123);
+    // })
+
+
+    var angle = 0;
+
+    var box = document.getElementById("box");
+
+    function update() {
+        // console.log(123);
+        angle += 5;
+        box.style.transform = "rotate(" + angle + "deg)";
+
+        aniCode = requestAnimationFrame(update);
+    }
+
+    // // requestAnimationFrame和setTimeout类似，也会返回一个定时器编号，在触发之前可以取消。
+    var aniCode = requestAnimationFrame(update);
+    //
+    // // setTimeout(function(){
+    // //     cancelAnimationFrame(aniCode);
+    // // },1000)
+
+
+</script>
+</html>

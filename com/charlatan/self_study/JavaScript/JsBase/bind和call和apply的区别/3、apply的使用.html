@@ -1,0 +1,33 @@
+<!--
+  ~ Date:2021/12/28 14:55 08
+  ~ Name:3、apply的使用.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/bind和call和apply的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>apply的使用</title>
+
+</head>
+<body>
+<pre>
+	利用apply()求最大值
+
+	第一个arr表示让arr借用max这个方法，第二个arr表示传给max的数据
+		apply()所执行的操作：
+		1.执行Math.max(1,2,3,5,4)
+		2.把内部的this改成arr
+</pre>
+</body>
+<script>
+	let nums = [1, 2, 23, 43, 4, 5, 6, 76, 5, 43, 3]
+	console.log(Math.max.apply(nums, nums));
+
+	console.log();
+</script>
+</html>

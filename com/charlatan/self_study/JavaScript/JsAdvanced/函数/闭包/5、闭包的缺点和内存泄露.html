@@ -1,0 +1,41 @@
+<!--
+  ~ Date:2021/12/13 17:37 21
+  ~ Name:5、闭包的缺点.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/函数/闭包
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包的缺点</title>
+
+</head>
+<body>
+<pre>
+	1. 缺点
+	  * 函数执行完后, 函数内的局部变量没有释放, 占用内存时间会变长
+	  * 容易造成内存泄露
+	2. 解决
+	  * 能不用闭包就不用
+	  * 及时释放
+
+	1. 内存溢出
+	  * 一种程序运行出现的错误
+	  * 当程序运行需要的内存超过了剩余的内存时, 就出抛出内存溢出的错误
+	2. 内存泄露
+	  * 占用的内存没有及时释放
+	  * 内存泄露积累多了就容易导致内存溢出
+	  * 常见的内存泄露:
+	    * 意外的全局变量
+	    * 没有及时清理的计时器或回调函数
+	    * 闭包
+</pre>
+</body>
+<script>
+
+</script>
+</html>

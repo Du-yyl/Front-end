@@ -1,0 +1,69 @@
+<!--
+  ~ Date:2021/11/24 下午2:40
+  ~ Name:2、JS局部变量和全局变量.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/2、JS局部变量和全局变量.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS局部变量和全局变量</title>
+</head>
+<body>
+<script>
+    /*
+    * 全局变量：
+    *   在函数体之外声明，在浏览器打开时生成，在浏览器关闭时销毁
+    * */
+    var a = 10;
+    var i = 100;
+
+    function accessI() {
+        // 访问的是全局变量
+        alert("i = " + i);
+    }
+
+    accessI();
+
+    // 全局变量
+    var username = "jack";
+
+    function accessUsername() {
+        // 局部变量
+        var username = "lisi";
+        // 就近原则:访问局部变量
+        alert("username = " + username);
+    }
+
+    // 调用函数
+    accessUsername();
+    // 访问全局变量
+    alert("username = " + username);
+
+    function accessAge() {
+        var age = 20;
+        alert("年龄 = " + age);
+    }
+
+    accessAge();
+
+    // 报错(语法不对)
+    // alert("age = " + age);
+
+    // 以下语法是很奇怪的.
+    function myfun() {
+        // 当一个变量声明的时候没有使用var关键字,那么不管这个变量是在哪里声明的,都是全局变量.
+        myname = "dujubin";
+    }
+
+    // 访问函数
+    myfun();
+
+    alert("myname = " + myname); // myname = dujubin
+</script>
+</body>
+</html>

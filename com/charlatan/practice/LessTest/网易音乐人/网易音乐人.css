@@ -1,0 +1,151 @@
+/**
+  * Date:2021/12/30 9:39 44
+  * Name:网易音乐人.less
+  * Path:Web代码/src/com/charlatan/practice/LessTest/网易音乐人
+  * ProjectName:WWW
+  * Author:charlatan
+  *
+  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  */
+.content-btn,
+#content #content-btn #content-btn-l,
+#content #content-btn #content-btn-r {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  font: 30px/100px "";
+  text-align: center;
+  cursor: pointer;
+}
+.content-btn:hover,
+#content #content-btn #content-btn-l:hover,
+#content #content-btn #content-btn-r:hover {
+  color: #760000;
+  text-shadow: 0 0 2px 2px #d9b62a;
+}
+#bigBox {
+  width: 1610px;
+  height: 3200px;
+  position: absolute;
+  background-color: #b49191;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#header {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  background-color: #ffffff;
+}
+#header #header-l {
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  background-color: #ffffff;
+  left: 90px;
+  top: 20px;
+  cursor: pointer;
+}
+#header #header-c {
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  left: 300px;
+  color: #5c5c5c;
+}
+#header #header-c #header-c-content-ul {
+  display: flex;
+  justify-content: center;
+}
+#header #header-c #header-c-content-ul li {
+  margin: 0 20px;
+  font: 16px/60px "";
+}
+#header #header-c #header-c-content-ul li:hover {
+  color: black;
+}
+#header #header-r {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  right: 105px;
+  font: 15px/60px "";
+  text-align: center;
+  cursor: pointer;
+}
+#content {
+  width: 100%;
+  height: 680px;
+  position: relative;
+  background-color: null;
+  background: linear-gradient(to bottom, white 80%, #f3cecc);
+  background-size: 100%;
+}
+#content #content-bg-img {
+  position: absolute;
+  top: 260px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#content #content-h1 {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  background-color: #ffffff;
+  text-align: center;
+  font: 24px/100px "";
+  letter-spacing: 15px;
+  color: #010101;
+  z-index: 1;
+}
+#content #content-h2 {
+  height: 180px;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+}
+#content:hover #content-btn {
+  border-radius: 50px 50px 50px 50px;
+  opacity: 100%;
+}
+#content #content-btn {
+  width: 60%;
+  height: 100px;
+  position: absolute;
+  background-color: #FFFFFF;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -50px;
+  overflow: hidden;
+  transition: border-radius 0.3s ease-in-out, opacity 0.5s ease;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 30%;
+}
+#content #content-btn:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 50px;
+  position: absolute;
+  background-color: #cccccc;
+  left: 480px;
+  top: 25px;
+}
+#content #content-btn #content-btn-l {
+  left: 80px;
+}
+#content #content-btn #content-btn-r {
+  right: 80px;
+}
+/*# sourceMappingURL=网易音乐人.css.map */

@@ -1,0 +1,35 @@
+<!--
+  ~ Date:2021/11/18 下午8:05
+  ~ Name:7、动画属性的简写.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/基础/HtmlBase/动画/7、动画属性的简写.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画属性的简写</title>
+</head>
+<body>
+<pre>
+    div {
+        animation-name: example;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    简写：
+    div {
+          animation: example 5s linear 2s infinite alternate;
+    }
+</pre>
+<p>
+	动画的名称，运行时间，动画运行的速率曲线（可使用贝塞尔曲线），动画延迟时间，动画运行次数，动画的交替性
+</p>
+</body>
+</html>

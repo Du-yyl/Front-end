@@ -1,0 +1,64 @@
+<!--
+  ~ Date:2021/12/28 11:25 07
+  ~ Name:5、this的赋值.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/this
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this的赋值</title>
+
+</head>
+<body>
+<button>我是按钮1</button>
+<button>我是按钮2</button>
+<button>我是按钮3</button>
+<button>我是按钮4</button>
+<button>我是按钮5</button>
+<button>我是按钮6</button>
+<button>我是按钮7</button>
+<hr>
+<pre>
+	在定时器中的this，默认指向window
+
+	bind()方法主要就是将函数绑定到某个对象，bind()会创建一个函数，函数体内的this对象的值会被绑定到传入bind()第一个参数的值，
+		例如，f.bind(obj)，实际上可以理解为obj.f()，这时，f函数体内的this自然指向的是obj
+</pre>
+</body>
+<script>
+	let btn = document.getElementsByTagName("button")
+
+	// for (let btnElement of btn) {
+	// 	btnElement.onclick = function () {
+	// 		setTimeout(() => {
+	// 			this.disabled = true
+	// 		}, 1000)
+	// 	}
+	// }
+
+
+	// for (let btnElement of btn) {
+	// 	btnElement.onclick = function () {
+	//      let that = this
+	// 		setTimeout(() => {
+	// 			that.disabled = true
+	// 		}, 1000)
+	// 	}
+	// }
+
+
+	for (let btnElement of btn) {
+		btnElement.onclick = function () {
+			setTimeout(function () {
+				this.disabled = true
+			}.bind(this), 1000)
+		}
+	}
+
+</script>
+</html>

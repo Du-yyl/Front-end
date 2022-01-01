@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:asp="">
+<head>
+  <meta charset="UTF-8">
+  <title>表单验证</title>
+  <style>
+    #i1 {
+      top: 50px;
+      left: 200px;
+      position: absolute;
+    }
+
+    #i2 {
+      top: 260px;
+      left: 140px;
+      position: absolute;
+    }
+
+    #i3 {
+      top: 261px;
+      left: 40px;
+      position: absolute;
+    }
+
+    #p1 {
+      top: 200px;
+      left: 700px;
+      position: absolute;
+      border: 10px beige dashed;
+    }
+  </style>
+</head>
+<body>
+<script>
+  let temp1 = false;
+
+  var temp2 = false;
+  var temp3 = false;
+  var temp4 = false;
+  window.onload = function () {
+    //  用户名不能为空   用户名必须在6-14位之间    用户名只能有数字和字母组成，不能含有其它符号（正则表达式）
+    document.getElementById('username').onblur = function () {
+      if (document.getElementById('username').value === '') {
+        document.getElementById('s1').innerText = '用户名不能为空'
+        document.getElementById('username').value = ''
+      } else if (document.getElementById('username').value.length < 6 || document.getElementById('username').value.length > 14) {
+        document.getElementById('s1').innerText = '用户名长度必须在6-14位之间'
+        document.getElementById('username').value = ''
+      } else if (!(/^\w+$/.test(document.getElementById('username').value))) {
+        document.getElementById('s1').innerText = '用户名必须由字母和数字组成'
+        document.getElementById('username').value = ''
+      } else {
+        temp1 = true;
+        document.getElementById('s1').innerText = ''
+      }
+    }
+    //  密码不能为空   在9-20位之间
+    document.getElementById('password').onblur = function () {
+      if (document.getElementById('password').value === '') {
+        document.getElementById('s2').innerText = '密码不能为空'
+      } else if (document.getElementById('password').value.length < 9 || document.getElementById('password').value.length > 20) {
+        document.getElementById('s2').innerText = '密码长度必须在9-20位之间'
+      }
+      if (!(document.getElementById('password').value === document.getElementById('passwordAgain').value)) {
+        document.getElementById('s3').innerText = '两次输入的密码不符，请检查后输入'
+      } else {
+        document.getElementById('s2').innerText = ''
+      }
+    }
+    //  第二次密码不能为空   必须和第一次一致
+    document.getElementById('passwordAgain').onblur = function () {
+      if (document.getElementById('passwordAgain').value === '') {
+        document.getElementById('s3').innerText = '请再次输入密码'
+      } else if (document.getElementById('passwordAgain').value.length < 9 || document.getElementById('passwordAgain').value.length > 20) {
+        document.getElementById('s3').innerText = '密码长度必须在9-20位之间'
+      } else if (!(document.getElementById('password').value === document.getElementById('passwordAgain').value)) {
+        document.getElementById('s3').innerText = '两次输入的密码不符，请检查后输入'
+      } else {
+        temp3 = true
+        temp2 = true;
+        document.getElementById('s3').innerText = ''
+      }
+    }
+    //  邮箱不能为空    邮箱必须合法
+    document.getElementById('email').onblur = function () {
+      if (document.getElementById('email').value === '') {
+        document.getElementById('s4').innerText = '请输入邮箱'
+      } else if (!(/^\w+@\w{2,3}.\w{2,3}$/.test(document.getElementById('email').value))) {
+        document.getElementById('s4').innerText = '邮箱格式不合法，请检查后输入'
+      } else {
+        temp4 = true
+        document.getElementById('s4').innerText = ''
+      }
+    }
+    //  按下重置按钮内容清空
+    document.getElementById('btn-chongzhi').onclick = function () {
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+      document.getElementById('passwordAgain').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('dayin-top').innerText = ''
+      document.getElementById('password-dayin').innerHTML = ''
+      document.getElementById('passwordAgain-dayin').innerHTML = ''
+      document.getElementById('email-dayin').innerHTML = ''
+      temp1 = false;
+      temp2 = false;
+      temp3 = false
+      temp4 = false
+    }
+    //  按下提交按钮，将内容打印出来
+    document.getElementById('btn-tijiao').onclick = function () {
+      if (!temp1) {
+        alert('账户名不符合要求')
+      } else if (!temp2) {
+        alert("密码不符合要求")
+      } else if (!temp3) {
+        alert('密码不符合要求')
+      } else if (!temp4) {
+        alert("邮箱地址不符合要求")
+      } else {
+        document.getElementById('dayin-top').innerText = ' 您的信息如下：'
+        var v1 = document.getElementById("username").value
+        document.getElementById('password-dayin').innerHTML = '账户 ： ' + v1
+        var v2 = document.getElementById('password').value
+        document.getElementById('passwordAgain-dayin').innerHTML = ' 密码 ： ' + v2
+        var v3 = document.getElementById('email').value
+        document.getElementById('email-dayin').innerHTML = ' 邮箱 : ' + v3
+      }
+    }
+
+    //年月日
+    var selYear = window.document.getElementById("selYear");
+    var selMonth = window.document.getElementById("selMonth");
+    var selDay = window.document.getElementById("selDay");
+    // 新建一个DateSelector类的实例，将三个select对象传进去
+    new DateSelector(selYear, selMonth, selDay, 2021, 9, 27);
+    // 也可以试试下边的代码
+    // var dt = new Date(2004, 1, 29);
+    // new DateSelector(selYear, selMonth ,selDay, dt);
+
+    //获取选中年月日的值,这里有个问题,默认的年月日如果不选择,会发生报错,这时候应该设置文本域默认的value值和默认的年月日一样,就可以避免错误了
+    var selectY = document.getElementById('selYear');
+    var selectM = document.getElementById('selMonth');
+    var selectD = document.getElementById('selDay');
+    var h1 = document.getElementById('HF1');
+    var h2 = document.getElementById('HF2');
+    var h3 = document.getElementById('HF3');
+    selectY.onchange = function () {
+      h1.value = selectY.options[selectY.selectedIndex].text;
+    }
+    selectM.onchange = function () {
+      h2.value = selectM.options[selectM.selectedIndex].text;
+    }
+    selectD.onchange = function () {
+      h3.value = selectD.options[selectD.selectedIndex].text;
+    }
+
+  }
+
+  function DateSelector(selYear, selMonth, selDay) {//定义函数
+    this.selYear = selYear;
+    this.selMonth = selMonth;
+    this.selDay = selDay;
+    this.selYear.Group = this;
+    this.selMonth.Group = this;
+// 给年份、月份下拉菜单添加处理onchange事件的函数
+    if (window.document.all != null) // IE
+    {
+      this.selYear.attachEvent("onchange", DateSelector.Onchange);
+      this.selMonth.attachEvent("onchange", DateSelector.Onchange);
+    } else // Firefox
+    {
+      this.selYear.addEventListener("change", DateSelector.Onchange, false);
+      this.selMonth.addEventListener("change", DateSelector.Onchange, false);
+    }
+    if (arguments.length === 4) // 如果传入参数个数为4，最后一个参数必须为Date对象
+      this.InitSelector(arguments[3].getFullYear(), arguments[3].getMonth() + 1, arguments[3].getDate());
+    else if (arguments.length === 6) // 如果传入参数个数为6，最后三个参数必须为初始的年月日数值
+      this.InitSelector(arguments[3], arguments[4], arguments[5]);
+    else // 默认使用当前日期
+    {
+      var dt = new Date();
+      this.InitSelector(dt.getFullYear(), dt.getMonth() + 1, dt.getDate());
+    }
+  }
+
+  // 增加一个最小年份的属性--最老年份
+  DateSelector.prototype.MinYear = 1960;
+  // 增加一个最大年份的属性--最新年份，即当前时期getFullYear()
+  DateSelector.prototype.MaxYear = (new Date()).getFullYear();
+  // 初始化年份
+  DateSelector.prototype.InitYearSelect = function () {
+// 循环添加OPION元素到年份select对象中
+    for (var i = this.MaxYear; i >= this.MinYear; i--) {
+// 新建一个OPTION对象
+      var op = window.document.createElement("OPTION");
+// 设置OPTION对象的值
+      op.value = i;
+// 设置OPTION对象的内容
+      op.innerHTML = i;
+// 添加到年份select对象
+      this.selYear.appendChild(op);
+    }
+  }
+  // 初始化月份
+  DateSelector.prototype.InitMonthSelect = function () {
+// 循环添加OPION元素到月份select对象中
+    for (var i = 1; i < 13; i++) {
+// 新建一个OPTION对象
+      var op = window.document.createElement("OPTION");
+// 设置OPTION对象的值
+      op.value = i;
+// 设置OPTION对象的内容
+      op.innerHTML = i;
+// 添加到月份select对象
+      this.selMonth.appendChild(op);
+    }
+  }
+  // 根据年份与月份获取当月的天数
+  DateSelector.DaysInMonth = function (year, month) {
+    var date = new Date(year, month, 0);
+    return date.getDate();
+  }
+  // 初始化天数
+  DateSelector.prototype.InitDaySelect = function () {
+// 使用parseInt函数获取当前的年份和月份
+    var year = parseInt(this.selYear.value);
+    var month = parseInt(this.selMonth.value);
+// 获取当月的天数
+    var daysInMonth = DateSelector.DaysInMonth(year, month);
+// 清空原有的选项
+    this.selDay.options.length = 0;
+// 循环添加OPION元素到天数select对象中
+    for (var i = 1; i <= daysInMonth; i++) {
+// 新建一个OPTION对象
+      var op = window.document.createElement("OPTION");
+// 设置OPTION对象的值
+      op.value = i;
+// 设置OPTION对象的内容
+      op.innerHTML = i;
+// 添加到天数select对象
+      this.selDay.appendChild(op);
+    }
+  }
+  // 处理年份和月份onchange事件的方法，它获取事件来源对象（即selYear或selMonth）
+  // 并调用它的Group对象（即DateSelector实例，请见构造函数）提供的InitDaySelect方法重新初始化天数
+  // 参数e为event对象
+  DateSelector.Onchange = function (e) {
+    var selector = window.document.all != null ? e.srcElement : e.target;
+    selector.Group.InitDaySelect();
+  }
+  // 根据参数初始化下拉菜单选项
+  DateSelector.prototype.InitSelector = function (year, month, day) {
+// 由于外部是可以调用这个方法，因此我们在这里也要将selYear和selMonth的选项清空掉
+// 另外因为InitDaySelect方法已经有清空天数下拉菜单，因此这里就不用重复工作了
+    this.selYear.options.length = 0;
+    this.selMonth.options.length = 0;
+// 初始化年、月
+    this.InitYearSelect();
+    this.InitMonthSelect();
+// 设置年、月初始值
+    this.selYear.selectedIndex = this.MaxYear - year;
+    this.selMonth.selectedIndex = month - 1;
+// 初始化天数
+    this.InitDaySelect();
+// 设置天数初始值
+    this.selDay.selectedIndex = day - 1;
+  }
+</script>
+
+<span id='i1'>
+    <input id='username' type="text" value="">
+    <span id="btn-username">  输入用户名</span>
+    <br>
+    <span id='s1' style=" font-size:12px ; color: red "></span>
+    <br>
+
+    <input id='password' type="password">
+    <span id='btn-password'>  输入密码</span>
+    <br>
+    <span id='s2' style=" font-size:12px ; color: red "></span>
+    <br>
+
+    <input id='passwordAgain' type="password">
+    <span id='btn-passwordAgain'>  再次输入密码</span>
+    <br>
+    <span id='s3' style=" font-size:12px ; color: red "></span>
+    <br>
+
+<input checked="checked" id="man" name="1" type="radio"/>男<input id="woman" name="1" type="radio"/>女
+
+    <span id='btn-sex'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别</span>
+    <br>
+    <br>
+
+    <input id='email' type="email">
+    <span id='btn-email'>  请输入邮箱</span>
+    <br>
+    <span id='s4' style=" font-size:12px ; color: red "></span>
+    <br>
+
+    <span id='i2'>
+    <input id='btn-tijiao' type="button" value="同意以下条款并提交">
+    </span>
+    <span id='i3'>
+    <input id='btn-chongzhi' type="button" value="重置">
+    </span>
+
+  <!--  //年月日下拉菜单-->
+ <select id="selYear"></select>年
+ <select id="selMonth"></select>月
+ <select id="selDay"></select>日
+  <!--//三个隐藏文本域用来存放获取的年月日-->
+<asp:HiddenField ID="HF1" runat="server"/>
+<asp:HiddenField ID="HF2" runat="server"/>
+<asp:HiddenField ID="HF3" runat="server"/>
+  </span>
+
+<span id='p1'>
+    <div id='dayin-top'></div>
+    <br>
+    <div id='username-dayin'></div>
+    <br>
+    <div id='password-dayin'></div>
+    <br>
+    <div id='passwordAgain-dayin'></div>
+    <br>
+    <div id='email-dayin'></div>
+  </span>
+</body>
+</html>

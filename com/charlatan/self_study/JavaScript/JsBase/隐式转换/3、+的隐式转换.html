@@ -1,0 +1,32 @@
+<!--
+  ~ Date:2021/12/20 10:44 07
+  ~ Name:3、+的隐式转换.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/隐式转换
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>+的隐转</title>
+
+</head>
+<body>
+<pre>
+	当一侧为String类型，被识别为字符串拼接，并会优先将另一侧转换为字符串类型。
+	当一侧为Number类型，另一侧为原始类型，则将原始类型转换为Number类型。
+	当一侧为Number类型，另一侧为引用类型，将引用类型和Number类型转换成字符串后拼接。
+</pre>
+</body>
+<script>
+	console.log(123 + '123'); // 123123   （规则1）
+	console.log(123 + null);  // 123    （规则2）
+	console.log(123 + true); // 124    （规则2）
+	console.log(123 + {});  // 123[object Object]    （规则3）
+
+	
+</script>
+</html>

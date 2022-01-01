@@ -1,0 +1,44 @@
+<!--
+  ~ Date:2021/12/22 9:50 40
+  ~ Name:1、禁用一个button的常用方法.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/JS 对标签的控制
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>禁用button按钮</title>
+
+</head>
+<body>
+<button id="btn1" type="button">
+	我是按钮
+</button>
+<input id="btn2" type="button" value="我是input按钮">
+</body>
+<script>
+	window.onload = function () {
+		let btn = document.getElementById("btn1")
+		let btn2 = document.getElementById("btn2")
+		btn.setAttribute("disabled", true)
+		// btn.disabled = true
+		btn2.setAttribute("Readonly", true)
+		btn2.disabled = true
+		btn.onclick = function () {
+			alert("我被按下")
+		}
+	}
+
+	/*
+	* 题解：
+	*   readonly和disabled两种方式都能达到指定目的
+	*       readonly：只针对input（text/password/textarea）有效
+	*   使用表单元素使用disabled后，当我们将表单进行post和get进行提交的话，这个元素的值不会被传递出去
+	*   而readonly会将这个元素的值传递出去（这种情况出现在，表单中的textarea元素设置为disabled，但是submit按钮是可用的
+	* */
+</script>
+</html>

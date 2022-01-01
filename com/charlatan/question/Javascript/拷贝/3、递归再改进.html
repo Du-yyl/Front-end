@@ -1,0 +1,213 @@
+<!--
+  ~ Date:2021/12/24 11:58 13
+  ~ Name:3、递归再改进.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/拷贝
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>递归拷贝</title>
+
+</head>
+<body>
+
+</body>
+<script>
+
+	//测试使用的数据
+
+	const obj = {
+		// =========== 1.基础数据类型 ===========
+		num: 0, // number
+		str: '', // string
+		bool: true, // boolean
+		unf: undefined, // undefined
+		nul: null, // null
+		sym: Symbol('sym'), // symbol
+		bign: BigInt(1n), // bigint
+
+		// =========== 2.Object类型 ===========
+		// 普通对象
+		obj_1: {
+			name: '我是一个对象',
+			id: 1
+		},
+		//多维对象
+		obj_2: {
+			a: 1,
+			b: 2,
+			c: 3,
+			d: {
+				a: 12,
+				b: 22,
+				c: 32,
+				d: {
+					a: 123,
+					b: 223,
+					c: 333,
+					d: {
+						e: 9999
+					}
+				}
+			}
+		},
+		// 数组
+		arr_1: [0, 1, 2],
+
+		//多维数组
+		arr_2: [
+			1, 2, 3, 4, 5, 6, [
+				12, 22, 32, 42, [
+					123, 223, 333, 423, [
+						9999
+					]
+				]
+			]
+		],
+		// 函数
+		func: function () {
+			console.log('我是一个函数')
+		},
+		// 日期
+		date: new Date(0),
+		// 正则
+		reg: new RegExp('/我是一个正则/ig'),
+		// Map
+		map: new Map().set('mapKey', 1),
+		// Set
+		set: new Set().add('set'),
+		// =========== 3.其他 ===========
+		[Symbol('1')]: 1  // Symbol作为key
+	};
+	// 4.添加不可枚举属性
+	Object.defineProperty(obj, 'innumerable', {
+		enumerable: false,
+		value: '不可枚举属性'
+	});
+	// 5.设置原型对象
+	Object.setPrototypeOf(obj, {
+		proto: 'proto'
+	})
+	// 6.设置loop成循环引用的属性
+	obj.loop = obj
+
+
+	/**
+	 * 完美深拷贝
+	 * @param target
+	 * @returns {*|Map<any, any>|Set<any>}
+	 */
+	function deepClone(target) {
+		// WeakMap作为记录对象Hash表（用于防止循环引用）
+		const map = new WeakMap()
+
+		/**
+		 * 判断是否为object类型的辅助函数，减少重复代码
+		 * @param target
+		 * @returns {boolean}
+		 */
+		function isObject(target) {
+			return (typeof target === 'object' && target) || typeof target === 'function'
+		}
+
+
+		/**
+		 * 不同数据的克隆方法
+		 * @param data
+		 * @returns {Map<any, any>|Set<any>|any}
+		 */
+		function clone(data) {
+
+			// 基础类型直接返回值
+			if (!isObject(data)) {
+				return data
+			}
+
+			// 日期或者正则对象则直接构造一个新的对象返回
+			if ([Date, RegExp].includes(data.constructor)) {
+				return new data.constructor(data)
+			}
+
+			// 处理函数对象
+			if (typeof data === 'function') {
+				return new Function('return ' + data.toString())()
+			}
+
+			// 如果该对象已存在，则直接返回该对象
+			const exist = map.get(data)
+			if (exist) {
+				return exist
+			}
+
+			// 处理Map对象
+			if (data instanceof Map) {
+				const result = new Map()
+				map.set(data, result)
+				data.forEach((val, key) => {
+					// 注意：map中的值为object的话也得深拷贝
+					if (isObject(val)) {
+						result.set(key, clone(val))
+					} else {
+						result.set(key, val)
+					}
+				})
+				return result
+			}
+
+			// 处理Set对象
+			if (data instanceof Set) {
+				const result = new Set()
+				map.set(data, result)
+				data.forEach(val => {
+					// 注意：set中的值为object的话也得深拷贝
+					if (isObject(val)) {
+						result.add(clone(val))
+					} else {
+						result.add(val)
+					}
+				})
+				return result
+			}
+
+			// 收集键名（考虑了以Symbol作为key以及不可枚举的属性）
+			const keys = Reflect.ownKeys(data)
+			// 利用 Object 的 getOwnPropertyDescriptors 方法可以获得对象的所有属性以及对应的属性描述
+			const allDesc = Object.getOwnPropertyDescriptors(data)
+			// 结合 Object 的 create 方法创建一个新对象，并继承传入原对象的原型链， 这里得到的result是对data的浅拷贝
+			const result = Object.create(Object.getPrototypeOf(data), allDesc)
+
+			// 新对象加入到map中，进行记录
+			map.set(data, result)
+
+			// Object.create()是浅拷贝，所以要判断并递归执行深拷贝
+			keys.forEach(key => {
+				const val = data[key]
+				if (isObject(val)) {
+					// 属性值为 对象类型 或 函数对象 的话也需要进行深拷贝
+					result[key] = clone(val)
+				} else {
+					result[key] = val
+				}
+			})
+			return result
+		}
+
+		return clone(target)
+	}
+
+
+	// 测试
+	const clonedObj = deepClone(obj)
+	clonedObj === obj  // false，返回的是一个新对象
+	clonedObj.arr === obj.arr  // false，说明拷贝的不是引用
+	clonedObj.func === obj.func  // false，说明function也复制了一份
+	clonedObj.proto  // proto，可以取到原型的属性
+	console.log(clonedObj);
+
+</script>
+</html>

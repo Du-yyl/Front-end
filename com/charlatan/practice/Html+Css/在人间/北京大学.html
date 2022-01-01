@@ -1,0 +1,1335 @@
+<!--
+  ~ Date:2021/11/13 上午11:07
+  ~ Name:北京大学.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/practice/在人间/北京大学.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>北京大学</title>
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #block {
+            width: 100%;
+            height: 3000px;
+            background-color: #d7efc6;
+        }
+
+        #box {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255, 0, 0, 0.3);
+        }
+
+        #top {
+            width: 100%;
+            height: 50px;
+            background-color: #94070a;
+            position: absolute;
+            top: 0;
+        }
+
+        #box_left {
+            position: absolute;
+            width: 500px;
+            height: 50px;
+            line-height: 50px;
+            left: 100px;
+        }
+
+        #box_left span {
+            width: 80px;
+            height: 50px;
+            display: block;
+            text-align: center;
+            position: absolute;
+            float: left;
+            color: #333333;
+        }
+
+        .left_div {
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            display: block;
+            margin: auto;
+            position: relative;
+            top: 9px;
+            transition: all .4s;
+        }
+
+        i {
+            font-style: normal;
+            font-size: 13px;
+            top: 2px;
+            display: block;
+            position: absolute;
+            left: 79px;
+            color: #ce8d8d;
+        }
+
+
+        #span2 {
+            width: 90px !important;
+            left: 82px;
+        }
+
+        #span2_i {
+            left: 90px;
+        }
+
+        #span3 {
+            left: 174px;
+        }
+
+        #span4 {
+            left: 256px;
+        }
+
+        #span5 {
+            left: 338px;
+        }
+
+        #span6 {
+            left: 420px;
+        }
+
+        #box_left span:hover {
+            cursor: pointer;
+            color: #797071;
+        }
+
+        #span1:hover .left_div {
+            width: 40px;
+        }
+
+        #span2:hover .left_div {
+            width: 50px;
+        }
+
+        #span3:hover .left_div {
+            width: 40px;
+        }
+
+        #span4:hover .left_div {
+            width: 40px;
+        }
+
+        #span5:hover .left_div {
+            width: 40px;
+        }
+
+        #span6:hover .left_div {
+            width: 40px;
+        }
+
+        /*-------------------------*/
+        #box_right {
+            width: 800px;
+            height: 50px;
+            /*background-color: green;*/
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #box_right span {
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            width: 90px;
+            color: #333333;
+        }
+
+        #box_right span:hover {
+            color: #777777;
+            cursor: pointer;
+        }
+
+        .right_div {
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            display: block;
+            position: relative;
+            margin: auto;
+            top: 10px;
+            transition: all 1s;
+        }
+
+        #right_1 {
+            width: 100px;
+            height: 50px;
+        }
+
+        #right_2 {
+            position: absolute;
+            left: 90px;
+            top: 0;
+            height: 50px;
+        }
+
+        #right_3 {
+            position: absolute;
+            top: 0;
+            left: 180px;
+            height: 50px;
+        }
+
+        #right_4 {
+            position: absolute;
+            top: 0;
+            left: 270px;
+            height: 50px;
+        }
+
+        #right_5 {
+            position: absolute;
+            top: 0;
+            left: 360px;
+            height: 50px;
+        }
+
+        #right_6 {
+            position: absolute;
+            top: 0;
+            left: 450px;
+            height: 50px;
+        }
+
+        #right_7 {
+            position: absolute;
+            top: 0;
+            left: 540px;
+            height: 50px;
+        }
+
+        #right_8 {
+            position: absolute;
+            top: 0;
+            left: 630px;
+            height: 50px;
+        }
+
+        #right_1:hover #rd_1 {
+            width: 60px;
+        }
+
+        #right_2:hover #rd_2 {
+            width: 60px;
+        }
+
+        #right_3:hover #rd_3 {
+            width: 60px;
+        }
+
+        #right_4:hover #rd_4 {
+            width: 60px;
+        }
+
+        #right_5:hover #rd_5 {
+            width: 60px;
+        }
+
+        #right_6:hover #rd_6 {
+            width: 60px;
+        }
+
+        #right_7:hover #rd_7 {
+            width: 60px;
+        }
+
+        #right_8:hover #rd_8 {
+            width: 60px;
+        }
+
+        #nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(rgba(0, 0, 0, 0.29) 30%, rgba(0, 0, 0, 0.10));
+        }
+
+        #logo {
+            width: 342px;
+            height: 100px;
+            background: url("file/logo.png") no-repeat 80px 10px;
+            background-size: 220px;
+        }
+
+        #logo:hover {
+            cursor: pointer;
+        }
+
+        #serch {
+            width: 50px;
+            height: 50px;
+            /*background-color: #CCFFFF;*/
+            border-radius: 50%;
+            position: absolute;
+            border: 1px solid white;
+            right: 150px;
+            top: 20px;
+            background: url("file/a1.png") no-repeat 10px 11px;
+            background-size: 30px;
+        }
+
+        #serch:hover {
+            cursor: pointer;
+            background-image: url("file/a1-1.png");
+        }
+
+        #lang {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            border: 1px solid white;
+            right: 60px;
+            top: 20px;
+            background: url("file/a2.png") no-repeat 10px 11px;
+            background-size: 30px;
+        }
+
+        #lang:hover {
+            cursor: pointer;
+            background-image: url("file/a2-1.png");
+        }
+
+        #nv_div_1 {
+            width: 90px;
+            height: 30px;
+            /*background-color: #5485b6;*/
+            position: absolute;
+            left: 380px;
+            top: 20px;
+            text-align: center;
+
+        }
+
+        #nv_div p {
+            color: white;
+            font-size: 19px;
+        }
+
+        #heng_1 {
+            width: 0;
+            height: 2px;
+            background-color: #94070a;
+            margin: 5px auto;
+            transition: all 1s;
+        }
+
+        #shu_1 {
+            width: 3px;
+            height: 0;
+            /*height: 30px;*/
+            background-color: #94070a;
+            margin: -5px auto;
+            transition: all 1s;
+
+        }
+
+        #visit_1 {
+            width: 1000px;
+            height: 230px;
+            border-top: 2px solid #ff2e2e;
+            position: absolute;
+            left: -300px;
+            top: 58px;
+            display: none;
+            transition: all 1s;
+            background: url("file/back.png") no-repeat 0 110px;
+            background-color: white;
+            overflow: hidden;
+            background-size: 1000px;
+        }
+
+        #nv_span1 {
+            position: absolute;
+            left: 220px;
+            top: 40px;
+            line-height: 35px;
+            color: red;
+            text-align: left;
+
+        }
+
+        #nv_ul_1 {
+            position: absolute;
+            left: 460px;
+            line-height: 30px;
+            top: 60px;
+            font-size: 19px;
+        }
+
+        #nv_ul_2 {
+            position: absolute;
+            left: 620px;
+            line-height: 30px;
+            top: 60px;
+            font-size: 19px;
+
+        }
+
+        #nv_ul_3 {
+            position: absolute;
+            left: 770px;
+            line-height: 30px;
+            top: 60px;
+            font-size: 19px;
+
+        }
+
+        #nv_div li:hover {
+            cursor: pointer;
+            color: red;
+        }
+
+        #nv_img_1 {
+            position: absolute;
+            left: 39px;
+            top: 39px;
+        }
+
+        #nv_div_1:hover {
+            cursor: pointer;
+        }
+
+        #nv_div_1:hover #heng_1 {
+            width: 70px;
+        }
+
+        #nv_div_1:hover #shu_1 {
+            height: 30px;
+        }
+
+        #nv_div_1:hover #visit_1 {
+            display: block;
+        }
+
+        /*-----------------------------------*/
+        #nv_div_2 {
+            width: 90px;
+            height: 30px;
+            /*background-color: #5485b6;*/
+            position: absolute;
+            left: 520px;
+            top: 20px;
+            text-align: center;
+
+        }
+
+        #heng_2 {
+            width: 0;
+            height: 2px;
+            background-color: #94070a;
+            margin: 5px auto;
+            transition: all 1s;
+        }
+
+        #shu_2 {
+            width: 3px;
+            height: 0;
+            /*height: 30px;*/
+            background-color: #94070a;
+            margin: -5px auto;
+            transition: all 1s;
+
+        }
+
+        #visit_2 {
+            width: 1000px;
+            height: 230px;
+            border-top: 2px solid #ff2e2e;
+            position: absolute;
+            left: -440px;
+            top: 58px;
+            display: none;
+            transition: all 1s;
+            background: url("file/back.png") no-repeat 0 110px;
+            background-color: white;
+            overflow: hidden;
+            background-size: 1000px;
+        }
+
+        #nv_span2 {
+            position: absolute;
+            left: 220px;
+            top: 40px;
+            line-height: 35px;
+            color: red;
+            text-align: left;
+
+        }
+
+        #nv2_ul_1 {
+            position: absolute;
+            left: 460px;
+            line-height: 30px;
+            top: 60px;
+            font-size: 19px;
+        }
+
+        #nv2_ul_2 {
+            position: absolute;
+            left: 620px;
+            line-height: 30px;
+            top: 60px;
+            font-size: 19px;
+
+        }
+
+        #nv2_ul_3 {
+            position: absolute;
+            left: 770px;
+            line-height: 30px;
+            top: 60px;
+            font-size: 19px;
+
+        }
+
+        #nv_img_2 {
+            position: absolute;
+            left: 39px;
+            top: 39px;
+        }
+
+        #nv_div_2:hover {
+            cursor: pointer;
+        }
+
+        #nv_div_2:hover #heng_2 {
+            width: 60px;
+        }
+
+        #nv_div_2:hover #shu_2 {
+            height: 30px;
+        }
+
+        #nv_div_2:hover #visit_2 {
+            display: block;
+        }
+
+        /*    -第三个标签*/
+        #nv_div_3 {
+            width: 100px;
+            height: 30px;
+            /*background-color: #5485b6;*/
+            position: absolute;
+            left: 650px;
+            top: 20px;
+            text-align: center;
+
+        }
+
+        #heng_3 {
+            width: 0;
+            height: 2px;
+            background-color: #94070a;
+            margin: 5px auto;
+            transition: all 1s;
+        }
+
+        #shu_3 {
+            width: 3px;
+            height: 0;
+            /*height: 30px;*/
+            background-color: #94070a;
+            margin: -5px auto;
+            transition: all 1s;
+
+        }
+
+        #visit_3 {
+            width: 1000px;
+            height: 230px;
+            border-top: 2px solid #ff2e2e;
+            position: absolute;
+            left: -300px;
+            top: 58px;
+            display: none;
+            transition: all 1s;
+            background: url("file/back.png") no-repeat 0 110px;
+            background-color: white;
+            overflow: hidden;
+            background-size: 1000px;
+        }
+
+        #nv_span3 {
+            position: absolute;
+            left: 220px;
+            top: 40px;
+            line-height: 35px;
+            color: red;
+            text-align: left;
+        }
+
+        #nv3_ul_1 {
+            position: absolute;
+            left: 360px;
+            line-height: 35px;
+            top: 40px;
+            font-size: 19px;
+        }
+
+        #nv3_ul_2 {
+            position: absolute;
+            left: 520px;
+            line-height: 35px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv3_ul_3 {
+            position: absolute;
+            left: 750px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv_img_3 {
+            position: absolute;
+            left: 39px;
+            top: 39px;
+        }
+
+        #nv_div_3:hover {
+            cursor: pointer;
+        }
+
+        #nv_div_3:hover #heng_3 {
+            width: 100px;
+        }
+
+        #nv_div_3:hover #shu_3 {
+            height: 30px;
+        }
+
+        #nv_div_3:hover #visit_3 {
+            display: block;
+        }
+
+        /*    ------第四个*/
+        #nv_div_4 {
+            width: 90px;
+            height: 30px;
+            /*background-color: #5485b6;*/
+            position: absolute;
+            left: 820px;
+            top: 20px;
+            text-align: center;
+
+        }
+
+        #heng_4 {
+            width: 0;
+            height: 2px;
+            background-color: #94070a;
+            margin: 5px auto;
+            transition: all 1s;
+        }
+
+        #shu_4 {
+            width: 3px;
+            height: 0;
+            /*height: 30px;*/
+            background-color: #94070a;
+            margin: -5px auto;
+            transition: all 1s;
+
+        }
+
+        #visit_4 {
+            width: 1000px;
+            height: 230px;
+            border-top: 2px solid #ff2e2e;
+            position: absolute;
+            left: -450px;
+            top: 58px;
+            display: none;
+            transition: all 1s;
+            background: url("file/back.png") no-repeat 0 110px;
+            background-color: white;
+            overflow: hidden;
+            background-size: 1000px;
+        }
+
+        #nv_span4 {
+            position: absolute;
+            left: 220px;
+            top: 40px;
+            line-height: 35px;
+            color: red;
+            text-align: left;
+
+        }
+
+        #nv4_ul_1 {
+            position: absolute;
+            left: 460px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+        }
+
+        #nv4_ul_2 {
+            position: absolute;
+            left: 620px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv4_ul_3 {
+            position: absolute;
+            left: 770px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv_img_4 {
+            position: absolute;
+            left: 39px;
+            top: 39px;
+        }
+
+        #nv_div_4:hover {
+            cursor: pointer;
+        }
+
+        #nv_div_4:hover #heng_4 {
+            width: 80px;
+        }
+
+        #nv_div_4:hover #shu_4 {
+            height: 30px;
+        }
+
+        #nv_div_4:hover #visit_4 {
+            display: block;
+        }
+
+        /*    第五个-------*/
+        #nv_div_5 {
+            width: 90px;
+            height: 30px;
+            /*background-color: #5485b6;*/
+            position: absolute;
+            left: 960px;
+            top: 20px;
+            text-align: center;
+
+        }
+
+        #heng_5 {
+            width: 0;
+            height: 2px;
+            background-color: #94070a;
+            margin: 5px auto;
+            transition: all 1s;
+        }
+
+        #shu_5 {
+            width: 3px;
+            height: 0;
+            /*height: 30px;*/
+            background-color: #94070a;
+            margin: -5px auto;
+            transition: all 1s;
+
+        }
+
+        #visit_5 {
+            width: 1000px;
+            height: 230px;
+            border-top: 2px solid #ff2e2e;
+            position: absolute;
+            left: -550px;
+            top: 58px;
+            display: none;
+            transition: all 1s;
+            background: url("file/back.png") no-repeat 0 110px;
+            background-color: white;
+            overflow: hidden;
+            background-size: 1000px;
+        }
+
+        #nv_span5 {
+            position: absolute;
+            left: 220px;
+            top: 40px;
+            line-height: 35px;
+            color: red;
+            text-align: left;
+
+        }
+
+        #nv_ul_5 {
+            position: absolute;
+            left: 460px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+        }
+
+        #nv5_ul_2 {
+            position: absolute;
+            left: 620px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv5_ul_3 {
+            position: absolute;
+            left: 770px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv_img_5 {
+            position: absolute;
+            left: 39px;
+            top: 39px;
+        }
+
+        #nv_div_5:hover {
+            cursor: pointer;
+        }
+
+        #nv_div_5:hover #heng_5 {
+            width: 70px;
+        }
+
+        #nv_div_5:hover #shu_5 {
+            height: 30px;
+        }
+
+        #nv_div_5:hover #visit_5 {
+            display: block;
+        }
+
+        /*    第六个----------------*/
+        #nv_div_6 {
+            width: 90px;
+            height: 30px;
+            /*background-color: #5485b6;*/
+            position: absolute;
+            left: 1090px;
+            top: 20px;
+            text-align: center;
+
+        }
+
+        #heng_6 {
+            width: 0;
+            height: 2px;
+            background-color: #94070a;
+            margin: 5px auto;
+            transition: all 1s;
+        }
+
+        #shu_6 {
+            width: 3px;
+            height: 0;
+            /*height: 30px;*/
+            background-color: #94070a;
+            margin: -5px auto;
+            transition: all 1s;
+
+        }
+
+        #visit_6 {
+            width: 1000px;
+            height: 230px;
+            border-top: 2px solid #ff2e2e;
+            position: absolute;
+            left: -700px;
+            top: 58px;
+            display: none;
+            transition: all 1s;
+            background: url("file/back.png") no-repeat 0 110px;
+            background-color: white;
+            overflow: hidden;
+            background-size: 1000px;
+        }
+
+        #nv_span6 {
+            position: absolute;
+            left: 220px;
+            top: 40px;
+            line-height: 35px;
+            color: red;
+            text-align: left;
+
+        }
+
+        #nv_ul_6 {
+            position: absolute;
+            left: 460px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+        }
+
+        #nv6_ul_2 {
+            position: absolute;
+            left: 620px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv6_ul_3 {
+            position: absolute;
+            left: 770px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv_img_6 {
+            position: absolute;
+            left: 39px;
+            top: 39px;
+        }
+
+        #nv_div_6:hover {
+            cursor: pointer;
+        }
+
+        #nv_div_6:hover #heng_6 {
+            width: 70px;
+        }
+
+        #nv_div_6:hover #shu_6 {
+            height: 30px;
+        }
+
+        #nv_div_6:hover #visit_6 {
+            display: block;
+        }
+
+        /*    --最后*/
+        #nv_div_7 {
+            width: 90px;
+            height: 30px;
+            /*background-color: #5485b6;*/
+            position: absolute;
+            left: 1240px;
+            top: 20px;
+            text-align: center;
+
+        }
+
+        #heng_7 {
+            width: 0;
+            height: 2px;
+            background-color: #94070a;
+            margin: 5px auto;
+            transition: all 1s;
+        }
+
+        #shu_7 {
+            width: 3px;
+            height: 0;
+            /*height: 30px;*/
+            background-color: #94070a;
+            margin: -5px auto;
+            transition: all 1s;
+
+        }
+
+        #visit_7 {
+            width: 1000px;
+            height: 230px;
+            border-top: 2px solid #ff2e2e;
+            position: absolute;
+            left: -800px;
+            top: 58px;
+            display: none;
+            transition: all 1s;
+            background: url("file/back.png") no-repeat 0 110px;
+            background-color: white;
+            overflow: hidden;
+            background-size: 1000px;
+        }
+
+        #nv_span7 {
+            position: absolute;
+            left: 270px;
+            top: 40px;
+            line-height: 35px;
+            color: red;
+            text-align: left;
+
+        }
+
+        #nv_ul_7 {
+            position: absolute;
+            left: 460px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+        }
+
+        #nv7_ul_2 {
+            position: absolute;
+            left: 620px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv7_ul_3 {
+            position: absolute;
+            left: 770px;
+            line-height: 30px;
+            top: 40px;
+            font-size: 19px;
+
+        }
+
+        #nv_img_7 {
+            position: absolute;
+            left: 39px;
+            top: 39px;
+        }
+
+        #nv_div_7:hover {
+            cursor: pointer;
+        }
+
+        #nv_div_7:hover #heng_7 {
+            width: 70px;
+        }
+
+        #nv_div_7:hover #shu_7 {
+            height: 30px;
+        }
+
+        #nv_div_7:hover #visit_7 {
+            display: block;
+        }
+	</style>
+</head>
+<body>
+<div id="block">
+	<div id="box">
+		<div id="top">
+			<div id="box_left">
+                <span id="span1">
+                    <div class="left_div" id="div1"></div>
+                    学生
+                    <i>|</i>
+                </span>
+
+
+				<span id="span2">
+                    <div class="left_div" id="div2"></div>
+                    教职工
+                    <i id="span2_i">|</i>
+                </span>
+
+
+				<span id="span3">
+                    <div class="left_div" id="div3"></div>
+                    校友
+                    <i>|</i>
+                </span>
+
+
+				<span id="span4">
+                    <div class="left_div" id="div4"></div>
+                    访客
+                    <i>|</i>
+                </span>
+
+
+				<span id="span5">
+                    <div class="left_div" id="div5"></div>
+                    招聘
+                    <i>|</i>
+                </span>
+
+
+				<span id="span6">
+                    <div class="left_div" id="div6"></div>
+                    捐赠
+                </span>
+
+			</div>
+			<!--            ------------------------->
+			<div id="box_right">
+
+            <span id="right_1">
+                <div class="right_div" id="rd_1"></div>
+                门户</span>
+
+				<span id="right_2">
+                    <div class="right_div" id="rd_2"></div>
+                    网络</span>
+
+				<span id="right_3">
+                    <div class="right_div" id="rd_3"></div>
+                    邮箱</span>
+
+				<span id="right_4">
+                    <div class="right_div" id="rd_4"></div>
+                    燕云</span>
+
+				<span id="right_5">
+                    <div class="right_div" id="rd_5"></div>
+                    直播</span>
+
+				<span id="right_6">
+                    <div class="right_div" id="rd_6"></div>
+                    图书馆</span>
+
+				<span id="right_7">
+                    <div class="right_div" id="rd_7"></div>
+                    医学部</span>
+
+				<span id="right_8">
+                    <div class="right_div" id="rd_8"></div>
+                    领导邮箱</span>
+			</div>
+		</div>
+	</div>
+	<div id="nav">
+		<div id="logo"></div>
+		<div id="nv_div">
+
+			<div id="nv_div_1">
+				<p>北大概况</p>
+				<div id="heng_1"></div>
+				<div id="shu_1"></div>
+				<div id="visit_1">
+					<img alt="1" height="150" id="nv_img_1" src="file/nv_1.jpg">
+					<span id="nv_span1">
+                            北大是常为新的，<br>
+                            改进的运动的先锋，<br>
+                            要使中国向着好的，<br>
+                            往上的道路走。
+                        </span>
+
+					<ul id="nv_ul_1">
+						<li id="nv_ul1_li1">北大简介</li>
+						<li id="nv_ul1_li2">组织机构</li>
+						<li id="nv_ul1_li3">表示系统</li>
+					</ul>
+					<ul id="nv_ul_2">
+						<li id="nv_ul2_li1">现任领导</li>
+						<li id="nv_ul2_li2">历史名人</li>
+					</ul>
+					<ul id="nv_ul_3">
+						<li id="nv_ul3_1">历任领导</li>
+						<li id="nv_ul3_2">信息公开</li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div id="nv_div_2">
+				<p>招生</p>
+				<div id="heng_2"></div>
+				<div id="shu_2"></div>
+				<div id="visit_2">
+					<img alt="1" height="150" id="nv_img_2" src="file/nv_2.jpg">
+					<span id="nv_span2">
+                            燕园画卷美不胜收，<br>
+                            恰似你将要留在这里的 <br>
+                            青春年华。<br>
+                            北京大学欢迎你！<br>
+                        </span>
+
+					<ul id="nv2_ul_1">
+						<li id="nv2_ul1_li1">本科生</li>
+						<li id="nv2_ul1_li2">继续教育</li>
+					</ul>
+					<ul id="nv2_ul_2">
+						<li id="nv2_ul2_li1">研究生</li>
+						<li id="nv2_ul2_li2">学生奖助信息</li>
+					</ul>
+					<ul id="nv2_ul_3">
+						<li id="nv2_ul3_1">留学生</li>
+						<li id="nv2_ul3_2">暑期学校</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="nv_div_3">
+				<p>学部与院系</p>
+				<div id="heng_3"></div>
+				<div id="shu_3"></div>
+				<div id="visit_3">
+					<img alt="1" height="150" id="nv_img_3" src="file/nv_3.jpg">
+					<span id="nv_span3">
+                            勤奋、严谨、<br>
+                            求实、创新。<br>
+                        </span>
+
+					<ul id="nv3_ul_1">
+						<li id="nv3_ul1_li1">理学部</li>
+						<li id="nv3_ul1_li2">社会科学部</li>
+						<li id="nv3_ul1_li3">跨学科类</li>
+					</ul>
+					<ul id="nv3_ul_2">
+						<li id="nv3_ul2_li1">信息与工程科学部</li>
+						<li id="nv3_ul2_li2">经理和管理部</li>
+						<li>深圳研究生院</li>
+					</ul>
+					<ul id="nv3_ul_3">
+						<li id="nv3_ul3_1">人文学院</li>
+						<li id="nv3_ul3_2">医学部</li>
+					</ul>
+				</div>
+			</div>
+			<div id="nv_div_4">
+				<p>继续教学</p>
+				<div id="heng_4"></div>
+				<div id="shu_4"></div>
+				<div id="visit_4">
+					<img alt="1" height="150" id="nv_img_4" src="file/nv_5.jpg">
+					<span id="nv_span4">
+                            思想自由、兼容并包。<br>
+                        <br>
+                            教育应指导社会，<br>
+                            而非追逐社会。
+                        </span>
+
+					<ul id="nv4_ul_1">
+						<li id="nv4_ul1_li1">师资队伍</li>
+						<li id="nv4_ul1_li2">海外学习</li>
+						<li id="nv4_ul1_li3">教学网</li>
+					</ul>
+					<ul id="nv4_ul_2">
+						<li id="nv4_ul2_li1">管理部门</li>
+						<li id="nv4_ul2_li2">证书验证</li>
+					</ul>
+					<ul id="nv4_ul_3">
+						<li id="nv4_ul3_1">慕课</li>
+						<li id="nv4_ul3_2">燕云直播</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="nv_div_5">
+				<p>科学研究</p>
+				<div id="heng_5"></div>
+				<div id="shu_5"></div>
+				<div id="visit_5">
+					<img alt="1" height="150" id="nv_img_5" src="file/nv_6.jpg">
+					<span id="nv_span5">
+                            博学之，审问之，<br>
+                            慎思之，明辨之， <br>
+                            笃行之。
+                        </span>
+
+					<ul id="nv_ul_5">
+						<li id="nv5_ul1_li1">科研成果</li>
+						<li id="nv5_ul1_li2">管理部门</li>
+					</ul>
+					<ul id="nv5_ul_2">
+						<li id="nv5_ul2_li1">研究机构</li>
+					</ul>
+					<ul id="nv5_ul_3">
+						<li id="nv5_ul3_1">学术期刊</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="nv_div_6">
+				<p>学术交流</p>
+				<div id="heng_6"></div>
+				<div id="shu_6"></div>
+				<div id="visit_6">
+					<img alt="1" height="150" id="nv_img_6" src="file/nv_7.jpg">
+					<span id="nv_span6">
+                            志于道，据于德，<br>
+                            依于仁，游于艺。
+                        </span>
+
+					<ul id="nv_ul_6">
+						<li id="nv6_ul1_li1">国际交流</li>
+						<li id="nv6_ul1_li2">港澳台交流</li>
+					</ul>
+					<ul id="nv6_ul_2">
+						<li id="nv6_ul2_li1">国内合作</li>
+						<li id="nv6_ul2_li2">北京论坛</li>
+					</ul>
+					<ul id="nv6_ul_3">
+						<li id="nv6_ul3_1">孔子学院</li>
+						<li id="nv6_ul3_2">信息公开</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="nv_div_7">
+				<p>校园生活</p>
+				<div id="heng_7"></div>
+				<div id="shu_7"></div>
+				<div id="visit_7">
+					<img alt="1" height="150" id="nv_img_7" src="file/nv_8.jpg">
+					<span id="nv_span7">
+                            秋冬春夏，<br>
+                            伴随着四时的运行，<br>
+                            青春和燕园融为一体，<br>
+                            北大成为永恒。
+                        </span>
+
+					<ul id="nv_ul_7">
+						<li id="nv7_ul1_li1">青青校园</li>
+						<li id="nv7_ul1_li2">体育健康</li>
+						<li id="nv7_ul1_li3">管理服务</li>
+					</ul>
+					<ul id="nv7_ul_2">
+						<li id="nv7_ul2_li1">校园讲座</li>
+						<li id="nv7_ul2_li2">效力</li>
+					</ul>
+					<ul id="nv7_ul_3">
+						<li id="nv7_ul3_1">艺术生活</li>
+						<li id="nv7_ul3_2">档案馆藏</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="nv_left">
+			<div id="serch"></div>
+			<div id="lang"></div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
