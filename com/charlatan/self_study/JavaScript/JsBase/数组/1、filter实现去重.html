@@ -35,7 +35,7 @@
 
 	let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 2, 3, 4, 5, 6, 7]
 
-	let newArr = arr1.filter(function (item, i, self) {
+	let newArr = arr1.filter((item, i, self) => {
 		let a = self.indexOf(item)
 		console.log(`item----${item},self.indexOf(item)---${a},i----${i}`)
 		return self.indexOf(item) === i;
