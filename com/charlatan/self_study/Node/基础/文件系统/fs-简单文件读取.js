@@ -9,7 +9,7 @@
  */
 
 /*
-* 简单文件写入：
+* 简单文件读取：
 *   fs.readFile(path[, options], callback)
 *   fs.readFileSync (path[, options])
 *       path    路径
