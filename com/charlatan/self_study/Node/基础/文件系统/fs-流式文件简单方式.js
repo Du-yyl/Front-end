@@ -11,3 +11,20 @@ let fs = require('fs')
 
 let ws = fs.createWriteStream("test.txt")
 let rs = fs.createReadStream("ttest.txt")
+
+rs.once('open', function () {
+    console.log('可读流打开');
+})
+rs.once("close", function () {
+    console.log('可读流关闭');
+})
+
+ws.once('open', function () {
+    console.log('可写流打开');
+})
+ws.once("close", function () {
+    console.log('可写流关闭');
+})
+
+// 通过一个管道连接
+rs.pipe(ws)
