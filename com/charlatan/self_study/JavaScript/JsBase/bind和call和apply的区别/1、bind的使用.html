@@ -43,7 +43,9 @@
 		b: function () {
 			var func = function () {
 				console.log(this.c);
+				console.log(this);
 			}.bind(this)
+			console.log(this);
 			func();
 		},
 		c: 'Hello!'
