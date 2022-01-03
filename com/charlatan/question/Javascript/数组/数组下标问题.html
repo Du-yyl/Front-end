@@ -1,0 +1,80 @@
+<!--
+  ~ Date:2022/1/3 10:23 33
+  ~ Name:数组下标问题.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/字符串相关
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceshi</title>
+
+</head>
+<body>
+<pre>
+	在数组中创建对象时，并针对数组的下标进行赋值的操作，
+
+	JS中的数组：
+		元素的数据类型可以不相同
+		内存不一定是连续的（对象是随机存储的）
+		不能通过数字下标存储，而是用字符串下标存储的
+		这意味着数组可以有任何的key
+
+	javascript的数组其实不像PHP或者其他一些语言一样拥有真正的字符串下标，
+	当我们试图为一个js数组添加字符串下标的时候，其实就相当于为该数组对象添加了一个属性，
+	属性名称就是我们所谓的“字符串下标”。由于为数组对象添加属性不会影响到同为该对象属性的length的值，
+	因此该值将始终为零。同样地，.pop()和.shift()等作用于数组元素的方法也不能够作用于这些对象属性。
+		因此，如果要使用的是一个完全由“字符串下标”组成的数组，那还是将其声明为一个Object类型的对象要更好一些。
+
+	Javascript数组下标值的范围为0到2的32次方。
+　　对于任意给定的数字下标值，如果不在此范围内，js会将它转换为一个字符串，并将该下标对应的值作为该数组对象的一个属性值而不是数组元素，
+	例如array[-1] = "yes" 其实就相当于给array对象添加了一个名为-1的属性，属性值为yes。
+　　如果该下标值在合法范围内，则无论该下标值是数字还是数字字符串，都一律会被转化为数字使用，
+	即 array["100"] = 0 和 array[100] = 0 执行的是相同的操作。
+
+</pre>
+</body>
+<script>
+	let arr = new Array(3)
+	arr[0] = 1
+	arr[1] = 1
+	arr[2] = 1
+	arr[3] = 1
+	arr[6] = 1
+	arr[undefined] = 99
+	arr['test'] = 199
+	arr[false] = 399
+	arr.b = 9999
+	arr.null = 88888888
+	console.log(arr);
+
+	// arr.forEach(value => {
+	// 	console.log(value);
+	// })
+
+	for (let arrKey in arr) {
+		console.log(arrKey);
+		console.log(arr[arrKey]);
+	}
+
+
+	// for (let i = 0; i < arr.length; i++) {
+	// 	console.log(arr[i]);
+	// }
+
+	// for (let arrElement of arr) {
+	// 	console.log(arrElement);
+	// }
+	// console.log("------------------------");
+	// console.log(arr['test']);
+	// console.log(arr[null]);
+	// console.log(arr['b']);
+	// console.log(arr['1']);
+	// console.log(arr[1]);
+	// console.log(arr[1] === arr['1']);
+</script>
+</html>
