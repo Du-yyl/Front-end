@@ -27,6 +27,6 @@
 * */
 
 
-let num = require('../node.js')
+let num = require('../../node.js')
 console.log(num);
 console.log(num.num1);

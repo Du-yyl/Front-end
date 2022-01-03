@@ -91,8 +91,6 @@ app.all('/jquery-server', (request, response) => {
 	response.setHeader('Access-Control-Allow-Headers', '*');
 	//设置响应体
 	let json = {name: '张三'}
-	
-	
 	response.send(JSON.stringify(json))
 })
 
