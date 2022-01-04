@@ -300,7 +300,6 @@
 		#subtotal {
 			width: 100%;
 			height: 40px;
-			/* background-color: #ffffff; */
 			position: relative;
 			top: 190px;
 		}
@@ -689,14 +688,12 @@
 			deletes[i].onclick = function () {
 				lis[i].style.left = "1500px"
 				setTimeout(function () {
-					// lis[i].parentNode.removeChild(lis[i])
 					lis[i].style.height = "0"
 					lis[i].style.marginTop = "0"
+					setTimeout(function () {
+						lis[i].parentNode.removeChild(lis[i])
+					}, 1000)
 				}, 1000)
-				setTimeout(function () {
-					lis[i].parentNode.removeChild(lis[i])
-					// lis[i].style.height = "0"
-				}, 3000)
 			}
 		}
 	}
