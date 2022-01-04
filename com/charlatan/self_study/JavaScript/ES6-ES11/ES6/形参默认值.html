@@ -1,0 +1,45 @@
+<!--
+  ~ Date:2022/1/4 14:59 25
+  ~ Name:形参默认值.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>形参默认值</title>
+
+</head>
+<body>
+<pre>
+	ES6中可以尝试为形参的默认值进行赋值
+		具有默认值的形参的位置一般比较靠后
+
+	与解构赋值一起用
+</pre>
+</body>
+<script>
+	let func = (num1, num2 = 0, num3 = 1) => num1 + num2 + num3
+
+	console.log(func(1, 2));
+
+	function func1({name, age = 18, address}) {
+		console.log(name);
+		console.log(address);
+		console.log(age);
+	}
+
+
+	func1({
+		name: '张三',
+		age: 20,
+		address: "北京大兴"
+	})
+
+
+</script>
+</html>

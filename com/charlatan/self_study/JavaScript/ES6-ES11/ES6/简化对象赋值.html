@@ -1,0 +1,43 @@
+<!--
+  ~ Date:2022/1/4 14:34 48
+  ~ Name:简化对象赋值.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简化对象赋值</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	let name = "张三"
+	let age = 20
+	let test = function () {
+		console.log("我是一个方法");
+
+	}
+
+	// ES6中对象的赋值可以更加进行简化
+	let user = {
+		name,
+		age,
+		test,
+		//	方法的声明更加简化
+		improve() {
+			console.log("我是简化声明方法");
+		}
+	}
+	console.log(user);
+	user.test()
+	user.improve()
+</script>
+
+</html>

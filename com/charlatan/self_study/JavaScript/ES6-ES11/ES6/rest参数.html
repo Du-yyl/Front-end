@@ -1,0 +1,41 @@
+<!--
+  ~ Date:2022/1/4 15:14 33
+  ~ Name:rest参数.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rest参数</title>
+
+</head>
+<body>
+<pre>
+  ES6进行引用rest属性用来代替，arguments
+	这个参数必须在最后进行使用，因为他会将没有赋值或者多余的值进行全部封装到一个数组中，而这个数组就是arg
+</pre>
+</body>
+<script>
+	function func1(num1, num2, num3) {
+		console.log(arguments);
+		return num1 + num2 + num3
+	}
+
+	function func2(...arg) {
+		console.log(arg);
+		let num = 0
+		for (let argElement of arg) {
+			num += argElement
+		}
+		return num
+	}
+
+	console.log(func1(1, 2, 3));
+	console.log(func2(1, 2, 3));
+</script>
+</html>

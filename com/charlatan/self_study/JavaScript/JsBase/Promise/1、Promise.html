@@ -90,29 +90,29 @@
 	// });
 
 	// resolve 和 reject 都是函数，其中调用 resolve 代表一切正常，reject 是出现异常时所调用的：
-	new Promise((resolve, reject) => {
-		step1()
-	}).then(
-
-	).catch(err => {
-		console.log(err);
-	}).finally(() => {
-		console.log("End");
-	})
+	// new Promise((resolve, reject) => {
+	// 	step1()
+	// }).then(
+	//
+	// ).catch(err => {
+	// 	console.log(err);
+	// }).finally(() => {
+	// 	console.log("End");
+	// })
 
 	//
-	// new Promise(function (resolve, reject) {
-	// 	console.log(1111);
-	// 	resolve(2222);
-	// }).then(function (value) {
-	// 	console.log(value);
-	// 	return 3333;
-	// }).then(function (value) {
-	// 	console.log(value);
-	// 	throw "An error";
-	// }).catch(function (err) {
-	// 	console.log(err);
-	// });
+	new Promise(function (resolve, reject) {
+		console.log(1111);
+		resolve(2222);
+	}).then(function (value) {
+		console.log(value);
+		return 3333;
+	}).then(function (value) {
+		console.log(value);
+		throw "An error";
+	}).catch(function (err) {
+		console.log(err);
+	});
 
 	//--------------------------------------------------------------------------
 	function step1() {

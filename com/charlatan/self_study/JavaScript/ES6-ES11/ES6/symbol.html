@@ -1,0 +1,85 @@
+<!--
+  ~ Date:2022/1/4 15:56 49
+  ~ Name:symbol.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>symbol</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	let s1 = Symbol()
+	console.log(s1);
+	console.log(typeof s1);
+
+	// 创建symbol对象
+	let s2 = Symbol("test")
+	let s3 = Symbol("test")
+	console.log(s2 === s3);
+
+
+	//	创建symbol函数对象
+	let s4 = Symbol.for('测试')
+	let s5 = Symbol.for('测试')
+	console.log(s4 === s5);
+
+	//	Symbol 不能对数据进行运算操作
+
+	//	Symbol 的使用
+	/*
+	* 当为一个对象增加新的属性时，如果不确定这个属性和命名是不是重复的，那么如果用原来的方式可能更加麻烦
+	* 使用Symbol 可以创建一个唯一的值，不用担心重复的问题
+	* */
+	let u1 = {
+		name: "张三",
+		age: 12,
+		sayAge: function () {
+			console.log("我是原来的sayName");
+		},
+		sayName: function () {
+			console.log("我是原来的sayAge");
+		}
+	}
+
+	u1.sayName()
+	u1.sayAge()
+
+	// 直接修改容易出现问题，如，不确定原来属性中是否存在这个值
+	let user = {
+		sayName: Symbol(),
+		sayAge: Symbol(),
+	}
+
+	u1[user.sayName] = function () {
+		console.log("我是新的要赋值的方法")
+	}
+	u1[user.sayAge] = function () {
+		console.log("我是新的要赋值的方法");
+	}
+	console.log(u1);
+	u1[user.sayAge]()
+
+
+	//	其他方法
+	let game = {
+		name: 'test',
+		[Symbol('sya')]() {
+			console.log("发言");
+		},
+		[Symbol(('move'))]() {
+			console.log("移动");
+		}
+	}
+	console.log(game);
+</script>
+</html>
