@@ -1,0 +1,36 @@
+<!--
+  ~ Date:2022/1/6 14:14 13
+  ~ Name:生成器处理错误.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>生成器处理错误</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	function* gen(x) {
+		undefined
+		try {
+			undefined
+			var y = yield x + 2;
+		} catch (e) {
+			console.log("gen--------->" + e);
+		}
+		return y;
+	}
+
+	let g = gen(2)
+	g.next()
+	g.next("测试")
+</script>
+</html>

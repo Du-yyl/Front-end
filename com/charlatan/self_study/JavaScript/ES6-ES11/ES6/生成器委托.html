@@ -1,0 +1,49 @@
+<!--
+  ~ Date:2022/1/6 14:08 47
+  ~ Name:生成器委托.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>迭代器委托</title>
+
+</head>
+<body>
+<pre>
+	使用yield*可以实现迭代器之间的委托，语法 ： yield*  迭代器
+
+		通过第一个迭代器来调用第二个迭代器
+</pre>
+</body>
+<script>
+	function* func1() {
+		console.log("你好");
+		yield 111
+		console.log("hello");
+		yield 222
+	}
+
+	function* func2() {
+		console.log("世界");
+		yield 333
+		console.log("world");
+		yield 444
+		yield* func1()
+	}
+
+	let func = func2()
+
+	console.log(func.next());
+	console.log(func.next());
+	console.log(func.next());
+	console.log(func.next());
+	console.log(func.next());
+	console.log(func.next());
+</script>
+</html>
