@@ -2176,10 +2176,10 @@
             </span>
 			<div id="body-4-top-right">
 				<ul id="body-4-top-right-ul">
-					<li>华语</li>
-					<li>欧美</li>
-					<li>日韩</li>
-					<li>组合</li>
+					<li class="body-4-top-right-li">华语</li>
+					<li class="body-4-top-right-li">欧美</li>
+					<li class="body-4-top-right-li">日韩</li>
+					<li class="body-4-top-right-li">组合</li>
 					<li>更多 ></li>
 				</ul>
 			</div>
@@ -2621,10 +2621,50 @@
 	fetch("http://39.96.88.57:9090/api/www/playlist/index/tags?httpsStatus=1&reqId=62636a50-6e0f-11ec-9610-aff7c1796bb4")
 		.then(r => r.json()).then(res => {
 		for (let i = 0; i < body_ul_lis.length; i++) {
-			console.log(res.data[i].name);
 			body_ul_lis[i].innerHTML = res.data[i].name
 		}
 	})
+
+
+	// 歌单榜
+	let body_2_imgs = document.getElementsByClassName("body-3-li-img-2")
+	let body_2_ul_lis = document.getElementsByClassName("body-3-lu-ul-ul")
+	fetch("http://39.96.88.57:9090/api/www/bang/index/bangList?httpsStatus=1&reqId=62639161-6e0f-11ec-9610-aff7c1796bb4").then(r => r.json()).then(res => {
+		for (let i = 0; i < res.data.length; i++) {
+			body_2_imgs.src = res.data[i].pic
+		}
+		for (let i = 0; i < body_2_ul_lis.length; i++) {
+			let elementsByTagName = body_2_ul_lis[i].getElementsByTagName('li');
+			let li = ""
+			for (let j = 0; j < elementsByTagName.length; j++) {
+				li += `
+				<li>
+                    <div class="body-3-li-ul-ul-lu-left-div">
+		                <img alt="" class="body-3-li-ul-ul-lu-left-div-img" src=${res.data[i].musicList[j].albumpic}>
+	                </div>
+	                <div class="body-3-li-ul-ul-lu-right-div">
+                        <span class="body-3-li-ul-ul-right-div-top-span">
+                            ${res.data[i].musicList[j].album}
+                        </span>
+		                <span class="body-3-li-ul-ul-right-div-last-span">
+                            ${res.data[i].musicList[j].artist}
+                        </span>
+	                </div>
+				</li>
+				`
+			}
+			body_2_ul_lis[i].innerHTML = li
+		}
+	})
+
+	//	歌手推荐
+	let body_3_lis = document.getElementsByClassName("body-4-top-right-li")
+	fetch("http://39.96.88.57:9090/api/www/artist/index/tags?httpsStatus=1&reqId=0254a090-6e12-11ec-950c-155e05dc59b9").then(r => r.json()).then(res => {
+		for (let i = 0; i < body_3_lis.length; i++) {
+			body_3_lis[i].innerHTML = res.data[i].name
+		}
+	})
+
 
 
 </script>
