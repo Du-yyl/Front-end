@@ -13,12 +13,17 @@
 	<meta charset="UTF-8">
 	<title>元素间空隙的出现和处理方式</title>
 	<style>
-        .parent .child {
-            display: inline-block;
-            background-color: #fdfd04;
-            width: 100px;
-            height: 100px;
-        }
+		.parent .child {
+			display: inline-block;
+			background-color: #fdfd04;
+			width: 100px;
+			height: 100px;
+
+		}
+
+		.parent {
+			font-size: 0;
+		}
 	</style>
 </head>
 <body>
@@ -32,7 +37,9 @@
 	产生原因：
 	元素被当成行内元素排版的时候，元素之间的空白符（空格、回车换行等）都会被浏览器处理
 	解决：
-	1、不进行换行，就不会出现空】</p>
+	1、不进行换行，就不会出现空
+	2、父级元素字体大小设置为 0
+</p>
 
 </body>
 </html>
