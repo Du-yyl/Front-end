@@ -1,0 +1,76 @@
+<!--
+  ~ Date:2022/1/8 16:41 24
+  ~ Name:calss实现继承.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6/class
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>class实现继承</title>
+</head>
+<body>
+
+</body>
+<script>
+	// 原始继承
+	// function Book(name, id) {
+	// 	this.name = name;
+	// 	this.id = id
+	// }
+	//
+	// Book.prototype.read = function () {
+	// 	console.log("我能读书");
+	// }
+	//
+	// function Ibook(name, id, color, age) {
+	// 	Book.call(this, name, id)
+	// 	this.color = color
+	// 	this.age = age
+	// }
+	//
+	// Ibook.prototype = new Book
+
+
+	//	class继承
+	class Book {
+		#name
+		#age
+
+		constructor(name, age) {
+			this.#name = name
+			this.#age = age
+		}
+
+		read() {
+			console.log("我在读书");
+		}
+	}
+
+	class Ibook extends Book {
+		#id
+		#color
+
+		constructor(name, age, id, color) {
+			super(name, age);
+			this.#id = id
+			this.#color = color
+		}
+
+		read() {
+			console.log("我在子类被重写了");
+		}
+	}
+
+	let b1 = new Ibook('jock', 12, 23, 34)
+	let b2 = new Ibook('tom', 123, 234, 345)
+	console.log(b1);
+	console.log(b2);
+
+	b1.read()
+</script>
+</html>
