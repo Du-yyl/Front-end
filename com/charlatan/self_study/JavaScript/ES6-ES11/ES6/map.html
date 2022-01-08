@@ -1,0 +1,51 @@
+<!--
+  ~ Date:2022/1/8 15:33 03
+  ~ Name:map.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>map</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	let map = new Map()
+	//    添加
+	map.set('01', 'jack')
+	map.set('02', function () {
+		console.log("可以添加方法");
+		return '返回值'
+	})
+	let obj = {
+		'07': "测试"
+	}
+	map.set(obj, obj['07'])
+	map.set('03', 'lose')
+	map.set('04', 'tor bi')
+	map.set('05', 'marr')
+	map.set('06', 'cocky')
+
+	console.log(map);
+	console.log("长度->" + map.size);
+
+	//	删除
+	console.log(map.delete('04'));
+	console.log(map);
+
+	//	获取
+	console.log(map.get('02')());
+
+	//	清空
+	map.clear()
+	console.log(map);
+</script>
+</html>
