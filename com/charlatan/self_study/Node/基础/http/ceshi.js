@@ -10,9 +10,10 @@
 let http = require('http')
 let server = http.createServer()
 server.on('request', function (request, response) {
-	if (request.url === 'login') {
+	console.log(request.url);
+	if (request.url === '/login') {
 		console.log("登录成功");
-	} else if (request.url === 'go') {
+	} else if (request.url === '/go') {
 		console.log("go");
 	} else
 		console.log("没有指定路径");
