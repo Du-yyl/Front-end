@@ -51,17 +51,29 @@
 		}
 		
 		.img {
-			width: 100%;
+			height: 470px;
+			width: 210px;
+		}
+
+		.i {
+			width: 210px;
+			height: 270px;
+		}
+
+		.li {
+			height: 470px;
+			width: 210px;
 		}
 	</style>
 </head>
 <body>
 <ul id="ul">
+
 	<li>
 		<img alt="" class="img" src="file/img-1.jpg">
 	</li>
 	<li>
-		<img alt="" class="img" src="file/img-4.jpg">
+		<img alt="" class="img" src="file/img-2.jpg">
 	</li>
 	<li>
 		<img alt="" class="img" src="file/img-3.jpg">
@@ -70,16 +82,13 @@
 		<img alt="" class="img" src="file/img-4.jpg">
 	</li>
 	<li>
-		<img alt="" class="img" src="file/img-5.jpg">
-	</li>
-	<li>
-		<img alt="" class="img" src="file/img-6.jpg">
+		<img alt="" class="img" src="file/img-4.jpg">
 	</li>
 	<li>
 		<img alt="" class="img" src="file/img-1.jpg">
 	</li>
 	<li>
-		<img alt="" class="img" src="file/img-4.jpg">
+		<img alt="" class="img" src="file/img-2.jpg">
 	</li>
 	<li>
 		<img alt="" class="img" src="file/img-3.jpg">
@@ -88,16 +97,13 @@
 		<img alt="" class="img" src="file/img-4.jpg">
 	</li>
 	<li>
-		<img alt="" class="img" src="file/img-5.jpg">
-	</li>
-	<li>
-		<img alt="" class="img" src="file/img-6.jpg">
+		<img alt="" class="img" src="file/img-4.jpg">
 	</li>
 	<li>
 		<img alt="" class="img" src="file/img-1.jpg">
 	</li>
 	<li>
-		<img alt="" class="img" src="file/img-4.jpg">
+		<img alt="" class="img" src="file/img-2.jpg">
 	</li>
 	<li>
 		<img alt="" class="img" src="file/img-3.jpg">
@@ -106,23 +112,67 @@
 		<img alt="" class="img" src="file/img-4.jpg">
 	</li>
 	<li>
-		<img alt="" class="img" src="file/img-5.jpg">
+		<img alt="" class="img" src="file/img-4.jpg">
 	</li>
 	<li>
-		<img alt="" class="img" src="file/img-6.jpg">
+		<img alt="" class="img" src="file/img-1.jpg">
 	</li>
 	<li>
-		<img alt="" class="img" src="file/load.gif">
+		<img alt="" class="img" src="file/img-2.jpg">
 	</li>
+	<li>
+		<img alt="" class="img" src="file/img-3.jpg">
+	</li>
+
 </ul>
 </body>
 <script>
 	let ul = document.getElementById('ul')
+	let li = `
+		<li class="li">
+			<img alt="" class="img i" src="file/load.gif">
+		</li>
+		<li class="li">
+			<img alt="" class="img i" src="file/load.gif">
+		</li>
+		<li class="li">
+			<img alt="" class="img i" src="file/load.gif">
+		</li>
+		<li class="li">
+			<img alt="" class="img i" src="file/load.gif">
+		</li>
+		<li class="li">
+			<img alt="" class="img i" src="file/load.gif">
+		</li>
+		<li class="li">
+			<img alt="" class="img i" src="file/load.gif">
+		</li>
+`
 	document.onscroll = function (event) {
-		// console.log(document.body.scrollTop);
-		// console.log(document.body.scrollHeight);
-		console.log(ul.scrollTop);
-		console.log(ul.scrollHeight);
+		let sh = document.documentElement.scrollHeight - document.documentElement.scrollTop
+		let ch = document.documentElement.clientHeight
+
+		if (sh - ch <= 300) {
+			ul.innerHTML += li
+			setTimeout(change, 1000)
+		}
+		setTimeout(change, 10000)
+
+		function change() {
+			let i = document.getElementsByClassName('i')
+			for (let j = 0; j < i.length; j++) {
+				let num = Math.floor(Math.random() * 14) + 1
+				i[j].src = "file/img-" + num + ".jpg"
+				i[j].classList.remove('i')
+			}
+		}
+	}
+
+	function fd(callback, time) {
+		let timer
+		return function () {
+
+		}
 	}
 </script>
 </html>
