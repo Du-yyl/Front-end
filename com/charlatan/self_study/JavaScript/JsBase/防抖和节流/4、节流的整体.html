@@ -29,19 +29,19 @@
 	$("#content")[0].onclick = debounce(count, 1000, true);
 
 	function debounce(func, wait, immediate) {
-		let timerout;
+		let timeout;
 		return function () {
 			let context = this;
 			let args = arguments;
-			clearTimeout(timerout)
+			clearTimeout(timeout)
 			if (immediate) {
-				let callNow = !timerout;
-				timerout = setTimeout(() => {
-					timerout = null;
+				let callNow = !timeout;
+				timeout = setTimeout(() => {
+					timeout = null;
 				}, wait);
 				if (callNow) func.apply(context, args);
 			} else {
-				timerout = setTimeout(function () {
+				timeout = setTimeout(function () {
 					func.apply(context, args);
 				}, wait);
 			}
