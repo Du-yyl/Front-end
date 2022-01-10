@@ -1,6 +1,6 @@
 /**
  * Date:2022/1/4 17:53 42
- * Name:MyTools.js
+ * Name:自定义迭代器.js
  * Author:charlatan
  *
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
