@@ -16,6 +16,9 @@ let server = http.createServer()
 			请求对象可以获取客户端的一些请求信息，例如路径
 		Response    响应对象
 			响应对象可以用来给客户端发送响应对象
+			
+			当浏览器的url路径为空时，会默认访问80端口
+			
 * */
 server.on('request', function (request, response) {
 	console.log("收到请求，请求路径是：" + request.url);
