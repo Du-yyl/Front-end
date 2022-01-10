@@ -19,6 +19,12 @@ let server = http.createServer()
 			
 			当浏览器的url路径为空时，会默认访问80端口
 			
+			数据的响应内容只能是二进制数据或者字符串
+				数组
+				对象
+				布尔值
+				数字都不行
+			
 * */
 server.on('request', function (request, response) {
 	console.log("收到请求，请求路径是：" + request.url);
