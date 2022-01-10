@@ -52,7 +52,7 @@ function ditto(arr, lens = 5) {
 		return flag;
 	} else {
 		let flag = false
-		cut(arr, lens).forEach((item, index, self) => {
+		cut(arr, lens).forEach((item) => {
 			if (flag) {
 				return flag
 			}
