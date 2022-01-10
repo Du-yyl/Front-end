@@ -148,7 +148,11 @@
 			<img alt="" class="img i" src="file/load.gif">
 		</li>
 `
-	document.onscroll = function (event) {
+	document.onscroll = fd(onscroll, 1000)
+
+	// document.onscroll = onscroll
+
+	function onscroll(event) {
 		let sh = document.documentElement.scrollHeight - document.documentElement.scrollTop
 		let ch = document.documentElement.clientHeight
 
@@ -166,12 +170,23 @@
 				i[j].classList.remove('i')
 			}
 		}
+
+		console.log("123");
 	}
 
 	function fd(callback, time) {
 		let timer
+		let flag = true
 		return function () {
-
+			if (flag) {
+				callback()
+				flag = false
+			} else {
+				timer = setTimeout(function () {
+					flag = true
+					clearTimeout(timer)
+				}, time)
+			}
 		}
 	}
 </script>
