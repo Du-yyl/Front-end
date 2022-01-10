@@ -92,10 +92,9 @@
 	 * @param time 多久执行一次
 	 * @returns {(function(): void)|*}
 	 */
-	function debounce(callBack, time) {
+	function debounce(callBack, time = 1000) {
 		let flag = true
 		return function () {
-			time = time || 1000
 			let timer = null
 			if (flag) {
 				flag = false
