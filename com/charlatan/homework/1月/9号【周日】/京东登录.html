@@ -668,7 +668,6 @@
 				x = x >= 310 ? 310 : x
 				divMove.style.width = x + "px"
 				imgMove.style.left = x + "px"
-				console.log(x);
 			}
 
 			document.onmouseup = function () {
@@ -752,6 +751,7 @@
 			hint_span.style.paddingTop = '9px'
 			hint_span.style.height = '77px'
 			hint_span_san.style.display = 'block'
+			go()
 		}
 		password.onblur = function () {
 			hint_span.style.width = '0'
@@ -768,8 +768,10 @@
 			hint_s_4.innerText = ''
 			hs4.style.color = 'white'
 		}
-		//	密码强度的提示和改变
-		password.oninput = function () {
+		password.oninput = go
+
+//	密码强度的提示和改变
+		function go() {
 			pw = password.value
 			// 密码强度
 			if (pw.length > 0) {
@@ -783,7 +785,7 @@
 				} else if (num === 3) {
 					hp.style.display = 'block'
 				}
-				
+
 				// 密码长度
 				if (pw.length >= 8 && pw.length <= 18) {
 					hint_s_1.innerText = '√'
@@ -794,9 +796,9 @@
 					hs1.style.color = 'red'
 					s1 = false
 				}
-				
+
 				//	不能存在连续的字母数字
-				
+
 				if (!/([a-zA-Z0-9])\1{3}/.test(pw)) {
 					hint_s_4.innerText = '√'
 					hs4.style.color = 'white'
@@ -806,7 +808,7 @@
 					hs4.style.color = 'red'
 					s2 = false
 				}
-				
+
 				//	不能出现中文和空格
 				if (!/[\u4e00-\u9fa5|\s]/.test(pw)) {
 					hint_s_3.innerText = '√'
@@ -848,8 +850,7 @@
 			}
 			return num
 		};
-		//	用户名判断
-		
+
 		
 		//	眼的切换
 		let password_eye = document.getElementById("center-body-right-password-eye")

@@ -1,0 +1,91 @@
+<!--
+  ~ Date:2022/1/10 10:34 04
+  ~ Name:ceshi.html
+  ~ Path:Web代码/src/com/charlatan/homework/1月/9号【周日】
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cceshi</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#div {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			/* left: 0; */
+			/* top: 0; */
+			pointer-events: none;
+		}
+
+		#show {
+			width: 200px;
+			height: 200px;
+			border: 2px solid;
+			margin-left: 1000px;
+		}
+
+	</style>
+</head>
+<body>
+<div id="div"></div>
+<div id="show">
+
+</div>
+</body>
+<script>
+	/*
+	* 使用 offset 会来回乱跳的问题：
+	*   因为在绑定的offset事件后，触发mousemove事件触发的事件源元素在不断切换，当鼠标移动时会移动到div中这时
+	*   offset的源元素不再是父级的div而是移动的div 这是offset值是相对于移动的div 所以是较小的值 ，所以会回到左上角。
+	*
+	*   解决：
+	*       使用判断，将移动的元素的元素切换到外层div才能继续赋值
+	*       但是会出现在子div中无法改变位置的情况，移动到父级div才有效
+	*       使用pointer-events: none;指定移入子div中不会有样式和改变，鼠标移入的其实还是父级的div，来解决这个问题
+	* */
+	let div = document.getElementById("div")
+	let show = document.getElementById('show')
+	document.onmousedown = function (event_1) {
+		document.onmousemove = function (event_2) {
+			if (!(event_2.target === div)) {
+				let x = event_2.offsetX - 50
+				let y = event_2.offsetY - 50
+
+				// let x = event_2.clientX - event_1.clientX
+				// let y = event_2.clientY - event_1.clientY
+
+				div.style.top = y + "px"
+				div.style.left = x + "px"
+
+				show.innerText = 'x' + x + "px;" + "y" + y + "px"
+
+			}
+
+		}
+	}
+	document.onmouseup = function () {
+		document.onmousemove = null
+	}
+</script>
+</html>

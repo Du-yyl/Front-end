@@ -1,0 +1,79 @@
+<!--
+  ~ Date:2021/12/6 16:43 01
+  ~ Name:鼠标的位置总结.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/使用JS操作样式
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标的位置</title>
+	<style>
+		#div {
+			width: 270px;
+			height: 260px;
+			background-color: #6aff5c;
+			position: absolute;
+		}
+
+		#div-span {
+			width: 700px;
+			height: 40px;
+			border: 1px solid;
+			position: absolute;
+			top: 800px;
+			left: 40px;
+			line-height: 40px;
+			text-align: center;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+
+			let div = document.getElementById("div")
+			let div_span = document.getElementById("div-span")
+			let span1 = document.getElementById("span1")
+			let span2 = document.getElementById("span2")
+			let span3 = document.getElementById("span3")
+
+
+			div.onmousemove = function (event) {
+				let x = event.offsetX
+				let y = event.offsetY
+				span1.innerText = "在div中的X：" + x + " ，Y:" + y
+			}
+
+			window.onmousemove = function (event) {
+				let x = event.screenX
+				let y = event.screenY
+				span2.innerText = "   ；在屏幕中的X：" + x + " ，Y:" + y
+			}
+
+			document.onmousemove = function (event) {
+				let x = event.clientX
+				let y = event.clientY
+				span3.innerText = "   ；在屏幕中的X：" + x + " ，Y:" + y
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+<div id="div"></div>
+<!-- /#div -->
+<div id="div-span">
+	<span id="span1"></span>
+	<!-- /#span1 -->
+	<span id="span2"></span>
+	<!-- /#span1 -->
+	<span id="span3"></span>
+	<!-- /#span1 -->
+</div>
+<!-- /#div-span -->
+</body>
+</html>
