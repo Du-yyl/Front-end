@@ -21,24 +21,23 @@ let rs = fs.createReadStream('test.txt')
 let ws = fs.createWriteStream('test.txt')
 
 rs.once('open', function () {
-	console.log("读取流打开");
+  console.log('读取流打开')
 })
 rs.once('close', function () {
-	console.log("读取流关闭");
-	//	 数据读取完毕，关闭可写流
-	ws.end()
+  console.log('读取流关闭')
+  //	 数据读取完毕，关闭可写流
+  ws.end()
 })
 
 ws.once('open', function () {
-	console.log("可写流打开");
+  console.log('可写流打开')
 })
 ws.once('close', function () {
-	console.log("可写流关闭");
+  console.log('可写流关闭')
 })
 
-
 rs.on('data', function (string) {
-	console.log(string);
-	console.log(string.toString());
-	ws.write(data)
+  console.log(string)
+  console.log(string.toString())
+  ws.write(data)
 })

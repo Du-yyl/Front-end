@@ -38,27 +38,27 @@ let fs = require('fs')
 // 这里的 f 虽然是进行定义赋值了，但是因为同步的回调函数的函数一开始就叫给线程池中执行，所以当输出 f 时，因为异步先执行，所以时undefined
 let f
 fs.open('test.txt', 'w', function (err, fd) {
-	if (!err) {
-		console.log(fd);
-		f = fd
-		// 如果没有出错，开始写入操作
-		fs.write(fd, '我时异步写入操作', function (error, written, string) {
-			if (!error) {
-				console.log("写入成功，写入了" + written + "个字符，写入了：" + string);
-			} else {
-				console.log("出错了");
-			}
-			fs.close(fd, function (error) {
-				if (!error) {
-					console.log("关闭成功");
-				} else {
-					console.log("关闭失败，请重试");
-				}
-			})
-		})
-	} else {
-		console.log(err);
-	}
+  if (!err) {
+    console.log(fd)
+    f = fd
+    // 如果没有出错，开始写入操作
+    fs.write(fd, '我时异步写入操作', function (error, written, string) {
+      if (!error) {
+        console.log('写入成功，写入了' + written + '个字符，写入了：' + string)
+      } else {
+        console.log('出错了')
+      }
+      fs.close(fd, function (error) {
+        if (!error) {
+          console.log('关闭成功')
+        } else {
+          console.log('关闭失败，请重试')
+        }
+      })
+    })
+  } else {
+    console.log(err)
+  }
 })
 // console.log(f);
-console.log("程序从上往下执行");
+console.log('程序从上往下执行')

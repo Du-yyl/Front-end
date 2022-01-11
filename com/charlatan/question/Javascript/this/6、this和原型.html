@@ -18,21 +18,21 @@
 
 </body>
 <script>
-	function Father(age) {
+	function Father (age) {
 		this.age = age
 	}
 
-	function Son(age) {
+	function Son (age) {
 		Father.call(this)
 	}
 
 	Son.prototype = Father.prototype
 
 	Father.prototype.getAge = function () {
-		console.log(40);
+		console.log(40)
 	}
 	Son.prototype.getAge = function () {
-		console.log(18);
+		console.log(18)
 	}
 
 	var father = new Father(40)

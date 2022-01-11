@@ -22,11 +22,11 @@
 	var obj = {
 		uname: 'object',
 		fnn: function () {
-			console.log(this.uname);
+			console.log(this.uname)
 			return function () {
-				console.log(this.uname);
+				console.log(this.uname)
 			}
-		}
+		},
 	}
 	obj.fnn()()
 

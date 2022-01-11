@@ -8,7 +8,7 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 let math = require('math')
-console.log(math.add(12, 122));
+console.log(math.add(12, 122))
 /*
 * 在 node 中，引入一个模块，会先在当前目录中的 node——module中寻找，
 *   没有的去上一级寻找，如果有直接用；

@@ -18,31 +18,31 @@
 
 </body>
 <script>
-	function fn(o, val) {
+	function fn (o, val) {
 		o.b = 1
 		val = 1
 	}
 
 	var obj = {
-		b: 0
-	};
-	var num = 0;
+		b: 0,
+	}
+	var num = 0
 	fn(obj, num)
-	console.log(obj.b, num);
+	console.log(obj.b, num)
 
 	/**
 	 * 题解：
-	 * 	function fn(o, val) {
+	 *    function fn(o, val) {
 	 * 		o.b = 1     //这里修改的是o指向的对象，指向的还是OBJ的内存地址，所以可以完成修改
 	 * 		val = 1     //这里进行赋值的是num的字面量，并不是num的内存地址
 	 * 	}
 	 *
-	 * 	var obj = {
+	 *    var obj = {
 	 * 		b: 0
 	 * 	};
-	 * 	var num = 0;
-	 * 	fn(obj, num)
-	 * 	console.log(obj.b, num);
+	 *    var num = 0;
+	 *    fn(obj, num)
+	 *    console.log(obj.b, num);
 	 */
 
 </script>

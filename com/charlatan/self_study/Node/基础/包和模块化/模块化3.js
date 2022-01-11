@@ -27,13 +27,12 @@ module.exports = {
 }
 */
 
-
 exports = {
-	name:"王五",
-	age:10,
-	sayName:function () {
-	    console.log("王五输出");
-	}
+  name: '王五',
+  age: 10,
+  sayName: function () {
+    console.log('王五输出')
+  },
 }
 
 /*

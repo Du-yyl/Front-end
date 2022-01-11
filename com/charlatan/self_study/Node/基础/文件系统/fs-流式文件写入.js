@@ -34,22 +34,21 @@ filehandle.createWriteStream([options])
 	        二者是可以不同步的，因为一些文件在输送的过程中，只要不close，文件还是能继续传递的
 * */
 
-
 let ws = fs.createWriteStream('test.txt')
 // once 是一次性事件，使用一次就废了，和JQ中的one方法一样
 // 使用on绑定的事件是永久的，而once就是一次性的
 ws.once('open', function () {
-	console.log("流打开");
+  console.log('流打开')
 })
 ws.once('close', function () {
-	console.log('流关闭了');
+  console.log('流关闭了')
 })
 // 通过ws进行文件写入
-ws.write("这是通过可写流写入的内容1111")
-ws.write("这是通过可写流写入的内容2222")
-ws.write("这是通过可写流写入的内容3333")
-ws.write("这是通过可写流写入的内容4444")
-ws.write("这是通过可写流写入的内容5555")
-ws.write("这是通过可写流写入的内容6666")
+ws.write('这是通过可写流写入的内容1111')
+ws.write('这是通过可写流写入的内容2222')
+ws.write('这是通过可写流写入的内容3333')
+ws.write('这是通过可写流写入的内容4444')
+ws.write('这是通过可写流写入的内容5555')
+ws.write('这是通过可写流写入的内容6666')
 
 ws.end()

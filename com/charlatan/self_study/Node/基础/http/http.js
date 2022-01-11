@@ -19,11 +19,11 @@ let server = http.createServer()
 
 // 提供数据服务
 // 接收请求
-server.on("request", function (message, response) {
-	console.log("收到请求");
+server.on('request', function (message, response) {
+  console.log('收到请求')
 })
 
 // 绑定端口号
 server.listen(8100, function () {
-	console.log("服务器启动");
+  console.log('服务器启动')
 })

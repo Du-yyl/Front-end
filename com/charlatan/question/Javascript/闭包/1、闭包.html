@@ -20,18 +20,17 @@
 </body>
 <script>
 	<!--	输出结果    -->
-	function Foo() {
+	function Foo () {
 		let i = 0
 		return function () {
-			console.log(i++);
+			console.log(i++)
 		}
 	}
 
-	let f1 = Foo(), f2 = Foo();
+	let f1 = Foo(), f2 = Foo()
 	f1()
 	f1()
 	f2()
-
 
 	/*
 	* 题解：

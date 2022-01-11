@@ -22,17 +22,17 @@
 </pre>
 </body>
 <script>
-	function test() {
-		var n = 4399;
+	function test () {
+		var n = 4399
 
-		function add() {
-			n++;
-			console.log(n);
+		function add () {
+			n++
+			console.log(n)
 			// console.log(this);
 
 		}
 
-		return {n: n, add: add}
+		return { n: n, add: add }
 	}
 
 	var r1 = test()
@@ -41,7 +41,7 @@
 	r1.add()
 	r2.add()
 
-	console.log(r1.n);
+	console.log(r1.n)
 	r2.add()
 
 </script>

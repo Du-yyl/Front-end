@@ -19,10 +19,8 @@
 *
 * */
 
-
 let fs = require('fs')
 // console.log(fs);
-
 
 /*
 	打开文件：
@@ -40,8 +38,8 @@ let fs = require('fs')
 */
 let fd1 = fs.openSync('./file_test/test.txt', 'w')
 let fd2 = fs.openSync('test.txt', 'w')
-console.log(fd1);
-console.log(fd2);
+console.log(fd1)
+console.log(fd2)
 /*
 向文件中写入内容：
 		fs.writeSync(fd, string[, position[, encoding]])
@@ -53,8 +51,8 @@ console.log(fd2);
 		返回: <number> 写入的字节数。
 			如果 string 是普通的对象，则它必须具有自有的（不是继承的）toString 函数属性。
 	*/
-fs.writeSync(fd1, "这是第一个写入测试例子-1")
-fs.writeSync(fd2, "这是第一个写入测试例子-2")
+fs.writeSync(fd1, '这是第一个写入测试例子-1')
+fs.writeSync(fd2, '这是第一个写入测试例子-2')
 
 /*
 文件关闭：

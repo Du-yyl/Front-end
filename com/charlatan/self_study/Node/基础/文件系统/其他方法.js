@@ -15,8 +15,8 @@
 let fs = require('fs')
 let isExist_1 = fs.existsSync('test.txt')
 let isExist_2 = fs.existsSync('test.tst')
-console.log(isExist_1);
-console.log(isExist_2);
+console.log(isExist_1)
+console.log(isExist_2)
 
 /*
 	fs.statSync (path,callback)
@@ -24,11 +24,11 @@ console.log(isExist_2);
 		获取文件状态
 * */
 fs.stat('test.txt', function (err, stats) {
-	if (!err) {
-		console.log(stats);
-	} else {
-		console.log("程序出错");
-	}
+  if (!err) {
+    console.log(stats)
+  } else {
+    console.log('程序出错')
+  }
 })
 
 /*
@@ -45,7 +45,7 @@ fs.stat('test.txt', function (err, stats) {
 		返回的是一个数组，一个元素就是文件夹或文件名
 * */
 
-console.log(fs.readdirSync("file_test"));
+console.log(fs.readdirSync('file_test'))
 
 /*
 	fs.truncate(path,len,callback)
@@ -54,14 +54,12 @@ console.log(fs.readdirSync("file_test"));
  */
 // fs.truncateSync('test.txt', 30)
 
-
 /*建立目录
 – fs.mkdir(path[, mode], callback)
 – fs.mkdirSync(path[, mode])
 
 */
 // fs.mkdirSync('hello')
-
 
 /*其他操作
 • 删除目录
@@ -75,7 +73,6 @@ console.log(fs.readdirSync("file_test"));
 – fs.renameSync(oldPath, newPath)*/
 
 // fs.renameSync('test.txt','tttt.txt')
-
 
 /*
 • 监视文件更改写入
@@ -95,9 +92,8 @@ console.log(fs.readdirSync("file_test"));
 //     console.log("我运行了");
 // })
 
-
 // 这个方法因为是间隔一段进行执行的，有时间隔时间很长，interval可以更改间隔时间
-fs.watchFile('tttt.txt', {interval: 1}, function (stat, end) {
-	console.log("修改前大小：" + stat.size);
-	console.log("修改后大小：" + end.size);
+fs.watchFile('tttt.txt', { interval: 1 }, function (stat, end) {
+  console.log('修改前大小：' + stat.size)
+  console.log('修改后大小：' + end.size)
 })

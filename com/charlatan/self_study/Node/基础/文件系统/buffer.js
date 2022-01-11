@@ -24,21 +24,20 @@
 *
 * */
 
-let str = "Hello World"
-let str1 = "你好，世界"
+let str = 'Hello World'
+let str1 = '你好，世界'
 // 创建buffer
 let bf = Buffer.from(str)
-console.log(str);
-console.log(str.length);
-console.log(bf);
-console.log(bf.length);
+console.log(str)
+console.log(str.length)
+console.log(bf)
+console.log(bf.length)
 
 let bf1 = Buffer.from(str1)
-console.log(str1);
-console.log(str1.length);
-console.log(bf1);
-console.log(bf1.length);
-
+console.log(str1)
+console.log(str1.length)
+console.log(bf1)
+console.log(bf1.length)
 
 /*
 * 创建一个指定大小的buffer
@@ -60,12 +59,12 @@ console.log(bf1.length);
 	*   当需要转换成其他进制时，可以使用toString(指定进制)进行转换
 * */
 
-let bf2 = new Buffer(10);
-console.log(bf2.length);
-console.log(bf2);
+let bf2 = new Buffer(10)
+console.log(bf2.length)
+console.log(bf2)
 
 let bf3 = Buffer.alloc(20)
-console.log(bf3);
+console.log(bf3)
 bf3[0] = 30
 bf3[2] = 50
 bf3[3] = 60
@@ -96,14 +95,13 @@ bf3[21] = 70
 * */
 
 let bf4 = Buffer.allocUnsafe(9999)
-console.log("--" + bf4);
+console.log('--' + bf4)
 
-
-let bf5 = Buffer.from("我是测试的字符串")
-console.log(bf5);
+let bf5 = Buffer.from('我是测试的字符串')
+console.log(bf5)
 
 /*
 * 调用toStirng（）可以将缓冲区中的内容转换为字符串
 * */
-console.log(bf5.toString());
+console.log(bf5.toString())
 

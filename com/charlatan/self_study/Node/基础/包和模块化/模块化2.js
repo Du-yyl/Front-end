@@ -20,7 +20,6 @@ num1 = 200
 // console.log("----------------------");
 // console.log(global.num1);
 
-
 // 验证创建的属性和方法是不是运行在一个函数中的
 // 运行在函数中的特性： 拥有 this ； 拥有arguments
 
@@ -61,9 +60,9 @@ arguments 中有一个属性 —— callee
 *       当前模块的完整路径
 * */
 
-console.log(exports);
-console.log(module.exports);
-console.log(exports === module.exports);
+console.log(exports)
+console.log(module.exports)
+console.log(exports === module.exports)
 // console.log(module);
-console.log(__dirname);
-console.log(__filename);
+console.log(__dirname)
+console.log(__filename)

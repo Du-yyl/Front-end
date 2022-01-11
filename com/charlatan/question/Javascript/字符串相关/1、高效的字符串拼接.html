@@ -28,7 +28,7 @@
 </body>
 <script>
 	let time1 = Date.now()
-	let str = "我是测试"
+	let str = '我是测试'
 	let ce = 10000000
 	let strs = ['我是测试']
 	// 使用 += 进行拼接，时间是 700 毫秒
@@ -39,14 +39,12 @@
 
 	// 使用 push 和 join 进行拼接操作,时间为 400 毫秒左右
 	for (let i = 0, len = ce; i < len; i++) {
-		strs.push("这是测试")
+		strs.push('这是测试')
 	}
-	let str1 = strs.join("")
-
+	let str1 = strs.join('')
 
 	let time2 = Date.now()
-	console.log(str1);
-
+	console.log(str1)
 
 	alert(time2 - time1)
 </script>
