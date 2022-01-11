@@ -1,0 +1,32 @@
+<!--
+  ~ Date:2022/1/10 22:53 58
+  ~ Name:ceshi.html
+  ~ Path:Web代码/src/com/charlatan/homework/1月/10号【周一】
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceshi</title>
+
+</head>
+<body>
+调用一个定时器后，自动进行清除
+</body>
+<script>
+	function autoTime(callback, time) {
+		let timer = null
+		timer = setTimeout(callback, time)
+		console.log("123");
+	}
+
+	autoTime(function () {
+		console.log("go");
+	}, 5000)
+
+</script>
+</html>

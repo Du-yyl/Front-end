@@ -148,28 +148,20 @@
 			<img alt="" class="img i" src="file/load.gif">
 		</li>
 `
+	let time_1 = null
+	let time_2 = null
 	document.onscroll = fd(onscroll, 25)
 
-	function onscroll(event) {
+	function onscroll() {
+
 		let sh = document.documentElement.scrollHeight - document.documentElement.scrollTop
 		let ch = document.documentElement.clientHeight
 
 		if (sh - ch <= 300) {
 			ul.innerHTML += li
-			setTimeout(change, 1000)
+			clearTimeout(time_1)
+			time_1 = setTimeout(change, 600)
 		}
-		setTimeout(change, 10000)
-
-		function change() {
-			let i = document.getElementsByClassName('i')
-			for (let j = 0; j < i.length; j++) {
-				let num = Math.floor(Math.random() * 14) + 1
-				i[j].src = "file/img-" + num + ".jpg"
-				i[j].classList.remove('i')
-			}
-		}
-
-		console.log("123");
 	}
 
 	function fd(callback, time) {
@@ -182,9 +174,22 @@
 				timer = setTimeout(function () {
 					flag = true
 					clearTimeout(timer)
+					// clearTimeout(time_1)
+					// clearTimeout(time_2)
 				}, time)
 			}
 		}
 	}
+
+	function change() {
+		let i = document.getElementsByClassName('i')
+		for (let j = 0; j < i.length; j++) {
+			let num = Math.floor(Math.random() * 14) + 1
+			i[j].src = "file/img-" + num + ".jpg"
+			i[j].classList.remove('i')
+		}
+	}
+
+	setInterval(change, 1000)
 </script>
 </html>
