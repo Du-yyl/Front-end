@@ -28,12 +28,17 @@ server.on('request', function (request, response) {
 	
 	if (request.url === '/plain') {
 		response.setHeader('Content-Type', "text/plain ; charset=utf-8")
-		response.end("我是普通文本1")
+		response.end('我是普通文本1')
 	} else if (request.url === '/html') {
 		response.setHeader('Content-type', 'text/html;charset=utf-8')
 		response.end('<p style="color: #f50b0b;">我是设置为html文本输出的内容</p>')
 	}
 })
 server.listen('8300', function () {
-	console.log("8300端口启动");
+	console.log('8300端口启动')
+	
 })
+let num = [1, 2, 3, 4, 5]
+
+function add (num1, num2) {
+}
