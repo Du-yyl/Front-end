@@ -16,15 +16,31 @@
 </head>
 <body>
 
-<script src="node_modules/art-template/lib/template-web.js"></script>
+<script src="/node_modules/art-template/lib/template-web.js"></script>
 
 <script id="tpl" type="text/x-handlebars-template">
 	hello ,{{ name }}
+	第一个数据：{{ data1 }}
+	第二个数据：{{ data2 }}
+	第三个数据：{{ data3 }}
+	多个数据：{{ each hobbies }} {{ $value }} {{ /each }}
+
+	<!--	{{each}}-->
+	<!--		{{ $value }}-->
+			<!--	{{/each}}-->
+
+	{{each hobbies}}
+	{{$index}} {{$value}}
+	{{/each}}
 </script>
 
 <script>
-	var ret = template ('tpl', {
+	let ret = template ('tpl', {
 		name: 'Jack',
+		data1: '第一个数据',
+		data2: '第二个数据',
+		data3: '第三个数据',
+		hobbies: ['第一个', '第二个', '第三个', '第四个', '第五个', '第六个', '第七个'],
 	});
 
 	console.log (ret);
