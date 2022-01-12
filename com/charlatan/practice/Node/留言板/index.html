@@ -1,0 +1,112 @@
+<!--
+  ~ Date:2022/1/12 15:00 16
+  ~ Name:index.html
+  ~ Path:Web代码/src/com/charlatan/practice/Node/留言板
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 15px "新宋体";
+			text-decoration: none;
+		}
+
+		a:link {
+			color: #b700ff;
+		}
+
+		a:visited {
+			color: #0066ff;
+		}
+
+		a:hover {
+			color: #FF00FF;
+		}
+
+		a:active {
+			color: #ff8800;
+		}
+
+		*::selection {
+			color: #fff99a;
+			background-color: #ff961b;
+		}
+
+		ul:after {
+			content: "";
+			height: 0;
+			clear: both;
+			overflow: hidden;
+			display: block;
+			visibility: hidden;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		label, button {
+			user-select: none;
+			/*pointer-events:none;*/
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#heard {
+			font: 700 50px "新宋体";
+			position: absolute;
+			top: 50px;
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
+
+
+	</style>
+</head>
+<body>
+<h1 id="heard">
+	留言板
+</h1>
+<ul id="ul">
+	<li>
+		<div class="user-pic">
+			<img alt="" class="pic" src="file/user.png">
+		</div>
+		<div class="name-div">
+			名字
+		</div>
+		<div class="time-div">
+			2021年6月12日·13：37
+		</div>
+		<div class="title">
+			文本内容
+		</div>
+		<div class="delete">
+			删除
+		</div>
+		<div class="person">
+			回复
+		</div>
+		<div class="good">
+			点赞
+		</div>
+		<div class="cai">
+			踩
+		</div>
+	</li>
+</ul>
+</body>
+
+</html>
