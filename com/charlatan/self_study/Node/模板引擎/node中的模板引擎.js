@@ -29,3 +29,6 @@ let tools = {
 	name: 'Tom', data1: '数据1', data2: '数据2', data3: '数据3', data: ['我是', '多个', '数据', '的', '展示'],
 };
 
+console.log (template.render ('value:{{ value }}', {
+	value: 123,
+}));
