@@ -1,0 +1,10 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "dependencies": {
+    "underscore": "^1.13.2"
+  },
+  "devDependencies": {
+    "jquery": "^1.12.4"
+  }
+}

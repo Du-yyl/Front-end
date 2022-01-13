@@ -15,7 +15,7 @@ let server = http.createServer()
 server.on('request', function (request, response) {
   if (request.url === '/html') {
     response.setHeader('Content-type', 'text/html ;charset=utf-8')
-    fs.readFile('./test-file/Content-type-test.html', function (err, data) {
+    fs.readFile('./test-file/index.html', function (err, data) {
       if (!err) {
         response.end(data.toString())
       } else {

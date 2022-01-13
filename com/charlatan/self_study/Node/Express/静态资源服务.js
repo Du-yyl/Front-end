@@ -25,7 +25,7 @@ let server = express ();
 
 // 另一种特殊形式
 // 这里的第一个参数并不知指定文件夹的名称，而是别名，访问的时候必须使用 /file/ 进行访问，否则无效
-server.use ('/file/', express.static ('./file-test/'));
+server.use('/file/', express.static('../Express/'))
 
 server.get ('/', function (request, response) {
 	console.log (request.url);

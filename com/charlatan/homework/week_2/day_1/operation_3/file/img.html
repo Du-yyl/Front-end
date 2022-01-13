@@ -12960,7 +12960,9 @@
                     botTag.ot(false); //设置超时标记减1.
                 }
                 //获取所有图片，通过data-base64-id属性获取需要回填的图片
-                var imgs = document.getElementById(_expGroup != 1 ? ((side == "left") ? _containerLeftId : _containerRightId) : _containerAllId).getElementsByTagName("IMG");
+                var img = document.getElementById(
+		                _expGroup != 1 ? ((side == 'left') ? _containerLeftId : _containerRightId) : _containerAllId).
+		                getElementsByTagName('IMG')
                 for (var i = 0; i < imgs.length; i++) {
                     var b64Id = imgs[i].getAttribute("data-b64-id");
                     if (b64Id) {
@@ -13035,7 +13037,7 @@
                 }
                 setTimeout(function () {
                     if (!_dataLoaded["right"]) {
-                        var imgs = document.getElementById(_containerRightId).getElementsByTagName("IMG");
+	                    var img = document.getElementById(_containerRightId).getElementsByTagName('IMG')
                         for (var i = 0; i < imgs.length; i++) {
                             failover(imgs[i]);
                         }
@@ -13045,7 +13047,7 @@
                     }
                     setTimeout(function () {
                         if (_hasSpImg && !_dataLoaded["left"]) {
-                            var imgs = document.getElementById(_containerLeftId).getElementsByTagName("IMG");
+	                        var img = document.getElementById(_containerLeftId).getElementsByTagName('IMG')
                             for (var i = 0; i < imgs.length; i++) {
                                 failover(imgs[i]);
                             }
