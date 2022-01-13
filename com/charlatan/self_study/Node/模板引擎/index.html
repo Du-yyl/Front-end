@@ -1,0 +1,38 @@
+<!--
+  ~ Date:2022/1/13 12:20 48
+  ~ Name:index.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Node/模板引擎
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+
+</head>
+<body>
+
+<div id="content">
+	<script type="text/html" id="tpl">
+		{{if user}}
+		<h2>名字为：{{user.name}}</h2>
+		<p>年龄为：{{user.age}}岁</p>
+		{{/if}}
+
+		{{if user}}
+		<h2>名字为：{{user.name}}</h2>
+		<p>年龄为：{{user.age}}岁</p>
+		{{else if person}}
+		<h2>名字是：{{ person.name }}</h2>
+		<h2>年龄是：{{ person.age }}</h2>
+		{{/if}}
+	</script>
+</div>
+
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 /**
  * Date:2022/1/12 23:25 25
- * Name:srt-template模板引擎-2.js
+ * Name:art-template模板引擎-2.js
  * Path:Web代码/src/com/charlatan/self_study/Node/模板引擎
  * ProjectName:WWW
  * Author:charlatan
