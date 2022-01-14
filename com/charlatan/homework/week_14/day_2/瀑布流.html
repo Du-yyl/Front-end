@@ -68,25 +68,22 @@
 			position: absolute;
 			right: 0;
 			left: 0;
-			background-color: red;
+			background-color: #00ff9d;
 			margin: auto;
 		}
 
-		#box-ul {
-			width: 100%;
-			/* position: relative; */
-			top: 0;
-			left: 0;
-			/* column-count: 5; */
-			/* column-gap: 10px; */
-
+		#bigBox:after {
+			display: none;
+			clear: both;
+			content: '';
+			visibility: hidden;
 		}
 
-		#box-ul > li {
-			position: relative;
-			margin: 0 20px 20px 20px;
+		#bigBox > div {
+			width: 250px;
 			float: left;
-			width: 236px;
+			margin: 15px;
+			position: relative;
 		}
 
 
@@ -94,85 +91,38 @@
 </head>
 <body>
 <div id="bigBox">
-	<ul id="box-ul">
-
-	</ul>
+	<div class="in" id="in1"></div>
+	<div class="in" id="in2"></div>
+	<div class="in" id="in3"></div>
+	<div class="in" id="in4"></div>
+	<div class="in" id="in5"></div>
 </div>
 </body>
 <script src="tool/homework.js" type="text/javascript"></script>
+
 <script>
-	let ul = document.getElementById('box-ul')
-	data.forEach(function (item, index, slef) {
-		let li = document.createElement('li')
-		let img = document.createElement("img")
+	let div = document.getElementById('bigBox')
+	let ins = document.getElementsByClassName('in')
 
-		img.src = item.img_url
-		img.title = item.title
+	for (let datum of data) {
+		let sample = ins[0].offsetHeight
+		let pl = ins[0]
 
-		li.appendChild(img)
-		ul.appendChild(li)
-	})
+		let img_self = datum.img_url.split('?')[1].split('x')
+		let width = 250
+		let height = width * img_self[1] / img_self[0]
 
-
-	// function waterFall() {
-	// 	// 1 确定图片的宽度 - 滚动条宽度
-	// 	var pageWidth = getClient().width - 8;
-	// 	var columns = 3; //3列
-	// 	var itemWidth = parseInt(pageWidth / columns); //得到item的宽度
-	// 	$(".item").width(itemWidth); //设置到item的宽度
-	// 	var arr = [];
-	// 	$(".box .item").each(function (i) {
-	// 		var height = $(this).find("img").height();
-	// 		if (i < columns) {
-	// 			// 2 第一行按序布局
-	// 			$(this).css({
-	// 				top: 0,
-	// 				left: (itemWidth) * i + 20 * i,
-	// 			});
-	// 			//将行高push到数组
-	// 			arr.push(height);
-	// 		} else {
-	// 			// 其他行
-	// 			// 3 找到数组中最小高度 和 它的索引
-	// 			var minHeight = arr[0];
-	// 			var index = 0;
-	// 			for (var j = 0; j < arr.length; j++) {
-	// 				if (minHeight > arr[j]) {
-	// 					minHeight = arr[j];
-	// 					index = j;
-	// 				}
-	// 			}
-	// 			// 4 设置下一行的第一个盒子位置
-	// 			// top值就是最小列的高度
-	// 			$(this).css({
-	// 				top: arr[index] + 30,//设置30的距离
-	// 				left: $(".box .item").eq(index).css("left")
-	// 			});
-	//
-	// 			// 5 修改最小列的高度
-	// 			// 最小列的高度 = 当前自己的高度 + 拼接过来的高度
-	// 			arr[index] = arr[index] + height + 30;//设置30的距离
-	// 		}
-	// 	});
-	// }
-	//
-	// //clientWidth 处理兼容性
-	// function getClient() {
-	// 	return {
-	// 		width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-	// 		height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-	// 	}
-	// }
-	//
-	// // 页面尺寸改变时实时触发
-	// window.onresize = function () {
-	// 	//重新定义瀑布流
-	// 	waterFall();
-	// };
-	// //初始化
-	// window.onload = function () {
-	// 	//实现瀑布流
-	// 	waterFall();
-	// }
+		let img = document.createElement('img')
+		img.src = datum.img_url
+		img.title = datum.title
+		img.style.width = '250px'
+		img.style.height = height + 'px'
+		for (let in1 of ins) {
+			pl = sample > in1.offsetHeight ? in1 : pl
+		}
+		pl.appendChild(img)
+	}
 </script>
 </html>
+
+
