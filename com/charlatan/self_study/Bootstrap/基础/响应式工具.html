@@ -1,6 +1,6 @@
 <!--
-  ~ Date:2021/12/29 14:38 40
-  ~ Name:2、固定容器.html
+  ~ Time:2022/1/16 21:46 51
+  ~ Name:响应式工具.html
   ~ Path:Web代码/src/com/charlatan/self_study/Bootstrap/基础
   ~ ProjectName:WWW
   ~ Author:charlatan
@@ -11,14 +11,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>固定容器</title>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+	<title>响应式工具</title>
 	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
 	<style>
 		* {
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			font-size: 15px;
+			font: 500 15px YouYuan;
 			text-decoration: none;
 		}
 
@@ -30,20 +33,29 @@
 		/*-------以上为默认设置（The above is the default setting）--------*/
 
 		.container {
-			background-color: red;
+			background-color: #c8e5bc;
 		}
+
 
 	</style>
 </head>
 <body>
-<div class="container">
-	固定容器
-	阈值 width
-	大于等于1200 1170 【lg 大屏pc】
-	大于等于992 970 【md 中屏pc】 970 + 槽宽（30px，文字和边框之间的距离
-	大于等于768 750 【sm 平板】 720 + 槽宽
-	小于768 auto 【xs 移动手机】
+<div class="container visible-xs">
+	<h1>
+		你好，世界！
+	</h1>
 </div>
+<hr>
+<pre>
+	.visible-xs,
+	.visible-sm,
+	.visible-md,
+	.visible-lg
+	这几个属性的class添加后只会在指定的屏幕大小下进行显示，其他条件不显示
+
+	.hidden-xx
+	在指定的条件下隐藏
+</pre>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.js"></script>
