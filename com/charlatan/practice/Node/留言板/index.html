@@ -1,23 +1,27 @@
 <!--
-  ~ Date:2022/1/12 15:00 16
+  ~ Time:2022/1/21 13:18 05
   ~ Name:index.html
-  ~ Path:Web代码/src/com/charlatan/practice/Node/留言板
-  ~ ProjectName:WWW
+  ~ Path:留言板
+  ~ ProjectName:Node
   ~ Author:charlatan
   ~
   ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
   -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="div" xmlns="">
 <head>
 	<meta charset="UTF-8">
-	<title>index</title>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>my</title>
+	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
 	<style>
 		* {
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			font: 500 15px "新宋体";
+			font: 500 1vw/1.3em YouYuan;
+			/* 字体选择： STKaiti fangsong STCaiyun FZShuTi */
 			text-decoration: none;
 		}
 
@@ -42,6 +46,14 @@
 			background-color: #ff961b;
 		}
 
+		*::placeholder {
+			font: 500 .5rem YouYuan;
+		}
+
+		*::placeholder {
+			cursor: pointer;
+		}
+
 		ul:after {
 			content: "";
 			height: 0;
@@ -54,6 +66,7 @@
 		li {
 			cursor: pointer;
 			position: relative;
+			list-style: none;
 		}
 
 		label, button {
@@ -61,52 +74,372 @@
 			/*pointer-events:none;*/
 		}
 
+		input {
+			padding: .1rem 0 .1rem .1rem;
+			font: 500 .8rem YouYuan;
+		}
+
+		button {
+			cursor: pointer;
+		}
+
 		/*-------以上为默认设置（The above is the default setting）--------*/
 
+		/*  导航条  */
 		#heard {
-			font: 700 50px "新宋体";
-			position: absolute;
-			top: 50px;
-			left: 0;
-			right: 0;
-			text-align: center;
+			width: 100%;
+			height: 5rem;
+			background: #ffffff;
+			position: sticky;
+			top: 0;
+			padding: 0 10rem 0 10rem;
+			font: 15px "";
+			border-bottom: 2px solid red;
 		}
 
 
+		/* ---------left---------------- */
+		.heard-nav-left {
+			position: relative;
+			font: 1.4em/5rem "";
+			top: 0;
+		}
+
+		/* ---------center----------------- */
+		.heard-nav-center {
+			position: absolute;
+			top: 0;
+			left: 30%;
+			background-color: #ffffff;
+			height: 5rem;
+			width: 55rem;
+		}
+
+		#heard-nav-center-ul {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.heard-nav-center-ul-li {
+			background: #ffffff;
+			height: 5rem;
+			position: relative;
+			z-index: 1;
+			width: 9rem;
+			display: flex;
+			padding-top: 1.4rem;
+			justify-content: center;
+			transition: color .5s ease-in-out;
+		}
+
+		.heard-nav-center-ul-li:hover {
+			color: red;
+		}
+
+		.heard-nav-center-li-img-div {
+			display: inline-block;
+			background: url("file/piaoliuping.png") no-repeat 0;
+			background-size: 2rem;
+			width: 2rem;
+			height: 2rem;
+			position: relative;
+		}
+
+		.heard-nav-right-search-switch {
+			width: 9rem;
+			height: 3px;
+			background-color: #cff599;
+			position: absolute;
+			bottom: -4px;
+			border-radius: 50px 50px 50px 50px;
+			box-shadow: 0 0 2px 2px #91e884;
+			z-index: 2;
+			left: .3rem;
+			transition: all .4s cubic-bezier(0, .4, .6, 1.2);
+		}
+
+		/* -------right------------ */
+		#heard-nav-right {
+			position: absolute;
+			right: 20vw;
+			top: 0;
+			height: 5rem;
+			background: #c8f3e3;
+		}
+
+		#heard-nav-right-search-img-div {
+			width: 3.5rem;
+			height: 3.5rem;
+			background-color: #dadec1;
+			border: 0 solid #abea8d;
+			border-radius: 50%;
+			box-sizing: border-box;
+			transition: all .3s ease-in-out;
+			margin-top: .5rem;
+			cursor: pointer;
+			z-index: 5;
+		}
+
+		#heard-nav-right-search-img-div:hover {
+			border: 1.75rem solid #e34a4a;
+		}
+
+		.heard-nav-right-search-img {
+			width: 2rem;
+			position: absolute;
+			top: 1.3rem;
+			left: .6rem;
+			z-index: 5;
+			transition: all .5s ease-in-out;
+		}
+
+		/* 搜索框下拉 */
+		.heard-nav-right-input-div {
+			width: 100%;
+			height: 5.6rem;
+			background: #c73232;
+			position: absolute;
+			top: -5.6rem;
+			left: 0;
+			z-index: 3;
+			transition: all .2s ease-in-out;
+		}
+
+		.heard-nav-right-search-img-input-show {
+			top: 1.5rem;
+			width: 2.7rem;
+			left: -13rem;
+		}
+
+		.heard-nav-right-search {
+			width: 70rem;
+			height: 4rem;
+			position: absolute;
+			top: .8rem;
+			left: 25%;
+			padding-left: 1rem;
+			font: 1.5rem "";
+			border: none;
+			outline: none;
+			background-color: #c73232;
+			color: white;
+		}
+
+		.heard-nav-right-search::placeholder {
+			padding-left: .2rem;
+			color: white;
+			font: 1.5rem "";
+		}
+
+		.heard-nav-right-input-cancel {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: .5rem;
+			right: 35rem;
+		}
+
+		.heard-nav-right-input-cancel-1 {
+			width: 30px;
+			height: 5px;
+			background-color: #9cd7ad;
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: auto;
+			top: 20px;
+			border-radius: 50px 50px 50px 50px;
+			transform: rotate(45deg);
+		}
+
+		.heard-nav-right-input-cancel-2 {
+			width: 30px;
+			height: 5px;
+			border-radius: 50px 50px 50px 50px;
+			background-color: #9cd7ad;
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: auto;
+			transform: rotate(-45deg);
+			top: 20px;
+		}
+
+		/* 	下拉提示内容 */
+		.heard-nav-right-input-hint {
+			width: 80rem;
+			background-color: #9cd7ad;
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 5.6rem;
+			margin: auto;
+			/* 旋转轴 */
+			transform-origin: top;
+			transform: perspective(10rem) rotateX(270deg);
+			transition: all .4s .3s;
+			border-radius: 0 0 10px 10px;
+		}
+
+		.heard-nav-right-input-hint-switch {
+			transform: perspective(20rem) rotateX(360deg);
+			background-color: #0066ff;
+		}
+
+		#heard-nav-right-input-hint-ul {
+			margin-top: 2rem;
+		}
+
+		#heard-nav-right-input-hint-ul > li {
+			font: 1.8rem/3.6rem "";
+			padding-left: 5rem;
+		}
+
+		#heard-nav-right-input-hint-ul > li:hover {
+			background-color: burlywood;
+		}
 	</style>
 </head>
 <body>
-<h1 id="heard">
-	留言板
-</h1>
-<ul id="ul">
-	<li>
-		<div class="user-pic">
-			<img alt="" class="pic" src="file/user.png">
-		</div>
-		<div class="name-div">
-			名字
-		</div>
-		<div class="time-div">
-			2021年6月12日·13：37
-		</div>
-		<div class="title">
-			文本内容
-		</div>
-		<div class="delete">
-			删除
-		</div>
-		<div class="person">
-			回复
-		</div>
-		<div class="good">
-			点赞
-		</div>
-		<div class="cai">
-			踩
-		</div>
-	</li>
-</ul>
-</body>
+<!--    导航条-->
+<div id="heard">
+	<nav id="heard-nav">
 
+		<div class="heard-nav-left">
+			err space
+		</div>
+
+		<div class="heard-nav-center">
+			<div class="heard-nav-right-search-switch" id="heard-nav-right-search-switch"></div>
+			<ul id="heard-nav-center-ul">
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-1"></div>
+					留言板
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-2"></div>
+					漂流瓶
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-3"></div>
+					记录
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-4"></div>
+					广场
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-5"></div>
+					我的
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-6"></div>
+					关于
+				</li>
+			</ul>
+		</div>
+
+		<div id="heard-nav-right">
+			<div id="heard-nav-right-search-img-div">
+				<img alt="搜索" class="heard-nav-right-search-img" id="heard-nav-right-search-img"
+				     src="file/-fangdajing.png">
+			</div>
+		</div>
+
+		<div class="heard-nav-right-input-div">
+			<label for="heard-nav-right-search">
+				<input class="heard-nav-right-search" id="heard-nav-right-search" placeholder="搜索..." type="search">
+			</label>
+			<div class="heard-nav-right-input-cancel">
+				<div class="heard-nav-right-input-cancel-1"></div>
+				<div class="heard-nav-right-input-cancel-2"></div>
+			</div>
+			<div class="heard-nav-right-input-hint">
+				<ul id="heard-nav-right-input-hint-ul">
+					<li>第一条提示</li>
+					<li>第二条提示</li>
+					<li>第三条提示</li>
+					<li>第四条提示</li>
+					<li>第五条提示</li>
+					<li>第五条提示</li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.js"></script>
+<script>
+	window.onload = function () {
+		/* 导航条 */
+		let heard_index = 0
+		let heard_lis = $(`.heard-nav-center-ul-li`)
+		let heard_switch_div = $(`#heard-nav-right-search-switch`)
+		// 滑块的切换
+		heard_lis.hover(function () {
+			heard_switch_div.css({
+				left: $(this).position().left,
+			})
+		}, function () {
+			heard_switch_div.css({
+				left: $(heard_lis[heard_index]).position().left,
+			})
+		})
+
+		let heard_right_search = $(`#heard-nav-right`)
+		let heard_right_img = $(`#heard-nav-right-search-img`)
+		let heard_right_input = $(`.heard-nav-right-input-div:eq(0)`)
+		let heard_right_hint = $(`.heard-nav-right-input-hint:eq(0)`)
+		let heard_search = $(`#heard-nav-right-search`)
+
+		let heard_right_cancel = $(`.heard-nav-right-input-cancel:eq(0)`)
+
+		let right_flag_1 = true
+		let right_flag_2 = true
+
+		// 当点击搜索时的状态
+		heard_right_search.click(function () {
+			heard_right_img.addClass('heard-nav-right-search-img-input-show')
+			heard_right_input.css({
+				top: 0,
+			})
+			heard_right_hint.addClass('heard-nav-right-input-hint-switch')
+			$(heard_search).focus()
+		})
+		// 取消搜索时的状态
+		heard_right_cancel.click(heard_input_blur)
+
+		function heard_input_blur () {
+			heard_right_img.removeClass('heard-nav-right-search-img-input-show')
+			heard_right_input.css({
+				top: '-5.6rem',
+			})
+			heard_right_hint.css({
+				display: 'none',
+			})
+			setTimeout(function () {
+				heard_right_hint.css({
+					display: 'block',
+				})
+			}, 500)
+			heard_right_hint.removeClass('heard-nav-right-input-hint-switch')
+		}
+
+		// 点击区域的判断
+		heard_right_input.click(function () {
+			document.onclick = null
+			setTimeout(function () {
+				document.onclick = heard_input_blur
+			}, 90)
+		})
+
+		document.onclick = heard_input_blur
+
+	}
+</script>
 </html>
