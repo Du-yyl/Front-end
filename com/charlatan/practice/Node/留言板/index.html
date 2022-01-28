@@ -95,8 +95,8 @@
 			padding: 0 10rem 0 10rem;
 			font: 15px "";
 			border-bottom: 2px solid red;
+			z-index: 10;
 		}
-
 
 		/* ---------left---------------- */
 		.heard-nav-left {
@@ -116,22 +116,25 @@
 		}
 
 		#heard-nav-center-ul {
+			z-index: 1;
 			display: flex;
 			flex-wrap: nowrap;
 			justify-content: space-around;
 			align-items: center;
+			position: relative;
 		}
 
 		.heard-nav-center-ul-li {
 			background: #ffffff;
 			height: 5rem;
 			position: relative;
-			z-index: 1;
+			/* z-index: 1; */
 			width: 9rem;
 			display: flex;
 			padding-top: 1.4rem;
 			justify-content: center;
 			transition: color .5s ease-in-out;
+			z-index: 10;
 		}
 
 		.heard-nav-center-ul-li:hover {
@@ -269,6 +272,7 @@
 
 		/* 	下拉提示内容 */
 		.heard-nav-right-input-hint {
+			z-index: 10;
 			width: 80rem;
 			background-color: #9cd7ad;
 			position: absolute;
@@ -290,11 +294,15 @@
 
 		#heard-nav-right-input-hint-ul {
 			margin-top: 2rem;
+			z-index: 10;
+			position: relative;
 		}
 
 		#heard-nav-right-input-hint-ul > li {
 			font: 1.8rem/3.6rem "";
 			padding-left: 5rem;
+			z-index: 10;
+			position: relative;
 		}
 
 		#heard-nav-right-input-hint-ul > li:hover {
@@ -304,6 +312,456 @@
 		.heard-nav-right-input-hint-ul-li-foc {
 			background-color: #c8e5bc;
 			border-bottom: 1px solid palegreen;
+		}
+
+		/* 导航条下的文字 */
+		#heard-top {
+			width: 90vw;
+			height: 40rem;
+			background-color: #c8e5bc;
+			position: relative;
+			left: calc(50% - 45vw);
+			z-index: 0;
+			display: flex;
+			border-radius: 10px;
+			top: 10px;
+		}
+
+		.heard-top-main {
+			position: relative;
+			top: 20rem;
+		}
+
+		/* 发送评论 */
+		#body-form {
+			width: 90vw;
+			height: 30rem;
+			background-color: #d5fdaa;
+			position: relative;
+			left: calc(50% - 45vw);
+			border-radius: 10px;
+		}
+
+		.body-form-title {
+			font: 3rem "";
+		}
+
+
+		.body-form-input {
+			width: 70vw;
+			position: relative;
+			left: 10rem;
+			top: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			height: 10rem;
+			padding: 1rem;
+			background-color: #f3f3f3;
+			resize: none;
+
+			overflow-y: auto;
+			overflow-x: hidden;
+			border: 1px solid #cbbb1e;
+			outline: none;
+			border-radius: 5px;
+		}
+
+		.body-form-input:focus {
+			border: 1px solid #646464;
+			box-shadow: 0 0 3px 3px #c8e5bc;
+		}
+
+		.body-form-input::placeholder {
+			font: 1.3rem "";
+		}
+
+		/* 滚动条样式 */
+		.body-form-input::-webkit-scrollbar {
+			width: 9px;
+		}
+
+		.body-form-input::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-color: #c76666;
+		}
+
+		/* emoji */
+
+		.body-form-emoji {
+			position: relative;
+			left: 10rem;
+			top: 2rem;
+			width: 6rem;
+			cursor: pointer;
+			border: 1px solid red;
+			text-align: center;
+			height: 3rem;
+			line-height: 3rem;
+			border-radius: 3px;
+			transition: all .5s;
+			background-color: #f3f3f3;
+		}
+
+		.body-form-emoji:hover {
+			color: black;
+			background-color: #e8e8e8;
+
+		}
+
+
+		.body-form-emoji-ul {
+			width: 30rem;
+			height: 0;
+			background-color: #ffffff;
+			position: absolute;
+			top: -3rem;
+			left: 4rem;
+			display: flex;
+			justify-content: left;
+			flex-wrap: wrap;
+			border-radius: 5px;
+			overflow: hidden;
+			transition: all .7s;
+		}
+
+		.body-form-emoji-ul-switch {
+			width: 30rem;
+			height: 20rem;
+			background-color: #ffffff;
+			position: absolute;
+			top: -3rem;
+			left: 4rem;
+			display: flex;
+			justify-content: left;
+			flex-wrap: wrap;
+			overflow-y: scroll;
+			border: 1px solid grey;
+			border-radius: 5px;
+			padding: .9rem;
+		}
+
+		.body-form-emoji-lis {
+			user-select: none;
+			width: 37px;
+			margin: .4rem;
+		}
+
+		#body-form-emoji-ul::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		#body-form-emoji-ul::-webkit-scrollbar-track {
+			padding: 10px;
+		}
+
+		#body-form-emoji-ul::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-color: #c76666;
+		}
+
+
+		.body-form-emoji-lis-gif {
+			width: 100%;
+		}
+
+
+		/* 填写信息 */
+		.body-form-i {
+			position: relative;
+			left: 18rem;
+			text-align: center;
+			height: 3rem;
+			line-height: 3rem;
+			width: 10rem;
+			border: 1px solid #c8e5bc;
+			border-radius: 4px;
+			background-color: #ece8e3;
+			cursor: pointer;
+			top: -1rem;
+			user-select: none;
+		}
+
+		.body-form-i-body {
+
+			width: 21rem;
+			height: 0;
+			background-color: #c8e5bc;
+			position: absolute;
+			padding: 0;
+			top: 9rem;
+			left: 15rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			border: none;
+			border-radius: 4px;
+			overflow: hidden;
+			transition: all .4s ease-in-out;
+		}
+
+		.body-form-i-body-switch {
+			width: 21rem;
+			height: 8rem;
+			background-color: #c8e5bc;
+			position: absolute;
+			padding: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #8a8a8a;
+			border-radius: 4px;
+		}
+
+		.body-form-i-body-name {
+			outline: none;
+			border: 1px solid #c8e5bc;
+			border-radius: 2px;
+			padding-left: .5rem;
+		}
+
+		.body-form-i-body-name:focus {
+			border: 1px solid #ffcb05;
+		}
+
+		.body-form-i-body-email {
+			outline: none;
+			border: 1px solid #c8e5bc;
+			border-radius: 2px;
+			padding-left: .5rem;
+		}
+
+		.body-form-i-body-email:focus {
+			border: 1px solid #ffcb05;
+		}
+
+		/* 是否匿名 */
+		.body-form-anonymous {
+			position: relative;
+			top: -4rem;
+			height: 3rem;
+			left: 30rem;
+			width: 12rem;
+			line-height: 3rem;
+			background-color: white;
+			user-select: none;
+			cursor: pointer;
+		}
+
+		.body-form-anonymous-1 {
+			width: 3.3rem;
+			height: 1.3rem;
+			background-color: #e0de63;
+			position: absolute;
+			top: .85rem;
+			right: 1rem;
+			border-radius: 50px 50px 50px 50px;
+			transform: rotate(-20deg);
+			/* transform: rotate(20deg); */
+			display: flex;
+			transition: background-color .9s ease, transform .9s .3s ease;
+		}
+
+		.body-form-anonymous-1-switch {
+			transform: rotate(20deg);
+			background-color: #84f580;
+		}
+
+		.body-form-anonymous-2 {
+			height: 1.3rem;
+			position: relative;
+			width: 1.6rem;
+			background-color: #3cce7c;
+			border-radius: 50px 50px 50px 50px;
+			top: 0;
+			left: 0;
+			transition: width .9s ease;
+		}
+
+		.body-form-anonymous-2-switch {
+			width: 3.3rem;
+
+		}
+
+		.body-form-anonymous-3 {
+			width: 1.6rem;
+			height: 1.6rem;
+			background-color: #e86d20;
+			position: absolute;
+			top: -.1rem;
+			border-radius: 50%;
+			right: 0;
+			border: 1px solid #bce8f1;
+			transition: background-color .9s ease;
+		}
+
+		.body-form-anonymous-3-switch {
+			background-color: #47b634;
+		}
+
+
+		/* 提交 */
+		.body-form-submit {
+			position: relative;
+			top: -8.5rem;
+			left: 106rem;
+			width: 8rem;
+			height: 3rem;
+			text-align: center;
+			line-height: 3rem;
+			background-color: #ffbb62;
+			border-radius: 5px;
+			border: 1px solid #4cbd37;
+			cursor: pointer;
+			user-select: none;
+		}
+
+
+		/* 评论内容 */
+		#body-body {
+			width: 94vw;
+			background-color: #ffbb62;
+			position: relative;
+			border-radius: 10px;
+			left: calc(50% - 47vw);
+			padding-left: 10vw;
+		}
+
+		#body-body-ul {
+			overflow: hidden;
+			transition: all .6s ease-in-out;
+
+		}
+
+		.title-lis {
+			width: 70vw;
+			background-color: #ffffff;
+			margin: 10px;
+			cursor: inherit;
+			border-radius: 5px;
+			padding: 0 0 4rem 0;
+			overflow: hidden;
+			left: 0;
+			transition: all .5s ease-in-out;
+			top: 0;
+			position: relative;
+		}
+
+		.title-lis-hidden {
+			height: 0 !important;
+			padding: 0;
+			/* margin-bottom: -0rem; */
+			/* top: -20rem; */
+		}
+
+
+		.body-lis-name {
+			position: relative;
+			background: #ffffff;
+			text-align: center;
+			line-height: 3rem;
+			cursor: pointer;
+			letter-spacing: .5rem;
+			transition: left .4s, right .4s, bottom .8s, opacity .4s .1s;
+			left: 2rem;
+			opacity: 1;
+		}
+
+		.body-lis-name-hidden {
+			opacity: 0;
+			left: -15rem;
+		}
+
+		.body-lis-name::after {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: .5rem;
+			background: #c7c9d2;
+			display: block;
+			border-radius: 3px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			top: 2rem;
+			transition: width .7s, transform .3s .3s;
+			transform: translateX(0);
+			cursor: pointer;
+		}
+
+		.title-lis:hover .body-lis-name::after {
+			transform: translateX(-10%);
+			width: 120%;
+		}
+
+		.body-lis-time {
+			font: 200 1.2rem "";
+			position: absolute;
+			display: flex;
+			flex-wrap: nowrap;
+			width: 13rem;
+			justify-content: center;
+			align-items: center;
+			top: 1rem;
+			transition: left .4s, right .4s, bottom .8s, opacity .4s .1s;
+			right: 1rem;
+			background: white;
+			opacity: 1;
+		}
+
+		.body-lis-time-hidden {
+			opacity: 0;
+			right: -14rem;
+		}
+
+
+		.body-lis-main-top {
+			width: 100%;
+			height: 1px;
+			background: #bdbdbd;
+			position: relative;
+			display: flex;
+			top: .5rem;
+		}
+
+		.body-lis-title {
+			text-indent: 3rem;
+			font: 2rem "STKaiti";
+			width: 100rem;
+			/* width: 95rem; */
+			height: auto;
+			background: #efefef;
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			line-height: 3rem;
+			left: 2.5rem;
+			border-radius: 10px;
+			user-select: none;
+			bottom: -2rem;
+			transition: left .4s, right .4s, bottom .8s, opacity .4s .1s;
+			opacity: 1;
+		}
+
+		.body-lis-title-hidden {
+			opacity: 0;
+			/* bottom: -2rem; */
+			bottom: -20rem;
+		}
+
+		.body-lis-set {
+			position: absolute;
+			top: 60%;
+			left: 100rem;
+			width: 2rem;
+			height: 2rem;
+			background-color: #987878;
+			cursor: pointer;
+		}
+
+		.body-lis-set-2 {
+			top: 50%;
 		}
 
 		@media (min-width: 1200px) {
@@ -320,6 +778,19 @@
 				height: 5rem;
 				width: 55rem;
 			}
+
+			.heard-nav-center-ul-li {
+				background: #ffffff;
+				height: 5rem;
+				position: relative;
+				z-index: 1;
+				width: 9rem;
+				display: flex;
+				padding-top: 1.4rem;
+				justify-content: center;
+				transition: color .5s ease-in-out;
+			}
+
 
 			/* 搜索图片位置 */
 			.heard-nav-right-search-img-input-show {
@@ -396,11 +867,15 @@
 
 			#heard-nav-right-input-hint-ul {
 				margin-top: 2rem;
+				z-index: 10;
+				position: relative;
 			}
 
 			#heard-nav-right-input-hint-ul > li {
 				font: 1.5rem/3rem "";
 				padding-left: 5rem;
+				z-index: 10;
+				position: relative;
 			}
 
 			#heard-nav-right-input-hint-ul > li:hover {
@@ -545,10 +1020,14 @@
 
 			#heard-nav-right-input-hint-ul {
 				margin-top: 2rem;
+				z-index: 10;
+				position: relative;
 			}
 
 			#heard-nav-right-input-hint-ul > li {
 				font: 1.3rem/2.6rem "";
+				z-index: 10;
+				position: relative;
 				padding-left: 5rem;
 			}
 
@@ -684,6 +1163,7 @@
 				background-color: #6790c5;
 				width: 100%;
 				height: 0;
+				border-radius: 0 0 10px 10px;
 			}
 
 			#heard-nav-center-ul {
@@ -726,6 +1206,82 @@
 				position: relative;
 			}
 
+			.heard-nav-right-input-div {
+				width: 100%;
+				height: 5.6rem;
+				background: #c73232;
+				position: absolute;
+				top: -5.6rem;
+				left: 0;
+				z-index: 3;
+				transition: all .2s ease-in-out;
+			}
+
+			.heard-nav-right-search-img-input-show {
+				top: 1.5rem;
+				width: 2.2rem;
+				left: 15vw;
+			}
+
+			/* 	center-search */
+			.heard-nav-right-search {
+				width: 50vw;
+				height: 3rem;
+				position: absolute;
+				top: 1rem;
+				left: 15%;
+				padding-left: 1rem;
+				font: 1.2rem "";
+				border: none;
+				outline: none;
+				background-color: #6ec732;
+				color: white;
+			}
+
+			.heard-nav-right-search::placeholder {
+				padding-left: .2rem;
+				color: white;
+				font: 1.1rem "";
+			}
+
+
+			/* 	下拉提示内容 */
+			.heard-nav-right-input-hint {
+				z-index: 10;
+				width: auto;
+				background-color: #9cd7ad;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 5.6rem;
+				margin: auto;
+				/* 旋转轴 */
+				transform-origin: top;
+				transform: perspective(10rem) rotateX(270deg);
+				transition: all .4s .3s;
+				border-radius: 0 0 10px 10px;
+			}
+
+			.heard-nav-right-input-hint-switch {
+				transform: perspective(20rem) rotateX(360deg);
+				background-color: #0066ff;
+			}
+
+			#heard-nav-right-input-hint-ul {
+				z-index: 10;
+				margin-top: 2rem;
+				position: relative;
+			}
+
+			#heard-nav-right-input-hint-ul > li {
+				z-index: 10;
+				font: 1.2rem/2.4rem "";
+				padding-left: 5rem;
+			}
+
+			#heard-nav-right-input-hint-ul > li:hover {
+				background-color: burlywood;
+			}
 		}
 
 	</style>
@@ -761,7 +1317,7 @@
 				</li>
 				<li class="heard-nav-center-ul-li">
 					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-4"></div>
-					广场
+					emo
 				</li>
 				<li class="heard-nav-center-ul-li">
 					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-5"></div>
@@ -802,12 +1358,331 @@
 			</div>
 		</div>
 
-
 	</nav>
+</div>
+<!--    导航条下的图片-->
+<div id="heard-top">
+	<h1 class="heard-top-title">
+		留言板
+	</h1>
+	<span class="heard-top-main">
+		这里包含了所有参观者或用户的一些留言，您也可以在这里发布自己的观点，我们保留您匿名的权力，不过在匿名状态下，您的用词和语句会被严格限制，望您谅解
+	</span>
+	<span class="heard-top-main-title">
+
+	</span>
+</div>
+<hr>
+<!--    发送评论-->
+<div id="body-form">
+	<div class="body-form-title">
+		发送评论
+	</div>
+	<label for="body-form-test"></label>
+	<textarea class="body-form-input" cols="30" id="body-form-test" name="heard-form-text" placeholder=" 输入你的评论"
+	          rows="10"></textarea>
+	<div class="body-form-emoji">
+		表情
+	</div>
+	<!--			Emoji表情 -->
+	<ul class="body-form-emoji-ul " id="body-form-emoji-ul">
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/abash.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/aini.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/alpaca.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/anger.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/aoman.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/baiyan.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/basketball.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/beer.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/bishi.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/bizui.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/cahan.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/chew.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/chrysanthemum.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/ciya.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/coldSweat.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Congratulations.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/cute.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/dabing.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/daku.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Dear.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/decline.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/deyi.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/doge.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/egg.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fadai.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fan.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fanu.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fendou.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fist.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fun.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/funny.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/ganga.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/ghost.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/greedy.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Great.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/guzhang.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/haixiu.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/hanxiao.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Heart.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/hug.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/knife.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/knock.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/ku.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Lollipop.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Naughty.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/nosePicking.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/OK.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/panic.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/pistol.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/pitful.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/provocative.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/qiudale.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/sad.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/scissorHand.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/shakeHands.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Skeleton.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/sleep.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Sleepy.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Smile.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/squinting.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/stamp.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/sweat.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/TearsRan.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/threwUp.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/tuosai.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/vomitingBlood.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/watermelon.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/weeping.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/weiqu.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Wronged.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/wunai.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/xia.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/xiaojiujie.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/xu.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/yawn.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/yinxian.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/yiwen.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/youhengheng.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/yun.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zaijian.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zhayanjian.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zhouma.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zhuakuang.gif">
+		</li>
+		<li class="body-form-emoji-lis">
+			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zuohengheng.gif">
+		</li>
+	</ul>
+
+	<!--    填写信息-->
+	<div class="body-form-i">
+		填写您的信息
+	</div>
+	<div class="body-form-i-body " id="body-form-i-body">
+		<label for="body-form-i-body-name">
+			昵称
+			<input class="body-form-i-body-name" id="body-form-i-body-name" name="body-form-i-body-name" type="text">
+		</label>
+		<br>
+		<label for="body-form-i-body-email">
+			邮箱
+			<input class="body-form-i-body-email" id="body-form-i-body-email" name="body-form-i-body-email" type="text">
+		</label>
+	</div>
+
+	<!--    是否匿名-->
+	<div class="body-form-anonymous">
+		匿名发布
+		<div class="body-form-anonymous-1" id="body-form-anonymous-1">
+			<div class="body-form-anonymous-2" id="body-form-anonymous-2">
+				<div class="body-form-anonymous-3" id="body-form-anonymous-3"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<!--	提交评论-->
+	<div class="heard-form-about">
+		隐私声明：本站会自动保存您的IP（承诺非特殊情况不会公开您的IP），但请注意您的言行
+	</div>
+	<div class="body-form-submit" id="body-form-submit">
+		提交评论
+	</div>
+
+</div>
+<hr>
+<!--    评论内容-->
+<div id="body-body">
+	<ul id="body-body-ul"></ul>
 </div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.js"></script>
 <script>
 	window.onload = function () {
 		/* 导航条 */
@@ -839,20 +1714,32 @@
 		let right_hint_lis_index = -1
 		let right_hint_lis_index_index = right_hint_lis_index
 
+		let heard_small_cho = $(`.heard-nav-center-small:eq(0)`)
+		let heard_small_ul = $(`#heard-nav-center-ul`)
+		let heard_smalls_1 = $(`.heard-nav-center-small-1:eq(0)`)
+		let heard_smalls_2 = $(`.heard-nav-center-small-2:eq(0)`)
+		let heard_smalls_3 = $(`.heard-nav-center-small-3:eq(0)`)
+
+		let heard_small_index = true
+
 		function heard_right_co () {
 			heard_right_img.addClass('heard-nav-right-search-img-input-show')
 			heard_right_input.css({
 				top: 0,
 			})
 			heard_right_hint.addClass('heard-nav-right-input-hint-switch')
-			$(heard_search).focus()
+			// $(heard_search).focus()
 			setTimeout(function () {
 				document.onclick = heard_input_blur
 			}, 40)
 			// 键盘的下翻
 			document.onkeydown = heard_right_hint_li
-			//
 			right_flag_1 = false
+			// 因为搜索框是折叠上去的，所以直接获取焦点会追到顶部获取焦点（滚动条乱跳）
+			// ，所以这里当事件发生事，延迟一点进行赋予焦点
+			setTimeout(function () {
+				heard_search.focus()
+			}, 150)
 		}
 
 		heard_right_cancel.click(heard_input_blur)
@@ -863,6 +1750,16 @@
 			} else {
 				console.log('我是假')
 				goSearch()
+			}
+
+			if (!heard_small_index) {
+				heard_small_ul.css({
+					height: 0,
+				})
+				heard_small_index = true
+				heard_smalls_1.removeClass('heard-nav-center-small-1-switch')
+				heard_smalls_2.removeClass('heard-nav-center-small-2-switch')
+				heard_smalls_3.removeClass('heard-nav-center-small-3-switch')
 			}
 		})
 
@@ -961,14 +1858,7 @@
 
 		}
 
-		let heard_small_cho = $(`.heard-nav-center-small:eq(0)`)
-		let heard_small_ul = $(`#heard-nav-center-ul`)
-		let heard_smalls_1 = $(`.heard-nav-center-small-1:eq(0)`)
-		let heard_smalls_2 = $(`.heard-nav-center-small-1:eq(1)`)
-		let heard_smalls_3 = $(`.heard-nav-center-small-1:eq(2)`)
-
-		let heard_small_index = true
-
+		// 顶部菜单的三个小横杠
 		heard_small_cho.click(function () {
 			if (heard_small_index) {
 				heard_small_ul.css({
@@ -977,7 +1867,6 @@
 				heard_smalls_1.addClass('heard-nav-center-small-1-switch')
 				heard_smalls_2.addClass('heard-nav-center-small-2-switch')
 				heard_smalls_3.addClass('heard-nav-center-small-3-switch')
-
 				heard_small_index = false
 			} else {
 				heard_small_ul.css({
@@ -990,6 +1879,162 @@
 			}
 		})
 
+		//	点击表情按钮，出现表情列表
+		let emoji_btn = $(`.body-form-emoji:eq(0)`)
+		let emoji_ul = $(`#body-form-emoji-ul`)
+		let emoji_flag = true
+		let emoji_path = null
+		emoji_btn.click(function (event) {
+			if (emoji_flag) {
+				emoji_ul.addClass('body-form-emoji-ul-switch')
+				emoji_flag = false
+				emoji_path = event.target
+				setTimeout(function () {
+					document.onclick = emoji_btn_onclick
+				}, 200)
+			}
+		})
+
+		function emoji_btn_onclick (event) {
+			/**
+			 * 思路：为document绑定点击事件，当点击发生时，通过判断触发点击的元素是不是指定的元素来决定事件发生
+			 * 问题：当点击ul的子元素：li时，事件不会被触发，这是不希望的，问题在于如何获取点击元素的内容是关键
+			 */
+			// console.log(event.target + "")
+			// console.log($(event.target).hasClass('body-form-emoji-lis'))
+			// console.log(event.path[0])
+			// console.log(typeof event);
+			// for (let eventKey in event) {
+			// 	console.log(eventKey);
+			// }
+			// for (let targetKey in event.target) {
+			// 	console.log(targetKey);
+			// }
+			console.log(JSON.stringify(event.target))
+			if ($(event.target).find('.body-form-emoji-lis').length === 0) {
+				emoji_ul.removeClass('body-form-emoji-ul-switch')
+				emoji_flag = true
+				setTimeout(function () {
+					document.onclick = null
+				}, 200)
+			}
+		}
+
+		//	填写信息框的大小切换
+		let body_form = $(`.body-form-i:eq(0)`)
+		let body_form_body = $(`#body-form-i-body`)
+		let body_flag = true
+		body_form.click(function () {
+			if (body_flag) {
+				body_form_body.addClass('body-form-i-body-switch')
+				body_flag = false
+			} else {
+				body_form_body.removeClass('body-form-i-body-switch')
+				body_flag = true
+			}
+		})
+
+		//	匿名按钮的转换
+		let body_anonymous_btn = $(`.body-form-anonymous:eq(0)`)
+		let body_anonymous_1 = $(`#body-form-anonymous-1`)
+		let body_anonymous_2 = $(`#body-form-anonymous-2`)
+		let body_anonymous_3 = $(`#body-form-anonymous-3`)
+		let body_anonymous_flag = true
+
+		body_anonymous_btn.click(function () {
+			if (body_anonymous_flag) {
+				body_anonymous_1.addClass('body-form-anonymous-1-switch')
+				body_anonymous_2.addClass('body-form-anonymous-2-switch')
+				body_anonymous_3.addClass('body-form-anonymous-3-switch')
+				body_anonymous_flag = false
+			} else {
+				body_anonymous_1.removeClass('body-form-anonymous-1-switch')
+				body_anonymous_2.removeClass('body-form-anonymous-2-switch')
+				body_anonymous_3.removeClass('body-form-anonymous-3-switch')
+				body_anonymous_flag = true
+			}
+		})
+
+		//	评论内容
+		let body_body = $(`#body-body`)
+		let body_ul = $(`#body-body-ul`)
+
+		// 根据样式进行新增项目
+		$(document).scroll(function () {
+			if ($(document).scrollTop() + document.documentElement.clientHeight + 10 >= $(document).height()) {
+				for (let i = 0, len = 3; i < len; i++) {
+					let main_title = '我是测试添加的测试内容'
+					let date = new Date()
+					let main_time = date.getFullYear() + '-' + date.getMonth() + 1 + '-' + date.getDate() + '  ' +
+							date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+					let main_user_name = '李四'
+					let li = document.createElement('li')
+					li.innerHTML = `
+							<span class="body-lis-name body-lis-name-hidden">
+								${main_user_name}
+							</span>
+			 				<div class="body-lis-time body-lis-time-hidden">
+								${main_time}
+							</div>
+			 				<div class="body-lis-main-top"></div>
+							<div class="body-lis-title body-lis-title-hidden">
+								${main_title}
+							</div>
+				`
+					li.classList.add('title-lis')
+					// li.classList.add('title-lis-index')
+					body_ul.append(li)
+					setTimeout(function () {
+						$(li).find('.body-lis-name:eq(0)').removeClass('body-lis-name-hidden')
+						$(li).find('.body-lis-time:eq(0)').removeClass('body-lis-time-hidden')
+						$(li).find('.body-lis-title:eq(0)').removeClass('body-lis-title-hidden')
+					}, 100)
+					li.style.height = $(li).height() + 35 + 'px'
+					console.log(li)
+				}
+			}
+
+			// 最顶层的内容进行删除
+			// if (body_ul.height() >= 1000) {
+			// 	let title_lis = $(`.title-lis:eq(0)`)
+			// 	if (title_lis.height() <= 200) {
+			// 		debounce(function () {
+			// 			title_lis.find('.body-lis-name:eq(0)').addClass('body-lis-name-hidden')
+			// 			title_lis.find('.body-lis-time:eq(0)').addClass('body-lis-time-hidden')
+			// 			title_lis.find('.body-lis-title:eq(0)').addClass('body-lis-title-hidden')
+			// 			setTimeout(function () {
+			// 				title_lis.addClass('title-lis-hidden')
+			// 			}, 700)
+			// 			setTimeout(function () {
+			// 				title_lis.remove()
+			// 			}, 1700)
+			// 			// title_lis.removeClass('title-lis-index')
+			// 		},70)()
+			// 	}
+			// }
+		})
+
+		/**
+		 * 节流的方法
+		 * @param callBack 防抖要执行的回调函数
+		 * @param time 多久执行一次，默认值为1秒
+		 * @returns {(function(): void)|*} 具体方法使用闭包形式返回
+		 */
+		function debounce (callBack, time = 1000) {
+			let flag = true
+			return function () {
+				let timer = null
+				if (flag) {
+					flag = false
+					callBack()
+					// callBack.call(this)
+					timer = setTimeout(() => {
+						flag = true
+						clearTimeout(timer)
+					}, time)
+				}
+			}
+		}
 	}
 </script>
 </html>

@@ -111,14 +111,14 @@
 		}
 	}
 
-
 	// top_3_sub_lis.click(function () {
-	top_3_sub_lis.click(debounce(function () {
-		console.log("点击成功");
-		console.log($(this).index());
-	}, 1000,))
+	top_3_sub_lis.click(
+			debounce(function () {
+				console.log('点击成功')
+				console.log($(this).index())
+			}, 1000),
+	)
 	// })
-
 
 	//	设置调用者，并将其设置为指定的调用者
 
