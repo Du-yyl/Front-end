@@ -631,7 +631,7 @@
 		#body-body-ul {
 			overflow: hidden;
 			transition: all .6s ease-in-out;
-
+			padding: 3rem 0;
 		}
 
 		.title-lis {
@@ -763,6 +763,66 @@
 		.body-lis-set-2 {
 			top: 50%;
 		}
+
+		/* 警告框 */
+		#err {
+			width: 30rem;
+			position: fixed;
+			/* background-color: red; */
+			bottom: 1rem;
+			right: -5rem;
+		}
+
+		.body-err {
+			width: 25rem;
+			height: 5rem;
+			position: relative;
+			background-color: #98ea98;
+			border-radius: 10px;
+			bottom: 5rem;
+			right: -5rem;
+			transition: right .6s cubic-bezier(0, 1.5, .6, 1), top 2s, height .4s, margin-bottom .3s .2s,
+			margin-bottom .3s .2s, bottom 1.5s ease-in-out;
+			margin: 2rem 0;
+		}
+
+		.body-err-hidden {
+			right: -27rem;
+			height: 0;
+			margin: 0;
+		}
+
+		.body-err-img {
+			width: 2.5rem;
+			height: 2.5rem;
+			position: relative;
+			background: #90900f;
+			border-radius: 50%;
+			top: -1rem;
+			left: -1rem;
+			transition: all .6s;
+		}
+
+		.body-err-img-hidden {
+			width: .5rem;
+			height: .5rem;
+			margin-bottom: 2rem;
+		}
+
+		.body-err-span {
+			position: relative;
+			background: #bdbcc2;
+			top: -1.2rem;
+			left: 3rem;
+			font: 1.6rem "";
+			transition: all .6s;
+		}
+
+		.body-err-span-hidden {
+			top: -.2rem;
+			font: 1rem "";
+		}
+
 
 		@media (min-width: 1200px) {
 			html {
@@ -1681,6 +1741,14 @@
 <div id="body-body">
 	<ul id="body-body-ul"></ul>
 </div>
+
+<!--    音乐播放-->
+<div id="body-music">
+
+</div>
+
+<!--    警告框-->
+<div id="err"></div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
@@ -1955,13 +2023,44 @@
 			}
 		})
 
+		// 评论提交
+		let submit = $(`#body-form-submit`)
+
+		submit.click(toErr)
+		let errs = $(`#err`)
+
+		function toErr () {
+			let div = document.createElement('div')
+			div.classList.add('body-err')
+			div.classList.add('body-err-hidden')
+			div.innerHTML = `
+					<div class="body-err-img body-err-img-hidden"></div>
+					<span class="body-err-span body-err-span-hidden">
+						我是测试的文本内容
+					</span>`
+			setTimeout(function () {
+				$(div).removeClass('body-err-hidden')
+				$(div).find('.body-err-img:eq(0)').removeClass('body-err-img-hidden')
+				$(div).find('.body-err-span:eq(0)').removeClass('body-err-span-hidden')
+			}, 100)
+			setTimeout(function () {
+				div.style.bottom = '50rem'
+				setTimeout(function () {
+					div.remove()
+				}, 400)
+			}, 3000)
+
+			errs.append(div)
+		}
+
 		//	评论内容
 		let body_body = $(`#body-body`)
 		let body_ul = $(`#body-body-ul`)
 
 		// 根据样式进行新增项目
 		$(document).scroll(function () {
-			if ($(document).scrollTop() + document.documentElement.clientHeight + 10 >= $(document).height()) {
+			let scrollTop = $(document).scrollTop()
+			if (scrollTop + document.documentElement.clientHeight + 10 >= $(document).height()) {
 				for (let i = 0, len = 3; i < len; i++) {
 					let main_title = '我是测试添加的测试内容'
 					let date = new Date()
@@ -1982,7 +2081,7 @@
 							</div>
 				`
 					li.classList.add('title-lis')
-					// li.classList.add('title-lis-index')
+					li.classList.add('title-lis-index')
 					body_ul.append(li)
 					setTimeout(function () {
 						$(li).find('.body-lis-name:eq(0)').removeClass('body-lis-name-hidden')
@@ -1990,28 +2089,27 @@
 						$(li).find('.body-lis-title:eq(0)').removeClass('body-lis-title-hidden')
 					}, 100)
 					li.style.height = $(li).height() + 35 + 'px'
-					console.log(li)
 				}
 			}
-
 			// 最顶层的内容进行删除
-			// if (body_ul.height() >= 1000) {
-			// 	let title_lis = $(`.title-lis:eq(0)`)
-			// 	if (title_lis.height() <= 200) {
-			// 		debounce(function () {
-			// 			title_lis.find('.body-lis-name:eq(0)').addClass('body-lis-name-hidden')
-			// 			title_lis.find('.body-lis-time:eq(0)').addClass('body-lis-time-hidden')
-			// 			title_lis.find('.body-lis-title:eq(0)').addClass('body-lis-title-hidden')
-			// 			setTimeout(function () {
-			// 				title_lis.addClass('title-lis-hidden')
-			// 			}, 700)
-			// 			setTimeout(function () {
-			// 				title_lis.remove()
-			// 			}, 1700)
-			// 			// title_lis.removeClass('title-lis-index')
-			// 		},70)()
-			// 	}
-			// }
+			let timer = null
+			if (body_ul.height() >= 1000 && scrollTop >= 1000) {
+				let title_lis = $(`.title-lis-index:eq(0)`)
+				timer = setInterval(debounce(function () {
+					title_lis.find('.body-lis-name:eq(0)').addClass('body-lis-name-hidden')
+					title_lis.find('.body-lis-time:eq(0)').addClass('body-lis-time-hidden')
+					title_lis.find('.body-lis-title:eq(0)').addClass('body-lis-title-hidden')
+					setTimeout(function () {
+						title_lis.addClass('title-lis-hidden')
+					}, 700)
+					setTimeout(function () {
+						title_lis.remove()
+					}, 1700)
+					title_lis.removeClass('title-lis-index')
+				}, 10), 450)
+			} else {
+				clearInterval(timer)
+			}
 		})
 
 		/**
