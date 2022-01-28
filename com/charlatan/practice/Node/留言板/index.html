@@ -823,6 +823,50 @@
 			font: 1rem "";
 		}
 
+		/* 音乐播放 */
+		#body-music {
+			width: 10rem;
+			height: 8rem;
+			position: fixed;
+			bottom: 10rem;
+			left: 0;
+			background: red;
+			background-size: 10rem;
+			cursor: pointer;
+			transition: left .5s cubic-bezier(0, 1.5, .6, 1);
+		}
+
+		.music-div {
+			width: 8rem;
+			height: 8rem;
+			border-radius: 50%;
+			position: relative;
+			z-index: 2;
+			background: #c8c3e0 url("file/music-bg.jpg") no-repeat;
+		}
+
+		.music-play {
+			width: 8rem;
+			height: 8rem;
+			border-radius: 50%;
+			position: relative;
+			background: rgba(211, 193, 193, 0.27);
+			z-index: -1;
+			text-align: center;
+			line-height: 8rem;
+			color: white;
+		}
+
+		.music-show {
+			width: 2rem;
+			height: 8rem;
+			position: absolute;
+			background: #66ff00;
+			line-height: 8rem;
+			text-align-last: center;
+			top: 0;
+			left: 8rem;
+		}
 
 		@media (min-width: 1200px) {
 			html {
@@ -1744,7 +1788,15 @@
 
 <!--    音乐播放-->
 <div id="body-music">
-
+	<div class="music-div" id="music-div">
+		<div class="music-play">
+			停
+		</div>
+	</div>
+	<div class="music-show"> ></div>
+	<audio autoplay="autoplay" id="body-music-audio">
+		<source src="file/上上%20-%20青春大概.mp3" srcset="" type="audio/mpeg">
+	</audio>
 </div>
 
 <!--    警告框-->
@@ -2093,7 +2145,7 @@
 			}
 			// 最顶层的内容进行删除
 			let timer = null
-			if (body_ul.height() >= 1000 && scrollTop >= 1000) {
+			if (body_ul.height() >= 1000 && scrollTop >= 1100) {
 				let title_lis = $(`.title-lis-index:eq(0)`)
 				timer = setInterval(debounce(function () {
 					title_lis.find('.body-lis-name:eq(0)').addClass('body-lis-name-hidden')
@@ -2106,7 +2158,7 @@
 						title_lis.remove()
 					}, 1700)
 					title_lis.removeClass('title-lis-index')
-				}, 10), 450)
+				}, 10), 480)
 			} else {
 				clearInterval(timer)
 			}
@@ -2133,6 +2185,39 @@
 				}
 			}
 		}
+
+		//	音乐播放
+		let music = $(`#body-music`)
+		let music_div = $(`#music-div`)
+		let music_show = $(`.music-show:eq(0)`)
+		let music_audio = $(`#body-music-audio`)
+		let elementById = document.getElementById('body-music-audio')
+		let music_flag = true
+		// 暂停，开始
+		music_div.click(function () {
+			if (music_flag) {
+				elementById.pause()
+				music_flag = false
+			} else {
+				elementById.play()
+				music_flag = true
+			}
+		})
+		//	切换
+		let music_show_flag = true
+		music_show.click(function () {
+			if (music_show_flag) {
+				music.css({
+					left: '-8rem',
+				})
+				music_show_flag = false
+			} else {
+				music.css({
+					left: 0,
+				})
+				music_show_flag = true
+			}
+		})
 	}
 </script>
 </html>
