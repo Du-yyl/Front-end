@@ -1,6 +1,6 @@
 /**
  * Date:2021/12/25 13:25 04
- * Name:data_server.js
+ * Name:server_data.js
  * Path:Web代码/src/com/charlatan/self_study/AJAX
  * ProjectName:WWW
  * Author:charlatan
