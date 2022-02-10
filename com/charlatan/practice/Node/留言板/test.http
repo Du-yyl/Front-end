@@ -1,0 +1,16 @@
+GET 127.0.0.1:3000
+Accept: application/json
+
+###
+GET 127.0.0.1:3000/file/bac-1.jpg
+
+
+
+###
+GET 127.0.0.1:3000
+
+###
+GET https://www.baidu.com
+
+###
+GET 127.0.0.1:3000

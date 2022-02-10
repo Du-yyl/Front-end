@@ -156,26 +156,27 @@ db.集合.drop()							删除集合
 >    - 也可以在指定的集合中保留要关联元素的ID，这样能达到类似效果
        >
        >         ```sql
->         db.c.insertMany([{
->             name:"c1"
->         },{
->             name:"c2"
->         },{
->             name:"c3"
->         }])
+> db.c.insertMany([{
+> name:"c1"
+> },{
+> name:"c2"
+> },{
+> name:"c3"
+> }])
 >               
 >         db.d.insertOne({
->             list:["元素1","元素2"],
->             d_c:"61e81b2b0dd4593ee978eb49"
->         })
->               
->         db.d.insertOne({
->             list:["元素1","元素2"],
->             d_c:"61e81b2b0dd4593ee978eb4a"
->         })
->         ```
+       > list:["元素1","元素2"],
+       > d_c:"61e81b2b0dd4593ee978eb49"
+       > })
        >
-       >         ​ 在c中保留着用户的信息，不同的用户的名字对应不同的ID，当要使d中的数据和c中数据进行关联，将c中不同name的ID传到d中，在d中进行保留
+       >         db.d.insertOne({
+       > list:["元素1","元素2"],
+       > d_c:"61e81b2b0dd4593ee978eb4a"
+       > })
+       >         ```
+
+     ​ 在c中保留着用户的信息，不同的用户的名字对应不同的ID，当要使d中的数据和c中数据进行关联，将c中不同name的ID传到d中，在d中进行保留
+
 >
 >   多对多    (many to many)
 >

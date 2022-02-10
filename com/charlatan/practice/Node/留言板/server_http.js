@@ -8,10 +8,12 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
+// 网络连接启动服务
 let express = require('express')
 
 let server = express()
 
+// 静态资源配置
 server.use('/file/', express.static('./file/'))
 
 server.get('/', function (request, response) {
