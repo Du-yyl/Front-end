@@ -1,16 +1,12 @@
-GET 127.0.0.1:3000
-Accept: application/json
+### 创建用户
+POST 127.0.0.1:3000/createUser
+Content-Type: application/json
 
-###
-GET 127.0.0.1:3000/file/bac-1.jpg
+{
+  "name": "测试名字",
+  "age": 200,
+  "sex": "测试",
+  "address": "测试"
+}
 
 
-
-###
-GET 127.0.0.1:3000
-
-###
-GET https://www.baidu.com
-
-###
-GET 127.0.0.1:3000

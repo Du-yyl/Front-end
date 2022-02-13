@@ -336,9 +336,9 @@ class Snowflake {
    * @returns {bigint} 返回最新的时间戳，绝对不在上一个毫秒
    */
   nextMilliSecond (lastTimestamp) {
-    let timestamp = this.timeGen()
+    let timestamp = this.timestamp()
     while (timestamp <= lastTimestamp) {
-      timestamp = this.timeGen()
+      timestamp = this.timestamp()
     }
     return BigInt(timestamp)
   }
@@ -358,7 +358,7 @@ class Snowflake {
    * @returns {number} 将通过或运算进行数字的组合并返回
    */
   nextId = function () {
-    let timestamp = this.timeGen()
+    let timestamp = this.timestamp()
     if (timestamp < this.LAST_TIMESTAMP) {
       throw new Error('发生时钟回拨，相差时间为： ' + (this.LAST_TIMESTAMP - timestamp))
     }
