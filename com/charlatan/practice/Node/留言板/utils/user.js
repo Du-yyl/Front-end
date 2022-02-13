@@ -9,6 +9,32 @@
  */
 
 class User {
+  #password
+  #name
+  #age
+  #sex
+  #address
+  #isDelete
+  #id
+  
+  constructor (name, age, sex, address, id, password) {
+    this.#name = name
+    this.#age = age
+    this.#sex = sex
+    this.#address = address
+    this.#isDelete = false
+    this.#id = id
+    this.#password = password
+  }
+  
+  set password (value) {
+    this.#password = value
+  }
+  
+  get password () {
+    return this.#password
+  }
+  
   get id () {
     return this.#id
   }
@@ -25,22 +51,6 @@ class User {
     this.#isDelete = value
   }
   
-  #name
-  #age
-  #sex
-  #address
-  #isDelete
-  #id
-  
-  constructor (name, age, sex, address, id) {
-    this.#name = name
-    this.#age = age
-    this.#sex = sex
-    this.#address = address
-    this.#isDelete = false
-    this.#id = id
-  }
-  
   get name () {
     return this.#name
   }
@@ -48,7 +58,7 @@ class User {
   set name (value) {
     this.#name = value
   }
-  
+
   get age () {
     return this.#age
   }

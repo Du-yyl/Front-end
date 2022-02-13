@@ -9,11 +9,12 @@
  */
 
 let mongoose = require('mongoose')
+const { mongo } = require('mongoose')
 
 mongoose.connect('mongodb://localhost:/test_1').then()
 mongoose.connection.once('open', function () {
   console.log('用户数据库连接')
-  
+
 })
 
 mongoose.connection.once('close', function () {
@@ -33,6 +34,9 @@ let userSchema = new Schema({
   index: Number,
   isDelete: Boolean,
   uid: Number,
+  password: String,
+}, {
+  versionKey: false,
 })
 
 let UserModel = mongoose.model('user_1', userSchema)
@@ -56,12 +60,43 @@ let recordSchema = new Schema({
   hostname: String,
   type: String,
   isDelete: Boolean,
+  content: String,
+}, {
+  versionKey: false,
 })
 
 let RecordModel = mongoose.model('record_1', recordSchema)
 
+/**
+ * 创建 评论存储 数据模式
+ */
+let contentDataSchema = new Schema({
+  content: String,
+  _id: String,
+}, {
+  versionKey: false,
+})
+
+let ContentDataSchema = mongoose.model('content_data_1', contentDataSchema)
+
+/**
+ * 创建 评论信息 数据模式
+ */
+
+let contentInformationSchema = new Schema({
+  name: String,
+  eMail: String,
+  isAnonymous: Boolean,
+  contentDataId: String,
+}, {
+  versionKey: false,
+})
+let ContentInformationSchema = mongoose.model('content_information_1', contentInformationSchema)
+
 module.exports = {
   RecordModel,
   UserModel,
+  ContentDataSchema,
+  ContentInformationSchema,
   findID,
 }

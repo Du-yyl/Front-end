@@ -6,7 +6,30 @@ Content-Type: application/json
   "name": "测试名字",
   "age": 200,
   "sex": "测试",
-  "address": "测试"
+  "address": "测试",
+  "password": 123456
 }
 
 
+### 发送评论
+POST 127.0.0.1:3000/sendComment
+Content-Type: application/json
+
+{
+  "name": "测试用例",
+  "eMail": "123456@163.com",
+  "isAnonymous": true,
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+}
+
+
+### 发送评论 测试1
+POST 127.0.0.1:3000/sendComment
+Content-Type: application/json
+
+{
+  "name": "张三",
+  "eMail": "654321@123.com",
+  "isAnonymous": false,
+  "content": "Workout ellis tue adds counted analyst statutes, mineral. "
+}

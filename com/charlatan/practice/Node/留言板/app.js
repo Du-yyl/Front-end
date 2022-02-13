@@ -14,7 +14,8 @@ let bodyParser = require('body-parser')
 let User = require('./utils/user')
 let database = require('./data')
 
-const { findID } = require('./data')
+const { findID, ContentDataSchema, ContentInformationSchema } = require('./data')
+const mongoose = require('mongoose')
 
 let server = express()
 server.set('trust proxy', true)// 设置以后，req.ips是ip数组；如果未经过代理，则为[]. 若不设置，则req.ips恒为[]
@@ -34,10 +35,9 @@ server.post('/createUser', function (request, response) {
   let use = request.body
   if (use !== null) {
     findID().then(value => {
-      
+
       let user = new User(use.name, use.age, use.sex, use.address,
-        value[value.length - 1].uid + 1)
-      
+        value[value.length - 1].uid + 1, use.password)
       database.UserModel.create({
         name: user.name,
         age: user.age,
@@ -45,7 +45,7 @@ server.post('/createUser', function (request, response) {
         address: user.address,
         isDelete: user.isDelete,
         uid: user.id,
-        
+        password: user.password,
       }, function (err) {
         if (err) {
           console.log('用户数据插入失败')
@@ -61,8 +61,37 @@ server.post('/createUser', function (request, response) {
   }
 })
 
+/**
+ * 发送评论
+ */
 server.post('/sendComment', function (req, res) {
+  detectData(req)
   let comment = req.body
+  let id = mongoose.Types.ObjectId().toString()
+  ContentDataSchema.create({
+    content: comment.content,
+    _id: id,
+  }, function (err) {
+    if (!err) {
+      console.log('用户评论内容添加成功')
+      ContentInformationSchema.create({
+        name: comment.name,
+        eMail: comment.eMail,
+        isAnonymous: comment.isAnonymous,
+        contentDataId: id,
+      }, function (err) {
+        if (!err) {
+          console.log('用户评论信息添加成功')
+        } else {
+          console.log('用户评论信息添加失败')
+          throw err
+        }
+      })
+    } else {
+      console.log('用户评论内容添加失败')
+      throw err
+    }
+  })
 })
 
 /**
@@ -80,6 +109,7 @@ function detectData (req) {
     + ' ' + data.getHours()
     + ':' + data.getMinutes()
     + ':' + data.getSeconds()
+  let content = JSON.stringify(req.body)
   
   database.RecordModel.create({
     'time': time,
@@ -89,6 +119,7 @@ function detectData (req) {
     'hostname': req.hostname,
     'type': req.method,
     'isDelete': false,
+    'content': content,
   }, function (err) {
     if (err) {
       console.log('访问数据插入失败')
