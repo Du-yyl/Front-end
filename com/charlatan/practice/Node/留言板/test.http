@@ -33,3 +33,12 @@ Content-Type: application/json
   "isAnonymous": false,
   "content": "Workout ellis tue adds counted analyst statutes, mineral. "
 }
+
+### 请求评论 测试1
+GET 127.0.0.1:3000/requestReview
+
+### 请求评论 测试2
+GET 127.0.0.1:3000/requestReview?skipNum=10&limitNum=10
+
+### 请求评论 测试3
+GET 127.0.0.1:3000/requestReview?skipNum=100&limitNum=100

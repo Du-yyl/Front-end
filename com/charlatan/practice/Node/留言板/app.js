@@ -10,12 +10,12 @@
 
 let express = require('express')
 let bodyParser = require('body-parser')
+const mongoose = require('mongoose')
 
 let User = require('./utils/user')
 let database = require('./data')
-
-const { findID, ContentDataSchema, ContentInformationSchema } = require('./data')
-const mongoose = require('mongoose')
+const { findID, ContentDataSchema, ContentInformationSchema } = require(
+  './data')
 
 let server = express()
 server.set('trust proxy', true)// 设置以后，req.ips是ip数组；如果未经过代理，则为[]. 若不设置，则req.ips恒为[]
@@ -68,6 +68,8 @@ server.post('/sendComment', function (req, res) {
   detectData(req)
   let comment = req.body
   let id = mongoose.Types.ObjectId().toString()
+  
+  // TODO:评论内容的字检测检测
   ContentDataSchema.create({
     content: comment.content,
     _id: id,
@@ -82,6 +84,7 @@ server.post('/sendComment', function (req, res) {
       }, function (err) {
         if (!err) {
           console.log('用户评论信息添加成功')
+          res.send('评论成功')
         } else {
           console.log('用户评论信息添加失败')
           throw err
@@ -92,6 +95,34 @@ server.post('/sendComment', function (req, res) {
       throw err
     }
   })
+})
+
+/**
+ * 访问数据库中的评论信息
+ */
+server.get('/requestReview', function (req, res) {
+  detectData(req)
+  if (req.url.split('?')[1] !== undefined) {
+    
+    let skip = parseInt(req.url.split('?')[1].split('&')[0].split('=')[1])
+    let limit = parseInt(req.url.split('?')[1].split('&')[1].split('=')[1])
+    
+    let skipNum = skip > 10 ? 10 : skip
+    let limitNum = limit > 10 ? 10 : limit
+    
+    database.ContentDataSchema.find({}, { 'content': 1, '_id': 0 },
+      { skip: skipNum, limit: limitNum }, function (err, doc) {
+        if (!err) {
+          res.send(doc)
+        } else {
+          console.log('信息发送失败')
+          throw err
+        }
+      })
+  } else {
+    console.log('请求错误')
+    res.send('请求错误')
+  }
 })
 
 /**
@@ -110,7 +141,7 @@ function detectData (req) {
     + ':' + data.getMinutes()
     + ':' + data.getSeconds()
   let content = JSON.stringify(req.body)
-  
+
   database.RecordModel.create({
     'time': time,
     'x_forwarded_for': '' + req.header('x-forwarded-for') + '',
@@ -131,5 +162,5 @@ function detectData (req) {
 }
 
 server.listen('3000', function () {
-  console.log('3000...')
+  console.log('3000 端口开始监听...')
 })

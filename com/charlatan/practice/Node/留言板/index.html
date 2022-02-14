@@ -2023,56 +2023,75 @@
 		let emoji_btn = $(`.body-form-emoji:eq(0)`)
 		let emoji_ul = $(`#body-form-emoji-ul`)
 		let emoji_flag = true
-		let emoji_path = null
-		emoji_btn.click(function (event) {
+		let emoji_time
+		emoji_btn.click(function () {
 			if (emoji_flag) {
 				emoji_ul.addClass('body-form-emoji-ul-switch')
-				emoji_flag = false
-				emoji_path = event.target
-				setTimeout(function () {
-					document.onclick = emoji_btn_onclick
+				emoji_time = setTimeout(function () {
+					document.onclick = emoji_click
+					// $(document).click(emoji_click)
+					// console.log("我运行了");
 				}, 200)
+				emoji_flag = false
 			}
 		})
 
-		function emoji_btn_onclick (event) {
-			/**
-			 * 思路：为document绑定点击事件，当点击发生时，通过判断触发点击的元素是不是指定的元素来决定事件发生
-			 * 问题：当点击ul的子元素：li时，事件不会被触发，这是不希望的，问题在于如何获取点击元素的内容是关键
-			 */
-			// console.log(event.target + "")
-			// console.log($(event.target).hasClass('body-form-emoji-lis'))
-			// console.log(event.path[0])
-			// console.log(typeof event);
-			// for (let eventKey in event) {
-			// 	console.log(eventKey);
-			// }
-			// for (let targetKey in event.target) {
-			// 	console.log(targetKey);
-			// }
-			console.log(JSON.stringify(event.target))
-			if ($(event.target).find('.body-form-emoji-lis').length === 0) {
+		function emoji_click (event) {
+			if (func2(event.target, emoji_ul[0])) {
+				emoji_ul.addClass('body-form-emoji-ul-switch')
+				emoji_flag = false
+			} else {
 				emoji_ul.removeClass('body-form-emoji-ul-switch')
+				// $(document).click(null)
+				document.onclick = null
 				emoji_flag = true
-				setTimeout(function () {
-					document.onclick = null
-				}, 200)
 			}
+		}
+
+		/**
+		 * 判断触发点击的元素是否是指定的元素
+		 * @param that 要判断的元素
+		 * @param the 目标元素
+		 */
+		function func2 (that, the) {
+			return that === null || the === null ? false : func3(that, the)
+		}
+
+		function func3 (that, the) {
+			if (that === the) {
+				return true
+			}
+			if ($(that)[0].tagName === 'BODY') {
+				return false
+			}
+			return func3($(that).parent()[0], the)
 		}
 
 		//	填写信息框的大小切换
 		let body_form = $(`.body-form-i:eq(0)`)
 		let body_form_body = $(`#body-form-i-body`)
-		let body_flag = true
+		let body_form_flag = true
+		let body_form_time
 		body_form.click(function () {
-			if (body_flag) {
+			if (body_form_flag) {
 				body_form_body.addClass('body-form-i-body-switch')
-				body_flag = false
-			} else {
-				body_form_body.removeClass('body-form-i-body-switch')
-				body_flag = true
+				body_form_time = setTimeout(function () {
+					document.onclick = body_form_click
+				}, 200)
+				body_form_flag = false
 			}
 		})
+
+		function body_form_click (event) {
+			if (func2(event.target, body_form_body[0])) {
+				body_form_body.addClass('body-form-i-body-switch')
+				body_form_flag = false
+			} else {
+				body_form_body.removeClass('body-form-i-body-switch')
+				document.onclick = null
+				body_form_flag = true
+			}
+		}
 
 		//	匿名按钮的转换
 		let body_anonymous_btn = $(`.body-form-anonymous:eq(0)`)

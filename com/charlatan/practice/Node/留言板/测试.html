@@ -83,7 +83,9 @@
 	<div id="div2">
 		<div id="div3">
 			<div id="div4">
-				我是div4
+				<label>
+					<input type="text" value="我是测试内容">
+				</label>
 			</div>
 		</div>
 	</div>
@@ -122,23 +124,25 @@
 		// 		flag = true
 		// 	}
 		// })
-
-		div1.focus(function () {
-			div1.removeClass('div')
-		})
-
-		div1.blur(function () {
-			div1.addClass('div')
-
-		})
-
-		// $(document).click(function (event) {
-		// 	if (func2(event.target, div1[0])) {
-		// 		div1.removeClass('div')
-		// 	}else {
-		// 		div1.addClass('div')
-		// 	}
+		//
+		// div1.focus(function () {
+		// 	div1.removeClass('div')
 		// })
+		//
+		// div1.blur(function () {
+		// 	div1.addClass('div')
+		//
+		// })
+
+		$(document).click(function (event) {
+			if (func2(event.target, div1[0])) {
+				console.log(div1[0])
+				div1.removeClass('div')
+			} else {
+				div1.addClass('div')
+			}
+		})
+
 		/**
 		 *
 		 * @param that 要判断的元素
