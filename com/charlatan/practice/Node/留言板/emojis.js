@@ -503,3 +503,366 @@ let emoticons =
     '٩(๛ ˘ ³˘)۶❤',
     '(๑‾᷅^‾᷅๑)',
   ]
+
+let wcEmoji =
+  [
+    {
+      src: 'Emojis/aoman.gif',
+      alt: '傲慢',
+    },
+    {
+      src: 'Emojis/baiyan.gif',
+      alt: '白眼',
+    },
+    {
+      src: 'Emojis/bishi.gif',
+      alt: '鄙视',
+    },
+    {
+      src: 'Emojis/bizui.gif',
+      alt: '闭嘴',
+    },
+    {
+      src: 'Emojis/cahan.gif',
+      alt: '擦汗',
+    },
+    {
+      src: 'Emojis/ciya.gif',
+      alt: '呲牙',
+    },
+    {
+      src: 'Emojis/dabing.gif',
+      alt: '大兵',
+    },
+    {
+      src: 'Emojis/daku.gif',
+      alt: '大哭',
+    },
+    {
+      src: 'Emojis/deyi.gif',
+      alt: '得意',
+    },
+    {
+      src: 'Emojis/doge.gif',
+      alt: 'doge',
+    },
+    {
+      src: 'Emojis/fadai.gif',
+      alt: '发呆',
+    },
+    {
+      src: 'Emojis/fanu.gif',
+      alt: '发怒',
+    },
+    {
+      src: 'Emojis/fendou.gif',
+      alt: '奋斗',
+    },
+    {
+      src: 'Emojis/ganga.gif',
+      alt: '尴尬',
+    },
+    {
+      src: 'Emojis/guzhang.gif',
+      alt: '鼓掌',
+    },
+    {
+      src: 'Emojis/haixiu.gif',
+      alt: '害羞',
+    },
+    {
+      src: 'Emojis/hanxiao.gif',
+      alt: '憨笑',
+    },
+    {
+      src: 'Emojis/zuohengheng.gif',
+      alt: '左哼哼',
+    },
+    {
+      src: 'Emojis/zhuakuang.gif',
+      alt: '抓狂',
+    },
+    {
+      src: 'Emojis/zhouma.gif',
+      alt: '咒骂',
+    },
+    {
+      src: 'Emojis/zhemo.gif',
+      alt: '折磨',
+    },
+    {
+      src: 'Emojis/zaijian.gif',
+      alt: '再见',
+    },
+    {
+      src: 'Emojis/youhengheng.gif',
+      alt: '右哼哼',
+    },
+    {
+      src: 'Emojis/yiwen.gif',
+      alt: '疑问',
+    },
+    {
+      src: 'Emojis/yinxian.gif',
+      alt: '阴险',
+    },
+    {
+      src: 'Emojis/xu.gif',
+      alt: '嘘',
+    },
+    {
+      src: 'Emojis/xieyanxiao.gif',
+      alt: '滑稽',
+    },
+    {
+      src: 'Emojis/xiaoku.gif',
+      alt: '笑哭',
+    },
+    {
+      src: 'Emojis/xiaojiujie.gif',
+      alt: '小纠结',
+    },
+    {
+      src: 'Emojis/xia.gif',
+      alt: '吓',
+    },
+    {
+      src: 'Emojis/wunai.gif',
+      alt: '无奈',
+    },
+    {
+      src: 'Emojis/wozuimei.gif',
+      alt: '我最美',
+    },
+    {
+      src: 'Emojis/weixiao.gif',
+      alt: '微笑',
+    },
+    {
+      src: 'Emojis/weiqu.gif',
+      alt: '委屈',
+    },
+    {
+      src: 'Emojis/tuosai.gif',
+      alt: '托腮',
+    },
+    {
+      src: 'Emojis/tu.gif',
+      alt: '吐',
+    },
+    {
+      src: 'Emojis/touxiao.gif',
+      alt: '偷笑',
+    },
+    {
+      src: 'Emojis/tiaopi.gif',
+      alt: '调皮',
+    },
+    {
+      src: 'Emojis/shui.gif',
+      alt: '睡',
+    },
+    {
+      src: 'Emojis/se.gif',
+      alt: '色迷迷',
+    },
+    {
+      src: 'Emojis/saorao.gif',
+      alt: '骚扰',
+    },
+    {
+      src: 'Emojis/qiudale.gif',
+      alt: '糗大了',
+    },
+    {
+      src: 'Emojis/qinqin.gif',
+      alt: '亲亲',
+    },
+    {
+      src: 'Emojis/qiaoda.gif',
+      alt: '敲打',
+    },
+    {
+      src: 'Emojis/piezui.gif',
+      alt: '撇嘴',
+    },
+    {
+      src: 'Emojis/penxue.gif',
+      alt: '喷血',
+    },
+    {
+      src: 'Emojis/nanguo.gif',
+      alt: '难过',
+    },
+    {
+      src: 'Emojis/liulei.gif',
+      alt: '流泪',
+    },
+    {
+      src: 'Emojis/liuhan.gif',
+      alt: '流汗',
+    },
+    {
+      src: 'Emojis/lenghan.gif',
+      alt: '冷汗',
+    },
+    {
+      src: 'Emojis/leiben.gif',
+      alt: '泪奔',
+    },
+    {
+      src: 'Emojis/kun.gif',
+      alt: '困',
+    },
+    {
+      src: 'Emojis/kuaikule.gif',
+      alt: '快哭了',
+    },
+    {
+      src: 'Emojis/ku.gif',
+      alt: '酷',
+    },
+    {
+      src: 'Emojis/koubi.gif',
+      alt: '抠鼻',
+    },
+    {
+      src: 'Emojis/kelian.gif',
+      alt: '可怜',
+    },
+    {
+      src: 'Emojis/keai.gif',
+      alt: '可爱',
+    },
+    {
+      src: 'Emojis/jingya.gif',
+      alt: '惊讶',
+    },
+    {
+      src: 'Emojis/jingxi.gif',
+      alt: '惊喜',
+    },
+    {
+      src: 'Emojis/jingkong.gif',
+      alt: '惊恐',
+    },
+    {
+      src: 'Emojis/jie.gif',
+      alt: '馋',
+    },
+    {
+      src: 'Emojis/huaixiao.gif',
+      alt: '坏笑',
+    },
+    {
+      src: 'Emojis/haqian.gif',
+      alt: '哈欠',
+    },
+    {
+      src: 'Emojis/aini.gif',
+      alt: '爱你',
+    },
+    {
+      src: 'Emojis/OK.gif',
+      alt: 'OK',
+    },
+    {
+      src: 'Emojis/qiang.gif',
+      alt: '强',
+    },
+    {
+      src: 'Emojis/quantou.gif',
+      alt: '拳头',
+    },
+    {
+      src: 'Emojis/shengli.gif',
+      alt: '耶',
+    },
+    {
+      src: 'Emojis/woshou.gif',
+      alt: '握手',
+    },
+    {
+      src: 'Emojis/gouyin.gif',
+      alt: '勾引',
+    },
+    {
+      src: 'Emojis/baoquan.gif',
+      alt: '抱拳',
+    },
+    {
+      src: 'Emojis/aixin.gif',
+      alt: '爱心',
+    },
+    {
+      src: 'Emojis/bangbangtang.gif',
+      alt: '棒棒糖',
+    },
+    {
+      src: 'Emojis/xiaoyanger.gif',
+      alt: '小鸟儿',
+    },
+    {
+      src: 'Emojis/xigua.gif',
+      alt: '西瓜',
+    },
+    {
+      src: 'Emojis/hexie.gif',
+      alt: '河蟹',
+    },
+    {
+      src: 'Emojis/pijiu.gif',
+      alt: '啤酒',
+    },
+    {
+      src: 'Emojis/lanqiu.gif',
+      alt: '篮球',
+    },
+    {
+      src: 'Emojis/juhua.gif',
+      alt: '菊花',
+    },
+    {
+      src: 'Emojis/hecai.gif',
+      alt: '喝彩',
+    },
+    {
+      src: 'Emojis/haobang.gif',
+      alt: '好棒',
+    },
+    {
+      src: 'Emojis/caidao.gif',
+      alt: '菜刀',
+    },
+    {
+      src: 'Emojis/baojin.gif',
+      alt: '生气',
+    },
+    {
+      src: 'Emojis/chi.gif',
+      alt: '吃',
+    },
+    {
+      src: 'Emojis/dan.gif',
+      alt: '蛋',
+    },
+    {
+      src: 'Emojis/kulou.gif',
+      alt: '骷髅',
+    },
+    {
+      src: 'Emojis/shuai.gif',
+      alt: '帅',
+    },
+    {
+      src: 'Emojis/shouqiang.gif',
+      alt: '手枪',
+    },
+    {
+      src: 'Emojis/yangtuo.gif',
+      alt: '羊驼',
+    },
+    {
+      src: 'Emojis/youling.gif',
+      alt: '幽灵',
+    }]

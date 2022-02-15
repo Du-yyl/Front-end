@@ -1,0 +1,76 @@
+<!--
+  ~ Time:2022/2/15 14:17 23
+  ~ Name:waefawefawef.html
+  ~ Path:Web代码/src/com/charlatan/practice/Node/留言板
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+	<style>
+
+		.edit {
+			width: 900px;
+			height: 100px;
+			border-radius: 5px;
+			border: 1px solid red;
+		}
+
+		.edit[contenteditable]:empty:before {
+			content: attr(placeholder);
+			color: #cccccc;
+		}
+
+		.edit[contenteditable]:focus {
+			content: none;
+		}
+
+
+	</style>
+</head>
+
+<body>
+
+<div
+		class="edit"
+		id="inputContent"
+		contenteditable="true"
+		placeholder="请在这输入内容"
+		onblur="blurEdit()"></div>
+<button onclick="clickInsert()">点击插入一个按钮</button>
+
+</body>
+
+<script>
+	let position = ''
+
+	function blurEdit () {
+		position = window.getSelection().getRangeAt(0)
+		console.log(window.getSelection().getRangeAt(0))
+	}
+
+	function clickInsert () {
+		if (position === '') {
+			// 如果div没有光标，则在div内容末尾插入
+			const div = document.getElementById('inputContent')
+			div.focus()
+			const range = window.getSelection()
+			range.selectAllChildren(div)
+			range.collapseToEnd()
+			position = window.getSelection().getRangeAt(0)
+		}
+		// 创建一个元素
+		const span = document.createElement('span')
+		span.innerHTML = '<button contenteditable="false" class="btn" id="btn1">插入的按钮1</button>'
+		// 将按钮插入
+		position.insertNode(span)
+	}
+</script>
+</html>

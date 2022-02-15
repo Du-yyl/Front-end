@@ -16,6 +16,7 @@
 	<title>my</title>
 	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
 	<style>
+
 		* {
 			margin: 0;
 			padding: 0;
@@ -395,6 +396,7 @@
 			font: 1.3rem "";
 		}
 
+
 		/* 滚动条样式 */
 		.body-form-input::-webkit-scrollbar {
 			width: 9px;
@@ -420,6 +422,7 @@
 			border-radius: 3px;
 			transition: all .5s;
 			background-color: #f3f3f3;
+			user-select: none;
 		}
 
 		.body-form-emoji:hover {
@@ -434,7 +437,7 @@
 			height: 0;
 			background-color: #ffffff;
 			position: absolute;
-			top: -3rem;
+			top: 18rem;
 			left: 4rem;
 			display: flex;
 			justify-content: left;
@@ -442,6 +445,7 @@
 			border-radius: 5px;
 			overflow: hidden;
 			transition: all .7s;
+			z-index: 20;
 		}
 
 		.body-form-emoji-ul-switch {
@@ -449,7 +453,7 @@
 			height: 20rem;
 			background-color: #ffffff;
 			position: absolute;
-			top: -3rem;
+			top: 22rem;
 			left: 4rem;
 			display: flex;
 			justify-content: left;
@@ -784,6 +788,13 @@
 			top: 50%;
 		}
 
+		/* emoji输入后样式 */
+		.boyd-form-form-main {
+			width: 20px;
+			height: 20px;
+			display: inline;
+		}
+
 		/* 警告框 */
 		#err {
 			width: 30rem;
@@ -842,6 +853,7 @@
 			top: -.2rem;
 			font: 1rem "";
 		}
+
 
 		/* 音乐播放 */
 		#body-music {
@@ -1503,265 +1515,17 @@
 		发送评论
 	</div>
 	<label for="body-form-test"></label>
-	<textarea class="body-form-input" cols="30" id="body-form-test" name="heard-form-text" placeholder=" 输入你的评论"
-	          rows="10"></textarea>
+
+	<!--	<textarea class="body-form-input" cols="30" id="body-form-test" name="heard-form-text" placeholder=" 输入你的评论"-->
+	<!--	          rows="10"></textarea>-->
+	<div contenteditable=true class="body-form-input" id="body-form-test"></div>
 	<div class="body-form-emoji">
 		表情
 	</div>
+
 	<!--			Emoji表情 -->
 	<ul class="body-form-emoji-ul " id="body-form-emoji-ul">
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/abash.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/aini.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/alpaca.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/anger.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/aoman.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/baiyan.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/basketball.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/beer.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/bishi.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/bizui.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/cahan.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/chew.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/chrysanthemum.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/ciya.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/coldSweat.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Congratulations.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/cute.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/dabing.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/daku.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Dear.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/decline.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/deyi.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/doge.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/egg.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fadai.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fan.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fanu.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fendou.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fist.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/fun.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/funny.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/ganga.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/ghost.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/greedy.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Great.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/guzhang.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/haixiu.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/hanxiao.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Heart.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/hug.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/knife.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/knock.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/ku.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Lollipop.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Naughty.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/nosePicking.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/OK.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/panic.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/pistol.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/pitful.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/provocative.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/qiudale.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/sad.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/scissorHand.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/shakeHands.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Skeleton.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/sleep.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Sleepy.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Smile.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/squinting.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/stamp.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/sweat.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/TearsRan.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/threwUp.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/tuosai.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/vomitingBlood.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/watermelon.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/weeping.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/weiqu.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/Wronged.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/wunai.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/xia.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/xiaojiujie.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/xu.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/yawn.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/yinxian.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/yiwen.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/youhengheng.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/yun.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zaijian.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zhayanjian.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zhouma.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zhuakuang.gif">
-		</li>
-		<li class="body-form-emoji-lis">
-			<img alt="" class="body-form-emoji-lis-gif" src="Emojis/zuohengheng.gif">
-		</li>
+
 	</ul>
 
 	<!--    填写信息-->
@@ -1823,8 +1587,52 @@
 <div id="err"></div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="emojis.js"></script>
 <script>
 	window.onload = function () {
+		let selection = document.getSelection()
+		let emoji_ul = $(`#body-form-emoji-ul`)
+		let body_form_main = $('#body-form-test')
+		let position = ''
+		for (let wcEmojiElement of wcEmoji) {
+			let li = document.createElement('LI')
+			$(li).addClass('body-form-emoji-lis')
+			let img = document.createElement('IMG')
+			img.classList.add('body-form-emoji-lis-gif')
+			img.src = wcEmojiElement.src
+			img.alt = wcEmojiElement.alt
+			li.appendChild(img)
+			emoji_ul.append(li)
+		}
+
+		let emoji_lis_img = $('.body-form-emoji-lis-gif')
+
+		/**
+		 * 失去焦点时，可能会点击按钮，这时就记录焦点的位置
+		 */
+		body_form_main.blur(function () {
+			position = window.getSelection().getRangeAt(0)
+		})
+
+		/**
+		 * 当点击表情时，就讲指定的按钮复制一份，并将获取到的按钮添加到刚刚获取到的焦点位置
+		 */
+		emoji_lis_img.click(function () {
+			if (position === '') {
+				let div = document.getElementById('body-form-test')
+				div.focus()
+				const range = window.getSelection()
+				range.selectAllChildren(div)
+				range.collapseToEnd()
+				position = window.getSelection().getRangeAt(0)
+			}
+			let that = $(this).clone()
+			$(that).addClass('boyd-form-form-main')
+			position.insertNode(that[0])
+			window.getSelection().collapseToEnd()
+			body_form_main.focus()
+		})
+
 		/* 导航条 */
 		let heard_index = 0
 		let heard_lis = $(`.heard-nav-center-ul-li`)
@@ -2021,18 +1829,16 @@
 
 		//	点击表情按钮，出现表情列表
 		let emoji_btn = $(`.body-form-emoji:eq(0)`)
-		let emoji_ul = $(`#body-form-emoji-ul`)
 		let emoji_flag = true
 		let emoji_time
 		emoji_btn.click(function () {
 			if (emoji_flag) {
 				emoji_ul.addClass('body-form-emoji-ul-switch')
 				emoji_time = setTimeout(function () {
-					document.onclick = emoji_click
-					// $(document).click(emoji_click)
-					// console.log("我运行了");
+					$(document).click(emoji_click)
 				}, 200)
 				emoji_flag = false
+				console.log(selection.anchorOffset)
 			}
 		})
 
@@ -2042,8 +1848,8 @@
 				emoji_flag = false
 			} else {
 				emoji_ul.removeClass('body-form-emoji-ul-switch')
-				// $(document).click(null)
-				document.onclick = null
+				$(document).off('click', emoji_click)
+				// document.onclick = null
 				emoji_flag = true
 			}
 		}
@@ -2256,6 +2062,10 @@
 				})
 				music_show_flag = true
 			}
+		})
+
+		submit.click(function () {
+			console.log(body_form_main[0].selectionEnd)
 		})
 	}
 </script>
