@@ -16,6 +16,7 @@ let User = require('./utils/user')
 let database = require('./data')
 const { findID, ContentDataSchema, ContentInformationSchema } = require(
   './data')
+let Snowflake = require('./Snowflake')
 
 let server = express()
 server.set('trust proxy', true)// 设置以后，req.ips是ip数组；如果未经过代理，则为[]. 若不设置，则req.ips恒为[]
@@ -68,7 +69,7 @@ server.post('/sendComment', function (req, res) {
   detectData(req)
   let comment = req.body
   let id = mongoose.Types.ObjectId().toString()
-  
+
   // TODO:评论内容的字检测检测
   ContentDataSchema.create({
     content: comment.content,
@@ -103,13 +104,13 @@ server.post('/sendComment', function (req, res) {
 server.get('/requestReview', function (req, res) {
   detectData(req)
   if (req.url.split('?')[1] !== undefined) {
-    
+  
     let skip = parseInt(req.url.split('?')[1].split('&')[0].split('=')[1])
     let limit = parseInt(req.url.split('?')[1].split('&')[1].split('=')[1])
-    
+  
     let skipNum = skip > 10 ? 10 : skip
     let limitNum = limit > 10 ? 10 : limit
-    
+  
     database.ContentDataSchema.find({}, { 'content': 1, '_id': 0 },
       { skip: skipNum, limit: limitNum }, function (err, doc) {
         if (!err) {
@@ -125,6 +126,19 @@ server.get('/requestReview', function (req, res) {
   }
 })
 
+server.get('/getKey', function (req, res) {
+  let array = []
+  while (array.length <= 2) {
+    let num = Math.floor(Math.random() * 100000)
+    if (array.indexOf(num) === -1) {
+      array.push(num)
+    }
+  }
+  let sf = new Snowflake(array[0], array[1], array[3])
+  let key = sf.nextId()
+  
+  console.log(key)
+})
 /**
  * 记录访问者的信息
  *  - x-forwarded-for --- 各阶段ip的CSV, 最左侧的是原始ip【如果使用代理，那么会是多层 IP 】

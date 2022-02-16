@@ -1587,9 +1587,11 @@
 <div id="err"></div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
 <script src="emojis.js"></script>
 <script>
 	window.onload = function () {
+		let body_anonymous_flag = true
 		let selection = document.getSelection()
 		let emoji_ul = $(`#body-form-emoji-ul`)
 		let body_form_main = $('#body-form-test')
@@ -1838,7 +1840,6 @@
 					$(document).click(emoji_click)
 				}, 200)
 				emoji_flag = false
-				console.log(selection.anchorOffset)
 			}
 		})
 
@@ -1899,14 +1900,63 @@
 			}
 		}
 
+// 评论提交
+		let submit = $(`#body-form-submit`)
+
+		// 判断用户名是否合法
+		let user_name = $(`#body-form-i-body-name`)
+		let user_eMail = $(`#body-form-i-body-email`)
+
+		submit.click(function () {
+			if (user_name.val().length !== 0 || user_eMail.val().length !== 0) {
+				if (user_name.val().length >= 10) {
+					toErr('用户名过长')
+					return
+				}
+				if (!/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(user_eMail.val())) {
+					toErr('邮箱格式非法')
+					return
+				}
+				body_anonymous_flag = false
+				anonymous_btn_click()
+			} else {
+				body_anonymous_flag = true
+				anonymous_btn_click()
+			}
+
+			let main = body_form_main.html().replace(/^[&nbsp; ]*[&nbsp;]*|[&nbsp; ]*$/gm, '')
+			if (main.length === 0) {
+				toErr('不能发布空内容')
+			} else {
+				if (statisticsText(main) >= 500) {
+					toErr('文本内容过长')
+				} else {
+					//	这里的内容一定是合法的长度
+					let str = strShorten(body_form_main.html())
+
+					$.post('http://127.0.0.1:3000/sendComment', {
+						name: user_name.val(),
+						eMail: user_eMail.val(),
+						isAnonymous: !body_anonymous_flag,
+						content: str,
+					}, function (data) {
+						console.log(data)
+					})
+
+					toErr('发送成功')
+				}
+			}
+		})
+
 		//	匿名按钮的转换
 		let body_anonymous_btn = $(`.body-form-anonymous:eq(0)`)
 		let body_anonymous_1 = $(`#body-form-anonymous-1`)
 		let body_anonymous_2 = $(`#body-form-anonymous-2`)
 		let body_anonymous_3 = $(`#body-form-anonymous-3`)
-		let body_anonymous_flag = true
 
-		body_anonymous_btn.click(function () {
+		body_anonymous_btn.click(anonymous_btn_click)
+
+		function anonymous_btn_click () {
 			if (body_anonymous_flag) {
 				body_anonymous_1.addClass('body-form-anonymous-1-switch')
 				body_anonymous_2.addClass('body-form-anonymous-2-switch')
@@ -1918,22 +1968,18 @@
 				body_anonymous_3.removeClass('body-form-anonymous-3-switch')
 				body_anonymous_flag = true
 			}
-		})
+		}
 
-		// 评论提交
-		let submit = $(`#body-form-submit`)
-
-		submit.click(toErr)
 		let errs = $(`#err`)
 
-		function toErr () {
+		function toErr (str) {
 			let div = document.createElement('div')
 			div.classList.add('body-err')
 			div.classList.add('body-err-hidden')
 			div.innerHTML = `
 					<div class="body-err-img body-err-img-hidden"></div>
 					<span class="body-err-span body-err-span-hidden">
-						我是测试的文本内容
+						${str}
 					</span>`
 			setTimeout(function () {
 				$(div).removeClass('body-err-hidden')
@@ -2064,9 +2110,95 @@
 			}
 		})
 
-		submit.click(function () {
-			console.log(body_form_main[0].selectionEnd)
-		})
+		/**
+		 * 统计文本中文字数量
+		 * @param {string} str
+		 */
+		function statisticsText (str) {
+			let exg = /\s*<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis\/*\w*.gif" alt="[\u4E00-\u9FA5]*\w*">\s*/g
+			let string = '<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis'
+
+			if (exg.test(str)) {
+				// 带有表情时的文本实际的长度
+				let num1 = str.replace(exg, '').length
+
+				// 表情的长度
+				let num2 = 0
+
+				// 记录第一次出现字符的下标
+				let index = str.indexOf(string)
+				while (index >= 0) {
+					num2++
+					index = str.indexOf(string, index + 1)
+				}
+				return num2 + num1
+			} else {
+				return str.length
+			}
+		}
+
+		/**
+		 * 要发送到后端的字符串
+		 * @param str 原本的内容
+		 * @returns {*} 转换后要发送的内容
+		 */
+		function strShorten (str) {
+			let exg = /<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis\//g
+			let sbuStr = '%^~?'
+			return str.replace(exg, sbuStr)
+		}
+
+		/**
+		 * 将获取到的字符串转换成可以在页面渲染的内容
+		 * @param str 后端的字符串
+		 * @returns {*} 可以在页面渲染的内容
+		 */
+		function strLong (str) {
+			let string = '%^~?'
+			let strings = '<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis/'
+			let num = str.indexOf(string)
+			if (num >= 0) {
+				return str.replaceAll(string, strings)
+			} else {
+				return str
+			}
+		}
+
+		/**
+		 * AES 解密【先将字符串进行base64的转换，然后进行加密】
+		 * @param key 密钥
+		 * @param offset 偏移量（必须是16位）
+		 * @param string 要加密的内容（必须是16位）
+		 * @returns {*} 要发送到前端的解密内容
+		 * @constructor
+		 */
+		function decrypt (key, offset, string) {
+
+			let decryption = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(string))
+			return CryptoJS.AES.decrypt(decryption, CryptoJS.enc.Utf8.parse(key), {
+				iv: CryptoJS.enc.Utf8.parse(offset),
+				mode: CryptoJS.mode.CBC,
+				padding: CryptoJS.pad.Pkcs7,
+			}).toString(CryptoJS.enc.Utf8).toString()
+		}
+
+		/**
+		 * 加密方法
+		 * @param key 加密的密钥
+		 * @param offset 偏移量
+		 * @param string 要加密的字符串
+		 * @returns {string} 返回要发送到后端的加密的内容
+		 * @constructor
+		 */
+		function encrypt (key, offset, string) {
+			let encryption = CryptoJS.enc.Utf8.parse(string)
+			return CryptoJS.AES.encrypt(encryption, CryptoJS.enc.Utf8.parse(key), {
+				iv: CryptoJS.enc.Utf8.parse(offset),
+				mode: CryptoJS.mode.CBC,
+				padding: CryptoJS.pad.Pkcs7,
+			}).ciphertext.toString().toUpperCase()
+		}
+
 	}
-</script>
-</html>
+	</script>
+	</html>

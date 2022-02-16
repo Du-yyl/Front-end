@@ -33,13 +33,13 @@
 			 // };
 			 //
 			 // const hasClass = (iDToBeModified, theClassToDelete) => {
-			 //     let exg = new RegExp('\\b '+theClassToDelete +'\\b')
-			 //     return exg.test(iDToBeModified.className);
+			 //     let exg_2 = new RegExp('\\b '+theClassToDelete +'\\b')
+			 //     return exg_2.test(iDToBeModified.className);
 			 // };
 
 			 // const removeClass = (iDToBeModified, theClassToDelete) => {
-			 //     let exg = new RegExp('\\b '+theClassToDelete +'\\b')
-			 //     iDToBeModified.className = iDToBeModified.className.replace(exg,"")
+			 //     let exg_2 = new RegExp('\\b '+theClassToDelete +'\\b')
+			 //     iDToBeModified.className = iDToBeModified.className.replace(exg_2,"")
 			 // };
 			 /**
 			  * 判断指定的ID中是否含有指定的class，如果有则进行删除，若没有则添加；
@@ -48,11 +48,11 @@
 			  * @param theClassToBeModified  要添加的新的class
 			  */
 			 const dynamicAdjustmentOfClasses = (variablesObtainedThroughID, theClassToBeModified) => {
-				 let exg = new RegExp('\\b '+theClassToBeModified +'\\b')
-				 if(!exg.test(variablesObtainedThroughID.className)){
+				 let exg_2 = new RegExp('\\b '+theClassToBeModified +'\\b')
+				 if(!exg_2.test(variablesObtainedThroughID.className)){
 					 variablesObtainedThroughID.className += " " + theClassToBeModified
 				 }else {
-					 variablesObtainedThroughID.className = variablesObtainedThroughID.className.replace(exg,"")
+					 variablesObtainedThroughID.className = variablesObtainedThroughID.className.replace(exg_2,"")
 				 }
 			 };
 			 let qwe = document.getElementById("qwe")

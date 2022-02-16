@@ -42,3 +42,7 @@ GET 127.0.0.1:3000/requestReview?skipNum=10&limitNum=10
 
 ### 请求评论 测试3
 GET 127.0.0.1:3000/requestReview?skipNum=100&limitNum=100
+
+
+### 返回加密的密钥和偏移量
+GET 127.0.0.1:3000/getKey

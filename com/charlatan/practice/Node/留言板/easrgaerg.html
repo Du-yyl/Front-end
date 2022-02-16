@@ -1,0 +1,65 @@
+<!--
+  ~ Time:2022/2/16 16:14 27
+  ~ Name:easrgaerg.html
+  ~ Path:Web代码/src/com/charlatan/practice/Node/留言板
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+
+</body>
+<script>
+
+	function statisticsText (str) {
+		let exg = /\s*<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis\/*\w*.gif" alt="[\u4E00-\u9FA5]*\w*">\s*/g
+		let string = '<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis'
+
+		if (exg.test(str)) {
+			// 带有表情时的文本实际的长度
+			let num1 = str.replace(exg, '').length
+
+			// 表情的长度
+			let num2 = 0
+
+			// 记录第一次出现字符的下标
+			let index = str.indexOf(string)
+			while (index >= 0) {
+				num2++
+				index = str.indexOf(string, index + 1)
+			}
+			return num2 + num1
+		} else {
+			return str.length
+		}
+	}
+
+	function strShorten (str) {
+		let exg = /<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis\//g
+		let sbuStr = '%^~?'
+		return str.replace(exg, sbuStr)
+	}
+
+	function strLong (str) {
+		let string = '%^~?'
+		let strings = '<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis/'
+		let num = str.indexOf(string)
+		if (num >= 0) {
+			return str.replaceAll(string, strings)
+		} else {
+			return str
+		}
+	}
+
+	</script>
+	</html>
