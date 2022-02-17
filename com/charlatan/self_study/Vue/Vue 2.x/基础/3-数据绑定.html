@@ -1,0 +1,58 @@
+<!--
+  ~ Time:2022/2/17 21:02 28
+  ~ Name:3-数据绑定.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>数据绑定</title>
+
+</head>
+<body>
+<div id="root">
+	<span>单向数据绑定</span>
+	<input type="text" name="" id="" :value="name">
+	<span>
+		双向绑定
+	</span>
+	<input type="text" name="" v-model:value="name">
+	<hr>
+	以上内容的简写方式：
+	<span>单向数据绑定</span>
+	<input type="text" name="" :value="name">
+	<span>
+		双向绑定
+	</span>
+	<input type="text" name="" v-model="name">
+</div>
+<pre>
+	单向数据绑定
+		单向的数据数据绑定只有开始时响应的数据对页面的内容进行影响，但是当页面的值再进行更改时，不会影响到原先响应时的数据
+		v-bind:完成的就是单向绑定
+	双向绑定
+		当数据在页面进行渲染时，即使已经渲染完毕，通过修改页面端的值，也会影响到后台最初的渲染数据
+		v-model:能够完成双向绑定【v-model属性只能用于表单类元素上，不能用在其他地方（只针对有value属性的元素）】
+
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	new Vue({
+		el: '#root',
+		data: {
+			name: 'Tom',
+			index: 'jack',
+		},
+	})
+</script>
+</html>

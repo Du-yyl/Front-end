@@ -1,0 +1,50 @@
+<!--
+  ~ Time:2022/2/17 22:03 30
+  ~ Name:6-1-2Vue中的数据代理.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Vue中的数据代理</title>
+
+</head>
+<body>
+<div id="root">
+	测试例子1：{{ test1 }}
+	<br>
+	测试例子2：{{ test2 }}
+</div>
+<hr>
+<pre>
+	在Vue中data的数据保存在vm的_data中
+
+	如果将data中的对象定义在外部，定义为data，将data为Vue的data进行赋值，这是完成了 vm.data = options.data = data 【option.data表示的是整个new出来的Vue的配置称之为options】
+
+	在options中创建的数据会被Vue进行整合，将data中的数据直接通过等于号赋值给_data，但是为了方便起见，当Vue拿到数据时，会添加一个新的属性，就是data中
+	的key，并通过getter读取_data的属性，如果发生改变则使用setter进行更改
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+	let vm = new Vue({
+		el: '#root',
+		data: {
+			test1: '我是测试例子1',
+			test2: '我是测试例子2',
+		},
+	})
+
+	console.log(vm.test1)
+	console.log(vm.test2)
+	console.log(vm)
+</script>
+</html>
