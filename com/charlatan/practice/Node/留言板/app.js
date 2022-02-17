@@ -17,128 +17,137 @@ let database = require('./data')
 const { findID, ContentDataSchema, ContentInformationSchema } = require(
   './data')
 let Snowflake = require('./Snowflake')
+let randomNum = require('./algorithm')
+let cors = require('cors')
 
 let server = express()
 server.set('trust proxy', true)// 设置以后，req.ips是ip数组；如果未经过代理，则为[]. 若不设置，则req.ips恒为[]
 
 server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({ extended: false }))
+server.use(cors())
 
 server.get('/', function (request, response) {
   detectData(request)
 })
 
-/**
- * 创建用户
- */
-server.post('/createUser', function (request, response) {
-  detectData(request)
-  let use = request.body
-  if (use !== null) {
-    findID().then(value => {
-
-      let user = new User(use.name, use.age, use.sex, use.address,
-        value[value.length - 1].uid + 1, use.password)
-      database.UserModel.create({
-        name: user.name,
-        age: user.age,
-        sex: user.sex,
-        address: user.address,
-        isDelete: user.isDelete,
-        uid: user.id,
-        password: user.password,
-      }, function (err) {
-        if (err) {
-          console.log('用户数据插入失败')
-          throw err
-        } else {
-          console.log('用户数据插入成功')
-          response.send('操作成功')
-        }
-      })
-    })
-  } else {
-    response.send('用户数据发送错误')
-  }
-})
-
-/**
- * 发送评论
- */
-server.post('/sendComment', function (req, res) {
-  detectData(req)
-  let comment = req.body
-  let id = mongoose.Types.ObjectId().toString()
-
-  // TODO:评论内容的字检测检测
-  ContentDataSchema.create({
-    content: comment.content,
-    _id: id,
-  }, function (err) {
-    if (!err) {
-      console.log('用户评论内容添加成功')
-      ContentInformationSchema.create({
-        name: comment.name,
-        eMail: comment.eMail,
-        isAnonymous: comment.isAnonymous,
-        contentDataId: id,
-      }, function (err) {
-        if (!err) {
-          console.log('用户评论信息添加成功')
-          res.send('评论成功')
-        } else {
-          console.log('用户评论信息添加失败')
-          throw err
-        }
+server.post('/createUser',
+  /**
+   * 创建用户
+   */
+  function (request, response) {
+    detectData(request)
+    let use = request.body
+    if (use !== null) {
+      findID().then(value => {
+        
+        let user = new User(use.name, use.age, use.sex, use.address,
+          value[value.length - 1].uid + 1, use.password)
+        database.UserModel.create({
+          name: user.name,
+          age: user.age,
+          sex: user.sex,
+          address: user.address,
+          isDelete: user.isDelete,
+          uid: user.id,
+          password: user.password,
+        }, function (err) {
+          if (err) {
+            console.log('用户数据插入失败')
+            throw err
+          } else {
+            console.log('用户数据插入成功')
+            response.send('操作成功')
+          }
+        })
       })
     } else {
-      console.log('用户评论内容添加失败')
-      throw err
+      response.send('用户数据发送错误')
     }
   })
-})
 
-/**
- * 访问数据库中的评论信息
- */
-server.get('/requestReview', function (req, res) {
-  detectData(req)
-  if (req.url.split('?')[1] !== undefined) {
-  
-    let skip = parseInt(req.url.split('?')[1].split('&')[0].split('=')[1])
-    let limit = parseInt(req.url.split('?')[1].split('&')[1].split('=')[1])
-  
-    let skipNum = skip > 10 ? 10 : skip
-    let limitNum = limit > 10 ? 10 : limit
-  
-    database.ContentDataSchema.find({}, { 'content': 1, '_id': 0 },
-      { skip: skipNum, limit: limitNum }, function (err, doc) {
-        if (!err) {
-          res.send(doc)
-        } else {
-          console.log('信息发送失败')
-          throw err
-        }
-      })
-  } else {
-    console.log('请求错误')
-    res.send('请求错误')
-  }
-})
+server.get('/getKey',
+  /**
+   * 返回要进行加密的key的offset
+   * @param req
+   * @param res
+   */
+  function (req, res) {
+    detectData(req)
+    let arr = randomNum(100, 10000, 3)
+    let sf = new Snowflake(arr[0], arr[1], arr[2])
+    let key = sf.nextId()
+    let offset = sf.nextId()
+    
+    res.send({ key: key.toString(), offset: offset.toString() })
+  })
 
-server.get('/getKey', function (req, res) {
-  let array = []
-  while (array.length <= 2) {
-    let num = Math.floor(Math.random() * 100000)
-    if (array.indexOf(num) === -1) {
-      array.push(num)
+server.post('/sendComment',
+  /**
+   * 发送评论
+   */
+  function (req, res) {
+    detectData(req)
+    let comment = req.body
+    let id = mongoose.Types.ObjectId().toString()
+    
+    // TODO:评论内容的字检测检测
+    ContentDataSchema.create({
+      content: comment.content,
+      _id: id,
+    }, function (err) {
+      if (!err) {
+        console.log('用户评论内容添加成功')
+        ContentInformationSchema.create({
+          name: comment.name,
+          eMail: comment.eMail,
+          isAnonymous: comment.isAnonymous,
+          contentDataId: id,
+        }, function (err) {
+          if (!err) {
+            console.log('用户评论信息添加成功')
+            res.send('评论成功')
+          } else {
+            console.log('用户评论信息添加失败')
+            throw err
+          }
+        })
+      } else {
+        console.log('用户评论内容添加失败')
+        throw err
+      }
+    })
+  })
+
+server.get('/requestReview',
+  /**
+   * 访问数据库中的评论信息
+   */
+  function (req, res) {
+    detectData(req)
+    if (req.url.split('?')[1] !== undefined) {
+      
+      let skip = parseInt(req.url.split('?')[1].split('&')[0].split('=')[1])
+      let limit = parseInt(req.url.split('?')[1].split('&')[1].split('=')[1])
+      
+      let skipNum = skip > 10 ? 10 : skip
+      let limitNum = limit > 10 ? 10 : limit
+      
+      database.ContentDataSchema.find({}, { 'content': 1, '_id': 0 },
+        { skip: skipNum, limit: limitNum }, function (err, doc) {
+          if (!err) {
+            res.send(doc)
+          } else {
+            console.log('信息发送失败')
+            throw err
+          }
+        })
+    } else {
+      console.log('请求错误')
+      res.send('请求错误')
     }
-  }
-  let sf = new Snowflake(array[0], array[1], array[3])
-  let key = sf.nextId()
-  
-  console.log(key)
-})
+  })
+
 /**
  * 记录访问者的信息
  *  - x-forwarded-for --- 各阶段ip的CSV, 最左侧的是原始ip【如果使用代理，那么会是多层 IP 】

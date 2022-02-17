@@ -13,6 +13,7 @@
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
 	<title>my</title>
 	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
 	<style>
@@ -1586,9 +1587,11 @@
 <!--    警告框-->
 <div id="err"></div>
 </body>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script crossorigin="anonymous" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 <script src="emojis.js"></script>
+<script src="node_modules/crypto-js/index.js"></script>
+<script src="node_modules/crypto-js/crypto-js.js"></script>
 <script>
 	window.onload = function () {
 		let body_anonymous_flag = true
@@ -1933,14 +1936,20 @@
 				} else {
 					//	这里的内容一定是合法的长度
 					let str = strShorten(body_form_main.html())
-
-					$.post('http://127.0.0.1:3000/sendComment', {
-						name: user_name.val(),
-						eMail: user_eMail.val(),
-						isAnonymous: !body_anonymous_flag,
-						content: str,
+					$.get('http://127.0.0.1:3000/getKey', {
+						'Access-Control-Allow-Origin': 'http://127.0.0.1:3000',
+						'Access-Control-Allow-Credentials': 'true',
+						'Origin': 'http://127.0.0.1:3000',
 					}, function (data) {
-						console.log(data)
+						$.post('http://127.0.0.1:3000/sendComment', {
+							name: encrypt(data.key, data.offset, user_name.val()),
+							eMail: encrypt(data.key, data.offset, user_eMail.val()),
+							isAnonymous: !body_anonymous_flag,
+							content: str,
+						}, function (data) {
+							console.log(data)
+						})
+
 					})
 
 					toErr('发送成功')
