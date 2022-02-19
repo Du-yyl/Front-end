@@ -1,0 +1,47 @@
+<!--
+  ~ Time:2022/2/18 17:21 22
+  ~ Name:9-1监视属性.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>监视属性</title>
+
+</head>
+<body>
+<div id="root">
+	你好：{{ info() }}
+	<hr>
+	<button type="button" id="btn" @click="isTrue = !isTrue">按钮</button>
+	<hr>
+	点击按钮切换内容，方法实现
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			isTrue: true,
+		},
+		methods: {
+			info () {
+				return this.isTrue ? '真' : '假'
+			},
+		},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

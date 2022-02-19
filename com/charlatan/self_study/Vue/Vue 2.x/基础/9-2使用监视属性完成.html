@@ -1,0 +1,75 @@
+<!--
+  ~ Time:2022/2/18 17:49 37
+  ~ Name:9-2使用监视属性完成.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>监视属性</title>
+
+</head>
+<body>
+
+<div id="root">
+	你好：{{ }}
+	<hr>
+	<button type="button" id="btn" @click="isTrue = !isTrue">按钮</button>
+	<hr>
+	点击按钮切换内容，方法实现
+</div>
+<hr>
+<pre>
+	监视属性watch：
+	1.当被监视的属性变化时, 回调函数自动调用, 进行相关操作
+	2.监视的属性必须存在，才能进行监视！！
+	3.监视的两种写法：
+			(1).new Vue时传入watch配置
+			(2).通过vm.$watch监视
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			isTrue: true,
+		},
+		methods: {
+			fool () {
+				this.isTrue = !isTrue
+			},
+		},
+		computed: {},
+		// watch: {
+		// 	// 第一种方式实现监视
+		// 	isTrue: {
+		// 		// 初始化时让handler调用一下
+		// 		immediate: true,
+		// 		handler (newValue, oldValue) {
+		// 			console.log('我能进行监视的操作')
+		// 			console.log(newValue, oldValue)
+		// 		},
+		// 	},
+		// },
+	})
+	//	 第二种方式【使用VM自身携带的方法进行添加】
+
+	vm.$watch('isTrue', {
+		immediate: true,
+		handler (newValue, oldValue) {
+			console.log('同样可以进行监视')
+			console.log(newValue, oldValue)
+		},
+	})
+</script>
+</html>
