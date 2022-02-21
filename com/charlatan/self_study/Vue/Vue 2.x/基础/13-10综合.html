@@ -1,0 +1,100 @@
+<!--
+  ~ Time:2022/2/21 15:47 06
+  ~ Name:13-10综合.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>综合</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 15px YouYuan;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		.pre {
+			position: absolute;
+			top: 30px;
+			right: 40px;
+			background: #faebcc;
+
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="root">
+
+		<pre class="pre">
+		att -> {{ att }}
+		__________________
+		obj -> {{ obj.num }}
+			   {{ obj.pro }}
+
+			<ul><li v-for="(key ,value) in arr" :key="value">{{ key }}</li></ul>
+		</pre>
+	<button type="button" @click="att++">让指定属性+1</button>
+	<span>直接操作属性——>{{ att }}</span>
+	<br>
+	<br>
+	<button type="button" @click="obj.num++">让属性+1</button>
+	<span>操作对象中的属性——>{{ obj.num }}</span>
+	<br>
+	<br>
+	<button type="button" @click="addProperties">为对象中添加一个默认值</button>
+	<span>为obj添加一个属性——>{{ obj.num }}</span>
+	<br>
+	<br>
+	<button type="button" v-if="obj.pro" @click="obj.pro = '我保证他是响应式的'">为刚刚添加的属性修改一个值，来确保他是响应式的</button>
+	<span>修改刚刚添加的属性——>{{ obj.pro }}</span>
+	<hr>
+	<button type="button" @click="arr.unshift({name:'名字',age:'年龄',sex:'性别'})">在数组前添加一个数据</button>
+	<button type="button" @click="arr[0].name='我能保证'">确保刚刚新添加的属性是响应式的</button>
+
+	<button @click="arr.push('测试数据')">在数组最后添加一个内容</button>
+	<button @click="arr.splice(arr.length-1,arr.length,'他是响应式的')">修改最后一个内容</button>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			att: 10,
+			arr: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+			obj: {
+				num: 100,
+			},
+		},
+		methods: {
+			addProperties () {
+				vm.$set(this.obj, 'pro', '默认值')
+			},
+		},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

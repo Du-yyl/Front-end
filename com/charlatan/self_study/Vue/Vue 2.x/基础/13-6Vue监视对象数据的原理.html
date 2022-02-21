@@ -1,0 +1,45 @@
+<!--
+  ~ Time:2022/2/21 11:31 11
+  ~ Name:13-6Vue监视对象数据的原理.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Vue监视数据的原理</title>
+
+</head>
+<body>
+<div id="root">
+	<button type="button" @click="inputOne">按钮</button>
+	<hr>
+	<h2>
+		{{ obj.name }} -- {{ obj.sex }} - {{ obj.age }}
+	</h2>
+</div>
+</body>
+
+<script src="../vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			obj: {
+				name: '张三',
+				sex: '男',
+				age: 20,
+			},
+		},
+	})
+
+</script>
+</html>
