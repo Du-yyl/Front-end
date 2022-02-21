@@ -1,0 +1,118 @@
+<!--
+  ~ Time:2022/2/21 19:18 02
+  ~ Name:14收集表单数据.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>收集表单数据</title>
+
+</head>
+<body>
+<div id="root">
+	<form @submit.prevent="go">
+		<label for="account">
+			账号：<input type="text" name="" id="account" placeholder="请输入密码" v-model.trim="user.account">
+		</label>
+		<br>
+		<br>
+		<label for="password">
+			密码：<input type="text" name="" id="password" placeholder="请输入密码" v-model="user.password">
+		</label>
+		<br>
+		<br>
+		年龄:<input type="number" name="" id="" v-model.number="user.age">
+		<br>
+		<br>
+		性别：
+		<label for="man">
+			男
+			<input type="radio" value="male" v-model="user.sex" name="sex" id="man">
+		</label>
+		<label for="woman">
+			女
+			<input type="radio" value="female" v-model="user.sex" name="sex" id="woman">
+		</label>
+		<br>
+		<br>
+		爱好：
+		<label for="smoking">
+			抽烟 <input type="checkbox" name="" v-model="user.hobby" value="smoking" id="smoking">
+		</label>
+		<label for="wine">
+			喝酒 <input type="checkbox" name="" v-model="user.hobby" value="wine" id="wine">
+		</label>
+		<label for="perm">
+			烫头 <input type="checkbox" name="" v-model="user.hobby" value="perm" id="perm">
+		</label>
+		<br>
+		<br>
+		校区：
+		<select id="school" v-model="user.city">
+			<option value="1">第一校区</option>
+			<option value="2">第二校区</option>
+			<option value="3">第三校区</option>
+			<option value="4">第四校区</option>
+			<option value="5">第五校区</option>
+		</select>
+		<br>
+		<br>
+		其他信息：
+		<textarea id="text" v-model.lazy="user.text"></textarea>
+
+		<br>
+		<br>
+
+		<input type="submit" value="提交">
+	</form>
+
+</div>
+<pre>
+
+
+	单选框：使用同一个属性，并配置不同的value，当发生改变的时候就会进行转换，并将最新的数据进行更新
+	复选框：同样配置value，并将内容写到数组中，如果没有value如checkbox会默认收集指定输入框的checked
+	选择框：使用value进行默认值的选择，当选择出元素时，会将对应的value进行返回
+
+	v-model的修饰符
+	.number -> 将输入的内容先进行字符串到数字的转换
+	.lazy -> 设置表单失去焦点再收集数据
+	.trim -> 去除输入的前后空格
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			user: {
+				account: '',
+				password: '',
+				sex: 'male',
+				hobby: ['perm'],
+				city: '1',
+				text: '',
+				age: '',
+			},
+		},
+		methods: {
+			go (event) {
+				console.log(JSON.stringify(this.user))
+			},
+		},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

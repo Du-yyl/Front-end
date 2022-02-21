@@ -1,0 +1,41 @@
+<!--
+  ~ Time:2022/2/21 17:13 00
+  ~ Name:jsonp解决跨域.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/跨域
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>jsonp解决跨域</title>
+
+</head>
+<body>
+<pre>
+	实现的核心思想：
+		通过新建一个script标签，并且向指定url发送链接，并指定发送请求后指定的方法，在拿到返回数据后进行执行
+
+	缺点：只能发get请求，不能发post请求
+</pre>
+</body>
+<script>
+	var script = document.createElement('script')
+	script.type = 'text/javascript'
+	// 传参并指定回调执行函数为onBack
+	script.src = 'http://127.0.0.1:3000?callback=onBack'
+	document.head.appendChild(script)
+
+	function onBack (res) {
+		console.log(res)
+	}
+</script>
+<script>
+	onBack('测试例子')
+</script>
+</html>
