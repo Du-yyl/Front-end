@@ -1,0 +1,54 @@
+<!--
+  ~ Time:2022/2/22 10:07 54
+  ~ Name:16-2 V-html和安全问题.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>v-html和安全问题</title>
+
+</head>
+<body>
+<div id="root">
+	<span v-text="text"></span>
+	<br>
+	<span v-text="html"></span>
+	<span v-html="html"></span>
+</div>
+<hr>
+<pre>
+	v-html指令：
+		1.作用：向指定节点中渲染包含html结构的内容。
+		2.与插值语法的区别：
+			(1).v-html会替换掉节点中所有的内容，{{ xx }}则不会。
+			(2).v-html可以识别html结构。
+		3.严重注意：v-html有安全性问题！！！！
+			(1).在网站上动态渲染任意HTML是非常危险的，容易导致XSS攻击。
+			(2).一定要在可信的内容上使用v-html，永不要用在用户提交的内容上！
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			text: '我是测试的文本',
+			html: '<h3>我是测试的一个html代码</h3>',
+		},
+		methods: {},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

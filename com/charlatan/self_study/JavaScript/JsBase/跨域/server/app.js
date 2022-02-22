@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
   res.send('测试')
 })
 
-app.listen('3000', function () {
+app.listen('4000', function () {
   console.log('3000...')
 })
 
