@@ -1,0 +1,68 @@
+<!--
+  ~ Time:2022/2/22 13:59 27
+  ~ Name:17-1Vue的声明周期.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Vue的声明周期</title>
+
+</head>
+<body>
+<div id="root">
+	<h2 :style="{opacity}">
+		我是测试的文本
+	</h2>
+</div>
+<hr>
+<pre>
+	Vue完成页面加载，并把内容放入页面时，会执行一个函数，可以在这个函数中完成一些操作，
+
+	生命周期：
+		1.又名：生命周期回调函数、生命周期函数、生命周期钩子。
+		2.是什么：Vue在关键时刻帮我们调用的一些特殊名称的函数。
+		3.生命周期函数的名字不可更改，但函数的具体内容是程序员根据需求编写的。
+		4.生命周期函数中的this指向是vm 或 组件实例对象。
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			opacity: 0,
+		},
+		// 完成挂载
+		methods: {
+			'chang-opacity' () {
+				setInterval(() => {
+					this.opacity = this.opacity <= 0 ? 1 : this.opacity -= 0.01
+				}, 10)
+			},
+		},
+		computed: {},
+		watch: {},
+		mounted () {
+			setInterval(() => {
+				this.opacity = this.opacity <= 0 ? 1 : this.opacity -= 0.01
+			}, 10)
+		},
+	})
+
+	// setInterval(function () {
+	// 	console.log(vm.opacity);
+	// 	vm.opacity = vm.opacity <= 0 ? 1 : vm.opacity -= 0.01
+	// }, 10)
+
+</script>
+</html>
