@@ -1,0 +1,85 @@
+<!--
+  ~ Time:2022/2/22 21:43 06
+  ~ Name:18-2组件的嵌套.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>组件的嵌套</title>
+
+</head>
+<body>
+<div id="root">
+	<app></app>
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	let c1 = Vue.extend({
+		template: `
+			<div>
+			<h2>{{ text }}</h2>
+			<h2>{{ num }}</h2>
+			</div>
+		`,
+		data () {
+			return {
+				text: '我是c1测试文本',
+				num: 10,
+			}
+		},
+	})
+
+	let c2 = Vue.extend({
+		template: `
+			<div>
+			<h2>{{ text }}</h2>
+			<h2>{{ num }}</h2>
+			<c1></c1>
+			</div>
+		`,
+		data () {
+			return {
+				text: '我是c2的文本',
+				num: 20,
+			}
+		},
+		components: {
+			c1,
+		},
+	})
+
+	// 创建app组件
+	let app = Vue.extend({
+		template: `
+			<div>
+			<c2></c2>
+			</div>
+		`,
+		components: {
+			c2,
+		},
+	})
+	const vm = new Vue({
+		el: '#root',
+		methods: {},
+		computed: {},
+		watch: {},
+		components: {
+			app,
+		},
+	})
+
+</script>
+</html>
