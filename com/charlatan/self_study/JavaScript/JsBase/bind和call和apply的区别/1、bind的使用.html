@@ -39,22 +39,23 @@
 </body>
 <script>
 
-	var a = {
+	let a = {
 		b: function () {
-			var func = function () {
-				console.log(this.c);
-				console.log(this);
+			let func = function () {
+				console.log(this.c)
+				console.log(this)
 			}.bind(this)
-			console.log(this);
-			func();
+			console.log(this)
+			func()
 		},
-		c: 'Hello!'
+		c: 'Hello!',
 	}
 	a.b();
 
 
 	//第二种绑定方法
 	function f(y, z) {
+		console.log('-->', this.x, y, z)
 		return this.x + y + z;
 	}
 

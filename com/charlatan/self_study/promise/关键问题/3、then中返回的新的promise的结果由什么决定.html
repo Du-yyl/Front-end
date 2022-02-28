@@ -1,0 +1,41 @@
+<!--
+  ~ Time:2022/2/28 17:18 39
+  ~ Name:3、Promise指定多个回调.html
+  ~ Path:Web代码/src/com/charlatan/self_study/promise/基本使用
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>指定多个回调</title>
+
+</head>
+<body>
+<pre>
+	当正确执行了promise中的函数后，会返回一个新的promise对象，这个promise的成功与否，由要触发的元素怒决定
+	1、如果第一个promise是成功的，但是当执行回调的时候出现问题，那么新返回的promise就是失败的
+	2、如果自己指定了返回值（不是原来的promise，那么就是成功，成功的状态就是返回的内容
+	3、如果返回的的确是一个promise对象，那么这个promise的状态（成功与否）就是这个返回的promise的状态
+</pre>
+</body>
+<script>
+	let pro = new Promise((resolve, reject) => {
+		resolve('成功')
+
+	})
+	let ten = pro.then((value) => {
+		// throw "出错"
+		// return '123'
+		return new Promise((resolve, reject) => {
+			resolve('111111、')
+		})
+	})
+	console.log(ten)
+</script>
+</html>
