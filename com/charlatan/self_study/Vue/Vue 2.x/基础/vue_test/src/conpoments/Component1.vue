@@ -1,7 +1,7 @@
 <!--
-  ~ Time:2022/2/26 13:56 32
-  ~ Name:App.vue
-  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
+  ~ Time:2022/2/26 13:56 58
+  ~ Name:Component1.vue
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src/components
   ~ ProjectName:WWW
   ~ Author:charlatan
   ~
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'App',
+  name: 'Component1',
   data () {
     return {}
   },

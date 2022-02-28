@@ -1,5 +1,5 @@
 /**
- * Time:2022/2/26 13:56 36
+ * Time:2022/2/26 9:35 48
  * Name:main.js
  * Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
  * ProjectName:WWW
@@ -15,5 +15,4 @@ Vue.config.productionTip = false
 const vm = new Vue({
   el: '#app',
   render: createElement => createElement(App),
-  
 })
