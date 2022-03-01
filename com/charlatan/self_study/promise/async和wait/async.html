@@ -1,0 +1,40 @@
+<!--
+  ~ Time:2022/3/1 9:55 42
+  ~ Name:async.html
+  ~ Path:Web代码/src/com/charlatan/self_study/promise/async和wait
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>async</title>
+
+</head>
+<body>
+<pre>
+	如果返回的是一个Promise类型的数据【那么一定是成功的】
+	如果返回的结果是一个promise对象【那么这个promise的结果就是整体的结果】
+	如果抛出错误怕【那么返回的就是一个失败的promise对象】
+
+	1. 函数的返回值为 promise 对象
+	2. promise 对象的结果由 async 函数执行的返回值决定
+</pre>
+</body>
+<script>
+	async function main () {
+		// return 100
+		return new Promise((res, rej) => {
+			res('123')
+		})
+	}
+
+	let result = main()
+	console.log(result)
+</script>
+</html>

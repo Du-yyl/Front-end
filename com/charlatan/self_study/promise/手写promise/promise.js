@@ -17,7 +17,7 @@ function Promise (executor) {
   // 设置初始状态是 pending【后面更改为成功和失败】
   this.PromiseState = 'pending'
   
-  // 设置初始值【后面设置为更改时的赋值】
+  // 设置初始值【后面设置为成功时的值，或者失败的原因】
   this.PromiseResult = null
   
   // 如果promise中存在promise，那么要将多个promise中的调用的参数，按照顺序存放在数组中，按顺序调用

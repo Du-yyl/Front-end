@@ -1,0 +1,51 @@
+<!--
+  ~ Time:2022/3/1 11:26 58
+  ~ Name:4、默认配置的使用.html
+  ~ Path:Web代码/src/com/charlatan/self_study/axios/使用
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>默认配置的使用</title>
+	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+	<h2 class="page-header">基本使用</h2>
+	<button class="btn btn-primary">GET</button>
+	<button class="btn btn-warning">POST</button>
+	<button class="btn btn-success">PUT</button>
+	<button class="btn btn-danger">DELETE</button>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.js"></script>
+<script>
+	// 配置默认发送发送方式
+	axios.defaults.method = 'GET'
+	// 配置基础url
+	axios.defaults.baseURL = 'http://localhost:3000'
+	// 配置基本发送信息
+	axios.defaults.params = { id: 100 }
+	// 配置超时时间
+	axios.defaults.timeout = 3000
+
+	$('.btn:eq(0)').click(function () {
+		axios({
+			url: '/posts',
+		}).then((val) => {
+			console.log(val)
+		}, (res) => {
+			console.log(res)
+		})
+	})
+</script>
+</html>

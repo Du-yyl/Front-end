@@ -1,0 +1,43 @@
+<!--
+  ~ Time:2022/3/1 10:21 20
+  ~ Name:cehwsi.html
+  ~ Path:Web代码/src/com/charlatan/self_study/promise/async和wait
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	async function main () {
+		setTimeout(function () {
+			return 123
+		}, 1000)
+	}
+
+	function ma () {
+		console.log('hi')
+	}
+
+	ma()
+	console.log(main())
+	main().then((value) => {
+		console.log(value)
+		console.log('111')
+	}, (res) => {
+		console.log(res)
+		console.log('222')
+	})
+</script>
+</html>
