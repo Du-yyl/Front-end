@@ -1,0 +1,33 @@
+<!--
+  ~ Time:2022/3/1 22:11 41
+  ~ Name:cw4e.html
+  ~ Path:Web/src/com/charlatan/self_study/axios/sourceCode
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	//	 这里保存下面promise正确的回调，如果这个执行，那么就会将下面的promise改为成功
+	let con
+	let pro = new Promise((res, rej) => {
+		con = res
+	})
+
+	console.log(pro)
+	con()
+	console.log(pro)
+</script>
+</html>
