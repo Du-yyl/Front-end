@@ -1,7 +1,7 @@
 /**
- * Time:2022/3/2 20:08 27
+ * Time:2022/2/28 11:52 27
  * Name:main.js
- * Path:Web/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
+ * Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
  * ProjectName:WWW
  * Author:charlatan
  *
@@ -17,3 +17,4 @@ const vm = new Vue({
   render: createElement => createElement(App),
   
 })
+

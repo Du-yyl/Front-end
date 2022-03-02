@@ -1,7 +1,7 @@
 <!--
-  ~ Time:2022/2/28 11:52 43
-  ~ Name:Component1.vue
-  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src/components
+  ~ Time:2022/3/2 17:59 44
+  ~ Name:App.vue
+  ~ Path:Web/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
   ~ ProjectName:WWW
   ~ Author:charlatan
   ~
@@ -10,17 +10,21 @@
 
 <template>
   <div>
-
+    <Component1></Component1>
   </div>
 </template>
 
 <script>
+import Component1 from '@/components/Component1'
+
 export default {
-  name: 'Component1',
+  name: 'App',
   data () {
     return {}
   },
-  components: {},
+  components: {
+    Component1,
+  },
 }
 </script>
 

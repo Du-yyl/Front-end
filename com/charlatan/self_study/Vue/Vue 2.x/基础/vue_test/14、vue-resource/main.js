@@ -1,5 +1,5 @@
 /**
- * Time:2022/3/2 20:08 27
+ * Time:2022/3/2 17:59 49
  * Name:main.js
  * Path:Web/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
  * ProjectName:WWW
@@ -10,7 +10,10 @@
 
 import Vue from 'vue'
 import App from './App'
-
+// 引入插件
+import resource from 'vue-resource'
+// 使用插件
+Vue.use(resource)
 Vue.config.productionTip = false
 const vm = new Vue({
   el: '#app',

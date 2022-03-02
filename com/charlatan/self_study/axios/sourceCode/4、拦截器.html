@@ -65,7 +65,7 @@
 		// 创建一个promise对象
 		let promise = Promise.resolve(config)
 
-		// 创建一个空数组
+		// 创建一个空数组【undefined用来占位，用来保证当取出方法进行运行时，是成对运行的】
 		let chains = [dispatchRequest, undefined]
 
 		//	请求连接器 将氢气拦截器的回调 押入到 chains 的前面，request.handles = []
