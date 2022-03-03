@@ -10,7 +10,7 @@
 
 <template>
   <div>
-    <h2>当前的和是：{{ $store.state.sum }}</h2>
+    <h2>当前的和是：{{ sum }}</h2>
     &nbsp;
     <select v-model.number="num">
       <option class="js-options-table" :value=1>1</option>
@@ -33,28 +33,26 @@ export default {
   name: 'count',
   data () {
     return {
+      sum: 0,
       num: 1,
     }
   },
   components: {},
   methods: {
     add () {
-      // 因为逻辑业务简单，直接联系 mutations
-      // this.$store.dispatch('add', this.num)
-      this.$store.commit('ADD', this.num)
+      this.sum += this.num
     },
     deadd () {
-      this.$store.commit('DEADD', this.num)
+      this.sum -= this.num
     },
     addOdd () {
-      this.$store.dispatch('addOdd', this.num)
+      if (this.sum % 2 !== 0) {
+        this.add()
+      }
     },
     addWait () {
-      this.$store.dispatch('addWait', this.num)
+      setTimeout(this.add, 2000)
     },
-  },
-  mounted () {
-    console.log(this)
   },
 }
 </script>
