@@ -11,10 +11,6 @@
 <template>
   <div>
     <count></count>
-    <hr>
-    <person></person>
-    <hr>
-    <addTo></addTo>
   </div>
 </template>
 
@@ -22,8 +18,6 @@
 
 
 import count from '@/components/count'
-import person from '@/components/person'
-import addTo from '@/components/addTo'
 
 export default {
   name: 'App',
@@ -32,8 +26,6 @@ export default {
   },
   components: {
     count,
-    person,
-    addTo,
   },
 }
 </script>

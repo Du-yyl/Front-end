@@ -33,7 +33,7 @@ export default {
   components: {
     count,
     person,
-    addTo,
+    addTo
   },
 }
 </script>

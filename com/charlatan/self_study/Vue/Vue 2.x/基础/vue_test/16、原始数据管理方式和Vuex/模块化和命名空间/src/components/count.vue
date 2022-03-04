@@ -41,7 +41,7 @@ export default {
   },
   computed: {
     ...mapState('count', ['sum', 'name', 'age']),
-    ...mapGetters('count', { calculate: 'calculate' }),
+    ...mapGetters('count',{ calculate: 'calculate' }),
   },
   methods: {
     ...mapMutations('count', {

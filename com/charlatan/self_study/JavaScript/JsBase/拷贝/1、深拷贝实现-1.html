@@ -46,7 +46,7 @@
 		// 普通对象
 		obj_1: {
 			name: '我是一个对象',
-			id: 1
+			id: 1,
 		},
 		//多维对象
 		obj_2: {
@@ -62,10 +62,10 @@
 					b: 223,
 					c: 333,
 					d: {
-						e: 9999
-					}
-				}
-			}
+						e: 9999,
+					},
+				},
+			},
 		},
 		// 数组
 		arr_1: [0, 1, 2],
@@ -75,10 +75,10 @@
 			1, 2, 3, 4, 5, 6, [
 				12, 22, 32, 42, [
 					123, 223, 333, 423, [
-						9999
-					]
-				]
-			]
+						9999,
+					],
+				],
+			],
 		],
 		// 函数
 		func: function () {
@@ -93,20 +93,19 @@
 		// Set
 		set: new Set().add('set'),
 		// =========== 3.其他 ===========
-		[Symbol('1')]: 1  // Symbol作为key
-	};
+		[Symbol('1')]: 1,  // Symbol作为key
+	}
 	// 4.添加不可枚举属性
 	Object.defineProperty(obj, 'innumerable', {
 		enumerable: false,
-		value: '不可枚举属性'
-	});
+		value: '不可枚举属性',
+	})
 	// 5.设置原型对象
 	Object.setPrototypeOf(obj, {
-		proto: 'proto'
+		proto: 'proto',
 	})
 	// 6.设置loop成循环引用的属性
 	obj.loop = obj
-
 
 	/**
 	 * 使用JSON的方法进行深拷贝
@@ -114,7 +113,7 @@
 	 * @param target 传入的字符串
 	 * @returns {any} 返回的深拷贝的对象
 	 */
-	function deepClone(target) {
+	function deepClone (target) {
 		if (typeof target === 'object' || target !== null) {
 			return JSON.parse(JSON.stringify(target))
 		} else {
@@ -122,7 +121,7 @@
 		}
 	}
 
-	console.log(deepClone(obj));
+	console.log(deepClone(obj))
 
 
 </script>

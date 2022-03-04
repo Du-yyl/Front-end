@@ -40,16 +40,36 @@ export default {
     }
   },
   computed: {
-    ...mapState('count', ['sum', 'name', 'age']),
-    ...mapGetters('count', { calculate: 'calculate' }),
+    ...mapState(['sum', 'name', 'age']),
+    ...mapGetters({
+      calculate: 'calculate',
+    }),
   },
   methods: {
-    ...mapMutations('count', {
+    // add () {
+    // 因为逻辑业务简单，直接联系 mutations
+    // this.$store.dispatch('add', this.num)
+    //   this.$store.commit('ADD', this.num)
+    // },
+    // deadd () {
+    //   this.$store.commit('DEADD', this.num)
+    // },
+
+    // 这里使用这种形式的时候，在调用的时候不传参数，但是生成的函数中是会传入一个参数的，如果不指定，那么就会把event传入进去，这时如果再进行其他操作就会出现错误
+    // 解决方法：在调用的时候传入参数，并指定参数的内容
+    ...mapMutations({
       add: 'ADD',
       deadd: 'DEADD',
     }),
 
-    ...mapActions('count', ['addWait', 'addOdd']),
+    // addOdd () {
+    //   this.$store.dispatch('addOdd', this.num)
+    // },
+    // addWait () {
+    //   this.$store.dispatch('addWait', this.num)
+    // },
+
+    ...mapActions(['addWait', 'addOdd']),
   },
   mounted () {
     console.log(this)
