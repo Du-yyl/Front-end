@@ -10,20 +10,24 @@
 
 <template>
   <div>
-    <count></count>
+
+    <h2 id="h2">
+      使用路由进行不同组件之间的切换
+    </h2>
     <hr>
-    <person></person>
-    <hr>
-    <addTo></addTo>
+    <tab id="tab"></tab>
+    <div class="container">
+      <router-view></router-view>
+    </div>
+
   </div>
 </template>
 
 <script>
-
-
-import count from '@/components/count'
-import person from '@/components/person'
-import addTo from '@/components/addTo'
+import tab from './components/tab'
+import about from './pages/about'
+import user from './pages/user'
+import home from './pages/home'
 
 export default {
   name: 'App',
@@ -31,13 +35,32 @@ export default {
     return {}
   },
   components: {
-    count,
-    person,
-    addTo,
+    tab,
+    about,
+    home,
+    user,
   },
 }
 </script>
 
 <style scoped>
+#h2 {
+  position: relative;
+  top: 20px;
+  left: 200px;
+  width: 500px;
+}
 
+#tab {
+  position: relative;
+  left: 200px;
+  top: 40px;
+}
+
+.container {
+  background: #e3d9d9;
+  position: absolute;
+  left: 350px;
+  top: 180px;
+}
 </style>
