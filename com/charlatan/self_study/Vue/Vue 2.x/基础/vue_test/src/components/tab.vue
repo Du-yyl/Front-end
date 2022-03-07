@@ -10,7 +10,6 @@
 
 <template>
   <div class="div">
-
     <ul class="ul">
       <li class="li" v-for="tab in tabs" :key="tab.id">
         <router-link

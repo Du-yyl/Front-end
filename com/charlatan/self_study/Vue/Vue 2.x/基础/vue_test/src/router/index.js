@@ -34,9 +34,16 @@ export default new VueRouter({
         {
           path: 'news', component: news, children: [
             {
-              path: 'now/:id/:title', component: now, name: 'now',
-            },
-          ],
+              path: '/home/news/now/:id/:title',
+              component: now,
+              name: 'now',
+              props ({ query: { id, title } }) {
+                return {
+                  id,
+                  title,
+                }
+              },
+            }],
         }],
     },
     

@@ -13,408 +13,408 @@
 	<meta charset="UTF-8">
 	<title>boss直聘</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        body {
-            background-color: #5dd5c8;
-        }
+		body {
+			background-color: #5dd5c8;
+		}
 
-        li {
-            list-style: none;
-        }
+		li {
+			list-style: none;
+		}
 
-        #back {
-            width: 1920px;
-            height: 500px;
-            background-image: url("file/back_img.png");
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 0;
-        }
+		#back {
+			width: 1920px;
+			height: 500px;
+			background-image: url("file/back_img.png");
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+		}
 
-        #box {
-            width: 750px;
-            height: 600px;
-            background-color: #ffffff;
-            position: relative;
-            top: 150px;
-            left: 450px;
-            border-radius: 2%;
-            box-shadow: 0 0 6px #59cbbf;
-        }
+		#box {
+			width: 750px;
+			height: 600px;
+			background-color: #ffffff;
+			position: relative;
+			top: 150px;
+			left: 450px;
+			border-radius: 2%;
+			box-shadow: 0 0 6px #59cbbf;
+		}
 
-        /*---------左展示列表---------------*/
-        #body_left {
-            width: 250px;
-            height: 600px;
-            background-color: #f8fcff;
-            border-bottom-left-radius: 10px;
-            border-top-left-radius: 10px;
-            position: absolute;
-            top: 0;
-        }
+		/*---------左展示列表---------------*/
+		#body_left {
+			width: 250px;
+			height: 600px;
+			background-color: #f8fcff;
+			border-bottom-left-radius: 10px;
+			border-top-left-radius: 10px;
+			position: absolute;
+			top: 0;
+		}
 
-        #left_1 {
-            background-image: url("file/logo.png");
-            background-size: 60px;
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            top: 80px;
-            left: 40px;
-            cursor: pointer;
-        }
+		#left_1 {
+			background-image: url("file/logo.png");
+			background-size: 60px;
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			top: 80px;
+			left: 40px;
+			cursor: pointer;
+		}
 
-        #l1_span {
-            width: 100px;
-            height: 80px;
-            position: absolute;
-            left: 71px;
-            top: 8px;
-            color: #5ad7cf;
-        }
+		#l1_span {
+			width: 100px;
+			height: 80px;
+			position: absolute;
+			left: 71px;
+			top: 8px;
+			color: #5ad7cf;
+		}
 
-        /*+++++++++*/
-        #left_2 {
-            width: 30px;
-            height: 48px;
-            background-image: url("file/list_img.png");
-            background-size: 30px;
-            position: absolute;
-            top: 250px;
-            left: 55px;
-        }
+		/*+++++++++*/
+		#left_2 {
+			width: 30px;
+			height: 48px;
+			background-image: url("file/list_img.png");
+			background-size: 30px;
+			position: absolute;
+			top: 250px;
+			left: 55px;
+		}
 
-        #l_2_span {
-            position: absolute;
-            top: 245px;
-            left: 100px;
-        }
+		#l_2_span {
+			position: absolute;
+			top: 245px;
+			left: 100px;
+		}
 
-        /*+++++++++++*/
-        #left_3 {
-            width: 30px;
-            height: 431px;
-            background-image: url("file/list_img.png");
-            background-size: 30px;
-            position: absolute;
-            top: 280px;
-            left: 55px;
-            clip: rect(60px 30px 100px 0px);
-        }
+		/*+++++++++++*/
+		#left_3 {
+			width: 30px;
+			height: 431px;
+			background-image: url("file/list_img.png");
+			background-size: 30px;
+			position: absolute;
+			top: 280px;
+			left: 55px;
+			clip: rect(60px 30px 100px 0px);
+		}
 
-        #l_3_span {
-            position: absolute;
-            top: 338px;
-            left: 100px;
-        }
+		#l_3_span {
+			position: absolute;
+			top: 338px;
+			left: 100px;
+		}
 
-        /*+++++++++++*/
-        .s1 {
-            font-size: 17px;
-            font-weight: bold;
-            color: #8d92a1;
-        }
+		/*+++++++++++*/
+		.s1 {
+			font-size: 17px;
+			font-weight: bold;
+			color: #8d92a1;
+		}
 
-        .s2 {
-            font-size: 14px;
-            color: #b0b4c1;
-        }
+		.s2 {
+			font-size: 14px;
+			color: #b0b4c1;
+		}
 
-        /*---------top文字---------*/
-        #top_span {
-            position: fixed;
-            top: 50px;
-            right: 30px;
-            color: #b0ebe4;
-            width: 240px;
-            height: 40px;
-            font-weight: bold;
-        }
+		/*---------top文字---------*/
+		#top_span {
+			position: fixed;
+			top: 50px;
+			right: 30px;
+			color: #b0ebe4;
+			width: 240px;
+			height: 40px;
+			font-weight: bold;
+		}
 
-        #top_img {
-            position: absolute;
-            left: -34px;
-            top: -2px;
-        }
+		#top_img {
+			position: absolute;
+			left: -34px;
+			top: -2px;
+		}
 
-        /*--------body right-----------------*/
-        #body_right {
-            width: 500px;
-            height: 600px;
-            position: absolute;
-            left: 250px;
-            border-bottom-right-radius: 13px;
-            border-top-right-radius: 13px;
-        }
+		/*--------body right-----------------*/
+		#body_right {
+			width: 500px;
+			height: 600px;
+			position: absolute;
+			left: 250px;
+			border-bottom-right-radius: 13px;
+			border-top-right-radius: 13px;
+		}
 
-        #erweima {
-            width: 150px;
-            height: 80px;
-            background-image: url("file/more_img.png");
-            position: absolute;
-            background-size: 110px;
-            background-repeat: no-repeat;
-            left: 370px;
-            top: 20px;
-            clip: rect(0px 110px 40px 70px);
-            cursor: pointer;
-        }
+		#erweima {
+			width: 150px;
+			height: 80px;
+			background-image: url("file/more_img.png");
+			position: absolute;
+			background-size: 110px;
+			background-repeat: no-repeat;
+			left: 370px;
+			top: 20px;
+			clip: rect(0px 110px 40px 70px);
+			cursor: pointer;
+		}
 
-        #e_1 {
-            width: 130px;
-            height: 43px;
-            background-color: #5dd5c8;
-            position: absolute;
-            top: 17px;
-            left: 300px;
-        }
+		#e_1 {
+			width: 130px;
+			height: 43px;
+			background-color: #5dd5c8;
+			position: absolute;
+			top: 17px;
+			left: 300px;
+		}
 
-        #e_2 {
-            position: absolute;
-            top: 30px;
-            left: 430px;
-            border-left: 12px solid #5dd5c8;
-            border-bottom: 7px solid transparent;
-            border-top: 7px solid transparent;
-        }
+		#e_2 {
+			position: absolute;
+			top: 30px;
+			left: 430px;
+			border-left: 12px solid #5dd5c8;
+			border-bottom: 7px solid transparent;
+			border-top: 7px solid transparent;
+		}
 
-        #e_1 {
-            color: #ffffff;
-            height: 43px;
-            line-height: 43px;
-            text-align: center;
-        }
+		#e_1 {
+			color: #ffffff;
+			height: 43px;
+			line-height: 43px;
+			text-align: center;
+		}
 
-        /*++++++=++++*/
-        #password {
-            width: 150px;
-            height: 50px;
-            border: 1px solid #53cac3;
-            line-height: 50px;
-            text-align: center;
-            color: #53cac3;
-            position: absolute;
-            top: 80px;
-            left: 80px;
-            cursor: pointer;
-        }
+		/*++++++=++++*/
+		#password {
+			width: 150px;
+			height: 50px;
+			border: 1px solid #53cac3;
+			line-height: 50px;
+			text-align: center;
+			color: #53cac3;
+			position: absolute;
+			top: 80px;
+			left: 80px;
+			cursor: pointer;
+		}
 
-        #emil {
-            width: 150px;
-            height: 50px;
-            border: 1px solid black;
-            line-height: 50px;
-            text-align: center;
-            color: black;
-            position: absolute;
-            top: 80px;
-            left: 260px;
-            cursor: pointer;
-        }
+		#emil {
+			width: 150px;
+			height: 50px;
+			border: 1px solid black;
+			line-height: 50px;
+			text-align: center;
+			color: black;
+			position: absolute;
+			top: 80px;
+			left: 260px;
+			cursor: pointer;
+		}
 
-        #emil:hover {
-            border: 1px solid #53cac3;
-            color: #53cac3;
-        }
+		#emil:hover {
+			border: 1px solid #53cac3;
+			color: #53cac3;
+		}
 
-        /*++++++++++++*/
-        #phone_number_div {
-            width: 330px;
-            height: 55px;
-            border: 1px solid #e3e7ed;
-            position: absolute;
-            top: 145px;
-            left: 80px;
-        }
+		/*++++++++++++*/
+		#phone_number_div {
+			width: 330px;
+			height: 55px;
+			border: 1px solid #e3e7ed;
+			position: absolute;
+			top: 145px;
+			left: 80px;
+		}
 
-        #phno {
-            width: 36px;
-            height: 66px;
-            background-image: url("file/icons.png");
-            position: absolute;
-            top: -1800px;
-            left: 10px;
-            clip: rect(1810px 36px 1850px 0px);
-        }
+		#phno {
+			width: 36px;
+			height: 66px;
+			background-image: url("file/icons.png");
+			position: absolute;
+			top: -1800px;
+			left: 10px;
+			clip: rect(1810px 36px 1850px 0px);
+		}
 
-        #p_span {
-            position: absolute;
-            top: 17px;
-            left: 35px;
-        }
+		#p_span {
+			position: absolute;
+			top: 17px;
+			left: 35px;
+		}
 
-        #phone_number {
-            width: 250px;
-            height: 55px;
-            border: 0;
-            position: absolute;
-            top: 0;
-            left: 80px;
-            outline: none;
-        }
+		#phone_number {
+			width: 250px;
+			height: 55px;
+			border: 0;
+			position: absolute;
+			top: 0;
+			left: 80px;
+			outline: none;
+		}
 
 
-        /*+++++++++++++++++++*/
-        #pasword {
-            width: 330px;
-            height: 55px;
-            position: absolute;
-            border: 1px solid #e3e7ed;
-            top: 220px;
-            left: 80px;
-        }
+		/*+++++++++++++++++++*/
+		#pasword {
+			width: 330px;
+			height: 55px;
+			position: absolute;
+			border: 1px solid #e3e7ed;
+			top: 220px;
+			left: 80px;
+		}
 
-        #password_div {
-            width: 36px;
-            /*height: 66px;*/
-            background-image: url("file/icons.png");
-            position: absolute;
-            left: 10px;
-            top: -1795px;
-            clip: rect(1795px 27px 1869px 0px);
-        }
+		#password_div {
+			width: 36px;
+			/*height: 66px;*/
+			background-image: url("file/icons.png");
+			position: absolute;
+			left: 10px;
+			top: -1795px;
+			clip: rect(1795px 27px 1869px 0px);
+		}
 
-        #pass {
-            position: absolute;
-            top: 0px;
-            left: 50px;
-            width: 270px;
-            height: 52px;
-            border: 0;
-            outline: none;
+		#pass {
+			position: absolute;
+			top: 0px;
+			left: 50px;
+			width: 270px;
+			height: 52px;
+			border: 0;
+			outline: none;
 
-        }
+		}
 
-        #yanzheng {
-            width: 330px;
-            height: 55px;
-            border: 1px solid #cccccc;
-            background: linear-gradient(#ffffff 40%, #f3f3f3 60%);
-            line-height: 55px;
-            text-align: center;
-            position: absolute;
-            top: 300px;
-            left: 80px;
-        }
+		#yanzheng {
+			width: 330px;
+			height: 55px;
+			border: 1px solid #cccccc;
+			background: linear-gradient(#ffffff 40%, #f3f3f3 60%);
+			line-height: 55px;
+			text-align: center;
+			position: absolute;
+			top: 300px;
+			left: 80px;
+		}
 
-        #yuan {
-            width: 20px;
-            height: 20px;
-            background-color: #3873ff;
-            border-radius: 100%;
-            position: absolute;
-            margin-top: 16px;
-            left: 30px;
-        }
+		#yuan {
+			width: 20px;
+			height: 20px;
+			background-color: #3873ff;
+			border-radius: 100%;
+			position: absolute;
+			margin-top: 16px;
+			left: 30px;
+		}
 
-        #yanzheng:hover {
-            cursor: pointer;
-            background: linear-gradient(#f3f3f3 40%, #ffffff 60%);
-        }
+		#yanzheng:hover {
+			cursor: pointer;
+			background: linear-gradient(#f3f3f3 40%, #ffffff 60%);
+		}
 
-        #login {
-            width: 330px;
-            height: 55px;
-            position: absolute;
-            background-color: #5dd5c8;
-            line-height: 55px;
-            text-align: center;
-            border-radius: 2%;
-            top: 380px;
-            left: 80px;
-            color: white;
-        }
+		#login {
+			width: 330px;
+			height: 55px;
+			position: absolute;
+			background-color: #5dd5c8;
+			line-height: 55px;
+			text-align: center;
+			border-radius: 2%;
+			top: 380px;
+			left: 80px;
+			color: white;
+		}
 
-        #login:hover {
-            background-color: #6adbcf;
-            border-radius: 2%;
-            cursor: pointer;
-            transition: all .3s;
-        }
+		#login:hover {
+			background-color: #6adbcf;
+			border-radius: 2%;
+			cursor: pointer;
+			transition: all .3s;
+		}
 
-        #ul_1 {
-            position: absolute;
-            width: 700px;
-            top: 450px;
-            left: 80px;
-        }
+		#ul_1 {
+			position: absolute;
+			width: 700px;
+			top: 450px;
+			left: 80px;
+		}
 
-        #weixin {
-            position: absolute;
-            width: 36px;
-            height: 166px;
-            background-image: url("file/weixin.png");
-            background-size: 30px;
-            background-repeat: no-repeat;
-            top: -60px;
-            clip: rect(60px 30px 200px 0px);
-        }
+		#weixin {
+			position: absolute;
+			width: 36px;
+			height: 166px;
+			background-image: url("file/weixin.png");
+			background-size: 30px;
+			background-repeat: no-repeat;
+			top: -60px;
+			clip: rect(60px 30px 200px 0px);
+		}
 
-        #ul_1_1 {
-            margin-left: 40px;
-        }
+		#ul_1_1 {
+			margin-left: 40px;
+		}
 
-        #ul_1_1 li {
-            float: left;
-            word-spacing: 40px;
-        }
+		#ul_1_1 li {
+			float: left;
+			word-spacing: 40px;
+		}
 
-        .s3 {
-            font-size: 15px;
-            color: #9fa3b0;
-        }
+		.s3 {
+			font-size: 15px;
+			color: #9fa3b0;
+		}
 
-        .s3:hover {
-            color: #3accbd;
-            cursor: pointer;
-        }
+		.s3:hover {
+			color: #3accbd;
+			cursor: pointer;
+		}
 
-        .s4 {
-            font-size: 15px;
-            color: #20c5b4;
-        }
+		.s4 {
+			font-size: 15px;
+			color: #20c5b4;
+		}
 
-        .s4 {
-            cursor: pointer;
-        }
+		.s4 {
+			cursor: pointer;
+		}
 
-        #li_2 {
-            position: absolute;
-            top: 40px;
-        }
+		#li_2 {
+			position: absolute;
+			top: 40px;
+		}
 
-        #li_3 {
-            position: absolute;
-            top: 80px;
-            left: 20px;
-        }
+		#li_3 {
+			position: absolute;
+			top: 80px;
+			left: 20px;
+		}
 
-        #ul_4 {
-            position: absolute;
-            top: 110px;
-            left: -20px;
-        }
+		#ul_4 {
+			position: absolute;
+			top: 110px;
+			left: -20px;
+		}
 
-        #ul_4 li {
-            float: left;
-            border-right: 1px solid #8d92a1;
-            word-spacing: 5px;
-        }
+		#ul_4 li {
+			float: left;
+			border-right: 1px solid #8d92a1;
+			word-spacing: 5px;
+		}
 
-        #s22 {
-            border-right: 1px solid white !important;
-        }
+		#s22 {
+			border-right: 1px solid white !important;
+		}
 
-        /*-------------------------*/
-        ::selection {
-            background-color: #00d7c6;
-            color: #ebfcfb;
-        }
+		/*-------------------------*/
+		::selection {
+			background-color: #00d7c6;
+			color: #ebfcfb;
+		}
 
 	</style>
 </head>

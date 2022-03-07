@@ -1,0 +1,44 @@
+<!--
+  ~ Time:2022/3/5 9:33 58
+  ~ Name:9、this指向.html
+  ~ Path:Web/src/com/charlatan/question/Javascript/this
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>this</title>
+
+</head>
+<body>
+<pre>
+	因为在 func2 的原型中，因为是func1的实例，但是所保存的 num 是没有赋值的，所以是undefined，在这个原型的原型中也保存也一个num这个是
+	func1的原型，他的值是 99
+</pre>
+</body>
+<script>
+	function func1 (num) {
+		this.num = num
+	}
+
+	func1.prototype.num = 99
+
+	function func2 (num) {
+		this.num = num
+	}
+
+	func2.prototype = new func1()
+
+	let a = new func1(2), b = new func2(3)
+	delete b.num
+	console.log(a.num)
+	console.log(b.num)
+
+</script>
+</html>

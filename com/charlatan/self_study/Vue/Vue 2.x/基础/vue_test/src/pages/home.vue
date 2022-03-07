@@ -27,7 +27,15 @@
 
     </ul>
 
-    <router-view></router-view>
+    <!--
+        keep-alive 保持活跃，可以指定某个组件不被销毁，如果不指定，那么在这里展示的组件都不会被销毁
+        可以使用 include 指定让某个组件不会被销毁【这里直接配置的是组件名】
+    -->
+    <keep-alive include="mag">
+      <router-view>
+      </router-view>
+    </keep-alive>
+
   </div>
 </template>
 

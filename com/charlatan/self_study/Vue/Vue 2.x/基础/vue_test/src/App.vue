@@ -14,6 +14,7 @@
     <h2 id="h2">
       使用路由进行不同组件之间的切换
     </h2>
+    <btns class="btn"></btns>
     <hr>
     <tab id="tab"></tab>
     <div class="container">
@@ -28,6 +29,7 @@ import tab from './components/tab'
 import about from './pages/about'
 import user from './pages/user'
 import home from './pages/home'
+import btns from '@/pages/btns'
 
 export default {
   name: 'App',
@@ -39,6 +41,7 @@ export default {
     about,
     home,
     user,
+    btns,
   },
 }
 </script>
@@ -62,5 +65,11 @@ export default {
   position: absolute;
   left: 350px;
   top: 180px;
+}
+
+.btn {
+  position: relative;
+  left: 200px;
+  top: 30px;
 }
 </style>
