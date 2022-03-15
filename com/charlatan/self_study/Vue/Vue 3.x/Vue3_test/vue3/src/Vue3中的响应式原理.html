@@ -1,0 +1,136 @@
+<!--
+  ~ Time:2022/3/15 16:50 39
+  ~ Name:Vue3中的响应式原理.html
+  ~ Path:Web/src/com/charlatan/self_study/Vue/Vue 3.x/Vue3_test/vue3/src
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Vue3中的响应式原理</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	let person = {
+		name: '张三',
+		age: 10,
+	}
+
+	// 使用 proxy 时要传入两个参数，第一个参数是 要进行代理的对象，第二个参数是处理对象（包含了对传入的数据的一些操作方式
+	let p = new Proxy(person, {
+		/**
+		 * 这个方法调用的时候会传入两个参数，通过这两个参数可以将指定的参数进行返回，并通过这两个属性可以完成内容监视
+		 * @param target{Object}第一个参数是原始数据，并将完整内容传入
+		 * @param propName {String}第二个参数是访问的属性名称
+		 * @returns {*}通过前两个属性的调用，使用调用的形式，将对象中的内容进行返回
+		 */
+		get (target, propName) {
+			console.log('读取')
+			return target[propName]
+		},
+		/**
+		 * 和get相似，不过set方法会接收第三个参数，也就是指定内容的要修改的内容
+		 * 并且这个方法在新增的时候也会调用这个方法
+		 * @param target
+		 * @param propName
+		 * @param value {*} 修改后的值
+		 */
+		set (target, propName, value) {
+			console.log(propName + '修改')
+			target[propName] = value
+		},
+
+		/**
+		 * 删除
+		 * @param target 要删除操作的对象
+		 * @param propName 要删除的 key
+		 */
+		deleteProperty (target, propName) {
+			console.log('删除')
+			return delete target[propName]
+		},
+	})
+
+	let nums = {
+		num1: 10,
+		num2: 20,
+	}
+
+	//	reflect 属性，是es6新增属性，并且会渐渐向reflect移植原来 Object 对象中存在的属性，如 defineProperty 属性
+	//	并且对于 reflect 也进行特殊的封装，使用这个函数可以让函数更加健壮
+
+	//	使用Object中的方式新增属性：【这里重复定义了这个属性，程序会直接进行报错处理】
+	// Object.defineProperty(nums, 'num3', {
+	// 	get () {
+	// 		return 3
+	// 	},
+	// })
+	// Object.defineProperty(nums, 'num3', {
+	// 	get () {
+	// 		return 3
+	// 	},
+	// })
+
+	//	使用 reflect 中的方法
+	// 使用 reflect 进行新增属性，即使会报错也会继续执行程序，不同通过返回的 true 和 false 进行判断是否操作成功，
+	// 这样即使出现错误也不会报错，但是程序可以正常的执行，所以，Vue中也使用了这个特性
+	let n1 = Reflect.defineProperty(nums, 'num3', {
+		get () {
+			return 3
+		},
+	})
+	console.log(n1)
+
+	let n2 = Reflect.defineProperty(nums, 'num3', {
+		get () {
+			return 3
+		},
+	})
+	console.log(n2)
+
+	//	Vue3中较为完整啊的操作样式，通过这个可以让程序更加健壮
+
+	let n = new Proxy(nums, {
+		/**
+		 * 这个方法调用的时候会传入两个参数，通过这两个参数可以将指定的参数进行返回，并通过这两个属性可以完成内容监视
+		 * @param target{Object}第一个参数是原始数据，并将完整内容传入
+		 * @param propName {String}第二个参数是访问的属性名称
+		 * @returns {*}通过前两个属性的调用，使用调用的形式，将对象中的内容进行返回
+		 */
+		get (target, propName) {
+			console.log('读取')
+			return Reflect(target, propName)
+		},
+		/**
+		 * 和get相似，不过set方法会接收第三个参数，也就是指定内容的要修改的内容
+		 * 并且这个方法在新增的时候也会调用这个方法
+		 * @param target
+		 * @param propName
+		 * @param value {*} 修改后的值
+		 */
+		set (target, propName, value) {
+			console.log(propName + '修改')
+			return Reflect(target, propName, value)
+		},
+
+		/**
+		 * 删除
+		 * @param target 要删除操作的对象
+		 * @param propName 要删除的 key
+		 */
+		deleteProperty (target, propName) {
+			console.log('删除')
+			return Reflect.deleteProperty(target, propName)
+		},
+	})
+</script>
+</html>

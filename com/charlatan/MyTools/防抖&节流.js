@@ -60,17 +60,17 @@ function throttling (callback, time) {
  * 节流的方法
  *  这个方法使用了 callBack.call(this)
  *  使这个方法的调用指定的回调函数时，依然可以准确得返回i，并使用最原始的调用者进行调用
- * @param callBack 防抖要执行的回调函数
- * @param time 多久执行一次，默认值为1秒
+ * @param callBack {function}防抖要执行的回调函数
+ * @param time{Number} 多久执行一次，默认值为1秒
  * @returns {(function(): void)|*} 具体方法使用闭包形式返回
  */
-function debounce (callBack, time = 1000) {
+function debounce (callBack, time = 500) {
   let flag = true
   return function () {
     let timer = null
     if (flag) {
       flag = false
-      callBack.call(this)
+      callBack.call(this, this)
       timer = setTimeout(() => {
         flag = true
         clearTimeout(timer)
