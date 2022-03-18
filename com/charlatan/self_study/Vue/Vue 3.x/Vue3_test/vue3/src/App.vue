@@ -2,7 +2,6 @@
   <div class="div">
     祖组件
     <Suspense>
-
       <template v-slot:default>
         <Child></Child>
       </template>
