@@ -1,0 +1,78 @@
+<!--
+  ~ Time:2022/3/20 17:07 33
+  ~ Name:JSX语法规则.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/3、JSX语法
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 15px YouYuan;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		.title {
+			background: red;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="text"></div>
+</body>
+<script src="../../oldVersionOfReact/react.development.js"></script>
+<script src="../../oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	/**
+	 * JSX混入表达式要使用{}
+	 * 使用JSX要使用一些定义的变量时，可以使用花括号的形式进行包裹
+	 * 在JSX中使用定义的css样式，不能使用class的形式直接进行定义，要使用新属性 className
+	 * 内联样式不能直接使用 style="" 的形式进行写，要使用 style={{}} 的形式进行书写
+	 * 不能有多个根标签，只能在一个中进行书写
+	 *  如果定义的虚拟DOM中含有标签，并且是小写字母开始，那么React会直接将这个标签当作html中的标签进行处理，如果无同名元素，直接报错
+	 *  大写字母，react会自动渲染指定的组件，如果找不到，直接报错
+	 */
+	let DomMsg = {
+		id: 'title',
+		data: 'Hello World',
+	}
+
+	const VDom = (
+			<div>
+				<h1 className="title" id={DomMsg.id}>
+				<span style={
+					{ color: 'white', fontSize: '30px' }
+				}>
+					{DomMsg.data}
+				</span>
+				</h1>
+				<input type="text"/>
+			</div>
+	)
+	ReactDOM.render(VDom, document.getElementById('text'))
+
+</script>
+
+</html>
