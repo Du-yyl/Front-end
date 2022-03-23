@@ -1,0 +1,40 @@
+<!--
+  ~ Time:2022/3/22 13:32 48
+  ~ Name:1、函数式组件.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/4、React创建虚拟DOM
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+<div id="test">
+
+</div>
+</body>
+<script src="../../oldVersionOfReact/react.development.js"></script>
+<script src="../../oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	function Demo (a, b, c) {
+		/**
+		 * 这里的this是undefined，因为这个代码会经过babel的翻译，而babel开启了严格模式，严格模式中严谨this指向window
+		 */
+		console.log(this)
+		console.log(a, b, c)
+		return <h1>我是函数定义的组件</h1>
+	}
+
+	//	 渲染组件到页面
+	ReactDOM.render(<Demo/>, document.getElementById('test'))
+</script>
+</html>

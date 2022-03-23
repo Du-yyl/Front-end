@@ -1,0 +1,48 @@
+<!--
+  ~ Time:2022/3/22 16:13 36
+  ~ Name:2、state的简写形式.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/5、组件的三大属性
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+<div id="test"></div>
+</body>
+<script src="../../oldVersionOfReact/react.development.js"></script>
+<script src="../../oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	class Weather extends React.Component {
+		state = {
+			weather: true,
+		}
+
+		render () {
+			return (
+					<h1 onClick={this.changHot}>今天天气{this.state.weather ? '炎热' : '凉爽'}</h1>
+			)
+		}
+
+		changHot = () => {
+			this.setState({
+				weather: !this.state.weather,
+			})
+		}
+	}
+
+	ReactDOM.render(<Weather/>, document.getElementById('test'))
+
+</script>
+
+</html>

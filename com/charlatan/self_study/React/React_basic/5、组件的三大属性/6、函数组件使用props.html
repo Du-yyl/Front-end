@@ -1,0 +1,60 @@
+<!--
+  ~ Time:2022/3/22 17:55 10
+  ~ Name:6、函数组件使用props.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/5、组件的三大属性
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+
+</head>
+<body>
+<div id="test"></div>
+<div id="test1"></div>
+</body>
+
+<script src="../../oldVersionOfReact/react.development.js"></script>
+<script src="../../oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../oldVersionOfReact/babel.min.js"></script>
+<script src="../../oldVersionOfReact/prop-types.js"></script>
+<script type="text/babel">
+	/**
+	 * 函数组件也能使用 props 因为他能接收参数，通过这个参数就能进行返回值的处理
+	 * @param props
+	 * @returns {JSX.Element}
+	 * @constructor
+	 */
+	function Person (props) {
+		return (
+				<ul>
+					数据展示：
+					<li>名字：{props.name}</li>
+					<li>年龄：{props.age}</li>
+					<li>msg：{props.msg}</li>
+				</ul>
+		)
+	}
+
+	Person.propTypes = {
+		name: PropTypes.string,
+		age: PropTypes.string.isRequired,
+		msg: PropTypes.string,
+	}
+	Person.defaultProps = {
+		msg: '测试数据',
+	}
+
+	let person = { name: '测试', age: '20' }
+	ReactDOM.render(<Person {...person}  />, document.getElementById('test'))
+	ReactDOM.render(<Person name="jack" age="10" msg="321"/>, document.getElementById('test1'))
+</script>
+</html>

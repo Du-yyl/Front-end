@@ -1,0 +1,57 @@
+<!--
+  ~ Time:2022/3/22 15:07 11
+  ~ Name:10、类中方法调用的this指向问题.html
+  ~ Path:Web/src/com/charlatan/question/Javascript/this
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	class Demo {
+		showMsg () {
+			return this
+		}
+	}
+
+	let demo = new Demo()
+	/**
+	 * 这个调用的时候使用的是Demo的实例对象，所以 this 指向的是新创建的实例对象
+	 */
+	console.log(demo.showMsg())
+	let showMsg = demo.showMsg
+	/**
+	 * 这个是将Demo中的showMsg保存在一个全新的变量showMsg中
+	 * 原本的情况是：这个方法保存在堆内存中，并由栈内存中保存的这个方法的指向，然后进行调用
+	 * 现在使用了一个全新的变量进行保存，当这个变量调用的时候，属于函数的直接调用，没有指向实例，
+	 * 而函数的直接调用 this 指向的是window，而使用类进行定义的方法默认开启严格模式（局部严格模式），随意是 undefined
+	 */
+	console.log(showMsg())
+
+	// --------------------------------------------
+	//	同理，即使模仿 class 的原理，那么使用 prototype 进行指定，不使用严格模式，默认指向的 window
+	function Comp () {}
+
+	Comp.prototype.show = function () {
+		// 'use strict'
+		return this
+	}
+	let comp = new Comp()
+	console.log(comp.show())
+
+	let show = comp.show
+	console.log(show())
+</script>
+</html>
