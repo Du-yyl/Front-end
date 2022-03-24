@@ -12258,7 +12258,8 @@
     if (oldState !== instance.state) {
       {
         warningWithoutStack$1(false,
-          '%s.componentWillMount(): Assigning directly to this.state is ' + 'deprecated (except inside a component\'s ' +
+          '%s.componentWillMount(): Assigning directly to this.state is ' +
+          'deprecated (except inside a component\'s ' +
           'constructor). Use setState instead.', getComponentName(workInProgress.type) || 'Component')
       }
       classComponentUpdater.enqueueReplaceState(instance, instance.state, null)

@@ -1,7 +1,7 @@
 <!--
-  ~ Time:2022/3/20 16:37 20
-  ~ Name:1、使用JSX创建虚拟DOM.html
-  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/2、虚拟DOM的两种创建方式
+  ~ Time:2022/3/23 16:12 16
+  ~ Name:事件处理.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/6、事件处理
   ~ ProjectName:WWW
   ~ Author:charlatan
   ~
@@ -17,29 +17,28 @@
 
 </head>
 <body>
-<div id="text">
-
-</div>
+<div id="test"></div>
 </body>
-<!--    引入核心库-->
 <script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
-<!--    引入DOM库-->
 <script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
-<!--    用于将 jsx 转为 js-->
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
-<!--    这里写的类型是babel，不是原生JS，通过 Babel 进行翻译-->
 <script type="text/babel">
-	//	创建虚拟ＤＯＭ
-	const VDom = (
-			<h1 id="title">
-				<span>
-					Hello World
-				</span>
-			</h1>
-	)   // 这里使用的是JSX，不能使用引号进行包裹
-	//	渲染虚拟DOM到页面
-	ReactDOM.render(VDom, document.getElementById('text'))
+	class Demo extends React.Component {
+		render () {
+			return (
+					<div>
+						<input type="text"/>
+						<button onClick={this.showClick}>点击提示内容</button>
+					</div>
+			)
+		}
+
+		showClick = (event) => {
+			console.log(event.target)
+		}
+	}
+
+	ReactDOM.render(<Demo/>, document.getElementById('test'))
 
 </script>
-
 </html>

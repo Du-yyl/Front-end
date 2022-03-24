@@ -1,7 +1,7 @@
 <!--
-  ~ Time:2022/3/22 16:27 13
-  ~ Name:3、props.html
-  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/5、组件的三大属性
+  ~ Time:2022/3/23 16:36 32
+  ~ Name:1、非受控组件.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/6、事件处理
   ~ ProjectName:WWW
   ~ Author:charlatan
   ~
@@ -18,28 +18,34 @@
 </head>
 <body>
 <div id="test"></div>
-<div id="test1"></div>
 </body>
 
 <script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
 <script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
 <script type="text/babel">
-	class Person extends React.Component {
+	class Longin extends React.Component {
+		username = React.createRef()
+		userPassword = React.createRef()
 
 		render () {
 			return (
-					<ul>
-						数据展示：
-						<li>名字：{this.props.name}</li>
-						<li>年龄：{this.props.age}</li>
-						<li>msg：{this.props.msg}</li>
-					</ul>
+					<form action="https://www.baidu.com" onSubmit={this.login}>
+						账号：<input name="username" ref={this.username} type="text"/>
+						密码：<input name="userPassword" ref={this.userPassword} type="password"/>
+						<button>登录</button>
+					</form>
 			)
+		}
+
+		login = (event) => {
+			event.preventDefault()
+			console.log(this.username)
+			console.log(this.userPassword)
 		}
 	}
 
-	ReactDOM.render(<Person name="tom" age="20" msg="123"/>, document.getElementById('test'))
-	ReactDOM.render(<Person name="jack" age="10" msg="321"/>, document.getElementById('test1'))
+	ReactDOM.render(<Longin/>, document.getElementById('test'))
+
 </script>
 </html>
