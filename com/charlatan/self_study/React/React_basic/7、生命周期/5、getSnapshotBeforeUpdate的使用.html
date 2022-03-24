@@ -1,0 +1,102 @@
+<!--
+  ~ Time:2022/3/24 14:41 49
+  ~ Name:5、getSnapshotBeforeUpdate的使用.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/7、生命周期
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 15px YouYuan;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#div {
+			width: 200px;
+			height: 200px;
+			background: bisque;
+			overflow: auto;
+		}
+
+		.news {
+			width: 170px;
+			height: 30px;
+			background: aliceblue;
+			margin: 5px;
+			text-align: center;
+			line-height: 30px;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="test"></div>
+</body>
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	class List extends React.Component {
+		state = {
+			newList: [],
+		}
+		divHeight = React.createRef()
+		componentDidMount () {
+			setInterval(() => {
+				let news = '新闻 - ' + (this.state.newList.length + 1)
+				this.setState({
+					newList: [news, ...this.state.newList],
+				})
+			}, 500)
+		}
+
+		getSnapshotBeforeUpdate () {
+			return this.divHeight.current.scrollHeight
+		}
+
+		/**
+		 * 在更新之前使用 getSnapshotBeforeUpdate 获取更新前的状态，并通过传输的方式，将这些信息进行传递，然后和更新后的进行对比，计算更新后的数据，将这些数据进行抵消，实现效果
+		 * @param preProps
+		 * @param preState
+		 * @param snapshotValue
+		 */
+		componentDidUpdate (preProps, preState, snapshotValue) {
+			this.divHeight.current.scrollTop +=this.divHeight.current.scrollHeight- snapshotValue
+		}
+
+		render () {
+			return (
+					<div id="div" ref={this.divHeight}>
+						{this.state.newList.map((item, index) => {
+							return <div className="news" key={index}>{item}</div>
+						})}
+					</div>
+			)
+		}
+
+	}
+
+	ReactDOM.render(<List/>, document.getElementById('test'))
+
+</script>
+</html>

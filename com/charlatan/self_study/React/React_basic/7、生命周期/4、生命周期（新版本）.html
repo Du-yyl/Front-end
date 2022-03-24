@@ -1,0 +1,147 @@
+<!--
+  ~ Time:2022/3/24 13:12 46
+  ~ Name:4、7、生命周期（新版本）.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/7、生命周期
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+<div id="test"></div>
+</body>
+<script src="../../ReactLibrary/newVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/newVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/newVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+
+	class Count extends React.Component {
+		constructor (props) {
+			super(props)
+			console.log('Count-constructor')
+		}
+
+		state = {
+			sum: 0,
+		}
+
+		/**
+		 * 这个在构造器之后调用
+		 * 这个方法必须定义成静态的，因为这个方法是为这个组件使用的，而不是让组件的实例使用
+		 * 这个方法必须有返回值，可以是一个 state 状态对象，也可以是null，但是必须有返回值
+		 *  如果返回 null 那么将什么也不影响
+		 *  如果返回的是一个状态对象（本质就是一个对象，这对象中包含了状态（state）中的内容），那么这个返回的内容将作为state中的内容，影响页面的渲染
+		 * 这个函数能接收一个 props 变量，并且是一个对象【如果为这个返回值直接传递这个 props ，使用一样的key，那么可以通过 props 来影响 state
+		 */
+		static getDerivedStateFromProps(props,state){
+			console.log(props,state);
+			console.log("count-getDerivedStateFromProps");
+			return null
+			// return {
+			// 	sum:100
+			// }
+		}
+		
+		// 组件挂载完毕
+		componentDidMount () {
+			console.log('Count-componentDidMount')
+		}
+
+		// ##########更新过程################
+		// 更新组件数据时会先调用这个钩子，如果这个钩子不写，永远都是 true ，如果写了还返回的是 false 那么回调仍然执行，但是数据页面不会被渲染
+		// 控制组件更新的阀门
+		shouldComponentUpdate () {
+			console.log('Count-shouldComponentUpdate')
+			return true
+		}
+
+		/**
+		 * 获取快照在更新之前
+		 * 这个钩子的钩子可以返回一个null，或者返回一个快照，可以是任何内容，数字，字符串，对象，都可以
+		 */
+		getSnapshotBeforeUpdate(){
+			console.log("Count-getSnapshotBeforeUpdate");
+			return 'null'
+		}
+
+		// 组件更新之后【这个回调能收到参数，一个是更新前的 props 和 更新前的 state
+		componentDidUpdate (preProps,preState,snapshotValue) {
+			console.log('Count-componentDidUpdate',preProps,preState,snapshotValue)
+		}
+
+		render () {
+			console.log('Count-render')
+			const { sum } = this.state
+			return (
+					<div>
+						<h3>现在的数字是：{sum}</h3>
+						<button onClick={this.add}>点击加1</button>
+						<button onClick={this.update}>强制更新</button>
+					</div>
+			)
+		}
+
+		add = () => {
+			this.setState({
+				sum: this.state.sum + 1,
+			})
+			console.log(this.state.sum)
+		}
+
+		update = () => {
+			this.forceUpdate()
+		}
+	}
+
+	class A extends React.Component {
+		state = {
+			msg: '第一个测试信息',
+		}
+
+		render () {
+			return (
+					<div>
+						A组件
+						<button onClick={this.click}>更新B组件信息</button>
+						<hr/>
+						<B msg={this.state.msg}></B>
+					</div>
+			)
+		}
+
+		click = () => {
+			this.setState({
+				msg: '第二个x测试信息',
+			})
+		}
+
+	}
+
+	class B extends React.Component {
+
+		render () {
+			return (
+					<div>
+						B组件
+						<div>
+							展示信息：
+							{this.props.msg}
+						</div>
+					</div>
+			)
+		}
+	}
+
+	ReactDOM.render(<Count/>, document.getElementById('test'))
+
+</script>
+</html>

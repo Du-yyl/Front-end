@@ -8381,7 +8381,7 @@
     }
   }
 
-// Calculate the diff between the two objects.
+// Calculate the 8、diff between the two objects.
   function diffProperties (domElement, tag, lastRawProps, nextRawProps, rootContainerElement) {
     {
       validatePropertiesInDevelopment(tag, nextRawProps)
@@ -8549,7 +8549,7 @@
     return updatePayload
   }
 
-// Apply the diff.
+// Apply the 8、diff.
   function updateProperties (domElement, updatePayload, tag, lastRawProps, nextRawProps) {
     // Update checked *before* name.
     // In the middle of an update, it is possible to have multiple checked.
@@ -8560,7 +8560,7 @@
     
     var wasCustomComponentTag = isCustomComponent(tag, lastRawProps)
     var isCustomComponentTag = isCustomComponent(tag, nextRawProps)
-    // Apply the diff.
+    // Apply the 8、diff.
     updateDOMProperties(domElement, updatePayload, wasCustomComponentTag, isCustomComponentTag)
     
     // TODO: Ensure that an update gets scheduled if any of the special props
@@ -9523,7 +9523,7 @@
     // Update the props handle so that we know which props are the ones with
     // with current event handlers.
     updateFiberProps(domElement, newProps)
-    // Apply the diff to the DOM node.
+    // Apply the 8、diff to the DOM node.
     updateProperties(domElement, updatePayload, type, oldProps, newProps)
   }
   
