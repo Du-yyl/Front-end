@@ -1,5 +1,5 @@
 /**
- * Time:2022/3/25 12:58 12
+ * Time:2022/3/25 22:21 25
  * Name:index.jsx
  * Path:src/components/List
  * ProjectName:react_scaffold
@@ -12,48 +12,60 @@ import React, { Component } from 'react'
 import './index.css'
 
 export default class List extends Component {
-  spanDelete = React.createRef()
   
   render () {
-    let {msg,done} = this.props
+    let { showList, reason, going,errMsg } = this.props
     return (
-      <li id="list">
-        {/*
-        defaultChecked 能默认选中勾选，checked如果设置，那么这个选中变成只读的了，并不能进行更改
-        这个属性只在第一次有作用，其他时机不起作用
-        */}
-        <input type="checkbox" className="check" checked={done} onChange={this.checkChange}/>
-        <span className={ this.props.done?'span spanDelete':'span' } ref={this.spanDelete}>
-        {msg}
-        </span>
-        <button className="btn" onClick={this.deleteList}>删除</button>
-      </li>
+      <div id="List">
+        {
+          showList.length === 0 ?
+            <h1>输入内容，开始搜索</h1>
+            :
+            reason ?
+              going ?
+                <h1>搜索中 ... </h1>
+                :
+                <ul className="ul">
+                  {
+                    showList.map((item) => {
+                      return <li
+                        className="li"
+                        key={item.id}>
+                        <img
+                          src={item.avatar_url}
+                          className="img"
+                          alt=""/>
+                        <span
+                          className="span">
+                          {item.login}
+                      </span>
+                      </li>
+                    })
+                  }
+                </ul>
+              :
+              <h1>{errMsg}</h1>
+        }
+  
+        {
+          // 三元运算符的连写形式：
+          // isFirst ? <h2>欢迎使用，输入关键字，随后点击搜索</h2> :
+          //   isLoading ? <h2>Loading......</h2> :
+          //     err ? <h2 style={{color:'red'}}>{err}</h2> :
+          //       users.map((userObj)=>{
+          //         return (
+          //           <div key={userObj.id} className="card">
+          //             <a rel="noreferrer" href={userObj.html_url} target="_blank">
+          //               <img alt="head_portrait" src={userObj.avatar_url} style={{width:'100px'}}/>
+          //             </a>
+          //             <p className="card-text">{userObj.login}</p>
+          //           </div>
+          //         )
+          //       })
+        }
+      
+      </div>
     )
   }
   
-  /**
-   * 当组件都渲染完毕的时候调用，让指定的内容添加class
-   */
-  componentDidMount () {
-    // if (this.props.done) {
-    //   this.spanDelete.current.classList.add('spanDelete')
-    // }else {
-    //   this.spanDelete.current.classList.remove('spanDelete')
-    // }
-  }
-  
-  /**
-   * 点击删除的时候触发
-   */
-  deleteList = () => {
-    this.props.delMsg(this.props.id)
-  }
-  
-  /**
-   * 选中按钮发生改变的时候触发
-   * @param event
-   */
-  checkChange = (event) => {
-    this.props.comMsg(this.props.id,event.target.checked)
-  }
 }
