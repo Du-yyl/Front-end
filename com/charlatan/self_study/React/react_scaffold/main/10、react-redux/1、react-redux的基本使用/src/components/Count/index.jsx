@@ -9,17 +9,15 @@
  */
 
 import React, { Component } from 'react'
-import store from '../../redux/store'
-import { createSubtractAction, createAppAction } from '../../redux/count_action'
 
 export default class Count extends Component {
   selectRef = React.createRef()
   
   render () {
-    console.log(store.getState())
+    console.log(this.props);
     return (
       <div id="Count">
-        <h1>当前求和为：{store.getState()}</h1>
+        <h1>当前求和为：{this.props.count}</h1>
         
         <select ref={this.selectRef}>
           <option value="1">1</option>
@@ -39,24 +37,20 @@ export default class Count extends Component {
   
   add = () => {
     let num = parseInt(this.selectRef.current.value)
-    store.dispatch(createAppAction(num))
-    
+    this.props.add(num)
   }
   subtract = () => {
     let num = parseInt(this.selectRef.current.value)
-    store.dispatch(createSubtractAction(num))
+    this.props.subtract(num)
   }
   oddAdd = () => {
     let num = parseInt(this.selectRef.current.value)
-    if (store.getState() % 2) {
-      store.dispatch(createAppAction(num))
-      
+    if (this.props.count % 2){
+      this.props.add(num)
     }
   }
   waitAdd = () => {
     let num = parseInt(this.selectRef.current.value)
-    setTimeout(() => {
-      store.dispatch(createAppAction(num))
-    }, 1000)
+    this.props.asyncAdd(num,1000)
   }
 }

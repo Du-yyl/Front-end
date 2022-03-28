@@ -13,10 +13,11 @@
  */
 
 // 引入 createStore ，专门用于创建 redux 中最为核心的 store 对象
-import { createStore } from 'redux'
+import { createStore,applyMiddleware } from 'redux'
 // 引入为 Count 服务的 reducer
 import count_reducer from './count_reducer'
+import thunk from 'redux-thunk'
 
-export default createStore(count_reducer)
+export default createStore(count_reducer,applyMiddleware(thunk))
 
 

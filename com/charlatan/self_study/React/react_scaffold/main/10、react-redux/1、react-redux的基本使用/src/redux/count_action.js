@@ -13,7 +13,8 @@ import { ADD, SUBTRACT } from './constant'
 这个文件专门为 count 生成 action 对象
  */
 
-const createAppAction = data => ({
+
+const createAddAction = data => ({
   type: ADD,
   data,
 })
@@ -23,7 +24,18 @@ const createSubtractAction = data => ({
   data,
 })
 
+
+const createAsyncAdd = (data, time) => {
+  return (dispatch) => {
+    setTimeout(() => {
+      console.log(dispatch);
+      dispatch(createAddAction(data))
+    }, time)
+  }
+}
+
 export {
   createSubtractAction,
-  createAppAction,
+  createAddAction,
+  createAsyncAdd,
 }

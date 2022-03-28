@@ -1,13 +1,13 @@
 /**
  * Time:2022/3/27 19:37 42
- * Name:count_reducer.js
+ * Name:count.js
  * Path:src/redux
  * ProjectName:react_scaffold
  * Author:charlatan
  *
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
-import { ADD, SUBTRACT } from './constant'
+import { ADD, SUBTRACT } from '../constant'
 
 /*
 这个文件用于创建一个为 Count 组件服务的 reducer ，reducer 本质是一个函数
@@ -21,7 +21,7 @@ const initState = 0
  * @param preSate 上一个状态
  * @param action 动作对象【这个动作对象中会有两个参数，一个是 type 一个是 data
  */
-function count_reducer (preSate = initState, action) {
+function count (preSate = initState, action) {
   // 如果走到这句，那么一定是初始化状态
   if (preSate === undefined) preSate = 0
   const { type, data } = action
@@ -42,4 +42,4 @@ function count_reducer (preSate = initState, action) {
   
 }
 
-export default count_reducer
+export default count
