@@ -62,3 +62,5 @@ fs.open('test.txt', 'w', function (err, fd) {
 })
 // console.log(f);
 console.log('程序从上往下执行')
+
+let exg =/^(13[0-9]|14 |15 [0-3,5-9]|16 |17 |18 [0-9]|19)d {8}$/
