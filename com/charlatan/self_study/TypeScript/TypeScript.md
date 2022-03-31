@@ -116,46 +116,45 @@
          // c = 123
          ```
 
-   3.  any 和 unknown 的声明
+   3. any 和 unknown 的声明
 
-      1. any
+       1. any
 
-         1. any 类型可以接收任意内容的赋值，并且可以赋值给任意已指定类型的变量，并且**被赋值变量指定的类型将被无视**
-         2. 显式 any ：定义时直接指定为 any :`let 变量 = any`，
-         3. 隐式 any : 定义时不进行赋值，不进行类型的指定：`let 变量`，这种方式默认也是any
+           1. any 类型可以接收任意内容的赋值，并且可以赋值给任意已指定类型的变量，并且**被赋值变量指定的类型将被无视**
+           2. 显式 any ：定义时直接指定为 any :`let 变量 = any`，
+           3. 隐式 any : 定义时不进行赋值，不进行类型的指定：`let 变量`，这种方式默认也是any
+           4. any会关闭TS的类型检查
 
-         ```ts
-         let c: string
-         
-         /*
-         any 可以代表任何类型，和原本的 JS　一样
-         如果定义变量时，不赋值，不指定类型，那么这个变量类型也是 any（隐式 any）
-          */
-         let d: any
-         d = true
-         d = 123
-         // 定义的时不对类型进行声明，并且不赋值，这个变量会默认为 any
-         let f
-         
-         // 因为 d 的类型是 any ，如果使用 any 类型向指定类型的变量赋值，那么也能成功赋值，并且被赋值的变量变为 any
-         c = d
-         ```
-
-         
+          ```ts
+          let c: string
+          
+          /*
+          any 可以代表任何类型，和原本的 JS　一样
+          如果定义变量时，不赋值，不指定类型，那么这个变量类型也是 any（隐式 any）
+           */
+          let d: any
+          d = true
+          d = 123
+          // 定义的时不对类型进行声明，并且不赋值，这个变量会默认为 any
+          let f
+          
+          // 因为 d 的类型是 any ，如果使用 any 类型向指定类型的变量赋值，那么也能成功赋值，并且被赋值的变量变为 any
+          c = d
+          ```
 
       2. unknown 
-
+   
          1. unknown 也是可以接收任意类型的赋值，基本使用和 any 差不多
-
+   
          2. 定义的时候直接指定：`let e: unknown`，表示类型未知，接收任何参数
-
+   
          3. unknown 定义的时候虽然能接收任何数据，但是如果想要进行赋值，并且要赋值的变量已经指定了类型，那么无论如何都不能赋值，除非进行类型的判断；或进行类型断言（可以告诉解析器指定变量的实际类型）
-
+   
             **<u>类型断言</u>**：【以下两种方式效果一样】
-
+   
             1. `指定变量 as string` 使用 `as` 语句进行指明类型
             2. ` <string>指定变量` 使用这种方式也可以进行指定
-
+   
          ```ts
          /*
          unknown 也是指定类型为任意，表示未知
@@ -175,36 +174,36 @@
          
          ```
 
-   4. void 和 never 的声明：
+4. void 和 never 的声明：
 
-      1. void ：代表不能有任何内容，一般用于函数的返回值中，如果指定 `void`那么这个函数只能返回 **`空` | `null` | `undefined`** 这三种类型，不能是其他类型
+    1. void ：代表不能有任何内容，一般用于函数的返回值中，如果指定 `void`那么这个函数只能返回 **`空` | `null` | `undefined`** 这三种类型，不能是其他类型
 
-      2. never ： 代表永远不会有内容，不能有任何值，一般用于方法中，不返回任何内容（空也不能返回），这种方法一般用于抛出异常
+    2. never ： 代表永远不会有内容，不能有任何值，一般用于方法中，不返回任何内容（空也不能返回），这种方法一般用于抛出异常
 
-         ```ts
-         /*
-         void 【函数没有返回值，可以使用 void 可以返回 空 | undefined | null 都可以】
-          */
-         function sum():void {
-           // return
-           // return null
-           return undefined
-         }
-         
-         /*
-         never 表示永远表示永远没有返回结果【这个什么都不能返回，空也算返回的，所以，这个一般用于指定报错的】
-          */
-         function sam():never {
-           throw new Error('错误')
-         }
-         
-         ```
+       ```ts
+       /*
+       void 【函数没有返回值，可以使用 void 可以返回 空 | undefined | null 都可以】
+        */
+       function sum():void {
+         // return
+         // return null
+         return undefined
+       }
+       
+       /*
+       never 表示永远表示永远没有返回结果【这个什么都不能返回，空也算返回的，所以，这个一般用于指定报错的】
+        */
+       function sam():never {
+         throw new Error('错误')
+       }
+       
+       ```
 
-   5. Object 和 Array 的声明
+5. Object 和 Array 的声明
 
-      1. Object：声明一个对象，但是JS中`{} ,function ,array`等都是对象，所以不能使用`let 变量:object`进行强限制`object`表示非原始类型，也就是除`number`，`string`，`boolean`，`symbol`，`null`或`undefined`之外的类型
+    1. Object：声明一个对象，但是JS中`{} ,function ,array`等都是对象，所以不能使用`let 变量:object`进行强限制`object`表示非原始类型，也就是除`number`，`string`，`boolean`，`symbol`，`null`或`undefined`之外的类型
 
-         1. 定义普通对象：
+        1. 定义普通对象：
 
             1. 指定对象中必须存在一些内容，`let 变量:{ name: string ,age: number}`表示必须有`name`和`age`并且不能多，不能少，类型也必须正确
 
@@ -228,36 +227,34 @@
                c = { name: '测试数据', a: 1, c: 2 ,d:true}
                ```
 
-         2. 指定 Function
+        2. 指定 Function
 
-            指定Function类似与箭头函数`let 变量名: (变量名: 变量类型, 变量名: 变量类型, ... ) => 返回值类型`
+           指定Function类似与箭头函数`let 变量名: (变量名: 变量类型, 变量名: 变量类型, ... ) => 返回值类型`
 
-            ```ts
-            // 指定一个函数，第一个变量是数字类型，第二个是数字类型，返回值是数字类型
-            let d: (a: number, b: number) => number
-            
-            d = function (a, b): number {
-              return 123
-            }
-            ```
+           ```ts
+           // 指定一个函数，第一个变量是数字类型，第二个是数字类型，返回值是数字类型
+           let d: (a: number, b: number) => number
+           
+           d = function (a, b): number {
+             return 123
+           }
+           ```
 
-      2. Array
+    2. Array
 
-         定义数组就是在指定的类型后加上` [] `定义指定的数组类型（因为开发中一个数组只有一种数据类型，所以，定义的时候直接定义数组类型）
+       定义数组就是在指定的类型后加上` [] `定义指定的数组类型（因为开发中一个数组只有一种数据类型，所以，定义的时候直接定义数组类型）
 
-         1.  使用`类型+[]`的形式定义
+        1.  使用`类型+[]`的形式定义
 
-            ```ts
-            let 变量名 = 类型[]
-            ```
+          ```ts
+          let 变量名 = 类型[]
+          ```
 
-         2. 使用泛型定义
+        2. 使用泛型定义
 
-            ```ts
-            let 变量名: Array<数组内元素类型 | 数组内元素类型>
-            ```
-
-            
+           ```ts
+           let 变量名: Array<数组内元素类型 | 数组内元素类型>
+           ```
 
          ```ts
          // 数组
@@ -273,11 +270,11 @@
          g = [1, 2, 3, 4, '123']
          
          ```
-
+   
       3.  tuple 和 enum
-
+   
          1. tuple 【元组：固定长度的数组】定义的时候，内容长了不行，短了不行，顺序不对也不行
-
+   
             ```ts	
             
             // tuple【元组：固定长度的数组】 多了不行，少了也不行，顺序错了也不行
@@ -285,9 +282,9 @@
             h = ['hello', 123]
             
             ```
-
+   
          2. enum 【枚举：将可能结果进行列举】使用定义的变量内容更方便
-
+   
             ```ts	
             // enum 【枚举：将可能的情况全部列出来
             enum Gender {
@@ -303,11 +300,11 @@
               gender: Gender.Male,
             }
             ```
-
+   
          3. <u>**类型别名**</u>
-
+   
             通过 type 定义别名，如果指定的类型很长，并且多次使用，可以这么用
-
+   
             ```ts
             // 类型别名【通过 type 定义别名，如果指定的类型很长，并且多次使用，可以这么用
             type MyType1 = string
@@ -692,4 +689,218 @@
 
   6. 在src下创建ts文件，并在并命令行执行```npm run build```对代码进行编译，或者执行```npm start```来启动开发服务器
 
+     ## TypeScript面向对象
+  
+     > 面向对象三大特征：**<u>封装，继承，多态</u>**
+  
+     - 封装
+  
+       > 将指定的内容不进行暴漏，从而保证数据的安全性
+  
+       1. public **公共的** 任意位置都能访问
+  
+       2. private **私有属性** 只能在这个类中进行修改
+  
+       3. protected **受保护的** 只能在当前类和当前类的子类中使用
+     
+          ```ts
+          // 使用语法糖进行定义，这种方式和使用 this.属性 = 属性 是相同的  
+          class Class {
+              constructor (
+                public name: string, protected age: number, private address: string) {}
+            }
+          ```
+     
+          
+     
+     - 继承
+     
+       - TS中实现继承
+     
+         和JS的内容基本相同，不过实现了更多的东西
+     
+         ```ts
+           function () {
+             class Person {
+               name: string
+               age: number
+               
+               constructor (name: string, age: number) {
+                 this.name = name
+                 this.age = age
+               }
+                 
+               sayHello () {
+                 console.log('你好')
+               }
+             }
+             
+             class Xiao extends Person {
+               sayHello () {
+                 console.log('我是子类的你好')
+               }
+             }
+         ```
+     
+       - 抽象类实现
+     
+         抽象类和一般类区别不大，**不过抽线类是专门用来被继承的**
+     
+         抽象方法：
+     
+         - **只有抽象类能定义抽象方法**
+         - 抽象方法由`abstract`开始
+         - 不用写方法体
+         - **子类必须对其进行实现**
+     
+         定义实现抽象类，使用`abstract`进行实现，并且可以通过这个关键字定义抽象方法
+     
+         
+     
+         
+     
+         ```ts
+             abstract class Person {
+               name: string
+               age: number
+               
+               constructor (name: string, age: number) {
+                 this.name = name
+                 this.age = age
+               }
+         
+               abstract sayHello (): void
+             }
+             
+             class Xiao extends Person {
+               sayHello () {
+                 console.log('我是子类的你好')
+               }
+             }
+         ```
+     
+     - 接口
+     
+       > 接口的作用类似于抽象类，不同点在于接口中的所有方法和属性都是没有实值的，换句话说接口中的所有方法都是抽象方法。接口主要负责定义一个类的结构，接口可以去限制一个对象的接口，对象只有包含接口中定义的所有属性和方法时才能匹配接口。同时，可以让一个类去实现接口，实现接口时类中要保护接口中的所有属性。
+     
+       1. 使用接口定义一个类的结构
+     
+          > 接口用来定义一个类结构，用来定义一个类中应该包含哪些属性和内容
+          > 同时接口可以当作类型声明去使用
+          > **接口可以重复定义，不同的内容将进行叠加**，重复的内容如果类型不一样，那么将会报错
+  
+          ```ts
+            interface myInterface {
+              name: string,
+              age: number
+            }
+             interface myInterface {
+              gender:string,
+            }
+       // 当定义了两个是，不同内容进行叠加，所以实现的时候要定义全部内容          
+            const obj: myInterface = {
+              name: '张三',
+              age: 20,
+              // address: '北京',
+            }
+          ```
+     
+          
+     
+       2. 定义接口【<u>定义一个类的时候，可以指定实现一个接口</u> 】
+     
+          >  接口可以在定义类的时候**<u>限制类的结构</u>**
+          >   接口中所有的属性都**<u>不能有实际的值</u>**
+          >   **接口只定义对象的结构**，而不考虑实际值
+          >   在接口中，**所有的方法都是抽象方法**
+     
+          ```ts
+            // 定义一个接口
+            interface myInter {
+              gender: string,
+              sayHello (): void
+            }
+            // 实现一个接口
+            class Demo implements myInter {
+              private _gender: string
+              
+              constructor (gender: string) {
+                this._gender = gender
+              }
+              
+              get gender (): string {
+                return this._gender
+              }
+              
+              set gender (value: string) {
+                this._gender = value
+              }
+              
+              sayHello (): void {
+              
+              }
+              
+          ```
+     
+          
+     
+     - 泛型
+     
+       > 在定义类和函数时，如果变量的类型不确定，那么可以使用泛型
+     
+       1. 在函数中使用泛型
+     
+          ```ts
+            
+            // a 的类型不确定，但是传入类型和返回类型一样
+            function func1<T> (a: T): T {
+              return a
+            }
+          	
+            // 不指定泛型，TS 进行自动推断
+            func1(2)
+            // 指定泛型
+            func1<string>('string')
+          ```
+     
+       2. 一个函数指定两个泛型
+     
+          ```ts
+            // 指定两个泛型
+            function func2<T, K> (num1: T, num2: K): K {
+              return num2
+            }
+          ```
+     
+       3. 指定泛型实现接口进行类型显示
+     
+          ```ts
+            // 指定泛型实现接口进行类型显示
+            function func3<T extends Inter> (num1: T): T {
+              return num1
+            }
+          ```
+     
+       4. 指定泛型实现指定类型
+     
+          ```ts
+           // 指定泛型实现指定类型
+            function func4<T extends number|string>(num1:T):T {
+              return num1
+            }
+          ```
+     
+       5. 类中使用泛型
+     
+          ```ts
+            // 类中使用泛型
+            class Class<T> {
+              name:T
+              constructor (name:T) {
+                this.name = name
+              }
+            }
+            let c1 = new Class<string>("你好")
+            
+          ```
      
