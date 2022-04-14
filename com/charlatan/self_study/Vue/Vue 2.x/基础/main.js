@@ -9,7 +9,7 @@
  */
 
 import App from './App'
-
+console.log(Vue);
 Vue.config.productionTip = false
 const vm = new Vue({
   el: '#root',

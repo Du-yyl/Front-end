@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/log/log"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ff00ff",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "这是第一个测试的例子"
+    },
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,92 @@
+.header {
+	position: relative;
+}
+
+.header image {
+	width: 100%;
+	height: 320rpx;
+}
+
+.header .time {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-55%) translateX(-45%);
+	font-size: 40rpx;
+	color: white;
+}
+
+/* 列表 */
+.listContainer {
+	width: 100%;
+	height: calc(100vh - 300rpx);
+	position: relative;
+	top: -30rpx;
+	border-radius: 40rpx 40rpx 0 0;
+
+}
+
+.listContainer .header {
+	border-radius: inherit;
+	height: 100rpx;
+	background: #ffffff;
+	/* 父元素开启弹性盒子，子元素自动变成 block */
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20rpx 0 20rpx;
+	line-height: 33rpx;
+	font-weight: 600;
+}
+
+.listContainer .lists {
+
+}
+
+.listContainer .lists .list {
+	position: relative;
+	margin: 10rpx 0 10rpx 0;
+	padding-left: 20rpx;
+}
+
+.listContainer .lists .list image {
+	width: 90rpx;
+	height: 90rpx;
+	border-radius: 10rpx;
+}
+
+.listContainer .lists .list .title {
+	width: 70%;
+	position: absolute;
+	top: -40rpx;
+	font-size: 34rpx;
+	left: 130rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.listContainer .lists .list .subTitle {
+	width: 70%;
+	position: absolute;
+	font-size: 26rpx;
+	top: 18rpx;
+	left: 130rpx;
+	color: #6b6b6b;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.listContainer .lists 	.list button{
+	position: absolute;
+	top: -10rpx;
+	right: 20rpx;
+	width: 10rpx;
+	background: #ffffff;
+}
+/* .listContainer .lists .list button .icon-gengduo { */
+/* 	position: absolute; */
+/* 	top: 30rpx; */
+/* 	right: 20rpx; */
+/* 	color: #8e8e8e; */
+/* } */
+/**/

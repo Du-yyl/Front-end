@@ -1,0 +1,140 @@
+.videoContainer .header {
+	display: flex;
+	justify-content: space-between;
+	align-content: end;
+	padding: 10rpx;
+}
+
+.videoContainer .header .search {
+	border: 1px solid black;
+	/*flex-grow: 可拉伸 flex-shrink： 可压缩 flex-basis: 当前元素的宽度*/
+	/*flex默认值: flex-grow: 0, flex-shrink: 1, flex-basis: auto*/
+	/*flex:1  flex-grow: 1, flex-shrink: 1, flex-basis: 0%*/
+	/*flex:auto  flex-grow: 1, flex-shrink: 1, flex-basis: auto*/
+	/*flex: 1会导致父元素宽度自动为100%*/
+	flex: 1;
+	text-align: center;
+	margin: 0 30rpx 0 30rpx;
+	font-size: 31rpx;
+	color: #f65c5c;
+}
+
+.videoContainer .header image {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+/* 导航 */
+.videoScroll {
+	display: flex;
+	height: 70rpx;
+	white-space: nowrap;
+	margin: 0 10rpx;
+}
+
+.videoScroll .navItem {
+	padding: 0 30rpx;
+	font-size: 28rpx;
+	height: 60rpx;
+	line-height: 54rpx;
+}
+
+.videoScroll .navItem .nav {
+	position: relative;
+}
+
+.videoScroll .navItem .nav .view {
+	height: 2px;
+	width: 0;
+	transition: all .5s ease-out;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: #d23c34;
+	bottom: 3rpx;
+}
+
+.videoScroll .navItem .nav .active {
+	width: 100%;
+}
+
+
+.videos {
+	width: 100%;
+	height: calc(100vh - 80rpx);
+}
+
+.videos .videoItem {
+	width: 90%;
+	height: 550rpx;
+	background: #ffffff;
+	margin: 0 20rpx 90rpx 20rpx;
+	position: relative;
+}
+
+
+.videos .videoItem .video {
+	width: 100%;
+	border-radius: 17rpx;
+	height: 380rpx;
+}
+
+.videos .videoItem .text {
+	position: relative;
+	top: -28rpx;
+	display: block;
+	width: 98%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 28rpx;
+}
+
+
+/* footer */
+.footer {
+	border-top: 1rpx solid #eee;
+	padding: 20rpx 0;
+}
+.footer .avatar {
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+.footer  .nickName {
+	font-size: 26rpx;
+	vertical-align: middle;
+	margin-left: 70rpx;
+	margin-top: -20rpx;
+}
+
+.footer .comments_praised {
+	float: right;
+}
+.comments_praised .btn {
+	display: inline;
+	padding: 0;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.comments_praised .btn:after {
+	border: none;
+}
+
+.comments_praised .item {
+	margin-left: 50rpx;
+	position: relative;
+	margin-right: 20rpx;
+}
+
+.comments_praised .item .count {
+	position: absolute;
+	top: -20rpx;
+	font-size: 20rpx;
+}
+
+
