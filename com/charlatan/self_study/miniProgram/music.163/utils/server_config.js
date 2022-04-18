@@ -12,6 +12,6 @@
  */
 export default {
   // 基础路径，通过这个路径进行衍生
-  // baseUrl:'http://localhost:3000',
-  baseUrl:'http://charlatan.free.idcfengye.com/'
+  baseUrl: 'http://localhost:3000',
+  // baseUrl:'http://charlatan.free.idcfengye.com/'
 }

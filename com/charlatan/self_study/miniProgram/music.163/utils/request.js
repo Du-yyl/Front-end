@@ -19,12 +19,14 @@ import server_config from './server_config'
 export default (url, data, method = 'GET') =>
   new Promise((resolve, reject) => {
     wx.request({
-      url: server_config.baseUrl + url,
+      url,
       data,
       method,
       header: {
         // cookie: wx.getStorageSync('cookie')[0],
-        cookie: wx.getStorageSync('cookie') ? wx.getStorageSync('cookie').find(item => item.indexOf('MUSIC_U=') !== -1) : '',
+        cookie: wx.getStorageSync('cookie')
+          ? wx.getStorageSync('cookie').find(item => item.indexOf('MUSIC_U=') !== -1)
+          : '',
       },
       success (res) {
         if (data.isLogin) {
