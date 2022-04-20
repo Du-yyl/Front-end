@@ -1,0 +1,41 @@
+<!--
+  ~ Time:2022/4/20 14:32 45
+  ~ Name:事件总线.test.html
+  ~ Path:test
+  ~ ProjectName:utilityFunction
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>事件总线</title>
+
+</head>
+<body>
+
+</body>
+<script src="../src/事件总线/事件总线.js"></script>
+<script>
+	window.name = '这是 window'
+	let obj = {
+		name: '这是自定义对象',
+	}
+	eventBus.on('login', function (data) {
+		console.log('登录成功')
+		console.log(data)
+		console.log(obj.name)
+		console.log(this.name)
+	})
+	eventBus.on({ a: 123 }, function (a, b, c) {
+		console.log(a, b, c)
+		console.log('第二个测试函数')
+	})
+	eventBus.on('login', 123)
+	eventBus.emit('login', '张三', 1, 2, 3)
+</script>
+</html>

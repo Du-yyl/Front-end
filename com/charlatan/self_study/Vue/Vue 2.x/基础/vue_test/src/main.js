@@ -1,7 +1,7 @@
 /**
- * Time:2022/3/2 20:08 27
+ * Time:2022/2/26 9:35 48
  * Name:main.js
- * Path:Web/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
+ * Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
  * ProjectName:WWW
  * Author:charlatan
  *
@@ -10,11 +10,9 @@
 
 import Vue from 'vue'
 import App from './App'
-import store from './store'
 
 Vue.config.productionTip = false
 const vm = new Vue({
   el: '#app',
   render: createElement => createElement(App),
-  store,
 })

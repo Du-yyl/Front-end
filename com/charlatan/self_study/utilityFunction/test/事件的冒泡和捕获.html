@@ -1,0 +1,99 @@
+<!--
+  ~ Time:2022/4/19 18:43 40
+  ~ Name:事件的冒泡和捕获.html
+  ~ Path:test
+  ~ ProjectName:utilityFunction
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 15px YouYuan;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		.outer {
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			background: #f1abab;
+		}
+
+		.inner {
+			width: 100px;
+			height: 100px;
+			background: #abf1de;
+			margin: 10px;
+		}
+
+
+	</style>
+</head>
+<body>
+<div class="outer" id="outer">
+	<div class="inner">
+		111
+	</div>
+	<div class="inner">
+		222
+	</div>
+	<div class="inner">
+		333
+	</div>
+	<div class="inner">
+		444
+	</div>
+	<div class="inner">
+		555
+	</div>
+</div>
+</body>
+<script src="../src/事件委派/eventDelegation.js"></script>
+<script>
+	let outer = document.querySelector('.outer')
+	let inner = document.querySelector('.inner')
+
+	// outer.addEventListener('click', () => {
+	// 	console.log('捕获阶段 outer')
+	// }, true)
+	// inner.addEventListener('click', () => {
+	// 	console.log('捕获阶段 inner')
+	// }, true)
+	//
+	// outer.addEventListener('click', () => {
+	// 	console.log('冒泡阶段 outer')
+	// })
+	// inner.addEventListener('click', () => {
+	// 	console.log('冒泡阶段 inner')
+	// })
+
+	function Demo () {
+		console.log(this.innerHTML)
+	}
+
+	eventDelegation('.outer', 'click', Demo, '.inner')
+</script>
+</html>

@@ -1,7 +1,7 @@
 <!--
-  ~ Time:2022/3/2 20:08 30
+  ~ Time:2022/2/26 9:35 42
   ~ Name:App.vue
-  ~ Path:Web/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/src
   ~ ProjectName:WWW
   ~ Author:charlatan
   ~
@@ -10,14 +10,15 @@
 
 <template>
   <div>
-    <count></count>
+    <Component1></Component1>
+    <hr>
+    <Component2></Component2>
   </div>
 </template>
 
 <script>
-
-
-import count from '@/components/count'
+import Component1 from '@/components/Component1'
+import Component2 from '@/components/Component2'
 
 export default {
   name: 'App',
@@ -25,7 +26,8 @@ export default {
     return {}
   },
   components: {
-    count,
+    Component1,
+    Component2,
   },
 }
 </script>

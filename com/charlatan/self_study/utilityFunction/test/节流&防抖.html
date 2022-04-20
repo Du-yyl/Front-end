@@ -1,0 +1,38 @@
+<!--
+  ~ Time:2022/4/18 16:39 47
+  ~ Name:节流&防抖.html
+  ~ Path:test
+  ~ ProjectName:utilityFunction
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+	<style>
+		body {
+			height: 9000px;
+			background: #efdddd;
+		}
+	</style>
+</head>
+<body>
+
+</body>
+<script src="../useDirectly/debounce&throttle.js"></script>
+<script>
+	window.c = 100
+	window.onscroll = throttle(demo, 500, 1, 2)
+
+	function demo (e, a, b) {
+		console.log(e, a, b)
+		// console.log(e)
+		console.log(a + b + this.c)
+	}
+</script>
+</html>
