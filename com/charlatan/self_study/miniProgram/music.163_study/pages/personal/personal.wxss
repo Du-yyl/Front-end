@@ -191,22 +191,22 @@
 }
 
 
-
-.recentPlayContainer .songView{
+.recentPlayContainer .songView {
 	width: 96%;
 	height: 220rpx;
 	display: flex;
-	padding:  0 10rpx 0 10rpx;
+	padding: 0 10rpx 0 10rpx;
 }
-.recentPlayContainer .songView view{
+
+.recentPlayContainer .songView view {
 	margin: 0 10rpx 0 10rpx;
 }
-.recentPlayContainer .songView view image{
+
+.recentPlayContainer .songView view image {
 	width: 200rpx;
 	height: 200rpx;
 	border-radius: 10px;
 }
-
 
 
 .personalContent .recentPlay image {

@@ -14,10 +14,10 @@ import mixin from '@/mixin'
 
 // 全局混合配置
 // 这种方式配置的混合，会为整个VM进行配置，并且所有的组件都会使用这个混合
-Vue.mixin(mixin)
+Vue.mixin (mixin)
 
 Vue.config.productionTip = false
-const vm = new Vue({
-  el: '#app',
-  render: createElement => createElement(App),
+const vm = new Vue ({
+	el: '#app',
+	render: createElement => createElement (App),
 })

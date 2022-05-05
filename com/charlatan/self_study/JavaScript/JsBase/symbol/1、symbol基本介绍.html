@@ -36,17 +36,16 @@
 
 </body>
 <script>
-	let sl1 = Symbol('test')
-	console.log(sl1);
-	alert(sl1.toString());
-
+	let sl1 = Symbol ('test')
+	console.log (sl1)
+	alert (sl1.toString ())
 
 	// 获得定义 symbol 时的描述：
-	console.log((sl1.description));
+	console.log ((sl1.description))
 
 	// symbol 转换为其他类型
-	console.log(Boolean(sl1)); // true
-	console.log(parseInt(sl1)); // NaN
-	console.log(Number(sl1)); // TypeError: Cannot convert a Symbol value to a number
+	console.log (Boolean (sl1)) // true
+	console.log (parseInt (sl1)) // NaN
+	console.log (Number (sl1)) // TypeError: Cannot convert a Symbol value to a number
 </script>
 </html>

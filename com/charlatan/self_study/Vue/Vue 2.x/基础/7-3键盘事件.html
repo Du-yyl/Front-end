@@ -18,12 +18,12 @@
 <body>
 <div id="root">
 	你好，{{ name }}
-	<input type="text" name="" placeholder="按下回车提示输入" @keyup.enter="keyup">
-	<input type="text" name="" placeholder="按下tab提示输入" @keydown.tab="keyup">
-	<input type="text" name="" placeholder="按下y提示输入" @keydown.y="keyup">
-	<input type="text" name="" placeholder="按下转换大小写键提示输入" @keydown.caps-lock="keyup">
-	<input type="text" name="" placeholder="按下自定义键提示输入" @keydown.me="keyup">
-	<input type="text" name="" placeholder="按下ctrl+y提示输入" @keydown.ctrl.y="keyup">
+	<input name="" placeholder="按下回车提示输入" type="text" @keyup.enter="keyup">
+	<input name="" placeholder="按下tab提示输入" type="text" @keydown.tab="keyup">
+	<input name="" placeholder="按下y提示输入" type="text" @keydown.y="keyup">
+	<input name="" placeholder="按下转换大小写键提示输入" type="text" @keydown.caps-lock="keyup">
+	<input name="" placeholder="按下自定义键提示输入" type="text" @keydown.me="keyup">
+	<input name="" placeholder="按下ctrl+y提示输入" type="text" @keydown.ctrl.y="keyup">
 </div>
 <pre>
 	Vue中常用的按键别名：
@@ -52,7 +52,7 @@
 <script>
 	Vue.config.productionTip = false
 	Vue.config.keyCodes.me = 13
-	let vm = new Vue({
+	let vm = new Vue ({
 		el: '#root',
 		data: {
 			name: 'Jack',
@@ -64,8 +64,8 @@
 				// 	console.log("我按下了");
 				// 	console.log(event.target.value);
 				// }
-				console.log('我按下了')
-				console.log(event.target.value)
+				console.log ('我按下了')
+				console.log (event.target.value)
 			},
 		},
 	})

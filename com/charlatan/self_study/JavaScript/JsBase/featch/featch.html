@@ -32,27 +32,27 @@
 
 	//发送网络请求---使用fetch发送（未优化）
 	/* fetch(`https://api.github.com/search/users?q=1`).then(
-  response => {
-    console.log('联系服务器成功了');
-    return response.json()
-  },
-  error => {
-    console.log('联系服务器失败了',error);
-    return new Promise(()=>{})
-  }
-).then(
-  response => {console.log('获取数据成功了',response);},
-  error => {console.log('获取数据失败了',error);}
-) */
+	 response => {
+	 console.log('联系服务器成功了');
+	 return response.json()
+	 },
+	 error => {
+	 console.log('联系服务器失败了',error);
+	 return new Promise(()=>{})
+	 }
+	 ).then(
+	 response => {console.log('获取数据成功了',response);},
+	 error => {console.log('获取数据失败了',error);}
+	 ) */
 
 
 	//发送网络请求---使用fetch发送（优化）
 	try {
-		const response = await fetch(`https://api.github.com/search/users?q=1`)
-		const data = await response.json()
-		console.log(data)
+		const response = await fetch (`https://api.github.com/search/users?q=1`)
+		const data = await response.json ()
+		console.log (data)
 	} catch (error) {
-		console.log('请求出错', error)
+		console.log ('请求出错', error)
 	}
 
 </script>

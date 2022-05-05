@@ -11,6 +11,6 @@
  * 整个项目常量的基本配置设置
  */
 export default {
-  // 基础路径，通过这个路径进行衍生
-  baseUrl:'http://localhost:3000'
+	// 基础路径，通过这个路径进行衍生
+	baseUrl: 'http://localhost:3000',
 }

@@ -32,7 +32,7 @@
 		// 通过这种方式创建的 ref 相当与创建了一个容器，用来保存待会要进行指定的内容
 		// 这个容器中会包含一个对象，第一个属性值就是要保存的这个元素，通过这个可以获取 value
 		// 这个容器是专人专用的，只能保存一个属性的内容
-		input = React.createRef()
+		input = React.createRef ()
 
 		render () {
 			return (
@@ -44,10 +44,10 @@
 		}
 
 		showClick = () => {
-			console.log(this.input.current.value)
+			console.log (this.input.current.value)
 		}
 	}
 
-	ReactDOM.render(<Demo/>, document.getElementById('test'))
+	ReactDOM.render (<Demo/>, document.getElementById ('test'))
 </script>
 </html>

@@ -28,20 +28,20 @@
 </body>
 <script>
 	async function main () {
-		let pro = new Promise((res, rej) => {
-			setTimeout(function () {
+		let pro = new Promise ((res, rej) => {
+			setTimeout (function () {
 				// res('ok')
-				rej('err')
+				rej ('err')
 			}, 1000)
 		})
 		try {
 			let res = await pro
-			console.log(res)
+			console.log (res)
 		} catch (e) {
-			console.log(e)
+			console.log (e)
 		}
 	}
 
-	main()
+	main ()
 </script>
 </html>

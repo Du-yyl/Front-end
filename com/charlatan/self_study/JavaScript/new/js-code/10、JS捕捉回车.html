@@ -10,25 +10,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS捕捉回车</title>
+	<meta charset="UTF-8">
+	<title>JS捕捉回车</title>
 </head>
 <body>
 <p>
-    这个创建浏览器所创建的提供给回调函数的对象，只有一个值，并且可接受也不接受
+	这个创建浏览器所创建的提供给回调函数的对象，只有一个值，并且可接受也不接受
 </p>
 <input id="text" type="text">
 <script>
-    // window.document.onkeydown = function (Event) {
-    //     alert("这是获取键盘对象返回的方法，并且这个对象是浏览器创建，提供给回调函数进行使用-->" + Event)
-    //     alert(Event.key)
-    //     alert(typeof (Event.key))
-    // }
-    window.document.onkeydown = function (Event) {
-        if (Event.key === 'Enter') {
-            alert('登录成功')
-        }
-    }
+	// window.document.onkeydown = function (Event) {
+	//     alert("这是获取键盘对象返回的方法，并且这个对象是浏览器创建，提供给回调函数进行使用-->" + Event)
+	//     alert(Event.key)
+	//     alert(typeof (Event.key))
+	// }
+	window.document.onkeydown = function (Event) {
+		if ( Event.key === 'Enter' ) {
+			alert ('登录成功')
+		}
+	}
 
 </script>
 </body>

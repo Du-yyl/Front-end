@@ -10,13 +10,13 @@
 
 <template>
   <div class="div">
-    <Category title="第一个" :items="arr1" class="item">
+    <Category :items="arr1" class="item" title="第一个">
       <img slot="slot1"
-           src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wE9W?ver=bc8e" alt=""
-           class="img">
+           alt="" class="img"
+           src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wE9W?ver=bc8e">
       <h2 slot="slot2">我要征用第二个插件</h2>
     </Category>
-    <Category title="第二个" :items="arr2" class="item">
+    <Category :items="arr2" class="item" title="第二个">
       <template v-slot:slot1>
         <h2>我要征用多个插槽</h2>
         <h2>我们几个是在同一个框架中</h2>
@@ -24,7 +24,7 @@
         <h2>v-slot只能使用在template中</h2>
       </template>
     </Category>
-    <Category title="第三个" :items="arr3" class="item"></Category>
+    <Category :items="arr3" class="item" title="第三个"></Category>
   </div>
 </template>
 

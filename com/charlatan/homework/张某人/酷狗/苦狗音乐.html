@@ -1551,7 +1551,7 @@
 <div id="box">
 	<div id="top-1">
 		<div id="top-1-left">
-			<img alt="logo" id="top-1-left-img" src="file/logo.png">
+			<img id="top-1-left-img" alt="logo" src="file/logo.png">
 		</div>
 		<div id="top-1-left-center">
 			<ul id="top-1-left-center-ul">
@@ -1582,7 +1582,7 @@
 				<label for="top-1-right-search-input">
 
 					<input id="top-1-right-search-input" placeholder=" 搜索音乐/MV/歌单/歌手" type="search">
-					<img alt="放大镜" height="30" id="top-1-right-search-input-img" src="file/fangdajing.png">
+					<img id="top-1-right-search-input-img" alt="放大镜" height="30" src="file/fangdajing.png">
 				</label>
 			</div>
 			<div id="top-1-right-login">
@@ -1609,7 +1609,7 @@
 
 
 		<div id="top-2-center">
-			<div class="top-2-center-img" id="top-2-center-left">
+			<div id="top-2-center-left" class="top-2-center-img">
 				<div id="top-2-center-left-img"></div>
 			</div>
 
@@ -1617,7 +1617,7 @@
 			<div id="top-2-center-center">
 				<ul id="top-2-center-center-ul">
 					<li>
-						<img alt="图片" id="top-2-center-center-ul-li-img" src="file/nv_bc.jpg">
+						<img id="top-2-center-center-ul-li-img" alt="图片" src="file/nv_bc.jpg">
 					</li>
 				</ul>
 
@@ -1631,7 +1631,7 @@
 			</div>
 
 
-			<div class="top-2-center-img" id="top-2-center-right">
+			<div id="top-2-center-right" class="top-2-center-img">
 				<div id="top-2-center-right-img"></div>
 			</div>
 		</div>
@@ -1761,8 +1761,8 @@
             精选活动
         </span>
 		<div id="body-2-select-event-imgs">
-			<img alt="" id="body-2-select-event-img-1" src="file/select_event-1.jpg">
-			<img alt="" id="body-2-select-event-img-2" src="file/select_event-2.jpg">
+			<img id="body-2-select-event-img-1" alt="" src="file/select_event-1.jpg">
+			<img id="body-2-select-event-img-2" alt="" src="file/select_event-2.jpg">
 		</div>
 	</div>
 	<div id="body-3">
@@ -2285,14 +2285,14 @@
 				主播电台
 			</div>
 			<div id="body-5-top-right">
-				<div class="body-5-top-float" id="body-5-top-right-left"></div>
+				<div id="body-5-top-right-left" class="body-5-top-float"></div>
 				<span id="body-5-top-right-span">
                     海沧听更多精品电台
                 </span>
 				<span id="body-5-top-right-span-2">
                     ⇣
                 </span>
-				<div class="body-5-top-float" id="body-5-top-right-right"></div>
+				<div id="body-5-top-right-right" class="body-5-top-float"></div>
 			</div>
 		</div>
 		<div id="body-5-last">
@@ -2564,30 +2564,30 @@
 		</ul>
 	</div>
 	<div id="left--">
-		<div class="fangkuai" id="fankui">
+		<div id="fankui" class="fangkuai">
 			反馈
 		</div>
-		<div class="fangkuai" id="window"></div>
-		<div class="fangkuai" id="pingguo"></div>
-		<div class="fangkuai" id="shang"></div>
+		<div id="window" class="fangkuai"></div>
+		<div id="pingguo" class="fangkuai"></div>
+		<div id="shang" class="fangkuai"></div>
 	</div>
 </div>
 </body>
 <script>
 	// 轮播图
-	let banner_left = document.getElementById('top-2-center-left')
-	let banner_right = document.getElementById('top-2-center-right')
-	let banner_lis = document.getElementById('top-2-center-center-ul-2').getElementsByTagName('li')
-	let banner_img = document.getElementById('top-2-center-center-ul-li-img')
-	fetch('http://39.96.88.57:9090/api/www/banner/index/bannerList?httpsStatus=1&reqId=62631c30-6e0f-11ec-9610-aff7c1796bb4').
-			then(r => r.json()).
-			then(res => {
+	let banner_left = document.getElementById ('top-2-center-left')
+	let banner_right = document.getElementById ('top-2-center-right')
+	let banner_lis = document.getElementById ('top-2-center-center-ul-2').getElementsByTagName ('li')
+	let banner_img = document.getElementById ('top-2-center-center-ul-li-img')
+	fetch ('http://39.96.88.57:9090/api/www/banner/index/bannerList?httpsStatus=1&reqId=62631c30-6e0f-11ec-9610-aff7c1796bb4').
+			then (r => r.json ()).
+			then (res => {
 				let bg_imgs = []
 				bg_imgs = res.data
 				let index = 0
 				banner_left.onclick = function () {
 					banner_img.src = bg_imgs[index = index >= res.data.length - 1 ? 0 : ++index].pic
-					for (let bannerLi of banner_lis) {
+					for ( let bannerLi of banner_lis ) {
 						bannerLi.style.backgroundColor = 'rgba(229, 193, 14, 0.82)'
 						bannerLi.style.border = '4px solid transparent'
 					}
@@ -2596,16 +2596,16 @@
 				}
 				banner_right.onclick = function () {
 					banner_img.src = bg_imgs[index = index <= 0 ? res.data.length - 1 : --index].pic
-					for (let bannerLi of banner_lis) {
+					for ( let bannerLi of banner_lis ) {
 						bannerLi.style.backgroundColor = 'rgba(229, 193, 14, 0.82)'
 						bannerLi.style.border = '4px solid transparent'
 					}
 					banner_lis[index].style.backgroundColor = '#cbbb1e'
 					banner_lis[index].style.border = '4px solid #fff2f2'
 				}
-				for (let i = 0; i < banner_lis.length; i++) {
+				for ( let i = 0; i < banner_lis.length; i++ ) {
 					banner_lis[i].onclick = function () {
-						for (let bannerLi of banner_lis) {
+						for ( let bannerLi of banner_lis ) {
 							bannerLi.style.backgroundColor = 'rgba(229, 193, 14, 0.82)'
 							bannerLi.style.border = '4px solid transparent'
 						}
@@ -2618,28 +2618,28 @@
 			})
 
 	// 推荐歌单的tab切换
-	let body_ul_lis = document.getElementsByClassName('body-1-last-div-ul-li-switch')
-	fetch('http://39.96.88.57:9090/api/www/playlist/index/tags?httpsStatus=1&reqId=62636a50-6e0f-11ec-9610-aff7c1796bb4').
-			then(r => r.json()).
-			then(res => {
-				for (let i = 0; i < body_ul_lis.length; i++) {
+	let body_ul_lis = document.getElementsByClassName ('body-1-last-div-ul-li-switch')
+	fetch ('http://39.96.88.57:9090/api/www/playlist/index/tags?httpsStatus=1&reqId=62636a50-6e0f-11ec-9610-aff7c1796bb4').
+			then (r => r.json ()).
+			then (res => {
+				for ( let i = 0; i < body_ul_lis.length; i++ ) {
 					body_ul_lis[i].innerHTML = res.data[i].name
 				}
 			})
 
 	// 歌单榜
-	let body_2_imgs = document.getElementsByClassName('body-3-li-img-2')
-	let body_2_ul_lis = document.getElementsByClassName('body-3-lu-ul-ul')
-	fetch('http://39.96.88.57:9090/api/www/bang/index/bangList?httpsStatus=1&reqId=62639161-6e0f-11ec-9610-aff7c1796bb4').
-			then(r => r.json()).
-			then(res => {
-				for (let i = 0; i < res.data.length; i++) {
+	let body_2_imgs = document.getElementsByClassName ('body-3-li-img-2')
+	let body_2_ul_lis = document.getElementsByClassName ('body-3-lu-ul-ul')
+	fetch ('http://39.96.88.57:9090/api/www/bang/index/bangList?httpsStatus=1&reqId=62639161-6e0f-11ec-9610-aff7c1796bb4').
+			then (r => r.json ()).
+			then (res => {
+				for ( let i = 0; i < res.data.length; i++ ) {
 					body_2_imgs.src = res.data[i].pic
 				}
-				for (let i = 0; i < body_2_ul_lis.length; i++) {
-					let elementsByTagName = body_2_ul_lis[i].getElementsByTagName('li')
+				for ( let i = 0; i < body_2_ul_lis.length; i++ ) {
+					let elementsByTagName = body_2_ul_lis[i].getElementsByTagName ('li')
 					let li = ''
-					for (let j = 0; j < elementsByTagName.length; j++) {
+					for ( let j = 0; j < elementsByTagName.length; j++ ) {
 						li += `
 				<li>
                     <div class="body-3-li-ul-ul-lu-left-div">
@@ -2661,11 +2661,11 @@
 			})
 
 	//	歌手推荐
-	let body_3_lis = document.getElementsByClassName('body-4-top-right-li')
-	fetch('http://39.96.88.57:9090/api/www/artist/index/tags?httpsStatus=1&reqId=0254a090-6e12-11ec-950c-155e05dc59b9').
-			then(r => r.json()).
-			then(res => {
-				for (let i = 0; i < body_3_lis.length; i++) {
+	let body_3_lis = document.getElementsByClassName ('body-4-top-right-li')
+	fetch ('http://39.96.88.57:9090/api/www/artist/index/tags?httpsStatus=1&reqId=0254a090-6e12-11ec-950c-155e05dc59b9').
+			then (r => r.json ()).
+			then (res => {
+				for ( let i = 0; i < body_3_lis.length; i++ ) {
 					body_3_lis[i].innerHTML = res.data[i].name
 				}
 			})

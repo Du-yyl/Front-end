@@ -14,9 +14,9 @@
     &nbsp;<h2> 当前这个数字乘10的结果时：{{ calculate }}</h2>
     <h1>我是 {{ name }} ,我是{{ age }}</h1>
     <select v-model.number="num">
-      <option class="js-options-table" :value=1>1</option>
-      <option class="js-options-table" :value=2>2</option>
-      <option class="js-options-table" :value=3>3</option>
+      <option :value=1 class="js-options-table">1</option>
+      <option :value=2 class="js-options-table">2</option>
+      <option :value=3 class="js-options-table">3</option>
     </select>
     &nbsp;
     <button class="btn btn-warning" @click="add(num)">+</button>
@@ -40,19 +40,19 @@ export default {
     }
   },
   computed: {
-    ...mapState('count', ['sum', 'name', 'age']),
-    ...mapGetters('count',{ calculate: 'calculate' }),
+    ...mapState ('count', ['sum', 'name', 'age']),
+    ...mapGetters ('count', { calculate: 'calculate' }),
   },
   methods: {
-    ...mapMutations('count', {
+    ...mapMutations ('count', {
       add: 'ADD',
       deadd: 'DEADD',
     }),
 
-    ...mapActions('count', ['addWait', 'addOdd']),
+    ...mapActions ('count', ['addWait', 'addOdd']),
   },
   mounted () {
-    console.log(this)
+    console.log (this)
   },
 }
 </script>

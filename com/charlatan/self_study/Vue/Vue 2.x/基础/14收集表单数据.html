@@ -20,38 +20,38 @@
 <div id="root">
 	<form @submit.prevent="go">
 		<label for="account">
-			账号：<input type="text" name="" id="account" placeholder="请输入密码" v-model.trim="user.account">
+			账号：<input id="account" v-model.trim="user.account" name="" placeholder="请输入密码" type="text">
 		</label>
 		<br>
 		<br>
 		<label for="password">
-			密码：<input type="text" name="" id="password" placeholder="请输入密码" v-model="user.password">
+			密码：<input id="password" v-model="user.password" name="" placeholder="请输入密码" type="text">
 		</label>
 		<br>
 		<br>
-		年龄:<input type="number" name="" id="" v-model.number="user.age">
+		年龄:<input id="" v-model.number="user.age" name="" type="number">
 		<br>
 		<br>
 		性别：
 		<label for="man">
 			男
-			<input type="radio" value="male" v-model="user.sex" name="sex" id="man">
+			<input id="man" v-model="user.sex" name="sex" type="radio" value="male">
 		</label>
 		<label for="woman">
 			女
-			<input type="radio" value="female" v-model="user.sex" name="sex" id="woman">
+			<input id="woman" v-model="user.sex" name="sex" type="radio" value="female">
 		</label>
 		<br>
 		<br>
 		爱好：
 		<label for="smoking">
-			抽烟 <input type="checkbox" name="" v-model="user.hobby" value="smoking" id="smoking">
+			抽烟 <input id="smoking" v-model="user.hobby" name="" type="checkbox" value="smoking">
 		</label>
 		<label for="wine">
-			喝酒 <input type="checkbox" name="" v-model="user.hobby" value="wine" id="wine">
+			喝酒 <input id="wine" v-model="user.hobby" name="" type="checkbox" value="wine">
 		</label>
 		<label for="perm">
-			烫头 <input type="checkbox" name="" v-model="user.hobby" value="perm" id="perm">
+			烫头 <input id="perm" v-model="user.hobby" name="" type="checkbox" value="perm">
 		</label>
 		<br>
 		<br>
@@ -92,7 +92,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			user: {
@@ -107,7 +107,7 @@
 		},
 		methods: {
 			go (event) {
-				console.log(JSON.stringify(this.user))
+				console.log (JSON.stringify (this.user))
 			},
 		},
 		computed: {},

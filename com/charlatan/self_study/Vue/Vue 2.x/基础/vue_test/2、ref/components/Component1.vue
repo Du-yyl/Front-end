@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     showHtml () {
-      console.log(this.$refs.title)
+      console.log (this.$refs.title)
     },
   },
 

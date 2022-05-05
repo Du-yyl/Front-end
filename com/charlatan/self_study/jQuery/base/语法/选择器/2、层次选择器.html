@@ -38,24 +38,24 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
 	/*
- 需求:
- 1. 选中ul下所有的的span
- 2. 选中ul下所有的子元素span
- 3. 选中class为box的下一个li
- 4. 选中ul下的class为box的元素后面的所有兄弟元素
- */
-	$(`ul span`).css({
-		color: "red"
+	 需求:
+	 1. 选中ul下所有的的span
+	 2. 选中ul下所有的子元素span
+	 3. 选中class为box的下一个li
+	 4. 选中ul下的class为box的元素后面的所有兄弟元素
+	 */
+	$ (`ul span`).css ({
+		color: 'red',
 	})
-	$(`ul > span`).css({
-		backgroundColor: "green"
+	$ (`ul > span`).css ({
+		backgroundColor: 'green',
 	})
-	$(`.box + li`).css({
-		backgroundColor: "blue"
+	$ (`.box + li`).css ({
+		backgroundColor: 'blue',
 	})
-	$(`ul .box + ~ *`).css({
-		backgroundColor: "red"
+	$ (`ul .box + ~ *`).css ({
+		backgroundColor: 'red',
 	})
-	
+
 </script>
 </html>

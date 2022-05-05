@@ -13,34 +13,34 @@
 	<meta charset="UTF-8">
 	<title>回到顶部</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
 
-        #to_top {
-            width: 30px;
-            height: 40px;
-            font: 14px/20px arial;
-            text-align: center;
-            background: #06c;
-            position: fixed;
-            cursor: pointer;
-            color: #fff;
-            left: 1250px;
-            top: 500px;
-            transition: all 2s;
-        }
+		#to_top {
+			width: 30px;
+			height: 40px;
+			font: 14px/20px arial;
+			text-align: center;
+			background: #06c;
+			position: fixed;
+			cursor: pointer;
+			color: #fff;
+			left: 1250px;
+			top: 500px;
+			transition: all 2s;
+		}
 
 
 	</style>
@@ -52,10 +52,10 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	$(function () {
-		$(`#to_top`).click(function () {
+	$ (function () {
+		$ (`#to_top`).click (function () {
 			// $(`html`).scrollTop(0)
-			$('body,html').animate({scrollTop: 0}, 3600);
+			$ ('body,html').animate ({ scrollTop: 0 }, 3600)
 		})
 	})
 </script>

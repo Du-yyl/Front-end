@@ -13,37 +13,37 @@
 	<meta charset="UTF-8">
 	<title>淡入淡出效果</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
-        * {
-            margin: 0;
-        }
+		* {
+			margin: 0;
+		}
 
-        .div1 {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            top: 50px;
-            left: 10px;
-            background: red;
-        }
+		.div1 {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top: 50px;
+			left: 10px;
+			background: red;
+		}
 
-        pre {
-            position: absolute;
-            top: 400px;
-        }
+		pre {
+			position: absolute;
+			top: 400px;
+		}
 	</style>
 </head>
 <body>
@@ -62,24 +62,24 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	$(function () {
+	$ (function () {
 		/*
 		 3. 点击btn3, 淡出/淡入切换，动画结束时提示“动画结束了”
 		 */
-		let btn1 = $(`#btn1`)
-		let btn2 = $(`#btn2`)
-		let btn3 = $(`#btn3`)
-		let div = $(`.div1`)
-		btn1.click(function () {
-			div.fadeOut(1000)
+		let btn1 = $ (`#btn1`)
+		let btn2 = $ (`#btn2`)
+		let btn3 = $ (`#btn3`)
+		let div = $ (`.div1`)
+		btn1.click (function () {
+			div.fadeOut (1000)
 		})
-		btn2.click(function () {
-			div.fadeIn(1000)
+		btn2.click (function () {
+			div.fadeIn (1000)
 		})
 
-		btn3.click(function () {
-			$('.div1').fadeToggle(2000, function () {
-				alert('动画结束了')
+		btn3.click (function () {
+			$ ('.div1').fadeToggle (2000, function () {
+				alert ('动画结束了')
 			})
 		})
 	})

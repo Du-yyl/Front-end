@@ -33,47 +33,48 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 <script>
-	$(function () {
-		let checkeds = $(`input[name='items']`)
-		let checkedAll = $(`#checkedAllBox`)
-		let checkedAllBtn = $(`#checkedAllBtn`)
-		let checkedNoBtn = $(`#checkedNoBtn`)
-		let checkedRevBtn = $(`#checkedRevBtn`)
-		let sendBtn = $(`#sendBtn`)
+	$ (function () {
+		let checkeds = $ (`input[name='items']`)
+		let checkedAll = $ (`#checkedAllBox`)
+		let checkedAllBtn = $ (`#checkedAllBtn`)
+		let checkedNoBtn = $ (`#checkedNoBtn`)
+		let checkedRevBtn = $ (`#checkedRevBtn`)
+		let sendBtn = $ (`#sendBtn`)
 
 		//全选
-		checkedAllBtn.click(function () {
-			checkeds.prop("checked", true)
-			check()
+		checkedAllBtn.click (function () {
+			checkeds.prop ('checked', true)
+			check ()
 		})
 		//全不选
-		checkedNoBtn.click(function () {
-			checkeds.prop("checked", false)
-			check()
+		checkedNoBtn.click (function () {
+			checkeds.prop ('checked', false)
+			check ()
 		})
 		//	反选
-		checkedRevBtn.click(function () {
-			checkeds.each(function (item) {
+		checkedRevBtn.click (function () {
+			checkeds.each (function (item) {
 				checkeds[item].checked = !checkeds[item].checked
 			})
-			check()
+			check ()
 		})
 		//	提交
-		sendBtn.click(function () {
-			checkeds.filter(':checked').each(function (index) {
-				alert(this.value)
+		sendBtn.click (function () {
+			checkeds.filter (':checked').each (function (index) {
+				alert (this.value)
 			})
 		})
 		// 全选和全部选
-		checkedAll.click(function () {
-			checkeds.prop('checked', this.checked)
+		checkedAll.click (function () {
+			checkeds.prop ('checked', this.checked)
 		})
 		//更新全选状态
-		checkeds.click(function () {
-			check()
+		checkeds.click (function () {
+			check ()
 		})
-		function check() {
-			checkedAll.prop("checked", checkeds.filter(':checked').length === checkeds.length)
+
+		function check () {
+			checkedAll.prop ('checked', checkeds.filter (':checked').length === checkeds.length)
 		}
 	})
 </script>

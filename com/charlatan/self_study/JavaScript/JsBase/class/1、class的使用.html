@@ -32,15 +32,14 @@
 	 * @param age 年龄
 	 * @constructor
 	 */
-	function Person(name, age) {
+	function Person (name, age) {
 		this.name = name
 		this.age = age
 	}
 
 	Person.prototype.toString = function () {
-		return "name:" + this.name + "; age:" + this.age
+		return 'name:' + this.name + '; age:' + this.age
 	}
-
 
 	class User {
 		/**
@@ -49,69 +48,67 @@
 		 * @param name 名字
 		 * @param age 年龄
 		 */
-		constructor(name, age) {
-			this._name = name;
-			this._age = age;
+		constructor (name, age) {
+			this._name = name
+			this._age = age
 		}
 
-		get name() {
-			return this._name;
+		get name () {
+			return this._name
 		}
 
-		set name(value) {
-			this._name = value;
+		set name (value) {
+			this._name = value
 		}
 
-		get age() {
-			return this._age;
+		get age () {
+			return this._age
 		}
 
-		set age(value) {
-			this._age = value;
+		set age (value) {
+			this._age = value
 		}
 
-		toString() {
-			return "name:" + this._name + "; age:" + this._age
+		toString () {
+			return 'name:' + this._name + '; age:' + this._age
 		}
 	}
 
+	let p1 = new Person ('张三', 123)
+	let p2 = new Person ('李四', 123)
 
-	let p1 = new Person("张三", 123)
-	let p2 = new Person("李四", 123)
+	let u1 = new User ('王五', 321)
+	let u2 = new User ('赵六', 321)
 
-	let u1 = new User("王五", 321)
-	let u2 = new User("赵六", 321)
+	console.log (p1.toString ())
+	console.log (p2.toString ())
 
-	console.log(p1.toString());
-	console.log(p2.toString());
-
-	console.log(u1.toString());
-	console.log(u2.toString());
+	console.log (u1.toString ())
+	console.log (u2.toString ())
 
 	// 事实上，所有定义的属性都定义在指定类的prototype上，输出结果为true
-	console.log(u1.constructor === User.prototype.constructor);
+	console.log (u1.constructor === User.prototype.constructor)
 
-	let u3 = new User("郑七", 20)
+	let u3 = new User ('郑七', 20)
 
-
-	console.log("-------" + u3.toString());
-	console.log(u3._name);
-	console.log(u1._name);
-	console.log(u2._name);
-	console.log(p2.name);
+	console.log ('-------' + u3.toString ())
+	console.log (u3._name)
+	console.log (u1._name)
+	console.log (u2._name)
+	console.log (p2.name)
 
 	class A {
-		constructor(name, age) {
+		constructor (name, age) {
 			this.name = name
 			this.age = age
 		}
 
-		toString() {
-			return "321"
+		toString () {
+			return '321'
 		}
 	}
 
-	let a1 = new A("123", null)
-	console.log(a1.name);
+	let a1 = new A ('123', null)
+	console.log (a1.name)
 </script>
 </html>

@@ -13,25 +13,25 @@
 	<meta charset="UTF-8">
 	<title>POST</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
-        #result {
-            width: 200px;
-            height: 100px;
-            border: 1px solid;
-        }
+		#result {
+			width: 200px;
+			height: 100px;
+			border: 1px solid;
+		}
 
 
 	</style>
@@ -40,20 +40,20 @@
 <div id="result"></div>
 </body>
 <script>
-	let result = document.getElementById("result")
+	let result = document.getElementById ('result')
 	result.onmouseover = function () {
 		// 创建对象
-		let xhr = new XMLHttpRequest()
+		let xhr = new XMLHttpRequest ()
 		// 初始化请求
-		xhr.open('POST', 'http://127.0.0.1:8000/server')
+		xhr.open ('POST', 'http://127.0.0.1:8000/server')
 		//	发送请求
-		xhr.send()
+		xhr.send ()
 		//	是否正确返回
 
 		xhr.onreadystatechange = function () {
-			if (xhr.readyState === 4) {
-				if (xhr.status >= 200 && xhr.status < 300) {
-					console.log(xhr.response);
+			if ( xhr.readyState === 4 ) {
+				if ( xhr.status >= 200 && xhr.status < 300 ) {
+					console.log (xhr.response)
 					result.innerText = xhr.response
 				}
 			}

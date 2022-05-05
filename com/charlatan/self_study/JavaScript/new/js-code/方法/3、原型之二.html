@@ -10,31 +10,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>原型之二</title>
+	<meta charset="UTF-8">
+	<title>原型之二</title>
 </head>
 <body>
 <script>
-    function Person(no) {
-        this.no = no;
-    }
+	function Person (no) {
+		this.no = no
+	}
 
-    Person.prototype.sam = "我是进行拓展的sam属性"
+	Person.prototype.sam = '我是进行拓展的sam属性'
 
-    //    使用in进行查找
-    let l1 = new Person();
-    console.log("sam" in l1)
+	//    使用in进行查找
+	let l1 = new Person ()
+	console.log ('sam' in l1)
 
-    //    查找指定函数中是否有执行属性（不查找原型）
-    console.log(l1.hasOwnProperty("sam"))
-    console.log(l1.hasOwnProperty("no"))
-    console.log("---------------------------")
+	//    查找指定函数中是否有执行属性（不查找原型）
+	console.log (l1.hasOwnProperty ('sam'))
+	console.log (l1.hasOwnProperty ('no'))
+	console.log ('---------------------------')
 
-    //    查找hasOwnProperty的添加位置
-    console.log(l1.hasOwnProperty("hasOwnProperty"))
-    console.log(l1.__proto__.hasOwnProperty("hasOwnProperty"))
-    console.log(l1.__proto__.__proto__.hasOwnProperty("hasOwnProperty"))
-    console.log("原型对象中的原型对象中的原型" + l1.__proto__.__proto__.__proto__)
+	//    查找hasOwnProperty的添加位置
+	console.log (l1.hasOwnProperty ('hasOwnProperty'))
+	console.log (l1.__proto__.hasOwnProperty ('hasOwnProperty'))
+	console.log (l1.__proto__.__proto__.hasOwnProperty ('hasOwnProperty'))
+	console.log ('原型对象中的原型对象中的原型' + l1.__proto__.__proto__.__proto__)
 </script>
 </body>
 </html>

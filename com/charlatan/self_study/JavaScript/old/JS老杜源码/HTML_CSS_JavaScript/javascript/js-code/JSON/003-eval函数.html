@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>eval函数</title>
+	<meta charset="utf-8">
+	<title>eval函数</title>
 </head>
 <body>
 <!--
@@ -10,43 +10,43 @@
     JSON在JS中以JS对象的形式存在。
 -->
 <script type="text/javascript">
-    /*
-        eval函数的作用是：
-            将字符串当做一段JS代码解释并执行。
-    */
-    /*
-    window.eval("var i = 100;");
-    alert("i = " + i); // i = 100
-    */
+	/*
+	 eval函数的作用是：
+	 将字符串当做一段JS代码解释并执行。
+	 */
+	/*
+	 window.eval("var i = 100;");
+	 alert("i = " + i); // i = 100
+	 */
 
-    // java连接数据库,查询数据之后,将数据在java程序中拼接成JSON格式的“字符串”,将json格式的字符串响应到浏览器
-    // 也就是说java响应到浏览器上的仅仅是一个"JSON格式的字符串",还不是一个json对象.
-    // 可以使用eval函数,将json格式的字符串转换成json对象.
-    var fromJava = "{\"name\":\"zhangsan\",\"password\":\"123\"}"; //这是java程序给发过来的json格式的"字符串"
-    // 将以上的json格式的字符串转换成json对象
-    window.eval("var jsonObj = " + fromJava);
-    // 访问json对象
-    alert(jsonObj.name + "," + jsonObj.password); // 在前端取数据.
+	// java连接数据库,查询数据之后,将数据在java程序中拼接成JSON格式的“字符串”,将json格式的字符串响应到浏览器
+	// 也就是说java响应到浏览器上的仅仅是一个"JSON格式的字符串",还不是一个json对象.
+	// 可以使用eval函数,将json格式的字符串转换成json对象.
+	var fromJava = '{"name":"zhangsan","password":"123"}' //这是java程序给发过来的json格式的"字符串"
+	// 将以上的json格式的字符串转换成json对象
+	window.eval ('var jsonObj = ' + fromJava)
+	// 访问json对象
+	alert (jsonObj.name + ',' + jsonObj.password) // 在前端取数据.
 
-    /*
-     面试题：
-         在JS当中：[]和{}有什么区别？
-             [] 是数组。
-             {} 是JSON。
+	/*
+	 面试题：
+	 在JS当中：[]和{}有什么区别？
+	 [] 是数组。
+	 {} 是JSON。
 
-         java中的数组：int[] arr = {1,2,3,4,5};
-         JS中的数组：var arr = [1,2,3,4,5];
-         JSON：var jsonObj = {"email" : "zhangsan@123.com","age":25};
-    */
+	 java中的数组：int[] arr = {1,2,3,4,5};
+	 JS中的数组：var arr = [1,2,3,4,5];
+	 JSON：var jsonObj = {"email" : "zhangsan@123.com","age":25};
+	 */
 
-    var json = {
-        "username": "zhangsan"
-    };
-    // JS中访问json对象的属性
-    alert(json.username);
+	var json = {
+		'username': 'zhangsan',
+	}
+	// JS中访问json对象的属性
+	alert (json.username)
 
-    // JS中访问json对象的属性
-    alert(json["username"]);
+	// JS中访问json对象的属性
+	alert (json['username'])
 
 </script>
 </body>

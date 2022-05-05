@@ -24,10 +24,6 @@
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
 <script type="text/babel">
 	class A extends React.Component {
-		state = {
-			msg: '第一个测试信息',
-		}
-
 		render () {
 			return (
 					<div>
@@ -39,8 +35,12 @@
 			)
 		}
 
+		state = {
+			msg: '第一个测试信息',
+		}
+
 		click = () => {
-			this.setState({
+			this.setState ({
 				msg: '第二个测试信息',
 			})
 		}
@@ -51,8 +51,8 @@
 
 		// 组件将要接收新的 props 钩子
 		componentWillReceiveProps (props) {
-			console.log(props)
-			console.log('B--componentWillReceiveUpdate')
+			console.log (props)
+			console.log ('B--componentWillReceiveUpdate')
 		}
 
 		render () {
@@ -68,7 +68,7 @@
 		}
 	}
 
-	ReactDOM.render(<A/>, document.getElementById('test'))
+	ReactDOM.render (<A/>, document.getElementById ('test'))
 
 </script>
 </html>

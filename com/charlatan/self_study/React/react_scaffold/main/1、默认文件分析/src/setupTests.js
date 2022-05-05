@@ -1,2 +1,2 @@
 // 做整体测试
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'

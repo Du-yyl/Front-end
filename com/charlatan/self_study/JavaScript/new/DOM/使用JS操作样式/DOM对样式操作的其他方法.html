@@ -10,28 +10,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DOM操作对样式操作的其他方法</title>
-    <style>
-        .div1{
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            transition: all .7s;
-        }
-    </style>
-    <script>
-        window.onload = function () {
-            document.getElementById("btn1").onclick = function () {
-                console.log(window.innerWidth);
-            }
+	<meta charset="UTF-8">
+	<title>DOM操作对样式操作的其他方法</title>
+	<style>
+		.div1 {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			transition: all .7s;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			document.getElementById ('btn1').onclick = function () {
+				console.log (window.innerWidth)
+			}
 
-        }
-    </script>
+		}
+	</script>
 </head>
 <body>
 <button id="btn1" type="button">我是按钮</button>
-<div class="div1" id="div"></div>
+<div id="div" class="div1"></div>
 <!-- /#div -->
 </body>
 </html>

@@ -13,46 +13,46 @@
 	<meta charset="UTF-8">
 	<title>单击换图片</title>
 	<style>
-        #box {
-            width: 90px;
-            height: 90px;
-            background-color: lemonchiffon;
-            position: absolute;
-            left: 200px;
-            top: 200px;
-        }
+		#box {
+			width: 90px;
+			height: 90px;
+			background-color: lemonchiffon;
+			position: absolute;
+			left: 200px;
+			top: 200px;
+		}
 
-        #input {
-            width: 0;
-            height: 0;
-        }
+		#input {
+			width: 0;
+			height: 0;
+		}
 
-        #no_checked {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            display: block;
-        }
+		#no_checked {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			display: block;
+		}
 
-        #checked {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            display: none;
-        }
+		#checked {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			display: none;
+		}
 
-        #input:checked + #checked {
-            display: block;
-        }
+		#input:checked + #checked {
+			display: block;
+		}
 
 	</style>
 </head>
 <body>
 <div id="box">
-	<label for="input" id="label">
+	<label id="label" for="input">
 		<input id="input" type="checkbox">
-		<img alt="yes" height="32" id="checked" src="file/checked.png">
-		<img alt="no" height="34" id="no_checked" src="file/no-checked.png">
+		<img id="checked" alt="yes" height="32" src="file/checked.png">
+		<img id="no_checked" alt="no" height="34" src="file/no-checked.png">
 
 	</label>
 </div>

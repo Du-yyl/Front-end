@@ -10,24 +10,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>【】访问数据的使用场景</title>
+	<meta charset="UTF-8">
+	<title>【】访问数据的使用场景</title>
 </head>
 <body>
 
 </body>
 <script>
-    //当指定变量名含有非法字符，只能能通过【】进行访问
-    let p = {}
-    let sam = {}
-    p["--++___***(()(^*("] = "我只能使用【】进行添加"
-    console.log(p["--++___***(()(^*("])
+	//当指定变量名含有非法字符，只能能通过【】进行访问
+	let p = {}
+	let sam = {}
+	p['--++___***(()(^*('] = '我只能使用【】进行添加'
+	console.log (p['--++___***(()(^*('])
 
-    //当要进行赋值变量是不确定的时候
-    let name = "张三"
-    let age = 12
-    sam[age] = name
-    console.log(sam[age])
+	//当要进行赋值变量是不确定的时候
+	let name = '张三'
+	let age = 12
+	sam[age] = name
+	console.log (sam[age])
 
 </script>
 </html>

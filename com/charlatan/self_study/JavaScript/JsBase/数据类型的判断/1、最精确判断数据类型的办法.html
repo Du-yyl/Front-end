@@ -28,12 +28,12 @@
 <script>
 	let o1 = 123
 
-	let o2 = "123"
+	let o2 = '123'
 
 	let o3 = true
 
 	let o4 = {
-		num: 123
+		num: 123,
 	}
 
 	let o5 = function () {
@@ -43,28 +43,28 @@
 
 	let o7 = {
 		name: '张三',
-		age: 12
+		age: 12,
 	}
-	o7 = JSON.parse(JSON.stringify(o7))
+	o7 = JSON.parse (JSON.stringify (o7))
 
-	let o8 = new Date()
+	let o8 = new Date ()
 
-	function Obj() {
+	function Obj () {
 	}
 
-	let o9 = new Obj()
+	let o9 = new Obj ()
 
 	let o0 = / /
 
-	console.log(Object.prototype.toString.call(o1).slice(8, -1));
-	console.log(Object.prototype.toString.call(o2).slice(8, -1));
-	console.log(Object.prototype.toString.call(o3).slice(8, -1));
-	console.log(Object.prototype.toString.call(o4).slice(8, -1));
-	console.log(Object.prototype.toString.call(o5).slice(8, -1));
-	console.log(Object.prototype.toString.call(o6).slice(8, -1));
-	console.log(Object.prototype.toString.call(o7).slice(8, -1));
-	console.log(Object.prototype.toString.call(o8).slice(8, -1));
-	console.log(Object.prototype.toString.call(o9).slice(8, -1));
-	console.log(Object.prototype.toString.call(o0).slice(8, -1));
+	console.log (Object.prototype.toString.call (o1).slice (8, -1))
+	console.log (Object.prototype.toString.call (o2).slice (8, -1))
+	console.log (Object.prototype.toString.call (o3).slice (8, -1))
+	console.log (Object.prototype.toString.call (o4).slice (8, -1))
+	console.log (Object.prototype.toString.call (o5).slice (8, -1))
+	console.log (Object.prototype.toString.call (o6).slice (8, -1))
+	console.log (Object.prototype.toString.call (o7).slice (8, -1))
+	console.log (Object.prototype.toString.call (o8).slice (8, -1))
+	console.log (Object.prototype.toString.call (o9).slice (8, -1))
+	console.log (Object.prototype.toString.call (o0).slice (8, -1))
 </script>
 </html>

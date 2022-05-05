@@ -8,11 +8,11 @@ import App from './App.vue'
  * 中的{$mount}
  *
  */
-const app = createApp(App)
+const app = createApp (App)
 
-app.mount('#app')
+app.mount ('#app')
 
 // 等待一秒钟后卸载这个组件
-setTimeout(() => {
-  app.unmount('#app')
+setTimeout (() => {
+	app.unmount ('#app')
 }, 1000)

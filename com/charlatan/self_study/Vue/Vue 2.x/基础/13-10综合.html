@@ -64,7 +64,7 @@
 	<span>为obj添加一个属性——>{{ obj.num }}</span>
 	<br>
 	<br>
-	<button type="button" v-if="obj.pro" @click="obj.pro = '我保证他是响应式的'">为刚刚添加的属性修改一个值，来确保他是响应式的</button>
+	<button v-if="obj.pro" type="button" @click="obj.pro = '我保证他是响应式的'">为刚刚添加的属性修改一个值，来确保他是响应式的</button>
 	<span>修改刚刚添加的属性——>{{ obj.pro }}</span>
 	<hr>
 	<button type="button" @click="arr.unshift({name:'名字',age:'年龄',sex:'性别'})">在数组前添加一个数据</button>
@@ -78,7 +78,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			att: 10,
@@ -89,7 +89,7 @@
 		},
 		methods: {
 			addProperties () {
-				vm.$set(this.obj, 'pro', '默认值')
+				vm.$set (this.obj, 'pro', '默认值')
 			},
 		},
 		computed: {},

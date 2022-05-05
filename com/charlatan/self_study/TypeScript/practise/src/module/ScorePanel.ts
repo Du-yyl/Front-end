@@ -10,8 +10,8 @@
 
 // 定义记分牌的类
 export default class ScorePanel {
-  // 记录分数
-  private _score = 0
+  // 最高等级
+  static highestGrade = 10
   // 记录等级
   _level = 1
   // 升级分数
@@ -19,10 +19,8 @@ export default class ScorePanel {
   
   scoEle: HTMLElement
   levEle: HTMLElement
-  
-  // 最高等级
-  static highestGrade = 10
-  
+  // 记录分数
+  private _score = 0
   // 设置指定的等级
   private readonly grade: number
   

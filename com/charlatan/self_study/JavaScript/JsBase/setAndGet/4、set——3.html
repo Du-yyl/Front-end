@@ -19,27 +19,25 @@
     Set 是键控集合。它使用键对数据进行排序，而不是索引。Set 集合的元素可以按照插入顺序进行迭代，
     而且它不包含任何重复的数据。换句话说，所有 Set 集合中的每一元素都必须不同。
 
-  Set 相对数组有一些优势，特别是它具有更快的运行时间：
-    查找元素： 在数组中使用 indexOf() 或 includes() 检查元素是否存在比较慢。
-    删除元素： 在 Set 中，你可以通过值删除一个元素。等价于在数组中，基于索引的 splice() 功能。正如前面的观点，依赖索引查找比较慢。
-    插入元素： 在 Set 中添加元素比在数组中通过 push()、unshift() 或其他同类操作要快。
-    去重： Set 对象仅能存储不同的值。如果你想避免存储重复的值，这会比数组具有更大的优势。在数组中你需要一些额外的代码来做去重。
+Set 相对数组有一些优势，特别是它具有更快的运行时间： 查找元素： 在数组中使用 indexOf() 或 includes() 检查元素是否存在比较慢。 删除元素： 在 Set 中，你可以通过值删除一个元素。等价于在数组中，基于索引的
+splice() 功能。正如前面的观点，依赖索引查找比较慢。 插入元素： 在 Set 中添加元素比在数组中通过 push()、unshift() 或其他同类操作要快。 去重： Set
+对象仅能存储不同的值。如果你想避免存储重复的值，这会比数组具有更大的优势。在数组中你需要一些额外的代码来做去重。
 </pre>
 </body>
 <script>
 	/**
 	 * set的键值，键名，键值对的遍历
 	 */
-	let set = new Set(['red', 'green', 'blue'])
-	for (let string of set.keys()) {
-		console.log("键--->" + string);
+	let set = new Set (['red', 'green', 'blue'])
+	for ( let string of set.keys () ) {
+		console.log ('键--->' + string)
 	}
-	for (let string of set.values()) {
-		console.log("值--->" + string);
+	for ( let string of set.values () ) {
+		console.log ('值--->' + string)
 	}
 	// set 键名=键值
-	for (let string of set.entries()) {
-		console.log("键值对--->" + string);
+	for ( let string of set.entries () ) {
+		console.log ('键值对--->' + string)
 	}
 
 

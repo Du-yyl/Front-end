@@ -10,25 +10,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS代码的执行顺序</title>
+	<meta charset="UTF-8">
+	<title>JS代码的执行顺序</title>
 </head>
 <body>
 
 <script>
-    function sayHello() {
-        alert('hello')
-    }
+	function sayHello () {
+		alert ('hello')
+	}
 
-    window.onload = function () {
-        window.document.getElementById('btn1').onclick = sayHello
-    }
+	window.onload = function () {
+		window.document.getElementById ('btn1').onclick = sayHello
+	}
 </script>
 <input id="btn1" type="button" value="我是按钮">
 <p>
-    当按钮在script代码块之后的时候，会先进行script，这时btn1中的元素还不存在，绑定失败，无法完成事件；
-    故：在script代码之前进行按钮的创建，才能正确绑定
-    或使用load事件
+	当按钮在script代码块之后的时候，会先进行script，这时btn1中的元素还不存在，绑定失败，无法完成事件；
+	故：在script代码之前进行按钮的创建，才能正确绑定
+	或使用load事件
 </p>
 </body>
 </html>

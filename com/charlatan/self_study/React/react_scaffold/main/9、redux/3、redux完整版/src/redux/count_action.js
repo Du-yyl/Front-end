@@ -10,20 +10,20 @@
 import { ADD, SUBTRACT } from './constant'
 
 /*
-这个文件专门为 count 生成 action 对象
+ 这个文件专门为 count 生成 action 对象
  */
 
 const createAppAction = data => ({
-  type: ADD,
-  data,
+	type: ADD,
+	data,
 })
 
 const createSubtractAction = data => ({
-  type: SUBTRACT,
-  data,
+	type: SUBTRACT,
+	data,
 })
 
 export {
-  createSubtractAction,
-  createAppAction,
+	createSubtractAction,
+	createAppAction,
 }

@@ -31,7 +31,7 @@
 </pre>
 </body>
 <script>
-	let btn = document.getElementsByTagName('button')
+	let btn = document.getElementsByTagName ('button')
 
 	// for (let btnElement of btn) {
 	// 	btnElement.onclick = function () {
@@ -50,11 +50,11 @@
 	// 	}
 	// }
 
-	for (let btnElement of btn) {
+	for ( let btnElement of btn ) {
 		btnElement.onclick = function () {
-			setTimeout(function () {
+			setTimeout (function () {
 				this.disabled = true
-			}.bind(this), 1000)
+			}.bind (this), 1000)
 		}
 	}
 

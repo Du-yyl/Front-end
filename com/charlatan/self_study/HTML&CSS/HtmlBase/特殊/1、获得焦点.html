@@ -10,47 +10,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>获得焦点</title>
-    <style>
-        #a {
-            width: 490px;
-            height: 50px;
-            border: 1px red solid;
-            position: relative;
-        }
+	<meta charset="UTF-8">
+	<title>获得焦点</title>
+	<style>
+		#a {
+			width: 490px;
+			height: 50px;
+			border: 1px red solid;
+			position: relative;
+		}
 
-        #c {
-            position: absolute;
-            top: 13px;
-            left: 20px;
-        }
+		#c {
+			position: absolute;
+			top: 13px;
+			left: 20px;
+		}
 
-        #b {
-            position: absolute;
-            height: 45px;
-            width: 200px;
-            top: 3px;
-            left: 160px;
-            border: none;
-            outline: none;
-        }
+		#b {
+			position: absolute;
+			height: 45px;
+			width: 200px;
+			top: 3px;
+			left: 160px;
+			border: none;
+			outline: none;
+		}
 
-        #a:active {
-            border: 1px greenyellow solid;
-        }
+		#a:active {
+			border: 1px greenyellow solid;
+		}
 
-        #b:focus {
-            border: 10px greenyellow solid;
-        }
-    </style>
+		#b:focus {
+			border: 10px greenyellow solid;
+		}
+	</style>
 </head>
 <body>
 <div id="a">
-    <input id="b" placeholder="&nbsp;测试" type="text">
-    <label for="b" id="c">
-        这是一个测试
-    </label>
+	<input id="b" placeholder="&nbsp;测试" type="text">
+	<label id="c" for="b">
+		这是一个测试
+	</label>
 </div>
 </body>
 </html>

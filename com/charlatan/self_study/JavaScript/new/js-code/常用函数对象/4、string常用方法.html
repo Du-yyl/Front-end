@@ -10,45 +10,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>string常用方法</title>
+	<meta charset="UTF-8">
+	<title>string常用方法</title>
 </head>
 <body>
 <script>
-    /*
-        String 对象方法
+	/*
+	 String 对象方法
 
-        方法                  描述
-        charAt()             返回在指定位置的字符。
-        charCodeAt()         返回在指定的位置的字符的 Unicode 编码。
-        fromCharCode()       从字符编码创建一个字符串。
-        indexOf()            检索字符串。
-                使用一个参数代表要查找的元素，使用两个参数，第二个参数代表要查找的起始位置
-        lastIndexOf()        从后向前搜索字符串。
-                使用一个参数代表要查找的元素，使用两个参数，第二个参数代表要查找的起始位置
-        slice()              提取字符串的片断，并在新的字符串中返回被提取的部分。
-        split()              把字符串分割为字符串数组。
-        substring()          提取字符串中两个指定的索引号之间的字符。
-                重要事项：与 slice() 和 substr() 方法不同的是，substring() 不接受负的参数。
-                当遇到负数时会自动转化为0，并且当右边的数比左边的大时，两个数字自动转换
-        toLowerCase()        把字符串转换为小写。
-        toUpperCase()        把字符串转换为大写。
-    */
-    let str1 = "hello world"
-    console.log(str1.charAt(2))
-    console.log(str1.charAt(4))
-    console.log(str1.charCodeAt(4))
-    console.log(String.fromCharCode(111))
-    console.log(str1.indexOf("l"))
-    console.log(str1.indexOf("l", 3))
-    console.log(str1.slice(3, 5))
-    console.log(str1.slice(3))
-    console.log(str1.split(" "))
-    console.log(str1.substring(3, 5))
-    console.log(str1.substring(3, -1))
-    console.log(str1.substring(0, 3))
-    console.log(str1.toUpperCase())
-    console.log(str1.toLowerCase())
+	 方法                  描述
+	 charAt()             返回在指定位置的字符。
+	 charCodeAt()         返回在指定的位置的字符的 Unicode 编码。
+	 fromCharCode()       从字符编码创建一个字符串。
+	 indexOf()            检索字符串。
+	 使用一个参数代表要查找的元素，使用两个参数，第二个参数代表要查找的起始位置
+	 lastIndexOf()        从后向前搜索字符串。
+	 使用一个参数代表要查找的元素，使用两个参数，第二个参数代表要查找的起始位置
+	 slice()              提取字符串的片断，并在新的字符串中返回被提取的部分。
+	 split()              把字符串分割为字符串数组。
+	 substring()          提取字符串中两个指定的索引号之间的字符。
+	 重要事项：与 slice() 和 substr() 方法不同的是，substring() 不接受负的参数。
+	 当遇到负数时会自动转化为0，并且当右边的数比左边的大时，两个数字自动转换
+	 toLowerCase()        把字符串转换为小写。
+	 toUpperCase()        把字符串转换为大写。
+	 */
+	let str1 = 'hello world'
+	console.log (str1.charAt (2))
+	console.log (str1.charAt (4))
+	console.log (str1.charCodeAt (4))
+	console.log (String.fromCharCode (111))
+	console.log (str1.indexOf ('l'))
+	console.log (str1.indexOf ('l', 3))
+	console.log (str1.slice (3, 5))
+	console.log (str1.slice (3))
+	console.log (str1.split (' '))
+	console.log (str1.substring (3, 5))
+	console.log (str1.substring (3, -1))
+	console.log (str1.substring (0, 3))
+	console.log (str1.toUpperCase ())
+	console.log (str1.toLowerCase ())
 </script>
 </body>
 </html>

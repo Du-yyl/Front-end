@@ -34,30 +34,30 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js" type="text/javascript"></script>
 <script>
 	// 这里的参数是一个（）进行传递，是作为回调函数进行调用的
-	$(function () {
+	$ (function () {
 		//参数作为字符串传递，显示所有匹配的标签，并将他们封装成Jquery对象
-		$(`#btn1`)
-			//这里绑定监听事件
-			.click(function () {
-				// alert(this.innerHTML)
-				//参数为DOM对象：将对象封装成jQuery对象
-				alert($(this).html())
-				//	创建标签对象并封装成Jquery对象
-				$(`<button id="btn2" type="button">我是按钮2</button>`).appendTo(`#div`)
-			})
+		$ (`#btn1`)
+				//这里绑定监听事件
+				.click (function () {
+					// alert(this.innerHTML)
+					//参数为DOM对象：将对象封装成jQuery对象
+					alert ($ (this).html ())
+					//	创建标签对象并封装成Jquery对象
+					$ (`<button id="btn2" type="button">我是按钮2</button>`).appendTo (`#div`)
+				})
 	})
 
 	//	JQ操作数组
 	let nums = [1, 2, 3, 4, 5, 6]
 	// $.each(),隐式遍历数组中的值
-	$.each(nums, function (i, item) {
+	$.each (nums, function (i, item) {
 		// console.log(i);
-		console.log(item);
+		console.log (item)
 	})
 
 	//	去除字符串两边空格
 	let str = '             test      '
 	// console.log("------------>"+str.trim()+"<-----------");
-	console.log("------------>" + $.trim(str) + "<-----------");
+	console.log ('------------>' + $.trim (str) + '<-----------')
 </script>
 </html>

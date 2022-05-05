@@ -15,7 +15,7 @@
     <!--    这里除了使用本来有的内容，也能通过自定义的ID进行定位-->
     <teleport to="body">
 
-      <div class="dialog" v-show="isShow">
+      <div v-show="isShow" class="dialog">
         <h3>
           弹窗内容
         </h3>
@@ -31,7 +31,7 @@ import { ref } from 'vue'
 export default {
   name: 'Dialog',
   setup () {
-    let isShow = ref(false)
+    let isShow = ref (false)
 
     return {
       isShow,
@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 div {
   background: bisque;
 }

@@ -7,8 +7,7 @@
  *
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
-let fs = require('fs')
-
+let fs = require ('fs')
 
 // fs.readFile('test.txt', ((err, data) => {
 // 		if (!err){
@@ -19,18 +18,17 @@ let fs = require('fs')
 // 	}
 // ))
 
-
 // 使用Promise
-let pro = new Promise((resolve, reject) => {
-	fs.readFile('test.txt', ((err, data) => {
-		if (!err)
-			resolve(data.toString())
+let pro = new Promise ((resolve, reject) => {
+	fs.readFile ('test.txt', ((err, data) => {
+		if ( !err )
+			resolve (data.toString ())
 		else
-			reject(err)
+			reject (err)
 	}))
 })
-pro.then((value => {
-	console.log(value);
+pro.then ((value => {
+	console.log (value)
 }), (reason => {
-	console.log(reason);
+	console.log (reason)
 }))

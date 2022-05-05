@@ -11,6 +11,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 #wrap {
 	position: relative;
 	width: 300px;
@@ -18,6 +19,7 @@
 	border: 1px solid;
 	margin: 0 auto;
 }
+
 #wrap #inner1 {
 	width: 100px;
 	height: 100px;
@@ -30,9 +32,11 @@
 	margin: auto;
 	transition: all 0.7s ease-in-out;
 }
+
 #wrap #inner1:hover {
 	background-color: greenyellow;
 }
+
 #wrap #inner2 {
 	width: 100px;
 	height: 100px;
@@ -46,7 +50,9 @@
 	margin: auto;
 	transition: all 0.7s ease-in-out;
 }
+
 #wrap #inner2:hover {
 	background-color: greenyellow;
 }
+
 /*# sourceMappingURL=普通混合.css.map */

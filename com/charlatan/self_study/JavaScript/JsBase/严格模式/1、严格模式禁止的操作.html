@@ -37,16 +37,16 @@
 </body>
 <script>
 	// 开启严格模式
-	"use strict"
+	'use strict'
 
-	function func() {
+	function func () {
 		return function () {
-			console.log(this);
+			console.log (this)
 		}
 	}
 
-	let fn = func()
-	fn()
+	let fn = func ()
+	fn ()
 
 </script>
 </html>

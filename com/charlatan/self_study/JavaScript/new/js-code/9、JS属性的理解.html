@@ -10,23 +10,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS属性的理解</title>
+	<meta charset="UTF-8">
+	<title>JS属性的理解</title>
 </head>
 <body>
 <p>
-    点一下按钮将文本框变成复选框
+	点一下按钮将文本框变成复选框
 </p>
 <input id="text" type="text" value="变化">
 <script>
-    window.onload = function () {
-        window.document.getElementById('text').onfocus = function () {
-            window.document.getElementById('text').type = 'checkbox'
-        }
-        window.document.getElementById('text').onclick = function () {
-            window.document.getElementById('text').type = 'password'
-        }
-    }
+	window.onload = function () {
+		window.document.getElementById ('text').onfocus = function () {
+			window.document.getElementById ('text').type = 'checkbox'
+		}
+		window.document.getElementById ('text').onclick = function () {
+			window.document.getElementById ('text').type = 'password'
+		}
+	}
 </script>
 </body>
 </html>

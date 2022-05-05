@@ -33,12 +33,12 @@
 		this.num = num
 	}
 
-	func2.prototype = new func1()
+	func2.prototype = new func1 ()
 
-	let a = new func1(2), b = new func2(3)
+	let a = new func1 (2), b = new func2 (3)
 	delete b.num
-	console.log(a.num)
-	console.log(b.num)
+	console.log (a.num)
+	console.log (b.num)
 
 </script>
 </html>

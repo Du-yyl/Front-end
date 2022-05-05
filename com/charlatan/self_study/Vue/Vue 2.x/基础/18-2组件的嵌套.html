@@ -26,7 +26,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	let c1 = Vue.extend({
+	let c1 = Vue.extend ({
 		template: `
 			<div>
 			<h2>{{ text }}</h2>
@@ -41,7 +41,7 @@
 		},
 	})
 
-	let c2 = Vue.extend({
+	let c2 = Vue.extend ({
 		template: `
 			<div>
 			<h2>{{ text }}</h2>
@@ -61,7 +61,7 @@
 	})
 
 	// 创建app组件
-	let app = Vue.extend({
+	let app = Vue.extend ({
 		template: `
 			<div>
 			<c2></c2>
@@ -71,7 +71,7 @@
 			c2,
 		},
 	})
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		methods: {},
 		computed: {},

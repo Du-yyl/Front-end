@@ -7,7 +7,7 @@
  *
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
-let test = require('./模块化3')
-console.log(test.name)
-console.log(test.age)
-test.sayName()
+let test = require ('./模块化3')
+console.log (test.name)
+console.log (test.age)
+test.sayName ()

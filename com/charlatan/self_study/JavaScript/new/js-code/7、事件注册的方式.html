@@ -10,29 +10,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>事件注册的方式</title>
+	<meta charset="UTF-8">
+	<title>事件注册的方式</title>
 </head>
 <body>
 <p>
-    使用回调函数
+	使用回调函数
 </p>
 <input id="butt1" onclick="sayHello()" type="button" value="我是一个按钮">
 <p>
-    完全使用js
+	完全使用js
 </p>
 <input id="but2" type="button" value="我是按钮2">
 <script>
-    function sayHello() {
-        alert('你好')
-    }
+	function sayHello () {
+		alert ('你好')
+	}
 
-    function sayHello2() {
-        alert('hello')
-    }
+	function sayHello2 () {
+		alert ('hello')
+	}
 
-    var v1 = window.document.getElementById("but2")
-    v1.onclick = sayHello2
+	var v1 = window.document.getElementById ('but2')
+	v1.onclick = sayHello2
 </script>
 </body>
 </html>

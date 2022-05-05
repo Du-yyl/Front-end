@@ -25,8 +25,8 @@
           {{ now.value }}
         </router-link>
         <br>
-        <button @click="pushShow(now)" class="btn btn-success btns">push查看</button>
-        <button @click="replaceShow(now)" class="btn btn-success btns">replace查看</button>
+        <button class="btn btn-success btns" @click="pushShow(now)">push查看</button>
+        <button class="btn btn-success btns" @click="replaceShow(now)">replace查看</button>
       </li>
     </ul>
     <router-view class="show">
@@ -50,7 +50,7 @@ export default {
   components: {},
   methods: {
     pushShow (now) {
-      this.$router.push({
+      this.$router.push ({
         name: 'now',
         params: {
           id: now.id,
@@ -59,7 +59,7 @@ export default {
       })
     },
     replaceShow (now) {
-      this.$router.replace({
+      this.$router.replace ({
         name: 'now',
         params: {
           id: now.id,
@@ -69,7 +69,7 @@ export default {
     },
   },
   mounted () {
-    console.log(this.$route.meta)
+    console.log (this.$route.meta)
   },
 }
 </script>

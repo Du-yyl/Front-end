@@ -25,9 +25,9 @@ import { connect } from 'react-redux'
  */
 
 function mapStateToProps (state) {
-  return {
-    count: state,
-  }
+	return {
+		count: state,
+	}
 }
 
 /**
@@ -40,14 +40,14 @@ function mapStateToProps (state) {
  * }} 返回值是一个个方法，并且提供给组件调用，多个方法组成对象
  */
 function mapDispatchToProps (dispatch) {
-  return {
-    add: num => dispatch(createAddAction(num)),
-    subtract: num => dispatch(createSubtractAction(num)),
-    asyncAdd: (num, time) => dispatch(createAsyncAdd(num, time)),
-  }
+	return {
+		add: num => dispatch (createAddAction (num)),
+		subtract: num => dispatch (createSubtractAction (num)),
+		asyncAdd: (num, time) => dispatch (createAsyncAdd (num, time)),
+	}
 }
 
 // 创建暴漏一个 Count 容器组件怕【第一次调用的时候需要传入两个参数，两个参数都是函数】
-export default connect(mapStateToProps, mapDispatchToProps)(CountUI)
+export default connect (mapStateToProps, mapDispatchToProps) (CountUI)
 
 

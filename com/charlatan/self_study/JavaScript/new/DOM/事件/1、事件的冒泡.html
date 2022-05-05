@@ -10,35 +10,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>事件的冒泡</title>
-    <style>
-        #div {
-            width: 200px;
-            height: 200px;
-            background-color: #9090a8;
-        }
+	<meta charset="UTF-8">
+	<title>事件的冒泡</title>
+	<style>
+		#div {
+			width: 200px;
+			height: 200px;
+			background-color: #9090a8;
+		}
 
-        #span {
-            background-color: red;
-        }
-    </style>
-    <script>
-        window.onload = function () {
-            document.getElementById("div").onclick = function (event) {
-                alert("我是div")
-                event.cancelBubble = true
-            }
-            document.getElementById("span").onclick = function (event) {
-                alert("我是span")
-                event.cancelBubble = true
-            }
-            document.body.onclick = function (event) {
-                alert("我是body")
-                event.cancelBubble = true
-            }
-        }
-    </script>
+		#span {
+			background-color: red;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			document.getElementById ('div').onclick = function (event) {
+				alert ('我是div')
+				event.cancelBubble = true
+			}
+			document.getElementById ('span').onclick = function (event) {
+				alert ('我是span')
+				event.cancelBubble = true
+			}
+			document.body.onclick = function (event) {
+				alert ('我是body')
+				event.cancelBubble = true
+			}
+		}
+	</script>
 </head>
 <body>
 <!--
@@ -49,11 +49,11 @@
          使用event.cancelBubble = true进行取消冒泡，
 -->
 <div id="div">
-    我是div
-    <span id="span">
+	我是div
+	<span id="span">
       我是span
   </span>
-    <!-- /#span -->
+	<!-- /#span -->
 </div>
 <!-- /#div -->
 </body>

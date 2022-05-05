@@ -8,15 +8,15 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 
 export default class About extends Component {
-  
-  render () {
-    console.log("About 渲染");
-    return (
-      <h1>这个是 About 中的内容</h1>
-    )
-  }
-  
+	
+	render () {
+		console.log ('About 渲染')
+		return (
+				<h1>这个是 About 中的内容</h1>
+		)
+	}
+	
 }

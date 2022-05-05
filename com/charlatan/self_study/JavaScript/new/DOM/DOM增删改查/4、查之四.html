@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>查</title>
+	<meta charset="UTF-8">
+	<title>查</title>
 </head>
 <body>
 <div class="box1"></div>
 <div></div>
 <div id="box2">
-    <div></div>
-    <div></div>
+	<div></div>
+	<div></div>
 </div>
 
 
 <script>
-    // 获取body元素
-    let body = document.getElementsByTagName("body")[0]
-    console.log(body)
-    //    在document中保存的有一个属性body。他保存的是body的引用
-    let body_1 = document.body
-    console.log(body)
+	// 获取body元素
+	let body = document.getElementsByTagName ('body')[0]
+	console.log (body)
+	//    在document中保存的有一个属性body。他保存的是body的引用
+	let body_1 = document.body
+	console.log (body)
 
-    //all代表页面中所有的元素
-    let all = document.all
-    console.log(all)
-    console.log(all.length)
+	//all代表页面中所有的元素
+	let all = document.all
+	console.log (all)
+	console.log (all.length)
 
-    //    ====================
-    //    根据元素的class属性值查询一组元素节点对象
-    /*
-    * document.getElementsByClassName(ID)
-    *   根据class属性值，获取一组元素节点对象
-    * */
-    let box1 = document.getElementsByClassName("box1")
-    console.log(box1)
+	//    ====================
+	//    根据元素的class属性值查询一组元素节点对象
+	/*
+	 * document.getElementsByClassName(ID)
+	 *   根据class属性值，获取一组元素节点对象
+	 * */
+	let box1 = document.getElementsByClassName ('box1')
+	console.log (box1)
 
-    //    获取指定class中的div【可以模仿CSS中样式的选择进行精确的选择】
-    /*
-    * 获取到id为a的div中有几个div
-    *
-    * document.querySelector:
-    *   可以模仿CSS中的样式选择，直接找到指定的id或class中的指定样式
-    * 如果多个属性都符合，但是只会有第一个作为参数进行返z回
-    *
-    * document.querySelectorAll
-    *   找到所有符合标准的元素
-    * 封装到一个数组中返回
-    * */
-    var div = document.querySelector("#a div");
-    alert(div)
-    let dov1 = document.querySelectorAll("div");
-    alert(dov1)
-    alert(dov1.length)
+	//    获取指定class中的div【可以模仿CSS中样式的选择进行精确的选择】
+	/*
+	 * 获取到id为a的div中有几个div
+	 *
+	 * document.querySelector:
+	 *   可以模仿CSS中的样式选择，直接找到指定的id或class中的指定样式
+	 * 如果多个属性都符合，但是只会有第一个作为参数进行返z回
+	 *
+	 * document.querySelectorAll
+	 *   找到所有符合标准的元素
+	 * 封装到一个数组中返回
+	 * */
+	var div = document.querySelector ('#a div')
+	alert (div)
+	let dov1 = document.querySelectorAll ('div')
+	alert (dov1)
+	alert (dov1.length)
 </script>
 </body>
 </html>

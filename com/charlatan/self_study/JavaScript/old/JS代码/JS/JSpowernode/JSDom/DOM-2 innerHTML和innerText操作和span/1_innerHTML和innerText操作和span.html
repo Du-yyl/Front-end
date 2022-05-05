@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>innerHTML和innerText操作和span</title>
-  <style>
-    #div1 {
-      background-color: aqua;
-      width: 500px;
-      height: 300px;
-      border: 1px red solid;
-      position: absolute;
-      top: 100px;
-      left: 100px;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<title>innerHTML和innerText操作和span</title>
+	<style>
+		#div1 {
+			background-color: aqua;
+			width: 500px;
+			height: 300px;
+			border: 1px red solid;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+	</style>
 </head>
 <body>
 <script type="text/javascript">
-  window.onload = function () {
-    document.getElementById('btn1').onclick = function () {
-      //  获取div对象
-      var v1 = document.getElementById('div1')
-      // v1.innerText = '按下按钮要显示的内容显示了'
-      // 如果属性是HTML，那么会按照代码执行出一种效果，但是Text属性只会按照内容进行输出
-      v1.innerHTML = " <font color='red'>用户名不能为空</font>";
-      // v1.innerText =" <font color='red'>用户名不能为空</font>";
+	window.onload = function () {
+		document.getElementById ('btn1').onclick = function () {
+			//  获取div对象
+			var v1 = document.getElementById ('div1')
+			// v1.innerText = '按下按钮要显示的内容显示了'
+			// 如果属性是HTML，那么会按照代码执行出一种效果，但是Text属性只会按照内容进行输出
+			v1.innerHTML = ' <font color=\'red\'>用户名不能为空</font>'
+			// v1.innerText =" <font color='red'>用户名不能为空</font>";
 
-    }
-  }
+		}
+	}
 
 </script>
 <input id='btn1' type="button" value='设置div中的内容'>

@@ -13,7 +13,7 @@
     <h2>第一个人的名字是：{{ $store.getters['personsOptions/getFirstName'] }}</h2>
     <ul>
       <li v-for="person in persons" :key="person.id">
-        姓名：{{ person.name }} --- 年龄：{{ person.age }}  --- 性别：{{ person.sex }}
+        姓名：{{ person.name }} --- 年龄：{{ person.age }} --- 性别：{{ person.sex }}
       </li>
     </ul>
   </div>
@@ -29,7 +29,7 @@ export default {
   },
   components: {},
   computed: {
-    ...mapState('persons',['persons']),
+    ...mapState ('persons', ['persons']),
   },
 }
 </script>

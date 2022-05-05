@@ -18,9 +18,9 @@
 </head>
 <body>
 <div id="root">
-	你好：{{ info() }}
+	你好：{{ info () }}
 	<hr>
-	<button type="button" id="btn" @click="isTrue = !isTrue">按钮</button>
+	<button id="btn" type="button" @click="isTrue = !isTrue">按钮</button>
 	<hr>
 	点击按钮切换内容，方法实现
 </div>
@@ -29,7 +29,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			isTrue: true,

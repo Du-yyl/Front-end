@@ -10,8 +10,8 @@
 
 <template>
   <div>
-    <button @click="back" class="btn btn-warning">后退</button>
-    <button @click="go" class="btn btn-success">前进</button>
+    <button class="btn btn-warning" @click="back">后退</button>
+    <button class="btn btn-success" @click="go">前进</button>
   </div>
 </template>
 
@@ -24,10 +24,10 @@ export default {
   components: {},
   methods: {
     back () {
-      this.$router.back()
+      this.$router.back ()
     },
     go () {
-      this.$router.forward()
+      this.$router.forward ()
     },
   },
 }

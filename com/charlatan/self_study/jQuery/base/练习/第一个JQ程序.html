@@ -24,17 +24,17 @@
 
 <script>
 	window.onload = function () {
-		let btn1 = document.getElementById("btn1")
+		let btn1 = document.getElementById ('btn1')
 		btn1.onclick = function () {
-			alert("我是原生JS")
+			alert ('我是原生JS')
 		}
 	}
 	//	使用JQ
-	$(function () {
-		$(`#btn2`).click(function () {
-			alert("我是JQ")
+	$ (function () {
+		$ (`#btn2`).click (function () {
+			alert ('我是JQ')
 		})
-	})(window)
+	}) (window)
 </script>
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.css" rel="stylesheet">
 </html>

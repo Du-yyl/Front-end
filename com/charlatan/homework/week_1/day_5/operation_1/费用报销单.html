@@ -10,86 +10,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>费用报销单</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="UTF-8">
+	<title>费用报销单</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        #ExpenseReimbursementForm {
-            margin-top: 20px;
-            margin-left: 40px;
-        }
+		#ExpenseReimbursementForm {
+			margin-top: 20px;
+			margin-left: 40px;
+		}
 
-        #top {
-            border-bottom: 5px #000000 double;
-            width: 400px;
-            height: 60px;
-            font-weight: bold;
+		#top {
+			border-bottom: 5px #000000 double;
+			width: 400px;
+			height: 60px;
+			font-weight: bold;
 
-        }
+		}
 
-        #top {
-            font-size: 30px;
-            font-weight: bold;
-            line-height: 60px;
-            width: 400px;
-            /*text-align: center;*/
-            text-align: justify;
-            text-align-last: justify;
-        }
+		#top {
+			font-size: 30px;
+			font-weight: bold;
+			line-height: 60px;
+			width: 400px;
+			/*text-align: center;*/
+			text-align: justify;
+			text-align-last: justify;
+		}
 
-        #top-1 {
-            margin-top: 6px;
-            font-size: 17px;
-            font-weight: 400;
-            margin-bottom: 5px;
-        }
+		#top-1 {
+			margin-top: 6px;
+			font-size: 17px;
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
 
-        table {
-            height: 30px;
-            border-collapse: collapse;
-            margin: 0 auto;
-            border: 1px solid #000000;
-            margin-left: -00px;
-        }
+		table {
+			height: 30px;
+			border-collapse: collapse;
+			margin: 0 auto;
+			border: 1px solid #000000;
+			margin-left: -00px;
+		}
 
-        th {
-            /*border: solid black;*/
-            width: 25px;
-            height: 30px;
-            border: 1px solid #000000;
-            text-align: center;
-        }
+		th {
+			/*border: solid black;*/
+			width: 25px;
+			height: 30px;
+			border: 1px solid #000000;
+			text-align: center;
+		}
 
-        td {
-            width: 25px;
-            height: 30px;
-            border: 1px solid #000000;
-            text-align: left;
-        }
+		td {
+			width: 25px;
+			height: 30px;
+			border: 1px solid #000000;
+			text-align: left;
+		}
 
-        span {
-            font-weight: 500;
-        }
+		span {
+			font-weight: 500;
+		}
 
-        td {
-            font-weight: 500;
-        }
+		td {
+			font-weight: 500;
+		}
 
 
-    </style>
+	</style>
 </head>
 <body>
 <div id="ExpenseReimbursementForm">
-    <div id="top">
-        <p id="f-span">
-            &nbsp; &nbsp;费用报销单 &nbsp; &nbsp;
-        </p>
-    </div>
-    <div id="top-1">
+	<div id="top">
+		<p id="f-span">
+			&nbsp; &nbsp;费用报销单 &nbsp; &nbsp;
+		</p>
+	</div>
+	<div id="top-1">
         <span id="f-span-1">
             部门： &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -98,56 +98,56 @@
             月 &nbsp; &nbsp; &nbsp; &nbsp;
             日 &nbsp; &nbsp; &nbsp; &nbsp;
         </span>
-    </div>
-    <div id="table">
+	</div>
+	<div id="table">
 
-        <table id="t-1" width="60%">
-            <tr>
-                <!-- th 标签也是单元格标签，比td多的是居中、加粗。-->
-                <th>报销内容</th>
-                <th>单据张数</th>
-                <th>报销金额</th>
-                <th>备注</th>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                    &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
-                </td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                    &nbsp;
-                    &nbsp; &nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp; &nbsp;&nbsp;</td>
-                <td>&nbsp; &nbsp;&nbsp;</td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-                <td>&nbsp;&nbsp; &nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp; &nbsp;</td>
-                <td>&nbsp; &nbsp;</td>
-                <td>&nbsp; &nbsp;</td>
-                <td>&nbsp; &nbsp;</td>
+		<table id="t-1" width="60%">
+			<tr>
+				<!-- th 标签也是单元格标签，比td多的是居中、加粗。-->
+				<th>报销内容</th>
+				<th>单据张数</th>
+				<th>报销金额</th>
+				<th>备注</th>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+					&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+				</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+					&nbsp;
+					&nbsp; &nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp; &nbsp;&nbsp;</td>
+				<td>&nbsp; &nbsp;&nbsp;</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+				<td>&nbsp;&nbsp; &nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp; &nbsp;</td>
+				<td>&nbsp; &nbsp;</td>
+				<td>&nbsp; &nbsp;</td>
+				<td>&nbsp; &nbsp;</td>
 
-                <!--                <td rowspan="2">&nbsp; &nbsp;</td>-->
-            </tr>
-            <tr>
-                <td colspan="4">
+				<!--                <td rowspan="2">&nbsp; &nbsp;</td>-->
+			</tr>
+			<tr>
+				<td colspan="4">
                     <span id="span-1">
                         合计：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         人民币（大写）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -164,24 +164,24 @@
                         ￥&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         元
                     </span>
-                </td>
-                <!--
+				</td>
+				<!--
                 <td>f</td>
                 -->
-            </tr>
-            <tr colspan="5">
-                <td colspan="2">总经理签字：&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td>财务负责人签字：&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td>报销人：&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr colspan="5">
-                <td colspan="2">财务审核：&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td colspan="2">财务负责人签字：&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+			<tr colspan="5">
+				<td colspan="2">总经理签字：&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>财务负责人签字：&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>报销人：&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+			<tr colspan="5">
+				<td colspan="2">财务审核：&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td colspan="2">财务负责人签字：&nbsp;&nbsp;&nbsp;&nbsp;</td>
 
-            </tr>
+			</tr>
 
-        </table>
-    </div>
+		</table>
+	</div>
 
 </div>
 </body>

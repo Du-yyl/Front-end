@@ -14,20 +14,20 @@
             scroll-into-view="{{navID}}"
             scroll-with-animation
             class="videoScroll">
-        <view class="navItem" wx:for="{{navs}}"  wx:key="id" >
+        <view class="navItem" wx:for="{{navs}}" wx:key="id">
             <view
                     class="nav"
                     id="{{'scroll'+item.id}}"
                     bindtap="handleClick"
-                    >
-<!--                这里接收的ID虽然接收是的类型是数字类型，但是保存的时候会按照字符串类型进行保存-->
+            >
+                <!--                这里接收的ID虽然接收是的类型是数字类型，但是保存的时候会按照字符串类型进行保存-->
                 <view class="{{navID == 'scroll'+item.id ? 'view active':'view'}}"></view>
                 {{item.name}}
             </view>
         </view>
     </scroll-view>
 
-<!--    视频展示部分-->
+    <!--    视频展示部分-->
     <scroll-view
             scroll-y
             refresher-enabled
@@ -51,8 +51,9 @@
                     bindtimeupdate="handleTimeUpdate"
                     bindended="handleEnded"
             ></video>
-<!--            使用 image 图片代替 video 标签-->
-            <image bindtap="handleVideoPlay" wx:else id="{{item.data.vid}}" class="video" src="{{item.data.coverUrl}}"></image>
+            <!--            使用 image 图片代替 video 标签-->
+            <image bindtap="handleVideoPlay" wx:else id="{{item.data.vid}}" class="video"
+                   src="{{item.data.coverUrl}}"></image>
             <text class="text">
                 {{item.data.title}}
             </text>

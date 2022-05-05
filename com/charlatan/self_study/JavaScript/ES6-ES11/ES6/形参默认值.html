@@ -25,19 +25,18 @@
 <script>
 	let func = (num1, num2 = 0, num3 = 1) => num1 + num2 + num3
 
-	console.log(func(1, 2));
+	console.log (func (1, 2))
 
-	function func1({name, age = 18, address}) {
-		console.log(name);
-		console.log(address);
-		console.log(age);
+	function func1 ({ name, age = 18, address }) {
+		console.log (name)
+		console.log (address)
+		console.log (age)
 	}
 
-
-	func1({
+	func1 ({
 		name: '张三',
 		age: 20,
-		address: "北京大兴"
+		address: '北京大兴',
 	})
 
 

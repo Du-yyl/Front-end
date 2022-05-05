@@ -31,11 +31,6 @@
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
 <script type="text/babel">
 	class Longin extends React.Component {
-		state = {
-			username: '',
-			password: '',
-		}
-
 		render () {
 			return (
 					<form action="https://www.baidu.com" onSubmit={this.login}>
@@ -46,25 +41,30 @@
 			)
 		}
 
+		state = {
+			username: '',
+			password: '',
+		}
+
 		savaUsername = (event) => {
-			this.setState({
+			this.setState ({
 				username: event.target.value,
 			})
 		}
 		savaPassword = (event) => {
-			this.setState({
+			this.setState ({
 				password: event.target.value,
 			})
 		}
 
 		login = (event) => {
-			event.preventDefault()
-			console.log(this.state.username)
-			console.log(this.state.password)
+			event.preventDefault ()
+			console.log (this.state.username)
+			console.log (this.state.password)
 		}
 	}
 
-	ReactDOM.render(<Longin/>, document.getElementById('test'))
+	ReactDOM.render (<Longin/>, document.getElementById ('test'))
 
 </script>
 </html>

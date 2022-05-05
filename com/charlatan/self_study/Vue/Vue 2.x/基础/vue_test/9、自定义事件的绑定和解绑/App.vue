@@ -10,7 +10,7 @@
 
 <template>
   <div>
-    <Component1 :msg="msg" :chang="chang"></Component1>
+    <Component1 :chang="chang" :msg="msg"></Component1>
     <hr>
     <Component2 @self="self" @self2="self2" @unbind="unbind" @click.native="show"></Component2>
   </div>
@@ -32,16 +32,16 @@ export default {
       this.msg = '我是替换的内容'
     },
     self () {
-      console.log('我是self方法')
+      console.log ('我是self方法')
     },
     self2 () {
-      console.log('这时self2方法')
+      console.log ('这时self2方法')
     },
     unbind () {
-      console.log('解绑方法')
+      console.log ('解绑方法')
     },
     show () {
-      console.log('原生点击事件')
+      console.log ('原生点击事件')
     },
   },
   components: {

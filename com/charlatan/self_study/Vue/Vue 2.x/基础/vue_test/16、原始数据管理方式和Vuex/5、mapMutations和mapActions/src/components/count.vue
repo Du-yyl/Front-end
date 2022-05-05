@@ -14,9 +14,9 @@
     &nbsp;<h2> 当前这个数字乘10的结果时：{{ calculate }}</h2>
     <h1>我是 {{ name }} ,我是{{ age }}</h1>
     <select v-model.number="num">
-      <option class="js-options-table" :value=1>1</option>
-      <option class="js-options-table" :value=2>2</option>
-      <option class="js-options-table" :value=3>3</option>
+      <option :value=1 class="js-options-table">1</option>
+      <option :value=2 class="js-options-table">2</option>
+      <option :value=3 class="js-options-table">3</option>
     </select>
     &nbsp;
     <button class="btn btn-warning" @click="add(num)">+</button>
@@ -40,8 +40,8 @@ export default {
     }
   },
   computed: {
-    ...mapState(['sum', 'name', 'age']),
-    ...mapGetters({
+    ...mapState (['sum', 'name', 'age']),
+    ...mapGetters ({
       calculate: 'calculate',
     }),
   },
@@ -57,7 +57,7 @@ export default {
 
     // 这里使用这种形式的时候，在调用的时候不传参数，但是生成的函数中是会传入一个参数的，如果不指定，那么就会把event传入进去，这时如果再进行其他操作就会出现错误
     // 解决方法：在调用的时候传入参数，并指定参数的内容
-    ...mapMutations({
+    ...mapMutations ({
       add: 'ADD',
       deadd: 'DEADD',
     }),
@@ -69,10 +69,10 @@ export default {
     //   this.$store.dispatch('addWait', this.num)
     // },
 
-    ...mapActions(['addWait', 'addOdd']),
+    ...mapActions (['addWait', 'addOdd']),
   },
   mounted () {
-    console.log(this)
+    console.log (this)
   },
 }
 </script>

@@ -31,16 +31,16 @@
 </body>
 <script>
 
-	function sup() {
-		let supStr = "我是sup"
+	function sup () {
+		let supStr = '我是sup'
 	}
 
 	sup.prototype.showSup = function () {
-		console.log(this.showSup);
+		console.log (this.showSup)
 	}
 
-	function sub() {
-		let subStr = "我是sub"
+	function sub () {
+		let subStr = '我是sub'
 	}
 
 	// 子类型的原型为父类型的一个实例对象
@@ -48,13 +48,13 @@
 	// 	console.log(this.showSub);
 	// }
 
-	sub.prototype = new sup()
-	let sb1 = new sub()
-	sb1.showSup()
-	console.log(sb1.__proto__.__proto__);
+	sub.prototype = new sup ()
+	let sb1 = new sub ()
+	sb1.showSup ()
+	console.log (sb1.__proto__.__proto__)
 	/*
-	* 这里找的其实是原型对象中的原型
-	* */
+	 * 这里找的其实是原型对象中的原型
+	 * */
 
 </script>
 </html>

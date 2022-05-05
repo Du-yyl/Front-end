@@ -10,9 +10,9 @@
 
 <template>
   <li class="li">
-    <input type="checkbox" class="checkbox" v-model="Obj.done">
+    <input v-model="Obj.done" class="checkbox" type="checkbox">
     <span>{{ Obj.value }}</span>
-    <button @click="deletes" v-show="Obj.done">删除</button>
+    <button v-show="Obj.done" @click="deletes">删除</button>
   </li>
 </template>
 
@@ -27,8 +27,8 @@ export default {
   },
   methods: {
     deletes () {
-      console.log('删除方法')
-      this.removeObj(this.Obj)
+      console.log ('删除方法')
+      this.removeObj (this.Obj)
     },
   },
   props: {
@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 .li {
   list-style: none;
   border: 1px solid red;

@@ -49,18 +49,18 @@
 	 2. 显示选择爱好 的个数
 	 3. 显示选择的城市名称
 	 */
-	$(`form > input:text:disabled`).css({
-		backgroundColor: 'red'
+	$ (`form > input:text:disabled`).css ({
+		backgroundColor: 'red',
 	})
 
-	let $check = $(`form > input:checkbox:checked`)
-	console.log($check.length);
+	let $check = $ (`form > input:checkbox:checked`)
+	console.log ($check.length)
 
-	let $city = $(`form > select > option:selected`)
-	console.log($city.html());
+	let $city = $ (`form > select > option:selected`)
+	console.log ($city.html ())
 
 	//这种方式可以获取到选择对象的value
-	let $city_value = $(`form>select`).val()
-	console.log($city_value);
+	let $city_value = $ (`form > select`).val ()
+	console.log ($city_value)
 </script>
 </html>

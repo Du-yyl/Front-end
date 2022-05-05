@@ -20,11 +20,11 @@
 <div id="root">
 	<label>
 		姓
-		<input type="text" name="" v-model="surname">
+		<input v-model="surname" name="" type="text">
 	</label>
 	<label>
 		名
-		<input type="text" name="" v-model="name">
+		<input v-model="name" name="" type="text">
 	</label>
 	<div>
 		全名：{{ fullName }}
@@ -39,7 +39,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	let vm = new Vue({
+	let vm = new Vue ({
 		el: '#root',
 		data: {
 			surname: '张',

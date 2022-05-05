@@ -1,6 +1,6 @@
 'use strict'
 // 创建指定信息的 Error 对象
-var enhanceError = require('./enhanceError')
+var enhanceError = require ('./enhanceError')
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -13,6 +13,6 @@ var enhanceError = require('./enhanceError')
  * @returns {Error} The created error.
  */
 module.exports = function createError (message, config, code, request, response) {
-  var error = new Error(message)
-  return enhanceError(error, config, code, request, response)
+	var error = new Error (message)
+	return enhanceError (error, config, code, request, response)
 }

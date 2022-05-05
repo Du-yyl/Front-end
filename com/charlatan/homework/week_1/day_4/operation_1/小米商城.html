@@ -1,674 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>小米商城</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="UTF-8">
+	<title>小米商城</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        #u {
-            background-color: antiquewhite;
-            width: 1500px;
-            margin: 50px auto;
-            height: 700px;
-        }
+		#u {
+			background-color: antiquewhite;
+			width: 1500px;
+			margin: 50px auto;
+			height: 700px;
+		}
 
-        #u-1 {
-            position: absolute;
-            margin-top: 34px;
-            margin-left: 120px;
-            display: block;
-            font-weight: lighter;
-            font-size: 25px;
-            color: #333333;
-        }
+		#u-1 {
+			position: absolute;
+			margin-top: 34px;
+			margin-left: 120px;
+			display: block;
+			font-weight: lighter;
+			font-size: 25px;
+			color: #333333;
+		}
 
-        #u-2 {
-            position: absolute;
-            margin-left: 115px;
-            margin-top: 90px;
-        }
+		#u-2 {
+			position: absolute;
+			margin-left: 115px;
+			margin-top: 90px;
+		}
 
-        /*--------------------*/
-        #u-1-1-1 {
-            margin-left: 364px;
-        }
+		/*--------------------*/
+		#u-1-1-1 {
+			margin-left: 364px;
+		}
 
-        #u-1-1 {
-            width: 200px;
-            height: 270px;
-            background-color: white;
-            float: left;
-            margin-left: 64px;
-            margin-top: 90px;
-        }
+		#u-1-1 {
+			width: 200px;
+			height: 270px;
+			background-color: white;
+			float: left;
+			margin-left: 64px;
+			margin-top: 90px;
+		}
 
-        #u-1-2 {
-            width: 200px;
-            height: 270px;
-            background-color: white;
-            float: left;
-            margin-left: 64px;
-            margin-top: 90px;
-        }
+		#u-1-2 {
+			width: 200px;
+			height: 270px;
+			background-color: white;
+			float: left;
+			margin-left: 64px;
+			margin-top: 90px;
+		}
 
-        #u-1-3 {
-            width: 200px;
-            height: 270px;
-            background-color: white;
-            float: left;
-            margin-left: 64px;
-            margin-top: 90px;
-        }
+		#u-1-3 {
+			width: 200px;
+			height: 270px;
+			background-color: white;
+			float: left;
+			margin-left: 64px;
+			margin-top: 90px;
+		}
 
-        #u-1-4 {
-            width: 200px;
-            height: 270px;
-            background-color: white;
-            float: left;
-            margin-left: 64px;
-            margin-top: 90px;
-        }
+		#u-1-4 {
+			width: 200px;
+			height: 270px;
+			background-color: white;
+			float: left;
+			margin-left: 64px;
+			margin-top: 90px;
+		}
 
-        /*-------------------------*/
-        #u-2-1-1 {
-            margin-left: 364px;
-        }
+		/*-------------------------*/
+		#u-2-1-1 {
+			margin-left: 364px;
+		}
 
-        #u-2-1 {
-            width: 200px;
-            height: 300px;
-            background-color: white;
-            float: left;
-            margin-left: 64px;
-            margin-top: 29px;
-        }
+		#u-2-1 {
+			width: 200px;
+			height: 300px;
+			background-color: white;
+			float: left;
+			margin-left: 64px;
+			margin-top: 29px;
+		}
 
-        #u-2-2 {
-            width: 200px;
-            height: 300px;
-            background-color: white;
-            float: left;
-            margin-left: 64px;
-            margin-top: 29px;
-        }
+		#u-2-2 {
+			width: 200px;
+			height: 300px;
+			background-color: white;
+			float: left;
+			margin-left: 64px;
+			margin-top: 29px;
+		}
 
-        #u-2-3 {
-            width: 200px;
-            height: 300px;
-            background-color: white;
-            float: left;
-            margin-left: 64px;
-            margin-top: 29px;
-        }
+		#u-2-3 {
+			width: 200px;
+			height: 300px;
+			background-color: white;
+			float: left;
+			margin-left: 64px;
+			margin-top: 29px;
+		}
 
-        #u-2-4 {
-            width: 200px;
-            height: 300px;
-            background-color: white;
-            float: left;
-            margin-left: 64px;
-            margin-top: 29px;
-        }
+		#u-2-4 {
+			width: 200px;
+			height: 300px;
+			background-color: white;
+			float: left;
+			margin-left: 64px;
+			margin-top: 29px;
+		}
 
-        /*------------------*/
-        .img {
-            position: relative;
-            margin-left: 22px;
-            margin-top: 10px;
-        }
+		/*------------------*/
+		.img {
+			position: relative;
+			margin-left: 22px;
+			margin-top: 10px;
+		}
 
-        .u-1-name {
-            color: #333333;
-            display: block;
-            float: left;
-            width: 200px;
-            text-align: center;
-        }
+		.u-1-name {
+			color: #333333;
+			display: block;
+			float: left;
+			width: 200px;
+			text-align: center;
+		}
 
-        .introduce {
-            color: #b0b0b0;
-            display: block;
-            float: left;
-            width: 200px;
-            text-align: center;
-            margin-top: 10px;
-            font-size: 10px;
-        }
+		.introduce {
+			color: #b0b0b0;
+			display: block;
+			float: left;
+			width: 200px;
+			text-align: center;
+			margin-top: 10px;
+			font-size: 10px;
+		}
 
-        .price {
-            color: #ff6700;
-            display: block;
-            float: left;
-            width: 200px;
-            margin-top: 10px;
-            text-align: center;
-        }
+		.price {
+			color: #ff6700;
+			display: block;
+			float: left;
+			width: 200px;
+			margin-top: 10px;
+			text-align: center;
+		}
 
-        .url {
-            /*display: line-block;*/
-            height: 100%;
-            width: auto;
-        }
+		.url {
+			/*display: line-block;*/
+			height: 100%;
+			width: auto;
+		}
 
-        .pass {
-            color: #b0b0b0;
-        }
+		.pass {
+			color: #b0b0b0;
+		}
 
-        /*    ----------------------家--------------------电-----------*/
-        #home-appliances {
+		/*    ----------------------家--------------------电-----------*/
+		#home-appliances {
 
-            background-color: antiquewhite;
-            width: 1500px;
-            margin: 50px auto;
-            height: 700px;
-        }
+			background-color: antiquewhite;
+			width: 1500px;
+			margin: 50px auto;
+			height: 700px;
+		}
 
-        #h {
-            position: absolute;
-            margin-top: 34px;
-            margin-left: 120px;
-            display: block;
-            font-weight: lighter;
-            font-size: 25px;
-            color: #333333;
-        }
+		#h {
+			position: absolute;
+			margin-top: 34px;
+			margin-left: 120px;
+			display: block;
+			font-weight: lighter;
+			font-size: 25px;
+			color: #333333;
+		}
 
-        /*    第一部分    */
-        /*    410,526   */
-        .h01 {
-            width: 210px;
-            height: 285px;
-            background-color: white;
-            display: block;
-            transition: all 1s;
-        }
+		/*    第一部分    */
+		/*    410,526   */
+		.h01 {
+			width: 210px;
+			height: 285px;
+			background-color: white;
+			display: block;
+			transition: all 1s;
+		}
 
-        #h11 {
-            position: absolute;
-            margin-left: 220px;
-        }
-
-
-        #h-1-1 {
-            height: 285px;
-            width: 210px;
-            position: absolute;
-            margin-top: 90px;
-            margin-left: 115px;
-            background-color: #f60404;
-        }
-
-        .h01 {
-            float: left;
-            position: relative;
-            margin-top: 89px;
-            margin-left: 200px;
-            margin-right: -140px;
-            text-align: center;
-            transition: all 1s;
-        }
-
-        /* 第二部分*/
+		#h11 {
+			position: absolute;
+			margin-left: 220px;
+		}
 
 
-        .h02 {
-            width: 210px;
-            height: 285px;
-            background-color: white;
-            display: block;
-        }
+		#h-1-1 {
+			height: 285px;
+			width: 210px;
+			position: absolute;
+			margin-top: 90px;
+			margin-left: 115px;
+			background-color: #f60404;
+		}
 
-        #h22 {
-            position: absolute;
-            margin-left: 220px;
-            margin-top: 320px;
-        }
+		.h01 {
+			float: left;
+			position: relative;
+			margin-top: 89px;
+			margin-left: 200px;
+			margin-right: -140px;
+			text-align: center;
+			transition: all 1s;
+		}
 
-        #h-2-1 {
-            height: 285px;
-            width: 210px;
-            position: absolute;
-            margin-top: 410px;
-            margin-left: 115px;
-            background-color: #f60404;
-        }
+		/* 第二部分*/
 
-        .h02 {
-            float: left;
-            position: relative;
-            margin-top: 89px;
-            margin-left: 200px;
-            margin-right: -140px;
-            text-align: center;
-            transition: all 1s;
-        }
 
-        /*    ----小--------------图-----------*/
+		.h02 {
+			width: 210px;
+			height: 285px;
+			background-color: white;
+			display: block;
+		}
 
-        #h-2-5 {
-            position: absolute;
-            margin-left: 1230px;
-            margin-top: 410px;
-            background-color: white;
-        }
+		#h22 {
+			position: absolute;
+			margin-left: 220px;
+			margin-top: 320px;
+		}
 
-        #h-2-2-1 {
-            position: relative;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background-color: #000e0e;
-        }
+		#h-2-1 {
+			height: 285px;
+			width: 210px;
+			position: absolute;
+			margin-top: 410px;
+			margin-left: 115px;
+			background-color: #f60404;
+		}
 
-        #h-2-1-span {
-            position: absolute;
-            /*margin-right: -10px;*/
-            margin-left: -40px;
-            margin-top: 50px;
-            font-size: 14px;
-            text-align: left;
-        }
+		.h02 {
+			float: left;
+			position: relative;
+			margin-top: 89px;
+			margin-left: 200px;
+			margin-right: -140px;
+			text-align: center;
+			transition: all 1s;
+		}
 
-        #h-2-1-img {
-            position: absolute;
-            margin-left: 110px;
-            margin-top: 40px;
-        }
+		/*    ----小--------------图-----------*/
 
-        /*--*/
-        #h-2-2-2 {
-            position: relative;
-            margin-top: 10px;
-            background-color: #CCFFFF;
-            color: #3b3b3b;
+		#h-2-5 {
+			position: absolute;
+			margin-left: 1230px;
+			margin-top: 410px;
+			background-color: white;
+		}
 
-        }
+		#h-2-2-1 {
+			position: relative;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background-color: #000e0e;
+		}
 
-        #h-2-2-span {
-            position: absolute;
-            /*margin-right: -10px;*/
-            margin-top: 190px;
-            margin-left: 30px;
-        }
+		#h-2-1-span {
+			position: absolute;
+			/*margin-right: -10px;*/
+			margin-left: -40px;
+			margin-top: 50px;
+			font-size: 14px;
+			text-align: left;
+		}
 
-        #h-2-2-img {
-            position: absolute;
-            margin-left: 120px;
-            margin-top: 190px;
-        }
+		#h-2-1-img {
+			position: absolute;
+			margin-left: 110px;
+			margin-top: 40px;
+		}
 
-        #span-1 {
-            font-size: 20px;
-            text-align: left;
+		/*--*/
+		#h-2-2-2 {
+			position: relative;
+			margin-top: 10px;
+			background-color: #CCFFFF;
+			color: #3b3b3b;
 
-        }
+		}
 
-        #span-2 {
-            font-size: 13px;
-            color: #bdbdbd;
-            text-align: left;
-        }
+		#h-2-2-span {
+			position: absolute;
+			/*margin-right: -10px;*/
+			margin-top: 190px;
+			margin-left: 30px;
+		}
 
-        .u11 {
-            transition: all 1s;
-        }
+		#h-2-2-img {
+			position: absolute;
+			margin-left: 120px;
+			margin-top: 190px;
+		}
 
-        .u11:hover {
-            color: #3b3b3b;
-            box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
-            -webkit-transform: translateY(-10px);
-            -moz-transform: translateY(-10px);
-            transform: translateY(-10px)
-        }
+		#span-1 {
+			font-size: 20px;
+			text-align: left;
 
-        .h01:hover {
-            color: #3b3b3b;
-            box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
-            -webkit-transform: translateY(-10px);
-            -moz-transform: translateY(-10px);
-            transform: translateY(-10px)
-        }
+		}
 
-        .h02:hover {
-            color: #3b3b3b;
-            box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
-            -webkit-transform: translateY(-10px);
-            -moz-transform: translateY(-10px);
-            transform: translateY(-10px)
-        }
+		#span-2 {
+			font-size: 13px;
+			color: #bdbdbd;
+			text-align: left;
+		}
 
-        #h-2-5:hover {
-            box-shadow: 0 0 0px;
-            transform: translateY(0px);
-        }
+		.u11 {
+			transition: all 1s;
+		}
 
-        .h03 {
-            transition: all 1s;
-            background-color: #CCFFFF;
-        }
+		.u11:hover {
+			color: #3b3b3b;
+			box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px)
+		}
 
-        .h03:hover {
-            color: #3b3b3b;
-            box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
-            -webkit-transform: translateY(-10px);
-            -moz-transform: translateY(-10px);
-            transform: translateY(-10px)
-        }
-    </style>
+		.h01:hover {
+			color: #3b3b3b;
+			box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px)
+		}
+
+		.h02:hover {
+			color: #3b3b3b;
+			box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px)
+		}
+
+		#h-2-5:hover {
+			box-shadow: 0 0 0px;
+			transform: translateY(0px);
+		}
+
+		.h03 {
+			transition: all 1s;
+			background-color: #CCFFFF;
+		}
+
+		.h03:hover {
+			color: #3b3b3b;
+			box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px)
+		}
+	</style>
 
 </head>
 <!------------------------------------------------------------------->
 <body>
 <!---------------手----------------机----------------->
 <div id="u">
-    <div id="u-1">
-        <p>
-            手机
-        </p>
-        <!--        <h2>  手机 </h2>-->
-    </div>
-    <a class="url" href="">
-        <div class="u11" id="u-2">
-            <img alt="小米折叠屏手机" src="../../day_3/HM/1.webp" width="228px">
-        </div>
-    </a>
-    <!--    第一列-->
-    <div id='u-1-1-1'>
-        <a class="url" href="">
-            <div class="u11" id="u-1-1">
+	<div id="u-1">
+		<p>
+			手机
+		</p>
+		<!--        <h2>  手机 </h2>-->
+	</div>
+	<a class="url" href="">
+		<div id="u-2" class="u11">
+			<img alt="小米折叠屏手机" src="../../day_3/HM/1.webp" width="228px">
+		</div>
+	</a>
+	<!--    第一列-->
+	<div id='u-1-1-1'>
+		<a class="url" href="">
+			<div id="u-1-1" class="u11">
 
-                <img class="img" height="150px" src="../../day_3/HM/2.webp">
-                <span class="u-1-name">
+				<img class="img" height="150px" src="../../day_3/HM/2.webp">
+				<span class="u-1-name">
                 黑鲨4S<br>
             </span>
-                <span class="introduce">
+				<span class="introduce">
                 磁动力升降臂键<br>
             </span>
-                <span class="price">
+				<span class="price">
                 2699元起<br>
             </span>
-            </div>
-        </a>
-        <a class="url" href="">
-            <div class="u11" id="u-1-2">
+			</div>
+		</a>
+		<a class="url" href="">
+			<div id="u-1-2" class="u11">
 
 
-                <img class="img" height="150px" src="../../day_3/HM/3.webp">
-                <span class="u-1-name">
+				<img class="img" height="150px" src="../../day_3/HM/3.webp">
+				<span class="u-1-name">
                 黑鲨4S Pro<br>
             </span>
-                <span class="introduce">
+				<span class="introduce">
                 磁动力升降臂键<br>
             </span>
-                <span class="price">
+				<span class="price">
                 5499元<br>
             </span>
-            </div>
-        </a>
-        <a class="url" href="">
-            <div class="u11" id="u-1-3">
+			</div>
+		</a>
+		<a class="url" href="">
+			<div id="u-1-3" class="u11">
 
-                <img class="img" height="150px" src="../../day_3/HM/4.webp">
-                <span class="u-1-name">
+				<img class="img" height="150px" src="../../day_3/HM/4.webp">
+				<span class="u-1-name">
                 Xiaomi Civi<br>
             </span>
-                <span class="introduce">
+				<span class="introduce">
                 Xiaomi Civi<br>
             </span>
-                <span class="price">
+				<span class="price">
                 2599元起<br>
             </span>
-            </div>
-        </a>
-        <a class="url" href="">
-            <div class="u11" id="u-1-4">
+			</div>
+		</a>
+		<a class="url" href="">
+			<div id="u-1-4" class="u11">
 
-                <img class="img" height="150px" src="../../day_3/HM/5.webp">
-                <span class="u-1-name">
+				<img class="img" height="150px" src="../../day_3/HM/5.webp">
+				<span class="u-1-name">
                 Xiaomi MIX 4<br>
             </span>
-                <span class="introduce">
+				<span class="introduce">
                 CUP全面屏<br>
             </span>
-                <span class="price">
+				<span class="price">
                 4999元起<br>
             </span>
-            </div>
-        </a>
-    </div>
+			</div>
+		</a>
+	</div>
 
-    <!--    第二列-->
-    <div id='u-2-1-1'>
-        <a class="url" href="">
-            <div class="u11" id="u-2-1">
+	<!--    第二列-->
+	<div id='u-2-1-1'>
+		<a class="url" href="">
+			<div id="u-2-1" class="u11">
 
-                <img class="img" height="150px" src="../../day_3/HM/6.webp">
-                <span class="u-1-name">
+				<img class="img" height="150px" src="../../day_3/HM/6.webp">
+				<span class="u-1-name">
                 Note 10 Pro<br>
             </span>
-                <span class="introduce">
+				<span class="introduce">
                 天玑1000年度旗舰芯<br>
             </span>
-                <span class="price">
+				<span class="price">
                 1699元起 <s class="pass">1699元</s><br>
             </span>
-            </div>
-        </a>
-        <a class="url" href="">
-            <div class="u11" id="u-2-2">
+			</div>
+		</a>
+		<a class="url" href="">
+			<div id="u-2-2" class="u11">
 
-                <img class="img" height="150px" src="../../day_3/HM/7.webp">
-                <span class="u-1-name">
+				<img class="img" height="150px" src="../../day_3/HM/7.webp">
+				<span class="u-1-name">
                 Redmi Note 10 5G<br>
             </span>
-                <span class="introduce">
+				<span class="introduce">
                 5G小金刚 | 旗舰长续航<br>
             </span>
-                <span class="price">
+				<span class="price">
                 1099元起<br>
             </span>
-            </div>
-        </a>
-        <a class="url" href="">
-            <div class="u11" id="u-2-3">
+			</div>
+		</a>
+		<a class="url" href="">
+			<div id="u-2-3" class="u11">
 
-                <img class="img" height="150px" src="../../day_3/HM/7.webp">
-                <span class="u-1-name">
+				<img class="img" height="150px" src="../../day_3/HM/7.webp">
+				<span class="u-1-name">
                 Xiaomi MIX FOLD<br>
             </span>
-                <span class="introduce">
+				<span class="introduce">
                 折叠大屏 | 自研芯片<br>
             </span>
-                <span class="price">
+				<span class="price">
                 9999元起<br>
             </span>
-            </div>
+			</div>
 
-        </a>
-        <a class="url" href="">
-            <div class="u11" id="u-2-4">
+		</a>
+		<a class="url" href="">
+			<div id="u-2-4" class="u11">
 
-                <img class="img" height="150px" src="../../day_3/HM/9.webp">
-                <span class="u-1-name">
+				<img class="img" height="150px" src="../../day_3/HM/9.webp">
+				<span class="u-1-name">
                 Xiaomi 11 Ultra<br>
             </span>
-                <span class="introduce">
+				<span class="introduce">
                 1/1.12"Gn2 | 2K四微曲屏<br>
             </span>
-                <span class="price">
+				<span class="price">
                 5499元起 <s class="pass">5599元</s><br>
             </span>
-            </div>
-        </a>
-    </div>
+			</div>
+		</a>
+	</div>
 </div>
 <!---------------家----------------电----------------->
 <div id="home-appliances">
-    <div id="h">
-        <p>
-            家电
-        </p>
-    </div>
-    <!--    第一部分              -->
-    <div id="h-1">
-        <a href="javascript:">
-            <div class="h01" id="h-1-1">
-                <img class="h.1" id="ha1" src="../../day_4/computer/1.webp" width="223px">
-            </div>
-        </a>
-        <div id="h11">
-            <a href="javascript:">
-                <div class="h01" id="h-1-2">
-                    <img class="h_1" src="../../day_4/computer/1-1.webp" width="140px">
-                    <span class="u-1-name">
+	<div id="h">
+		<p>
+			家电
+		</p>
+	</div>
+	<!--    第一部分              -->
+	<div id="h-1">
+		<a href="javascript:">
+			<div id="h-1-1" class="h01">
+				<img id="ha1" class="h.1" src="../../day_4/computer/1.webp" width="223px">
+			</div>
+		</a>
+		<div id="h11">
+			<a href="javascript:">
+				<div id="h-1-2" class="h01">
+					<img class="h_1" src="../../day_4/computer/1-1.webp" width="140px">
+					<span class="u-1-name">
                 小米电视6 65“ OLED<br>
             </span>
-                    <span class="introduce">
+					<span class="introduce">
                 小米电视6 65“ OLED<br><br>
             </span>
-                    <span class="price">
+					<span class="price">
                 6999元起<br>
             </span>
-                </div>
-            </a>
-            <a href="javascript:">
-                <div class="h01" id="h-1-3">
-                    <img class="h_1" src="../../day_4/computer/1-2.webp" width="140px">
-                    <span class="u-1-name">
+				</div>
+			</a>
+			<a href="javascript:">
+				<div id="h-1-3" class="h01">
+					<img class="h_1" src="../../day_4/computer/1-2.webp" width="140px">
+					<span class="u-1-name">
                 小米电视 至尊版 65英寸<br><br>
             </span>
-                    <span class="introduce">
+					<span class="introduce">
                     画质新境界
                 <br>
             </span>
-                    <span class="price">
+					<span class="price">
                 7799元起<br>
             </span>
-                </div>
-            </a>
-            <a href="javascript:">
-                <div class="h01" id="h-1-4">
-                    <img class="h_1" src="../../day_4/computer/1-3.webp" width="140px">
-                    <span class="u-1-name">
+				</div>
+			</a>
+			<a href="javascript:">
+				<div id="h-1-4" class="h01">
+					<img class="h_1" src="../../day_4/computer/1-3.webp" width="140px">
+					<span class="u-1-name">
                 小米电视 ES55 2020款<br><br>
             </span>
-                    <span class="introduce">
+					<span class="introduce">
                 多分区 画质新旗舰<br>
             </span>
-                    <span class="price">
+					<span class="price">
                 2999元起<br>
             </span>
-                </div>
-            </a>
-            <a href="javascript:">
-                <div class="h01" id="h-1-5">
-                    <img class="h_1" src="../../day_4/computer/1-4.webp" width="140px">
-                    <span class="u-1-name">
+				</div>
+			</a>
+			<a href="javascript:">
+				<div id="h-1-5" class="h01">
+					<img class="h_1" src="../../day_4/computer/1-4.webp" width="140px">
+					<span class="u-1-name">
                 米家互联网对开门冰箱 650L<br>
             </span>
-                    <span class="introduce">
+					<span class="introduce">
                 重磅新品福利特惠<br>
             </span>
-                    <span class="price">
+					<span class="price">
                 6999元起 <s class="pass">3699元</s><br>
             </span>
-                </div>
-            </a>
+				</div>
+			</a>
 
-        </div>
-    </div>
-    <!--                  第二部分  -->
-    <div id="h-2">
-        <a href="javascript:">
-            <div class="h01" id="h-2-1">
-                <img class="h.1" id="ha2" src="../../day_4/computer/2.webp" width="223px">
-            </div>
-        </a>
-        <div id="h22">
-            <a href="javascript:">
-                <div class="h02" id="h-2-2">
-                    <img class="h_2" src="../../day_4/computer/2-1.webp" width="140px">
-                    <span class="u-1-name">
+		</div>
+	</div>
+	<!--                  第二部分  -->
+	<div id="h-2">
+		<a href="javascript:">
+			<div id="h-2-1" class="h01">
+				<img id="ha2" class="h.1" src="../../day_4/computer/2.webp" width="223px">
+			</div>
+		</a>
+		<div id="h22">
+			<a href="javascript:">
+				<div id="h-2-2" class="h02">
+					<img class="h_2" src="../../day_4/computer/2-1.webp" width="140px">
+					<span class="u-1-name">
                 米家超薄电磁炉<br><br>
             </span>
-                    <span class="introduce">
+					<span class="introduce">
                 浅薄美学，精准起火<br>
             </span>
-                    <span class="price">
+					<span class="price">
                 499元起<br>
             </span>
-                </div>
-            </a>
-            <a href="javascript:">
-                <div class="h02" id="h-2-3">
-                    <img class="h_2" src="../../day_4/computer/2-2.webp" width="140px">
-                    <span class="u-1-name">
+				</div>
+			</a>
+			<a href="javascript:">
+				<div id="h-2-3" class="h02">
+					<img class="h_2" src="../../day_4/computer/2-2.webp" width="140px">
+					<span class="u-1-name">
                 米家集尘扫地机器人<br><br>
             </span>
-                    <span class="introduce">
+					<span class="introduce">
                 自动倒垃圾，45天手不粘尘<br>
             </span>
-                    <span class="price">
+					<span class="price">
                 2999元起<br>
             </span>
-                </div>
-            </a>
-            <a href="javascript:">
-                <div class="h02" id="h-2-4">
-                    <img class="h_2" src="../../day_4/computer/2-3.webp" width="140px">
-                    <span class="u-1-name">
+				</div>
+			</a>
+			<a href="javascript:">
+				<div id="h-2-4" class="h02">
+					<img class="h_2" src="../../day_4/computer/2-3.webp" width="140px">
+					<span class="u-1-name">
                 Redmi全自动波轮洗衣机1A 8KG<br>
             </span>
-                    <span class="introduce">
+					<span class="introduce">
                 一顿操作，父母都爱用<br>
             </span>
-                    <span class="price">
+					<span class="price">
                 849元起 <s class="pass">899元</s> <br>
             </span>
-                </div>
-            </a>
-        </div>
+				</div>
+			</a>
+		</div>
 
-        <!----------------------------------------------------->
-        <div class="h02" id="h-2-5">
+		<!----------------------------------------------------->
+		<div id="h-2-5" class="h02">
 
-            <a href="javascript:">
-                <div class="h03" id="h-2-2-1">
-                    <div id="h-2-1-span">
+			<a href="javascript:">
+				<div id="h-2-2-1" class="h03">
+					<div id="h-2-1-span">
                     <span class="u-1-name">
                     米家电烤箱<br>
                 </span>
-                        <span class="price">
+						<span class="price">
                     299元起<br>
                 </span>
-                    </div>
-                    <div id="h-2-1-img">
-                        <img class="h_2" src="../../day_4/computer/2-4-1.webp" width="83px">
-                    </div>
-                </div>
-            </a>
+					</div>
+					<div id="h-2-1-img">
+						<img class="h_2" src="../../day_4/computer/2-4-1.webp" width="83px">
+					</div>
+				</div>
+			</a>
 
-            <a href="javascript:">
-                <div class="h03" id="h-2-2-2">
-                    <div id="h-2-2-span">
+			<a href="javascript:">
+				<div id="h-2-2-2" class="h03">
+					<div id="h-2-2-span">
                         <span id="span-1">
                             浏览更多<br>
                         </span>
-                        <span id="span-2">
+						<span id="span-2">
                             热门
                         </span>
-                    </div>
-                    <div id="h-2-2-img">
-                        <img alt="矢量图" src="../../day_4/Vector%20illustration/2.png" width="53">
-                    </div>
-                </div>
-            </a>
+					</div>
+					<div id="h-2-2-img">
+						<img alt="矢量图" src="../../day_4/Vector%20illustration/2.png" width="53">
+					</div>
+				</div>
+			</a>
 
-        </div>
-    </div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

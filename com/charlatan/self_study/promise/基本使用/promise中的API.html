@@ -20,36 +20,36 @@
 
 </body>
 <script>
-	let pro = new Promise((resolve, reject) => {
+	let pro = new Promise ((resolve, reject) => {
 		// 这里会先执行，所以，这里是同步函数
-		console.log('111')
+		console.log ('111')
 	})
-	console.log('222')
+	console.log ('222')
 
 	// 如果传入参数作为非promise类型的对象，返回的结果是成功promise对象
 	// 如果传入参数是promise对象，那么参数决定了resolve的结果
-	console.log(Promise.resolve(1000))
+	console.log (Promise.resolve (1000))
 
 	// 这个和上一个刚好相反，无论传入什么都会返回一个错误的promise值，即使传入一个成功的promise结果也是如此
-	console.log(Promise.reject(200))
-	console.log(Promise.reject(new Promise((resolve) => {
-		resolve(200)
+	console.log (Promise.reject (200))
+	console.log (Promise.reject (new Promise ((resolve) => {
+		resolve (200)
 	})))
 
-	console.log('100')
+	console.log ('100')
 
-	let p1 = Promise.resolve(100)
-	let p2 = Promise.resolve(200)
-	let p3 = Promise.resolve(300)
+	let p1 = Promise.resolve (100)
+	let p2 = Promise.resolve (200)
+	let p3 = Promise.resolve (300)
 	// all中传入一个promise数组，只有当所有的promise全部成功，整体结果才是成功，反之就是失败，成功的返回值是这个数组
-	let pto = Promise.all([p1, p2, p3])
-	console.log(pto)
+	let pto = Promise.all ([p1, p2, p3])
+	console.log (pto)
 
-	let q1 = Promise.resolve(111)
-	let q2 = Promise.resolve(222)
-	let q3 = Promise.resolve(333)
+	let q1 = Promise.resolve (111)
+	let q2 = Promise.resolve (222)
+	let q3 = Promise.resolve (333)
 
 	// 这个用于监视谁先改变，谁先改变就输出谁，这个代码中因为q1是第一个的，q1会先执行，所以，会先输出q1，但是如果q1的改变一个异步任务，那么就不会输出q1
-	console.log(Promise.race([q1, q2, q3]))
+	console.log (Promise.race ([q1, q2, q3]))
 </script>
 </html>

@@ -13,37 +13,37 @@
 	<meta charset="UTF-8">
 	<title>拖拽1</title>
 	<style>
-        #div1 {
-            width: 100px;
-            height: 100px;
-            background-color: #9090a8;
-            position: absolute;
-        }
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background-color: #9090a8;
+			position: absolute;
+		}
 
-        #div2 {
-            width: 100px;
-            height: 100px;
-            background-color: #030302;
-            position: absolute;
-            top: 100px;
-            left: 100px;
+		#div2 {
+			width: 100px;
+			height: 100px;
+			background-color: #030302;
+			position: absolute;
+			top: 100px;
+			left: 100px;
 
-        }
+		}
 	</style>
 	<script>
 		window.onload = message => {
-			let div1 = document.getElementById("div1")
+			let div1 = document.getElementById ('div1')
 			div1.onmousedown = () => {
 				document.onmousemove = function (event) {
 					let x = event.clientX
 					let y = event.clientY
 					event.screenX
-					div1.style.left = x + "px"
-					div1.style.top = y + "px"
+					div1.style.left = x + 'px'
+					div1.style.top = y + 'px'
 				}
 				/*
-			   * 当事件结束时，如果依然重复指定的操作，那么依然会触发这个函数，所以不能只取消鼠标移动事件
-			   * */
+				 * 当事件结束时，如果依然重复指定的操作，那么依然会触发这个函数，所以不能只取消鼠标移动事件
+				 * */
 				document.onmouseup = function () {
 					document.onmousemove = null
 					document.onmouseup = null

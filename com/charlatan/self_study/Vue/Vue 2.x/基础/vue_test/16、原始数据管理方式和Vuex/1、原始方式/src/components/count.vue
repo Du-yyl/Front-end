@@ -13,9 +13,9 @@
     <h2>当前的和是：{{ sum }}</h2>
     &nbsp;
     <select v-model.number="num">
-      <option class="js-options-table" :value=1>1</option>
-      <option class="js-options-table" :value=2>2</option>
-      <option class="js-options-table" :value=3>3</option>
+      <option :value=1 class="js-options-table">1</option>
+      <option :value=2 class="js-options-table">2</option>
+      <option :value=3 class="js-options-table">3</option>
     </select>
     &nbsp;
     <button class="btn btn-warning" @click="add">+</button>
@@ -46,12 +46,12 @@ export default {
       this.sum -= this.num
     },
     addOdd () {
-      if (this.sum % 2 !== 0) {
-        this.add()
+      if ( this.sum % 2 !== 0 ) {
+        this.add ()
       }
     },
     addWait () {
-      setTimeout(this.add, 2000)
+      setTimeout (this.add, 2000)
     },
   },
 }

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>显示网页时钟</title>
+	<meta charset="UTF-8">
+	<title>显示网页时钟</title>
 </head>
 <body>
 <!--//   /*
@@ -36,23 +36,23 @@
 
 <script type="text/javascript">
 
-  window.onload = function () {
-    document.getElementById('xx').onclick = sin
+	window.onload = function () {
+		document.getElementById ('xx').onclick = sin
 
-    function sin() {
-      stp = window.setInterval(function () {
-        var time = new Date();
-        time = time.toLocaleString();
-        document.getElementById('dd').innerHTML = time
-      })
-    }
+		function sin () {
+			stp = window.setInterval (function () {
+				var time = new Date ()
+				time = time.toLocaleString ()
+				document.getElementById ('dd').innerHTML = time
+			})
+		}
 
-    document.getElementById('xx1').onclick = stop
+		document.getElementById ('xx1').onclick = stop
 
-    function stop() {
-      window.clearInterval(stp)
-    }
-  }
+		function stop () {
+			window.clearInterval (stp)
+		}
+	}
 </script>
 <input id='xx' type="button" value="显示系统当前时间">
 <input id='xx1' type="button" value="停止显示系统当前时间">

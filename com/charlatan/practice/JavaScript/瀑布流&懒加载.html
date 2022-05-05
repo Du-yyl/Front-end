@@ -143,11 +143,11 @@
 </head>
 <body>
 <div id="bigBox">
-	<div class="in" id="in1"></div>
-	<div class="in" id="in2"></div>
-	<div class="in" id="in3"></div>
-	<div class="in" id="in4"></div>
-	<div class="in" id="in5"></div>
+	<div id="in1" class="in"></div>
+	<div id="in2" class="in"></div>
+	<div id="in3" class="in"></div>
+	<div id="in4" class="in"></div>
+	<div id="in5" class="in"></div>
 	<div id="show">
 		STOP！我是有底线的
 	</div>
@@ -156,10 +156,10 @@
 </body>
 <script src="tools/homework.js" type="text/javascript"></script>
 <script>
-	let div = document.getElementById('bigBox')
-	let ins = document.getElementsByClassName('in')
-	let show = document.getElementsByClassName('rotateSpinner')[0]
-	let shows = document.getElementById('show')
+	let div = document.getElementById ('bigBox')
+	let ins = document.getElementsByClassName ('in')
+	let show = document.getElementsByClassName ('rotateSpinner')[0]
+	let shows = document.getElementById ('show')
 	let flag
 	let flags = false
 
@@ -169,7 +169,7 @@
 	 * @param up 本次显示范围的结束下标
 	 */
 	function goImg (last, up) {
-		for (let i = last; i < up; i++) {
+		for ( let i = last; i < up; i++ ) {
 			flags = up >= data.length
 			up = up > data.length ? data.length : up
 			flag = up
@@ -177,41 +177,41 @@
 			let sam = ins[0].offsetHeight
 			let self = ins[0]
 			let width = 250
-			let img_self = datum.img_url.split('?')[1].split('x')
+			let img_self = datum.img_url.split ('?')[1].split ('x')
 			let height = width * img_self[1] / img_self[0]
 
-			let img = document.createElement('img')
+			let img = document.createElement ('img')
 			img.src = datum.img_url
 			img.title = datum.title
 			img.style.width = '250px'
 			img.style.height = height + 'px'
-			for (let in1 of ins) {
+			for ( let in1 of ins ) {
 				self = sam > in1.offsetHeight ? in1 : self
 			}
-			self.appendChild(img)
+			self.appendChild (img)
 		}
 	}
 
-	goImg(0, 25)
+	goImg (0, 25)
 
 	document.onscroll = onscroll
 
 	function onscroll () {
 		let he = document.documentElement.scrollHeight - document.documentElement.scrollTop
-		if (flags) {
+		if ( flags ) {
 			shows.style.display = 'block'
 			return
 		}
-		if (he <= document.documentElement.clientHeight + 30) {
+		if ( he <= document.documentElement.clientHeight + 30 ) {
 			show.style.display = 'block'
 
 			document.onscroll = null
-			let timer = setTimeout(function () {
-				goImg(++flag, flag += 25)
+			let timer = setTimeout (function () {
+				goImg (++flag, flag += 25)
 				// console.log(flag)
 				show.style.display = 'none'
 
-				clearTimeout(timer)
+				clearTimeout (timer)
 				document.onscroll = onscroll
 
 			}, 1000)

@@ -24,7 +24,7 @@
             <text class="e-b">吃饭，睡觉，打豆豆</text>
         </view>
     </view>
-<!--    style="transform: translateY(-{{translateY}}rpx)"-->
+    <!--    style="transform: translateY(-{{translateY}}rpx)"-->
 
     <view
             bindtouchstart="handleTouchStart"

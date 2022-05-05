@@ -10,30 +10,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>创建对象的第二种方式</title>
+	<meta charset="UTF-8">
+	<title>创建对象的第二种方式</title>
 </head>
 <body>
 <script>
-    // var o1 = new Object();
-    /*这种方式创建对象不能直接进行赋值，在使用时不方便，更多的是使用花括号创建*/
-    var o2 = {
-        name: "tom",
-        age: 12,
-        addr: "测试"
-    };
-    /*
-    * 这种方式在创建时，可以直接进行赋值，并且更加直观*/
-    console.log(typeof o2);
-    console.log(o2.name, o2.addr);
+	// var o1 = new Object();
+	/*这种方式创建对象不能直接进行赋值，在使用时不方便，更多的是使用花括号创建*/
+	var o2 = {
+		name: 'tom',
+		age: 12,
+		addr: '测试',
+	}
+	/*
+	 * 这种方式在创建时，可以直接进行赋值，并且更加直观*/
+	console.log (typeof o2)
+	console.log (o2.name, o2.addr);
 
-    /*
-    * 当一个函数只执行一次时，并且只执行一次时，可以不使用变量接收，直接调用，不过这只用在特殊时机
-    *
-    * */
-    (function () {
-        alert("我值匿名函数")
-    })();
+	/*
+	 * 当一个函数只执行一次时，并且只执行一次时，可以不使用变量接收，直接调用，不过这只用在特殊时机
+	 *
+	 * */
+	(function () {
+		alert ('我值匿名函数')
+	}) ()
 
 </script>
 </body>

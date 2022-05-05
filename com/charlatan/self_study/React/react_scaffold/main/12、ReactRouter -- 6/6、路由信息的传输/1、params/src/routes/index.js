@@ -19,19 +19,19 @@ import Mes from '../components/Home/Message/Mes'
  * 定义一个外部文件，集中管理所有路由规则
  */
 export default [
-  { path: '/about', element: <About/> },
-  {
-    path: '/home/*', element: <Home/>, children: [
-      
-      { path: 'news', element: <News/> },
-      {
-        path: 'message/*', element: <Message/>, children: [
-          // 传递 params 参数
-          { path: 'mes/:id/:title/:context', element: <Mes/> },
-        ],
-      },
-      { path: '', element: <Navigate to="message"/> },
-    ],
-  },
-  { path: '/', element: <Navigate to="/home/"/> },
+	{ path: '/about', element: <About/> },
+	{
+		path: '/home/*', element: <Home/>, children: [
+			
+			{ path: 'news', element: <News/> },
+			{
+				path: 'message/*', element: <Message/>, children: [
+					// 传递 params 参数
+					{ path: 'mes/:id/:title/:context', element: <Mes/> },
+				],
+			},
+			{ path: '', element: <Navigate to="message"/> },
+		],
+	},
+	{ path: '/', element: <Navigate to="/home/"/> },
 ]

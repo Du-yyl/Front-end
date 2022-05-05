@@ -2,8 +2,8 @@ import React from 'react'
 import {
   Category,
   Component,
-  Variant,
   Palette,
+  Variant,
 } from '@react-buddy/ide-toolbox'
 
 export const PaletteTree = () => (

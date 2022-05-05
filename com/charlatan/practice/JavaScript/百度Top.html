@@ -13,79 +13,79 @@
 	<meta charset="UTF-8">
 	<title>百度Top</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        li {
-            list-style: none;
-        }
+		li {
+			list-style: none;
+		}
 
-        #top {
-            position: relative;
-            width: 100%;
-            height: 40px;
-            background-color: #01204f;
-            top: 50px;
-        }
+		#top {
+			position: relative;
+			width: 100%;
+			height: 40px;
+			background-color: #01204f;
+			top: 50px;
+		}
 
-        #ul {
-            width: 700px;
-            height: 100%;
-            /*background-color: #bdc2cd;*/
-            line-height: 40px;
-            position: absolute;
-            left: 100px;
-        }
+		#ul {
+			width: 700px;
+			height: 100%;
+			/*background-color: #bdc2cd;*/
+			line-height: 40px;
+			position: absolute;
+			left: 100px;
+		}
 
-        .li {
-            width: 50px;
-            position: relative;
-            height: 40px;
-            /*margin-right: 20px;*/
-            text-align: center;
-            font-size: 14px;
-            font-weight: 700;
-            color: white;
-            cursor: pointer;
-            z-index: 1;
-            /*background-color: #6d6363;*/
-            /*margin-left: 1px;*/
-            float: left;
-        }
+		.li {
+			width: 50px;
+			position: relative;
+			height: 40px;
+			/*margin-right: 20px;*/
+			text-align: center;
+			font-size: 14px;
+			font-weight: 700;
+			color: white;
+			cursor: pointer;
+			z-index: 1;
+			/*background-color: #6d6363;*/
+			/*margin-left: 1px;*/
+			float: left;
+		}
 
-        #li1 {
-            background-color: #cc0000;
-            /*width: 90px;*/
-        }
+		#li1 {
+			background-color: #cc0000;
+			/*width: 90px;*/
+		}
 
-        #red-div {
-            width: 50px;
-            height: 40px;
-            background-color: #cc0000;
-            position: absolute;
-            top: 0;
-            /*left: 167px;*/
-            left: 100px;
-            z-index: 0;
-            transition: all .5s ease;
-        }
+		#red-div {
+			width: 50px;
+			height: 40px;
+			background-color: #cc0000;
+			position: absolute;
+			top: 0;
+			/*left: 167px;*/
+			left: 100px;
+			z-index: 0;
+			transition: all .5s ease;
+		}
 	</style>
 </head>
 <script>
 	window.onload = function () {
 		let x = 100
-		let div_red = document.getElementById("red-div")
-		let ul = document.getElementById("ul")
-		let lis = document.getElementsByClassName("li")
-		for (let i = 0; i < lis.length; i++) {
+		let div_red = document.getElementById ('red-div')
+		let ul = document.getElementById ('ul')
+		let lis = document.getElementsByClassName ('li')
+		for ( let i = 0; i < lis.length; i++ ) {
 			lis[i].onmouseenter = function () {
-				div_red.style.left = (i * 50 + x) + "px"
+				div_red.style.left = (i * 50 + x) + 'px'
 			}
 		}
 		ul.onmouseleave = function () {
-			div_red.style.left = "100px"
+			div_red.style.left = '100px'
 		}
 	}
 </script>
@@ -96,7 +96,7 @@
 	</div>
 	<!-- /.red-div -->
 	<ul id="ul">
-		<li class="li" id="li1">首页</li>
+		<li id="li1" class="li">首页</li>
 		<li class="li">国内</li>
 		<li class="li">国际</li>
 		<li class="li">军事</li>

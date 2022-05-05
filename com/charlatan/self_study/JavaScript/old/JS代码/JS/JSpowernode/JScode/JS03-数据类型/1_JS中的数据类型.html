@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JS中的数据类型</title>
+	<meta charset="UTF-8">
+	<title>JS中的数据类型</title>
 </head>
 <body>
 <script type="text/javascript">
-  /*
-  * 虽然JS的变量在声明的时候是没有数据类型的,但是赋值的时候还是有数据类型的区分的
-  * JS包含的数据类型：
-  *     原始类型：Undefined、　Number、　String、　Null、　Boolean
-  *     引用类型：Object以及Object的子类
-  * 【 ES６之后有７种,多的是：Symbol]
-  * JS中有一种运算符：typeof ,这个运算符可以在程序的运行阶段动态获取变量的数据类型
-  *     typeof 语法格式：
-  *         typeof 　变量名
-  *     typeof 运算符的运算结果是以下６个字符串之一,字符串全部小写
-  *          ＇undefined＇
-  *          ＇number＇
-  *          ＇string＇
-  *          ＇boolean＇
-  *          ＇object＇
-  *          ＇function＇
-  *
-  *　在JS中比较字符串是否相等,用'　＝＝　'完成
-  * */
-  function sum(a, b) {
-    if (typeof a == "number" && typeof b == "number") {
-      alert(a + b);
-    } else {
-      alert("你的输入有误");
-    }
-  }
+	/*
+	 * 虽然JS的变量在声明的时候是没有数据类型的,但是赋值的时候还是有数据类型的区分的
+	 * JS包含的数据类型：
+	 *     原始类型：Undefined、　Number、　String、　Null、　Boolean
+	 *     引用类型：Object以及Object的子类
+	 * 【 ES６之后有７种,多的是：Symbol]
+	 * JS中有一种运算符：typeof ,这个运算符可以在程序的运行阶段动态获取变量的数据类型
+	 *     typeof 语法格式：
+	 *         typeof 　变量名
+	 *     typeof 运算符的运算结果是以下６个字符串之一,字符串全部小写
+	 *          ＇undefined＇
+	 *          ＇number＇
+	 *          ＇string＇
+	 *          ＇boolean＇
+	 *          ＇object＇
+	 *          ＇function＇
+	 *
+	 *　在JS中比较字符串是否相等,用'　＝＝　'完成
+	 * */
+	function sum (a, b) {
+		if ( typeof a == 'number' && typeof b == 'number' ) {
+			alert (a + b)
+		} else {
+			alert ('你的输入有误')
+		}
+	}
 
-  sum(1, 2);
-  sum("213123", "21312312");
-  sum("aefae", 23435);
+	sum (1, 2)
+	sum ('213123', '21312312')
+	sum ('aefae', 23435)
 
-  var a = 1;
-  alert(typeof a)
-  var b = "123";
-  alert(typeof b)
-  var c = false;
-  alert(typeof c)
-  var d;
-  alert(typeof d)
-  var e = null;
-  alert(typeof e);//null属于Null类型,但是typeof运算符的结果是"object"
-  var f = {};
-  alert(typeof f);
+	var a = 1
+	alert (typeof a)
+	var b = '123'
+	alert (typeof b)
+	var c = false
+	alert (typeof c)
+	var d
+	alert (typeof d)
+	var e = null
+	alert (typeof e)//null属于Null类型,但是typeof运算符的结果是"object"
+	var f = {}
+	alert (typeof f)
 
-  function g() {
-  }
+	function g () {
+	}
 
-  alert(typeof g);
+	alert (typeof g)
 </script>
 </body>
 </html>

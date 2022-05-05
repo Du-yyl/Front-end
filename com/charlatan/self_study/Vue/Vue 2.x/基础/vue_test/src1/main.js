@@ -17,15 +17,14 @@ import App from './App'
 // import 'element-ui/lib/theme-chalk/index.css'
 // 使用 ui 样式
 // Vue.use(ElementUI)
-
 // 按需引入样式
 // 引入指定的内容
 import { Button, Row } from 'element-ui'
 // 注册引入的组件
-Vue.component(Button.name ,Button)
-Vue.component(Row)
+Vue.component (Button.name, Button)
+Vue.component (Row)
 
 Vue.config.productionTip = false
-const vm = new Vue({
-  el: '#app', render: createElement => createElement(App),
+const vm = new Vue ({
+	el: '#app', render: createElement => createElement (App),
 })

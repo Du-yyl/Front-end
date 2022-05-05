@@ -48,20 +48,20 @@
    */
   
   class Demo implements myInter {
-    private _gender: string
-    
     constructor (gender: string) {
       this._gender = gender
     }
-    
+  
+    private _gender: string
+  
     get gender (): string {
       return this._gender
     }
-    
+  
     set gender (value: string) {
       this._gender = value
     }
-    
+  
     sayHello (): void {
     
     }

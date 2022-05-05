@@ -13,27 +13,27 @@
 	<meta charset="UTF-8">
 	<title>ceshi</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
-        li {
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            margin: 20px;
-            float: left;
-        }
+		li {
+			width: 20px;
+			height: 20px;
+			background-color: red;
+			margin: 20px;
+			float: left;
+		}
 
 
 	</style>
@@ -63,8 +63,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 <script>
-	let top_3_sub_lis = $(`#ul > li`)
-
+	let top_3_sub_lis = $ (`#ul > li`)
 
 	// function debounce(callBack, time) {
 	// 	let flag = true
@@ -92,30 +91,30 @@
 	 * @param time 多久执行一次
 	 * @returns {(function(): void)|*}
 	 */
-	function debounce(callBack, time = 1000) {
+	function debounce (callBack, time = 1000) {
 		let flag = true
 		return function () {
 			let timer = null
-			if (flag) {
+			if ( flag ) {
 				flag = false
 				/*
-				* 当直接进行callBack（）调用的时候，调用者默认是window的，所以为了防止这种情况出现而造成的指向不明的问题，这里直接指定调用
-				* 者是this
-				* */
-				callBack.call(this)
-				timer = setTimeout(() => {
+				 * 当直接进行callBack（）调用的时候，调用者默认是window的，所以为了防止这种情况出现而造成的指向不明的问题，这里直接指定调用
+				 * 者是this
+				 * */
+				callBack.call (this)
+				timer = setTimeout (() => {
 					flag = true
-					clearTimeout(timer)
+					clearTimeout (timer)
 				}, time)
 			}
 		}
 	}
 
 	// top_3_sub_lis.click(function () {
-	top_3_sub_lis.click(
-			debounce(function () {
-				console.log('点击成功')
-				console.log($(this).index())
+	top_3_sub_lis.click (
+			debounce (function () {
+				console.log ('点击成功')
+				console.log ($ (this).index ())
 			}, 1000),
 	)
 	// })

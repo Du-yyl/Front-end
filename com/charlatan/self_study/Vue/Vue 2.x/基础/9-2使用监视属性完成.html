@@ -21,7 +21,7 @@
 <div id="root">
 	你好：{{ }}
 	<hr>
-	<button type="button" id="btn" @click="isTrue = !isTrue">按钮</button>
+	<button id="btn" type="button" @click="isTrue = !isTrue">按钮</button>
 	<hr>
 	点击按钮切换内容，方法实现
 </div>
@@ -39,7 +39,7 @@
 <script>
 	Vue.config.productionTip = falseo
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			isTrue: true,
@@ -64,11 +64,11 @@
 	})
 	//	 第二种方式【使用VM自身携带的方法进行添加】
 
-	vm.$watch('isTrue', {
+	vm.$watch ('isTrue', {
 		immediate: true,
 		handler (newValue, oldValue) {
-			console.log('同样可以进行监视')
-			console.log(newValue, oldValue)
+			console.log ('同样可以进行监视')
+			console.log (newValue, oldValue)
 		},
 	})
 </script>

@@ -10,24 +10,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS的if是短路吗</title>
+	<meta charset="UTF-8">
+	<title>JS的if是短路吗</title>
 </head>
 <body>
 <script>
-    let a;
-    let b;
-    let c;
-    let d;
-    let e;
-    let f;
-    if (false && (a = 3)) {
-        alert("我是if我输出了")
-    }
-    if (true || (a = 3)) {
-        alert("我是if我输出了")
-    }
-    alert(a)
+	let a
+	let b
+	let c
+	let d
+	let e
+	let f
+	if ( false && (a = 3) ) {
+		alert ('我是if我输出了')
+	}
+	if ( true || (a = 3) ) {
+		alert ('我是if我输出了')
+	}
+	alert (a)
 </script>
 </body>
 </html>

@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <audio autoplay="autoplay" loop="loop" controls="controls">
+    <audio autoplay="autoplay" controls="controls" loop="loop">
       <source :src=song.musicUrl type="audio/mpeg">
     </audio>
 
@@ -66,10 +66,10 @@ export default {
   },
   components: {},
   mounted () {
-    axios.get('http://localhost:3000/song/url?id=' + this.$route.query.id).then((value) => {
+    axios.get ('http://localhost:3000/song/url?id=' + this.$route.query.id).then ((value) => {
       this.musicUrl = value.data.data[0].url
     })
-    axios.get('http://localhost:3000/song/detail?ids=' + this.$route.query.id).then((value) => {
+    axios.get ('http://localhost:3000/song/detail?ids=' + this.$route.query.id).then ((value) => {
       this.song.name = value.data.songs[0].name
       this.song.singer = value.data.songs[0].ar[0].name
       this.song.imgUrl = value.data.songs[0].al.picUrl
@@ -79,7 +79,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 * {
   margin: 0;
   padding: 0;

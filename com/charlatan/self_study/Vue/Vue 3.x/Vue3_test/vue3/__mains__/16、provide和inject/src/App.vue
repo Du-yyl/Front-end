@@ -15,21 +15,21 @@ import { customRef, watch, toRefs } from '@vue/runtime-dom'
 import Child from '@/components/Child'
 import { provide, reactive } from 'vue'
 
-const { ref } = require('@vue/runtime-dom')
+const { ref } = require ('@vue/runtime-dom')
 
 export default {
   name: 'App',
   setup () {
-    let data = reactive({
+    let data = reactive ({
       name: '父组件数据',
       msg: '用于测试',
     })
 
     // 使用 provide 将指定的数据进行传输
-    provide('data', data)
+    provide ('data', data)
 
     return {
-      ...toRefs(data),
+      ...toRefs (data),
     }
   },
   components: {

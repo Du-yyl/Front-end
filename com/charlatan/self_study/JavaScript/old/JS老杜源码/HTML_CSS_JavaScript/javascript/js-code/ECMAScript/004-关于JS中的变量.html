@@ -7,79 +7,79 @@
 <body>
 <script type="text/javascript">
 	/*
-		回顾java中的变量：
-			1、java中怎么定义/声明变量？
-				数据类型和变量问题 变量名;
-				例如：
-					int i;
-					double d;
-					boolean flag;
-			2、java中的变量怎么赋值？
-				使用“=”运算符进行赋值运算。（"="运算符右边先执行，将右边执行的结果赋值给左边的变量。）
-				变量名 = 值;
-				例如：
-					i = 10;
-					d = 3.14;
-					flag = false;
-			3、java语言是一种强类型语言，强类型怎么理解？
-				java语言存在编译阶段，假设有代码：int i;
-				那么在Java中有一个特点是：java程序编译阶段就已经确定了
-				i变量的数据类型，该i变量的数据类型在编译阶段是int类型，
-				那么这个变量到最终内存释放，一直都是int类型，不可能变成
-				其他类型。
-					int i = 10;
-					double d = i;
-					这行代码是说声明一个新的变量d，double类型，把i变量中保存的值传给d。
-					i还是int类型。
+	 回顾java中的变量：
+	 1、java中怎么定义/声明变量？
+	 数据类型和变量问题 变量名;
+	 例如：
+	 int i;
+	 double d;
+	 boolean flag;
+	 2、java中的变量怎么赋值？
+	 使用“=”运算符进行赋值运算。（"="运算符右边先执行，将右边执行的结果赋值给左边的变量。）
+	 变量名 = 值;
+	 例如：
+	 i = 10;
+	 d = 3.14;
+	 flag = false;
+	 3、java语言是一种强类型语言，强类型怎么理解？
+	 java语言存在编译阶段，假设有代码：int i;
+	 那么在Java中有一个特点是：java程序编译阶段就已经确定了
+	 i变量的数据类型，该i变量的数据类型在编译阶段是int类型，
+	 那么这个变量到最终内存释放，一直都是int类型，不可能变成
+	 其他类型。
+	 int i = 10;
+	 double d = i;
+	 这行代码是说声明一个新的变量d，double类型，把i变量中保存的值传给d。
+	 i还是int类型。
 
-					i = "abc"; 这行代码编译的时候会报错，因为i变量的数据类型是int类型，不能将字符串赋给i。
+	 i = "abc"; 这行代码编译的时候会报错，因为i变量的数据类型是int类型，不能将字符串赋给i。
 
-					java中要求变量声明的时候是什么类型，以后永远都是这种类型，不可变。编译期强行固定变量的数据类型。
-					称为强类型语言。
+	 java中要求变量声明的时候是什么类型，以后永远都是这种类型，不可变。编译期强行固定变量的数据类型。
+	 称为强类型语言。
 
-					public void sum(int a, int b){}
-					sum(?,?);
+	 public void sum(int a, int b){}
+	 sum(?,?);
 
-		javascript当中的变量？
-			怎么声明变量？
-				var 变量名;
-			怎么给变量赋值？
-				变量名 = 值;
-			javascript是一种弱类型语言，没有编译阶段，一个变量可以随意赋值，赋什么类型的值都行。
-				var i = 100;
-				i = false;
-				i = "abc";
-				i = new Object();
-				i = 3.14;
+	 javascript当中的变量？
+	 怎么声明变量？
+	 var 变量名;
+	 怎么给变量赋值？
+	 变量名 = 值;
+	 javascript是一种弱类型语言，没有编译阶段，一个变量可以随意赋值，赋什么类型的值都行。
+	 var i = 100;
+	 i = false;
+	 i = "abc";
+	 i = new Object();
+	 i = 3.14;
 
-		   重点：javascript是一种弱类型编程语言。
+	 重点：javascript是一种弱类型编程语言。
 
-	*/
+	 */
 	// 在JS当中,当一个变量没有手动赋值的时候,系统默认赋值undefined
-	var i;
+	var i
 	// undefined 在JS中是一个具体存在值.
-	alert("i = " + i); // i = undefined
+	alert ('i = ' + i) // i = undefined
 
-	alert(undefined);
-	var k = undefined;
-	alert("k = " + k);
+	alert (undefined)
+	var k = undefined
+	alert ('k = ' + k)
 
 	// 一个变量没有声明/定义,直接访问?
 	// alert(age); //语法错误：age is not defined (变量age不存在。不能这样写。)
 
-	var a, b, c = 200;
-	alert("a = " + a);
-	alert("b = " + b);
-	alert("c = " + c);
+	var a, b, c = 200
+	alert ('a = ' + a)
+	alert ('b = ' + b)
+	alert ('c = ' + c)
 
-	a = false;
-	alert(a);
+	a = false
+	alert (a)
 
-	a = "abc";
-	alert(a);
+	a = 'abc'
+	alert (a)
 
-	a = 1.2;
-	alert(a);
+	a = 1.2
+	alert (a)
 
 </script>
 </body>

@@ -39,9 +39,9 @@ import { computed, watch } from '@vue/runtime-dom'
 export default {
   name: 'Demo',
   setup () {
-    let num = ref(0)
-    let msg = ref('测试信息')
-    let obj = reactive({
+    let num = ref (0)
+    let msg = ref ('测试信息')
+    let obj = reactive ({
       obj_1: '第一个信息',
       obj_2: {
         obj: {
@@ -54,9 +54,9 @@ export default {
     //   console.log(newValue, oldValue)
     // })
 
-    watchEffect(() => {
+    watchEffect (() => {
       let x = num.value
-      console.log('watchEffect')
+      console.log ('watchEffect')
     })
 
     return {
@@ -68,4 +68,4 @@ export default {
 }
 </script>
 
-<style scoped lang="less"></style>
+<style lang="less" scoped></style>

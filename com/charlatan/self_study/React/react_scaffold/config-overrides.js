@@ -11,16 +11,16 @@
 /**
  * 配置具体修改规则
  */
-const { override, fixBabelImports } = require('customize-cra')
+const { override, fixBabelImports } = require ('customize-cra')
 
-module.exports = override(
-  // 要进行引入
-  fixBabelImports('import', {
-    // 要引入的东西是 antd
-    libraryName: 'antd',
-    // 引入的语法是 es
-    libraryDirectory: 'es',
-    // 引入的内容是 css
-    style: 'css',
-  }),
+module.exports = override (
+		// 要进行引入
+		fixBabelImports ('import', {
+			// 要引入的东西是 antd
+			libraryName: 'antd',
+			// 引入的语法是 es
+			libraryDirectory: 'es',
+			// 引入的内容是 css
+			style: 'css',
+		}),
 )

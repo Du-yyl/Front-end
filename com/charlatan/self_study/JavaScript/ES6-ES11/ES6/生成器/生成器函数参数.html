@@ -21,25 +21,25 @@
 </pre>
 </body>
 <script>
-	function* fun(args) {
-		console.log(args);
+	function * fun (args) {
+		console.log (args)
 		let argument_1 = yield 100
-		console.log(argument_1);
+		console.log (argument_1)
 		let argument_2 = yield 200
-		console.log(argument_2);
+		console.log (argument_2)
 		yield 300
 		yield 400
 	}
 
-	let iterator = fun('我是通过生成器传递的参数')
-	console.log(iterator);
-	console.log(iterator.next());
+	let iterator = fun ('我是通过生成器传递的参数')
+	console.log (iterator)
+	console.log (iterator.next ())
 
 	/*
-	* next（）方法的调用也能传递实参，输入的实参将作为上一个语句的返回结果进行返回输出
-	* */
-	console.log(iterator.next("我是yiled的参数"));
-	
+	 * next（）方法的调用也能传递实参，输入的实参将作为上一个语句的返回结果进行返回输出
+	 * */
+	console.log (iterator.next ('我是yiled的参数'))
+
 	// console.log(iterator.next());
 	// console.log(iterator.next());
 	// console.log(iterator.next());

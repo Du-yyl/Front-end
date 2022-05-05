@@ -41,7 +41,7 @@
 	 * @param rejected{function}失败的回调
 	 */
 	InterceptorManager.prototype.use = function (fulfilled, rejected) {
-		this.handlers.push({
+		this.handlers.push ({
 			fulfilled,
 			rejected,
 		})
@@ -50,8 +50,8 @@
 	function Axios (config) {
 		this.config = config
 		this.interceptors = {
-			request: new InterceptorManager(),
-			response: new InterceptorManager(),
+			request: new InterceptorManager (),
+			response: new InterceptorManager (),
 		}
 	}
 
@@ -63,31 +63,31 @@
 	Axios.prototype.request = function (config) {
 
 		// 创建一个promise对象
-		let promise = Promise.resolve(config)
+		let promise = Promise.resolve (config)
 
 		// 创建一个空数组【undefined用来占位，用来保证当取出方法进行运行时，是成对运行的】
 		let chains = [dispatchRequest, undefined]
 
 		//	请求连接器 将氢气拦截器的回调 押入到 chains 的前面，request.handles = []
-		this.interceptors.request.handlers.forEach((item) => {
-			chains.unshift(item.fulfilled, item.rejected)
+		this.interceptors.request.handlers.forEach ((item) => {
+			chains.unshift (item.fulfilled, item.rejected)
 		})
 
 		//	响应拦截器连接器 将氢气拦截器的回调 押入到 chains 的前面，request.handles = []
-		this.interceptors.response.handlers.forEach((item) => {
-			chains.push(item.fulfilled, item.rejected)
+		this.interceptors.response.handlers.forEach ((item) => {
+			chains.push (item.fulfilled, item.rejected)
 		})
 
-		console.log(chains)
-		while (chains.length > 0) {
-			promise = promise.then(chains.shift(), chains.shift())
+		console.log (chains)
+		while ( chains.length > 0 ) {
+			promise = promise.then (chains.shift (), chains.shift ())
 		}
 		return promise
 	}
 
 	function dispatchRequest (config) {
-		return new Promise((res, rej) => {
-			res({
+		return new Promise ((res, rej) => {
+			res ({
 				status: 200,
 				statusText: '成功',
 			})
@@ -95,64 +95,64 @@
 	}
 
 	// 创建context函数
-	let context = new Axios({})
+	let context = new Axios ({})
 
 	// 创建axios函数
-	let axios = Axios.prototype.request.bind(context)
-	Object.keys(context).forEach((item) => {
+	let axios = Axios.prototype.request.bind (context)
+	Object.keys (context).forEach ((item) => {
 		axios[item] = context[item]
 	})
 
 	// Promise
 	// 设置请求拦截器  config 配置对象
-	axios.interceptors.request.use(function one (config) {
-		console.log('请求拦截器 成功 - 1号')
+	axios.interceptors.request.use (function one (config) {
+		console.log ('请求拦截器 成功 - 1号')
 		//修改 config 中的参数
 		config.params = { a: 100 }
 
 		return config
 	}, function one (error) {
-		console.log('请求拦截器 失败 - 1号')
-		return Promise.reject(error)
+		console.log ('请求拦截器 失败 - 1号')
+		return Promise.reject (error)
 	})
 
-	axios.interceptors.request.use(function one (config) {
-		console.log('请求拦截器 成功 - 2号')
+	axios.interceptors.request.use (function one (config) {
+		console.log ('请求拦截器 成功 - 2号')
 		//修改 config 中的参数
 		config.timeout = 2000
 		return config
 	}, function one (error) {
-		console.log('请求拦截器 失败 - 2号')
-		return Promise.reject(error)
+		console.log ('请求拦截器 失败 - 2号')
+		return Promise.reject (error)
 	})
 
 	// 设置响应拦截器
-	axios.interceptors.response.use(function two (response) {
-		console.log('响应拦截器 成功 1号')
+	axios.interceptors.response.use (function two (response) {
+		console.log ('响应拦截器 成功 1号')
 		return response.data
 		// return response;
 	}, function two (error) {
-		console.log('响应拦截器 失败 1号')
-		return Promise.reject(error)
+		console.log ('响应拦截器 失败 1号')
+		return Promise.reject (error)
 	})
 
-	axios.interceptors.response.use(function two (response) {
-		console.log('响应拦截器 成功 2号')
+	axios.interceptors.response.use (function two (response) {
+		console.log ('响应拦截器 成功 2号')
 		return response
 	}, function two (error) {
-		console.log('响应拦截器 失败 2号')
-		return Promise.reject(error)
+		console.log ('响应拦截器 失败 2号')
+		return Promise.reject (error)
 	})
 
-	console.dir(axios)
+	console.dir (axios)
 
 	//发送请求
-	axios({
+	axios ({
 		method: 'GET',
 		url: 'http://localhost:3000/posts',
-	}).then(response => {
-		console.log('自定义回调处理成功的结果')
-		console.log(response)
+	}).then (response => {
+		console.log ('自定义回调处理成功的结果')
+		console.log (response)
 	})
 
 </script>

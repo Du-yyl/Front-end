@@ -22,31 +22,31 @@ import { computed, onBeforeUpdate, onMounted, onUnmounted, watch } from '@vue/ru
 export default {
   name: 'Demo',
   setup () {
-    let num = ref(0)
+    let num = ref (0)
 
     // 使用组合API形式进行配置
-    onBeforeMount(() => {
-      console.log('onBeforeMount')
+    onBeforeMount (() => {
+      console.log ('onBeforeMount')
 
     })
-    onMounted(() => {
-      console.log('onMounted')
+    onMounted (() => {
+      console.log ('onMounted')
 
     })
-    onBeforeUpdate(() => {
-      console.log('onBeforeUpdate')
+    onBeforeUpdate (() => {
+      console.log ('onBeforeUpdate')
 
     })
-    onUpdated(() => {
-      console.log('onUpdated')
+    onUpdated (() => {
+      console.log ('onUpdated')
 
     })
-    onBeforeUnmount(() => {
-      console.log('onBeforeUnmount')
+    onBeforeUnmount (() => {
+      console.log ('onBeforeUnmount')
 
     })
-    onUnmounted(() => {
-      console.log('onUnmounted')
+    onUnmounted (() => {
+      console.log ('onUnmounted')
 
     })
 
@@ -77,4 +77,4 @@ export default {
 }
 </script>
 
-<style scoped lang="less"></style>
+<style lang="less" scoped></style>

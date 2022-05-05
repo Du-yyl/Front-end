@@ -13,23 +13,23 @@
 	<meta charset="UTF-8">
 	<title>ceshi</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
-        ul {
-            background-color: grey;
-        }
+		ul {
+			background-color: grey;
+		}
 
 
 	</style>
@@ -54,9 +54,9 @@
 </body>
 <script>
 	window.onload = function () {
-		let btn = document.getElementById("btn")
-		let lis = document.getElementsByTagName("li")
-		let ul = document.getElementsByTagName("ul")[0]
+		let btn = document.getElementById ('btn')
+		let lis = document.getElementsByTagName ('li')
+		let ul = document.getElementsByTagName ('ul')[0]
 		// for (let i = 0; i < lis.length; i++) {
 		// 	lis[i].onclick = function (event) {
 		// 		this.style.backgroundColor = 'red'
@@ -64,14 +64,14 @@
 		// 	}
 		// }
 		ul.onclick = function (event) {
-			if (event.target.tagName === 'LI') {
+			if ( event.target.tagName === 'LI' ) {
 				event.target.style.backgroundColor = 'red'
 			}
 		}
 		btn.onclick = function () {
-			let li = document.createElement("li")
+			let li = document.createElement ('li')
 			li.innerText = '我是新增加的'
-			ul.appendChild(li)
+			ul.appendChild (li)
 		}
 	}
 </script>

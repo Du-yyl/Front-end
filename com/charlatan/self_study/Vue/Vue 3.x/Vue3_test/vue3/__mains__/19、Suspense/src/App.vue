@@ -19,7 +19,7 @@ import { defineAsyncComponent } from 'vue'
 
 // import Child from '@/components/Child'
 
-let Child = defineAsyncComponent(() => import('./components/Child'))
+let Child = defineAsyncComponent (() => import('./components/Child'))
 export default {
   name: 'App',
   components: {

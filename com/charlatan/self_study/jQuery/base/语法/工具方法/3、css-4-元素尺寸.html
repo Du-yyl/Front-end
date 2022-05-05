@@ -13,29 +13,29 @@
 	<meta charset="UTF-8">
 	<title>元素尺寸</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
 
-        div {
-            width: 100px;
-            height: 150px;
-            background: red;
-            padding: 10px;
-            border: 10px #fbd850 solid;
-            margin: 10px;
-        }
+		div {
+			width: 100px;
+			height: 150px;
+			background: red;
+			padding: 10px;
+			border: 10px #fbd850 solid;
+			margin: 10px;
+		}
 
 
 	</style>
@@ -66,17 +66,17 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
 	/*
-	* 内部尺寸
-	* 外部尺寸
-	* 内容尺寸
-	* */
-	$(function () {
-		let div = $(`div`)
-		console.log(div.innerHeight());
-		console.log(div.outerHeight());
-		console.log(div.height());
-		console.log(div.outerWidth(true), div.outerHeight(true))
-		console.log(div.outerWidth(), div.outerHeight())
+	 * 内部尺寸
+	 * 外部尺寸
+	 * 内容尺寸
+	 * */
+	$ (function () {
+		let div = $ (`div`)
+		console.log (div.innerHeight ())
+		console.log (div.outerHeight ())
+		console.log (div.height ())
+		console.log (div.outerWidth (true), div.outerHeight (true))
+		console.log (div.outerWidth (), div.outerHeight ())
 	})
 
 </script>

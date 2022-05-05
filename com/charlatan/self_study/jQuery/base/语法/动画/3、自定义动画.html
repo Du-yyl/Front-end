@@ -13,37 +13,37 @@
 	<meta charset="UTF-8">
 	<title>自定义动画</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
-        * {
-            margin: 0px;
-        }
+		* {
+			margin: 0px;
+		}
 
-        .div1 {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            top: 50px;
-            left: 300px;
-            background: red;
-        }
+		.div1 {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 50px;
+			left: 300px;
+			background: red;
+		}
 
-        pre {
-            position: relative;
-            top: 400px;
-        }
+		pre {
+			position: relative;
+			top: 400px;
+		}
 
 	</style>
 </head>
@@ -65,67 +65,67 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	let btn1 = $(`#btn1`)
-	let btn2 = $(`#btn2`)
-	let btn3 = $(`#btn3`)
-	let btn4 = $(`#btn4`)
+	let btn1 = $ (`#btn1`)
+	let btn2 = $ (`#btn2`)
+	let btn3 = $ (`#btn3`)
+	let btn4 = $ (`#btn4`)
 
-	let div = $(`.div1:eq(0)`)
+	let div = $ (`.div1:eq(0)`)
 
 	/*
 	 1. 逐渐扩大
 	 1). 宽/高都扩为200px
 	 2). 宽先扩为200px, 高后扩为200px
 	 */
-	btn1.click(function () {
-		div.animate({
+	btn1.click (function () {
+		div.animate ({
 			width: 200,
 		}, 400)
-		div.animate({
-			height: 200
+		div.animate ({
+			height: 200,
 		}, 800)
 	})
 	/*
-	*    2. 移动到指定位置
-		     1).移动到(500, 100)处
-		     2).移动到(100, 20)处
-	* */
-	btn2.click(function () {
-		div.animate({
+	 *    2. 移动到指定位置
+	 1).移动到(500, 100)处
+	 2).移动到(100, 20)处
+	 * */
+	btn2.click (function () {
+		div.animate ({
 			top: 500,
-			left: 100
+			left: 100,
 		}, 800)
-		div.animate({
+		div.animate ({
 			top: 100,
-			left: 20
+			left: 20,
 		}, 800)
 	})
 	/*
-	3.移动指定的距离
-	1). 移动距离为(100, 50)
-	2). 移动距离为(-100, -20)*/
+	 3.移动指定的距离
+	 1). 移动距离为(100, 50)
+	 2). 移动距离为(-100, -20)*/
 
-	btn3.click(function () {
-		div.animate({
+	btn3.click (function () {
+		div.animate ({
 			top: +100,
-			left: +50
+			left: +50,
 		}, 800)
 
-		div.animate({
+		div.animate ({
 			top: -100,
-			left: -20
+			left: -20,
 		}, 800)
 	})
 
 	//	停止动画
 	/*
-	* clearQueue:如果设置成true，则清空队列。可以立即结束动画。
+	 * clearQueue:如果设置成true，则清空队列。可以立即结束动画。
 
-	jumpToEnd:如果设置成true，则完成队列。可以立即完成动画。
+	 jumpToEnd:如果设置成true，则完成队列。可以立即完成动画。
 
-	* */
-	btn4.click(function () {
-		div.stop(true)
+	 * */
+	btn4.click (function () {
+		div.stop (true)
 	})
 
 </script>

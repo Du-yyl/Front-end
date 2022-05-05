@@ -25,22 +25,22 @@ export default {
     }
   },
   mounted () {
-    this.pubId = pubsub.subscribe('sends', (infoName, info) => {
-      console.log('有人发布信息的')
-      console.log(info)
+    this.pubId = pubsub.subscribe ('sends', (infoName, info) => {
+      console.log ('有人发布信息的')
+      console.log (info)
       this.msg = info
-      console.log(this.pubId)
+      console.log (this.pubId)
     })
-    this.pubId = pubsub.subscribe('sends', (infoName, info) => {
-      console.log('有人发布信息的')
-      console.log(info)
+    this.pubId = pubsub.subscribe ('sends', (infoName, info) => {
+      console.log ('有人发布信息的')
+      console.log (info)
       this.msg = info
-      console.log(this.pubId)
+      console.log (this.pubId)
     })
   },
   beforeDestroy () {
     // 取消订阅【根据订阅时的ID进行取消订阅】
-    pubsub.unsubscribe(this.pubId)
+    pubsub.unsubscribe (this.pubId)
 
   },
 }

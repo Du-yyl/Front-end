@@ -76,13 +76,15 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.listContainer .lists 	.list button{
+
+.listContainer .lists .list button {
 	position: absolute;
 	top: -10rpx;
 	right: 20rpx;
 	width: 10rpx;
 	background: #ffffff;
 }
+
 /* .listContainer .lists .list button .icon-gengduo { */
 /* 	position: absolute; */
 /* 	top: 30rpx; */

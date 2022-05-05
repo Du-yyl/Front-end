@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>设置和获取文本框的value</title>
+	<meta charset="UTF-8">
+	<title>设置和获取文本框的value</title>
 </head>
 <body>
 <script type="text/javascript">
 
-  window.onload = function () {
-    document.getElementById('btn1').onclick = function () {
-      alert(document.getElementById('te1').value)
-      //  将第一个框的值赋给第二个框
-      document.getElementById('te2').value = document.getElementById('te1').value
-      //  修改text中的value
-      document.getElementById('te1').value = 'zhangsan'
+	window.onload = function () {
+		document.getElementById ('btn1').onclick = function () {
+			alert (document.getElementById ('te1').value)
+			//  将第一个框的值赋给第二个框
+			document.getElementById ('te2').value = document.getElementById ('te1').value
+			//  修改text中的value
+			document.getElementById ('te1').value = 'zhangsan'
 
-
-    }
-  }
+		}
+	}
 
 </script>
 

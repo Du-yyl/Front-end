@@ -10,28 +10,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>正则特殊点</title>
+	<meta charset="UTF-8">
+	<title>正则特殊点</title>
 </head>
 <body>
 <script>
-    /*
-    * 当要查找一个字符串中是否包含某一元素可以使用正则表达式
-    * */
-    let str1 = 'a'
-    /*
-    * 查找字符串中是否包含 a 或 b
-    * []    中括号中的内容也可以表示或的意思
-    * [a-z] 表示a-z任意的小写
-    * [A-z] 表示任意的字母
-    * [^a]  表示找除了a以外的所有东西
-    * */
-    let exg_2 = /a|b/
-    let exg_2 = /[qwe]/
-    let exg_2 = /[^a]/
-    console.log(exg.test(str1))
-    console.log(exg_1.test(str1))
-    console.log(exg_2.test(str1))
+	/*
+	 * 当要查找一个字符串中是否包含某一元素可以使用正则表达式
+	 * */
+	let str1 = 'a'
+	/*
+	 * 查找字符串中是否包含 a 或 b
+	 * []    中括号中的内容也可以表示或的意思
+	 * [a-z] 表示a-z任意的小写
+	 * [A-z] 表示任意的字母
+	 * [^a]  表示找除了a以外的所有东西
+	 * */
+	let exg_2 = /a|b/
+	let exg_2 = /[qwe]/
+	let exg_2 = /[^a]/
+	console.log (exg.test (str1))
+	console.log (exg_1.test (str1))
+	console.log (exg_2.test (str1))
 
 </script>
 </body>

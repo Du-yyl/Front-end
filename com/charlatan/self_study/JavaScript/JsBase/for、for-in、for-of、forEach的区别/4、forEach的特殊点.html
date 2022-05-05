@@ -42,7 +42,6 @@
 	// 	}
 	// }
 
-
 	// arr.forEach((self, index) => {
 	// 	console.log(self);
 	// 	if (self === 2) {
@@ -52,7 +51,7 @@
 
 	//	---------------------------------------------
 
-	let arr = [1, 2, 3, 4];
+	let arr = [1, 2, 3, 4]
 
 	// function find(array, num) {
 	// 	array.forEach((self, index) => {
@@ -63,7 +62,6 @@
 	// }
 	//
 	// let index = find(arr, 2);// undefined
-
 
 	// function find(array, num) {
 	// 	let _index;
@@ -79,18 +77,18 @@
 
 	//	----------------------------------------------------------------
 
-	arr.forEach((item, index) => {
-		arr.splice(index, 1);
-		console.log(1);
+	arr.forEach ((item, index) => {
+		arr.splice (index, 1)
+		console.log (1)
 		//这里隐性让index自增加1
-		index++;
+		index++
 	});
 
 	//	解决方式：
-	[...arr].forEach((item, index) => {
-		arr.splice(index, 1);
-		console.log(1);
-	});
+	[...arr].forEach ((item, index) => {
+		arr.splice (index, 1)
+		console.log (1)
+	})
 
 
 </script>

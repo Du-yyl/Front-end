@@ -30,29 +30,29 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
 	//	发送GET请求
-	$('.btn:eq(0)').click(function () {
-		axios.request({
+	$ ('.btn:eq(0)').click (function () {
+		axios.request ({
 			method: 'GET',
 			url: 'http://localhost:3000/comments',
-		}).then((val) => {
-			console.log(val)
+		}).then ((val) => {
+			console.log (val)
 		}, (res) => {
-			console.log(res)
+			console.log (res)
 		})
 	})
 
 	// POST
-	$('.btn:eq(1)').click(function () {
-		axios.post(
+	$ ('.btn:eq(1)').click (function () {
+		axios.post (
 				'http://localhost:3000/comments',
 				{
 					'body': '我是添加内容',
 					'postId': '1',
 				},
-		).then((val) => {
-			console.log(val)
+		).then ((val) => {
+			console.log (val)
 		}, (res) => {
-			console.log(res)
+			console.log (res)
 		})
 	})
 

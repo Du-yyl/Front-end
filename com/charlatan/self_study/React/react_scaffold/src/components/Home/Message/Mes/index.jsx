@@ -11,20 +11,19 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-
 export default function Mes () {
-  let state = useLocation().state
-  return (
-    <ul>
-      <li>
-        id:{state.id}
-      </li>
-      <li>
-        title:{state.title}
-      </li>
-      <li>
-        context:{state.context}
-      </li>
-    </ul>
-  )
+	let state = useLocation ().state
+	return (
+			<ul>
+				<li>
+					id:{state.id}
+				</li>
+				<li>
+					title:{state.title}
+				</li>
+				<li>
+					context:{state.context}
+				</li>
+			</ul>
+	)
 }

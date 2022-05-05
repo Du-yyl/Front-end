@@ -131,16 +131,13 @@
 }
 
 
-.input-item .HintText{
+.input-item .HintText {
 	position: relative;
 	font-size: 24rpx;
 	top: -46rpx;
 	color: #ff8000;
 	font-weight: 500;
 }
-
-
-
 
 
 .confirm-btn {

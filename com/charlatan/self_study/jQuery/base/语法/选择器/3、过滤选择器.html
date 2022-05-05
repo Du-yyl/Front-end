@@ -15,8 +15,8 @@
 
 </head>
 <body>
-<div class="box" id="div1">class为box的div1</div>
-<div class="box" id="div2">class为box的div2</div>
+<div id="div1" class="box">class为box的div1</div>
+<div id="div2" class="box">class为box的div2</div>
 <div id="div3">div3</div>
 <span class="box">class为box的span</span>
 <br/>
@@ -51,42 +51,42 @@
 	 7. 选择有title属性的li元素
 	 8. 选择所有属性title为hello的li元素
 	 */
-	$(`div:first`).css({
-		backgroundColor: "red"
+	$ (`div:first`).css ({
+		backgroundColor: 'red',
 	})
-	$(`.box:last`).css({
-		color: 'blue'
+	$ (`.box:last`).css ({
+		color: 'blue',
 	})
-	$(`div:not(.box)`).css({
-		backgroundColor: "green"
+	$ (`div:not(.box)`).css ({
+		backgroundColor: 'green',
 	})
 	/*
-	    :gt(index)
-	匹配所有大于给定索引值的元素
-		:lt(index)
-	匹配所有小于给定索引值的元素
-	* */
+	 :gt(index)
+	 匹配所有大于给定索引值的元素
+	 :lt(index)
+	 匹配所有小于给定索引值的元素
+	 * */
 	//多个选择是依次执行的，并不是同时执行的
-	$(`li:gt(0):lt(2)`).css({
-		backgroundColor: 'blue'
+	$ (`li:gt(0):lt(2)`).css ({
+		backgroundColor: 'blue',
 	})
 	/*	
-		:contains(text)
-		匹配包含给定文本的元素
-		*/
+	 :contains(text)
+	 匹配包含给定文本的元素
+	 */
 
-	$(`li:contains('BBBBB')`).css({
-		backgroundColor: 'red'
+	$ (`li:contains('BBBBB')`).css ({
+		backgroundColor: 'red',
 	})
-	$(`li:hidden`).css({
-		display: "block"
+	$ (`li:hidden`).css ({
+		display: 'block',
 	})
 
-	$(`li[title]`).css({
-		color: 'red'
+	$ (`li[title]`).css ({
+		color: 'red',
 	})
-	$(`*[title='hello']`).css({
-		fontSize: "20px"
+	$ (`*[title='hello']`).css ({
+		fontSize: '20px',
 	})
 </script>
 </html>

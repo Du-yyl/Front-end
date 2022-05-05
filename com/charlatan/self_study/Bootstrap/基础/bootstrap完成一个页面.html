@@ -84,7 +84,7 @@
 			</button>
 			<a class="navbar-brand" href="#">现代浏览器</a>
 		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">综述 <span class="sr-only">(current)</span></a></li>
 				<li><a href="#">简述</a></li>
@@ -106,7 +106,7 @@
 	</div>
 </nav>
 <!--    轮播图-->
-<div class="carousel slide carousel-me" data-ride="carousel" id="carousel-example-generic">
+<div id="carousel-example-generic" class="carousel slide carousel-me" data-ride="carousel">
 	<ol class="carousel-indicators">
 		<li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
 		<li data-slide-to="1" data-target="#carousel-example-generic"></li>
@@ -193,7 +193,7 @@
 </div>
 <!--    tab切换-->
 <div class="container">
-	<ul class="nav nav-tabs" id="myTabs" role="tablist">
+	<ul id="myTabs" class="nav nav-tabs" role="tablist">
 		<li class="active" role="presentation">
 			<a aria-controls="home" data-toggle="tab" href="#home" role="tab">谷歌</a>
 		</li>
@@ -205,7 +205,7 @@
 		<li role="presentation"><a aria-controls="ID" data-toggle="tab" href="#ID" role="tab">IE</a></li>
 	</ul>
 	<div class="tab-content my-tab">
-		<div class="tab-pane active" id="home" role="tabpanel">
+		<div id="home" class="tab-pane active" role="tabpanel">
 			<div class="row">
 				<div class="col-lg-7">
 					<h2>
@@ -219,7 +219,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="tab-pane" id="profile" role="tabpanel">
+		<div id="profile" class="tab-pane" role="tabpanel">
 			<div class="row">
 				<div class="col-lg-7">
 					<h2>
@@ -233,7 +233,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="tab-pane" id="messages" role="tabpanel">
+		<div id="messages" class="tab-pane" role="tabpanel">
 			<div class="row">
 				<div class="col-lg-5">
 					<img alt="" src="file/safari-logo.jpg">
@@ -248,7 +248,7 @@
 
 			</div>
 		</div>
-		<div class="tab-pane" id="settings" role="tabpanel">
+		<div id="settings" class="tab-pane" role="tabpanel">
 			<div class="row">
 				<div class="col-lg-7">
 					<h2>
@@ -262,7 +262,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="tab-pane" id="ID" role="tabpanel">
+		<div id="ID" class="tab-pane" role="tabpanel">
 			<div class="row">
 				<div class="col-lg-5">
 					<img alt="" src="file/ie-logo.jpg">
@@ -283,16 +283,16 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.js"></script>
 <script>
-	$('#myTabs a').click(function (e) {
-		e.preventDefault()
-		$(this).tab('show')
+	$ ('#myTabs a').click (function (e) {
+		e.preventDefault ()
+		$ (this).tab ('show')
 	})
 
-	$(`.dropdown-menu > li > a`).click(function (event) {
-		$(document).scrollTop($(`#myTabs`).offset().top)
-		console.log($(this).attr('href'))
-		$('#myTabs > li > a[href="' + ($(this).attr('href')) + '"]').tab('show')
-		event.preventDefault()
+	$ (`.dropdown-menu > li > a`).click (function (event) {
+		$ (document).scrollTop ($ (`#myTabs`).offset ().top)
+		console.log ($ (this).attr ('href'))
+		$ ('#myTabs > li > a[href="' + ($ (this).attr ('href')) + '"]').tab ('show')
+		event.preventDefault ()
 	})
 
 </script>

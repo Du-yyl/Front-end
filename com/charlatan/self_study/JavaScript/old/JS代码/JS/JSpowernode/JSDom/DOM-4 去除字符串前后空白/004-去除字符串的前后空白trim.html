@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>去除字符串的前后空白trim</title>
+	<meta charset="utf-8">
+	<title>去除字符串的前后空白trim</title>
 </head>
 <body>
 <script type="text/javascript">
-  // 低版本的IE浏览器不支持字符串的trim()函数,怎么办？
-  // 可以自己对String类扩展一个全新的trim()函数!
-  String.prototype.trim = function () {
-    // alert("扩展之后的trim方法");
-    // 去除当前字符串的前后空白
-    // 在当前的方法中的this代表的就是当前字符串.
-    //return this.replace(/^\s+/, "").replace(/\s+$/, "");
-    return this.replace(/^\s+|\s+$/g, "");
-  }
+	// 低版本的IE浏览器不支持字符串的trim()函数,怎么办？
+	// 可以自己对String类扩展一个全新的trim()函数!
+	String.prototype.trim = function () {
+		// alert("扩展之后的trim方法");
+		// 去除当前字符串的前后空白
+		// 在当前的方法中的this代表的就是当前字符串.
+		//return this.replace(/^\s+/, "").replace(/\s+$/, "");
+		return this.replace (/^\s+|\s+$/g, '')
+	}
 
-  window.onload = function () {
-    document.getElementById("btn").onclick = function () {
-      // 获取用户名
-      var username = document.getElementById("username").value;
-      // 去除前后空白
-      username = username.trim();
-      // 测试
-      alert("--->" + username + "<----");
-    }
-  }
+	window.onload = function () {
+		document.getElementById ('btn').onclick = function () {
+			// 获取用户名
+			var username = document.getElementById ('username').value
+			// 去除前后空白
+			username = username.trim ()
+			// 测试
+			alert ('--->' + username + '<----')
+		}
+	}
 </script>
 <input id="username" type="text"/>
 <input id="btn" type="button" value="获取用户名"/>

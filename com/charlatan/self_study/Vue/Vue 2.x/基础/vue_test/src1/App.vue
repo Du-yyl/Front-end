@@ -12,7 +12,7 @@
   <div>
     <el-row>
       <el-button>默认按钮</el-button>
-      <el-button type="primary" plain="true">主要按钮</el-button>
+      <el-button plain="true" type="primary">主要按钮</el-button>
       <el-button type="success">成功按钮</el-button>
       <el-button type="info">信息按钮</el-button>
       <el-button type="warning">警告按钮</el-button>
@@ -28,9 +28,7 @@ export default {
   data () {
     return {}
   },
-  components: {
-
-  },
+  components: {},
 }
 </script>
 

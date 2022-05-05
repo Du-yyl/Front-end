@@ -19,13 +19,14 @@ import Message from '../components/Home/Message'
  * 定义一个外部文件，集中管理所有路由规则
  */
 export default [
-  { path: '/about', element: <About/> },
-  { path: '/home/*', element: <Home/> ,children:[
-      { path: 'news', element: <News/> },
-      { path: 'message', element: <Message/> },
-      // { path: 'home', element: <Navigate to='/home/message'/> },
-    ]},
-  { path: '/', element: <Navigate to="/home/"/> },
-  
+	{ path: '/about', element: <About/> },
+	{
+		path: '/home/*', element: <Home/>, children: [
+			{ path: 'news', element: <News/> },
+			{ path: 'message', element: <Message/> },
+			// { path: 'home', element: <Navigate to='/home/message'/> },
+		],
+	},
+	{ path: '/', element: <Navigate to="/home/"/> },
 
 ]

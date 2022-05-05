@@ -42,31 +42,31 @@
 		c: 3,
 		d: 4,
 	}
-	for (let numsKey in nums) {
-		console.log(numsKey);
+	for ( let numsKey in nums ) {
+		console.log (numsKey)
 	}
-	for (let num of nums) {
-		console.log(num);
+	for ( let num of nums ) {
+		console.log (num)
 	}
-	console.log("-----------------");
+	console.log ('-----------------')
 
-	for (let objsKey in objs) {
-		console.log(objsKey);
+	for ( let objsKey in objs ) {
+		console.log (objsKey)
 	}
 	// 这里会直接报错
 	// for (let obj of objs) {
 	// 	console.log(obj);
 	// }
 
-	let obj = {a: '1', b: '2', c: '3', d: '4'}
-	for (let o of Object.keys(obj)) {
-		console.log(o) // a,b,c,d
+	let obj = { a: '1', b: '2', c: '3', d: '4' }
+	for ( let o of Object.keys (obj) ) {
+		console.log (o) // a,b,c,d
 	}
 
-	let obj1 = {a: '1', b: '2', c: '3', d: '4'}
-	for (let o of Object.values(obj1)) {
-		console.log(o) // 1,2,3,4
+	let obj1 = { a: '1', b: '2', c: '3', d: '4' }
+	for ( let o of Object.values (obj1) ) {
+		console.log (o) // 1,2,3,4
 	}
-	
+
 </script>
 </html>

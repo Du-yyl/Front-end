@@ -10,26 +10,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>选中下拉框中value</title>
+	<meta charset="UTF-8">
+	<title>选中下拉框中value</title>
 </head>
 <body>
 <script>
-    window.onload = function () {
-        document.getElementById('sf').onchange = function () {
-            alert(document.getElementById('sf').value)
-        }
-    }
+	window.onload = function () {
+		document.getElementById ('sf').onchange = function () {
+			alert (document.getElementById ('sf').value)
+		}
+	}
 </script>
 <label for="sf">
-    选中下拉框中的value
+	选中下拉框中的value
 </label>
 <select id="sf" name="sf">
-    <option value="top">--请选择省份--</option>
-    <option name="sfxx" value="001">河南</option>
-    <option name="sfxx" value="002">山东</option>
-    <option name="sfxx" value="003">河北</option>
-    <option name="sfxx" value="004">陕西</option>
+	<option value="top">--请选择省份--</option>
+	<option name="sfxx" value="001">河南</option>
+	<option name="sfxx" value="002">山东</option>
+	<option name="sfxx" value="003">河北</option>
+	<option name="sfxx" value="004">陕西</option>
 </select>
 </body>
 </html>

@@ -47,16 +47,16 @@
 	 1. 得到div或页面滚动条的坐标
 	 2. 让div或页面的滚动条滚动到指定位置
 	 */
-	$(function () {
-		let btn1 = $(`#btn1`)
-		let btn2 = $(`#btn2`)
-		btn1.click(function () {
-			console.log("body的滚动条" + $(`html`).scrollTop());
-			console.log("div的滚动条" + $(`div:eq(0)`).scrollTop());
+	$ (function () {
+		let btn1 = $ (`#btn1`)
+		let btn2 = $ (`#btn2`)
+		btn1.click (function () {
+			console.log ('body的滚动条' + $ (`html`).scrollTop ())
+			console.log ('div的滚动条' + $ (`div:eq(0)`).scrollTop ())
 		})
 
-		btn2.click(function () {
-			$(`div:eq(0)`).scrollTop(200)
+		btn2.click (function () {
+			$ (`div:eq(0)`).scrollTop (200)
 		})
 	})
 

@@ -19,19 +19,19 @@
 <body>
 <div id="root">
 	<span>单向数据绑定</span>
-	<input type="text" name="" id="" :value="name">
+	<input id="" :value="name" name="" type="text">
 	<span>
 		双向绑定
 	</span>
-	<input type="text" name="" v-model:value="name">
+	<input v-model:value="name" name="" type="text">
 	<hr>
 	以上内容的简写方式：
 	<span>单向数据绑定</span>
-	<input type="text" name="" :value="name">
+	<input :value="name" name="" type="text">
 	<span>
 		双向绑定
 	</span>
-	<input type="text" name="" v-model="name">
+	<input v-model="name" name="" type="text">
 </div>
 <pre>
 	单向数据绑定
@@ -47,7 +47,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	new Vue({
+	new Vue ({
 		el: '#root',
 		data: {
 			name: 'Tom',

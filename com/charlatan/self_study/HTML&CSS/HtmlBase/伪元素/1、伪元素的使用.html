@@ -13,26 +13,26 @@
 	<meta charset="UTF-8">
 	<title>伪元素的使用</title>
 	<style>
-        #red {
-            width: 190px;
-            height: 130px;
-            background-color: red;
-        }
+		#red {
+			width: 190px;
+			height: 130px;
+			background-color: red;
+		}
 
-        #red::after {
-            width: 100px;
-            height: 100px;
-            background-color: green;
-            display: block;
-            content: "我是在div后加的字";
-            position: absolute;
-            top: 160px;
-        }
+		#red::after {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			display: block;
+			content: "我是在div后加的字";
+			position: absolute;
+			top: 160px;
+		}
 
-        #red::before {
-            content: "我是在div前添加的字，我的颜色可以单独设置，我的颜色是天蓝色";
-            color: #CCFFFF;
-        }
+		#red::before {
+			content: "我是在div前添加的字，我的颜色可以单独设置，我的颜色是天蓝色";
+			color: #CCFFFF;
+		}
 	</style>
 </head>
 <body>

@@ -90,49 +90,49 @@
 <body>
 <div id="box">
 	<div id="img-show">
-		<img alt="" id="img" src="file/Carousel-5.jpg">
+		<img id="img" alt="" src="file/Carousel-5.jpg">
 
 		<div id="img-enlarge">
 		</div>
 	</div>
 	<div id="img-enlarge-show">
-		<img alt="" id="img-1" src="file/Carousel-5.jpg">
+		<img id="img-1" alt="" src="file/Carousel-5.jpg">
 	</div>
 	<div id="show"></div>
 </div>
 </body>
 <script>
-	let imgShow = document.getElementById("img-show")
-	let imgEnlarge = document.getElementById("img-enlarge")
-	let imgEnlargeShow = document.getElementById("img-enlarge-show")
-	let show = document.getElementById("show")
-	let img = document.getElementById("img")
-	let img_1 = document.getElementById("img-1")
+	let imgShow = document.getElementById ('img-show')
+	let imgEnlarge = document.getElementById ('img-enlarge')
+	let imgEnlargeShow = document.getElementById ('img-enlarge-show')
+	let show = document.getElementById ('show')
+	let img = document.getElementById ('img')
+	let img_1 = document.getElementById ('img-1')
 	let body = document.body
 	imgShow.onmouseover = () => {
-		imgEnlargeShow.style.display = "block"
-		imgEnlarge.style.display = "block"
+		imgEnlargeShow.style.display = 'block'
+		imgEnlarge.style.display = 'block'
 	}
 	imgShow.onmouseout = () => {
-		imgEnlargeShow.style.display = "none"
+		imgEnlargeShow.style.display = 'none'
 		imgEnlarge.style.display = 'none'
 	}
 	imgShow.onmousemove = event => {
 		let scale = 2
-		let x = event.pageX - imgEnlarge.offsetWidth / 2 - box.offsetLeft;
-		let y = event.pageY - imgEnlarge.offsetHeight / 2 - box.offsetTop;
+		let x = event.pageX - imgEnlarge.offsetWidth / 2 - box.offsetLeft
+		let y = event.pageY - imgEnlarge.offsetHeight / 2 - box.offsetTop
 		x = x >= imgShow.offsetWidth - imgEnlarge.offsetWidth ? imgShow.offsetWidth - imgEnlarge.offsetWidth : x
 		y = y >= imgShow.offsetHeight - imgEnlarge.offsetHeight ? imgShow.offsetHeight - imgEnlarge.offsetHeight : y
 		x = x <= 0 ? 0 : x
 		y = y <= 0 ? 0 : y
-		imgEnlarge.style.top = y + "px"
-		imgEnlarge.style.left = x + "px"
-		show.innerText = "x" + x + "px;" + "y" + y + "px;"
-		img_1.style.width = imgShow.offsetWidth * scale + "px";
-		img_1.style.height = imgShow.offsetHeight * scale + "px";
+		imgEnlarge.style.top = y + 'px'
+		imgEnlarge.style.left = x + 'px'
+		show.innerText = 'x' + x + 'px;' + 'y' + y + 'px;'
+		img_1.style.width = imgShow.offsetWidth * scale + 'px'
+		img_1.style.height = imgShow.offsetHeight * scale + 'px'
 		scale += .1
-		img_1.style.top = -y * scale + "px";
-		img_1.style.left = -x * scale + "px";
+		img_1.style.top = -y * scale + 'px'
+		img_1.style.left = -x * scale + 'px'
 	}
 </script>
 </html>

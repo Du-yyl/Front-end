@@ -30,7 +30,7 @@ export default {
   components: {},
   methods: {
     sendData () {
-      this.$bus.$emit('sends', 999)
+      this.$bus.$emit ('sends', 999)
     },
   },
 

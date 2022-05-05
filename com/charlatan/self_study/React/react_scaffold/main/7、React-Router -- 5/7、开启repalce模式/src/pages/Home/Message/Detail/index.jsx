@@ -11,24 +11,24 @@
 import React, { Component } from 'react'
 
 export default class Dez1tail extends Component {
-  
-  render () {
-    let { id, title } = this.props.location.state || {}
-    return (
-      <div id="Detail">
-        <ul>
-          <li>
-            ID:{id}
-          </li>
-          <li>
-            TITLE:{title}
-          </li>
-          <li>
-            信息传输成功
-          </li>
-        </ul>
-      </div>
-    )
-  }
-  
+	
+	render () {
+		let { id, title } = this.props.location.state || {}
+		return (
+				<div id="Detail">
+					<ul>
+						<li>
+							ID:{id}
+						</li>
+						<li>
+							TITLE:{title}
+						</li>
+						<li>
+							信息传输成功
+						</li>
+					</ul>
+				</div>
+		)
+	}
+	
 }

@@ -20,9 +20,9 @@
 export default {
   name: 'Child',
   async setup () {
-    return await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve('成功了')
+    return await new Promise ((resolve, reject) => {
+      setTimeout (() => {
+        resolve ('成功了')
       }, 5000)
     })
   },

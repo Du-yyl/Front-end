@@ -38,7 +38,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			num: {
@@ -62,13 +62,13 @@
 
 		watch: {
 			num (newValue, oldValue) {
-				console.log('我也能我完成监视')
+				console.log ('我也能我完成监视')
 			},
 		},
 	})
 	//	 使用VM属性进行简写
-	vm.$watch('名字', function (newValue, oldValue) {
-		console.log('这个同样可以进行监视改变')
+	vm.$watch ('名字', function (newValue, oldValue) {
+		console.log ('这个同样可以进行监视改变')
 	})
 
 </script>

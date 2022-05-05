@@ -1,5 +1,5 @@
 <template>
-  <Component1 msg="测试内容" :num="20"/>
+  <Component1 :num="20" msg="测试内容"/>
 </template>
 <!--
 当要为指定的模块传递指定数据，并且要传递数字时，为了保留key-value的形式，只能写字符串，但是为了保证数据的正确的传递

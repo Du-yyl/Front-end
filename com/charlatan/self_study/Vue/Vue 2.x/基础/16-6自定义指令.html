@@ -22,7 +22,7 @@
 	<div>放大10倍n的值 —> <span v-big="n"></span></div>
 	<button @click="n++">点击n+1</button>
 	<hr>
-	<input type="text" value="" v-fbind="n">
+	<input v-fbind="n" type="text" value="">
 </div>
 <hr>
 <pre>
@@ -35,14 +35,10 @@
 		但是因为在指定的元素和指定的指令绑定的时候就会运行代码，而这个代码是在将真实元素添加到内容前就执行的，但是在添加之前不能使用这个，所以第一次不会生效
 		不过当第二次或更多次点击的时候，真实的DOM已经被渲染了，所以可以正常获取焦点了
 
-自定义指令总结：
-	一、定义语法：
-	(1).局部指令：
-		new Vue({															new Vue({
-			directives:{指令名:配置对象}   或   		directives{指令名:回调函数}
-		}) 																		})
-	(2).全局指令：
-		Vue.directive(指令名,配置对象) 或   Vue.directive(指令名,回调函数)
+自定义指令总结： 一、定义语法：
+(1).局部指令： new Vue({ new Vue({ directives:{指令名:配置对象} 或 directives{指令名:回调函数} })
+})
+(2).全局指令： Vue.directive(指令名,配置对象) 或 Vue.directive(指令名,回调函数)
 
 	二、配置对象中常用的3个回调：
 		(1).bind：指令与元素成功绑定时调用。
@@ -57,21 +53,21 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
 	Vue.config.productionTip = false
-	Vue.directive('fbind', {
+	Vue.directive ('fbind', {
 		//指令与元素成功绑定时（一上来）
 		bind (element, binding) {
 			element.value = binding.value
 		},
 		//指令所在元素被插入页面时
 		inserted (element, binding) {
-			element.focus()
+			element.focus ()
 		},
 		//指令所在的模板被重新解析时
 		update (element, binding) {
 			element.value = binding.value
 		},
 	})
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			n: 10,
@@ -81,22 +77,22 @@
 		watch: {},
 		directives: {
 			big (element, binding) {
-				console.log(element, binding.value)
+				console.log (element, binding.value)
 				element.innerText = binding.value * 10
 			}
 			,
 			fbind: {
 				bind (element, binding) {
 					element.value = binding.value * 10
-					console.log('绑定的时候调用')
+					console.log ('绑定的时候调用')
 				},
 				inserted (element, binding) {
-					element.focus()
-					console.log('指定元素被插入页面时调用')
+					element.focus ()
+					console.log ('指定元素被插入页面时调用')
 				},
 				update (element, binding) {
-					element.focus()
-					console.log('指定所在模板重新解析时调用')
+					element.focus ()
+					console.log ('指定所在模板重新解析时调用')
 				},
 			},
 		},

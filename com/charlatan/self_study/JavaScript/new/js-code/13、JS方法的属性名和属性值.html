@@ -10,31 +10,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>方法的属性名和属性值</title>
+	<meta charset="UTF-8">
+	<title>方法的属性名和属性值</title>
 </head>
 <body>
 <p>
-    JS中方法的属性名什么都可以 <br>
-    当使用特殊字符，如数字，文字时需要使用中括号进行访问，用点会报错
+	JS中方法的属性名什么都可以 <br>
+	当使用特殊字符，如数字，文字时需要使用中括号进行访问，用点会报错
 </p>
 <script>
-    var o1 = {};
-    o1.name = 12;
-    o1["123"] = 123
-    o1["锄禾日当午"] = "汗滴禾下土"
-    console.log(o1.name)
-    console.log(o1["123"])
-    console.log(o1["锄禾日当午"])
+	var o1 = {}
+	o1.name = 12
+	o1['123'] = 123
+	o1['锄禾日当午'] = '汗滴禾下土'
+	console.log (o1.name)
+	console.log (o1['123'])
+	console.log (o1['锄禾日当午'])
 
-    // var n1 = "123"
-    var n1 = "锄禾日当午"
-    console.log(o1[n1])
+	// var n1 = "123"
+	var n1 = '锄禾日当午'
+	console.log (o1[n1])
 
-    //    in运算符
-    alert("锄禾日当午" in o1)
+	//    in运算符
+	alert ('锄禾日当午' in o1)
 
-    console.log("name" in o1)
+	console.log ('name' in o1)
 
 </script>
 </body>

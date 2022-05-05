@@ -10,22 +10,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS改变超链接的跳转行为</title>
+	<meta charset="UTF-8">
+	<title>JS改变超链接的跳转行为</title>
 </head>
 <body>
-<a href="5、表单验证.html" id="a">
-    我是要进行阻止的超链接
+<a id="a" href="5、表单验证.html">
+	我是要进行阻止的超链接
 </a>
 <script>
-    window.onload = () => {
-        document.getElementById("a").onclick = function (){
-            return false
-            /*
-            * 在这里返回false可以阻止进行页面的跳转操作，和在语句中写JavaScript：；的操作是相同的
-            * */
-        }
-    }
+	window.onload = () => {
+		document.getElementById ('a').onclick = function () {
+			return false
+			/*
+			 * 在这里返回false可以阻止进行页面的跳转操作，和在语句中写JavaScript：；的操作是相同的
+			 * */
+		}
+	}
 </script>
 </body>
 </html>

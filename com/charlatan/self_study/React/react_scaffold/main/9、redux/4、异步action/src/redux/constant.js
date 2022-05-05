@@ -9,8 +9,8 @@
  */
 
 /*
-常量模块
-定义 action 对象中的 type 类型常量值
+ 常量模块
+ 定义 action 对象中的 type 类型常量值
  */
 
 export const ADD = 'add'

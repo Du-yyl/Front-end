@@ -12,9 +12,9 @@
   <div>
     <button @click="isShow = !isShow">动画库切换</button>
     <transition
-        name="animate__animated animate__bounce"
         enter-active-class="animate__swing"
         leave-active-class="animate__backOutUp"
+        name="animate__animated animate__bounce"
     >
       <h1 v-show="isShow">
         我是动画库切换

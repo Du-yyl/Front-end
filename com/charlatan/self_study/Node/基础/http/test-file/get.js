@@ -7,13 +7,13 @@
  *
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
-let http = require('http')
+let http = require ('http')
 
-let server = http.createServer(function (request, response) {
-  response.end('request')
+let server = http.createServer (function (request, response) {
+	response.end ('request')
 })
 
-server.listen(3000, function () {
-  console.log('port 3000 is listening ... ')
+server.listen (3000, function () {
+	console.log ('port 3000 is listening ... ')
 })
 

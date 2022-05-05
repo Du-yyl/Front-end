@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Document</title>
-    <!-- 1.引入bootstarp的css样式文件 -->
-    <link href="./bs/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        div:nth-child(2n) {
-            background-color: rebeccapurple;
-        }
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<!-- 1.引入bootstarp的css样式文件 -->
+	<link href="./bs/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		div:nth-child(2n) {
+			background-color: rebeccapurple;
+		}
 
-        div:nth-child(2n+1) {
-            background-color: green;
-        }
-    </style>
+		div:nth-child(2n+1) {
+			background-color: green;
+		}
+	</style>
 </head>
 <body>
 <!-- 准备容器 -->
 <div class="container">
-    <div class="row">
-        <div class="col-lg-1">1</div>
-        <div class="col-lg-1">2</div>
-        <div class="col-lg-1">3</div>
-        <div class="col-lg-1">4</div>
-        <div class="col-lg-1">5</div>
-        <div class="col-lg-1">6</div>
-        <div class="col-lg-1">7</div>
-        <div class="col-lg-1">8</div>
-        <div class="col-lg-1">9</div>
-        <div class="col-lg-1">10</div>
-        <div class="col-lg-1">11</div>
-        <div class="col-lg-1">12</div>
-    </div>
-    <!-- 偏移列 -->
-    <div class="row">
-        <!-- 在lg的环境下offset(偏移12份中的n份) -->
-        <div class="col-lg-6 col-lg-offset-4">
-            1
-        </div>
-    </div>
-    <!--  -->
+	<div class="row">
+		<div class="col-lg-1">1</div>
+		<div class="col-lg-1">2</div>
+		<div class="col-lg-1">3</div>
+		<div class="col-lg-1">4</div>
+		<div class="col-lg-1">5</div>
+		<div class="col-lg-1">6</div>
+		<div class="col-lg-1">7</div>
+		<div class="col-lg-1">8</div>
+		<div class="col-lg-1">9</div>
+		<div class="col-lg-1">10</div>
+		<div class="col-lg-1">11</div>
+		<div class="col-lg-1">12</div>
+	</div>
+	<!-- 偏移列 -->
+	<div class="row">
+		<!-- 在lg的环境下offset(偏移12份中的n份) -->
+		<div class="col-lg-6 col-lg-offset-4">
+			1
+		</div>
+	</div>
+	<!--  -->
 </div>
 <!-- 2.引入jquery.js目的是为了让bootstrap.js能够正常工作 -->
 <script src="./bs/js/jquery.min.js"></script>

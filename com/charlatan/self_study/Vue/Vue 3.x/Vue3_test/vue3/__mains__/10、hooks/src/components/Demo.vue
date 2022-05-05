@@ -26,8 +26,8 @@ import usePoint from '@/hooks/usePoint'
 export default {
   name: 'Demo',
   setup () {
-    let num = ref(0)
-    let point = usePoint()
+    let num = ref (0)
+    let point = usePoint ()
     return {
       num,
       point,
@@ -36,4 +36,4 @@ export default {
 }
 </script>
 
-<style scoped lang="less"></style>
+<style lang="less" scoped></style>

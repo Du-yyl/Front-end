@@ -35,14 +35,14 @@ export default {
     /**
      * 计算总量
      */
-    this.pubID1 = pubsub.subscribe('changeMoney', (_, money) => {
+    this.pubID1 = pubsub.subscribe ('changeMoney', (_, money) => {
       this.money = money
     })
     /**
      * 总价
      */
-    this.pubID2 = pubsub.subscribe('changeAllMoney', (_, allMoney) => {
-      this.allMoney = Math.round(allMoney * 100) / 100
+    this.pubID2 = pubsub.subscribe ('changeAllMoney', (_, allMoney) => {
+      this.allMoney = Math.round (allMoney * 100) / 100
     })
   },
   // beforeDestroy () {
@@ -52,7 +52,7 @@ export default {
   methods: {
 
     showHint () {
-      alert('一共是' + this.allMoney + '元')
+      alert ('一共是' + this.allMoney + '元')
     },
   },
   components: {},

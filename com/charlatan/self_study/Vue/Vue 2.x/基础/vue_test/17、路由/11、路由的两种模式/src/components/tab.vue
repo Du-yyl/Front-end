@@ -11,11 +11,11 @@
 <template>
   <div class="div">
     <ul class="ul">
-      <li class="li" v-for="tab in tabs" :key="tab.id">
+      <li v-for="tab in tabs" :key="tab.id" class="li">
         <router-link
-            class="list-group-item"
             :to="'/'+tab.value"
             active-class="active"
+            class="list-group-item"
         >{{ tab.value }}
         </router-link>
       </li>
@@ -41,7 +41,7 @@ export default {
   components: {},
   methods: {
     change (index) {
-      console.log(window.location.href = 'http://localhost:8080/#/' + this.tabs[index].value)
+      console.log (window.location.href = 'http://localhost:8080/#/' + this.tabs[index].value)
     },
   },
 }

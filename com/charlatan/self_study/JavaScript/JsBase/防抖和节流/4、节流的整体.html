@@ -20,30 +20,30 @@
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
 <script>
-	let num = 1;
+	let num = 1
 
-	function count() {
-		content.innerHTML = num++;
+	function count () {
+		content.innerHTML = num++
 	}
 
-	$("#content")[0].onclick = debounce(count, 1000, true);
+	$ ('#content')[0].onclick = debounce (count, 1000, true)
 
-	function debounce(func, wait, immediate) {
-		let timeout;
+	function debounce (func, wait, immediate) {
+		let timeout
 		return function () {
-			let context = this;
-			let args = arguments;
-			clearTimeout(timeout)
-			if (immediate) {
-				let callNow = !timeout;
-				timeout = setTimeout(() => {
-					timeout = null;
-				}, wait);
-				if (callNow) func.apply(context, args);
+			let context = this
+			let args = arguments
+			clearTimeout (timeout)
+			if ( immediate ) {
+				let callNow = !timeout
+				timeout = setTimeout (() => {
+					timeout = null
+				}, wait)
+				if ( callNow ) func.apply (context, args)
 			} else {
-				timeout = setTimeout(function () {
-					func.apply(context, args);
-				}, wait);
+				timeout = setTimeout (function () {
+					func.apply (context, args)
+				}, wait)
 			}
 		}
 	}

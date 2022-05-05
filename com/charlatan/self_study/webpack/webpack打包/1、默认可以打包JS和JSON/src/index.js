@@ -27,13 +27,12 @@
  */
 // 引入JSON文件
 import data from './data.json'
-
-console.log(data)
 // 引入CSS文件
-import css from './index.css'
+
+console.log (data)
 
 function add (x, y) {
-  return x + y
+	return x + y
 }
 
-console.log(add(1, 2))
+console.log (add (1, 2))

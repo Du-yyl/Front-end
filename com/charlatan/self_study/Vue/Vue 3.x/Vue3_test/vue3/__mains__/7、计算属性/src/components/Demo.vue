@@ -10,11 +10,11 @@
 
 <template>
   <div id="Demo">
-    姓：<input type="text" name="" v-model="person.firstName">
+    姓：<input v-model="person.firstName" name="" type="text">
     <br>
-    名：<input type="text" name="" v-model="person.subName">
+    名：<input v-model="person.subName" name="" type="text">
     <br>
-    全名：<input type="text" name="" v-model="person.name">
+    全名：<input v-model="person.name" name="" type="text">
     <br>
     <h2>
       全名：{{ person.name }}
@@ -29,7 +29,7 @@ import { computed } from '@vue/runtime-dom'
 export default {
   name: 'Demo',
   setup () {
-    let person = reactive({
+    let person = reactive ({
       firstName: '',
       subName: '',
     })
@@ -40,12 +40,12 @@ export default {
     // })
 
     // 完整写法
-    person.name = computed({
+    person.name = computed ({
       get () {
         return person.firstName + '-' + person.subName
       },
       set (value) {
-        let arr = value.split('-')
+        let arr = value.split ('-')
         person.firstName = arr[0]
         person.subName = arr[1]
       },
@@ -64,4 +64,4 @@ export default {
 }
 </script>
 
-<style scoped lang="less"></style>
+<style lang="less" scoped></style>

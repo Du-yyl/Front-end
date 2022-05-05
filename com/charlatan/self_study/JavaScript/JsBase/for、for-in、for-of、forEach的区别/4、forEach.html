@@ -35,30 +35,30 @@
 </pre>
 </body>
 <script>
-	const arrayMonths = ["一月", "二月", "三月"];
-	arrayMonths.forEach((value, index, list) => {
-		console.log(value); // 一月,二月,三月
-		console.log(index); // 0,1,1
-		console.log(list); // [ '一月', '二月', '三月' ],[ '一月', '二月', '三月' ]，[ '一月', '二月', '三月' ]
-	});
-	console.log("---------------------");
+	const arrayMonths = ['一月', '二月', '三月']
+	arrayMonths.forEach ((value, index, list) => {
+		console.log (value) // 一月,二月,三月
+		console.log (index) // 0,1,1
+		console.log (list) // [ '一月', '二月', '三月' ],[ '一月', '二月', '三月' ]，[ '一月', '二月', '三月' ]
+	})
+	console.log ('---------------------')
 
-	let arr1 = [1, 2, 3, 4];
+	let arr1 = [1, 2, 3, 4]
 	let obj = {
-		a: 1
-	};
-	arr1.forEach(function (self, index, arr) {
-		console.log(`当前元素为${self}索引为${index},属于数组${arr},this是：${this}`);
+		a: 1,
+	}
+	arr1.forEach (function (self, index, arr) {
+		console.log (`当前元素为${self}索引为${index},属于数组${arr},this是：${this}`)
 		//做个简单计算
-		console.log(self + this.a);
+		console.log (self + this.a)
 	}, obj)
-//	----使用第三个参数进行去重
-	console.log("----------------------------------");
-	let arr3 = [1, 2, 1, 3, 1];
-	let arr2 = [];
-	arr3.forEach(function (self, index, arr) {
-		arr.indexOf(self) === index ? arr2.push(self) : null;
-	});
-	console.log(arr2); //[1,2,3]
+	//	----使用第三个参数进行去重
+	console.log ('----------------------------------')
+	let arr3 = [1, 2, 1, 3, 1]
+	let arr2 = []
+	arr3.forEach (function (self, index, arr) {
+		arr.indexOf (self) === index ? arr2.push (self) : null
+	})
+	console.log (arr2) //[1,2,3]
 </script>
 </html>

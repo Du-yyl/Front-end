@@ -9,19 +9,19 @@
  */
 
 /*
-* Node 模块的分裂：
-*   内部模块
-*       由 Node 引擎提供，直接由名字进行引入
-*   文件模块
-*       由用户进行定义
-*
-* */
+ * Node 模块的分裂：
+ *   内部模块
+ *       由 Node 引擎提供，直接由名字进行引入
+ *   文件模块
+ *       由用户进行定义
+ *
+ * */
 
-let Maths = require('./MyMath')
-console.log(Maths.add(1, 2))
-console.log(Maths.mul(1, 2))
-console.log(Maths.mul(6, 2))
+let Maths = require ('./MyMath')
+console.log (Maths.add (1, 2))
+console.log (Maths.mul (1, 2))
+console.log (Maths.mul (6, 2))
 
 // Node中提供的模块
-let fs = require('fs')
-console.log(fs)
+let fs = require ('fs')
+console.log (fs)

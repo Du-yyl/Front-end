@@ -18,16 +18,17 @@
 
 </body>
 <script>
-	let ans = 0;
+	let ans = 0
 
-	function diGui(num) {
-		if (num < 1) {
+	function diGui (num) {
+		if ( num < 1 ) {
 			return 1
 		}
 		ans += num
-		diGui(--num)
+		diGui (--num)
 	}
-	diGui(5)
-	alert(ans)
+
+	diGui (5)
+	alert (ans)
 </script>
 </html>

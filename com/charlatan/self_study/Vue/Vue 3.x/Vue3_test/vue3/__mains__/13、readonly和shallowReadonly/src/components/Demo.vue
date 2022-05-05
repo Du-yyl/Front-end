@@ -34,14 +34,14 @@
 import { ref, reactive, shallowReactive, shallowRef } from 'vue'
 import { readonly, shallowReadonly, toRef } from '@vue/runtime-dom'
 
-const { toRefs } = require('@vue/runtime-dom')
+const { toRefs } = require ('@vue/runtime-dom')
 
 export default {
   name: 'Demo',
   setup () {
-    let num = ref(0)
+    let num = ref (0)
 
-    let person = reactive({
+    let person = reactive ({
       obj_1: '第一个数据',
       obj_2: '第一个数据',
       obj_s: {
@@ -62,10 +62,10 @@ export default {
      * 同样是让指定的内容进行只读，但是值得注意的是，这种方式进行的定义会进行浅层次的只读，对于深层次的内容不会限制
      * @type {Readonly<UnwrapNestedRefs<{obj_2: string, obj_s: {obj_s: {obj: string}, obj_1: string}, obj_1: string}>>}
      */
-    person = shallowReadonly(person)
+    person = shallowReadonly (person)
 
     return {
-      ...toRefs(person),
+      ...toRefs (person),
       num,
     }
   },
@@ -73,4 +73,4 @@ export default {
 }
 </script>
 
-<style scoped lang="less"></style>
+<style lang="less" scoped></style>

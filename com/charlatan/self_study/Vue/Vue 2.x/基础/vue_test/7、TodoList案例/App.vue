@@ -12,7 +12,7 @@
   <div class="div">
     <search :addObj="addObj"></search>
     <todos :Obj="tos" :removeObj="removeObj"></todos>
-    <all :all="all" :lisNum="lisNum" :checkAll="checkAll" :removeAll="removeAll"></all>
+    <all :all="all" :checkAll="checkAll" :lisNum="lisNum" :removeAll="removeAll"></all>
   </div>
 </template>
 
@@ -36,15 +36,15 @@ export default {
   computed: {
     all () {
       let num = 0
-      this.tos.forEach(item => {
+      this.tos.forEach (item => {
         num++
       })
       return num
     },
     lisNum () {
       let num = 0
-      this.tos.forEach(item => {
-        if (item.done) {
+      this.tos.forEach (item => {
+        if ( item.done ) {
           num++
         }
       })
@@ -56,19 +56,19 @@ export default {
   },
   methods: {
     addObj (obj) {
-      this.tos.unshift(obj)
+      this.tos.unshift (obj)
     },
     removeObj (obj) {
-      console.log(obj.id)
-      this.tos = this.tos.filter(item => item.id !== obj.id)
-      console.log(this.tos)
+      console.log (obj.id)
+      this.tos = this.tos.filter (item => item.id !== obj.id)
+      console.log (this.tos)
     },
 
     /**
      * 全选
      */
     checkAll (flag) {
-      this.tos.forEach(item => {
+      this.tos.forEach (item => {
         item.done = flag
       })
     },
@@ -77,7 +77,7 @@ export default {
      * 删除指定内容跟
      */
     removeAll () {
-      this.tos = this.tos.filter(item => !item.done)
+      this.tos = this.tos.filter (item => !item.done)
     },
   },
 

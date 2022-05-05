@@ -37,27 +37,28 @@
 	font-weight: 100;
 }
 
-.searchResult{
+.searchResult {
 	width: 100%;
 	max-width: 900rpx;
 	background: #ffffff;
 }
 
-.searchResult .answer{
+.searchResult .answer {
 	width: 100%;
-	padding:  0 20rpx;
+	padding: 0 20rpx;
 	border-bottom: 1px solid #ccc;
 	display: flex;
 	flex-direction: row;
 	align-content: center;
 }
-.searchResult .answer .icon-Magnifier{
+
+.searchResult .answer .icon-Magnifier {
 	font-size: 40rpx;
 	position: relative;
 	top: 30rpx;
 }
 
-.searchResult .answer .an{
+.searchResult .answer .an {
 	position: relative;
 	top: -25rpx;
 	left: 10rpx;
@@ -67,7 +68,6 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
 
 
 /* 搜索历史*/
@@ -159,7 +159,8 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.hotSong .body .lis .introduce .title .image{
+
+.hotSong .body .lis .introduce .title .image {
 	width: 20rpx;
 	height: 20rpx;
 	position: relative;

@@ -25,26 +25,24 @@
 </body>
 <script>
 	//传递数据代替多个字符串的形式
-	function test(a, b, c) {
-		console.log(a); // 1
-		console.log(b); // 2
-		console.log(c); // 3
+	function test (a, b, c) {
+		console.log (a) // 1
+		console.log (b) // 2
+		console.log (c) // 3
 	}
 
-	var arr = [1, 2, 3];
-	test(...arr);
-
+	var arr = [1, 2, 3]
+	test (...arr)
 
 	//将一个数组插入到另一个数组中
-	var arr1 = [1, 2, 3];
-	var arr2 = [...arr1, 4, 5, 6];
-	console.log(arr2); // [1, 2, 3, 4, 5, 6]
-
+	var arr1 = [1, 2, 3]
+	var arr2 = [...arr1, 4, 5, 6]
+	console.log (arr2) // [1, 2, 3, 4, 5, 6]
 
 	//字符串转数组
-	var str = 'hello';
-	var arr3 = [...str];
-	console.log(arr3); // ["h", "e", "l", "l", "o"]
+	var str = 'hello'
+	var arr3 = [...str]
+	console.log (arr3) // ["h", "e", "l", "l", "o"]
 
 </script>
 </html>

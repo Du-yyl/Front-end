@@ -1,0 +1,84 @@
+{
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/main/main",
+      // 设置默认组件自立的页面样式
+      "style": {
+        "navigationBarTitleText": "这是第一个自定义页面",
+        // 编译到 H5 的独有样式
+        "h5": {
+          // 下拉刷新
+          "pullToRefresh": {
+            "color": "#007AFF"
+          }
+        }
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "这是测试内容"
+      }
+    }
+  ],
+  // 设置导航栏
+  "tabBar": {
+    // 默认颜色
+    "color": "#4CD964",
+    // 选中颜色
+    "selectedColor": "#007AFF",
+    // 导航栏背景色
+    "backgroundColor": "#F0AD4E",
+    // 导航栏要展示的内容
+    "list": [
+      // 每一个元素都是一个对象，并且渲染顺序按照
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        // 显示的图标
+        "iconPath": "static/tab-home.png",
+        // 选中是的样式
+        "selectedIconPath": "static/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "main",
+        "iconPath": "static/tab-my.png",
+        "selectedIconPath": "static/tab-my-current.png"
+      }
+    ]
+  },
+  // 用于启动项目后快速到达某个页面
+  "condition": {
+    // 是否开始快速抵达，当前激活的模式（list 的索引项）
+    "current": 0,
+    // 启动模式列表
+    "list": [
+      {
+        // 启动模式名称
+        "name": "main",
+        // 启动页面路径
+        "path": "pages/main/main",
+        // 启动参数，可在页面的 onLoad 函数里获得
+        "query": "id=50"
+      }
+      s
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    // 更改头部导航栏颜色
+    "navigationBarBackgroundColor": "#EE82EE",
+    "backgroundColor": "#FFEFDB",
+    // 导航栏标题颜色，只支持白色和黑色
+    "navigationBarTextStyle": "white",
+    // 修改全局的导航标题内容，如果局部定义，使用局部的
+    "navigationBarTitleText": "导航栏标题内容",
+    // 是否开启下拉【开启全局下拉】
+    "enablePullDownRefresh": true,
+    // 改变动画加载样式，仅支持亮色和暗色
+    "backgroundTextStyle": "light"
+  }
+}

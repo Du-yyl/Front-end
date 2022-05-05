@@ -26,32 +26,32 @@
     在不同的作用域或块中，通过 let 重新声明变量是允许的：
 </pre>
 <script>
-	let num1 = 10;
-	var num2 = 20;
+	let num1 = 10
+	var num2 = 20
 	/*
-	* JS中的var和let作为全局变量时，二者的作用或属性基本是相似的*/
-	console.log(window.num1)
-	console.log(window.num2)
+	 * JS中的var和let作为全局变量时，二者的作用或属性基本是相似的*/
+	console.log (window.num1)
+	console.log (window.num2)
 	/*
-	* 但是，被let声明的变量不会作为全局对象window的属性，而被var声明的变量却可以*/
+	 * 但是，被let声明的变量不会作为全局对象window的属性，而被var声明的变量却可以*/
 	// let me1  = 'foo';
 	// let me1  = 'bar'; //SyntaxError: Identifier 'me' has already been declared
 
-	var me2 = 'foo';
-	var me2 = 'bar'; //这里me被替代了，是可以重复声明的
+	var me2 = 'foo'
+	var me2 = 'bar' //这里me被替代了，是可以重复声明的
 	/*
-	* var允许在同一作用域中声明同名的变量，而let不可以 */
+	 * var允许在同一作用域中声明同名的变量，而let不可以 */
 
 	/*
-	* const和let都是在声明的块作用域中有效，但是let声明的变量可变，值和类型都可以改变，没有限制。
-	* const声明额变量不能改变，所以，const一旦声明一个变量，就必须马上初始化，不能留到以后赋值*/
+	 * const和let都是在声明的块作用域中有效，但是let声明的变量可变，值和类型都可以改变，没有限制。
+	 * const声明额变量不能改变，所以，const一旦声明一个变量，就必须马上初始化，不能留到以后赋值*/
 	// const num3 ; //不赋值直接报错
-	const num4 = 10;
+	const num4 = 10
 	// num4 = 20; //赋值后不能进行更改，更改直接报错
 
 	/*
-	* 整体来说，let比var语法更严谨，const更像最终的属性，不能重新赋值
-	* */
+	 * 整体来说，let比var语法更严谨，const更像最终的属性，不能重新赋值
+	 * */
 </script>
 </body>
 </html>

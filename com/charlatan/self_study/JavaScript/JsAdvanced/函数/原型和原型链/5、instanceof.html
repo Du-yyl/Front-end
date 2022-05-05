@@ -26,40 +26,39 @@
 </body>
 <script>
 
-	console.log(Object instanceof Object); //true
+	console.log (Object instanceof Object) //true
 	/*
-	* 第一个Object就是new Function产生的
-	* 所以：
-	*   第一步：
-	*      第一个得到的结果是   Object <== Object.__proto__ <== Function.prototype 
-	*      第二个得到的结果是   Object <== Object.prototype
-	*   第二步：
-	*      第一个得到的结果是   Object <== Object.__proto__ <== Function.prototype <== Function.prototype.__proto__ <== Object.prototype
-	*      第二个得到的结果是   Object <== Object.prototype
-	* */
-	
-	console.log("------------------------------");
-	console.log(Function instanceof Function);//true
-	console.log(Function.__proto__ === Function.prototype);
-	/*
-	* 同上：
-	*   第一步：
-	*       第一个：Function <== Function.__proto__ 
-	*       第二个：Function <== Function.prototype
-	* */
+	 * 第一个Object就是new Function产生的
+	 * 所以：
+	 *   第一步：
+	 *      第一个得到的结果是   Object <== Object.__proto__ <== Function.prototype
+	 *      第二个得到的结果是   Object <== Object.prototype
+	 *   第二步：
+	 *      第一个得到的结果是   Object <== Object.__proto__ <== Function.prototype <== Function.prototype.__proto__ <== Object.prototype
+	 *      第二个得到的结果是   Object <== Object.prototype
+	 * */
 
-
-	console.log("-------------------------------");
-	console.log(Function instanceof Object); //true
-	console.log(Function.prototype === Object.prototype);
+	console.log ('------------------------------')
+	console.log (Function instanceof Function)//true
+	console.log (Function.__proto__ === Function.prototype)
 	/*
-	* 第一步：
-	*   第一个：Function.__proto__
-	*   第二个：Object.prototype = Function.prototype ==? Object.prototype
-	* 第二步：
-	*   第一个：Function.prototype.__proto__
-	*   第二个：Object.prototype
-	* */
+	 * 同上：
+	 *   第一步：
+	 *       第一个：Function <== Function.__proto__
+	 *       第二个：Function <== Function.prototype
+	 * */
+
+	console.log ('-------------------------------')
+	console.log (Function instanceof Object) //true
+	console.log (Function.prototype === Object.prototype)
+	/*
+	 * 第一步：
+	 *   第一个：Function.__proto__
+	 *   第二个：Object.prototype = Function.prototype ==? Object.prototype
+	 * 第二步：
+	 *   第一个：Function.prototype.__proto__
+	 *   第二个：Object.prototype
+	 * */
 
 </script>
 </html>

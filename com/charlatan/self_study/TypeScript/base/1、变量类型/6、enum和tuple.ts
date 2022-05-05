@@ -8,7 +8,6 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-
 // tuple【元组：固定长度的数组】 多了不行，少了也不行，顺序错了也不行
 let h: [string, number]
 h = ['hello', 123]

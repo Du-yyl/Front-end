@@ -35,19 +35,18 @@
 	//
 	// Ibook.prototype = new Book
 
-
 	//	class继承
 	class Book {
 		#name
 		#age
 
-		constructor(name, age) {
+		constructor (name, age) {
 			this.#name = name
 			this.#age = age
 		}
 
-		read() {
-			console.log("我在读书");
+		read () {
+			console.log ('我在读书')
 		}
 	}
 
@@ -55,22 +54,22 @@
 		#id
 		#color
 
-		constructor(name, age, id, color) {
-			super(name, age);
+		constructor (name, age, id, color) {
+			super (name, age)
 			this.#id = id
 			this.#color = color
 		}
 
-		read() {
-			console.log("我在子类被重写了");
+		read () {
+			console.log ('我在子类被重写了')
 		}
 	}
 
-	let b1 = new Ibook('jock', 12, 23, 34)
-	let b2 = new Ibook('tom', 123, 234, 345)
-	console.log(b1);
-	console.log(b2);
+	let b1 = new Ibook ('jock', 12, 23, 34)
+	let b2 = new Ibook ('tom', 123, 234, 345)
+	console.log (b1)
+	console.log (b2)
 
-	b1.read()
+	b1.read ()
 </script>
 </html>

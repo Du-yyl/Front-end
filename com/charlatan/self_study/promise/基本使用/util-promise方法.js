@@ -8,11 +8,11 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-let utilPromise = require('util')
-let fs = require('fs')
+let utilPromise = require ('util')
+let fs = require ('fs')
 
-let minePromise = utilPromise.promisify(fs.readFile)
+let minePromise = utilPromise.promisify (fs.readFile)
 
-minePromise('./test/test.txt').then((value) => {
-  console.log(value.toString())
+minePromise ('./test/test.txt').then ((value) => {
+	console.log (value.toString ())
 })

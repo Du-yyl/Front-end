@@ -19,26 +19,26 @@
 </body>
 <script>
 
-	let p = new Promise(
-		/**
-		 * Promise 中的回调
-		 * @param resolve 成功
-		 * @param reject 失败
-		 */
-		function (resolve, reject) {
-			setTimeout(function () {
-				// let data = '我是数据'
-				// resolve(data)
+	let p = new Promise (
+			/**
+			 * Promise 中的回调
+			 * @param resolve 成功
+			 * @param reject 失败
+			 */
+			function (resolve, reject) {
+				setTimeout (function () {
+					// let data = '我是数据'
+					// resolve(data)
 
-				let data = '发生错误'
-				reject(data)
-			}, 1000)
-		})
+					let data = '发生错误'
+					reject (data)
+				}, 1000)
+			})
 
-	p.then(function (value) {
-		console.log(value);
+	p.then (function (value) {
+		console.log (value)
 	}, function (reason) {
-		console.error(reason);
+		console.error (reason)
 	})
 </script>
 </html>

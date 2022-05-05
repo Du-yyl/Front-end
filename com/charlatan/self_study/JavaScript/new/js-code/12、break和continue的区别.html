@@ -10,35 +10,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>break和continue的区别</title>
+	<meta charset="UTF-8">
+	<title>break和continue的区别</title>
 </head>
 <body>
 <p>
-    JS中break能用于for循环或者switch循环中 <br>
-    但是在if语句中不能使用break或continue
+	JS中break能用于for循环或者switch循环中 <br>
+	但是在if语句中不能使用break或continue
 </p>
 <script>
-    for (let i = 0; i < 5; i++) {
-        console.log(i);
-        if (i === 1) {
-            // break
+	for ( let i = 0; i < 5; i++ ) {
+		console.log (i)
+		if ( i === 1 ) {
+			// break
 
-        }
-    }
+		}
+	}
 
-    /*
-    * 使用for定义名字，在内层循环中结束外层循环
-    * 语法：
-    *   label:循环语句【label是变量名，可以随意】
-    *       因为break语句默认结束的最近的一层循环，使用break 加 循环名，直接结束指定的循环，无论是不是最近的
-    * */
-    hello:
-        for (let i = 0; i < 5; i++) {
-            for (let j = 0; j < 5; j++) {
-                break hello
-            }
-        }
+	/*
+	 * 使用for定义名字，在内层循环中结束外层循环
+	 * 语法：
+	 *   label:循环语句【label是变量名，可以随意】
+	 *       因为break语句默认结束的最近的一层循环，使用break 加 循环名，直接结束指定的循环，无论是不是最近的
+	 * */
+	hello:
+			for ( let i = 0; i < 5; i++ ) {
+				for ( let j = 0; j < 5; j++ ) {
+					break hello
+				}
+			}
 
 
 </script>

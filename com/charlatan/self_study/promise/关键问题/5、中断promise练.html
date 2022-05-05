@@ -24,18 +24,18 @@
 </pre>
 </body>
 <script>
-	let pro = new Promise((resolve, reject) => {
-		resolve('成功了')
+	let pro = new Promise ((resolve, reject) => {
+		resolve ('成功了')
 	})
 
-	pro.then(value => {
-		console.log('1111')
-	}).then(() => {
-		console.log('2222')
-		return new Promise(() => {
+	pro.then (value => {
+		console.log ('1111')
+	}).then (() => {
+		console.log ('2222')
+		return new Promise (() => {
 		})
-	}).then(() => {
-		console.log('3333')
+	}).then (() => {
+		console.log ('3333')
 	})
 </script>
 </html>

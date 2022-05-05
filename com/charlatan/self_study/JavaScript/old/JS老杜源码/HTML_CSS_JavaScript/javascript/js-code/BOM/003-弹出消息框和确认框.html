@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>弹出消息框和确认框</title>
+	<meta charset="utf-8">
+	<title>弹出消息框和确认框</title>
 </head>
 <body>
 <script type="text/javascript">
-    function del() {
-        /*
-        var ok = window.confirm("亲，确认删除数据吗？");
-        //alert(ok);
-        if(ok){
-            alert("delete data ....");
-        }
-        */
-        if (window.confirm("亲，确认删除数据吗？")) {
-            alert("delete data ....");
-        }
-    }
+	function del () {
+		/*
+		 var ok = window.confirm("亲，确认删除数据吗？");
+		 //alert(ok);
+		 if(ok){
+		 alert("delete data ....");
+		 }
+		 */
+		if ( window.confirm ('亲，确认删除数据吗？') ) {
+			alert ('delete data ....')
+		}
+	}
 </script>
 <input onclick="window.alert('消息框!')" type="button" value="弹出消息框"/>
 

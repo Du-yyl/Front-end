@@ -10,35 +10,35 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+Vue.use (Vuex)
 const actions = {
-  addOdd (context, value) {
-    if (state.sum % 2 !== 0)
-      context.commit('ADD', value)
-  },
-  addWait (context, value) {
-    setTimeout(() => {
-      context.commit('ADD', value)
-    }, 2000)
-  },
+	addOdd (context, value) {
+		if ( state.sum % 2 !== 0 )
+			context.commit ('ADD', value)
+	},
+	addWait (context, value) {
+		setTimeout (() => {
+			context.commit ('ADD', value)
+		}, 2000)
+	},
 }
 const mutations = {
-  ADD (state, value) {
-    state.sum += value
-  }, DEADD (state, value) {
-    state.sum -= value
-  },
+	ADD (state, value) {
+		state.sum += value
+	}, DEADD (state, value) {
+		state.sum -= value
+	},
 }
 const getters = {
-  calculate (state) {
-    return state.sum * 10
-  },
+	calculate (state) {
+		return state.sum * 10
+	},
 }
 const state = {
-  sum: 0,
-  name: '张三',
-  age: 99,
+	sum: 0,
+	name: '张三',
+	age: 99,
 }
-export default new Vuex.Store({
-  actions, mutations, state, getters,
+export default new Vuex.Store ({
+	actions, mutations, state, getters,
 })

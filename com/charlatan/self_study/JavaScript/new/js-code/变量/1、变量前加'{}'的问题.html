@@ -10,22 +10,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>变量前加'{}'的问题</title>
+	<meta charset="UTF-8">
+	<title>变量前加'{}'的问题</title>
 </head>
 <body>
 <script>
-    /*
-    * 加上花括号相当于将指定变量的内容拿出来，并重新创建变量并赋值，通过测试访问不存在变量会返回undefined
-    *   解构赋值
-    * */
-    const {appName} = navigator;
-    const appName_1 = navigator;
-    const {appName_2} = navigator;
+	/*
+	 * 加上花括号相当于将指定变量的内容拿出来，并重新创建变量并赋值，通过测试访问不存在变量会返回undefined
+	 *   解构赋值
+	 * */
+	const { appName } = navigator
+	const appName_1 = navigator
+	const { appName_2 } = navigator
 
-    alert(appName)
-    alert(appName_1)
-    alert(appName_2)
+	alert (appName)
+	alert (appName_1)
+	alert (appName_2)
 </script>
 </body>
 </html>

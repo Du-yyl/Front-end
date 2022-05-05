@@ -18,7 +18,7 @@
 </head>
 <body>
 <div id="root">
-	<input type="text" name="" id="" placeholder="输入" v-model="input">
+	<input id="" v-model="input" name="" placeholder="输入" type="text">
 	<hr>
 	<ul>
 		<li v-for="(per,index) in fullPer">
@@ -31,7 +31,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			persons: [
@@ -67,8 +67,8 @@
 		methods: {},
 		computed: {
 			fullPer (value) {
-				return this.persons.filter((item) => {
-					return item.name.indexOf(this.input) !== -1
+				return this.persons.filter ((item) => {
+					return item.name.indexOf (this.input) !== -1
 				})
 			},
 		},

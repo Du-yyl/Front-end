@@ -28,27 +28,27 @@
 </pre>
 </body>
 <script>
-	let btn1 = document.getElementById('btn1')
-	let btn2 = document.getElementById('btn2')
-	let btn3 = document.getElementById('btn3')
-	let btn4 = document.getElementById('btn4')
+	let btn1 = document.getElementById ('btn1')
+	let btn2 = document.getElementById ('btn2')
+	let btn3 = document.getElementById ('btn3')
+	let btn4 = document.getElementById ('btn4')
 
 	let p = { name: '测试', age: 10 }
 	btn1.onclick = function () {
-		sessionStorage.setItem('名字', '测试内容1')
-		sessionStorage.setItem('名字', JSON.stringify(p))
+		sessionStorage.setItem ('名字', '测试内容1')
+		sessionStorage.setItem ('名字', JSON.stringify (p))
 	}
 
 	btn2.onclick = function () {
-		console.log(sessionStorage.getItem('名字'))
+		console.log (sessionStorage.getItem ('名字'))
 	}
 
 	btn3.onclick = function () {
-		sessionStorage.removeItem('名字')
+		sessionStorage.removeItem ('名字')
 	}
 
 	btn4.onclick = function () {
-		sessionStorage.clear()
+		sessionStorage.clear ()
 	}
 </script>
 </html>

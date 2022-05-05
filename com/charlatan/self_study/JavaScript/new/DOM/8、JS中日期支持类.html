@@ -10,40 +10,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS中的日期支持类</title>
+	<meta charset="UTF-8">
+	<title>JS中的日期支持类</title>
 </head>
 <body>
 <script>
-    var data = new Date();
-    /*
-    * 使用JS内置类，获取系统当前时间*/
-    // document.write(data)
-    /*
-    * 格式化日期格式，转换成本地时间格式*/
-    var data1 = data.toLocaleString()
-    document.write(data1)
-    document.write('<br>')
-    document.write('<br>')
-    /*
-    * 获取1970年0月0日0时0分0秒 00 到现在的毫秒数*/
-    var data2 = data.getTime()
-    document.write(data2)
+	var data = new Date ()
+	/*
+	 * 使用JS内置类，获取系统当前时间*/
+	// document.write(data)
+	/*
+	 * 格式化日期格式，转换成本地时间格式*/
+	var data1 = data.toLocaleString ()
+	document.write (data1)
+	document.write ('<br>')
+	document.write ('<br>')
+	/*
+	 * 获取1970年0月0日0时0分0秒 00 到现在的毫秒数*/
+	var data2 = data.getTime ()
+	document.write (data2)
 
-    window.onload = function () {
-        document.getElementById('btn').onclick = function () {
-            time = window.setInterval(visit, 10)
-        }
-        document.getElementById('btn1').onclick = function () {
-            window.clearInterval(time)
-        }
+	window.onload = function () {
+		document.getElementById ('btn').onclick = function () {
+			time = window.setInterval (visit, 10)
+		}
+		document.getElementById ('btn1').onclick = function () {
+			window.clearInterval (time)
+		}
 
-        function visit() {
-            var d = new Date()
-            d = d.toLocaleString()
-            document.getElementById('div').innerText = d
-        }
-    }
+		function visit () {
+			var d = new Date ()
+			d = d.toLocaleString ()
+			document.getElementById ('div').innerText = d
+		}
+	}
 </script>
 <br><br><br>
 <input id="btn" type="button" value="我是按钮">

@@ -24,7 +24,7 @@
 </pre>
 </body>
 <script>
-	function Func(name, age) {
+	function Func (name, age) {
 		let _name = name
 		let _age = age
 		this.name = function () {
@@ -35,9 +35,8 @@
 		}
 	}
 
-
-	let c1 = new Func("张三", 12)
-	console.log(c1.name());
-	console.log(c1._name);
+	let c1 = new Func ('张三', 12)
+	console.log (c1.name ())
+	console.log (c1._name)
 </script>
 </html>

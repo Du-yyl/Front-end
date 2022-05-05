@@ -14,333 +14,333 @@
 	<meta charset="UTF-8">
 	<title>完整的百度</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        li {
-            list-style: none;
-        }
+		li {
+			list-style: none;
+		}
 
-        /*------------------------------*/
-        #left {
-            width: 600px;
-            height: 90px;
-            /*background-color: #CCFFFF;*/
-            position: relative;
-        }
+		/*------------------------------*/
+		#left {
+			width: 600px;
+			height: 90px;
+			/*background-color: #CCFFFF;*/
+			position: relative;
+		}
 
-        #le_ul {
-            position: absolute;
-            margin-top: 20px;
-            margin-left: 20px;
-        }
+		#le_ul {
+			position: absolute;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
 
-        #le_ul li {
-            float: left;
-            /*word-spacing: 10px;*/
-            font-size: 13px;
-            color: #222222;
-            display: inline-block;
-            width: 55px;
-            text-align: center;
-            margin-left: 10px;
-        }
+		#le_ul li {
+			float: left;
+			/*word-spacing: 10px;*/
+			font-size: 13px;
+			color: #222222;
+			display: inline-block;
+			width: 55px;
+			text-align: center;
+			margin-left: 10px;
+		}
 
-        #le_ul li:hover {
-            color: #315efb;
-            cursor: pointer
-        }
+		#le_ul li:hover {
+			color: #315efb;
+			cursor: pointer
+		}
 
-        #more {
-            height: 30px;
-        }
+		#more {
+			height: 30px;
+		}
 
-        /*-------更多-----------*/
-        #more_div {
-            width: 310px;
-            height: 230px;
-            /*background-color: #d7efc6;*/
-            position: absolute;
-            top: 30px;
-            left: -260px;
-            border-radius: 7%;
-            box-shadow: 0 0 9px #c2c2c2;
-            display: none;
-        }
+		/*-------更多-----------*/
+		#more_div {
+			width: 310px;
+			height: 230px;
+			/*background-color: #d7efc6;*/
+			position: absolute;
+			top: 30px;
+			left: -260px;
+			border-radius: 7%;
+			box-shadow: 0 0 9px #c2c2c2;
+			display: none;
+		}
 
-        #more_span {
-            position: absolute;
-            left: 470px;
-            top: 0;
-            display: block;
-        }
+		#more_span {
+			position: absolute;
+			left: 470px;
+			top: 0;
+			display: block;
+		}
 
-        #more:hover #more_div {
-            display: block;
-        }
+		#more:hover #more_div {
+			display: block;
+		}
 
-        /*---------more--------------*/
-        #md_ul_1 {
-            position: relative;
-            top: 10px;
-        }
+		/*---------more--------------*/
+		#md_ul_1 {
+			position: relative;
+			top: 10px;
+		}
 
-        #md_ul_1 li {
-            margin-left: 20px;
-        }
+		#md_ul_1 li {
+			margin-left: 20px;
+		}
 
-        #md_ul_2 {
-            position: relative;
-            top: 30px;
-        }
+		#md_ul_2 {
+			position: relative;
+			top: 30px;
+		}
 
-        #md_ul_2 li {
-            margin-left: 20px;
-        }
+		#md_ul_2 li {
+			margin-left: 20px;
+		}
 
-        #md_ul_3 {
-            margin-top: 170px;
-            width: 400px;
-        }
+		#md_ul_3 {
+			margin-top: 170px;
+			width: 400px;
+		}
 
-        #md_ul_3 li {
-            width: 160px;
-            margin-left: 70px;
-            margin-top: 20px;
-            color: #babcc5;
-        }
+		#md_ul_3 li {
+			width: 160px;
+			margin-left: 70px;
+			margin-top: 20px;
+			color: #babcc5;
+		}
 
-        /*-------------------*/
-        #right {
-            width: 100px;
-            height: 90px;
-            /*background-color: #d7efc6;*/
-            position: relative;
-            left: 1150px;
-            top: -90px;
-        }
+		/*-------------------*/
+		#right {
+			width: 100px;
+			height: 90px;
+			/*background-color: #d7efc6;*/
+			position: relative;
+			left: 1150px;
+			top: -90px;
+		}
 
-        #ri_ul {
-            position: relative;
-            left: 330px;
-            top: 30px;
-        }
+		#ri_ul {
+			position: relative;
+			left: 330px;
+			top: 30px;
+		}
 
-        #s-d {
-            width: 50px;
-            height: 30px;
-            background-color: #4e6ef2;
-            border-radius: 10%;
-            color: white;
+		#s-d {
+			width: 50px;
+			height: 30px;
+			background-color: #4e6ef2;
+			border-radius: 10%;
+			color: white;
 
-        }
+		}
 
-        #ri_ul li {
-            float: left;
-            margin-left: 30px;
-            color: #222222;
-            line-height: 30px;
-            font-size: 14px;
-            text-align: center;
-        }
+		#ri_ul li {
+			float: left;
+			margin-left: 30px;
+			color: #222222;
+			line-height: 30px;
+			font-size: 14px;
+			text-align: center;
+		}
 
-        #li_1:hover {
-            color: #315efb;
-            cursor: pointer;
-        }
+		#li_1:hover {
+			color: #315efb;
+			cursor: pointer;
+		}
 
-        #li_2:hover {
-            background-color: #315efb;
-            border-radius: 10%;
-            cursor: pointer;
-        }
+		#li_2:hover {
+			background-color: #315efb;
+			border-radius: 10%;
+			cursor: pointer;
+		}
 
-        #set_more {
-            width: 90px;
-            height: 160px;
-            /*background-color: #CCFFFF;*/
-            position: absolute;
-            left: -29px;
-            top: 34px;
-            text-align: center;
-            border-radius: 10%;
-            box-shadow: 0 0 9px #787878;
-            display: none;
-            z-index: 999999;
-        }
+		#set_more {
+			width: 90px;
+			height: 160px;
+			/*background-color: #CCFFFF;*/
+			position: absolute;
+			left: -29px;
+			top: 34px;
+			text-align: center;
+			border-radius: 10%;
+			box-shadow: 0 0 9px #787878;
+			display: none;
+			z-index: 999999;
+		}
 
-        #set_more_ul {
-            width: 100px;
-            position: absolute;
-            left: -14px;
-        }
+		#set_more_ul {
+			width: 100px;
+			position: absolute;
+			left: -14px;
+		}
 
-        #set_more_ul li:hover {
-            color: #315efb;
-        }
+		#set_more_ul li:hover {
+			color: #315efb;
+		}
 
-        #li_2 {
-            position: absolute;
-            left: 40px;
-        }
+		#li_2 {
+			position: absolute;
+			left: 40px;
+		}
 
-        #s_li {
-            position: absolute;
-            top: 0;
-            left: 10px;
-            /*background-color: red;*/
-            height: 40px;
-        }
+		#s_li {
+			position: absolute;
+			top: 0;
+			left: 10px;
+			/*background-color: red;*/
+			height: 40px;
+		}
 
-        #s_li:hover #set_more {
-            display: block;
-        }
+		#s_li:hover #set_more {
+			display: block;
+		}
 
 
-        /*    ----------搜索框----------------*/
-        #center {
-            width: 800px;
-            height: 300px;
-            background-color: white;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: -9;
-        }
+		/*    ----------搜索框----------------*/
+		#center {
+			width: 800px;
+			height: 300px;
+			background-color: white;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			z-index: -9;
+		}
 
-        #center-img-div {
-            width: 260px;
-            height: 130px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            top: 0;
-            background-color: white;
-        }
+		#center-img-div {
+			width: 260px;
+			height: 130px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			top: 0;
+			background-color: white;
+		}
 
-        #center-img {
-            width: 100%;
-            height: 100%;
-        }
+		#center-img {
+			width: 100%;
+			height: 100%;
+		}
 
-        #center-search-div {
-            width: 750px;
-            height: 60px;
-            background-color: transparent;
-            position: absolute;
-            top: 170px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: -1;
-        }
+		#center-search-div {
+			width: 750px;
+			height: 60px;
+			background-color: transparent;
+			position: absolute;
+			top: 170px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			z-index: -1;
+		}
 
-        #main-search {
-            width: 600px;
-            height: 50px;
-            outline: none;
-            border-radius: 10px 0 0 10px;
-            border: 2px solid #c4c7ce;
-            padding-left: 15px;
-            font-size: 20px;
-            font-weight: 100;
-            position: relative;
-            top: 0;
-            left: 0;
-        }
+		#main-search {
+			width: 600px;
+			height: 50px;
+			outline: none;
+			border-radius: 10px 0 0 10px;
+			border: 2px solid #c4c7ce;
+			padding-left: 15px;
+			font-size: 20px;
+			font-weight: 100;
+			position: relative;
+			top: 0;
+			left: 0;
+		}
 
-        #main-search:focus {
-            border: 2px solid #4e6ef2;
-            border-bottom: none;
+		#main-search:focus {
+			border: 2px solid #4e6ef2;
+			border-bottom: none;
 
-        }
+		}
 
-        #btn {
-            width: 126px;
-            height: 50px;
-            position: absolute;
-            top: 0;
-            right: 54px;
-            background-color: #4e6ef2;
-            border: none;
-            border-radius: 0 7px 7px 0;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
+		#btn {
+			width: 126px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			right: 54px;
+			background-color: #4e6ef2;
+			border: none;
+			border-radius: 0 7px 7px 0;
+			color: white;
+			font-size: 16px;
+			cursor: pointer;
+		}
 
-        #show {
-            position: relative;
-            top: -8px;
-            border-radius: 0 0 10px 10px;
-            overflow: hidden;
-            transition: all .3s ease-in-out;
-        }
+		#show {
+			position: relative;
+			top: -8px;
+			border-radius: 0 0 10px 10px;
+			overflow: hidden;
+			transition: all .3s ease-in-out;
+		}
 
-        .show-div {
-            width: 0;
-            background-color: transparent;
-            border: none;
-        }
+		.show-div {
+			width: 0;
+			background-color: transparent;
+			border: none;
+		}
 
-        .show-div-switch {
-            width: 568px;
-            border: 2px solid #4e6ef2;
-            border-top: none;
-            background-color: white;
-        }
+		.show-div-switch {
+			width: 568px;
+			border: 2px solid #4e6ef2;
+			border-top: none;
+			background-color: white;
+		}
 
-        /*#main-search:focus + #show {*/
-        /*    width: 568px;*/
-        /*    border: 2px solid #4e6ef2;*/
-        /*    border-top: none;*/
-        /*    background-color: white;*/
-        /*}*/
+		/*#main-search:focus + #show {*/
+		/*    width: 568px;*/
+		/*    border: 2px solid #4e6ef2;*/
+		/*    border-top: none;*/
+		/*    background-color: white;*/
+		/*}*/
 
-        #show-div-div {
-            height: 2px;
-            background-color: #d7d7d7;
-            position: absolute;
-            top: 48px;
-            right: 195px;
-            transition: all .4s ease-in-out .4s;
-        }
+		#show-div-div {
+			height: 2px;
+			background-color: #d7d7d7;
+			position: absolute;
+			top: 48px;
+			right: 195px;
+			transition: all .4s ease-in-out .4s;
+		}
 
-        .show-class {
-            width: 0;
-        }
+		.show-class {
+			width: 0;
+		}
 
-        .show-class-switch {
-            width: 540px;
-        }
+		.show-class-switch {
+			width: 540px;
+		}
 
-        #show-ul {
-            overflow: hidden;
-            width: 550px;
-            padding-top: 10px;
-            padding-left: 15px;
-            padding-bottom: 15px;
-        }
+		#show-ul {
+			overflow: hidden;
+			width: 550px;
+			padding-top: 10px;
+			padding-left: 15px;
+			padding-bottom: 15px;
+		}
 
-        #show-ul > li {
-            height: 30px;
-            display: block;
-            line-height: 30px;
-        }
+		#show-ul > li {
+			height: 30px;
+			display: block;
+			line-height: 30px;
+		}
 
-        #show-ul > li:hover {
-            background-color: #f5f5f6;
-            color: #4e6ef2;
-        }
+		#show-ul > li:hover {
+			background-color: #f5f5f6;
+			color: #4e6ef2;
+		}
 
-        .lis-hover {
-            background-color: #f5f5f6;
-            color: #4e6ef2;
-        }
+		.lis-hover {
+			background-color: #f5f5f6;
+			color: #4e6ef2;
+		}
 	</style>
 </head>
 <body>
@@ -461,7 +461,7 @@
 
 	<div id="center">
 		<div id="center-img-div">
-			<img alt="" id="center-img" src="file/baidu-logo.png">
+			<img id="center-img" alt="" src="file/baidu-logo.png">
 		</div>
 		<!-- /#center-img-div -->
 
@@ -469,10 +469,10 @@
 
 
 			<label for="main-search">
-				<input class="show-search" id="main-search" name="" type="search">
+				<input id="main-search" class="show-search" name="" type="search">
 
 			</label>
-			<div class="show-div" id="show">
+			<div id="show" class="show-div">
 				<ul id="show-ul">
 					<li class="li">百度头条-1</li>
 					<li class="li">百度头条-2</li>
@@ -486,7 +486,7 @@
 				</ul>
 			</div>
 
-			<div class="show-class" id="show-div-div"></div>
+			<div id="show-div-div" class="show-class"></div>
 			<!-- /#show-div-div -->
 			<button id="btn">
 				百度一下
@@ -633,56 +633,55 @@
 		'八塘镇', '新塘乡', '瓦塘乡', '覃塘区', '覃塘镇', '东龙镇', '三里镇', '黄练镇', '石卡镇', '五里镇', '山北乡', '樟木乡', '蒙公乡', '大岭乡',
 	]
 
-	let ul = document.getElementById('show-ul')
-	let search = document.getElementById("main-search")
-	let show_div = document.getElementById("show")
-	let div_show = document.getElementById("show-div-div")
-	let lis = document.getElementsByClassName("li")
+	let ul = document.getElementById ('show-ul')
+	let search = document.getElementById ('main-search')
+	let show_div = document.getElementById ('show')
+	let div_show = document.getElementById ('show-div-div')
+	let lis = document.getElementsByClassName ('li')
 	let index_li = 0
 
-	console.log(lis);
+	console.log (lis)
 
 	// search.focus()
 	// show_div.classList.add("show-div-switch")
 
 	//获取焦点事件
 	ul.onmousedown = function () {
-		console.log("点击成功");
-		show_div.classList.add("show-div-switch")
-		div_show.classList.add("show-class-switch")
+		console.log ('点击成功')
+		show_div.classList.add ('show-div-switch')
+		div_show.classList.add ('show-class-switch')
 
-		search.focus()
+		search.focus ()
 	}
 	show_div.onmousedown = function () {
-		console.log("点击成功");
-		show_div.classList.add("show-div-switch")
-		div_show.classList.add("show-class-switch")
+		console.log ('点击成功')
+		show_div.classList.add ('show-div-switch')
+		div_show.classList.add ('show-class-switch')
 
-		search.focus()
+		search.focus ()
 	}
 	//----------------------------------------
 	ul.onclick = function () {
-		console.log("点击成功");
-		show_div.classList.add("show-div-switch")
-		div_show.classList.add("show-class-switch")
+		console.log ('点击成功')
+		show_div.classList.add ('show-div-switch')
+		div_show.classList.add ('show-class-switch')
 
-		search.focus()
+		search.focus ()
 	}
 	show_div.onclick = function () {
-		console.log("点击成功");
-		show_div.classList.add("show-div-switch")
-		div_show.classList.add("show-class-switch")
+		console.log ('点击成功')
+		show_div.classList.add ('show-div-switch')
+		div_show.classList.add ('show-class-switch')
 
-		search.focus()
+		search.focus ()
 	}
-
 
 	//获取焦点时的样式
 	search.onfocus = function () {
-		show_div.classList.add("show-div-switch")
-		div_show.classList.add("show-class-switch")
+		show_div.classList.add ('show-div-switch')
+		div_show.classList.add ('show-class-switch')
 		document.onkeydown = function (event) {
-			if (event.key === 'ArrowDown') {
+			if ( event.key === 'ArrowDown' ) {
 
 			}
 		}
@@ -690,24 +689,22 @@
 
 	//失去焦点时的样式
 	search.onblur = function () {
-		console.log("失去样式");
-		show_div.classList.remove("show-div-switch")
-		div_show.classList.remove("show-class-switch")
+		console.log ('失去样式')
+		show_div.classList.remove ('show-div-switch')
+		div_show.classList.remove ('show-class-switch')
 
 	}
 
-
-	function lisSelect() {
+	function lisSelect () {
 
 	}
-
 
 	search.oninput = function () {
 		ul.innerHTML = ''
 		str = search.value
-		globalSearch(str).forEach(function (self) {
+		globalSearch (str).forEach (function (self) {
 			// ul.innerHTML = ''
-			ul.appendChild(self)
+			ul.appendChild (self)
 		})
 	}
 
@@ -716,15 +713,15 @@
 	 * @param value 设置获取到的搜索框中的字符串
 	 * @returns {*[]} 静字符串拼接成一个li标签数组后返回
 	 */
-	function globalSearch(value) {
-		let indexExp = new RegExp('^.*\[' + value + '\].*$')
+	function globalSearch (value) {
+		let indexExp = new RegExp ('^.*\[' + value + '\].*$')
 		// let indexExp = new RegExp('^(?=.*?' + value + ').*$')
 
 		let dateIndex = 0
 		let li_list = []
-		date.forEach(function (self) {
-			if (indexExp.test(self) && dateIndex < 6) {
-				let li = document.createElement("li")
+		date.forEach (function (self) {
+			if ( indexExp.test (self) && dateIndex < 6 ) {
+				let li = document.createElement ('li')
 				li.innerText = self
 				li_list[dateIndex] = li
 				dateIndex++

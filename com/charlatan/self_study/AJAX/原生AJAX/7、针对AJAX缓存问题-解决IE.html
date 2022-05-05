@@ -13,25 +13,25 @@
 	<meta charset="UTF-8">
 	<title>解决缓存问题</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
-        #result {
-            width: 100px;
-            height: 200px;
-            border: 1px solid;
-        }
+		#result {
+			width: 100px;
+			height: 200px;
+			border: 1px solid;
+		}
 
 
 	</style>
@@ -40,23 +40,22 @@
 <div id="result"></div>
 </body>
 <script>
-	let result = document.getElementById("result")
+	let result = document.getElementById ('result')
 	window.onkeydown = function () {
 
-
-		let xhr = new XMLHttpRequest()
+		let xhr = new XMLHttpRequest ()
 		// xhr.open('GET', 'http://127.0.0.1:8000/ie')
 		//浏览器读取缓存问题的解决
 		/*
-		* 为发送的请求添加一个事件戳，时间戳是不会相同的，所以每次访问都已一个新的访问，不会进行冲突和一直读取缓存的问题
-		* */
-		xhr.open('GET', 'http://127.0.0.1:8000/ie?t=' + Date.now())
+		 * 为发送的请求添加一个事件戳，时间戳是不会相同的，所以每次访问都已一个新的访问，不会进行冲突和一直读取缓存的问题
+		 * */
+		xhr.open ('GET', 'http://127.0.0.1:8000/ie?t=' + Date.now ())
 
-		xhr.send()
+		xhr.send ()
 		xhr.onreadystatechange = function () {
-			if (xhr.readyState === 4) {
-				if (xhr.status >= 200 && xhr.status < 300) {
-					console.log(xhr.response);
+			if ( xhr.readyState === 4 ) {
+				if ( xhr.status >= 200 && xhr.status < 300 ) {
+					console.log (xhr.response)
 					result.innerText = xhr.response
 
 				}

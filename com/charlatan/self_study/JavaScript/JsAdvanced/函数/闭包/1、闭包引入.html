@@ -27,24 +27,24 @@
 <!-- /.btn -->
 </body>
 <script>
-	let btns = document.getElementsByClassName("btn")
+	let btns = document.getElementsByClassName ('btn')
 	// for (let i = 0; i < btns.length; i++) {
 	// 	btns[i].onclick = function () {
 	// 		alert("你点击的是第" + (i + 1) + "个按钮")
 	// 	}
 	// }
 
-	for (let i = 0; i < btns.length; i++) {
+	for ( let i = 0; i < btns.length; i++ ) {
 		(function (i) {
 			btns[i].onclick = function () {
-				alert("你点击的是第" + (i + 1) + "个按钮")
+				alert ('你点击的是第' + (i + 1) + '个按钮')
 			}
-		})(i)
+		}) (i)
 	}
 	/*
-	* 这个程序中使用立即执行函数，在第二个（）中能访问到for中的变量i，并通过立即执行函数的（）进行传递，
-	* 这是在立即执行函数中是能访问到这个变量i的，在立即执行函数中完成按钮的绑定
-	* */
+	 * 这个程序中使用立即执行函数，在第二个（）中能访问到for中的变量i，并通过立即执行函数的（）进行传递，
+	 * 这是在立即执行函数中是能访问到这个变量i的，在立即执行函数中完成按钮的绑定
+	 * */
 
 </script>
 </html>

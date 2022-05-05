@@ -13,9 +13,9 @@
     <span>开始搜索</span>
     <br>
     <br>
-    <input type="text" name="" id="input" placeholder="点击开始搜索" v-model.trim.lazy='value'>
+    <input id="input" v-model.trim.lazy='value' name="" placeholder="点击开始搜索" type="text">
     &nbsp;&nbsp;
-    <button @click="search" class="btn btn-warning">搜索</button>
+    <button class="btn btn-warning" @click="search">搜索</button>
   </div>
 </template>
 
@@ -32,22 +32,22 @@ export default {
   components: {},
   methods: {
     search () {
-      if (this.value !== '') {
-        this.$bus.$emit('wait', '', false)
+      if ( this.value !== '' ) {
+        this.$bus.$emit ('wait', '', false)
         let userArr = []
-        console.log('开始搜索', this.value)
-        axios.get('https://api.github.com/search/users?q=' + this.value).then((res) => {
-          for (let item of res.data.items) {
-            userArr.push({
+        console.log ('开始搜索', this.value)
+        axios.get ('https://api.github.com/search/users?q=' + this.value).then ((res) => {
+          for ( let item of res.data.items ) {
+            userArr.push ({
               img: item.avatar_url,
               id: item.id,
               username: item.login,
             })
           }
-          this.$bus.$emit('sends', userArr)
+          this.$bus.$emit ('sends', userArr)
         }, (err) => {
-          this.$bus.$emit('wait', err, true)
-          console.log(err)
+          this.$bus.$emit ('wait', err, true)
+          console.log (err)
         })
       }
     },

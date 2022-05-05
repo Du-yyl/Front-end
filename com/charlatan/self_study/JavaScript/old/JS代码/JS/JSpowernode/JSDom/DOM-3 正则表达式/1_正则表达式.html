@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>正则表达式</title>
+	<meta charset="UTF-8">
+	<title>正则表达式</title>
 </head>
 <body>
 <script type="text/javascript">
-  /*
-  * 正则表达式主要用在字符串格式匹配方面
-  * 大部分是独立的学科，在很多语言中都有，用作字符串格式匹配，包括搜索方面
-  * 常见的正则：
-  *   .   匹配任何字符
-  *   \w  匹配字母或数字或下划线或汉字
-  *   \s  匹配任意的空白符
-  *   \d  匹配数字
-  *   \b  匹配单词的开始和结束
-  *   ^   匹配字符串的开始
-  *   $   匹配字符串的结束
-  *
-  *   *     重复零次或更多次
-  *   +     重复一次或更多次
-  *   ?     重复零次或一次
-  *   {n}   重复n次
-  *   {n,}  重复n次或更多次
-  *   {n,m} 重复n到m次
-  *
-  *   \W        匹配任意不是字母，数字，下划线，汉字的字符
-  *   \S        匹配任意不是空白符的字符
-  *   \D        匹配任意非数字的字符
-  *   \B        匹配不是单词开头或结束的位置
-  *   [^x]      匹配除了x以外的任意字符
-  *   [^aeiou]  匹配除了aeiou这几个字母以外的任意字符
-  *
-  *   正则表达式中小括号（）优先级较高
-  *   【1-9】 表示1到9的任意一个数字（次数不写默认一次）
-  *   【A-Za-z0-9】 表示A-Za-z0-9中的任意一个字符
-  *   【A-Za-z0-9-】  因为末尾有 ‘ - ’ 号，表示A-Za-z0-9，上述所有字符中的任意一个字符
-  *
-  *   | 表示或
-  *
-  *
-  *   QQ号正则表达式： ^[1-9][0-9]{4,}$
-  *
-  *   邮箱：：^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$ 【别人写的】
-  *
-  *   创建正则表达式对象：
-  *     第一种：
-  *       var 第一个正则表达式对象 = /正则表达式（或字符串，进行搜索）/flags;
-  *     第二种：
-  *       使用内部支持类；
-  *       var 第二个正则表达式对象 = new RegExp("正则表达式","flags");
-  *
-  *     关于flags：
-  *       g: 全局匹配
-  *       i： 忽略大小写
-  *       m: 多行搜索【ES规范指定之后才支持的】（当前面是正则表达式的时候，m不能用，只有当前面是普通字符串的时候，m才可以用）
-  *
-  *     正则表达式对象的test（）方法：
-  *       true / false = test正则表达式对象.test（用户填写字符串）；
-  *         true：表示字符串格式匹配成功
-  *         false：表示字符串格式匹配失败
-  * */
+	/*
+	 * 正则表达式主要用在字符串格式匹配方面
+	 * 大部分是独立的学科，在很多语言中都有，用作字符串格式匹配，包括搜索方面
+	 * 常见的正则：
+	 *   .   匹配任何字符
+	 *   \w  匹配字母或数字或下划线或汉字
+	 *   \s  匹配任意的空白符
+	 *   \d  匹配数字
+	 *   \b  匹配单词的开始和结束
+	 *   ^   匹配字符串的开始
+	 *   $   匹配字符串的结束
+	 *
+	 *   *     重复零次或更多次
+	 *   +     重复一次或更多次
+	 *   ?     重复零次或一次
+	 *   {n}   重复n次
+	 *   {n,}  重复n次或更多次
+	 *   {n,m} 重复n到m次
+	 *
+	 *   \W        匹配任意不是字母，数字，下划线，汉字的字符
+	 *   \S        匹配任意不是空白符的字符
+	 *   \D        匹配任意非数字的字符
+	 *   \B        匹配不是单词开头或结束的位置
+	 *   [^x]      匹配除了x以外的任意字符
+	 *   [^aeiou]  匹配除了aeiou这几个字母以外的任意字符
+	 *
+	 *   正则表达式中小括号（）优先级较高
+	 *   【1-9】 表示1到9的任意一个数字（次数不写默认一次）
+	 *   【A-Za-z0-9】 表示A-Za-z0-9中的任意一个字符
+	 *   【A-Za-z0-9-】  因为末尾有 ‘ - ’ 号，表示A-Za-z0-9，上述所有字符中的任意一个字符
+	 *
+	 *   | 表示或
+	 *
+	 *
+	 *   QQ号正则表达式： ^[1-9][0-9]{4,}$
+	 *
+	 *   邮箱：：^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$ 【别人写的】
+	 *
+	 *   创建正则表达式对象：
+	 *     第一种：
+	 *       var 第一个正则表达式对象 = /正则表达式（或字符串，进行搜索）/flags;
+	 *     第二种：
+	 *       使用内部支持类；
+	 *       var 第二个正则表达式对象 = new RegExp("正则表达式","flags");
+	 *
+	 *     关于flags：
+	 *       g: 全局匹配
+	 *       i： 忽略大小写
+	 *       m: 多行搜索【ES规范指定之后才支持的】（当前面是正则表达式的时候，m不能用，只有当前面是普通字符串的时候，m才可以用）
+	 *
+	 *     正则表达式对象的test（）方法：
+	 *       true / false = test正则表达式对象.test（用户填写字符串）；
+	 *         true：表示字符串格式匹配成功
+	 *         false：表示字符串格式匹配失败
+	 * */
 
-  window.onload = function () {
-    document.getElementById('btn1').onclick = function () {
-      var email = document.getElementById('tr1').value;
-      var emailRegExp1 = /^\w+@\w+.\w{2,3}$/;
-      if (emailRegExp1.test(email)) {
-        document.getElementById('emailError').innerText = "邮箱合法";
-      } else {
-        document.getElementById('emailError').innerText = "邮箱不合法";
-      }
+	window.onload = function () {
+		document.getElementById ('btn1').onclick = function () {
+			var email = document.getElementById ('tr1').value
+			var emailRegExp1 = /^\w+@\w+.\w{2,3}$/
+			if ( emailRegExp1.test (email) ) {
+				document.getElementById ('emailError').innerText = '邮箱合法'
+			} else {
+				document.getElementById ('emailError').innerText = '邮箱不合法'
+			}
 
-      //
-      // var emailRegExp = new RegExp("^\w+@\w+.\w+$");
-      // alert(emailRegExp.test(email))
-    }
-    document.getElementById('emailError').onfocus = function () {
-      document.getElementById('emailError').innerText = '';
-    }
+			//
+			// var emailRegExp = new RegExp("^\w+@\w+.\w+$");
+			// alert(emailRegExp.test(email))
+		}
+		document.getElementById ('emailError').onfocus = function () {
+			document.getElementById ('emailError').innerText = ''
+		}
 
-  }
+	}
 
 
 </script>

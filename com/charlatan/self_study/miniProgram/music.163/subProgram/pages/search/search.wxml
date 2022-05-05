@@ -27,7 +27,7 @@
                     wx:for-item="item"
                     wx:for-index="index"
                     wx:key="id">
-                <text class="iconfont icon-Magnifier" > </text>
+                <text class="iconfont icon-Magnifier"> </text>
                 <text class="an">
                     {{item.artists[0].name}}
                 </text>
@@ -35,10 +35,10 @@
         </view>
     </view>
 
-<!--    用于将一个整个元素进行包裹，并且这个在页面的结构是不起作用的-->
+    <!--    用于将一个整个元素进行包裹，并且这个在页面的结构是不起作用的-->
     <block wx:if="{{search.length === 0 || search.length === undefined}}">
         <!--    搜索历史-->
-        <view class="searchHistory"  wx:if="{{searchHistory.length !== 0}}">
+        <view class="searchHistory" wx:if="{{searchHistory.length !== 0}}">
             <!--        <view class="searchHistory" wx:if="{{search.length === 0 || search.length === undefined}}">-->
             <view class="heard">
                 <text class="title">
@@ -46,9 +46,10 @@
                 </text>
                 <text bindtap="handleClearHistory" class="iconfont icon-clean"> </text>
             </view>
-<!--            {{searchHistory.length !== 0}}-->
+            <!--            {{searchHistory.length !== 0}}-->
             <view class="ul">
-                <text class="li" wx:for="{{searchHistory}}" bindtap="handleHistaySearch" data-value="{{item}}" wx:key="index">{{item}}</text>
+                <text class="li" wx:for="{{searchHistory}}" bindtap="handleHistaySearch" data-value="{{item}}"
+                      wx:key="index">{{item}}</text>
             </view>
         </view>
         <!--    热搜榜-->

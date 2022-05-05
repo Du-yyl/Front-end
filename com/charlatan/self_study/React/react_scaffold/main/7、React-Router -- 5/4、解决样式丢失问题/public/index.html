@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link href="%PUBLIC_URL%/favicon.ico" rel="icon"/>
+	<meta content="width=device-width, initial-scale=1" name="viewport"/>
 
 	<% if (htmlWebpackPlugin.options.isReactIdeDevmode) { %>
 	<script src="%PUBLIC_URL%/static/js/devtools-no-server.js"></script>
@@ -25,7 +25,7 @@
 			3. 继续使用 ./css/XXX.css 进行引入，不过在使用路由的时候使用 HashRouter
 				原因：【因为存在 # 号进行了分割，当重新访问的时候，会将 # 后的内容全部进行忽略，所以直接重新向正确的目录进行请求
 		-->
-	<link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.css">
+	<link href="%PUBLIC_URL%/css/bootstrap.css" rel="stylesheet">
 	<title>React App</title>
 </head>
 <body>

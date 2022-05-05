@@ -55,30 +55,30 @@
 </body>
 <script>
 	/*
-	* 使用 offset 会来回乱跳的问题：
-	*   因为在绑定的offset事件后，触发mousemove事件触发的事件源元素在不断切换，当鼠标移动时会移动到div中这时
-	*   offset的源元素不再是父级的div而是移动的div 这是offset值是相对于移动的div 所以是较小的值 ，所以会回到左上角。
-	*
-	*   解决：
-	*       使用判断，将移动的元素的元素切换到外层div才能继续赋值
-	*       但是会出现在子div中无法改变位置的情况，移动到父级div才有效
-	*       使用pointer-events: none;指定移入子div中不会有样式和改变，鼠标移入的其实还是父级的div，来解决这个问题
-	* */
-	let div = document.getElementById("div")
-	let show = document.getElementById('show')
+	 * 使用 offset 会来回乱跳的问题：
+	 *   因为在绑定的offset事件后，触发mousemove事件触发的事件源元素在不断切换，当鼠标移动时会移动到div中这时
+	 *   offset的源元素不再是父级的div而是移动的div 这是offset值是相对于移动的div 所以是较小的值 ，所以会回到左上角。
+	 *
+	 *   解决：
+	 *       使用判断，将移动的元素的元素切换到外层div才能继续赋值
+	 *       但是会出现在子div中无法改变位置的情况，移动到父级div才有效
+	 *       使用pointer-events: none;指定移入子div中不会有样式和改变，鼠标移入的其实还是父级的div，来解决这个问题
+	 * */
+	let div = document.getElementById ('div')
+	let show = document.getElementById ('show')
 	document.onmousedown = function (event_1) {
 		document.onmousemove = function (event_2) {
-			if (!(event_2.target === div)) {
+			if ( !(event_2.target === div) ) {
 				let x = event_2.offsetX - 50
 				let y = event_2.offsetY - 50
 
 				// let x = event_2.clientX - event_1.clientX
 				// let y = event_2.clientY - event_1.clientY
 
-				div.style.top = y + "px"
-				div.style.left = x + "px"
+				div.style.top = y + 'px'
+				div.style.left = x + 'px'
 
-				show.innerText = 'x' + x + "px;" + "y" + y + "px"
+				show.innerText = 'x' + x + 'px;' + 'y' + y + 'px'
 
 			}
 

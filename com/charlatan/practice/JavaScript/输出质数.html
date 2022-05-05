@@ -15,33 +15,33 @@
 </head>
 <body>
 <script>
-	let num = 99999;
-	let nums = 0;
-	let time1 = new Date().getTime()
-	document.write("<br>")
-	for (let i = 2; i < num; i++) {
-		let bem = true;
-		for (let j = 2; j < i; j++) {
+	let num = 99999
+	let nums = 0
+	let time1 = new Date ().getTime ()
+	document.write ('<br>')
+	for ( let i = 2; i < num; i++ ) {
+		let bem = true
+		for ( let j = 2; j < i; j++ ) {
 
-			if (i % j === 0) {
-				bem = false;
-				break;
+			if ( i % j === 0 ) {
+				bem = false
+				break
 			}
 		}
 
-		if (bem) {
-			nums++;
-			document.write(i)
-			document.write("&nbsp;")
+		if ( bem ) {
+			nums++
+			document.write (i)
+			document.write ('&nbsp;')
 		}
-		if (nums === 30) {
-			document.write("<br>")
-			nums = 0;
+		if ( nums === 30 ) {
+			document.write ('<br>')
+			nums = 0
 		}
 	}
-	let time2 = new Date().getTime()
+	let time2 = new Date ().getTime ()
 	let times = time2 - time1
-	alert(times + '毫秒')
+	alert (times + '毫秒')
 </script>
 </body>
 </html>

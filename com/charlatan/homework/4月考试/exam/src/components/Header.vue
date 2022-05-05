@@ -10,13 +10,13 @@
 
 <template>
   <div id="Header">
-    <label for="header-btn" id="heard-label">
+    <label id="heard-label" for="header-btn">
       <input
           id="header-btn"
           v-model="isChecked"
-          @change="handleChange($event)"
           name=""
-          type="checkbox">
+          type="checkbox"
+          @change="handleChange($event)">
       全选
     </label>
     <span id="span-1">商品</span>
@@ -39,12 +39,12 @@ export default {
   },
   methods: {
     handleChange (event) {
-      pubsub.publish('changeAll', event.target.checked)
+      pubsub.publish ('changeAll', event.target.checked)
     },
   },
   mounted () {
-    pubsub.subscribe('change', (msg, { num, allNum }) => {
-      console.log(num, allNum)
+    pubsub.subscribe ('change', (msg, { num, allNum }) => {
+      console.log (num, allNum)
       num === allNum ? this.isChecked = true : this.isChecked = false
     })
 
@@ -53,6 +53,6 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 
 </style>

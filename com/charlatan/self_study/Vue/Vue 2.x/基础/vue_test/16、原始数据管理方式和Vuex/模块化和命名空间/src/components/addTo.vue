@@ -10,11 +10,11 @@
 
 <template>
   <div>
-    <input type="text" v-model.trim.lazy="name" placeholder="名字">
-    <input type="text" v-model.trim.lazy="sex" placeholder="性别">
-    <input type="number" v-model.trim.lazy.number="age" placeholder="年龄">
+    <input v-model.trim.lazy="name" placeholder="名字" type="text">
+    <input v-model.trim.lazy="sex" placeholder="性别" type="text">
+    <input v-model.trim.lazy.number="age" placeholder="年龄" type="number">
     <hr>
-    <button @click="add" class="btn btn-success">添加一个人</button>
+    <button class="btn btn-success" @click="add">添加一个人</button>
   </div>
 </template>
 
@@ -40,11 +40,10 @@ export default {
       // this.$store.commit('persons/ADDTO',obj)
 
       // 访问到的是 actions 中的方法
-      this.$store.dispatch('persons/addTo', obj)
-      .then(() => {
-        console.log('添加成功')
+      this.$store.dispatch ('persons/addTo', obj).then (() => {
+        console.log ('添加成功')
       }, () => {
-        console.log('添加失败')
+        console.log ('添加失败')
       })
     },
   },

@@ -13,37 +13,37 @@
 	<meta charset="UTF-8">
 	<title>显示与隐藏</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
-        * {
-            margin: 0;
-        }
+		/*-------以上为默认设置（The above is the default setting）--------*/
+		* {
+			margin: 0;
+		}
 
-        .div1 {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            top: 50px;
-            left: 10px;
-            background: red;
-            display: none;
-        }
+		.div1 {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top: 50px;
+			left: 10px;
+			background: red;
+			display: none;
+		}
 
-        pre {
-            position: relative;
-            top: 300px;
-        }
+		pre {
+			position: relative;
+			top: 300px;
+		}
 	</style>
 </head>
 <body>
@@ -65,24 +65,24 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	let btn1 = $(`#btn1`)
-	let btn2 = $(`#btn2`)
-	let btn3 = $(`#btn3`)
-	let btn4 = $(`#btn4`)
+	let btn1 = $ (`#btn1`)
+	let btn2 = $ (`#btn2`)
+	let btn3 = $ (`#btn3`)
+	let btn4 = $ (`#btn4`)
 
-	let div = $(`.div1:eq(0)`)
+	let div = $ (`.div1:eq(0)`)
 
-	btn1.click(function () {
-		div.show()
+	btn1.click (function () {
+		div.show ()
 	})
-	btn2.click(function () {
-		div.show('slow')
+	btn2.click (function () {
+		div.show ('slow')
 	})
-	btn3.click(function () {
-		div.hide('slow')
+	btn3.click (function () {
+		div.hide ('slow')
 	})
-	btn4.click(function () {
-		div.toggle('slow')
+	btn4.click (function () {
+		div.toggle ('slow')
 	})
 </script>
 </html>

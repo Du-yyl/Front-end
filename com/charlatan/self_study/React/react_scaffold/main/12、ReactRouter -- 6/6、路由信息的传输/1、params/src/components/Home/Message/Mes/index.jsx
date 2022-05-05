@@ -12,23 +12,23 @@ import React from 'react'
 import { useMatch, useParams } from 'react-router-dom'
 
 export default function Mes () {
-  // 使用指定的钩子接收参数
-  let params = useParams()
-  
-  // 使用这个钩子也能拿到数据，数据必须是完整路径，不过不常用
-  let match = useMatch('/home/message/mes/:id/:title/:context')
-  console.log(match);
-  return (
-    <ul>
-      <li>
-        id:{params.id}
-      </li>
-      <li>
-        title:{params.title}
-      </li>
-      <li>
-        context:{params.context}
-      </li>
-    </ul>
-  )
+	// 使用指定的钩子接收参数
+	let params = useParams ()
+	
+	// 使用这个钩子也能拿到数据，数据必须是完整路径，不过不常用
+	let match = useMatch ('/home/message/mes/:id/:title/:context')
+	console.log (match)
+	return (
+			<ul>
+				<li>
+					id:{params.id}
+				</li>
+				<li>
+					title:{params.title}
+				</li>
+				<li>
+					context:{params.context}
+				</li>
+			</ul>
+	)
 }

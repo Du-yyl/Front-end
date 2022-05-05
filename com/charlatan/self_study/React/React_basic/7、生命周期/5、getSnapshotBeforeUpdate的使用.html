@@ -57,14 +57,12 @@
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
 <script type="text/babel">
 	class List extends React.Component {
-		state = {
-			newList: [],
-		}
-		divHeight = React.createRef()
+		divHeight = React.createRef ()
+
 		componentDidMount () {
-			setInterval(() => {
+			setInterval (() => {
 				let news = '新闻 - ' + (this.state.newList.length + 1)
-				this.setState({
+				this.setState ({
 					newList: [news, ...this.state.newList],
 				})
 			}, 500)
@@ -81,22 +79,26 @@
 		 * @param snapshotValue
 		 */
 		componentDidUpdate (preProps, preState, snapshotValue) {
-			this.divHeight.current.scrollTop +=this.divHeight.current.scrollHeight- snapshotValue
+			this.divHeight.current.scrollTop += this.divHeight.current.scrollHeight - snapshotValue
 		}
 
 		render () {
 			return (
 					<div id="div" ref={this.divHeight}>
-						{this.state.newList.map((item, index) => {
+						{this.state.newList.map ((item, index) => {
 							return <div className="news" key={index}>{item}</div>
 						})}
 					</div>
 			)
 		}
 
+		state = {
+			newList: [],
+		}
+
 	}
 
-	ReactDOM.render(<List/>, document.getElementById('test'))
+	ReactDOM.render (<List/>, document.getElementById ('test'))
 
 </script>
 </html>

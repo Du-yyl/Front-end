@@ -9,14 +9,14 @@
  */
 
 const mixin = {
-  methods: {
-    show () {
-      alert(this.msg)
-    },
-  },
+	methods: {
+		show () {
+			alert (this.msg)
+		},
+	},
 }
 export default mixin
 /*
-当要多个组件使用的方法是一样或者是类似的，可以使用混合进行配置，将相同的属性在一个外部文件中写好后进行引入
+ 当要多个组件使用的方法是一样或者是类似的，可以使用混合进行配置，将相同的属性在一个外部文件中写好后进行引入
  */
 

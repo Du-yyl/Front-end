@@ -21,23 +21,23 @@
 	let ans = []
 	// return Math.floor(Math.random() * (max - min + 1)) + min;
 	// return Math.floor(Math.random() * (20 - 10 + 1)) + 10;
-	let num;
+	let num
 	let length = ans.length
-	while (length <= 5) {
-		let flag = true;
-		num = Math.floor(Math.random() * (20 - 10 + 1)) + 10;
-		for (let i = 0; i < length; i++) {
-			if (ans[i] === num) {
+	while ( length <= 5 ) {
+		let flag = true
+		num = Math.floor (Math.random () * (20 - 10 + 1)) + 10
+		for ( let i = 0; i < length; i++ ) {
+			if ( ans[i] === num ) {
 				flag = false
 				break
 			}
 		}
-		if (flag) {
+		if ( flag ) {
 			ans[ans.length] = num
 			length++
 		}
 		num = -1
 	}
-	console.log(ans);
+	console.log (ans)
 </script>
 </html>

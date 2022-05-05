@@ -27,37 +27,37 @@
 	// 当不使用promise时，嵌套是最为方便的
 
 	/*
-	 	 setTimeout(function () {
-		console.log("我第一个输出");
-		setTimeout(function () {
-			console.log("我第二个输出");
-			setTimeout(function () {
-				console.log("我第三个输出");
-				setTimeout(function () {
-					console.log("我第四个输出");
-					setTimeout(function () {
-						console.log("我第五个输出");
-						setTimeout(function () {
-							console.log("我第六个输出");
-							setTimeout(function () {
-								console.log("我第七个输出");
-								setTimeout(function () {
-									console.log("我第八个输出");
-									setTimeout(function () {
-										console.log("我第九个输出");
-										setTimeout(function () {
-											console.log("我第十个输出");
-											console.log("全部输出完毕");
-										}, 1000)
-									}, 1000)
-								}, 1000)
-							}, 1000)
-						}, 1000)
-					}, 1000)
-				}, 1000)
-			}, 1000)
-		}, 1000)
-	}, 1000)
+	 setTimeout(function () {
+	 console.log("我第一个输出");
+	 setTimeout(function () {
+	 console.log("我第二个输出");
+	 setTimeout(function () {
+	 console.log("我第三个输出");
+	 setTimeout(function () {
+	 console.log("我第四个输出");
+	 setTimeout(function () {
+	 console.log("我第五个输出");
+	 setTimeout(function () {
+	 console.log("我第六个输出");
+	 setTimeout(function () {
+	 console.log("我第七个输出");
+	 setTimeout(function () {
+	 console.log("我第八个输出");
+	 setTimeout(function () {
+	 console.log("我第九个输出");
+	 setTimeout(function () {
+	 console.log("我第十个输出");
+	 console.log("全部输出完毕");
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
 
 	 * */
 
@@ -71,7 +71,6 @@
 	// }, reason => { // onRejected 不会被调用
 
 	// })
-
 
 	// new Promise(step1).then((step1))
 
@@ -101,77 +100,77 @@
 	// })
 
 	//
-	new Promise(function (resolve, reject) {
-		console.log(1111);
-		resolve(2222);
-	}).then(function (value) {
-		console.log(value);
-		return 3333;
-	}).then(function (value) {
-		console.log(value);
-		throw "An error";
-	}).catch(function (err) {
-		console.log(err);
-	});
+	new Promise (function (resolve, reject) {
+		console.log (1111)
+		resolve (2222)
+	}).then (function (value) {
+		console.log (value)
+		return 3333
+	}).then (function (value) {
+		console.log (value)
+		throw 'An error'
+	}).catch (function (err) {
+		console.log (err)
+	})
 
 	//--------------------------------------------------------------------------
-	function step1() {
-		setTimeout(function () {
-			console.log("我是第一个");
+	function step1 () {
+		setTimeout (function () {
+			console.log ('我是第一个')
 		}, 1000)
 	}
 
-	function step2() {
-		setTimeout(function () {
-			return "我是第二个";
+	function step2 () {
+		setTimeout (function () {
+			return '我是第二个'
 		}, 1000)
 	}
 
-	function step3() {
-		setTimeout(function () {
-			console.log("我是第三个");
+	function step3 () {
+		setTimeout (function () {
+			console.log ('我是第三个')
 		}, 1000)
 	}
 
-	function step4() {
-		setTimeout(function () {
-			console.log("我是第四个");
+	function step4 () {
+		setTimeout (function () {
+			console.log ('我是第四个')
 		}, 1000)
 	}
 
-	function step5() {
-		setTimeout(function () {
-			console.log("我是第五个");
+	function step5 () {
+		setTimeout (function () {
+			console.log ('我是第五个')
 		}, 1000)
 	}
 
-	function step6() {
-		setTimeout(function () {
-			console.log("我是第六个");
+	function step6 () {
+		setTimeout (function () {
+			console.log ('我是第六个')
 		}, 1000)
 	}
 
-	function step7() {
-		setTimeout(function () {
-			console.log("我是第七个");
+	function step7 () {
+		setTimeout (function () {
+			console.log ('我是第七个')
 		}, 1000)
 	}
 
-	function step8() {
-		setTimeout(function () {
-			console.log("我是第八个");
+	function step8 () {
+		setTimeout (function () {
+			console.log ('我是第八个')
 		}, 1000)
 	}
 
-	function step9() {
-		setTimeout(function () {
-			console.log("我是第九个");
+	function step9 () {
+		setTimeout (function () {
+			console.log ('我是第九个')
 		}, 1000)
 	}
 
-	function step10() {
-		setTimeout(function () {
-			console.log("我是第十个");
+	function step10 () {
+		setTimeout (function () {
+			console.log ('我是第十个')
 		}, 1000)
 	}
 

@@ -10,220 +10,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>百度首页top</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="UTF-8">
+	<title>百度首页top</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        li {
-            list-style: none;
-        }
+		li {
+			list-style: none;
+		}
 
-        /*------------------------------*/
-        #left {
-            width: 600px;
-            height: 90px;
-            /*background-color: #CCFFFF;*/
-            position: relative;
-        }
+		/*------------------------------*/
+		#left {
+			width: 600px;
+			height: 90px;
+			/*background-color: #CCFFFF;*/
+			position: relative;
+		}
 
-        #le_ul {
-            position: absolute;
-            margin-top: 20px;
-            margin-left: 20px;
-        }
+		#le_ul {
+			position: absolute;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
 
-        #le_ul li {
-            float: left;
-            /*word-spacing: 10px;*/
-            font-size: 13px;
-            color: #222222;
-            display: inline-block;
-            width: 55px;
-            text-align: center;
-            margin-left: 10px;
-        }
+		#le_ul li {
+			float: left;
+			/*word-spacing: 10px;*/
+			font-size: 13px;
+			color: #222222;
+			display: inline-block;
+			width: 55px;
+			text-align: center;
+			margin-left: 10px;
+		}
 
-        #le_ul li:hover {
-            color: #315efb;
-            cursor: pointer
-        }
+		#le_ul li:hover {
+			color: #315efb;
+			cursor: pointer
+		}
 
-        #more {
-            height: 30px;
-        }
+		#more {
+			height: 30px;
+		}
 
-        /*-------更多-----------*/
-        #more_div {
-            width: 310px;
-            height: 230px;
-            /*background-color: #d7efc6;*/
-            position: absolute;
-            top: 30px;
-            left: -260px;
-            border-radius: 7%;
-            box-shadow: 0 0 9px #c2c2c2;
-            display: none;
-        }
+		/*-------更多-----------*/
+		#more_div {
+			width: 310px;
+			height: 230px;
+			/*background-color: #d7efc6;*/
+			position: absolute;
+			top: 30px;
+			left: -260px;
+			border-radius: 7%;
+			box-shadow: 0 0 9px #c2c2c2;
+			display: none;
+		}
 
-        #more_span {
-            position: absolute;
-            left: 470px;
-            top: 0;
-            display: block;
-        }
+		#more_span {
+			position: absolute;
+			left: 470px;
+			top: 0;
+			display: block;
+		}
 
-        #more:hover #more_div {
-            display: block;
-        }
+		#more:hover #more_div {
+			display: block;
+		}
 
-        /*---------more--------------*/
-        #md_ul_1 {
-            position: relative;
-            top: 10px;
-        }
+		/*---------more--------------*/
+		#md_ul_1 {
+			position: relative;
+			top: 10px;
+		}
 
-        #md_ul_1 li {
-            margin-left: 20px;
-        }
+		#md_ul_1 li {
+			margin-left: 20px;
+		}
 
-        #md_ul_2 {
-            position: relative;
-            top: 30px;
-        }
+		#md_ul_2 {
+			position: relative;
+			top: 30px;
+		}
 
-        #md_ul_2 li {
-            margin-left: 20px;
-        }
+		#md_ul_2 li {
+			margin-left: 20px;
+		}
 
-        #md_ul_3 {
-            margin-top: 170px;
-            width: 400px;
-        }
+		#md_ul_3 {
+			margin-top: 170px;
+			width: 400px;
+		}
 
-        #md_ul_3 li {
-            width: 160px;
-            margin-left: 70px;
-            margin-top: 20px;
-            color: #babcc5;
-        }
+		#md_ul_3 li {
+			width: 160px;
+			margin-left: 70px;
+			margin-top: 20px;
+			color: #babcc5;
+		}
 
-        /*-------------------*/
-        #right {
-            width: 100px;
-            height: 90px;
-            /*background-color: #d7efc6;*/
-            position: relative;
-            left: 1150px;
-            top: -90px;
-        }
+		/*-------------------*/
+		#right {
+			width: 100px;
+			height: 90px;
+			/*background-color: #d7efc6;*/
+			position: relative;
+			left: 1150px;
+			top: -90px;
+		}
 
-        #ri_ul {
-            position: relative;
-            left: 330px;
-            top: 30px;
-        }
+		#ri_ul {
+			position: relative;
+			left: 330px;
+			top: 30px;
+		}
 
-        #s-d {
-            width: 50px;
-            height: 30px;
-            background-color: #4e6ef2;
-            border-radius: 10%;
-            color: white;
+		#s-d {
+			width: 50px;
+			height: 30px;
+			background-color: #4e6ef2;
+			border-radius: 10%;
+			color: white;
 
-        }
+		}
 
-        #ri_ul li {
-            float: left;
-            margin-left: 30px;
-            color: #222222;
-            line-height: 30px;
-            font-size: 14px;
-            text-align: center;
-        }
+		#ri_ul li {
+			float: left;
+			margin-left: 30px;
+			color: #222222;
+			line-height: 30px;
+			font-size: 14px;
+			text-align: center;
+		}
 
-        #li_1:hover {
-            color: #315efb;
-            cursor: pointer;
-        }
+		#li_1:hover {
+			color: #315efb;
+			cursor: pointer;
+		}
 
-        #li_2:hover {
-            background-color: #315efb;
-            border-radius: 10%;
-            cursor: pointer;
-        }
+		#li_2:hover {
+			background-color: #315efb;
+			border-radius: 10%;
+			cursor: pointer;
+		}
 
-        #set_more {
-            width: 90px;
-            height: 160px;
-            /*background-color: #CCFFFF;*/
-            position: absolute;
-            left: -29px;
-            top: 34px;
-            text-align: center;
-            border-radius: 10%;
-            box-shadow: 0 0 9px #787878;
-            display: none;
-        }
+		#set_more {
+			width: 90px;
+			height: 160px;
+			/*background-color: #CCFFFF;*/
+			position: absolute;
+			left: -29px;
+			top: 34px;
+			text-align: center;
+			border-radius: 10%;
+			box-shadow: 0 0 9px #787878;
+			display: none;
+		}
 
-        #set_more_ul {
-            width: 100px;
-            position: absolute;
-            left: -14px;
-        }
+		#set_more_ul {
+			width: 100px;
+			position: absolute;
+			left: -14px;
+		}
 
-        #set_more_ul li:hover {
-            color: #315efb;
-        }
+		#set_more_ul li:hover {
+			color: #315efb;
+		}
 
-        #li_2 {
-            position: absolute;
-            left: 40px;
-        }
+		#li_2 {
+			position: absolute;
+			left: 40px;
+		}
 
-        #s_li {
-            position: absolute;
-            top: 0;
-            left: 10px;
-            /*background-color: red;*/
-            height: 40px;
-        }
+		#s_li {
+			position: absolute;
+			top: 0;
+			left: 10px;
+			/*background-color: red;*/
+			height: 40px;
+		}
 
-        #s_li:hover #set_more {
-            display: block;
-        }
+		#s_li:hover #set_more {
+			display: block;
+		}
 
-    </style>
+	</style>
 </head>
 <body>
 <div id="box">
-    <div id="left">
-        <ul id="le_ul">
-            <li>
-                新闻&nbsp;
-            </li>
-            <li>
-                hao123&nbsp;
-            </li>
-            <li>
-                地图&nbsp;
-            </li>
-            <li>
-                直播&nbsp;
-            </li>
-            <li>
-                视频&nbsp;
-            </li>
-            <li>
-                贴吧&nbsp;
-            </li>
-            <li>
-                学术&nbsp;
-            </li>
-            <li id="more">
+	<div id="left">
+		<ul id="le_ul">
+			<li>
+				新闻&nbsp;
+			</li>
+			<li>
+				hao123&nbsp;
+			</li>
+			<li>
+				地图&nbsp;
+			</li>
+			<li>
+				直播&nbsp;
+			</li>
+			<li>
+				视频&nbsp;
+			</li>
+			<li>
+				贴吧&nbsp;
+			</li>
+			<li>
+				学术&nbsp;
+			</li>
+			<li id="more">
                     <span id="more_span">
                         更多&nbsp;
                         <div id="more_div">
@@ -245,7 +245,7 @@
                                     图片
                                 </li>
                             </ul>
-                            <!--                                                        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+	                        <!--                                                        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
                             <ul id="md_ul_2">
                                 <li id="tuiguang" width="60px">
                                     <img src="file/yingxiao.png" width="44">
@@ -264,7 +264,7 @@
                                     音乐
                                 </li>
                             </ul>
-                            <!--                            ----------------->
+	                        <!--                            ----------------->
                             <ul id="md_ul_3">
                                 <li>
                                     查看全部百度产品 >
@@ -272,13 +272,13 @@
                             </ul>
                         </div>
                     </span>
-            </li>
-        </ul>
-    </div>
-    <!--    --------------------------->
-    <div id="right">
-        <ul id="ri_ul">
-            <li id="li_1">
+			</li>
+		</ul>
+	</div>
+	<!--    --------------------------->
+	<div id="right">
+		<ul id="ri_ul">
+			<li id="li_1">
                 <span id="s_li">
                     设置
                     <div id="set_more">
@@ -302,16 +302,16 @@
                 </div>
                 </span>
 
-            </li>
-            <li id="li_2">
-                <div id="s-d">
+			</li>
+			<li id="li_2">
+				<div id="s-d">
                     <span id="ri_s">
                     登录
                 </span>
-                </div>
-            </li>
-        </ul>
-    </div>
+				</div>
+			</li>
+		</ul>
+	</div>
 </div>
 </body>
 </html>

@@ -43,78 +43,79 @@
 </body>
 <script>
 
-	let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-	let res = nums.filter((num) => {
-		return num > 5;
-	});
+	let res = nums.filter ((num) => {
+		return num > 5
+	})
 
-	console.log(res);  // [6, 7, 8, 9, 10]
-	console.log("------------------------------");
-	console.log(nums);
+	console.log (res)  // [6, 7, 8, 9, 10]
+	console.log ('------------------------------')
+	console.log (nums)
 
-	let num1 = nums.filter(num => num < 10)
-	console.log(num1);
+	let num1 = nums.filter (num => num < 10)
+	console.log (num1)
 
-	console.log(typeof {});
-	console.log(typeof []);
+	console.log (typeof {})
+	console.log (typeof [])
 
-	let arrObj1 = [{
-		name: 'aa', age: 13
-	}, {
-		name: 'bb', age: 23
-	}, {
-		name: 'cc', age: 18
-	}, {
-		name: 'dd', age: 11
-	}, {
-		name: 'ee', age: 28
-	}]
-	let arrObjFilter1 = arrObj1.filter(ele => ele.age > 18)
-	console.log(arrObjFilter1) // [{name: 'bb', age: 23}, {name: 'ee', age: 28}]
-
+	let arrObj1 = [
+		{
+			name: 'aa', age: 13,
+		}, {
+			name: 'bb', age: 23,
+		}, {
+			name: 'cc', age: 18,
+		}, {
+			name: 'dd', age: 11,
+		}, {
+			name: 'ee', age: 28,
+		},
+	]
+	let arrObjFilter1 = arrObj1.filter (ele => ele.age > 18)
+	console.log (arrObjFilter1) // [{name: 'bb', age: 23}, {name: 'ee', age: 28}]
 
 	// 进阶用法
 	// 数组去重（有点过时）
 
 	let arr1 = [1, 2, 3, 2, 3, 4]
-	let arrFilter2 = arr1.filter((ele, index, arr) => {
-		return arr.indexOf(ele) === index
+	let arrFilter2 = arr1.filter ((ele, index, arr) => {
+		return arr.indexOf (ele) === index
 	})
-	console.log(arrFIlter)
+	console.log (arrFIlter)
 	// 目前比较常用的方法是使用ES6的set完成，eg：
 
-
 	let arr2 = [1, 2, 3, 2, 3, 4]
-	let arrFilter3 = [...new Set(arr2)]
-	console.log(arrFilter3)
+	let arrFilter3 = [...new Set (arr2)]
+	console.log (arrFilter3)
 	// 数组中的空字符去除
 
 	let arr = ['1', '2', '3', '', null, undefined, '  ', '4']
-	let arrFilter = arr.filter((ele, index, arr) => {
-		return ele && ele.trim()
+	let arrFilter = arr.filter ((ele, index, arr) => {
+		return ele && ele.trim ()
 	})
-	console.log(arrFIlter)
+	console.log (arrFIlter)
 	// 高级用法
 	// 结合map使用可以先过滤出符合条件的对象然后去除某些不需要的字段,比如:
 
-
 	// 需求: 年龄大于18的姓名
-	let arrObj = [{
-		name: 'aa', age: 13
-	}, {
-		name: 'bb', age: 23
-	}, {
-		name: 'cc', age: 18
-	}, {
-		name: 'dd', age: 11
-	}, {
-		name: 'ee', age: 28
-	}]
-	let arrObjFilter = arrObj.filter(ele => ele.age > 18).map(ele => {
+	let arrObj = [
+		{
+			name: 'aa', age: 13,
+		}, {
+			name: 'bb', age: 23,
+		}, {
+			name: 'cc', age: 18,
+		}, {
+			name: 'dd', age: 11,
+		}, {
+			name: 'ee', age: 28,
+		},
+	]
+	let arrObjFilter = arrObj.filter (ele => ele.age > 18).map (ele => {
 		return ele.name
 	})
-	console.log(arrObjFilter) // ['bb', 'ee']
+	console.log (arrObjFilter) // ['bb', 'ee']
 
 
 </script>

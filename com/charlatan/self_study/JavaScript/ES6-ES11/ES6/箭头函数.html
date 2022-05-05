@@ -24,26 +24,25 @@
 </body>
 <script>
 	let func1 = (num1, num2) => {
-		console.log(num1 + num2);
+		console.log (num1 + num2)
 	}
-	func1(1, 2)
-	func1(1, 6)
+	func1 (1, 2)
+	func1 (1, 6)
 
 	//	箭头函数中的this永远默认指向的是函数声明所在作用于下的this【使用call也不能进行更改】
 	let func2 = () => {
-		console.log(this.name);
+		console.log (this.name)
 	}
-	window.name = "测试"
+	window.name = '测试'
 	let user = {
-		name: "test"
+		name: 'test',
 	}
-	func2.call(window)
-	func2.call(user)
-
+	func2.call (window)
+	func2.call (user)
 
 	//	不能实例化对象
 	let Func = (name, age) => {
-		this.name = name;
+		this.name = name
 		this.age = age
 	}
 	// let f1 = new Func("张三", 12)
@@ -53,15 +52,14 @@
 	let func3 = (num1, num2, num3) => {
 		// console.log(arguments);
 	}
-	func3(2, 3, 4)
-
+	func3 (2, 3, 4)
 
 	//	再简写
 	let func4 = self => {
-		console.log(self);
+		console.log (self)
 	}
 
-	let func5 = self => console.log(self);
+	let func5 = self => console.log (self)
 
 	let func6 = self => self + self
 

@@ -24,10 +24,10 @@
 </body>
 <script>
 	// 数组扁平化
-	function* arrayExpansion(array) {
-		for (let i = 0; i < array.length; i++) {
-			if (Array.isArray(array[i]))
-				yield* arrayExpansion(array[i])
+	function * arrayExpansion (array) {
+		for ( let i = 0; i < array.length; i++ ) {
+			if ( Array.isArray (array[i]) )
+				yield * arrayExpansion (array[i])
 			else
 				yield array[i]
 		}
@@ -35,11 +35,11 @@
 
 	let nums = [1, 2, 3, 3, 4, 5, [1, 2, 3, 4, 5, [1, 2, 3, 4, [4, 5, 6]]]]
 	let num = []
-	for (const arrayExpansionElement of arrayExpansion(nums)) {
-		num.push(arrayExpansionElement)
+	for ( const arrayExpansionElement of arrayExpansion (nums) ) {
+		num.push (arrayExpansionElement)
 	}
-	console.log(num);
-	console.log("我是断点");
+	console.log (num)
+	console.log ('我是断点')
 
 	// 关联定时器
 	// function func1() {
@@ -78,7 +78,6 @@
 	// let f = fun()
 	// f.next()
 
-
 	//	获取方法中的数据
 	// function func1() {
 	// 	setTimeout(() => {
@@ -113,7 +112,6 @@
 	//
 	// let f = func()
 	// f.next()
-
 
 	// let arr = [1,2,3,4,5,6,7,8]
 	// function* arrFun() {

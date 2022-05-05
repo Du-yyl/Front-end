@@ -10,30 +10,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>键盘事件剩余</title>
-    <script>
-        window.onload = function () {
-            document.getElementById("text").onkeydown = function (event) {
-                /*
-                * 当绑定键盘按键时，如果返回值false，可以将键盘打字的内容经过判断返回到要输入的text文本框中
-                * 如：设置不能输入数字
-                * */
-                if (/\d/.test(event.key)){
-                    return false
-                }
+	<meta charset="UTF-8">
+	<title>键盘事件剩余</title>
+	<script>
+		window.onload = function () {
+			document.getElementById ('text').onkeydown = function (event) {
+				/*
+				 * 当绑定键盘按键时，如果返回值false，可以将键盘打字的内容经过判断返回到要输入的text文本框中
+				 * 如：设置不能输入数字
+				 * */
+				if ( /\d/.test (event.key) ) {
+					return false
+				}
 
-            }
-            /*
-            * 按下ctrl+ 等操作
-            * */
-            document.onkeydown = function (event) {
-                if (event.ctrlKey && event.key === "y"){
-                    alert("你按对了！！")
-                }
-            }
-        }
-    </script>
+			}
+			/*
+			 * 按下ctrl+ 等操作
+			 * */
+			document.onkeydown = function (event) {
+				if ( event.ctrlKey && event.key === 'y' ) {
+					alert ('你按对了！！')
+				}
+			}
+		}
+	</script>
 </head>
 <body>
 <input id="text" name="text" type="text">

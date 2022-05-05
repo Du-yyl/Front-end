@@ -11,7 +11,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+Vue.use (Vuex)
 
 /**
  * 完成方法的创建
@@ -30,11 +30,11 @@ const mutations = {}
  * @type {{}}
  */
 const state = {
-  topListNum: 0,
+	topListNum: 0,
 }
 
-export default new Vuex.Store({
-  actions,
-  mutations,
-  state,
+export default new Vuex.Store ({
+	actions,
+	mutations,
+	state,
 })

@@ -10,8 +10,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>查</title>
+	<meta charset="UTF-8">
+	<title>查</title>
 </head>
 <body>
 <input id="btn1" type="button" value="我是按钮1">
@@ -25,74 +25,74 @@
 <span class="span">456890</span>
 
 <ul id="ul">
-    <li id="li1">12345</li>
-    <li id="li2">1235</li>
-    <li id="li3">1245</li>
-    <li>1345</li>
-    <li>345</li>
+	<li id="li1">12345</li>
+	<li id="li2">1235</li>
+	<li id="li3">1245</li>
+	<li>1345</li>
+	<li>345</li>
 </ul>
 
 
 <script>
-    /**
-     * document.getElementById(ID).parentNode
-     *      返回指定ID的父节点
-     *
-     * document.getElementById(ID).previousElementSibling
-     *      返回指定节点的上一个兄弟节点【不包含空节点】
-     * document.getElementById(ID).previousSibling
-     *      返回指定节点的上一个兄弟节点【包含空节点】
-     *
-     *
-     * 返回指定兄弟节点的下一个子节点
-     */
-    /*
-    * 因为每个按钮都可以绑定鼠标单击时间，尝试使用函数将重复代码进行整合
-    * */
+	/**
+	 * document.getElementById(ID).parentNode
+	 *      返回指定ID的父节点
+	 *
+	 * document.getElementById(ID).previousElementSibling
+	 *      返回指定节点的上一个兄弟节点【不包含空节点】
+	 * document.getElementById(ID).previousSibling
+	 *      返回指定节点的上一个兄弟节点【包含空节点】
+	 *
+	 *
+	 * 返回指定兄弟节点的下一个子节点
+	 */
+	/*
+	 * 因为每个按钮都可以绑定鼠标单击时间，尝试使用函数将重复代码进行整合
+	 * */
 
-    window.onload = function () {
-        /**
-         * 将绑定事件的重复代码进行整合，使用一个方法完成事件和函数的绑定
-         * @param btnId 要进行绑定的按钮ID
+	window.onload = function () {
+		/**
+		 * 将绑定事件的重复代码进行整合，使用一个方法完成事件和函数的绑定
+		 * @param btnId 要进行绑定的按钮ID
          // * @param btnEvent 要绑定的事件（如：鼠标单击）
-         * @param btnFun 触发事件要完成的方法
-         */
-        // function btnEvent(btnId, btnEvent, btnFun) {
-        function btnEvent(btnId, btnFun) {
-            console.log(11111)
-            let thisBtn = document.getElementById(btnId)
-            thisBtn.onclick = btnFun
-            // thisBtn.btnEvent = btnFun
-        }
+		 * @param btnFun 触发事件要完成的方法
+		 */
+		// function btnEvent(btnId, btnEvent, btnFun) {
+		function btnEvent (btnId, btnFun) {
+			console.log (11111)
+			let thisBtn = document.getElementById (btnId)
+			thisBtn.onclick = btnFun
+			// thisBtn.btnEvent = btnFun
+		}
 
-        document.getElementById("btn1").onclick = function () {
-            alert("哈哈哈")
-        }
+		document.getElementById ('btn1').onclick = function () {
+			alert ('哈哈哈')
+		}
 
-        function btn2Fun() {
-            let i = 1
-            console.log(typeof i++ + (++i))
+		function btn2Fun () {
+			let i = 1
+			console.log (typeof i++ + (++i))
 
-            alert("呵呵呵")
-        }
+			alert ('呵呵呵')
+		}
 
-        btnEvent("btn2", btn2Fun)
+		btnEvent ('btn2', btn2Fun)
 
-        //    获取一个元素的的父节点
-        let li1_Node = document.getElementById("li1").parentNode
-        let li1_Element = document.getElementById("li1").parentElement
-        console.log(li1_Node)
-        console.log(li1_Element)
+		//    获取一个元素的的父节点
+		let li1_Node = document.getElementById ('li1').parentNode
+		let li1_Element = document.getElementById ('li1').parentElement
+		console.log (li1_Node)
+		console.log (li1_Element)
 
-        //    返回指定ID的前一个兄弟节点
-        console.log("+++++++++")
-        console.log(document.getElementById("li2").previousElementSibling)
-        console.log("---------")
-        console.log(document.getElementById("li2").previousSibling)
+		//    返回指定ID的前一个兄弟节点
+		console.log ('+++++++++')
+		console.log (document.getElementById ('li2').previousElementSibling)
+		console.log ('---------')
+		console.log (document.getElementById ('li2').previousSibling)
 
-        //    将li标签中的文本进行提取【通过选择文本节点进行获取】
-        console.log(document.getElementById("li1").firstChild.nodeValue)
-    };
+		//    将li标签中的文本进行提取【通过选择文本节点进行获取】
+		console.log (document.getElementById ('li1').firstChild.nodeValue)
+	}
 
 </script>
 </body>

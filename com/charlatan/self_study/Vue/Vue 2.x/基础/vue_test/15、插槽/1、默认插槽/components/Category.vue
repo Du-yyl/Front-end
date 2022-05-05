@@ -15,7 +15,7 @@
     <!--    定义一个插槽，在插槽中的内容属于默认值【使用者没有传递具体结构时使用值】-->
     <slot>
       <ul class="ul">
-        <li class="li" v-for="item in items">测试内容</li>
+        <li v-for="item in items" class="li">测试内容</li>
       </ul>
     </slot>
   </div>

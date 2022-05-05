@@ -18,19 +18,19 @@
 
 </body>
 <script>
-	function* gen(x) {
+	function * gen (x) {
 		undefined
 		try {
 			undefined
-			var y = yield x + 2;
+			var y = yield x + 2
 		} catch (e) {
-			console.log("gen--------->" + e);
+			console.log ('gen--------->' + e)
 		}
-		return y;
+		return y
 	}
 
-	let g = gen(2)
-	g.next()
-	g.next("测试")
+	let g = gen (2)
+	g.next ()
+	g.next ('测试')
 </script>
 </html>

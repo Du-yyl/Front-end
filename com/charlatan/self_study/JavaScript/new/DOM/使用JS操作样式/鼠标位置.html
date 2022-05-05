@@ -82,10 +82,10 @@
 </body>
 <script>
 	window.onload = function () {
-		let div = document.getElementById("div")
-		let show_div = document.getElementById("show-div")
-		let show_document = document.getElementById("show-document")
-		let show_window = document.getElementById("show-window")
+		let div = document.getElementById ('div')
+		let show_div = document.getElementById ('show-div')
+		let show_document = document.getElementById ('show-document')
+		let show_window = document.getElementById ('show-window')
 
 		div.onmousemove = function (event) {
 			let offsetX = event.offsetX
@@ -97,18 +97,18 @@
 			let pageX = event.pageX
 			let pageY = event.pageY
 			show_div.innerText =
-				"div中的：" +
-				"offsetX:" + offsetX + "px\n" +
-				"offsetY:" + offsetY + "px\n" +
-				"--------------\n" +
-				"screenX:" + screenX + "px\n" +
-				"screenY:" + screenY + "px\n" +
-				"--------------\n" +
-				"clientX:" + clientX + "px\n" +
-				"clientY:" + clientY + "px\n" +
-				"-----------\n" +
-				"pageX:" + pageX + "px\n" +
-				"pageY:" + pageY + "px\n"
+					'div中的：' +
+					'offsetX:' + offsetX + 'px\n' +
+					'offsetY:' + offsetY + 'px\n' +
+					'--------------\n' +
+					'screenX:' + screenX + 'px\n' +
+					'screenY:' + screenY + 'px\n' +
+					'--------------\n' +
+					'clientX:' + clientX + 'px\n' +
+					'clientY:' + clientY + 'px\n' +
+					'-----------\n' +
+					'pageX:' + pageX + 'px\n' +
+					'pageY:' + pageY + 'px\n'
 		}
 		document.onmousemove = function (event) {
 			let offsetX = event.offsetX
@@ -120,18 +120,18 @@
 			let pageX = event.pageX
 			let pageY = event.pageY
 			show_document.innerText =
-				"document中的：" +
-				"offsetX:" + offsetX + "px\n" +
-				"offsetY:" + offsetY + "px\n" +
-				"--------------\n" +
-				"screenX:" + screenX + "px\n" +
-				"screenY:" + screenY + "px\n" +
-				"--------------\n" +
-				"clientX:" + clientX + "px\n" +
-				"clientY:" + clientY + "px\n" +
-				"-----------\n" +
-				"pageX:" + pageX + "px\n" +
-				"pageY:" + pageY + "px\n"
+					'document中的：' +
+					'offsetX:' + offsetX + 'px\n' +
+					'offsetY:' + offsetY + 'px\n' +
+					'--------------\n' +
+					'screenX:' + screenX + 'px\n' +
+					'screenY:' + screenY + 'px\n' +
+					'--------------\n' +
+					'clientX:' + clientX + 'px\n' +
+					'clientY:' + clientY + 'px\n' +
+					'-----------\n' +
+					'pageX:' + pageX + 'px\n' +
+					'pageY:' + pageY + 'px\n'
 		}
 		window.onmousemove = function (event) {
 			let offsetX = event.offsetX
@@ -143,18 +143,18 @@
 			let pageX = event.pageX
 			let pageY = event.pageY
 			show_window.innerText =
-				"window中的：" +
-				"offsetX:" + offsetX + "px\n" +
-				"offsetY:" + offsetY + "px\n" +
-				"--------------\n" +
-				"screenX:" + screenX + "px\n" +
-				"screenY:" + screenY + "px\n" +
-				"--------------\n" +
-				"clientX:" + clientX + "px\n" +
-				"clientY:" + clientY + "px\n" +
-				"-----------\n" +
-				"pageX:" + pageX + "px\n" +
-				"pageY:" + pageY + "px\n"
+					'window中的：' +
+					'offsetX:' + offsetX + 'px\n' +
+					'offsetY:' + offsetY + 'px\n' +
+					'--------------\n' +
+					'screenX:' + screenX + 'px\n' +
+					'screenY:' + screenY + 'px\n' +
+					'--------------\n' +
+					'clientX:' + clientX + 'px\n' +
+					'clientY:' + clientY + 'px\n' +
+					'-----------\n' +
+					'pageX:' + pageX + 'px\n' +
+					'pageY:' + pageY + 'px\n'
 		}
 
 	}

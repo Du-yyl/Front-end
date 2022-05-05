@@ -22,18 +22,18 @@
 	var obj = {
 		uname: 'object',
 		fnn: function () {
-			console.log(this.uname)
+			console.log (this.uname)
 			return function () {
-				console.log(this.uname)
+				console.log (this.uname)
 			}
 		},
 	}
-	obj.fnn()()
+	obj.fnn () ()
 
 	/*
-	* 题解：
-	*   第一个是函数是Object对象进行调用的，this指向的Object对象，
-	*   第二个是普通对象调用，指向的window
-	* */
+	 * 题解：
+	 *   第一个是函数是Object对象进行调用的，this指向的Object对象，
+	 *   第二个是普通对象调用，指向的window
+	 * */
 </script>
 </html>

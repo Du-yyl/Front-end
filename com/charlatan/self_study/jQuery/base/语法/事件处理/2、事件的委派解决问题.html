@@ -58,21 +58,21 @@
 	 需求：
 	 1. 点击 li 背景就会变为红色
 	 2. 点击 btn1 就添加一个 li
-	*/
-	$(function () {
-		let ul = $(`ul:eq(0)`)
-		let btn = $(`#btn`)
-		let btn2 = $(`#btn2`)
+	 */
+	$ (function () {
+		let ul = $ (`ul:eq(0)`)
+		let btn = $ (`#btn`)
+		let btn2 = $ (`#btn2`)
 		/*		语法：
-					$(委托的父元素).delegate(被委托元素, 发生事件, 回调函数)*/
-		ul.delegate("li", 'click', function () {
-			this.style.backgroundColor = "red"
+		 $(委托的父元素).delegate(被委托元素, 发生事件, 回调函数)*/
+		ul.delegate ('li', 'click', function () {
+			this.style.backgroundColor = 'red'
 		})
-		btn.click(function () {
-			ul.append(`<li>i am new li</li>`)
+		btn.click (function () {
+			ul.append (`<li>i am new li</li>`)
 		})
-		btn2.click(function () {
-			ul.undelegate('click')
+		btn2.click (function () {
+			ul.undelegate ('click')
 		})
 	})
 </script>

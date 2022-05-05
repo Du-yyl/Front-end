@@ -24,27 +24,29 @@
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
 <script type="text/babel">
 	class Left extends React.Component {
-		state = {
-			openness: 1,
-		}
 		timer
 
 		/**
 		 * 组件挂载页面的时候调用
 		 */
 		componentDidMount () {
-			this.timer = setInterval(() => {
-				if (this.state.openness <= 0) {
-					this.setState({
+			this.timer = setInterval (() => {
+				if ( this.state.openness <= 0 ) {
+					this.setState ({
 						openness: 1,
 					})
 				} else {
-					this.setState({
+					this.setState ({
 						openness: this.state.openness -= 0.007,
 					})
 				}
 				// this.state.openness = this.state.openness <= 0 ? 1 : this.state.openness - 0.1
 			}, 1)
+		}
+
+		// 组件即将销毁
+		componentWillUnmount () {
+			console.log ('即将卸载')
 		}
 
 		/**
@@ -66,22 +68,21 @@
 			)
 		}
 
-		// 组件即将销毁
-		componentWillUnmount () {
-			console.log('即将卸载')
+		state = {
+			openness: 1,
 		}
 
 		destroy = () => {
-			clearInterval(this.timer)
+			clearInterval (this.timer)
 			// 卸载组件
-			ReactDOM.unmountComponentAtNode(document.getElementById('test'))
-			console.log('组件销毁')
+			ReactDOM.unmountComponentAtNode (document.getElementById ('test'))
+			console.log ('组件销毁')
 
 		}
 
 	}
 
-	ReactDOM.render(<Left/>, document.getElementById('test'))
+	ReactDOM.render (<Left/>, document.getElementById ('test'))
 
 </script>
 </html>

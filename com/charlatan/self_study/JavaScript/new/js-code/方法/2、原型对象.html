@@ -10,22 +10,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>原型对象</title>
+	<meta charset="UTF-8">
+	<title>原型对象</title>
 </head>
 <body>
 <script>
-    function Person(no) {
-        this.no = no;
-    }
+	function Person (no) {
+		this.no = no
+	}
 
-    Person.prototype.a = 20;
-    let l1 = new Person()
-    let l2 = new Person()
-    l2.a = 10
-    console.log(Person.prototype)
-    console.log(l1.__proto__ === Person.prototype)
-    console.log(l1.a === l2.a)
+	Person.prototype.a = 20
+	let l1 = new Person ()
+	let l2 = new Person ()
+	l2.a = 10
+	console.log (Person.prototype)
+	console.log (l1.__proto__ === Person.prototype)
+	console.log (l1.a === l2.a)
 
 </script>
 </body>

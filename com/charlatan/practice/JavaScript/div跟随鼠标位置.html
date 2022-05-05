@@ -13,37 +13,37 @@
 	<meta charset="UTF-8">
 	<title>div跟随鼠标位置</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        body {
-            width: 2000px;
-            height: 2000px;
-        }
+		body {
+			width: 2000px;
+			height: 2000px;
+		}
 
-        #div1 {
-            width: 400px;
-            height: 400px;
-            position: absolute;
-            background-color: grey;
-            margin-top: 100px;
-            margin-left: 100px;
-        }
+		#div1 {
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			background-color: grey;
+			margin-top: 100px;
+			margin-left: 100px;
+		}
 
-        #div2 {
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            background-color: red;
-            /*display: none;*/
-        }
+		#div2 {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: red;
+			/*display: none;*/
+		}
 
-        body {
-            width: 3000px;
-            height: 2000px;
-        }
+		body {
+			width: 3000px;
+			height: 2000px;
+		}
 	</style>
 </head>
 <body>
@@ -57,20 +57,19 @@
 </body>
 <script>
 	let body = document.body
-	let div1 = document.getElementById("div1")
-	let div2 = document.getElementById("div2");
+	let div1 = document.getElementById ('div1')
+	let div2 = document.getElementById ('div2')
 
 	// div1.onmouseover = function () {
 	// 	div2.style.display = "block"
 	// }
-	div1.onmousemove = function move(event) {
+	div1.onmousemove = function move (event) {
 		// div2.style.top = event.offsetY + "px"
 		// div2.style.left = event.offsetX + "px"
-		div2.style.top = event.pageY - div1.offsetLeft + "px"
-		div2.style.left = event.pageX - div1.offsetTop + "px"
+		div2.style.top = event.pageY - div1.offsetLeft + 'px'
+		div2.style.left = event.pageX - div1.offsetTop + 'px'
 		// div2.style.top = event.clientY + "px"
 		// div2.style.left = event.clientX + "px"
-
 
 	}
 

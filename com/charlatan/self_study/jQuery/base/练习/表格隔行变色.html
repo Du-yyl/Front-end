@@ -13,63 +13,63 @@
 	<meta charset="UTF-8">
 	<title>表格隔行变色</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
 
-        div, span, p {
-            width: 140px;
-            height: 140px;
-            margin: 5px;
-            background: #aaa;
-            border: #000 1px solid;
-            float: left;
-            font-size: 17px;
-        }
+		div, span, p {
+			width: 140px;
+			height: 140px;
+			margin: 5px;
+			background: #aaa;
+			border: #000 1px solid;
+			float: left;
+			font-size: 17px;
+		}
 
-        div.mini {
-            width: 55px;
-            height: 55px;
-            background-color: #aaa;
-            font-size: 12px;
-        }
+		div.mini {
+			width: 55px;
+			height: 55px;
+			background-color: #aaa;
+			font-size: 12px;
+		}
 
-        div.hide {
-            display: none;
-        }
+		div.hide {
+			display: none;
+		}
 
-        #data {
-            width: 600px;
-        }
+		#data {
+			width: 600px;
+		}
 
-        #data, td, th {
-            border-collapse: collapse;
-            border: 1px solid #aaaaaa;
-        }
+		#data, td, th {
+			border-collapse: collapse;
+			border: 1px solid #aaaaaa;
+		}
 
-        th, td {
-            height: 28px;
-        }
+		th, td {
+			height: 28px;
+		}
 
-        #data thead {
-            background-color: #333399;
-            color: #ffffff;
-        }
+		#data thead {
+			background-color: #333399;
+			color: #ffffff;
+		}
 
-        .odd {
-            background-color: #ccccff;
-        }
+		.odd {
+			background-color: #ccccff;
+		}
 
 
 	</style>
@@ -127,9 +127,9 @@
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-$(`tr:odd +`).css({
-	backgroundColor:"red"
-})
+	$ (`tr:odd +`).css ({
+		backgroundColor: 'red',
+	})
 </script>
 </body>
 

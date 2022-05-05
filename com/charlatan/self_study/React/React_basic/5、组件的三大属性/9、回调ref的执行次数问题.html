@@ -32,16 +32,13 @@
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
 <script type="text/babel">
 	class Demo extends React.Component {
-		state = {
-			flag: true,
-		}
 		/**
 		 * 将这个函数定义为外部的，在重新渲染组件的时候，会直接找到这个函数，就不会进行这个函数的重新定义，从而解决问题
 		 * @param item
 		 */
 		ref = (item) => {
-			console.log('内联函数执行了')
-			console.log(item)
+			console.log ('内联函数执行了')
+			console.log (item)
 			this.input1 = item
 		}
 
@@ -58,14 +55,18 @@
 			)
 		}
 
+		state = {
+			flag: true,
+		}
+
 		changMsg = () => {
-			this.state.flag = this.setState({ flag: !this.state.flag })
+			this.state.flag = this.setState ({ flag: !this.state.flag })
 		}
 		showClick = () => {
-			console.log(this.input1.value)
+			console.log (this.input1.value)
 		}
 	}
 
-	ReactDOM.render(<Demo/>, document.getElementById('test'))
+	ReactDOM.render (<Demo/>, document.getElementById ('test'))
 </script>
 </html>

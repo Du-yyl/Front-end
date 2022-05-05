@@ -10,54 +10,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>姐姐月高度塌陷</title>
-    <style>
-        #box {
-            width: 400px;
-            border: 1px solid;
-        }
+	<meta charset="UTF-8">
+	<title>姐姐月高度塌陷</title>
+	<style>
+		#box {
+			width: 400px;
+			border: 1px solid;
+		}
 
-        #a {
-            width: 100px;
-            height: 100px;
-            background-color: yellowgreen;
-            float: left;
-        }
+		#a {
+			width: 100px;
+			height: 100px;
+			background-color: yellowgreen;
+			float: left;
+		}
 
-        #b {
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            float: left;
-        }
+		#b {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: left;
+		}
 
-        #c {
-            clear: both;
-        }
-    </style>
+		#c {
+			clear: both;
+		}
+	</style>
 </head>
 <body>
 <p>
-    当发生高度塌陷时，原本的样式会被清除 <br>
-    并且违背原始的意愿
+	当发生高度塌陷时，原本的样式会被清除 <br>
+	并且违背原始的意愿
 </p>
 <p>
-    第一种方法，在元素后加入一个新元素，并清除他的浮动，这样就不会塌陷了，但是这样每一个 <br>
-    后面都要额外增加一个元素
+	第一种方法，在元素后加入一个新元素，并清除他的浮动，这样就不会塌陷了，但是这样每一个 <br>
+	后面都要额外增加一个元素
 </p>
 <p>
-    解决高度塌陷的4中方法 <br>
-    方案一：给父元素一个固定的高度 <br>
-    方案二：给父元素添加属性 overflow: hidden; <br>
-    方案三：在子元素的末尾添加一个空的 div ，并设置下方样式 <br>
-    方案四：使用伪元素进行清除【不会造成代码的冗余，效率更高】 <br>
-    display: flex;
+	解决高度塌陷的4中方法 <br>
+	方案一：给父元素一个固定的高度 <br>
+	方案二：给父元素添加属性 overflow: hidden; <br>
+	方案三：在子元素的末尾添加一个空的 div ，并设置下方样式 <br>
+	方案四：使用伪元素进行清除【不会造成代码的冗余，效率更高】 <br>
+	display: flex;
 </p>
 <div id="box">
-    <div id="a"></div>
-    <div id="b"></div>
-    <div id="c"></div>
+	<div id="a"></div>
+	<div id="b"></div>
+	<div id="c"></div>
 </div>
 </body>
 </html>

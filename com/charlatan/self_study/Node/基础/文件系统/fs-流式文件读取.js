@@ -9,35 +9,35 @@
  */
 
 /*
-* 流式文件读取
-*   流的读取必须绑定data事件才能进行读取和关闭
-*
-* */
-let fs = require('fs')
+ * 流式文件读取
+ *   流的读取必须绑定data事件才能进行读取和关闭
+ *
+ * */
+let fs = require ('fs')
 
 // 可读流
-let rs = fs.createReadStream('test.txt')
+let rs = fs.createReadStream ('test.txt')
 // 可写流
-let ws = fs.createWriteStream('test.txt')
+let ws = fs.createWriteStream ('test.txt')
 
-rs.once('open', function () {
-  console.log('读取流打开')
+rs.once ('open', function () {
+	console.log ('读取流打开')
 })
-rs.once('close', function () {
-  console.log('读取流关闭')
-  //	 数据读取完毕，关闭可写流
-  ws.end()
-})
-
-ws.once('open', function () {
-  console.log('可写流打开')
-})
-ws.once('close', function () {
-  console.log('可写流关闭')
+rs.once ('close', function () {
+	console.log ('读取流关闭')
+	//	 数据读取完毕，关闭可写流
+	ws.end ()
 })
 
-rs.on('data', function (string) {
-  console.log(string)
-  console.log(string.toString())
-  ws.write(data)
+ws.once ('open', function () {
+	console.log ('可写流打开')
+})
+ws.once ('close', function () {
+	console.log ('可写流关闭')
+})
+
+rs.on ('data', function (string) {
+	console.log (string)
+	console.log (string.toString ())
+	ws.write (data)
 })

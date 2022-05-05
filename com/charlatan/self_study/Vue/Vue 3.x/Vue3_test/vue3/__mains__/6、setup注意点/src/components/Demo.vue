@@ -44,14 +44,14 @@ export default {
     // console.log(context.attrs);
 
     // console.log(context.emit);
-    console.log(context.slots)
-    let obj = reactive({
+    console.log (context.slots)
+    let obj = reactive ({
       obj_1: '第一个数据',
       obj_2: '第二个数据',
     })
 
     function dian () {
-      context.emit('go', 'Demo中的数据')
+      context.emit ('go', 'Demo中的数据')
     }
 
     return {
@@ -65,4 +65,4 @@ export default {
 }
 </script>
 
-<style scoped lang="less"></style>
+<style lang="less" scoped></style>

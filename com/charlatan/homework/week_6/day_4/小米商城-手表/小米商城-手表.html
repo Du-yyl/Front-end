@@ -10,403 +10,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>小米商城-手表</title>
-    <style>
-        html {
-            background-color: #f5f5f5;
-        }
+	<meta charset="UTF-8">
+	<title>小米商城-手表</title>
+	<style>
+		html {
+			background-color: #f5f5f5;
+		}
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        li {
-            list-style: none;
-        }
+		li {
+			list-style: none;
+		}
 
-        #box {
-            width: 1240px;
-            height: 700px;
-            /*background-color: #dbb7b7;*/
-            margin: 100px auto;
-            position: relative;
-            background-color: #f5f5f5;
-        }
+		#box {
+			width: 1240px;
+			height: 700px;
+			/*background-color: #dbb7b7;*/
+			margin: 100px auto;
+			position: relative;
+			background-color: #f5f5f5;
+		}
 
-        #top {
-            width: 100%;
-            height: 40px;
-            /*background-color: #8dcd8d;*/
-            margin-top: 10px;
-            font-size: 14px;
-        }
+		#top {
+			width: 100%;
+			height: 40px;
+			/*background-color: #8dcd8d;*/
+			margin-top: 10px;
+			font-size: 14px;
+		}
 
-        #top-left {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            font-size: 24px;
-            color: #333333;
-            font-weight: lighter;
-        }
+		#top-left {
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			font-size: 24px;
+			color: #333333;
+			font-weight: lighter;
+		}
 
-        #top-right {
-            position: relative;
-            width: 90px;
-            left: 1130px;
-            top: 5px;
-            font-size: 20px;
-            color: #333333;
-            font-weight: lighter;
-        }
+		#top-right {
+			position: relative;
+			width: 90px;
+			left: 1130px;
+			top: 5px;
+			font-size: 20px;
+			color: #333333;
+			font-weight: lighter;
+		}
 
-        #top-right-span1 {
-            display: block;
-            margin-right: 0px;
-            /*color: #ff677f;*/
-            width: 41px;
-            text-align: center;
-            padding-bottom: 2px;
-            /*border-bottom: 2px solid #ff677f;*/
-            position: relative;
-            left: -20px;
-        }
+		#top-right-span1 {
+			display: block;
+			margin-right: 0px;
+			/*color: #ff677f;*/
+			width: 41px;
+			text-align: center;
+			padding-bottom: 2px;
+			/*border-bottom: 2px solid #ff677f;*/
+			position: relative;
+			left: -20px;
+		}
 
-        #top-right-span2 {
-            position: absolute;
-            top: 0;
-            left: 45px;
+		#top-right-span2 {
+			position: absolute;
+			top: 0;
+			left: 45px;
 
-        }
+		}
 
-        /*    ------body---------*/
-        #body {
-            width: 100%;
-            height: 660px;
-            background-color: #f5f5f5;
-        }
+		/*    ------body---------*/
+		#body {
+			width: 100%;
+			height: 660px;
+			background-color: #f5f5f5;
+		}
 
-        #body-0 {
-            position: relative;
-            top: 5px;
-            left: 5px;
-            width: 240px;
-            height: 620px;
-            overflow: hidden;
-            transition: all .5s;
-        }
+		#body-0 {
+			position: relative;
+			top: 5px;
+			left: 5px;
+			width: 240px;
+			height: 620px;
+			overflow: hidden;
+			transition: all .5s;
+		}
 
-        /*    -------------------*/
-        #body-1-ul-1 {
-            width: 980px;
-            height: 300px;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-            position: relative;
-            top: -620px;
-            left: 250px;
-            /*background-color: red;*/
-        }
+		/*    -------------------*/
+		#body-1-ul-1 {
+			width: 980px;
+			height: 300px;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+			position: relative;
+			top: -620px;
+			left: 250px;
+			/*background-color: red;*/
+		}
 
-        #body-1-ul-1 li {
-            width: 235px;
-            height: 100%;
-            margin: 0 auto;
-            background-color: white;
-            transition: all .6s;
-            overflow: hidden;
-        }
+		#body-1-ul-1 li {
+			width: 235px;
+			height: 100%;
+			margin: 0 auto;
+			background-color: white;
+			transition: all .6s;
+			overflow: hidden;
+		}
 
-        .body-1-ul-li-p2 {
-            font-size: 14px;
-        }
+		.body-1-ul-li-p2 {
+			font-size: 14px;
+		}
 
-        .body-1-ul-li-sapn2 {
-            color: #b5b5b7;
-        }
+		.body-1-ul-li-sapn2 {
+			color: #b5b5b7;
+		}
 
-        .body-1-ul-li-img {
-            margin: 20px auto;
-            display: block;
-        }
+		.body-1-ul-li-img {
+			margin: 20px auto;
+			display: block;
+		}
 
-        .body-1-ul-li-p1 {
-            display: block;
-            width: 100%;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-        }
+		.body-1-ul-li-p1 {
+			display: block;
+			width: 100%;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+		}
 
-        .body-1-ul-li-p2 {
-            display: block;
-            width: 100%;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: #b1b2c1;
-        }
+		.body-1-ul-li-p2 {
+			display: block;
+			width: 100%;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			color: #b1b2c1;
+		}
 
-        .body-1-ul-li-span1 {
-            display: block;
-            width: 100%;
-            text-align: center;
-            color: #ff6805;
-        }
+		.body-1-ul-li-span1 {
+			display: block;
+			width: 100%;
+			text-align: center;
+			color: #ff6805;
+		}
 
-        #body-1-ul-2 {
-            width: 730px;
-            height: 300px;
-            /*background-color: red;*/
-            position: relative;
-            top: -600px;
-            left: 250px;
-            flex-wrap: nowrap;
-            justify-content: center;
-            display: flex;
-            font-size: 14px;
-        }
+		#body-1-ul-2 {
+			width: 730px;
+			height: 300px;
+			/*background-color: red;*/
+			position: relative;
+			top: -600px;
+			left: 250px;
+			flex-wrap: nowrap;
+			justify-content: center;
+			display: flex;
+			font-size: 14px;
+		}
 
-        .body-1-ul-2-span2 {
-            color: #b5b5b5;
-        }
+		.body-1-ul-2-span2 {
+			color: #b5b5b5;
+		}
 
-        .body-1-ul-li-p1 {
-            display: block;
-            width: 100%;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+		.body-1-ul-li-p1 {
+			display: block;
+			width: 100%;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 
-        }
+		}
 
-        #body-1-ul-2 li {
-            width: 235px;
-            height: 100%;
-            margin: 0 auto;
-            /*background-color: green;*/
-            background-color: white;
-            transition: all .6s;
-            overflow: hidden;
-        }
+		#body-1-ul-2 li {
+			width: 235px;
+			height: 100%;
+			margin: 0 auto;
+			/*background-color: green;*/
+			background-color: white;
+			transition: all .6s;
+			overflow: hidden;
+		}
 
-        #div-2-1 {
-            width: 235px;
-            height: 150px;
-            background-color: white;
-            position: relative;
-            left: 990px;
-            top: -900px;
-            transition: all .5s;
-        }
+		#div-2-1 {
+			width: 235px;
+			height: 150px;
+			background-color: white;
+			position: relative;
+			left: 990px;
+			top: -900px;
+			transition: all .5s;
+		}
 
-        #left {
-            width: 90px;
-            height: 100px;
-            position: absolute;
-            top: 50px;
-            left: 30px;
-        }
+		#left {
+			width: 90px;
+			height: 100px;
+			position: absolute;
+			top: 50px;
+			left: 30px;
+		}
 
-        #span-1 {
-            font-size: 20px;
-            color: #333333;
-        }
+		#span-1 {
+			font-size: 20px;
+			color: #333333;
+		}
 
-        #span-2 {
-            color: #a57976
-        }
+		#span-2 {
+			color: #a57976
+		}
 
-        #jiantou {
-            position: absolute;
-            top: 50px;
-            left: 150px;
-        }
+		#jiantou {
+			position: absolute;
+			top: 50px;
+			left: 150px;
+		}
 
-        li:hover {
-            cursor: pointer;
-            box-shadow: 0 0 5px 0 #5f0202;
-            transform: translateY(-5px);
-            height: 240px;
-        }
+		li:hover {
+			cursor: pointer;
+			box-shadow: 0 0 5px 0 #5f0202;
+			transform: translateY(-5px);
+			height: 240px;
+		}
 
-        img {
-            transition: all .5s;
-        }
+		img {
+			transition: all .5s;
+		}
 
-        li:hover img {
-            transform: scale(1.3);
-        }
+		li:hover img {
+			transform: scale(1.3);
+		}
 
-        #body-0:hover {
-            cursor: pointer;
-            box-shadow: 0 0 5px 0 #5f0202;
-            transform: translateY(-5px);
-        }
+		#body-0:hover {
+			cursor: pointer;
+			box-shadow: 0 0 5px 0 #5f0202;
+			transform: translateY(-5px);
+		}
 
-        #body-0:hover img {
-            transform: scale(1.1);
-        }
+		#body-0:hover img {
+			transform: scale(1.1);
+		}
 
-        #div-2-1:hover {
-            cursor: pointer;
-            box-shadow: 0 0 5px 0 #5f0202;
-            transform: translateY(-5px);
-        }
+		#div-2-1:hover {
+			cursor: pointer;
+			box-shadow: 0 0 5px 0 #5f0202;
+			transform: translateY(-5px);
+		}
 
-        #div-2-1:hover img {
-            transform: scale(1.2);
-        }
+		#div-2-1:hover img {
+			transform: scale(1.2);
+		}
 
 
-    </style>
+	</style>
 </head>
 <body>
 <div id="box">
-    <div id="top">
+	<div id="top">
         <span id="top-left">
             智能穿戴
         </span>
-        <div id="top-right">
+		<div id="top-right">
             <span id="top-right-span1">
                  热门
             </span>
-            <span id="top-right-span2">
+			<span id="top-right-span2">
                  穿戴
             </span>
-        </div>
-    </div>
-    <div id="body">
-        <div id="body-0">
-            <img alt="左" height="620" id="body-0-img" src="file/1.webp">
-        </div>
-        <ul id="body-1-ul-1">
-            <li>
-                <img alt="图片" class="body-1-ul-li-img" height="160" src="file/1-1.webp">
-                <p class="body-1-ul-li-p1">
-                    Redmi
-                </p>
-                <p class="body-1-ul-li-p2">
-                    AMOLED大屏
-                </p>
-                <span class="body-1-ul-li-span1">
+		</div>
+	</div>
+	<div id="body">
+		<div id="body-0">
+			<img id="body-0-img" alt="左" height="620" src="file/1.webp">
+		</div>
+		<ul id="body-1-ul-1">
+			<li>
+				<img alt="图片" class="body-1-ul-li-img" height="160" src="file/1-1.webp">
+				<p class="body-1-ul-li-p1">
+					Redmi
+				</p>
+				<p class="body-1-ul-li-p2">
+					AMOLED大屏
+				</p>
+				<span class="body-1-ul-li-span1">
                                 399
 
                 <del class="body-1-ul-li-sapn2">
                             </del>
                 </span>
-            </li>
-            <li>
-                <img alt="图片" class="body-1-ul-li-img" height="160" src="file/1-2.webp">
-                <p class="body-1-ul-li-p1">
-                    小米手环6 NFC版
-                </p>
-                <p class="body-1-ul-li-p2">
-                    全面屏实力
-                </p>
-                <span class="body-1-ul-li-span1">
+			</li>
+			<li>
+				<img alt="图片" class="body-1-ul-li-img" height="160" src="file/1-2.webp">
+				<p class="body-1-ul-li-p1">
+					小米手环6 NFC版
+				</p>
+				<p class="body-1-ul-li-p2">
+					全面屏实力
+				</p>
+				<span class="body-1-ul-li-span1">
                                 249元
 
                 <del class="body-1-ul-li-sapn2">
                                 279元
                             </del></span>
-            </li>
-            <li>
-                <img alt="图片" class="body-1-ul-li-img" height="160" src="file/1-3.webp">
-                <p class="body-1-ul-li-p1">
-                    Redmi手表
-                </p>
-                <p class="body-1-ul-li-p2">
-                    35g超轻/1.4"大屏/多功能NFC/7天长续航
-                </p>
-                <span class="body-1-ul-li-span1">
+			</li>
+			<li>
+				<img alt="图片" class="body-1-ul-li-img" height="160" src="file/1-3.webp">
+				<p class="body-1-ul-li-p1">
+					Redmi手表
+				</p>
+				<p class="body-1-ul-li-p2">
+					35g超轻/1.4"大屏/多功能NFC/7天长续航
+				</p>
+				<span class="body-1-ul-li-span1">
                                 269元
 
                 <del class="body-1-ul-li-sapn2">
                                 299元
                             </del></span>
-            </li>
-            <li>
-                <img alt="图片" class="body-1-ul-li-img" height="160" src="file/1-4.webp">
-                <p class="body-1-ul-li-p1">
-                    Xiaomi 真无线降噪耳机 3 Pro
-                </p>
-                <p class="body-1-ul-li-p2">
-                    动态降噪 静听曼妙
-                </p>
-                <span class="body-1-ul-li-span1">
+			</li>
+			<li>
+				<img alt="图片" class="body-1-ul-li-img" height="160" src="file/1-4.webp">
+				<p class="body-1-ul-li-p1">
+					Xiaomi 真无线降噪耳机 3 Pro
+				</p>
+				<p class="body-1-ul-li-p2">
+					动态降噪 静听曼妙
+				</p>
+				<span class="body-1-ul-li-span1">
                                 689元
 
                 <del class="body-1-ul-li-sapn2">
                                 699元
                             </del></span>
-            </li>
-        </ul>
-        <ul id="body-1-ul-2">
-            <li>
-                <img alt="图片" class="body-1-ul-li-img" height="160" src="file/2-1.webp">
-                <p class="body-1-ul-li-p1">
-                    Redmi Buds 3半入耳真无线蓝牙耳机
-                </p>
-                <p class="body-1-ul-li-p2">
-                    轻巧半入耳，舒适有天分
-                </p>
-                <span class="body-1-ul-li-span1">
+			</li>
+		</ul>
+		<ul id="body-1-ul-2">
+			<li>
+				<img alt="图片" class="body-1-ul-li-img" height="160" src="file/2-1.webp">
+				<p class="body-1-ul-li-p1">
+					Redmi Buds 3半入耳真无线蓝牙耳机
+				</p>
+				<p class="body-1-ul-li-p2">
+					轻巧半入耳，舒适有天分
+				</p>
+				<span class="body-1-ul-li-span1">
                                 189元
                 <del class="body-1-ul-2-span2">
                                 199元
                             </del> </span>
-            </li>
-            <li>
-                <img alt="图片" class="body-1-ul-li-img" height="160" src="file/2-2.webp">
-                <p class="body-1-ul-li-p1">
-                    Redmi Buds 3 青春版
-                </p>
-                <p class="body-1-ul-li-p2">
-                    轻巧无线 持久动听
-                </p>
-                <span class="body-1-ul-li-span1">
+			</li>
+			<li>
+				<img alt="图片" class="body-1-ul-li-img" height="160" src="file/2-2.webp">
+				<p class="body-1-ul-li-p1">
+					Redmi Buds 3 青春版
+				</p>
+				<p class="body-1-ul-li-p2">
+					轻巧无线 持久动听
+				</p>
+				<span class="body-1-ul-li-span1">
                                  99元
                 <del class="body-1-ul-2-span2">
                             </del></span>
-            </li>
-            <li>
-                <img alt="图片" class="body-1-ul-li-img" height="160" src="file/2-3.webp">
-                <p class="body-1-ul-li-p1">
-                    Redmi AirDots 3 Pro
-                </p>
-                <p class="body-1-ul-li-p2">
-                    智能降噪 超低延迟
-                </p>
-                <span class="body-1-ul-li-span1">
+			</li>
+			<li>
+				<img alt="图片" class="body-1-ul-li-img" height="160" src="file/2-3.webp">
+				<p class="body-1-ul-li-p1">
+					Redmi AirDots 3 Pro
+				</p>
+				<p class="body-1-ul-li-p2">
+					智能降噪 超低延迟
+				</p>
+				<span class="body-1-ul-li-span1">
                                 289元
                 <del class="body-1-ul-2-span2">
                                 349元
                             </del></span>
-            </li>
+			</li>
 
-        </ul>
-        <div id="div-2-1">
-            <div id="left">
+		</ul>
+		<div id="div-2-1">
+			<div id="left">
                     <span id="span-1">
                         浏览更多
                     </span>
-                <span id="span-2">
+				<span id="span-2">
                     热门
                 </span>
-            </div>
-            <img alt="箭头" height="50" id="jiantou" src="file/jiantouyou.png">
-        </div>
-    </div>
+			</div>
+			<img id="jiantou" alt="箭头" height="50" src="file/jiantouyou.png">
+		</div>
+	</div>
 
 </div>
 </body>

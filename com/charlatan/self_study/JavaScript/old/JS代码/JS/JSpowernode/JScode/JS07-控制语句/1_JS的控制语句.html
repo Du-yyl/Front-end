@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JS的控制语句</title>
+	<meta charset="UTF-8">
+	<title>JS的控制语句</title>
 </head>
 <body>
 <script type="text/javascript">
-  /*
-  * if
-  * switch
-  * while
-  * do...while
-  * for
-  * break
-  * continue
-  *
-  * for...in
-  * with
-  * */
-  //  JS数组元素类型随意，元素个数随意
-  var sums = [false, true, 1, -1, 'abc', "abc", 3.14]
-  for (let i = 0; i < sums.length; i++) {
-    alert(sums[i])
-  }
-  //  这里的sumsKey不是sums中的元素，而是sums数组元素的下标
-  for (var sumsKey in sums) {
-    alert(sums[sumsKey])
-  }
+	/*
+	 * if
+	 * switch
+	 * while
+	 * do...while
+	 * for
+	 * break
+	 * continue
+	 *
+	 * for...in
+	 * with
+	 * */
+	//  JS数组元素类型随意，元素个数随意
+	var sums = [false, true, 1, -1, 'abc', 'abc', 3.14]
+	for ( let i = 0; i < sums.length; i++ ) {
+		alert (sums[i])
+	}
+	//  这里的sumsKey不是sums中的元素，而是sums数组元素的下标
+	for ( var sumsKey in sums ) {
+		alert (sums[sumsKey])
+	}
 
-  user = function (name, ago, no) {
-    this.name = name;
-    this.age = ago;
-    this.no = no;
-  }
-  var zhangsan = new user("zhangsan", 12, 1)
-  var lisi = new user("lisi", 1, 2)
-  //  for...in可以遍历对象的属性
-  // alert(zhangsan.name + ',' + zhangsan.no)
-  // 这里的bianlaingming是一个字符串
-  for (var bianliangming in zhangsan) {
-    alert(zhangsan.name)
-  }
+	user = function (name, ago, no) {
+		this.name = name
+		this.age = ago
+		this.no = no
+	}
+	var zhangsan = new user ('zhangsan', 12, 1)
+	var lisi = new user ('lisi', 1, 2)
+	//  for...in可以遍历对象的属性
+	// alert(zhangsan.name + ',' + zhangsan.no)
+	// 这里的bianlaingming是一个字符串
+	for ( var bianliangming in zhangsan ) {
+		alert (zhangsan.name)
+	}
 
 
 </script>

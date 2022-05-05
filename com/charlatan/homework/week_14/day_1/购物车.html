@@ -20,28 +20,28 @@
 			font-size: 15px;
 			text-decoration: none;
 		}
-		
+
 		a:link {
 			color: #b700ff;
 		}
-		
+
 		a:visited {
 			color: #0066ff;
 		}
-		
+
 		a:hover {
 			color: #FF00FF;
 		}
-		
+
 		a:active {
 			color: #ff8800;
 		}
-		
+
 		*::selection {
 			color: #fff99a;
 			background-color: #ff961b;
 		}
-		
+
 		ul:after {
 			content: "";
 			height: 0;
@@ -50,19 +50,19 @@
 			display: block;
 			visibility: hidden;
 		}
-		
+
 		li {
 			cursor: pointer;
 			position: relative;
 		}
-		
+
 		label, button {
 			user-select: none;
 			/*pointer-events:none;*/
 		}
-		
+
 		/*-------以上为默认设置（The above is the default setting）--------*/
-		
+
 		#bigBox {
 			width: 1620px;
 			height: 100%;
@@ -73,7 +73,7 @@
 			margin: auto;
 			background-color: #bce8f1;
 		}
-		
+
 		#body {
 			position: relative;
 			width: 90%;
@@ -84,8 +84,8 @@
 			margin: auto;
 			top: 0;
 		}
-		
-		
+
+
 		#h1 {
 			position: absolute;
 			font: 50px/40px "";
@@ -95,7 +95,7 @@
 			top: 40px;
 			color: #4025f5;
 		}
-		
+
 		input[type="checkbox"] {
 			-webkit-appearance: none;
 			background: #fff url(file/no-checked.png) no-repeat;
@@ -105,12 +105,12 @@
 			width: 28px;
 			transition: all .17s ease-in-out;
 		}
-		
+
 		input[type="checkbox"]:checked {
 			background: #fff url(file/checked.png) no-repeat -1px -1px;
 			background-size: 30px;
 		}
-		
+
 		/* 头部 */
 		#heard {
 			width: 100%;
@@ -119,49 +119,49 @@
 			position: relative;
 			top: 190px;
 		}
-		
+
 		#heard-label {
 			font: 20px "";
 			position: relative;
 			top: 10px;
 			left: 30px;
 		}
-		
+
 		#span-1 {
 			font: 20px "";
 			top: 10px;
 			position: relative;
 			left: 80px;
 		}
-		
+
 		#span-2 {
 			font: 20px "";
 			top: 10px;
 			position: relative;
 			left: 520px;
 		}
-		
+
 		#span-3 {
 			font: 20px "";
 			top: 10px;
 			position: relative;
 			left: 680px;
 		}
-		
+
 		#span-4 {
 			font: 20px "";
 			top: 10px;
 			position: relative;
 			left: 890px;
 		}
-		
+
 		#span-5 {
 			font: 20px "";
 			top: 10px;
 			position: relative;
 			left: 1010px;
 		}
-		
+
 		/* 	商品列表 */
 		#body-ul {
 			width: 100%;
@@ -172,7 +172,7 @@
 			overflow: hidden;
 			transition: all .7s ease-in-out;
 		}
-		
+
 		#body-ul > li {
 			width: 100%;
 			position: relative;
@@ -184,19 +184,19 @@
 			left: 0;
 			top: 0;
 		}
-		
+
 		#body-ul > li:hover {
 			transform: translateY(-1px);
 			height: 252px;
 			box-shadow: 0 5px 5px 4px #e0e0e0;
 		}
-		
+
 		.shop-label {
 			position: absolute;
 			top: 30px;
 			left: 40px;
 		}
-		
+
 		.shop-img-div {
 			width: 170px;
 			height: 200px;
@@ -207,13 +207,13 @@
 			border-radius: 5px;
 			overflow: hidden;
 		}
-		
+
 		.shop-img {
 			width: 100%;
 			position: relative;
 			top: 10px;
 		}
-		
+
 		.show-span-div {
 			width: 240px;
 			height: 124px;
@@ -226,14 +226,14 @@
 			overflow: hidden;
 			display: -webkit-box;
 		}
-		
+
 		.price {
 			position: absolute;
 			left: 650px;
 			top: 30px;
 			font: 20px "";
 		}
-		
+
 		.number-div {
 			width: 90px;
 			height: 26px;
@@ -243,7 +243,7 @@
 			background-color: #b5ccbf;
 			overflow: hidden;
 		}
-		
+
 		.btn-sub {
 			width: 26px;
 			height: 26px;
@@ -252,7 +252,7 @@
 			left: 0;
 			z-index: 2;
 		}
-		
+
 		.number {
 			width: 100px;
 			position: absolute;
@@ -262,7 +262,7 @@
 			z-index: 1;
 			outline: none;
 		}
-		
+
 		.btn-sum {
 			width: 26px;
 			height: 26px;
@@ -271,7 +271,7 @@
 			left: 64px;
 			z-index: 2;
 		}
-		
+
 		.subtotal {
 			position: absolute;
 			top: 30px;
@@ -297,7 +297,7 @@
 			height: 150px;
 			background-color: white;
 		}
-		
+
 		#subtotal {
 			width: 100%;
 			height: 40px;
@@ -350,7 +350,7 @@
 		</h1>
 
 		<div id="heard">
-			<label for="header-btn" id="heard-label">
+			<label id="heard-label" for="header-btn">
 				<input id="header-btn" name="" type="checkbox">
 				全选
 			</label>
@@ -576,123 +576,120 @@
 <script>
 	window.onload = function () {
 		// 实现全选和取消全选
-		let heard_btn = document.getElementById('header-btn')
-		let lis_btn = document.getElementById("body-ul").getElementsByClassName("shop-checked")
+		let heard_btn = document.getElementById ('header-btn')
+		let lis_btn = document.getElementById ('body-ul').getElementsByClassName ('shop-checked')
 
 		// 全选
 		heard_btn.onclick = function () {
-			for (let lisBtnKey of lis_btn) {
+			for ( let lisBtnKey of lis_btn ) {
 				lisBtnKey.checked = heard_btn.checked
-				goMoney()
+				goMoney ()
 			}
 		}
-		
+
 		//	 小按钮
-		for (let lisBtnElement of lis_btn) {
+		for ( let lisBtnElement of lis_btn ) {
 			lisBtnElement.onclick = function () {
 				let len = 0
-				for (let lisBtnKey of lis_btn) {
-					if (lisBtnKey.checked) {
+				for ( let lisBtnKey of lis_btn ) {
+					if ( lisBtnKey.checked ) {
 						len++
 					}
 				}
-				heard_btn.checked = len === lis_btn.length;
-				goMoney()
+				heard_btn.checked = len === lis_btn.length
+				goMoney ()
 			}
 		}
-
 
 		//	数字
-		let nums = document.getElementsByClassName("number")
-		let sub_btn = document.getElementsByClassName("btn-sub")
-		let sub_sum = document.getElementsByClassName("btn-sum")
+		let nums = document.getElementsByClassName ('number')
+		let sub_btn = document.getElementsByClassName ('btn-sub')
+		let sub_sum = document.getElementsByClassName ('btn-sum')
 		// 指定最大值，最小值
-		for (let num of nums) {
+		for ( let num of nums ) {
 			num.oninput = function () {
-				this.value = this.value >= 98 ? 98 : this.value;
-				this.value = this.value <= 1 ? 1 : this.value;
-				comeMoney()
+				this.value = this.value >= 98 ? 98 : this.value
+				this.value = this.value <= 1 ? 1 : this.value
+				comeMoney ()
 			}
 		}
 
-
 		//	按钮增加
-		for (let i = 0; i < sub_btn.length; i++) {
+		for ( let i = 0; i < sub_btn.length; i++ ) {
 			sub_btn[i].onclick = function () {
 				nums[i].value--
-				nums[i].value = nums[i].value <= 1 ? 1 : nums[i].value;
-				if (nums[i].value <= 1) {
+				nums[i].value = nums[i].value <= 1 ? 1 : nums[i].value
+				if ( nums[i].value <= 1 ) {
 					sub_btn[i].style.cursor = 'not-allowed'
 				} else {
 					sub_sum[i].style.cursor = 'default'
 				}
-				comeMoney()
-				goMoney()
+				comeMoney ()
+				goMoney ()
 			}
 		}
 
-		for (let i = 0; i < sub_sum.length; i++) {
+		for ( let i = 0; i < sub_sum.length; i++ ) {
 			sub_sum[i].onclick = function () {
 				nums[i].value++
-				nums[i].value = nums[i].value >= 99 ? 99 : nums[i].value;
-				if (nums[i].value >= 99) {
+				nums[i].value = nums[i].value >= 99 ? 99 : nums[i].value
+				if ( nums[i].value >= 99 ) {
 					sub_sum[i].style.cursor = 'not-allowed'
 				} else {
 					sub_btn[i].style.cursor = 'default'
 				}
-				comeMoney()
-				goMoney()
+				comeMoney ()
+				goMoney ()
 			}
 		}
 
 		//	小计的价格问题
-		let subtotal = document.getElementsByClassName("subtotal")
-		let price = document.getElementsByClassName("price")
+		let subtotal = document.getElementsByClassName ('subtotal')
+		let price = document.getElementsByClassName ('price')
 
-		function comeMoney() {
-			for (let i = 0; i < subtotal.length; i++) {
-				subtotal[i].innerHTML = (nums[i].value * price[i].innerHTML).toFixed(2)
+		function comeMoney () {
+			for ( let i = 0; i < subtotal.length; i++ ) {
+				subtotal[i].innerHTML = (nums[i].value * price[i].innerHTML).toFixed (2)
 			}
 		}
 
-		comeMoney()
+		comeMoney ()
 
-		let submain = document.getElementById("submain")
+		let submain = document.getElementById ('submain')
 		let total
 		let num
 
-		function goMoney() {
+		function goMoney () {
 			total = 0
 			num = 0
-			for (let i = 0; i < lis_btn.length; i++) {
-				if (lis_btn[i].checked) {
-					total += (Number(subtotal[i].innerHTML))
+			for ( let i = 0; i < lis_btn.length; i++ ) {
+				if ( lis_btn[i].checked ) {
+					total += (Number (subtotal[i].innerHTML))
 					num++
 				}
 			}
 			submain.innerHTML = `已选择 <span id="sub-1">${num}</span>件商品
-						         总价 <span id="sub-2">${total.toFixed(2)}</span>`
+						         总价 <span id="sub-2">${total.toFixed (2)}</span>`
 		}
 
-		goMoney()
+		goMoney ()
 
-		let go = document.getElementById("go")
+		let go = document.getElementById ('go')
 		go.onclick = function () {
-			alert("一共是" + total + "元")
+			alert ('一共是' + total + '元')
 		}
 
-
-		let deletes = document.getElementsByClassName("delete")
-		let lis = document.querySelectorAll('li')
-		console.log(deletes);
-		for (let i = 0, len = deletes.length; i < len; i++) {
+		let deletes = document.getElementsByClassName ('delete')
+		let lis = document.querySelectorAll ('li')
+		console.log (deletes)
+		for ( let i = 0, len = deletes.length; i < len; i++ ) {
 			deletes[i].onclick = function () {
-				lis[i].style.left = "1500px"
-				setTimeout(function () {
-					lis[i].style.height = "0"
-					lis[i].style.marginTop = "0"
-					setTimeout(function () {
-						lis[i].parentNode.removeChild(lis[i])
+				lis[i].style.left = '1500px'
+				setTimeout (function () {
+					lis[i].style.height = '0'
+					lis[i].style.marginTop = '0'
+					setTimeout (function () {
+						lis[i].parentNode.removeChild (lis[i])
 					}, 1000)
 				}, 1000)
 			}

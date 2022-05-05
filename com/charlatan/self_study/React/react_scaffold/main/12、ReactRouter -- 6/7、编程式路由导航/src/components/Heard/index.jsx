@@ -12,18 +12,20 @@ import { useNavigate } from 'react-router-dom'
  */
 
 export default function Heard () {
-  const navigate = useNavigate()
-  
-  return (
-    <div>
-      <div className="page-header"><h2>React Router Demo</h2></div>
-      <button onClick={() => {
-        navigate(-1)
-      }}>后退</button>
-      <button onClick={() => {
-        navigate(1)
-      }}>前进</button>
-    </div>
-  
-  )
+	const navigate = useNavigate ()
+	
+	return (
+			<div>
+				<div className="page-header"><h2>React Router Demo</h2></div>
+				<button onClick={() => {
+					navigate (-1)
+				}}>后退
+				</button>
+				<button onClick={() => {
+					navigate (1)
+				}}>前进
+				</button>
+			</div>
+	
+	)
 }

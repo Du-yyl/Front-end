@@ -15,19 +15,18 @@ let num = 'abcdefghijklmn'
  * @param arrLen 分割后每个字符串的长度
  * @returns {*[]|*} 将分割结果进行返回，当字符串总长度小于分割的长度时，将原字符串返回
  */
-function cut(arr, arrLen) {
+function cut (arr, arrLen) {
 	let lens = arr.length
-	if (lens <= arrLen) {
+	if ( lens <= arrLen ) {
 		return arr
 	} else {
 		let array = []
-		for (let i = 0, len = lens - arrLen + 1; i < len; i++) {
-			array.push(arr.slice(i, i + arrLen))
+		for ( let i = 0, len = lens - arrLen + 1; i < len; i++ ) {
+			array.push (arr.slice (i, i + arrLen))
 		}
 		return array
 	}
 }
-
 
 /**
  * 判断指定的字符串中是否含有连续的字符串
@@ -35,32 +34,32 @@ function cut(arr, arrLen) {
  * @param lens 指定要判断的长度【默认为5】
  * @returns {boolean} 结果以布尔值形式进行返回
  */
-function ditto(arr, lens = 5) {
-	if (arr.length <= 0) {
+function ditto (arr, lens = 5) {
+	if ( arr.length <= 0 ) {
 		return false
-	} else if (arr.length <= 2) {
+	} else if ( arr.length <= 2 ) {
 		return true
-	} else if (arr.length <= lens) {
+	} else if ( arr.length <= lens ) {
 		let flag = true
-		let num = arr.charCodeAt(1) - arr.charCodeAt(0)
-		for (let i = 2; i < arr.length; i++) {
-			if (!(num === arr.charCodeAt(i) - arr.charCodeAt(i - 1))) {
+		let num = arr.charCodeAt (1) - arr.charCodeAt (0)
+		for ( let i = 2; i < arr.length; i++ ) {
+			if ( !(num === arr.charCodeAt (i) - arr.charCodeAt (i - 1)) ) {
 				flag = false
 				break
 			}
 		}
-		return flag;
+		return flag
 	} else {
 		let flag = false
-		cut(arr, lens).forEach((item) => {
-			if (flag) {
+		cut (arr, lens).forEach ((item) => {
+			if ( flag ) {
 				return flag
 			}
-			flag = ditto(item)
+			flag = ditto (item)
 		})
 		return flag
 	}
 }
 
 // console.log(cut(num,6));
-console.log(ditto(num));
+console.log (ditto (num))

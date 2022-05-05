@@ -1,6 +1,6 @@
-window.alert("hello js!");
-window.alert("hello js!");
-window.alert("hello js!");
-window.alert("hello js!");
-window.alert("hello js!");
-window.alert("hello js test!");
+window.alert ('hello js!')
+window.alert ('hello js!')
+window.alert ('hello js!')
+window.alert ('hello js!')
+window.alert ('hello js!')
+window.alert ('hello js test!')

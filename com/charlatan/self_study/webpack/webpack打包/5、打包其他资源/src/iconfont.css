@@ -1,25 +1,25 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1647572447591') format('truetype');
+	font-family: "iconfont"; /* Project id  */
+	src: url('iconfont.ttf?t=1647572447591') format('truetype');
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .icon-kehuishou-buliaolei:before {
-  content: "\e61d";
+	content: "\e61d";
 }
 
 .icon-kehuishou-jinshulei:before {
-  content: "\e61e";
+	content: "\e61e";
 }
 
 .icon-kehuishou-bolilei:before {
-  content: "\e61f";
+	content: "\e61f";
 }
 

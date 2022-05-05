@@ -9,18 +9,18 @@
  */
 
 // 引入express
-let express = require ('express');
+let express = require ('express')
 
 // 创建服务器
-let server = express ();
+let server = express ()
 
 // 收到的请求形式和 url
 server.get ('/', function (request, response) {
-	console.log (request.url);
-	response.send ('hello world');
-});
+	console.log (request.url)
+	response.send ('hello world')
+})
 
 // 开启监听
 server.listen ('3000', function () {
-	console.log ('3000 is listening ... ');
-});
+	console.log ('3000 is listening ... ')
+})

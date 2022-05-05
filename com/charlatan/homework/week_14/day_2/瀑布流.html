@@ -91,36 +91,36 @@
 </head>
 <body>
 <div id="bigBox">
-	<div class="in" id="in1"></div>
-	<div class="in" id="in2"></div>
-	<div class="in" id="in3"></div>
-	<div class="in" id="in4"></div>
-	<div class="in" id="in5"></div>
+	<div id="in1" class="in"></div>
+	<div id="in2" class="in"></div>
+	<div id="in3" class="in"></div>
+	<div id="in4" class="in"></div>
+	<div id="in5" class="in"></div>
 </div>
 </body>
 <script src="tool/homework.js" type="text/javascript"></script>
 
 <script>
-	let div = document.getElementById('bigBox')
-	let ins = document.getElementsByClassName('in')
+	let div = document.getElementById ('bigBox')
+	let ins = document.getElementsByClassName ('in')
 
-	for (let datum of data) {
+	for ( let datum of data ) {
 		let sample = ins[0].offsetHeight
 		let pl = ins[0]
 
-		let img_self = datum.img_url.split('?')[1].split('x')
+		let img_self = datum.img_url.split ('?')[1].split ('x')
 		let width = 250
 		let height = width * img_self[1] / img_self[0]
 
-		let img = document.createElement('img')
+		let img = document.createElement ('img')
 		img.src = datum.img_url
 		img.title = datum.title
 		img.style.width = '250px'
 		img.style.height = height + 'px'
-		for (let in1 of ins) {
+		for ( let in1 of ins ) {
 			pl = sample > in1.offsetHeight ? in1 : pl
 		}
-		pl.appendChild(img)
+		pl.appendChild (img)
 	}
 </script>
 </html>

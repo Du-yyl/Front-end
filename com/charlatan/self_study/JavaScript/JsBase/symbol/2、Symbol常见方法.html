@@ -29,17 +29,16 @@
 </body>
 <script>
 	// 第一个创建的方法会注册到全局，当又有一个新的相同的值进行注册时，就会直接进行赋值，所以引用和内容都是相同的
-	let sl1 = Symbol.for('find')
-	let sl2 = Symbol.for('find')
-	
-	let sl3 = Symbol("test")
-	let sl4 = Symbol("test")
-	
-	
-	console.log(sl1 === sl2);
-	console.log(sl3 === sl4);
-	
-	console.log(Symbol.keyFor(sl1));
+	let sl1 = Symbol.for ('find')
+	let sl2 = Symbol.for ('find')
+
+	let sl3 = Symbol ('test')
+	let sl4 = Symbol ('test')
+
+	console.log (sl1 === sl2)
+	console.log (sl3 === sl4)
+
+	console.log (Symbol.keyFor (sl1))
 
 
 </script>

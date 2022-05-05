@@ -14,9 +14,9 @@
     &nbsp;<h2> 当前这个数字乘10的结果时：{{ calculate }}</h2>
     <h1>我是 {{ name }} ,我是{{ age }}</h1>
     <select v-model.number="num">
-      <option class="js-options-table" :value=1>1</option>
-      <option class="js-options-table" :value=2>2</option>
-      <option class="js-options-table" :value=3>3</option>
+      <option :value=1 class="js-options-table">1</option>
+      <option :value=2 class="js-options-table">2</option>
+      <option :value=3 class="js-options-table">3</option>
     </select>
     &nbsp;
     <button class="btn btn-warning" @click="add">+</button>
@@ -48,8 +48,8 @@ export default {
     //   age: 'age',
     // }),
     // 简写形式【数组写法】
-    ...mapState(['sum', 'name', 'age']),
-    ...mapGetters({
+    ...mapState (['sum', 'name', 'age']),
+    ...mapGetters ({
       calculate: 'calculate',
     }),
   },
@@ -57,20 +57,20 @@ export default {
     add () {
       // 因为逻辑业务简单，直接联系 mutations
       // this.$store.dispatch('add', this.num)
-      this.$store.commit('ADD', this.num)
+      this.$store.commit ('ADD', this.num)
     },
     deadd () {
-      this.$store.commit('DEADD', this.num)
+      this.$store.commit ('DEADD', this.num)
     },
     addOdd () {
-      this.$store.dispatch('addOdd', this.num)
+      this.$store.dispatch ('addOdd', this.num)
     },
     addWait () {
-      this.$store.dispatch('addWait', this.num)
+      this.$store.dispatch ('addWait', this.num)
     },
   },
   mounted () {
-    console.log(this)
+    console.log (this)
   },
 }
 </script>

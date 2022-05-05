@@ -21,18 +21,18 @@
 
 </body>
 <script>
-	let btn1 = document.getElementById("btn1")
-	let btn2 = document.getElementById("btn2")
+	let btn1 = document.getElementById ('btn1')
+	let btn2 = document.getElementById ('btn2')
 
 	btn1.onclick = function () {
-		move(btn1)
+		move (btn1)
 	}
 
-	function move(obj) {
-		let clone = obj.cloneNode(true);
-		let parent = obj.parentNode;
-		parent.appendChild(clone)
-		parent.removeChild(obj)
+	function move (obj) {
+		let clone = obj.cloneNode (true)
+		let parent = obj.parentNode
+		parent.appendChild (clone)
+		parent.removeChild (obj)
 	}
 
 </script>

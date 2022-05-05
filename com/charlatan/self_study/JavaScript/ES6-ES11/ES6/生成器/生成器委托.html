@@ -22,28 +22,28 @@
 </pre>
 </body>
 <script>
-	function* func1() {
-		console.log("你好");
+	function * func1 () {
+		console.log ('你好')
 		yield 111
-		console.log("hello");
+		console.log ('hello')
 		yield 222
 	}
 
-	function* func2() {
-		console.log("世界");
+	function * func2 () {
+		console.log ('世界')
 		yield 333
-		console.log("world");
+		console.log ('world')
 		yield 444
-		yield* func1()
+		yield * func1 ()
 	}
 
-	let func = func2()
+	let func = func2 ()
 
-	console.log(func.next());
-	console.log(func.next());
-	console.log(func.next());
-	console.log(func.next());
-	console.log(func.next());
-	console.log(func.next());
+	console.log (func.next ())
+	console.log (func.next ())
+	console.log (func.next ())
+	console.log (func.next ())
+	console.log (func.next ())
+	console.log (func.next ())
 </script>
 </html>

@@ -23,40 +23,40 @@
 	 */
 
 	//代码片段一
-	var name = "The Window";
+	var name = 'The Window'
 	var object = {
-		name: "My Object",
+		name: 'My Object',
 		getNameFunc: function () {
 			return function () {
-				return this.name;
-			};
-		}
-	};
-	console.log(object.getNameFunc()());
-	console.log(object.getNameFunc());
+				return this.name
+			}
+		},
+	}
+	console.log (object.getNameFunc () ())
+	console.log (object.getNameFunc ())
 	/*
-	*   这里直接执行的函数直接调用的是object.getNameFunc()，他的返回对象是一个函数，这个函数的执行对象是window，
-	*   所以结果会返回the window
-	* */
+	 *   这里直接执行的函数直接调用的是object.getNameFunc()，他的返回对象是一个函数，这个函数的执行对象是window，
+	 *   所以结果会返回the window
+	 * */
 
 
 
 	//代码片段二
-	var name2 = "The Window";
+	var name2 = 'The Window'
 	var object2 = {
-		name2: "My Object",
+		name2: 'My Object',
 		getNameFunc: function () {
-			var that = this;
+			var that = this
 			return function () {
-				return that.name2;
-			};
-		}
-	};
-	console.log(object2.getNameFunc()());
+				return that.name2
+			}
+		},
+	}
+	console.log (object2.getNameFunc () ())
 	/*
-	* 这里调用的是和上面一样的，但是返回的是this的调用Object中的this，并进行赋值
-	* 所以这里的返回的Object中的this
-	* */
+	 * 这里调用的是和上面一样的，但是返回的是this的调用Object中的this，并进行赋值
+	 * 所以这里的返回的Object中的this
+	 * */
 
 </script>
 </html>

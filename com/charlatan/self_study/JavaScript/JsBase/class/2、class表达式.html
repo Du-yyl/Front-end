@@ -35,50 +35,49 @@
 </body>
 <script>
 	/*
-	* */
+	 * */
 	const func1 = class Me {
-		static name = "张三";
+		static name = '张三'
 
-		getClassName() {
+		getClassName () {
 			return Me.name
 		}
 	}
 
-	let inst = new func1();
-	console.log(inst.getClassName()); // Me
+	let inst = new func1 ()
+	console.log (inst.getClassName ()) // Me
 	// console.log(Me.name); // ReferenceError: Me is not defined
 
 	let Parson = new class {
-		constructor(name) {
+		constructor (name) {
 			this.name = name
 		}
 
-		sayName() {
-			console.log(this.name);
+		sayName () {
+			console.log (this.name)
 		}
 
-	}('张三')
-	Person.sayName()
-
+	} ('张三')
+	Person.sayName ()
 
 	class Logger {
-		printName(name = 'there') {
-			this.print(`Hello ${name}`);
+		printName (name = 'there') {
+			this.print (`Hello ${name}`)
 		}
 
-		print(text) {
-			console.log(text);
+		print (text) {
+			console.log (text)
 		}
 	}
 
-	const logger = new Logger();
-	const {printName} = logger;
-	printName(); // TypeError: Cannot read property 'print' of undefined
+	const logger = new Logger ()
+	const { printName } = logger
+	printName () // TypeError: Cannot read property 'print' of undefined
 
 	/*
-	*上面代码中，printName方法中的this，默认指向Logger类的实例。但是，如果将这个方法提取出来单独使用，this会指向该方法运行时所在的环境
-	* （由于 class 内部是严格模式，所以 this 实际指向的是undefined），从而导致找不到print方法而报错。
-	一个比较简单的解决方法是，在构造方法中绑定this，这样就不会找不到print方法了。
-	* */
+	 *上面代码中，printName方法中的this，默认指向Logger类的实例。但是，如果将这个方法提取出来单独使用，this会指向该方法运行时所在的环境
+	 * （由于 class 内部是严格模式，所以 this 实际指向的是undefined），从而导致找不到print方法而报错。
+	 一个比较简单的解决方法是，在构造方法中绑定this，这样就不会找不到print方法了。
+	 * */
 </script>
 </html>

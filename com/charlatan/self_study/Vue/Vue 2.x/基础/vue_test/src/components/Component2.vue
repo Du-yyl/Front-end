@@ -21,8 +21,8 @@ export default {
   name: 'Component2',
   methods: {
     sendData () {
-      pubsub.publish('sends', 900)
-      console.log('向组件1发送数据')
+      pubsub.publish ('sends', 900)
+      console.log ('向组件1发送数据')
     },
   },
 }

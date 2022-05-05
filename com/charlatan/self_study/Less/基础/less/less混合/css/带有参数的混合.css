@@ -8,45 +8,51 @@
   *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
   */
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
+
 #wrap {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border: 1px solid;
-  margin: 0 auto;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border: 1px solid;
+	margin: 0 auto;
 }
+
 #wrap #inner1 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: yellow;
-  width: 100px;
-  height: 100px;
-  transition: all 0.7s ease-in-out;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: yellow;
+	width: 100px;
+	height: 100px;
+	transition: all 0.7s ease-in-out;
 }
+
 #wrap #inner1:hover {
-  background-color: greenyellow;
+	background-color: greenyellow;
 }
+
 #wrap #inner2 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: yeelow;
-  width: 100px;
-  height: 100px;
-  top: 300px;
-  margin: auto;
-  transition: all 0.7s ease-in-out;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: yeelow;
+	width: 100px;
+	height: 100px;
+	top: 300px;
+	margin: auto;
+	transition: all 0.7s ease-in-out;
 }
+
 #wrap #inner2:hover {
-  background-color: greenyellow;
+	background-color: greenyellow;
 }
+
 /*# sourceMappingURL=带有参数的混合.css.map */

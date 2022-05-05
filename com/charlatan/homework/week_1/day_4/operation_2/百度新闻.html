@@ -10,210 +10,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>百度新闻</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="UTF-8">
+	<title>百度新闻</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        #box {
-            width: 100%;
-            height: 500px;
-            /*background-color: #CCFFFF;*/
-            margin-top: 200px;
+		#box {
+			width: 100%;
+			height: 500px;
+			/*background-color: #CCFFFF;*/
+			margin-top: 200px;
 
-        }
+		}
 
-        #top {
-            border-top: 2px solid #999999;
-            /*position: absolute;*/
-            height: 60px;
-            width: 1200px;
-            margin: 0 auto;
-            border-bottom: 1px solid #dee2e6;
-        }
+		#top {
+			border-top: 2px solid #999999;
+			/*position: absolute;*/
+			height: 60px;
+			width: 1200px;
+			margin: 0 auto;
+			border-bottom: 1px solid #dee2e6;
+		}
 
-        #news {
-            font-size: 23px;
-            font-weight: bold;
-            color: #254282;
-            display: inline-block;
-            line-height: 60px;
-        }
+		#news {
+			font-size: 23px;
+			font-weight: bold;
+			color: #254282;
+			display: inline-block;
+			line-height: 60px;
+		}
 
-        #photos {
-            display: inline-block;
-            color: #9d9d9d;
+		#photos {
+			display: inline-block;
+			color: #9d9d9d;
 
-        }
+		}
 
-        #jiantou {
-            display: block;
-            position: absolute;
-            margin-top: -44px;
-            margin-left: 170px;
-        }
+		#jiantou {
+			display: block;
+			position: absolute;
+			margin-top: -44px;
+			margin-left: 170px;
+		}
 
-        /*    --------------*/
-        #h-1 {
-            height: 230px;
-            width: 1200px;
-            margin: 0 auto;
-            /*background-color: #ffe5e5;*/
-            margin-top: 30px;
-        }
+		/*    --------------*/
+		#h-1 {
+			height: 230px;
+			width: 1200px;
+			margin: 0 auto;
+			/*background-color: #ffe5e5;*/
+			margin-top: 30px;
+		}
 
-        .h-1 {
-            display: inline-block;
-            width: 210px;
-            height: 170px;
-            /*background-color: #3b3b3b;*/
-            position: relative;
-            margin-left: 20px;
-        }
+		.h-1 {
+			display: inline-block;
+			width: 210px;
+			height: 170px;
+			/*background-color: #3b3b3b;*/
+			position: relative;
+			margin-left: 20px;
+		}
 
-        .h1span {
-            font-size: 15px;
-            color: #9d9d9d;
-            text-align: center;
-        }
+		.h1span {
+			font-size: 15px;
+			color: #9d9d9d;
+			text-align: center;
+		}
 
-        /*----------------------*/
-        #h-2 {
-            height: 220px;
-            width: 1200px;
-            margin: 0 auto;
-            /*background-color: #ffe5e5;*/
-            margin-top: 10px;
-        }
+		/*----------------------*/
+		#h-2 {
+			height: 220px;
+			width: 1200px;
+			margin: 0 auto;
+			/*background-color: #ffe5e5;*/
+			margin-top: 10px;
+		}
 
-        .h-2 {
-            display: inline-block;
-            width: 210px;
-            height: 160px;
-            /*background-color: #3b3b3b;*/
-            position: relative;
-            margin-left: 20px;
-        }
+		.h-2 {
+			display: inline-block;
+			width: 210px;
+			height: 160px;
+			/*background-color: #3b3b3b;*/
+			position: relative;
+			margin-left: 20px;
+		}
 
-        .h1span {
-            display: inline-block;
-            font-size: 13px;
-            color: #9d9d9d;
-            text-align: center;
-            line-height: 50px;
-        }
+		.h1span {
+			display: inline-block;
+			font-size: 13px;
+			color: #9d9d9d;
+			text-align: center;
+			line-height: 50px;
+		}
 
-        .hdiv {
-            width: 202px;
-            height: 50px;
-            text-align: center;
-            transition: all 1s;
-        }
+		.hdiv {
+			width: 202px;
+			height: 50px;
+			text-align: center;
+			transition: all 1s;
+		}
 
 
-        .hdiv :hover {
-            width: 193px;
-            /*background-color: #3064bb;*/
-            /*color: #ffffff;*/
-            margin-left: -10px;
-            color: #3b3b3b;
-            box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
-            -webkit-transform: translateY(-10px);
-            -moz-transform: translateY(-10px);
-            transform: translateY(-10px) translate3d(2px, 12px, 23px);
-        }
-    </style>
+		.hdiv :hover {
+			width: 193px;
+			/*background-color: #3064bb;*/
+			/*color: #ffffff;*/
+			margin-left: -10px;
+			color: #3b3b3b;
+			box-shadow: 0 10px 50px rgba(51, 51, 51, .25);
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px) translate3d(2px, 12px, 23px);
+		}
+	</style>
 </head>
 <body>
 <div id="box">
-    <div id="top">
-        <p id="news">图片新闻</p>
-        <p id="photos">PHOTOS</p>
-        <img alt="箭头" id="jiantou" src="file/jiantou_youxia_o.png" width="30">
-    </div>
-    <!--    -------------------------------->
-    <div id="h-1">
-        <div class="h-1" id="h-1-1">
-            <a href="javascript:">
-                <img height="128px" src="file/1-1.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-            <span class="h1span" id="h-1-1-span">
+	<div id="top">
+		<p id="news">图片新闻</p>
+		<p id="photos">PHOTOS</p>
+		<img id="jiantou" alt="箭头" src="file/jiantou_youxia_o.png" width="30">
+	</div>
+	<!--    -------------------------------->
+	<div id="h-1">
+		<div id="h-1-1" class="h-1">
+			<a href="javascript:">
+				<img height="128px" src="file/1-1.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+            <span id="h-1-1-span" class="h1span">
             北京地坛园外园重装开园</span></div>
-        </a>
-        </div>
-        <div class="h-1" id="h-1-2">
-            <a href="javascript:">
-                <img height="128px" src="file/1-2.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-                <span class="h1span" id="h-1-2-span">探访核酸检测实验室</span></div>
-        </a>
-        </div>
-        <div class="h-1" id="h-1-3">
-            <a href="javascript:">
-                <img height="128px" src="file/1-3.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-                <span class="h1span" id="h-1-3-span">夜访高铁建设者</span></div>
-        </a>
-        </div>
-        <div class="h-1" id="h-1-4">
-            <a href="javascript:">
-                <img height="128px" src="file/1-4.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-                <span class="h1span" id="h-1-4-span">太行秋色惹人醉</span></div>
-        </a>
-        </div>
-        <div class="h-1" id="h-1-5">
-            <a href="javascript:">
-                <img height="128px" src="file/1-5.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-                <span class="h1span" id="h-1-5-span">韩国国产运载火箭首飞入轨失败</span></div>
-        </a>
-        </div>
-    </div>
-    <!--------------------------------------------->
-    <div id="h-2">
-        <div class="h-2" id="h-2-1">
-            <a href="javascript:">
-                <img height="128px" src="file/2-1.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-                <span class="h1span" id="h-2-1-span">俄罗斯喀山迎来降雪天气</span></div>
-        </a>
-        </div>
-        <div class="h-2" id="h-2-2">
-            <a href="javascript:">
-                <img height="128px" src="file/2-2.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-                <span class="h1span" id="h-2-2-span">重庆：高峡出平湖</span></div>
-        </a>
-        </div>
-        <div class="h-2" id="h-2-3">
-            <a href="javascript:">
-                <img height="128px" src="file/2-3.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-            <span class="h1span" id="h-2-3-span">
+		</a>
+		</div>
+		<div id="h-1-2" class="h-1">
+			<a href="javascript:">
+				<img height="128px" src="file/1-2.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+				<span id="h-1-2-span" class="h1span">探访核酸检测实验室</span></div>
+		</a>
+		</div>
+		<div id="h-1-3" class="h-1">
+			<a href="javascript:">
+				<img height="128px" src="file/1-3.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+				<span id="h-1-3-span" class="h1span">夜访高铁建设者</span></div>
+		</a>
+		</div>
+		<div id="h-1-4" class="h-1">
+			<a href="javascript:">
+				<img height="128px" src="file/1-4.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+				<span id="h-1-4-span" class="h1span">太行秋色惹人醉</span></div>
+		</a>
+		</div>
+		<div id="h-1-5" class="h-1">
+			<a href="javascript:">
+				<img height="128px" src="file/1-5.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+				<span id="h-1-5-span" class="h1span">韩国国产运载火箭首飞入轨失败</span></div>
+		</a>
+		</div>
+	</div>
+	<!--------------------------------------------->
+	<div id="h-2">
+		<div id="h-2-1" class="h-2">
+			<a href="javascript:">
+				<img height="128px" src="file/2-1.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+				<span id="h-2-1-span" class="h1span">俄罗斯喀山迎来降雪天气</span></div>
+		</a>
+		</div>
+		<div id="h-2-2" class="h-2">
+			<a href="javascript:">
+				<img height="128px" src="file/2-2.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+				<span id="h-2-2-span" class="h1span">重庆：高峡出平湖</span></div>
+		</a>
+		</div>
+		<div id="h-2-3" class="h-2">
+			<a href="javascript:">
+				<img height="128px" src="file/2-3.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+            <span id="h-2-3-span" class="h1span">
         世界最大三角龙化石骨架拍卖
         </span></div>
-        </a>
-        </div>
-        <div class="h-2" id="h-2-4">
-            <a href="javascript:">
-                <img height="128px" src="file/2-4.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-                <span class="h1span" id="h-2-4-span">秋意浓 桂花香</span></div>
-        </a>
-        </div>
-        <div class="h-2" id="h-2-5">
-            <a href="javascript:">
-                <img height="128px" src="file/2-5.jpeg"></a><a href="javascript:">
-            <div class="hdiv">
-            <span class="h1span" id="h-2-5-span">华为在维也纳举行新品发布会
+		</a>
+		</div>
+		<div id="h-2-4" class="h-2">
+			<a href="javascript:">
+				<img height="128px" src="file/2-4.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+				<span id="h-2-4-span" class="h1span">秋意浓 桂花香</span></div>
+		</a>
+		</div>
+		<div id="h-2-5" class="h-2">
+			<a href="javascript:">
+				<img height="128px" src="file/2-5.jpeg"></a><a href="javascript:">
+			<div class="hdiv">
+            <span id="h-2-5-span" class="h1span">华为在维也纳举行新品发布会
             </span></div>
-        </a>
-        </div>
-    </div>
+		</a>
+		</div>
+	</div>
 </div>
 </body>
 </html>

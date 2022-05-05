@@ -10,24 +10,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>在一个div中显示鼠标实时位置</title>
-    <style>
-        #div1 {
-            width: 400px;
-            height: 40px;
-            border: 1px solid;
-            text-align: center;
-            line-height: 40px;
-        }
+	<meta charset="UTF-8">
+	<title>在一个div中显示鼠标实时位置</title>
+	<style>
+		#div1 {
+			width: 400px;
+			height: 40px;
+			border: 1px solid;
+			text-align: center;
+			line-height: 40px;
+		}
 
-        #div2 {
-            width: 600px;
-            height: 600px;
-            border: 1px solid;
-            margin: 10px;
-        }
-    </style>
+		#div2 {
+			width: 600px;
+			height: 600px;
+			border: 1px solid;
+			margin: 10px;
+		}
+	</style>
 </head>
 <body>
 <div id="div1">
@@ -37,31 +37,31 @@
 <!-- /#div2 -->
 </body>
 <script>
-    /*
-    * 事件对象：
-    *   当事件的响应函数被触发时，浏览器每次哦都会将每一个事件对象作为实参传递给响应函数
-    *   这个对象中封装了指定函数响应的一切信息，包括鼠标位置，那个按键被按下
-    * */
-    window.onload = function () {
-        document.getElementById("div2").onmousemove = function (event) {
-            /*
-            * clientX 返回当事件被触发时，鼠标指针的水平坐标。
-            * clientY 返回当事件被触发时，鼠标指针的垂直坐标。
-            *   是获取的相对客户端的距离
-            *
-            * pageX和pageY获取的是根据页面定位的说平和垂直距离
-            * */
-            let div1 = document.getElementById("div1")
-            let div2 = document.getElementById("div2")
+	/*
+	 * 事件对象：
+	 *   当事件的响应函数被触发时，浏览器每次哦都会将每一个事件对象作为实参传递给响应函数
+	 *   这个对象中封装了指定函数响应的一切信息，包括鼠标位置，那个按键被按下
+	 * */
+	window.onload = function () {
+		document.getElementById ('div2').onmousemove = function (event) {
+			/*
+			 * clientX 返回当事件被触发时，鼠标指针的水平坐标。
+			 * clientY 返回当事件被触发时，鼠标指针的垂直坐标。
+			 *   是获取的相对客户端的距离
+			 *
+			 * pageX和pageY获取的是根据页面定位的说平和垂直距离
+			 * */
+			let div1 = document.getElementById ('div1')
+			let div2 = document.getElementById ('div2')
 
-            let x = event.clientX
-            let y = event.clientY
-            div1.innerText = "X:" + x + "px," + "Y:" + y + "px"
-        }
-        document.getElementById("div2").onmouseout = function () {
-            document.getElementById("div1").innerText =''
-            // alert(12313)
-        }
-    }
+			let x = event.clientX
+			let y = event.clientY
+			div1.innerText = 'X:' + x + 'px,' + 'Y:' + y + 'px'
+		}
+		document.getElementById ('div2').onmouseout = function () {
+			document.getElementById ('div1').innerText = ''
+			// alert(12313)
+		}
+	}
 </script>
 </html>

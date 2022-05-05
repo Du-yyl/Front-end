@@ -10,26 +10,26 @@
 
 <template>
   <div class="div">
-    <Category title="数据" class="item">
+    <Category class="item" title="数据">
       <template scope="arr">
         <ul class="ul">
-          <li class="li" v-for="item in arr.arr1">{{ item }}</li>
+          <li v-for="item in arr.arr1" class="li">{{ item }}</li>
         </ul>
       </template>
     </Category>
 
-    <Category title="数据" class="item">
+    <Category class="item" title="数据">
       <template scope="arr">
-        <ol style="color: red" class="ul">
-          <li class="li" v-for="item in arr.arr1">{{ item }}</li>
+        <ol class="ul" style="color: red">
+          <li v-for="item in arr.arr1" class="li">{{ item }}</li>
         </ol>
       </template>
     </Category>
 
-    <Category title="数据" class="item">
+    <Category class="item" title="数据">
       <template slot-scope="arr">
         <ul class="ul">
-          <li class="li" v-for="item in arr.arr1">{{ item }}</li>
+          <li v-for="item in arr.arr1" class="li">{{ item }}</li>
         </ul>
       </template>
     </Category>

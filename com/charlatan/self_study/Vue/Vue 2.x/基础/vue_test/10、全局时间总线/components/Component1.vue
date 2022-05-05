@@ -26,12 +26,12 @@ export default {
   },
   components: {},
   mounted () {
-    this.$bus.$on('sends', (data) => {
-      console.log('这里是组件1', data)
+    this.$bus.$on ('sends', (data) => {
+      console.log ('这里是组件1', data)
     })
   },
   beforeDestroy () {
-    this.$bus.$off('sends')
+    this.$bus.$off ('sends')
   },
 }
 </script>

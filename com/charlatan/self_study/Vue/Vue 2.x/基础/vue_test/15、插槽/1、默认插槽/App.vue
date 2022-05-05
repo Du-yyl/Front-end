@@ -10,12 +10,12 @@
 
 <template>
   <div class="div">
-    <Category title="列表1" :items="arr1" class="item">
-      <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wE9W?ver=bc8e" alt=""
-           class="img">
+    <Category :items="arr1" class="item" title="列表1">
+      <img alt="" class="img"
+           src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wE9W?ver=bc8e">
     </Category>
-    <Category title="列表2" :items="arr2" class="item"></Category>
-    <Category title="列表3" :items="arr3" class="item"></Category>
+    <Category :items="arr2" class="item" title="列表2"></Category>
+    <Category :items="arr3" class="item" title="列表3"></Category>
   </div>
 </template>
 

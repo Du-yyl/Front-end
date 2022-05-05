@@ -45,8 +45,8 @@ var input = document.querySelector('input');
 </body>
 <script>
 	window.onload = function () {
-		let text = document.getElementById('text')
-		text.oninput = throttling(func1, 1000)
+		let text = document.getElementById ('text')
+		text.oninput = throttling (func1, 1000)
 
 		// text.oninput = func1
 
@@ -60,19 +60,19 @@ var input = document.querySelector('input');
 			let flag = true
 			return function () {
 				let timer = null
-				if (flag) {
+				if ( flag ) {
 					flag = false
-					callback()
-					timer = setTimeout(() => {
+					callback ()
+					timer = setTimeout (() => {
 						flag = true
-						clearTimeout(timer)
+						clearTimeout (timer)
 					}, time)
 				}
 			}
 		}
 
 		function func1 () {
-			console.log('我是节流')
+			console.log ('我是节流')
 		}
 	}
 </script>

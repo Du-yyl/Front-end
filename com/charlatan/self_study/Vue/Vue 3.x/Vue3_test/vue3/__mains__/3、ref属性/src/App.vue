@@ -18,9 +18,9 @@ export default {
   components: {},
   setup () {
     // 将数据通过ref进行配置，可以使Vue完成响应式的布局，通过这个属性可以让属性变成一个相应式的数据
-    let name = ref('李四')
-    let age = ref(50)
-    let obj = ref({
+    let name = ref ('李四')
+    let age = ref (50)
+    let obj = ref ({
       obj_1: '测试数据1',
       obj_2: '测试数据2',
     })
@@ -37,7 +37,7 @@ export default {
       // 对于Vue3中的对象数据类型，不用使用.value的形式形式进行访问，而是直接使用对象.的形式进行访问
       // Vue3中对对象类的数据进行重写的方式不同
       obj.value.obj_1 = '第一个数据修改测试例子'
-      console.log()
+      console.log ()
     }
 
     // 这个函数会返回一个对象，通常是常用的配置对象

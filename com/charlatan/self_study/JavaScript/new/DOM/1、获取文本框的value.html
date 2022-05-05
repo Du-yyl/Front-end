@@ -10,23 +10,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>获取文本框的value</title>
+	<meta charset="UTF-8">
+	<title>获取文本框的value</title>
 </head>
 <body>
 <input id="text" type="text" value="">
 <input id="btn1" type="button" value="我是按钮">
 <script>
-    window.onload = function () {
-        // alert(document.getElementById('text').value)
-        // document.getElementById('text').onkeydown = function (){
-        //     document.getElementById('text').value = 'this is a test'
-        // }
-        document.getElementById('btn1').onclick = function () {
-            alert(document.getElementById('text').value)
-        }
-    }
-    
+	window.onload = function () {
+		// alert(document.getElementById('text').value)
+		// document.getElementById('text').onkeydown = function (){
+		//     document.getElementById('text').value = 'this is a test'
+		// }
+		document.getElementById ('btn1').onclick = function () {
+			alert (document.getElementById ('text').value)
+		}
+	}
+
 </script>
 </body>
 </html>

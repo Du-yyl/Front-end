@@ -21,8 +21,8 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	let btn = $('#btn')
-	btn.click(function () {
+	let btn = $ ('#btn')
+	btn.click (function () {
 		// setTimeout(function () {
 		// 	if (num) {
 		// 		console.log('111')
@@ -31,25 +31,25 @@
 		// 	}
 		// }, 1000)
 
-		let per = new Promise((resolve, reject) => {
-			setTimeout(() => {
-				let num = Math.floor(Math.random() * 2)
-				if (num) {
+		let per = new Promise ((resolve, reject) => {
+			setTimeout (() => {
+				let num = Math.floor (Math.random () * 2)
+				if ( num ) {
 					// 将promise的状态改为成功【这里也可以传递参数】
-					resolve(num)
+					resolve (num)
 				} else {
 					// 将promise的状态改为失败
-					reject(num)
+					reject (num)
 				}
 			})
 		})
 
-		per.then((value) => {
-			console.log('1111')
-			console.log(value)
+		per.then ((value) => {
+			console.log ('1111')
+			console.log (value)
 		}, (value) => {
-			console.log('2222')
-			console.log(value)
+			console.log ('2222')
+			console.log (value)
 		})
 	})
 

@@ -34,31 +34,29 @@
 	<script>
 		window.onload = function () {
 
-			let div = document.getElementById("div")
-			let div_span = document.getElementById("div-span")
-			let span1 = document.getElementById("span1")
-			let span2 = document.getElementById("span2")
-			let span3 = document.getElementById("span3")
-
+			let div = document.getElementById ('div')
+			let div_span = document.getElementById ('div-span')
+			let span1 = document.getElementById ('span1')
+			let span2 = document.getElementById ('span2')
+			let span3 = document.getElementById ('span3')
 
 			div.onmousemove = function (event) {
 				let x = event.offsetX
 				let y = event.offsetY
-				span1.innerText = "在div中的X：" + x + " ，Y:" + y
+				span1.innerText = '在div中的X：' + x + ' ，Y:' + y
 			}
 
 			window.onmousemove = function (event) {
 				let x = event.screenX
 				let y = event.screenY
-				span2.innerText = "   ；在屏幕中的X：" + x + " ，Y:" + y
+				span2.innerText = '   ；在屏幕中的X：' + x + ' ，Y:' + y
 			}
 
 			document.onmousemove = function (event) {
 				let x = event.clientX
 				let y = event.clientY
-				span3.innerText = "   ；在屏幕中的X：" + x + " ，Y:" + y
+				span3.innerText = '   ；在屏幕中的X：' + x + ' ，Y:' + y
 			}
-
 
 		}
 	</script>

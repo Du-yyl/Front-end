@@ -10,33 +10,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>正则表达式</title>
+	<meta charset="UTF-8">
+	<title>正则表达式</title>
 </head>
 <body>
 <p>
-    正侧表达式的创建
+	正侧表达式的创建
 </p>
 <input id="text" type="text">
 <input id="btn" type="button" value="按钮">
 <script>
-    /*
-    * 正则表达式创建的第一种方式*/
-    var regExp_1 = /^\w+$/
-    /*
-    * 正则表达式创建的第二种方式*/
-    // var regExp_2 = new regExp_2("^\w+$")
+	/*
+	 * 正则表达式创建的第一种方式*/
+	var regExp_1 = /^\w+$/
+	/*
+	 * 正则表达式创建的第二种方式*/
+	// var regExp_2 = new regExp_2("^\w+$")
 
-    window.onload = function () {
-        document.getElementById('btn').onclick = function () {
-            if (regExp_1.test(document.getElementById('text').value)) {
-                alert('验证成功')
-            } else {
-                alert('输入有误，重新输入')
-                document.getElementById('text').value = ''
-            }
-        }
-    }
+	window.onload = function () {
+		document.getElementById ('btn').onclick = function () {
+			if ( regExp_1.test (document.getElementById ('text').value) ) {
+				alert ('验证成功')
+			} else {
+				alert ('输入有误，重新输入')
+				document.getElementById ('text').value = ''
+			}
+		}
+	}
 </script>
 </body>
 </html>

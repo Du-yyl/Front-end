@@ -15,8 +15,8 @@
 
 </head>
 <body>
-<div class="box" id="div1" title="one">class为box的div1</div>
-<div class="box" id="div2">class为box的div2</div>
+<div id="div1" class="box" title="one">class为box的div1</div>
+<div id="div2" class="box">class为box的div2</div>
 <div id="div3">div3</div>
 <span class="box">class为box的span</span>
 <br/>
@@ -25,7 +25,7 @@
 		<span>span文本1</span>
 		<li>AAAAA</li>
 		<li class="box2" title="hello">BBBBB</li>
-		<li class="box" id='cc'>CCCCC</li>
+		<li id='cc' class="box">CCCCC</li>
 		<li title="hello">DDDDDD</li>
 		<li title="two"><span>span文本2</span></li>
 		<span>span文本3</span>
@@ -53,14 +53,14 @@
 	 2. ul标签的第2个span后代标签
 	 5. id为cc的li标签的所有兄弟li标签
 	 */
-	$(function () {
-		console.log($(`ul > span:eq(1)`).html());
+	$ (function () {
+		console.log ($ (`ul > span:eq(1)`).html ())
 	})
 	//	 ul标签的父标签
-	console.log($(`ul:parent`).html());
+	console.log ($ (`ul:parent`).html ())
 	//	id为cc的li标签的前面的所有li标签
-	$(`ul`).children(`#cc`).prevAll("li").css({
-		backgroundColor: 'red'
+	$ (`ul`).children (`#cc`).prevAll ('li').css ({
+		backgroundColor: 'red',
 	})
 </script>
 </html>

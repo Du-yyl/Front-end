@@ -10,7 +10,7 @@
 
 <template>
   <div>
-    <input type="search" class="search" v-model:value="value" placeholder="输入内容开始搜索" @keydown.enter="add">
+    <input v-model:value="value" class="search" placeholder="输入内容开始搜索" type="search" @keydown.enter="add">
   </div>
 </template>
 
@@ -26,12 +26,12 @@ export default {
   },
   methods: {
     add () {
-      let value = this.value.trim()
-      if (value === '') {
-        console.log('请输入内容')
+      let value = this.value.trim ()
+      if ( value === '' ) {
+        console.log ('请输入内容')
         this.value = ''
       } else {
-        this.addObj({ id: nanoid(), value, done: false })
+        this.addObj ({ id: nanoid (), value, done: false })
         this.value = ''
       }
     },
@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 .search {
   width: 400px;
   height: 50px;

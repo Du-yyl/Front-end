@@ -13,7 +13,7 @@
     <h3>{{ title }} 列表</h3>
     <slot name="slot1">
       <ul class="ul">
-        <li class="li" v-for="item in items">测试内容</li>
+        <li v-for="item in items" class="li">测试内容</li>
       </ul>
     </slot>
     <slot name="slot2"></slot>

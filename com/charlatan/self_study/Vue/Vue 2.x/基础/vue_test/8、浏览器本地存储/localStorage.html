@@ -23,27 +23,27 @@
 <button id="btn4">清空数据</button>
 </body>
 <script>
-	let btn1 = document.getElementById('btn1')
-	let btn2 = document.getElementById('btn2')
-	let btn3 = document.getElementById('btn3')
-	let btn4 = document.getElementById('btn4')
+	let btn1 = document.getElementById ('btn1')
+	let btn2 = document.getElementById ('btn2')
+	let btn3 = document.getElementById ('btn3')
+	let btn4 = document.getElementById ('btn4')
 
 	let p = { name: '测试', age: 10 }
 	btn1.onclick = function () {
-		window.localStorage.setItem('名字', '测试内容1')
-		window.localStorage.setItem('名字', JSON.stringify(p))
+		window.localStorage.setItem ('名字', '测试内容1')
+		window.localStorage.setItem ('名字', JSON.stringify (p))
 	}
 
 	btn2.onclick = function () {
-		console.log(localStorage.getItem('名字'))
+		console.log (localStorage.getItem ('名字'))
 	}
 
 	btn3.onclick = function () {
-		localStorage.removeItem('名字')
+		localStorage.removeItem ('名字')
 	}
 
 	btn4.onclick = function () {
-		localStorage.clear()
+		localStorage.clear ()
 	}
 </script>
 </html>

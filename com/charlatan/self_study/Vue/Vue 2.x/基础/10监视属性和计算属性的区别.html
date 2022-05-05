@@ -20,12 +20,12 @@
 <div id="root">
 	<label>
 		姓
-		<input type="text" name="" placeholder="姓" v-model="surname">
+		<input v-model="surname" name="" placeholder="姓" type="text">
 	</label>
 	<hr>
 	<label>
 		名
-		<input type="text" name="" v-model="name">
+		<input v-model="name" name="" type="text">
 	</label>
 	<hr>
 	全名：{{ fullName }}
@@ -37,12 +37,12 @@
 <div id="dom">
 	<label>
 		姓
-		<input type="text" name="" placeholder="姓" v-model="surname">
+		<input v-model="surname" name="" placeholder="姓" type="text">
 	</label>
 	<hr>
 	<label>
 		名
-		<input type="text" name="" v-model="name">
+		<input v-model="name" name="" type="text">
 	</label>
 	<hr>
 	全名：{{ fullName }}
@@ -67,7 +67,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			surname: '张',
@@ -82,7 +82,7 @@
 		watch: {},
 	})
 
-	let vm1 = new Vue({
+	let vm1 = new Vue ({
 		el: '#dom',
 		data: {
 			surname: '张',
@@ -93,7 +93,7 @@
 			surname (newValue) {
 				// 当要使用定时器时，要使用箭头函数，因为默认的函数中的this是window的事件管理模块调用的，他的this指向的是window，
 				// 但是我们希望这个this是指向VM的，使用箭头函数没有指定的this，会向外进行查找，所以这时才能将this正确指定为 VM
-				setTimeout(() => {
+				setTimeout (() => {
 					this.fullName = newValue + this.name
 				}, 1000)
 			},

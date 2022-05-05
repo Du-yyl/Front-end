@@ -15,8 +15,8 @@
 
 </head>
 <body>
-<div class="box" id="div1" title="one">class为box的div1</div>
-<div class="box" id="div2" title="two">class为box的div2</div>
+<div id="div1" class="box" title="one">class为box的div1</div>
+<div id="div2" class="box" title="two">class为box的div2</div>
 <div id="div3">div3</div>
 <span class="box">class为box的span</span>
 <br/>
@@ -51,36 +51,36 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	$(function () {
+	$ (function () {
 		//读取第一个div的title属性
-		let divs = $(`div`)
+		let divs = $ (`div`)
 		let div_1 = divs[0]
-		console.log(div_1.title);
+		console.log (div_1.title)
 		//	给所有的div设置name属性(atguigu)
-		divs.attr('name', "我是name属性")
+		divs.attr ('name', '我是name属性')
 		//	移除所有div的title属性
-		divs.removeAttr("title")
+		divs.removeAttr ('title')
 		//	给所有的div设置class='guiguClass'
-		divs.addClass("我是新添加的class")
+		divs.addClass ('我是新添加的class')
 		//	移除所有div的guiguClass的class
-		divs.removeAttr("class")
+		divs.removeAttr ('class')
 		//得到最后一个li的标签体文本
-		let li_last = $(`ul > li:last`)
-		console.log(li_last.text());
+		let li_last = $ (`ul > li:last`)
+		console.log (li_last.text ())
 		//设置第一个li的标签体为"<h1>mmmmmmmmm</h1>"
-		$(`ul > li:first`).html('<h1>mmmmmmmmm</h1>')
+		$ (`ul > li:first`).html ('<h1>mmmmmmmmm</h1>')
 		//得到输入框中的value值
-		let text = $(`input:text`)
-		console.log(text.val());
-		text.val('我是新添加的value')
+		let text = $ (`input:text`)
+		console.log (text.val ())
+		text.val ('我是新添加的value')
 		//点击'全选'按钮实现全选
 
-		let boxs = $(`input:checkbox`)
-		$(`button:first`).click(function () {
-			boxs.prop("checked", true)
+		let boxs = $ (`input:checkbox`)
+		$ (`button:first`).click (function () {
+			boxs.prop ('checked', true)
 		})
-		$(`button:last`).click(function () {
-			boxs.prop('checked', false)
+		$ (`button:last`).click (function () {
+			boxs.prop ('checked', false)
 		})
 	}</script>
 </html>

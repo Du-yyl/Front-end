@@ -13,32 +13,32 @@
 	<meta charset="UTF-8">
 	<title>密码的密码的可见和不可见</title>
 	<style>
-        #text {
-            width: 200px;
-            height: 40px;
-            position: absolute;
-            top: calc(30% - 20px);
-            left: calc(30% - 50px);
-            font-size: 20px;
-            color: #525050;
-        }
+		#text {
+			width: 200px;
+			height: 40px;
+			position: absolute;
+			top: calc(30% - 20px);
+			left: calc(30% - 50px);
+			font-size: 20px;
+			color: #525050;
+		}
 
-        #text::placeholder {
-            font-size: 20px;
-            color: #525050;
-        }
+		#text::placeholder {
+			font-size: 20px;
+			color: #525050;
+		}
 
-        #div-img {
-            position: absolute;
-            left: 45%;
-            top: 265px;
-            width: 20px;
-            height: 20px;
-        }
+		#div-img {
+			position: absolute;
+			left: 45%;
+			top: 265px;
+			width: 20px;
+			height: 20px;
+		}
 
-        #img {
-            width: 100%;
-        }
+		#img {
+			width: 100%;
+		}
 
 
 	</style>
@@ -48,21 +48,21 @@
 	<input id="text" placeholder=" 请输入密码" type="password">
 </label>
 <div id="div-img">
-	<img alt="" height="20" id="img" src="file/passwordEyeDown.png">
+	<img id="img" alt="" height="20" src="file/passwordEyeDown.png">
 </div>
 <script>
 	window.onload = function () {
-		let flag = false;
-		document.getElementById("div-img").onclick = function () {
+		let flag = false
+		document.getElementById ('div-img').onclick = function () {
 
-			if (flag) {
-				document.getElementById("text").type = "password"
-				document.getElementById("img").src = "file/passwordEyeDown.png"
-				flag = false;
+			if ( flag ) {
+				document.getElementById ('text').type = 'password'
+				document.getElementById ('img').src = 'file/passwordEyeDown.png'
+				flag = false
 			} else {
-				document.getElementById("text").type = "text"
-				document.getElementById("img").src = "file/passwordEyeOpen.png"
-				flag = true;
+				document.getElementById ('text').type = 'text'
+				document.getElementById ('img').src = 'file/passwordEyeOpen.png'
+				flag = true
 			}
 		}
 	}

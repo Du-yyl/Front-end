@@ -14,9 +14,11 @@ less中的变量都是延时加载的，并且都是块作用域
 因为less中的作用域是块作用域，所以最后的one输出是 1
 */
 .class {
-  one: 1;
+	one: 1;
 }
+
 .class .brass {
-  three: 3;
+	three: 3;
 }
+
 /*# sourceMappingURL=变量的延迟加载.css.map */

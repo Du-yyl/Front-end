@@ -3,9 +3,10 @@
   * Name:编译时会出现的问题.less
   */
 * {
-  width: 300px;
-  height: 220px;
-  margin-left: calc(100 + 200px);
-  margin-right: calc(100px + 200);
+	width: 300px;
+	height: 220px;
+	margin-left: calc(100 + 200px);
+	margin-right: calc(100px + 200);
 }
+
 /*# sourceMappingURL=编译时会出现的问题.css.map */

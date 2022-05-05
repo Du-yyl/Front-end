@@ -10,10 +10,10 @@
 
 // 定义食物类
 export default class Food {
-  //  定义一个属性表示食物所对应的元素
-  element: HTMLElement
   // 屏幕宽度
   static screenWidth = 50
+  //  定义一个属性表示食物所对应的元素
+  element: HTMLElement
   
   constructor () {
     // 因为不需要传入元素，所以在构造函数中直接进行赋值

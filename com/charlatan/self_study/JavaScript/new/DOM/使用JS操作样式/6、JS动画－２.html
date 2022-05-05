@@ -10,58 +10,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS动画-2</title>
-    <style>
-        #box {
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            position: absolute;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<title>JS动画-2</title>
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
 
 </head>
 <script>
-    window.onload = function () {
-        let box = document.getElementById("box")
+	window.onload = function () {
+		let box = document.getElementById ('box')
 
-        let x = 0
-        let y = 0
+		let x = 0
+		let y = 0
 
-        let speed = 2
+		let speed = 2
 
-        let xSpeed = speed
-        let ySpeed = speed
+		let xSpeed = speed
+		let ySpeed = speed
 
-        const moveFun = () => {
-            x += xSpeed
-            y += ySpeed
+		const moveFun = () => {
+			x += xSpeed
+			y += ySpeed
 
-            if (x>=window.innerWidth - box.offsetWidth ){
-                x = window.innerWidth - box.offsetWidth
-                xSpeed = -xSpeed
-            }
-            if (y>=window.innerHeight - box.offsetHeight){
-                y = window.innerHeight - box.offsetHeight
-                ySpeed = -ySpeed
-            }
+			if ( x >= window.innerWidth - box.offsetWidth ) {
+				x = window.innerWidth - box.offsetWidth
+				xSpeed = -xSpeed
+			}
+			if ( y >= window.innerHeight - box.offsetHeight ) {
+				y = window.innerHeight - box.offsetHeight
+				ySpeed = -ySpeed
+			}
 
-            if ( x<=0){
-                x = 0
-                xSpeed = -xSpeed
-            }
-            if ( y<= 0){
-                y = 0
-                ySpeed = -ySpeed
-            }
+			if ( x <= 0 ) {
+				x = 0
+				xSpeed = -xSpeed
+			}
+			if ( y <= 0 ) {
+				y = 0
+				ySpeed = -ySpeed
+			}
 
-            box.style.left = x+"px"
-            box.style.top = y+"px"
-            requestAnimationFrame(moveFun)
-        }
-        requestAnimationFrame(moveFun)
-    }
+			box.style.left = x + 'px'
+			box.style.top = y + 'px'
+			requestAnimationFrame (moveFun)
+		}
+		requestAnimationFrame (moveFun)
+	}
 </script>
 <body>
 <div id="box"></div>

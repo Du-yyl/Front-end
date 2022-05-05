@@ -34,21 +34,21 @@ export default {
   },
   components: {},
   mounted () {
-    this.$bus.$on('wait', (str, is = false) => {
-      if (is) {
+    this.$bus.$on ('wait', (str, is = false) => {
+      if ( is ) {
         this.str = str
         this.arr = []
       } else {
         this.str = '加载中'
       }
     })
-    this.$bus.$on('sends', (data) => {
+    this.$bus.$on ('sends', (data) => {
       this.arr = data
     })
 
   },
   beforeDestroy () {
-    this.$bus.$off('sends')
+    this.$bus.$off ('sends')
   },
 }
 </script>

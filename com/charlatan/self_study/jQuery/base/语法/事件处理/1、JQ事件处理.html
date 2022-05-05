@@ -13,52 +13,52 @@
 	<meta charset="UTF-8">
 	<title>事件处理</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
 
-        * {
-            margin: 0px;
-        }
+		* {
+			margin: 0px;
+		}
 
-        .out {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            top: 20px;
-            left: 10px;
-            background: blue;
-        }
+		.out {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top: 20px;
+			left: 10px;
+			background: blue;
+		}
 
-        .inner {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            top: 50px;
-            background: red;
-        }
+		.inner {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 50px;
+			background: red;
+		}
 
-        .divBtn {
-            position: absolute;
-            top: 250px;
-        }
+		.divBtn {
+			position: absolute;
+			top: 250px;
+		}
 
-        pre {
-            position: absolute;
-            top: 400px;
-            left: 0;
-        }
+		pre {
+			position: absolute;
+			top: 400px;
+			left: 0;
+		}
 
 	</style>
 </head>
@@ -73,7 +73,7 @@
 	<button id="btn1">取消绑定所有事件</button>
 	<button id="btn2">取消绑定mouseover事件</button>
 	<button id="btn3">测试事件坐标</button>
-	<a href="http://www.baidu.com" id="test4">百度一下</a>
+	<a id="test4" href="http://www.baidu.com">百度一下</a>
 </div>
 <pre>
 	1. 事件绑定(2种)：
@@ -97,69 +97,67 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	$(function () {
-		let inner = $(`.inner`)
-		$('.out').on('click', function () {
-			console.log('out clicked2')
+	$ (function () {
+		let inner = $ (`.inner`)
+		$ ('.out').on ('click', function () {
+			console.log ('out clicked2')
 		})
 		//	给.out绑定点击监听(用两种方法绑定)
 		/*		$(`.out`).click(function () {
-					alert("123")
-				})*/
+		 alert("123")
+		 })*/
 		/*		$(`.out`).on('click mouseover',function () {
-					alert("321")
-				})*/
+		 alert("321")
+		 })*/
 
 		//	给.inner绑定鼠标移入和移出的事件监听(用3种方法绑定)
 		/*		$(`.inner`)
-					.mouseenter(function () {
-						alert("进入，，，")
-					})
-					.mouseleave(function () {
-						alert("离开，，，")
-					})*/
-		inner
-			.on((`mouseenter`), function () {
-				alert("进入,,,")
-			})
-			.on((`mouseleave`), function () {
-				alert("离开,,,")
-			})
+		 .mouseenter(function () {
+		 alert("进入，，，")
+		 })
+		 .mouseleave(function () {
+		 alert("离开，，，")
+		 })*/
+		inner.on ((`mouseenter`), function () {
+			alert ('进入,,,')
+		}).on ((`mouseleave`), function () {
+			alert ('离开,,,')
+		})
 		/*				$(`.inner`).hover(function () {
-							alert("进入。。。")
-						}),function () {
-							alert("离开。。。")
-						}*/
+		 alert("进入。。。")
+		 }),function () {
+		 alert("离开。。。")
+		 }*/
 
 		//	点击btn1解除.inner上的所有事件监听
-		$(`#btn1`).on("click", function () {
-			$(`.inner`).off()
+		$ (`#btn1`).on ('click', function () {
+			$ (`.inner`).off ()
 		})
 
 		//	点击btn2解除.inner上的mouseover事件
-		$(`#btn2`).on("click", function () {
-			$(`.inner`).off('mouseleave')
+		$ (`#btn2`).on ('click', function () {
+			$ (`.inner`).off ('mouseleave')
 		})
 
 		//	点击btn3得到事件坐标
-		$(`#btn3`).on('click', function (event) {
-			console.log("距离最近的div" + event.offsetX, event.offsetY);
-			console.log("距离页面最顶部的距离（非可视区域）" + event.pageX, event.pageY);
-			console.log("距离页面顶部（可视距离）" + event.clientX, event.clientY);
+		$ (`#btn3`).on ('click', function (event) {
+			console.log ('距离最近的div' + event.offsetX, event.offsetY)
+			console.log ('距离页面最顶部的距离（非可视区域）' + event.pageX, event.pageY)
+			console.log ('距离页面顶部（可视距离）' + event.clientX, event.clientY)
 		})
 
 		//	点击.inner区域, 外部点击监听不响应
-		inner.click(function (event) {
-			console.log("123123");
+		inner.click (function (event) {
+			console.log ('123123')
 			// 停止事件冒泡
-			event.stopPropagation()
+			event.stopPropagation ()
 		})
 
 		//	点击链接, 如果当前时间是偶数不跳转
-		$(`#test4`).click(function (event) {
-			let time = new Date()
-			if (time % 2 === 0) {
-				event.preventDefault()
+		$ (`#test4`).click (function (event) {
+			let time = new Date ()
+			if ( time % 2 === 0 ) {
+				event.preventDefault ()
 			}
 		})
 	})

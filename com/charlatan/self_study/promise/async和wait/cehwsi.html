@@ -21,23 +21,23 @@
 </body>
 <script>
 	async function main () {
-		setTimeout(function () {
+		setTimeout (function () {
 			return 123
 		}, 1000)
 	}
 
 	function ma () {
-		console.log('hi')
+		console.log ('hi')
 	}
 
-	ma()
-	console.log(main())
-	main().then((value) => {
-		console.log(value)
-		console.log('111')
+	ma ()
+	console.log (main ())
+	main ().then ((value) => {
+		console.log (value)
+		console.log ('111')
 	}, (res) => {
-		console.log(res)
-		console.log('222')
+		console.log (res)
+		console.log ('222')
 	})
 </script>
 </html>

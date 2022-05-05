@@ -10,401 +10,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>表单验证</title>
-    <style>
-        #box {
-            margin: 30px;
-        }
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+	<style>
+		#box {
+			margin: 30px;
+		}
 
-        #body-form {
-            width: 500px;
-            height: 600px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px 0 #7b7878;
-            position: relative;
-        }
+		#body-form {
+			width: 500px;
+			height: 600px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 0 0 10px 0 #7b7878;
+			position: relative;
+		}
 
-        #titlt {
-            width: 100%;
-            height: 60px;
-            display: block;
-            font-size: 30px;
-            text-align: center;
-            line-height: 60px;
-        }
+		#titlt {
+			width: 100%;
+			height: 60px;
+			display: block;
+			font-size: 30px;
+			text-align: center;
+			line-height: 60px;
+		}
 
-        /*---username-------*/
-        #userName {
-            width: 395px;
-            height: 49px;
-            border: 1px solid #73ee60;
-            border-radius: 5px;
-            outline: none;
-            padding-left: 10px;
-            font-size: 17px;
-            caret-color: lawngreen;
-            position: absolute;
-            top: 120px;
-            left: 50px;
-        }
+		/*---username-------*/
+		#userName {
+			width: 395px;
+			height: 49px;
+			border: 1px solid #73ee60;
+			border-radius: 5px;
+			outline: none;
+			padding-left: 10px;
+			font-size: 17px;
+			caret-color: lawngreen;
+			position: absolute;
+			top: 120px;
+			left: 50px;
+		}
 
-        #userName::placeholder {
-            color: orange;
-        }
+		#userName::placeholder {
+			color: orange;
+		}
 
-        #userName:focus {
-            box-shadow: 0 0 10px 0 #1cff00;
-        }
+		#userName:focus {
+			box-shadow: 0 0 10px 0 #1cff00;
+		}
 
-        /*    ------password-------*/
+		/*    ------password-------*/
 
-        #password {
-            width: 395px;
-            height: 49px;
-            border: 1px solid #339e23;
-            border-radius: 5px;
-            outline: none;
-            padding-left: 10px;
-            font-size: 17px;
-            caret-color: #00fc32;
-            position: absolute;
-            top: 210px;
-            left: 50px;
-        }
+		#password {
+			width: 395px;
+			height: 49px;
+			border: 1px solid #339e23;
+			border-radius: 5px;
+			outline: none;
+			padding-left: 10px;
+			font-size: 17px;
+			caret-color: #00fc32;
+			position: absolute;
+			top: 210px;
+			left: 50px;
+		}
 
-        #password::placeholder {
-            color: #d58d03;
-        }
+		#password::placeholder {
+			color: #d58d03;
+		}
 
-        #password:focus {
-            box-shadow: 0 0 10px 0 #00ff59;
-        }
+		#password:focus {
+			box-shadow: 0 0 10px 0 #00ff59;
+		}
 
-        /*    -----password-again-----------------*/
-        #password-again {
-            width: 395px;
-            height: 49px;
-            border: 1px solid #339e23;
-            border-radius: 5px;
-            outline: none;
-            padding-left: 10px;
-            font-size: 17px;
-            caret-color: #00fc32;
-            position: absolute;
-            top: 300px;
-            left: 50px;
-        }
+		/*    -----password-again-----------------*/
+		#password-again {
+			width: 395px;
+			height: 49px;
+			border: 1px solid #339e23;
+			border-radius: 5px;
+			outline: none;
+			padding-left: 10px;
+			font-size: 17px;
+			caret-color: #00fc32;
+			position: absolute;
+			top: 300px;
+			left: 50px;
+		}
 
-        #password-again::placeholder {
-            color: #d58d03;
-        }
+		#password-again::placeholder {
+			color: #d58d03;
+		}
 
-        #password-again:focus {
-            box-shadow: 0 0 10px 0 #00ff59;
-        }
+		#password-again:focus {
+			box-shadow: 0 0 10px 0 #00ff59;
+		}
 
-        /*    --------sex--------------*/
-        #sex {
-            width: 395px;
-            height: 49px;
-            margin-left: 40px;
-            margin-top: 10px;
-            border-radius: 5px;
-            outline: none;
-            padding-left: 10px;
-            font-size: 17px;
-            position: absolute;
-            top: 370px;
-            left: 10px;
-        }
+		/*    --------sex--------------*/
+		#sex {
+			width: 395px;
+			height: 49px;
+			margin-left: 40px;
+			margin-top: 10px;
+			border-radius: 5px;
+			outline: none;
+			padding-left: 10px;
+			font-size: 17px;
+			position: absolute;
+			top: 370px;
+			left: 10px;
+		}
 
-        /*    =======email===========
+		/*    =======email===========
         */
 
-        #email {
-            width: 395px;
-            height: 49px;
-            border: 1px solid #339e23;
-            border-radius: 5px;
-            outline: none;
-            padding-left: 10px;
-            font-size: 17px;
-            caret-color: #00fc32;
-            position: absolute;
-            top: 430px;
-            left: 50px;
-        }
+		#email {
+			width: 395px;
+			height: 49px;
+			border: 1px solid #339e23;
+			border-radius: 5px;
+			outline: none;
+			padding-left: 10px;
+			font-size: 17px;
+			caret-color: #00fc32;
+			position: absolute;
+			top: 430px;
+			left: 50px;
+		}
 
-        #email::placeholder {
-            color: #d58d03;
-        }
+		#email::placeholder {
+			color: #d58d03;
+		}
 
-        #email:focus {
-            box-shadow: 0 0 10px 0 #00ff59;
-        }
+		#email:focus {
+			box-shadow: 0 0 10px 0 #00ff59;
+		}
 
-        /*    -------reset and form----------*/
-        #from-div {
-            width: 395px;
-            height: 49px;
-            margin-left: 40px;
-            margin-top: 30px;
-            /*border: 1px solid #339e23;*/
-            border-radius: 5px;
-            outline: none;
-            padding-left: 10px;
-            font-size: 17px;
-            /*caret-color: #00fc32;*/
-            position: absolute;
-            top: 490px;
-        }
+		/*    -------reset and form----------*/
+		#from-div {
+			width: 395px;
+			height: 49px;
+			margin-left: 40px;
+			margin-top: 30px;
+			/*border: 1px solid #339e23;*/
+			border-radius: 5px;
+			outline: none;
+			padding-left: 10px;
+			font-size: 17px;
+			/*caret-color: #00fc32;*/
+			position: absolute;
+			top: 490px;
+		}
 
-        #reset {
-            width: 150px;
-            height: 45px;
-            margin-left: 10px;
-            font-size: 19px;
-            border-radius: 10px;
-            border: 1px solid #807d7d;
-            background: linear-gradient(rgba(183, 255, 0, 0.34) 40%, rgba(84, 252, 0, 0.66) 60%);
-        }
+		#reset {
+			width: 150px;
+			height: 45px;
+			margin-left: 10px;
+			font-size: 19px;
+			border-radius: 10px;
+			border: 1px solid #807d7d;
+			background: linear-gradient(rgba(183, 255, 0, 0.34) 40%, rgba(84, 252, 0, 0.66) 60%);
+		}
 
-        #reset:hover {
-            cursor: pointer;
-            background: linear-gradient(rgba(84, 252, 0, 0.66) 40%, rgba(183, 255, 0, 0.34) 60%);
-        }
+		#reset:hover {
+			cursor: pointer;
+			background: linear-gradient(rgba(84, 252, 0, 0.66) 40%, rgba(183, 255, 0, 0.34) 60%);
+		}
 
-        #form {
-            margin-left: 60px;
-            width: 150px;
-            height: 45px;
-            font-size: 19px;
-            border-radius: 10px;
-            border: 1px solid #878484;
-            background: linear-gradient(rgba(84, 252, 0, 0.66) 40%, rgba(183, 255, 0, 0.34) 60%);
-        }
+		#form {
+			margin-left: 60px;
+			width: 150px;
+			height: 45px;
+			font-size: 19px;
+			border-radius: 10px;
+			border: 1px solid #878484;
+			background: linear-gradient(rgba(84, 252, 0, 0.66) 40%, rgba(183, 255, 0, 0.34) 60%);
+		}
 
-        #form:hover {
-            cursor: pointer;
-            background: linear-gradient(rgba(183, 255, 0, 0.34) 40%, rgba(84, 252, 0, 0.66) 60%);
-        }
+		#form:hover {
+			cursor: pointer;
+			background: linear-gradient(rgba(183, 255, 0, 0.34) 40%, rgba(84, 252, 0, 0.66) 60%);
+		}
 
-        /*    ---报错字的设置------*/
-        #username-span {
-            font-size: 12px;
-            color: red;
-            position: absolute;
+		/*    ---报错字的设置------*/
+		#username-span {
+			font-size: 12px;
+			color: red;
+			position: absolute;
 
-            top: 175px;
-            left: 50px;
-        }
+			top: 175px;
+			left: 50px;
+		}
 
-        #password-span {
-            font-size: 12px;
-            color: red;
-            position: absolute;
-            top: 265px;
-            left: 50px;
-        }
+		#password-span {
+			font-size: 12px;
+			color: red;
+			position: absolute;
+			top: 265px;
+			left: 50px;
+		}
 
-        #password-again-span {
-            font-size: 12px;
-            color: red;
-            position: absolute;
-
-
-            top: 355px;
-            left: 50px;
-        }
-
-        #email-span {
-            font-size: 12px;
-            color: red;
-            position: absolute;
-            top: 485px;
-            left: 50px;
-        }
-
-        /*    -----全部验证成功后显示部分-------------*/
-        #main {
-            width: 300px;
-            height: 200px;
-            background-color: #d5d5d5;
-            margin-top: 20px;
-            margin-left: 100px;
-            border-radius: 5px;
-            border: 1px solid transparent;
-            box-shadow: 0 0 5px 0 #efef00;
-            display: none;
-        }
-
-        #main-title {
-            width: 100%;
-            height: 40px;
-            display: block;
-            margin-top: 20px;
-            margin-left: 20px;
-        }
+		#password-again-span {
+			font-size: 12px;
+			color: red;
+			position: absolute;
 
 
-    </style>
+			top: 355px;
+			left: 50px;
+		}
+
+		#email-span {
+			font-size: 12px;
+			color: red;
+			position: absolute;
+			top: 485px;
+			left: 50px;
+		}
+
+		/*    -----全部验证成功后显示部分-------------*/
+		#main {
+			width: 300px;
+			height: 200px;
+			background-color: #d5d5d5;
+			margin-top: 20px;
+			margin-left: 100px;
+			border-radius: 5px;
+			border: 1px solid transparent;
+			box-shadow: 0 0 5px 0 #efef00;
+			display: none;
+		}
+
+		#main-title {
+			width: 100%;
+			height: 40px;
+			display: block;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+
+
+	</style>
 </head>
 <body>
 <div id="box">
-    <div id="body">
-        <form id="body-form">
-            <p id="titlt">
-                表单验证
-            </p>
+	<div id="body">
+		<form id="body-form">
+			<p id="titlt">
+				表单验证
+			</p>
 
-            <label for="userName">
-                <input id="userName" placeholder=" 请输入用户名" type="text">
-                <span id="username-span"></span>
-            </label>
+			<label for="userName">
+				<input id="userName" placeholder=" 请输入用户名" type="text">
+				<span id="username-span"></span>
+			</label>
 
-            <label for="password">
-                <input id="password" name="password" placeholder=" 请输入密码" type="password">
-                <span id="password-span"></span>
-            </label>
+			<label for="password">
+				<input id="password" name="password" placeholder=" 请输入密码" type="password">
+				<span id="password-span"></span>
+			</label>
 
-            <label for="password-again">
-                <input id="password-again" name="password" placeholder=" 确认密码" type="password">
-                <span id="password-again-span"></span>
-            </label>
+			<label for="password-again">
+				<input id="password-again" name="password" placeholder=" 确认密码" type="password">
+				<span id="password-again-span"></span>
+			</label>
 
-            <div id="sex">
-                <label for="sex-man">
-                    男
-                    <input id="sex-man" name="sex" type="radio" value="男">
-                </label>
+			<div id="sex">
+				<label for="sex-man">
+					男
+					<input id="sex-man" name="sex" type="radio" value="男">
+				</label>
 
-                <label for="sex-woman">
-                    女
-                    <input id="sex-woman" name="sex" type="radio" value="女">
-                </label>
-            </div>
+				<label for="sex-woman">
+					女
+					<input id="sex-woman" name="sex" type="radio" value="女">
+				</label>
+			</div>
 
-            <label for="email">
-                <input id="email" placeholder=" 请输入邮箱" type="email">
-                <span id="email-span"></span>
-            </label>
+			<label for="email">
+				<input id="email" placeholder=" 请输入邮箱" type="email">
+				<span id="email-span"></span>
+			</label>
 
-            <div id="from-div">
-                <input id="reset" type="reset" value="重置">
-                <input id="form" type="button" value="提交">
-            </div>
+			<div id="from-div">
+				<input id="reset" type="reset" value="重置">
+				<input id="form" type="button" value="提交">
+			</div>
 
-        </form>
-        <div id="main">
+		</form>
+		<div id="main">
             <span id="main-title">
                 信息验证成功，你的信息如下:
             </span>
-            <p id="span-name">用户名:</p>
-            <p id="span-sex">密码:</p>
-            <p id="span-email">邮箱:</p>
-        </div>
-    </div>
+			<p id="span-name">用户名:</p>
+			<p id="span-sex">密码:</p>
+			<p id="span-email">邮箱:</p>
+		</div>
+	</div>
 </div>
 
 <script>
-    window.onload = function () {
+	window.onload = function () {
 
-        var name = document.getElementById('userName')
-        name_judgement = false
-        name.onblur = function () {
-            var username_span = document.getElementById('username-span')
-            if (name.value.trim() === "") {
-                username_span.innerText = "用户名不能为空"
-                name.value = ""
-                return
-            }
-            if (name.value.length <= 1 || name.value.length >= 14) {
-                username_span.innerText = "用户名长度违法"
-                name.value = ""
-                return
-            }
-            //用户名只能有数字和字母组成，不能含有其它符号（正则表达式）
-            nameRegexp = /^[a-zA-Z0-9]+$/
-            if (!nameRegexp.test(name.value)) {
-                username_span.innerText = "用户名只能由字母或数字组成"
-                name.value = ""
-                return
-            }
-            username_span.innerText = ""
-            name_judgement = true
-        }
+		var name = document.getElementById ('userName')
+		name_judgement = false
+		name.onblur = function () {
+			var username_span = document.getElementById ('username-span')
+			if ( name.value.trim () === '' ) {
+				username_span.innerText = '用户名不能为空'
+				name.value = ''
+				return
+			}
+			if ( name.value.length <= 1 || name.value.length >= 14 ) {
+				username_span.innerText = '用户名长度违法'
+				name.value = ''
+				return
+			}
+			//用户名只能有数字和字母组成，不能含有其它符号（正则表达式）
+			nameRegexp = /^[a-zA-Z0-9]+$/
+			if ( !nameRegexp.test (name.value) ) {
+				username_span.innerText = '用户名只能由字母或数字组成'
+				name.value = ''
+				return
+			}
+			username_span.innerText = ''
+			name_judgement = true
+		}
 
-        var password = document.getElementById('password')
-        password_judgement = false
-        password.onblur = function () {
-            var password_span = document.getElementById('password-span')
-            if (password.value === "") {
-                password_span.innerText = '密码不能为空'
-                password.value = ''
-                return
-            }
-            if (password.value.length <= 8 || password.value.length >= 18) {
-                password_span.innerText = '长度违法'
-                password.value = ''
-                return;
-            }
-            password_span.innerText = ''
-            password_judgement = true
-        }
+		var password = document.getElementById ('password')
+		password_judgement = false
+		password.onblur = function () {
+			var password_span = document.getElementById ('password-span')
+			if ( password.value === '' ) {
+				password_span.innerText = '密码不能为空'
+				password.value = ''
+				return
+			}
+			if ( password.value.length <= 8 || password.value.length >= 18 ) {
+				password_span.innerText = '长度违法'
+				password.value = ''
+				return
+			}
+			password_span.innerText = ''
+			password_judgement = true
+		}
 
-        var password_again = document.getElementById('password-again')
-        password_again_judgement = false
-        password_again.onblur = function () {
+		var password_again = document.getElementById ('password-again')
+		password_again_judgement = false
+		password_again.onblur = function () {
 
-            var password_again_span = document.getElementById('password-again-span')
-            if (password_again.value === '') {
-                password_again_span.innerText = '确认密码不能为空'
-                password_again.value = ''
-                return
-            }
-            if (password_again.value !== password.value) {
-                password_again_span.innerText = '两次密码输入不匹配，请确认后重新输入'
-                password_again.value = ''
-                return
-            }
-            password_again_span.innerText = ''
-            password_again_judgement = true
-        }
+			var password_again_span = document.getElementById ('password-again-span')
+			if ( password_again.value === '' ) {
+				password_again_span.innerText = '确认密码不能为空'
+				password_again.value = ''
+				return
+			}
+			if ( password_again.value !== password.value ) {
+				password_again_span.innerText = '两次密码输入不匹配，请确认后重新输入'
+				password_again.value = ''
+				return
+			}
+			password_again_span.innerText = ''
+			password_again_judgement = true
+		}
 
-        var email = document.getElementById('email')
-        email_judgement = false
-        email.onblur = function () {
-            var email_span = document.getElementById('email-span')
-            var eamil_Regexp = /^\w+@\w+.\w+$/
-            if (email.value === '') {
-                email_span.innerText = '邮箱不能为空'
-                return
-            }
-            if (!eamil_Regexp.test(email.value)) {
-                email_span.innerText = '邮箱格式违法'
-                email.value = ''
-                return;
-            }
-            email_span.innerText = ''
-            email_judgement = true
-        }
+		var email = document.getElementById ('email')
+		email_judgement = false
+		email.onblur = function () {
+			var email_span = document.getElementById ('email-span')
+			var eamil_Regexp = /^\w+@\w+.\w+$/
+			if ( email.value === '' ) {
+				email_span.innerText = '邮箱不能为空'
+				return
+			}
+			if ( !eamil_Regexp.test (email.value) ) {
+				email_span.innerText = '邮箱格式违法'
+				email.value = ''
+				return
+			}
+			email_span.innerText = ''
+			email_judgement = true
+		}
 
-        var form = document.getElementById('form')
-        form.onclick = function () {
-            if (name_judgement && password_judgement && password_again_judgement && email_judgement) {
-                alert('提交成功')
-                document.getElementById('main').style.cssText = 'display:block'
-                document.getElementById('span-name').innerText = '用户名:' + name.value
-                document.getElementById('span-sex').innerText = '性别:' + document.getElementById('sex-man').value
-                document.getElementById('span-email').innerText = '邮箱:' + email.value
-            } else {
-                alert('你的信息未符合规则')
-            }
+		var form = document.getElementById ('form')
+		form.onclick = function () {
+			if ( name_judgement && password_judgement && password_again_judgement && email_judgement ) {
+				alert ('提交成功')
+				document.getElementById ('main').style.cssText = 'display:block'
+				document.getElementById ('span-name').innerText = '用户名:' + name.value
+				document.getElementById ('span-sex').innerText = '性别:' + document.getElementById ('sex-man').value
+				document.getElementById ('span-email').innerText = '邮箱:' + email.value
+			} else {
+				alert ('你的信息未符合规则')
+			}
 
-        }
-    }
+		}
+	}
 </script>
 </body>
 </html>

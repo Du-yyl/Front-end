@@ -24,24 +24,24 @@
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
 <script type="text/babel">
 	class Weather extends React.Component {
-		state = {
-			weather: true,
-		}
-
 		render () {
 			return (
 					<h1 onClick={this.changHot}>今天天气{this.state.weather ? '炎热' : '凉爽'}</h1>
 			)
 		}
 
+		state = {
+			weather: true,
+		}
+
 		changHot = () => {
-			this.setState({
+			this.setState ({
 				weather: !this.state.weather,
 			})
 		}
 	}
 
-	ReactDOM.render(<Weather/>, document.getElementById('test'))
+	ReactDOM.render (<Weather/>, document.getElementById ('test'))
 
 </script>
 

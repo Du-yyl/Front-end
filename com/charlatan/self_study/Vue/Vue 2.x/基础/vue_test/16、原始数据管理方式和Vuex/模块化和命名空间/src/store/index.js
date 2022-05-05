@@ -13,11 +13,11 @@ import Vuex from 'vuex'
 import persons from '@/store/persons'
 import count from '@/store/count'
 
-Vue.use(Vuex)
+Vue.use (Vuex)
 
-export default new Vuex.Store({
-  modules: {
-    persons,
-    count,
-  },
+export default new Vuex.Store ({
+	modules: {
+		persons,
+		count,
+	},
 })

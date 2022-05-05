@@ -23,15 +23,15 @@
 <script>
 
 
-	let p1 = new Promise((res, rej) => {
-		setTimeout(function () {
-			res('ok')
+	let p1 = new Promise ((res, rej) => {
+		setTimeout (function () {
+			res ('ok')
 		}, 1000)
 	})
 
-	let p2 = Promise.resolve('222')
-	let p3 = Promise.resolve('333')
-	let res = Promise.race([p1, p2, p3])
-	console.log(res)
+	let p2 = Promise.resolve ('222')
+	let p3 = Promise.resolve ('333')
+	let res = Promise.race ([p1, p2, p3])
+	console.log (res)
 </script>
 </html>

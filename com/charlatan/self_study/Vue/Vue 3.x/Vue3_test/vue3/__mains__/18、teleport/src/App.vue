@@ -12,7 +12,7 @@ import Child from '@/components/Child'
 import Dialog from '@/components/Dialog'
 import { provide, reactive } from 'vue'
 
-const { ref } = require('@vue/runtime-dom')
+const { ref } = require ('@vue/runtime-dom')
 
 export default {
   name: 'App',

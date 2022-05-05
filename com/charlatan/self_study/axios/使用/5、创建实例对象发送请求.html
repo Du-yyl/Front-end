@@ -27,7 +27,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	let ax = axios.create({
+	let ax = axios.create ({
 		baseURL: 'http://localhost:3000',
 		timeout: 3000,
 	})
@@ -40,10 +40,10 @@
 	// 		console.log(res)
 	// 	})
 
-	ax.get('/posts').then((val) => {
-		console.log(val)
+	ax.get ('/posts').then ((val) => {
+		console.log (val)
 	}, (res) => {
-		console.log(res)
+		console.log (res)
 	})
 </script>
 </html>

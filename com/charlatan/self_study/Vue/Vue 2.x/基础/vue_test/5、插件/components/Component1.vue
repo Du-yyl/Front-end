@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     test () {
-      this.hello()
+      this.hello ()
     },
   },
 }

@@ -11,8 +11,8 @@
                 <!--                当触发事件的时候，会接收到一个 event 参数，这个参数中有一个 target 属性和 currentTarget 属性-->
                 <!--                target 会保存当前触发事件的 input 信息-->
 
-<!--                也能通过 data-type="测试数据" 进行数据的传输，这个数据保存在触发事件的 event 中，在 currentTarget.dataset 中进行保存-->
-<!--                这种方式能传输多个数据，在特殊场景使用-->
+                <!--                也能通过 data-type="测试数据" 进行数据的传输，这个数据保存在触发事件的 event 中，在 currentTarget.dataset 中进行保存-->
+                <!--                这种方式能传输多个数据，在特殊场景使用-->
                 <input
                         class="{{phoneInputClass}}"
                         bindfocus="bindPhoneFocus"

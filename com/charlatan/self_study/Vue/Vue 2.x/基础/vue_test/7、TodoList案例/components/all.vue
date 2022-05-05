@@ -10,7 +10,7 @@
 
 <template>
   <div class="divs">
-    <input type="checkbox" v-model="check" class="checkbox" @change="checkAll(check)">
+    <input v-model="check" class="checkbox" type="checkbox" @change="checkAll(check)">
     <span>已完成 {{ lisNum }} / 全部 {{ all }}</span>
     <button v-show="check" @click="removeAll">删除</button>
   </div>
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 .divs {
   width: 500px;
   height: 50px;

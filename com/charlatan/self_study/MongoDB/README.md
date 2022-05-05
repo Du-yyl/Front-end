@@ -17,8 +17,8 @@ mongod --version
 ```
 
 - 停止服务：
-  1. 在开启的控制台直接 ctrl + c 进行停止
-  2. 直接将开始的窗口关闭即可
+    1. 在开启的控制台直接 ctrl + c 进行停止
+    2. 直接将开始的窗口关闭即可
 
 
 - mongo链接数据库：   
@@ -39,6 +39,7 @@ mongod --version
   db.项目名称.find()        显示指定名称的全部内容
   mongod --dbpath 数据存储路径 --port 四位以上数字  指定端口号 
 ```
+
 增
 -
 
@@ -156,15 +157,15 @@ db.集合.drop()							删除集合
 >    - 也可以在指定的集合中保留要关联元素的ID，这样能达到类似效果
        >
        >         ```sql
-> db.c.insertMany([{
-> name:"c1"
-> },{
-> name:"c2"
-> },{
-> name:"c3"
-> }])
->               
->         db.d.insertOne({
+       > db.c.insertMany([{
+       > name:"c1"
+       > },{
+       > name:"c2"
+       > },{
+       > name:"c3"
+       > }])
+       >
+       >         db.d.insertOne({
        > list:["元素1","元素2"],
        > d_c:"61e81b2b0dd4593ee978eb49"
        > })

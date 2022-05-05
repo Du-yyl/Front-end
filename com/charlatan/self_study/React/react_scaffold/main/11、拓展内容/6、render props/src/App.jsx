@@ -1,16 +1,16 @@
-import React, { Component, lazy, Suspense } from 'react'
-import { Link, Route } from 'react-router-dom'
+import React, { Component } from 'react'
 import Demo from './components/Demo'
+
 class App extends Component {
-  
-  render () {
-    return (
-      <div>
-        <Demo/>
-      </div>
-    )
-  }
-  
+	
+	render () {
+		return (
+				<div>
+					<Demo/>
+				</div>
+		)
+	}
+	
 }
 
 export default App

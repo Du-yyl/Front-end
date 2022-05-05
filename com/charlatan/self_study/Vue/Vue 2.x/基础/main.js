@@ -9,17 +9,18 @@
  */
 
 import App from './App'
-console.log(Vue);
+
+console.log (Vue)
 Vue.config.productionTip = false
-const vm = new Vue({
-  el: '#root',
-  data: {
-    msg: '',
-  },
-  methods: {},
-  computed: {},
-  watch: {},
-  components: {
-    App,
-  },
+const vm = new Vue ({
+	el: '#root',
+	data: {
+		msg: '',
+	},
+	methods: {},
+	computed: {},
+	watch: {},
+	components: {
+		App,
+	},
 })

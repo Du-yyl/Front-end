@@ -13,11 +13,12 @@ import App from './App'
 
 import VueRouter from 'vue-router'
 import router from './router/index'
-Vue.use(VueRouter)
+
+Vue.use (VueRouter)
 
 Vue.config.productionTip = false
-const vm = new Vue({
-  el: '#app',
-  render: createElement => createElement(App),
-  router:router,
+const vm = new Vue ({
+	el: '#app',
+	render: createElement => createElement (App),
+	router: router,
 })

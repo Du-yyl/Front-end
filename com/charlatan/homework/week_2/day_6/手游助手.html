@@ -1,572 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>腾讯手游助手</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="UTF-8">
+	<title>腾讯手游助手</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
-        body {
-            background-color: #1d1c1f;
-        }
+		body {
+			background-color: #1d1c1f;
+		}
 
-        #qwe {
-            width: 1620px;
-            height: 120px;
-            background-color: #26252b;
-            /*margin-left: 200px;*/
-            margin-top: 10px;
-            position: absolute;
-            top: 00px;
-            z-index: 99;
-        }
+		#qwe {
+			width: 1620px;
+			height: 120px;
+			background-color: #26252b;
+			/*margin-left: 200px;*/
+			margin-top: 10px;
+			position: absolute;
+			top: 00px;
+			z-index: 99;
+		}
 
-        #q1 {
-            width: 800px;
-            height: 90px;
-            display: block;
-            position: absolute;
-            z-index: 0;
-            top: 0;
-        }
+		#q1 {
+			width: 800px;
+			height: 90px;
+			display: block;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+		}
 
-        .q1 {
-            width: 20px;
-            height: 100px;
-            color: white;
-            font-size: 20px;
-            display: inline;
-            word-spacing: 20px;
-            position: relative;
-            left: 480px;
-            top: 24px;
-            line-height: 90px;
+		.q1 {
+			width: 20px;
+			height: 100px;
+			color: white;
+			font-size: 20px;
+			display: inline;
+			word-spacing: 20px;
+			position: relative;
+			left: 480px;
+			top: 24px;
+			line-height: 90px;
 
-        }
-
-
-        #down {
-            width: 110px;
-            height: 50px;
-            color: whitesmoke;
-            border-radius: 40% 0;
-            position: relative;
-            left: 1230px;
-            top: 1px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #ff3f3f;
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        #i1 {
-            position: relative;
-            left: 220px;
-            top: 50px;
-            z-index: 9999999999;
-        }
+		}
 
 
-        #asd {
-            width: 1200px;
-            height: 100px;
-            display: block;
-            position: sticky;
-            top: 0;
-            /*margin-left: 200px;*/
-            left: 240px;
-            background-color: #1d1c1f;
-            margin-top: 160px;
-            z-index: 99999999999999999;
+		#down {
+			width: 110px;
+			height: 50px;
+			color: whitesmoke;
+			border-radius: 40% 0;
+			position: relative;
+			left: 1230px;
+			top: 1px;
+			line-height: 50px;
+			text-align: center;
+			background-color: #ff3f3f;
+			font-size: 17px;
+			font-weight: bold;
+		}
+
+		#i1 {
+			position: relative;
+			left: 220px;
+			top: 50px;
+			z-index: 9999999999;
+		}
 
 
-        }
-
-        .li-1 {
-            width: 10px;
-            height: 100px;
-            color: white;
-            font-size: 25px;
-            line-height: 70px;
-            display: inline;
-            word-spacing: 30px;
-            margin: auto;
-            /*margin-left: 65px;*/
-        }
+		#asd {
+			width: 1200px;
+			height: 100px;
+			display: block;
+			position: sticky;
+			top: 0;
+			/*margin-left: 200px;*/
+			left: 240px;
+			background-color: #1d1c1f;
+			margin-top: 160px;
+			z-index: 99999999999999999;
 
 
-        #little1 {
-            width: 55px;
-            height: 55px;
-            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAMAAADypuvZAAAAS1BMVEUAAACXl5erq6ufn5+kpKSYmJiZmZmXl5eYmJiYmJiYmJiZmZnDw8OampqXl5eYmJiXl5eXl5eYmJiXl5eZmZmampqampqYmJiXl5dij/bHAAAAGHRSTlMA8wcYDsM8u+PQlXgCKOXZs5aRgmRJR2iRZvG6AAABI0lEQVRIx9XWS26EMBAE0PYPiGPzh8z9TxoKyDTSRHhql9TCeNFPFi0aEI1dY+jM4408iRuOegLZCYRDLhDkRLnZ901cspdCfpDbTTsn0ZSQDdj0XoRAE65jEgY5g3OSUGjA/XihkMVBs3BoRa8TieK2RCER+r2wqNuWzCL0wZPoWP4hqmpPo8o8gidRha4GyyAYpLYEglFVRmpaVQWk5tN9qLpHakRUlZAaVSWk5qpu0ItRdY9qNRf1dY98eBpVo9wiqNOoGsvde3kG/J8cwt/jt3LDoryVdyxaMJskOt7iJEr40q4kmtEHyyGPaR6EQqnHQY5CaUTxJAzyPWqDJVCaW5Q2Tt5EPi/x/BPKsiMmwQmLzGSFRGZwIgQyXYjrZaK/AdMPS66WoPL6AAAAAElFTkSuQmCC");
-            background-repeat: no-repeat;
-            float: right;
-            position: fixed;
-            right: 80px;
-            bottom: 100px;
-            color: #CF0A2C;
-            display: none;
-        }
+		}
 
-        #little1:hover {
-            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFGmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDggNzkuMTY0MDM2LCAyMDE5LzA4LzEzLTAxOjA2OjU3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjEuMCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMDctMjJUMTU6MzE6MzErMDg6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTA3LTIyVDE1OjMxOjU0KzA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTA3LTIyVDE1OjMxOjU0KzA4OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc0MzhiZTJlLTY1NjctNGRhMy1hZGIwLTg2OWNlMTkwYmY5YyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3NDM4YmUyZS02NTY3LTRkYTMtYWRiMC04NjljZTE5MGJmOWMiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3NDM4YmUyZS02NTY3LTRkYTMtYWRiMC04NjljZTE5MGJmOWMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjc0MzhiZTJlLTY1NjctNGRhMy1hZGIwLTg2OWNlMTkwYmY5YyIgc3RFdnQ6d2hlbj0iMjAyMS0wNy0yMlQxNTozMTozMSswODowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+fKnMGQAAAppJREFUaIHt2j9oE1EcwPFPr0KXbC5BHLrp5OxQiH9wEVE6dtBBcBWdRAqlVAQ3hY6Ci4NjsdY6iBTEoatjtw6hdHHL0kHr8Hp6uSTtJblL70G/S/K7yx2/b96733vv7qYOWy0FmcF13MUlXMQFNIqeYBKcK/CbJpZwX82S78dxQjNYxFMRiKQMEmpiDVcnmEsp9BO6jK/CNZKnLYhuYvco7lSVXEEOs0FeqKm/zB6W8Q6/q8qsDLJCM8K/n5fZwILTb4lCJJnvi3qvmVXcE4kM/4WaQjXLsoEn+DPJhMYlFVrSXZr3hG4WlQxBaEYYNLMsi6ibZUmE6Uy2ddpCNYuSRJibZVlT89J8HIkw0cyyeRqJlEWid9zZPYU8SiMRlgBZ2qeRSFkkemfSUVa3lOTkn8TFmdCIzOGTCSwUJyE0hy+4c/RZqVTVQqlMY0BcOlUKDUp+Dh+FOWTpVCV0UkvcEGYkpUtVITRIZi8XVyJVttAgmee4gp+57aVLlSl0nMwr/MJNFUuVJXSSTErlUmUIFZVJqVRqXKFhZVIqkxpX6JnhZVKOk3owakLjCi3gRyYuKpPST2oVb0dNaOqw1TrMbxvyHA2h2302nEyW8/iG73g85LFd+ZchROjzByMcl6VhtMVlV/5lle1xZShppXy2wKsZPfdDYhfqeY4Vu9BsLm7HLnQ7F+/ELDSN+dy29ZiFHuq+hjrYilWoITzDyvIeBzEKJfig+558ByvpzphI8Ea4x5flNfYp9q5PXWgILZOX2cbLNIihhabxCDt6ZdpCpfs3l6xjCzWE6jUrjDPzBr+mc8tRV0vpJ5RfTtSRbUF0P78jhi6XpYMXuKaPDPXscv3oCOPMigEiKXUU6gi3jdtCIVjHloKLyL9/0YaVSF/iIgAAAABJRU5ErkJggg==");
-
-        }
-
-        .bbox img {
-            width: 96px;
-            height: 96px;
-            margin-top: -50px;
-        }
-
-        .t0 {
-            color: white;
-            font-size: 23px;
-            width: 1125px;
-            margin: 0 auto;
-
-        }
-
-        .bbox {
-            width: 1200px;
-            height: 600px;
-            margin: 50px auto;
-            text-align: center;
-            background-color: #1d1c1f;
-        }
-
-        .l {
-            width: 180px;
-            height: 175px;
-            background-color: #2e2e33;
-            margin-top: 80px;
-            margin-left: 5px;
-            display: inline-block;
-            vertical-align: top;
-
-        }
-
-        .t1 {
-            width: 160px;
-            margin: auto;
-            margin-top: 10px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 18px;
-            color: white;
-        }
-
-        .t2 {
-            font-size: 15px;
-            margin: 10px auto;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            color: hsla(0, 0%, 100%, .5);
-            width: 160px;
-
-        }
-
-        .t3 {
-            width: 80px;
-            height: 35px;
-            margin: 7px auto;
-            background-color: #42424c;
-            position: relative;
-            top: 0;
-            border-top-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
-
-        p {
-            color: white;
-            position: relative;
-            line-height: 35px;
-            font-size: 14px;
-        }
-
-        .l:hover {
-            background-color: RGB(66, 66, 76);
-        }
-
-        .l:hover .t3 {
-            background-color: red;
-        }
-
-        .t3:hover {
-            background-color: #fc4545 !important;
-        }
+		.li-1 {
+			width: 10px;
+			height: 100px;
+			color: white;
+			font-size: 25px;
+			line-height: 70px;
+			display: inline;
+			word-spacing: 30px;
+			margin: auto;
+			/*margin-left: 65px;*/
+		}
 
 
-    </style>
+		#little1 {
+			width: 55px;
+			height: 55px;
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAMAAADypuvZAAAAS1BMVEUAAACXl5erq6ufn5+kpKSYmJiZmZmXl5eYmJiYmJiYmJiZmZnDw8OampqXl5eYmJiXl5eXl5eYmJiXl5eZmZmampqampqYmJiXl5dij/bHAAAAGHRSTlMA8wcYDsM8u+PQlXgCKOXZs5aRgmRJR2iRZvG6AAABI0lEQVRIx9XWS26EMBAE0PYPiGPzh8z9TxoKyDTSRHhql9TCeNFPFi0aEI1dY+jM4408iRuOegLZCYRDLhDkRLnZ901cspdCfpDbTTsn0ZSQDdj0XoRAE65jEgY5g3OSUGjA/XihkMVBs3BoRa8TieK2RCER+r2wqNuWzCL0wZPoWP4hqmpPo8o8gidRha4GyyAYpLYEglFVRmpaVQWk5tN9qLpHakRUlZAaVSWk5qpu0ItRdY9qNRf1dY98eBpVo9wiqNOoGsvde3kG/J8cwt/jt3LDoryVdyxaMJskOt7iJEr40q4kmtEHyyGPaR6EQqnHQY5CaUTxJAzyPWqDJVCaW5Q2Tt5EPi/x/BPKsiMmwQmLzGSFRGZwIgQyXYjrZaK/AdMPS66WoPL6AAAAAElFTkSuQmCC");
+			background-repeat: no-repeat;
+			float: right;
+			position: fixed;
+			right: 80px;
+			bottom: 100px;
+			color: #CF0A2C;
+			display: none;
+		}
+
+		#little1:hover {
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFGmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDggNzkuMTY0MDM2LCAyMDE5LzA4LzEzLTAxOjA2OjU3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjEuMCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjEtMDctMjJUMTU6MzE6MzErMDg6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIxLTA3LTIyVDE1OjMxOjU0KzA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIxLTA3LTIyVDE1OjMxOjU0KzA4OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc0MzhiZTJlLTY1NjctNGRhMy1hZGIwLTg2OWNlMTkwYmY5YyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3NDM4YmUyZS02NTY3LTRkYTMtYWRiMC04NjljZTE5MGJmOWMiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3NDM4YmUyZS02NTY3LTRkYTMtYWRiMC04NjljZTE5MGJmOWMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjc0MzhiZTJlLTY1NjctNGRhMy1hZGIwLTg2OWNlMTkwYmY5YyIgc3RFdnQ6d2hlbj0iMjAyMS0wNy0yMlQxNTozMTozMSswODowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+fKnMGQAAAppJREFUaIHt2j9oE1EcwPFPr0KXbC5BHLrp5OxQiH9wEVE6dtBBcBWdRAqlVAQ3hY6Ci4NjsdY6iBTEoatjtw6hdHHL0kHr8Hp6uSTtJblL70G/S/K7yx2/b96733vv7qYOWy0FmcF13MUlXMQFNIqeYBKcK/CbJpZwX82S78dxQjNYxFMRiKQMEmpiDVcnmEsp9BO6jK/CNZKnLYhuYvco7lSVXEEOs0FeqKm/zB6W8Q6/q8qsDLJCM8K/n5fZwILTb4lCJJnvi3qvmVXcE4kM/4WaQjXLsoEn+DPJhMYlFVrSXZr3hG4WlQxBaEYYNLMsi6ibZUmE6Uy2ddpCNYuSRJibZVlT89J8HIkw0cyyeRqJlEWid9zZPYU8SiMRlgBZ2qeRSFkkemfSUVa3lOTkn8TFmdCIzOGTCSwUJyE0hy+4c/RZqVTVQqlMY0BcOlUKDUp+Dh+FOWTpVCV0UkvcEGYkpUtVITRIZi8XVyJVttAgmee4gp+57aVLlSl0nMwr/MJNFUuVJXSSTErlUmUIFZVJqVRqXKFhZVIqkxpX6JnhZVKOk3owakLjCi3gRyYuKpPST2oVb0dNaOqw1TrMbxvyHA2h2302nEyW8/iG73g85LFd+ZchROjzByMcl6VhtMVlV/5lle1xZShppXy2wKsZPfdDYhfqeY4Vu9BsLm7HLnQ7F+/ELDSN+dy29ZiFHuq+hjrYilWoITzDyvIeBzEKJfig+558ByvpzphI8Ea4x5flNfYp9q5PXWgILZOX2cbLNIihhabxCDt6ZdpCpfs3l6xjCzWE6jUrjDPzBr+mc8tRV0vpJ5RfTtSRbUF0P78jhi6XpYMXuKaPDPXscv3oCOPMigEiKXUU6gi3jdtCIVjHloKLyL9/0YaVSF/iIgAAAABJRU5ErkJggg==");
+
+		}
+
+		.bbox img {
+			width: 96px;
+			height: 96px;
+			margin-top: -50px;
+		}
+
+		.t0 {
+			color: white;
+			font-size: 23px;
+			width: 1125px;
+			margin: 0 auto;
+
+		}
+
+		.bbox {
+			width: 1200px;
+			height: 600px;
+			margin: 50px auto;
+			text-align: center;
+			background-color: #1d1c1f;
+		}
+
+		.l {
+			width: 180px;
+			height: 175px;
+			background-color: #2e2e33;
+			margin-top: 80px;
+			margin-left: 5px;
+			display: inline-block;
+			vertical-align: top;
+
+		}
+
+		.t1 {
+			width: 160px;
+			margin: auto;
+			margin-top: 10px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size: 18px;
+			color: white;
+		}
+
+		.t2 {
+			font-size: 15px;
+			margin: 10px auto;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: hsla(0, 0%, 100%, .5);
+			width: 160px;
+
+		}
+
+		.t3 {
+			width: 80px;
+			height: 35px;
+			margin: 7px auto;
+			background-color: #42424c;
+			position: relative;
+			top: 0;
+			border-top-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+
+		p {
+			color: white;
+			position: relative;
+			line-height: 35px;
+			font-size: 14px;
+		}
+
+		.l:hover {
+			background-color: RGB(66, 66, 76);
+		}
+
+		.l:hover .t3 {
+			background-color: red;
+		}
+
+		.t3:hover {
+			background-color: #fc4545 !important;
+		}
+
+
+	</style>
 </head>
 <body>
 <script>
-    window.onscroll = function () {
-        if (document.documentElement.scrollTop + document.body.scrollTop < 100) {
-            document.getElementById("little1").style.display = "none";
-        } else {
-            document.getElementById("little1").style.display = "block";
-        }
-    }
+	window.onscroll = function () {
+		if ( document.documentElement.scrollTop + document.body.scrollTop < 100 ) {
+			document.getElementById ('little1').style.display = 'none'
+		} else {
+			document.getElementById ('little1').style.display = 'block'
+		}
+	}
 </script>
 <div id="top"></div>
 <div id="qwe">
-    <img height="40px" id="i1" src="下载%20(1).png" width="220px">
-    <ul id="q1">
-        <li class="q1" id="q1-1">
-            首页&nbsp;
-        </li>
-        <li class="q1" id="q1-2">
-            游戏中心&nbsp;
-        </li>
-        <li class="q1" id="q1-3">
-            咨询中心&nbsp;
-        </li>
-        <li class="q1" id="q1-4">
-            玩家论坛&nbsp;
-        </li>
-        <li class="q1" id="q1-5">
-            关于我们&nbsp;
-        </li>
-        <li class="q1" id="q1-6">
-            常见问题&nbsp;
-        </li>
-    </ul>
-    <div id="down">
-        <span id="sd">下载客户端</span>
-    </div>
+	<img id="i1" height="40px" src="下载%20(1).png" width="220px">
+	<ul id="q1">
+		<li id="q1-1" class="q1">
+			首页&nbsp;
+		</li>
+		<li id="q1-2" class="q1">
+			游戏中心&nbsp;
+		</li>
+		<li id="q1-3" class="q1">
+			咨询中心&nbsp;
+		</li>
+		<li id="q1-4" class="q1">
+			玩家论坛&nbsp;
+		</li>
+		<li id="q1-5" class="q1">
+			关于我们&nbsp;
+		</li>
+		<li id="q1-6" class="q1">
+			常见问题&nbsp;
+		</li>
+	</ul>
+	<div id="down">
+		<span id="sd">下载客户端</span>
+	</div>
 </div>
 
 <div id="asd">
-    <ul>
-        <li class="li-1">热门游戏&nbsp;</li>
-        <li class="li-1">角色扮演&nbsp;</li>
-        <li class="li-1">动作冒险&nbsp;</li>
-        <li class="li-1">体育竞速&nbsp;</li>
-        <li class="li-1">经营策略&nbsp;</li>
-        <li class="li-1">飞行射击&nbsp;</li>
-        <li class="li-1">休闲益智&nbsp;</li>
-        <li class="li-1">棋牌中心&nbsp;</li>
-    </ul>
+	<ul>
+		<li class="li-1">热门游戏&nbsp;</li>
+		<li class="li-1">角色扮演&nbsp;</li>
+		<li class="li-1">动作冒险&nbsp;</li>
+		<li class="li-1">体育竞速&nbsp;</li>
+		<li class="li-1">经营策略&nbsp;</li>
+		<li class="li-1">飞行射击&nbsp;</li>
+		<li class="li-1">休闲益智&nbsp;</li>
+		<li class="li-1">棋牌中心&nbsp;</li>
+	</ul>
 </div>
 
 
 <a href="javascript:window.scrollTo(0,0)">
-    <div id="little1">
-    </div>
+	<div id="little1">
+	</div>
 </a>
 
 
 <div class="t0"><b>角色扮演</b></div>
 <div class="bbox">
-    <div class="l">
-        <div class="b1-1"><img src="http://pp.myapp.com/ma_icon/0/icon_54117057_1635906470/96"></div>
-        <div class="t1">斗罗大陆武魂觉醒</div>
-        <div class="t2">你从未见过的全新斗罗</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-2"><img src="http://pp.myapp.com/ma_icon/0/icon_53989677_1635498194/96"></div>
-        <div class="t1">荣耀大天使</div>
-        <div class="t2">次时代3D魔幻之旅，一触即发</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-3"><img src="http://pp.myapp.com/ma_icon/0/icon_54068959_1635996448/96"></div>
-        <div class="t1">原始传奇</div>
-        <div class="t2">原汁原味，经典重现</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-4"><img
-                src="https://s.syzs.qq.com/syzs_cms/202110/1fhrluhij0.au3l0ro976o.webp?imageMogr2/format/png"
-                width="96px"></div>
-        <div class="t1">原神</div>
-        <div class="t2">全新2.2版本「雾海悬谜境」现已推出！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-5"><img src="http://pp.myapp.com/ma_icon/0/icon_52700665_1630461207/96"></div>
-        <div class="t1">新斗罗大陆（动画合作手游）</div>
-        <div class="t2">斗罗大陆动画官方合作手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-6"><img src="http://pp.myapp.com/ma_icon/0/icon_42315691_1634801260/96"></div>
-        <div class="t1">天龙八部手游（新门派：蓬莱）</div>
-        <div class="t2">社区化武侠MMORPG手机游戏</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-1"><img src="http://pp.myapp.com/ma_icon/0/icon_54158712_1634801230/96"></div>
-        <div class="t1">赏金侦探</div>
-        <div class="t2">东野圭吾合作案件独家上线</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-2"><img src="http://pp.myapp.com/ma_icon/0/icon_54081275_1635130438/96"></div>
-        <div class="t1">暮光起源</div>
-        <div class="t2">吸血鬼题材MMO手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-3"><img src="http://pp.myapp.com/ma_icon/0/icon_12127266_1634801224/96"></div>
-        <div class="t1">王者荣耀</div>
-        <div class="t2">S24赛季【长枪掠火】上线，新英雄云缨，风火来袭！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-4"><img src="http://pp.myapp.com/ma_icon/0/icon_54054803_1634798094/96"></div>
-        <div class="t1">数码宝贝：新世纪</div>
-        <div class="t2">正版数码宝贝进化养成手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-5"><img src="http://pp.myapp.com/ma_icon/0/icon_54082050_1635544806/96"></div>
-        <div class="t1">哈利波特：魔法觉醒</div>
-        <div class="t2">《哈利·波特》官方授权手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-6"><img src="http://pp.myapp.com/ma_icon/0/icon_54138346_1636083598/96"></div>
-        <div class="t1">斗罗大陆：魂师对决-百亿回馈</div>
-        <div class="t2">百日庆典，百分百瓜分百亿钻石</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
+	<div class="l">
+		<div class="b1-1"><img src="http://pp.myapp.com/ma_icon/0/icon_54117057_1635906470/96"></div>
+		<div class="t1">斗罗大陆武魂觉醒</div>
+		<div class="t2">你从未见过的全新斗罗</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-2"><img src="http://pp.myapp.com/ma_icon/0/icon_53989677_1635498194/96"></div>
+		<div class="t1">荣耀大天使</div>
+		<div class="t2">次时代3D魔幻之旅，一触即发</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-3"><img src="http://pp.myapp.com/ma_icon/0/icon_54068959_1635996448/96"></div>
+		<div class="t1">原始传奇</div>
+		<div class="t2">原汁原味，经典重现</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-4"><img
+				src="https://s.syzs.qq.com/syzs_cms/202110/1fhrluhij0.au3l0ro976o.webp?imageMogr2/format/png"
+				width="96px"></div>
+		<div class="t1">原神</div>
+		<div class="t2">全新2.2版本「雾海悬谜境」现已推出！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-5"><img src="http://pp.myapp.com/ma_icon/0/icon_52700665_1630461207/96"></div>
+		<div class="t1">新斗罗大陆（动画合作手游）</div>
+		<div class="t2">斗罗大陆动画官方合作手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-6"><img src="http://pp.myapp.com/ma_icon/0/icon_42315691_1634801260/96"></div>
+		<div class="t1">天龙八部手游（新门派：蓬莱）</div>
+		<div class="t2">社区化武侠MMORPG手机游戏</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-1"><img src="http://pp.myapp.com/ma_icon/0/icon_54158712_1634801230/96"></div>
+		<div class="t1">赏金侦探</div>
+		<div class="t2">东野圭吾合作案件独家上线</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-2"><img src="http://pp.myapp.com/ma_icon/0/icon_54081275_1635130438/96"></div>
+		<div class="t1">暮光起源</div>
+		<div class="t2">吸血鬼题材MMO手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-3"><img src="http://pp.myapp.com/ma_icon/0/icon_12127266_1634801224/96"></div>
+		<div class="t1">王者荣耀</div>
+		<div class="t2">S24赛季【长枪掠火】上线，新英雄云缨，风火来袭！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-4"><img src="http://pp.myapp.com/ma_icon/0/icon_54054803_1634798094/96"></div>
+		<div class="t1">数码宝贝：新世纪</div>
+		<div class="t2">正版数码宝贝进化养成手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-5"><img src="http://pp.myapp.com/ma_icon/0/icon_54082050_1635544806/96"></div>
+		<div class="t1">哈利波特：魔法觉醒</div>
+		<div class="t2">《哈利·波特》官方授权手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-6"><img src="http://pp.myapp.com/ma_icon/0/icon_54138346_1636083598/96"></div>
+		<div class="t1">斗罗大陆：魂师对决-百亿回馈</div>
+		<div class="t2">百日庆典，百分百瓜分百亿钻石</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
 </div>
 <div class="t0"><b>动作冒险</b></div>
 <div class="bbox">
-    <div class="l">
-        <div class="b1-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52694962_1635987608/96"></div>
-        <div class="t1">明日之后</div>
-        <div class="t2">加入未知，活下去</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52433541_1632387454/96"></div>
-        <div class="t1">碧蓝航线</div>
-        <div class="t2">此身为舰，即刻出战！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-3"><img src="http://pp.myapp.com/ma_icon/0/icon_42350927_1635973218/96"></div>
-        <div class="t1">崩坏3</div>
-        <div class="t2">为世界上所有的美好而战</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-4"><img src="http://pp.myapp.com/ma_icon/0/icon_52672798_1632704410/96"></div>
-        <div class="t1">鬼泣-巅峰之战</div>
-        <div class="t2">CAPCOM殿堂级动作IP正版手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-5"><img src="http://pp.myapp.com/ma_icon/0/icon_12118307_1634801231/96"></div>
-        <div class="t1">魂斗罗：归来</div>
-        <div class="t2">《魂斗罗：归来》经典IP热血回归，一起并肩打通关！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-6"><img src="http://pp.myapp.com/ma_icon/0/icon_54148731_1632985219/96"></div>
-        <div class="t1">灵魂潮汐</div>
-        <div class="t2">在世界的彼岸等着你的呼唤</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-1"><img src="http://pp.myapp.com/ma_icon/0/icon_54144453_1636102158/96"></div>
-        <div class="t1">罗布乐思</div>
-        <div class="t2">超多玩法的3D沙盒创意游戏！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52856913_1634195130/96"></div>
-        <div class="t1">从零开始的异世界生活无限</div>
-        <div class="t2">正版授权，异世界之旅真正开始！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-3"><img
-                src="https://s.syzs.qq.com/syzs_cms/202109/1fgl5lmoq0.3vguv0bks2g.webp?imageMogr2/format/png"
-                style="border-radius: 23px">
-        </div>
-        <div class="t1">迷你世界</div>
-        <div class="t2">美好契约 邀你缔结</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-4"><img src="http://pp.myapp.com/ma_icon/0/icon_52633436_1635987616/96"></div>
-        <div class="t1">第五人格（生存类独立游戏）</div>
-        <div class="t2">网易首款非对称对抗竞技手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-5"><img src="http://pp.myapp.com/ma_icon/0/icon_54082050_1635544806/96"></div>
-        <div class="t1">龙之谷2</div>
-        <div class="t2">龙之谷全新大世界正版续作</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div c class="b2-6"><img src="http://pp.myapp.com/ma_icon/0/icon_11869393_1635490877/96"></div>
-        <div class="t1">拳皇98 终极之战OL--腾讯第一街机版手游</div>
-        <div class="t2">SNK正版授权拳皇卡牌手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
+	<div class="l">
+		<div class="b1-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52694962_1635987608/96"></div>
+		<div class="t1">明日之后</div>
+		<div class="t2">加入未知，活下去</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52433541_1632387454/96"></div>
+		<div class="t1">碧蓝航线</div>
+		<div class="t2">此身为舰，即刻出战！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-3"><img src="http://pp.myapp.com/ma_icon/0/icon_42350927_1635973218/96"></div>
+		<div class="t1">崩坏3</div>
+		<div class="t2">为世界上所有的美好而战</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-4"><img src="http://pp.myapp.com/ma_icon/0/icon_52672798_1632704410/96"></div>
+		<div class="t1">鬼泣-巅峰之战</div>
+		<div class="t2">CAPCOM殿堂级动作IP正版手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-5"><img src="http://pp.myapp.com/ma_icon/0/icon_12118307_1634801231/96"></div>
+		<div class="t1">魂斗罗：归来</div>
+		<div class="t2">《魂斗罗：归来》经典IP热血回归，一起并肩打通关！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-6"><img src="http://pp.myapp.com/ma_icon/0/icon_54148731_1632985219/96"></div>
+		<div class="t1">灵魂潮汐</div>
+		<div class="t2">在世界的彼岸等着你的呼唤</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-1"><img src="http://pp.myapp.com/ma_icon/0/icon_54144453_1636102158/96"></div>
+		<div class="t1">罗布乐思</div>
+		<div class="t2">超多玩法的3D沙盒创意游戏！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52856913_1634195130/96"></div>
+		<div class="t1">从零开始的异世界生活无限</div>
+		<div class="t2">正版授权，异世界之旅真正开始！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-3"><img
+				src="https://s.syzs.qq.com/syzs_cms/202109/1fgl5lmoq0.3vguv0bks2g.webp?imageMogr2/format/png"
+				style="border-radius: 23px">
+		</div>
+		<div class="t1">迷你世界</div>
+		<div class="t2">美好契约 邀你缔结</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-4"><img src="http://pp.myapp.com/ma_icon/0/icon_52633436_1635987616/96"></div>
+		<div class="t1">第五人格（生存类独立游戏）</div>
+		<div class="t2">网易首款非对称对抗竞技手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-5"><img src="http://pp.myapp.com/ma_icon/0/icon_54082050_1635544806/96"></div>
+		<div class="t1">龙之谷2</div>
+		<div class="t2">龙之谷全新大世界正版续作</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div c class="b2-6"><img src="http://pp.myapp.com/ma_icon/0/icon_11869393_1635490877/96"></div>
+		<div class="t1">拳皇98 终极之战OL--腾讯第一街机版手游</div>
+		<div class="t2">SNK正版授权拳皇卡牌手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
 </div>
 <div class="t0"><b>体育竞速</b></div>
 <div class="bbox">
-    <div class="l">
-        <div class="b1-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52488575_1634778405/96"></div>
-        <div class="t1">QQ飞车手游</div>
-        <div class="t2">唯一官方正版手游，体验最原汁原味的漂移！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52750606_1634778831/96"></div>
-        <div class="t1">跑跑卡丁车官方竞速版</div>
-        <div class="t2">十四年竞速经典回归</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-3"><img src="http://pp.myapp.com/ma_icon/0/icon_54067078_1634616794/96"></div>
-        <div class="t1">NBA范特西（正版授权）</div>
-        <div class="t2">NBA同步数据，打造星级球队。</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-4"><img src="http://pp.myapp.com/ma_icon/0/icon_52669769_1631005878/96"></div>
-        <div class="t1">全民冠军足球</div>
-        <div class="t2">腾讯唯一的足球策略经营游戏</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-5"><img src="http://pp.myapp.com/ma_icon/0/icon_53932343_1626752813/96"></div>
-        <div class="t1">绿茵之巅</div>
-        <div class="t2">全新教练模式</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-6"><img src="http://pp.myapp.com/ma_icon/0/icon_53278989_1634166012/96"></div>
-        <div class="t1">灌篮高手正版授权手游</div>
-        <div class="t2">真人实时篮球竞技手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52603764_1634801573/96"></div>
-        <div class="t1">FIFA足球世界</div>
-        <div class="t2">首款FIFA实时PVP足球竞技手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52401388_1635324502/96"></div>
-        <div class="t1">最强NBA</div>
-        <div class="t2">真实竞技手游，来做赛场MVP！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-3"><img src="http://pp.myapp.com/ma_icon/0/icon_12111174_1635606376/96"></div>
-        <div class="t1">腾讯桌球</div>
-        <div class="t2">腾讯首款真人实时对战桌球手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-4"><img src="http://pp.myapp.com/ma_icon/0/icon_10099632_1635300680/96"></div>
-        <div class="t1">天天酷跑</div>
-        <div class="t2">8亿人都在玩的国民跑酷手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-5"><img src="http://pp.myapp.com/ma_icon/0/icon_11525981_1612324941/96"></div>
-        <div class="t1">城市飞车</div>
-        <div class="t2">全球3000万赛车用户共同推荐</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div c class="b2-6"><img src="http://pp.myapp.com/ma_icon/0/icon_52743857_1635412043/96"></div>
-        <div class="t1">忍者必须死3</div>
-        <div class="t2">风靡全球的水墨风战斗跑酷</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
+	<div class="l">
+		<div class="b1-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52488575_1634778405/96"></div>
+		<div class="t1">QQ飞车手游</div>
+		<div class="t2">唯一官方正版手游，体验最原汁原味的漂移！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52750606_1634778831/96"></div>
+		<div class="t1">跑跑卡丁车官方竞速版</div>
+		<div class="t2">十四年竞速经典回归</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-3"><img src="http://pp.myapp.com/ma_icon/0/icon_54067078_1634616794/96"></div>
+		<div class="t1">NBA范特西（正版授权）</div>
+		<div class="t2">NBA同步数据，打造星级球队。</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-4"><img src="http://pp.myapp.com/ma_icon/0/icon_52669769_1631005878/96"></div>
+		<div class="t1">全民冠军足球</div>
+		<div class="t2">腾讯唯一的足球策略经营游戏</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-5"><img src="http://pp.myapp.com/ma_icon/0/icon_53932343_1626752813/96"></div>
+		<div class="t1">绿茵之巅</div>
+		<div class="t2">全新教练模式</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-6"><img src="http://pp.myapp.com/ma_icon/0/icon_53278989_1634166012/96"></div>
+		<div class="t1">灌篮高手正版授权手游</div>
+		<div class="t2">真人实时篮球竞技手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52603764_1634801573/96"></div>
+		<div class="t1">FIFA足球世界</div>
+		<div class="t2">首款FIFA实时PVP足球竞技手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52401388_1635324502/96"></div>
+		<div class="t1">最强NBA</div>
+		<div class="t2">真实竞技手游，来做赛场MVP！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-3"><img src="http://pp.myapp.com/ma_icon/0/icon_12111174_1635606376/96"></div>
+		<div class="t1">腾讯桌球</div>
+		<div class="t2">腾讯首款真人实时对战桌球手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-4"><img src="http://pp.myapp.com/ma_icon/0/icon_10099632_1635300680/96"></div>
+		<div class="t1">天天酷跑</div>
+		<div class="t2">8亿人都在玩的国民跑酷手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-5"><img src="http://pp.myapp.com/ma_icon/0/icon_11525981_1612324941/96"></div>
+		<div class="t1">城市飞车</div>
+		<div class="t2">全球3000万赛车用户共同推荐</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div c class="b2-6"><img src="http://pp.myapp.com/ma_icon/0/icon_52743857_1635412043/96"></div>
+		<div class="t1">忍者必须死3</div>
+		<div class="t2">风靡全球的水墨风战斗跑酷</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
 </div>
 <div class="t0"><b>体育竞速</b></div>
 <div class="bbox">
-    <div class="l">
-        <div class="b1-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52488575_1634778405/96"></div>
-        <div class="t1">QQ飞车手游</div>
-        <div class="t2">唯一官方正版手游，体验最原汁原味的漂移！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52750606_1634778831/96"></div>
-        <div class="t1">跑跑卡丁车官方竞速版</div>
-        <div class="t2">十四年竞速经典回归</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-3"><img src="http://pp.myapp.com/ma_icon/0/icon_54067078_1634616794/96"></div>
-        <div class="t1">NBA范特西（正版授权）</div>
-        <div class="t2">NBA同步数据，打造星级球队。</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-4"><img src="http://pp.myapp.com/ma_icon/0/icon_52669769_1631005878/96"></div>
-        <div class="t1">全民冠军足球</div>
-        <div class="t2">腾讯唯一的足球策略经营游戏</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-5"><img src="http://pp.myapp.com/ma_icon/0/icon_53932343_1626752813/96"></div>
-        <div class="t1">绿茵之巅</div>
-        <div class="t2">全新教练模式</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b1-6"><img src="http://pp.myapp.com/ma_icon/0/icon_53278989_1634166012/96"></div>
-        <div class="t1">灌篮高手正版授权手游</div>
-        <div class="t2">真人实时篮球竞技手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52603764_1634801573/96"></div>
-        <div class="t1">FIFA足球世界</div>
-        <div class="t2">首款FIFA实时PVP足球竞技手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52401388_1635324502/96"></div>
-        <div class="t1">最强NBA</div>
-        <div class="t2">真实竞技手游，来做赛场MVP！</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-3"><img src="http://pp.myapp.com/ma_icon/0/icon_12111174_1635606376/96"></div>
-        <div class="t1">腾讯桌球</div>
-        <div class="t2">腾讯首款真人实时对战桌球手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-4"><img src="http://pp.myapp.com/ma_icon/0/icon_10099632_1635300680/96"></div>
-        <div class="t1">天天酷跑</div>
-        <div class="t2">8亿人都在玩的国民跑酷手游</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div class="b2-5"><img src="http://pp.myapp.com/ma_icon/0/icon_11525981_1612324941/96"></div>
-        <div class="t1">城市飞车</div>
-        <div class="t2">全球3000万赛车用户共同推荐</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
-    <div class="l">
-        <div c class="b2-6"><img src="http://pp.myapp.com/ma_icon/0/icon_52743857_1635412043/96"></div>
-        <div class="t1">忍者必须死3</div>
-        <div class="t2">风靡全球的水墨风战斗跑酷</div>
-        <div class="t3"><p>下载</p></div>
-    </div>
+	<div class="l">
+		<div class="b1-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52488575_1634778405/96"></div>
+		<div class="t1">QQ飞车手游</div>
+		<div class="t2">唯一官方正版手游，体验最原汁原味的漂移！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52750606_1634778831/96"></div>
+		<div class="t1">跑跑卡丁车官方竞速版</div>
+		<div class="t2">十四年竞速经典回归</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-3"><img src="http://pp.myapp.com/ma_icon/0/icon_54067078_1634616794/96"></div>
+		<div class="t1">NBA范特西（正版授权）</div>
+		<div class="t2">NBA同步数据，打造星级球队。</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-4"><img src="http://pp.myapp.com/ma_icon/0/icon_52669769_1631005878/96"></div>
+		<div class="t1">全民冠军足球</div>
+		<div class="t2">腾讯唯一的足球策略经营游戏</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-5"><img src="http://pp.myapp.com/ma_icon/0/icon_53932343_1626752813/96"></div>
+		<div class="t1">绿茵之巅</div>
+		<div class="t2">全新教练模式</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b1-6"><img src="http://pp.myapp.com/ma_icon/0/icon_53278989_1634166012/96"></div>
+		<div class="t1">灌篮高手正版授权手游</div>
+		<div class="t2">真人实时篮球竞技手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-1"><img src="http://pp.myapp.com/ma_icon/0/icon_52603764_1634801573/96"></div>
+		<div class="t1">FIFA足球世界</div>
+		<div class="t2">首款FIFA实时PVP足球竞技手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-2"><img src="http://pp.myapp.com/ma_icon/0/icon_52401388_1635324502/96"></div>
+		<div class="t1">最强NBA</div>
+		<div class="t2">真实竞技手游，来做赛场MVP！</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-3"><img src="http://pp.myapp.com/ma_icon/0/icon_12111174_1635606376/96"></div>
+		<div class="t1">腾讯桌球</div>
+		<div class="t2">腾讯首款真人实时对战桌球手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-4"><img src="http://pp.myapp.com/ma_icon/0/icon_10099632_1635300680/96"></div>
+		<div class="t1">天天酷跑</div>
+		<div class="t2">8亿人都在玩的国民跑酷手游</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div class="b2-5"><img src="http://pp.myapp.com/ma_icon/0/icon_11525981_1612324941/96"></div>
+		<div class="t1">城市飞车</div>
+		<div class="t2">全球3000万赛车用户共同推荐</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
+	<div class="l">
+		<div c class="b2-6"><img src="http://pp.myapp.com/ma_icon/0/icon_52743857_1635412043/96"></div>
+		<div class="t1">忍者必须死3</div>
+		<div class="t2">风靡全球的水墨风战斗跑酷</div>
+		<div class="t3"><p>下载</p></div>
+	</div>
 </div>
 
 </body>

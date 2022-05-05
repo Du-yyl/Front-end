@@ -12,33 +12,33 @@ import React, { Component } from 'react'
 import './index.css'
 
 export default class All extends Component {
-  
-  render () {
-    let { count, showMsgLen, allDone } = this.props
-    return (
-      <div id="All">
-        <input
-          type="checkbox"
-          className="check"
-          checked={allDone}
-          onChange={this.checkChange}
-        />
-        <span className="span">
+	
+	/**
+	 * 删除选中
+	 */
+	delClick = this.props.delAll
+	
+	render () {
+		let { count, showMsgLen, allDone } = this.props
+		return (
+				<div id="All">
+					<input
+							type="checkbox"
+							className="check"
+							checked={allDone}
+							onChange={this.checkChange}
+					/>
+					<span className="span">
           完成：{count}个；全部：{showMsgLen}个
         </span>
-        <button type="button" className="btn" onClick={this.delClick}>
-          删除 {count} 个
-        </button>
-      </div>
-    )
-  }
-  
-  checkChange = (event) => {
-    this.props.comAllMsg(event.target.checked)
-  }
-
-  /**
-   * 删除选中
-   */
-  delClick = this.props.delAll
+					<button type="button" className="btn" onClick={this.delClick}>
+						删除 {count} 个
+					</button>
+				</div>
+		)
+	}
+	
+	checkChange = (event) => {
+		this.props.comAllMsg (event.target.checked)
+	}
 }

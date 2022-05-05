@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 * {
   margin: 0;
   padding: 0;

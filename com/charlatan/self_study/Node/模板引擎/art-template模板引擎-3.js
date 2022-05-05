@@ -8,8 +8,8 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-let template = require ('art-template');
-let fs = require ('fs');
+let template = require ('art-template')
+let fs = require ('fs')
 
 let tools = {
 	name: 'Lily',
@@ -21,55 +21,55 @@ let tools = {
 		name: '李四',
 		age: 30,
 	},
-};
+}
 /*
-自定义变量
-
-		//标准语法
-		{{set name="Lily"}}
-		{{set temp = data.sub.content}}
-
-		//原始语法
-		<%= var name="Lily" %>
-		<% var temp = data.sub.content; %>
-*/
+ 自定义变量
+ 
+ //标准语法
+ {{set name="Lily"}}
+ {{set temp = data.sub.content}}
+ 
+ //原始语法
+ <%= var name="Lily" %>
+ <% var temp = data.sub.content; %>
+ */
 
 // 标准语法
-console.log (template.render ('name : name {{ name }} {{ set name = \'Tom\' }} {{ name }}', tools));
-console.log (template.render ('name:{{set name=\'Lily\'}} {{ name }}', tools));
+console.log (template.render ('name : name {{ name }} {{ set name = \'Tom\' }} {{ name }}', tools))
+console.log (template.render ('name:{{set name=\'Lily\'}} {{ name }}', tools))
 
 fs.readFile ('./index.html', function (err, data) {
-	if (!err) {
-		console.log (template.render (data.toString (), tools));
+	if ( !err ) {
+		console.log (template.render (data.toString (), tools))
 	} else {
-		console.log (err);
+		console.log (err)
 	}
-});
+})
 
 /*
-	{{if value}} ... {{/if}}
-	{{if v1}} ... {{else if v2}} ... {{/if}}
-		
-		<!--标准语法-->
-		{{if age >= 20}}
-		<p>年龄大于等于20</p>
-		{{else if age < 15}}
-		<p>年龄小于15</p>
-		{{else}}
-		<h1>年龄不符合要求</h1>
-		{{/if}}
-		
-		原始语法
-
-		<% if (value) { %> ... <% } %>
-		<% if (v1) { %> ... <% } else if (v2) { %> ... <% } %>
-		
-		<!--原始语法-->
-		<% if(age >= 20) { %>
-		<p>年龄大于等于20</p>
-		<% } else if(age < 15) { %>
-		<p>年龄小于15</p>
-		<% } else {%>
-		<h1>年龄不符合要求</h1>
-		<% } %>
-*/
+ {{if value}} ... {{/if}}
+ {{if v1}} ... {{else if v2}} ... {{/if}}
+ 
+ <!--标准语法-->
+ {{if age >= 20}}
+ <p>年龄大于等于20</p>
+ {{else if age < 15}}
+ <p>年龄小于15</p>
+ {{else}}
+ <h1>年龄不符合要求</h1>
+ {{/if}}
+ 
+ 原始语法
+ 
+ <% if (value) { %> ... <% } %>
+ <% if (v1) { %> ... <% } else if (v2) { %> ... <% } %>
+ 
+ <!--原始语法-->
+ <% if(age >= 20) { %>
+ <p>年龄大于等于20</p>
+ <% } else if(age < 15) { %>
+ <p>年龄小于15</p>
+ <% } else {%>
+ <h1>年龄不符合要求</h1>
+ <% } %>
+ */

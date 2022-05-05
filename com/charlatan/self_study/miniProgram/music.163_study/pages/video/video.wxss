@@ -97,6 +97,7 @@
 	border-top: 1rpx solid #eee;
 	padding: 20rpx 0;
 }
+
 .footer .avatar {
 	width: 60rpx;
 	height: 60rpx;
@@ -104,7 +105,7 @@
 	vertical-align: middle;
 }
 
-.footer  .nickName {
+.footer .nickName {
 	font-size: 26rpx;
 	vertical-align: middle;
 	margin-left: 70rpx;
@@ -114,6 +115,7 @@
 .footer .comments_praised {
 	float: right;
 }
+
 .comments_praised .btn {
 	display: inline;
 	padding: 0;

@@ -11,6 +11,7 @@
 import Food from './Food'
 
 export default class Snake {
+  static width = Food.screenWidth * 10 - 10
 //  获取表示蛇头的元素
   head: HTMLElement
   // 获取蛇的身体（包括蛇头）
@@ -18,8 +19,6 @@ export default class Snake {
   element = document.getElementById('snake')
   // 能穿墙
   throughWall: boolean
-  
-  static width = Food.screenWidth * 10 - 10
   
   constructor (throughWall = true) {
     this.head = document.querySelector('#snake > div')!
@@ -32,10 +31,6 @@ export default class Snake {
     return this.head.offsetLeft
   }
   
-  get Y (): number {
-    return this.head.offsetTop
-  }
-
 //  设置坐标
   set X (value) {
     if (this.X !== value) {
@@ -60,6 +55,10 @@ export default class Snake {
       this.checkHeadBody()
       
     }
+  }
+
+  get Y (): number {
+    return this.head.offsetTop
   }
   
   set Y (value) {

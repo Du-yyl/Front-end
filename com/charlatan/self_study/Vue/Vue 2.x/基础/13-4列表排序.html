@@ -32,7 +32,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			persons: [
@@ -67,14 +67,14 @@
 		},
 		methods: {
 			Ascending () {
-				console.log('升序')
-				this.persons = this.persons.sort((a, b) => {
+				console.log ('升序')
+				this.persons = this.persons.sort ((a, b) => {
 					return a.age - b.age
 				})
 			},
 			Descending () {
-				console.log('降序')
-				this.persons = this.persons.sort((a, b) => {
+				console.log ('降序')
+				this.persons = this.persons.sort ((a, b) => {
 					return b.age - a.age
 				})
 			},

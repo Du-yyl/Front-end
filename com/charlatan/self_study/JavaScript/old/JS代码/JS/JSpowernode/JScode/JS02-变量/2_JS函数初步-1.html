@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>函数的定义和调用</title>
+	<meta charset="UTF-8">
+	<title>函数的定义和调用</title>
 </head>
 <body>
 <script type="text/javascript">
-  /*
-  * JavaScript 中的函数：
-  *   等同Java的方法,一段可以重复利用的代码片段,函数是完成一个特定功能的
-  *   语法格式：
-  *     JS中的函数不需要指定返回值类型,返回什么类型,都行
-  *       第一种：
-  *       function 函数名(形参列表){
-  *           函数体;
-  *       }
-  *       第二种：
-  *       函数名 = function(形参列表){
-  *           函数体;
-  *       }
-  * */
+	/*
+	 * JavaScript 中的函数：
+	 *   等同Java的方法,一段可以重复利用的代码片段,函数是完成一个特定功能的
+	 *   语法格式：
+	 *     JS中的函数不需要指定返回值类型,返回什么类型,都行
+	 *       第一种：
+	 *       function 函数名(形参列表){
+	 *           函数体;
+	 *       }
+	 *       第二种：
+	 *       函数名 = function(形参列表){
+	 *           函数体;
+	 *       }
+	 * */
 
-  function sum(a, b) {
-    alert(a + b);
-  }
+	function sum (a, b) {
+		alert (a + b)
+	}
 
-  //函数必须调用才能执行
-  // sum(1,2);
+	//函数必须调用才能执行
+	// sum(1,2);
 
-  sayhello = function (username) {
-    alert("hello " + username);
-  }
-  //调用
-  // sayhello("张三");
+	sayhello = function (username) {
+		alert ('hello ' + username)
+	}
+	//调用
+	// sayhello("张三");
 </script>
 
 <input onclick="sayhello('zhangsan')" type="button" value="你好"/>

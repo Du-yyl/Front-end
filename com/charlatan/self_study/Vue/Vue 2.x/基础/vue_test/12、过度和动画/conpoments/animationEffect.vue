@@ -15,7 +15,7 @@
     <!--        <h2 >我是测试内容</h2>-->
     <!--      </div>-->
     <!--    </transition>-->
-    <transition name="me" appear="appear">
+    <transition appear="appear" name="me">
       <div v-show="isShow" class="div show">
         <h2>我是测试内容</h2>
       </div>
@@ -36,7 +36,7 @@ export default {
   components: {},
   methods: {
     showHidden () {
-      console.log('我是测试文字')
+      console.log ('我是测试文字')
       this.isShow = !this.isShow
     },
   },

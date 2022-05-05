@@ -29,27 +29,26 @@
 </pre>
 </body>
 <script>
-	function* func() {
-		console.log("你好");
-		console.log(this);
+	function * func () {
+		console.log ('你好')
+		console.log (this)
 		yield 111
-		console.log('hello');
-		console.log(this);
+		console.log ('hello')
+		console.log (this)
 		yield 222
 	}
 
 	let obj = {}
 
-	let fun = func()
-	fun.next()
-	fun.next()
-	fun.next()
+	let fun = func ()
+	fun.next ()
+	fun.next ()
+	fun.next ()
 
-
-	let fun1 = func.call(obj)
-	fun1.next()
-	fun1.next()
-	fun1.next()
-	fun1.next()
+	let fun1 = func.call (obj)
+	fun1.next ()
+	fun1.next ()
+	fun1.next ()
+	fun1.next ()
 </script>
 </html>

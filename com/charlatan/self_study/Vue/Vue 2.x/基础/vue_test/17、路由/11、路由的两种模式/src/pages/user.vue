@@ -7,7 +7,7 @@
   ~
   ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
   -->
-  
+
 <template>
 
   <div>
@@ -19,11 +19,11 @@
 
 <script>
 export default {
-  name: "user",
+  name: 'user',
   data () {
-    return {  }
+    return {}
   },
-  components: {  },
+  components: {},
 }
 </script>
 

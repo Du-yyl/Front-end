@@ -10,24 +10,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>inner操控div和span中的元素</title>
-    <style>
-        #div {
-            width: 300px;
-            height: 300px;
-            margin: 200px;
-            border: 1px solid;
-        }
+	<meta charset="UTF-8">
+	<title>inner操控div和span中的元素</title>
+	<style>
+		#div {
+			width: 300px;
+			height: 300px;
+			margin: 200px;
+			border: 1px solid;
+		}
 
-        #span {
-            width: 100px;
-            height: 100px;
-            border: 1px solid;
-            color: red !important;
-        }
+		#span {
+			width: 100px;
+			height: 100px;
+			border: 1px solid;
+			color: red !important;
+		}
 
-    </style>
+	</style>
 </head>
 <body>
 <span id="span">测试</span>
@@ -35,16 +35,16 @@
 <input id="btn" type="button" value="我是一个按钮">
 <input id="btn1" type="button" value="我是按钮2">
 <script>
-    window.onload = function () {
-        document.getElementById('btn').onclick = function () {
-            document.getElementById('div').innerText = '我是按钮按下显示在div的文本'
-        }
-        document.getElementById('btn1').onclick = function () {
-            document.getElementById('span').innerHTML = "<font color='00FF00'>用户名不能为空</font>";
-            // document.getElementById('span').innerHTML = "<fontcolor = 'red'>我是按钮1按下在span显示的文本</font>"
-            // document.getElementById('span').innerText = "<fontcolor = 'red'>我是按钮1按下在span显示的文本</font>"
-        }
-    }
+	window.onload = function () {
+		document.getElementById ('btn').onclick = function () {
+			document.getElementById ('div').innerText = '我是按钮按下显示在div的文本'
+		}
+		document.getElementById ('btn1').onclick = function () {
+			document.getElementById ('span').innerHTML = '<font color=\'00FF00\'>用户名不能为空</font>'
+			// document.getElementById('span').innerHTML = "<fontcolor = 'red'>我是按钮1按下在span显示的文本</font>"
+			// document.getElementById('span').innerText = "<fontcolor = 'red'>我是按钮1按下在span显示的文本</font>"
+		}
+	}
 
 </script>
 </body>

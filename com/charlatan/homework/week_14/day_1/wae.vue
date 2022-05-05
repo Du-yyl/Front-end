@@ -10,7 +10,7 @@
 
 <template>
   <div id="wae">
-    <input type="text" v-model="">
+    <input v-model="" type="text">
     <input type="radio">
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 * {
   margin: 0;
   padding: 0;

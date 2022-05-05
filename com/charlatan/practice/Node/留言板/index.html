@@ -13,7 +13,7 @@
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta content="*" http-equiv="Access-Control-Allow-Origin">
 	<title>my</title>
 	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
 	<style>
@@ -1438,7 +1438,7 @@
 				<span class="heard-nav-center-smalls heard-nav-center-small-2 "></span>
 				<span class="heard-nav-center-smalls heard-nav-center-small-3"></span>
 			</div>
-			<div class="heard-nav-right-search-switch" id="heard-nav-right-search-switch"></div>
+			<div id="heard-nav-right-search-switch" class="heard-nav-right-search-switch"></div>
 			<ul id="heard-nav-center-ul">
 				<li class="heard-nav-center-ul-li">
 					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-1"></div>
@@ -1469,14 +1469,14 @@
 
 		<div id="heard-nav-right">
 			<div id="heard-nav-right-search-img-div">
-				<img alt="搜索" class="heard-nav-right-search-img" id="heard-nav-right-search-img"
+				<img id="heard-nav-right-search-img" alt="搜索" class="heard-nav-right-search-img"
 				     src="file/-fangdajing.png">
 			</div>
 		</div>
 
 		<div class="heard-nav-right-input-div">
 			<label for="heard-nav-right-search">
-				<input class="heard-nav-right-search" id="heard-nav-right-search" placeholder="搜索..." type="search"
+				<input id="heard-nav-right-search" class="heard-nav-right-search" placeholder="搜索..." type="search"
 				       value="">
 			</label>
 			<!--			<div class="heard-nav-right-input-cancel">-->
@@ -1519,13 +1519,13 @@
 
 	<!--	<textarea class="body-form-input" cols="30" id="body-form-test" name="heard-form-text" placeholder=" 输入你的评论"-->
 	<!--	          rows="10"></textarea>-->
-	<div contenteditable=true class="body-form-input" id="body-form-test"></div>
+	<div id="body-form-test" class="body-form-input" contenteditable=true></div>
 	<div class="body-form-emoji">
 		表情
 	</div>
 
 	<!--			Emoji表情 -->
-	<ul class="body-form-emoji-ul " id="body-form-emoji-ul">
+	<ul id="body-form-emoji-ul" class="body-form-emoji-ul ">
 
 	</ul>
 
@@ -1533,24 +1533,24 @@
 	<div class="body-form-i">
 		填写您的信息
 	</div>
-	<div class="body-form-i-body " id="body-form-i-body">
+	<div id="body-form-i-body" class="body-form-i-body ">
 		<label for="body-form-i-body-name">
 			昵称
-			<input class="body-form-i-body-name" id="body-form-i-body-name" name="body-form-i-body-name" type="text">
+			<input id="body-form-i-body-name" class="body-form-i-body-name" name="body-form-i-body-name" type="text">
 		</label>
 		<br>
 		<label for="body-form-i-body-email">
 			邮箱
-			<input class="body-form-i-body-email" id="body-form-i-body-email" name="body-form-i-body-email" type="text">
+			<input id="body-form-i-body-email" class="body-form-i-body-email" name="body-form-i-body-email" type="text">
 		</label>
 	</div>
 
 	<!--    是否匿名-->
 	<div class="body-form-anonymous">
 		匿名发布
-		<div class="body-form-anonymous-1" id="body-form-anonymous-1">
-			<div class="body-form-anonymous-2" id="body-form-anonymous-2">
-				<div class="body-form-anonymous-3" id="body-form-anonymous-3"></div>
+		<div id="body-form-anonymous-1" class="body-form-anonymous-1">
+			<div id="body-form-anonymous-2" class="body-form-anonymous-2">
+				<div id="body-form-anonymous-3" class="body-form-anonymous-3"></div>
 			</div>
 		</div>
 
@@ -1560,7 +1560,7 @@
 	<div class="heard-form-about">
 		隐私声明：本站会自动保存您的IP（承诺非特殊情况不会公开您的IP），但请注意您的言行
 	</div>
-	<div class="body-form-submit" id="body-form-submit">
+	<div id="body-form-submit" class="body-form-submit">
 		提交评论
 	</div>
 
@@ -1573,13 +1573,13 @@
 
 <!--    音乐播放-->
 <div id="body-music">
-	<div class="music-div" id="music-div">
+	<div id="music-div" class="music-div">
 		<div class="music-play">
 			停
 		</div>
 	</div>
 	<div class="music-show"> ></div>
-	<audio autoplay="autoplay" id="body-music-audio">
+	<audio id="body-music-audio" autoplay="autoplay">
 		<source src="file/上上%20-%20青春大概.mp3" srcset="" type="audio/mpeg">
 	</audio>
 </div>
@@ -1595,94 +1595,94 @@
 <script>
 	window.onload = function () {
 		let body_anonymous_flag = true
-		let selection = document.getSelection()
-		let emoji_ul = $(`#body-form-emoji-ul`)
-		let body_form_main = $('#body-form-test')
+		let selection = document.getSelection ()
+		let emoji_ul = $ (`#body-form-emoji-ul`)
+		let body_form_main = $ ('#body-form-test')
 		let position = ''
-		for (let wcEmojiElement of wcEmoji) {
-			let li = document.createElement('LI')
-			$(li).addClass('body-form-emoji-lis')
-			let img = document.createElement('IMG')
-			img.classList.add('body-form-emoji-lis-gif')
+		for ( let wcEmojiElement of wcEmoji ) {
+			let li = document.createElement ('LI')
+			$ (li).addClass ('body-form-emoji-lis')
+			let img = document.createElement ('IMG')
+			img.classList.add ('body-form-emoji-lis-gif')
 			img.src = wcEmojiElement.src
 			img.alt = wcEmojiElement.alt
-			li.appendChild(img)
-			emoji_ul.append(li)
+			li.appendChild (img)
+			emoji_ul.append (li)
 		}
 
-		let emoji_lis_img = $('.body-form-emoji-lis-gif')
+		let emoji_lis_img = $ ('.body-form-emoji-lis-gif')
 
 		/**
 		 * 失去焦点时，可能会点击按钮，这时就记录焦点的位置
 		 */
-		body_form_main.blur(function () {
-			position = window.getSelection().getRangeAt(0)
+		body_form_main.blur (function () {
+			position = window.getSelection ().getRangeAt (0)
 		})
 
 		/**
 		 * 当点击表情时，就讲指定的按钮复制一份，并将获取到的按钮添加到刚刚获取到的焦点位置
 		 */
-		emoji_lis_img.click(function () {
-			if (position === '') {
-				let div = document.getElementById('body-form-test')
-				div.focus()
-				const range = window.getSelection()
-				range.selectAllChildren(div)
-				range.collapseToEnd()
-				position = window.getSelection().getRangeAt(0)
+		emoji_lis_img.click (function () {
+			if ( position === '' ) {
+				let div = document.getElementById ('body-form-test')
+				div.focus ()
+				const range = window.getSelection ()
+				range.selectAllChildren (div)
+				range.collapseToEnd ()
+				position = window.getSelection ().getRangeAt (0)
 			}
-			let that = $(this).clone()
-			$(that).addClass('boyd-form-form-main')
-			position.insertNode(that[0])
-			window.getSelection().collapseToEnd()
-			body_form_main.focus()
+			let that = $ (this).clone ()
+			$ (that).addClass ('boyd-form-form-main')
+			position.insertNode (that[0])
+			window.getSelection ().collapseToEnd ()
+			body_form_main.focus ()
 		})
 
 		/* 导航条 */
 		let heard_index = 0
-		let heard_lis = $(`.heard-nav-center-ul-li`)
-		let heard_switch_div = $(`#heard-nav-right-search-switch`)
+		let heard_lis = $ (`.heard-nav-center-ul-li`)
+		let heard_switch_div = $ (`#heard-nav-right-search-switch`)
 		// 滑块的切换
-		heard_lis.hover(function () {
-			heard_switch_div.css({
-				left: $(this).position().left,
+		heard_lis.hover (function () {
+			heard_switch_div.css ({
+				left: $ (this).position ().left,
 			})
 		}, function () {
-			heard_switch_div.css({
-				left: $(heard_lis[heard_index]).position().left,
+			heard_switch_div.css ({
+				left: $ (heard_lis[heard_index]).position ().left,
 			})
 		})
 
-		let heard_right_search = $(`#heard-nav-right`)
-		let heard_right_img = $(`#heard-nav-right-search-img`)
-		let heard_right_input = $(`.heard-nav-right-input-div:eq(0)`)
-		let heard_right_hint = $(`.heard-nav-right-input-hint:eq(0)`)
-		let heard_right_hint_lis = $(`#heard-nav-right-input-hint-ul > li`)
-		let heard_search = $(`#heard-nav-right-search`)
+		let heard_right_search = $ (`#heard-nav-right`)
+		let heard_right_img = $ (`#heard-nav-right-search-img`)
+		let heard_right_input = $ (`.heard-nav-right-input-div:eq(0)`)
+		let heard_right_hint = $ (`.heard-nav-right-input-hint:eq(0)`)
+		let heard_right_hint_lis = $ (`#heard-nav-right-input-hint-ul > li`)
+		let heard_search = $ (`#heard-nav-right-search`)
 
-		let heard_right_cancel = $(`.heard-nav-right-input-cancel:eq(0)`)
+		let heard_right_cancel = $ (`.heard-nav-right-input-cancel:eq(0)`)
 
 		let right_flag_1 = true
 		let right_flag_2 = true
 		let right_hint_lis_index = -1
 		let right_hint_lis_index_index = right_hint_lis_index
 
-		let heard_small_cho = $(`.heard-nav-center-small:eq(0)`)
-		let heard_small_ul = $(`#heard-nav-center-ul`)
-		let heard_smalls_1 = $(`.heard-nav-center-small-1:eq(0)`)
-		let heard_smalls_2 = $(`.heard-nav-center-small-2:eq(0)`)
-		let heard_smalls_3 = $(`.heard-nav-center-small-3:eq(0)`)
+		let heard_small_cho = $ (`.heard-nav-center-small:eq(0)`)
+		let heard_small_ul = $ (`#heard-nav-center-ul`)
+		let heard_smalls_1 = $ (`.heard-nav-center-small-1:eq(0)`)
+		let heard_smalls_2 = $ (`.heard-nav-center-small-2:eq(0)`)
+		let heard_smalls_3 = $ (`.heard-nav-center-small-3:eq(0)`)
 
 		let heard_small_index = true
 
 		function heard_right_co () {
-			heard_right_img.addClass('heard-nav-right-search-img-input-show')
-			heard_right_input.css({
+			heard_right_img.addClass ('heard-nav-right-search-img-input-show')
+			heard_right_input.css ({
 				top: 0,
 			})
-			heard_right_hint.addClass('heard-nav-right-input-hint-switch')
+			heard_right_hint.addClass ('heard-nav-right-input-hint-switch')
 			// $(heard_search).focus()
-			setTimeout(function () {
+			setTimeout (function () {
 				document.onclick = heard_input_blur
 			}, 40)
 			// 键盘的下翻
@@ -1690,29 +1690,29 @@
 			right_flag_1 = false
 			// 因为搜索框是折叠上去的，所以直接获取焦点会追到顶部获取焦点（滚动条乱跳）
 			// ，所以这里当事件发生事，延迟一点进行赋予焦点
-			setTimeout(function () {
-				heard_search.focus()
+			setTimeout (function () {
+				heard_search.focus ()
 			}, 150)
 		}
 
-		heard_right_cancel.click(heard_input_blur)
+		heard_right_cancel.click (heard_input_blur)
 		// 放大镜的事件切换
-		heard_right_search.click(function () {
-			if (right_flag_1) {
-				heard_right_co()
+		heard_right_search.click (function () {
+			if ( right_flag_1 ) {
+				heard_right_co ()
 			} else {
-				console.log('我是假')
-				goSearch()
+				console.log ('我是假')
+				goSearch ()
 			}
 
-			if (!heard_small_index) {
-				heard_small_ul.css({
+			if ( !heard_small_index ) {
+				heard_small_ul.css ({
 					height: 0,
 				})
 				heard_small_index = true
-				heard_smalls_1.removeClass('heard-nav-center-small-1-switch')
-				heard_smalls_2.removeClass('heard-nav-center-small-2-switch')
-				heard_smalls_3.removeClass('heard-nav-center-small-3-switch')
+				heard_smalls_1.removeClass ('heard-nav-center-small-1-switch')
+				heard_smalls_2.removeClass ('heard-nav-center-small-2-switch')
+				heard_smalls_3.removeClass ('heard-nav-center-small-3-switch')
 			}
 		})
 
@@ -1720,74 +1720,74 @@
 		 * 取消事件的样式
 		 */
 		function heard_input_blur () {
-			console.log('取消样式')
+			console.log ('取消样式')
 			right_flag_1 = true
-			heard_right_img.removeClass('heard-nav-right-search-img-input-show')
-			heard_right_input.css({
+			heard_right_img.removeClass ('heard-nav-right-search-img-input-show')
+			heard_right_input.css ({
 				top: '-5.6rem',
 			})
-			heard_right_hint.css({
+			heard_right_hint.css ({
 				display: 'none',
 			})
-			setTimeout(function () {
-				heard_right_hint.css({
+			setTimeout (function () {
+				heard_right_hint.css ({
 					display: 'block',
 				})
 			}, 500)
-			heard_right_hint.removeClass('heard-nav-right-input-hint-switch')
+			heard_right_hint.removeClass ('heard-nav-right-input-hint-switch')
 			document.onclick = null
 			document.onkeydown = null
-			$(heard_right_hint_lis[right_hint_lis_index]).removeClass('heard-nav-right-input-hint-ul-li-foc')
+			$ (heard_right_hint_lis[right_hint_lis_index]).removeClass ('heard-nav-right-input-hint-ul-li-foc')
 			right_hint_lis_index = -1
-			heard_search.val('')
+			heard_search.val ('')
 		}
 
 		// 叉号
 		// heard_right_img.click(goSearch)
 
 		// 点击区域的判断
-		heard_right_input.click(function () {
+		heard_right_input.click (function () {
 			document.onclick = null
-			setTimeout(function () {
+			setTimeout (function () {
 				document.onclick = heard_input_blur
 			}, 40)
 		})
 
 		//	键盘控制选项的选择
 		function heard_right_hint_li (event) {
-			if ('ArrowDown' === event.key) {
+			if ( 'ArrowDown' === event.key ) {
 
 				heard_right_hint_lis[right_hint_lis_index = right_hint_lis_index === heard_right_hint_lis.length - 1 ?
 						0 : ++right_hint_lis_index
-						].classList.add('heard-nav-right-input-hint-ul-li-foc')
+						].classList.add ('heard-nav-right-input-hint-ul-li-foc')
 
 				heard_right_hint_lis[right_hint_lis_index_index = right_hint_lis_index === 0 ?
 						heard_right_hint_lis.length - 1 : right_hint_lis_index - 1
-						].classList.remove('heard-nav-right-input-hint-ul-li-foc')
-				heard_search.val(heard_right_hint_lis[right_hint_lis_index].innerText)
-			} else if ('ArrowUp' === event.key) {
+						].classList.remove ('heard-nav-right-input-hint-ul-li-foc')
+				heard_search.val (heard_right_hint_lis[right_hint_lis_index].innerText)
+			} else if ( 'ArrowUp' === event.key ) {
 				right_hint_lis_index = right_hint_lis_index === -1 ? 0 : right_hint_lis_index
 				heard_right_hint_lis[right_hint_lis_index = right_hint_lis_index === 0 ?
 						heard_right_hint_lis.length - 1 : --right_hint_lis_index
-						].classList.add('heard-nav-right-input-hint-ul-li-foc')
+						].classList.add ('heard-nav-right-input-hint-ul-li-foc')
 
 				heard_right_hint_lis[right_hint_lis_index_index = right_hint_lis_index === heard_right_hint_lis.length -
 				1 ? 0 : right_hint_lis_index + 1
-						].classList.remove('heard-nav-right-input-hint-ul-li-foc')
+						].classList.remove ('heard-nav-right-input-hint-ul-li-foc')
 
-				heard_search.val(heard_right_hint_lis[right_hint_lis_index].innerText)
-			} else if (event.key === 'Enter') {
-				console.log(heard_right_hint_lis[right_hint_lis_index].innerText)
+				heard_search.val (heard_right_hint_lis[right_hint_lis_index].innerText)
+			} else if ( event.key === 'Enter' ) {
+				console.log (heard_right_hint_lis[right_hint_lis_index].innerText)
 				// 开始搜索
 			}
 		}
 
 		// 点击标签搜索
 
-		heard_right_hint_lis.click(goSearch_click)
+		heard_right_hint_lis.click (goSearch_click)
 
 		function goSearch_click () {
-			heard_search.val(this.innerText)
+			heard_search.val (this.innerText)
 			//	开始搜索
 		}
 
@@ -1797,10 +1797,10 @@
 		 * 当input中为空时，不能搜索
 		 */
 		function goSearch () {
-			if ($.trim(heard_search.val()) === '') {
-				alert('内容不能为空')
+			if ( $.trim (heard_search.val ()) === '' ) {
+				alert ('内容不能为空')
 			} else {
-				alert(heard_search.val())
+				alert (heard_search.val ())
 			}
 		}
 
@@ -1812,47 +1812,47 @@
 		}
 
 		// 顶部菜单的三个小横杠
-		heard_small_cho.click(function () {
-			if (heard_small_index) {
-				heard_small_ul.css({
+		heard_small_cho.click (function () {
+			if ( heard_small_index ) {
+				heard_small_ul.css ({
 					height: '25rem',
 				})
-				heard_smalls_1.addClass('heard-nav-center-small-1-switch')
-				heard_smalls_2.addClass('heard-nav-center-small-2-switch')
-				heard_smalls_3.addClass('heard-nav-center-small-3-switch')
+				heard_smalls_1.addClass ('heard-nav-center-small-1-switch')
+				heard_smalls_2.addClass ('heard-nav-center-small-2-switch')
+				heard_smalls_3.addClass ('heard-nav-center-small-3-switch')
 				heard_small_index = false
 			} else {
-				heard_small_ul.css({
+				heard_small_ul.css ({
 					height: 0,
 				})
 				heard_small_index = true
-				heard_smalls_1.removeClass('heard-nav-center-small-1-switch')
-				heard_smalls_2.removeClass('heard-nav-center-small-2-switch')
-				heard_smalls_3.removeClass('heard-nav-center-small-3-switch')
+				heard_smalls_1.removeClass ('heard-nav-center-small-1-switch')
+				heard_smalls_2.removeClass ('heard-nav-center-small-2-switch')
+				heard_smalls_3.removeClass ('heard-nav-center-small-3-switch')
 			}
 		})
 
 		//	点击表情按钮，出现表情列表
-		let emoji_btn = $(`.body-form-emoji:eq(0)`)
+		let emoji_btn = $ (`.body-form-emoji:eq(0)`)
 		let emoji_flag = true
 		let emoji_time
-		emoji_btn.click(function () {
-			if (emoji_flag) {
-				emoji_ul.addClass('body-form-emoji-ul-switch')
-				emoji_time = setTimeout(function () {
-					$(document).click(emoji_click)
+		emoji_btn.click (function () {
+			if ( emoji_flag ) {
+				emoji_ul.addClass ('body-form-emoji-ul-switch')
+				emoji_time = setTimeout (function () {
+					$ (document).click (emoji_click)
 				}, 200)
 				emoji_flag = false
 			}
 		})
 
 		function emoji_click (event) {
-			if (func2(event.target, emoji_ul[0])) {
-				emoji_ul.addClass('body-form-emoji-ul-switch')
+			if ( func2 (event.target, emoji_ul[0]) ) {
+				emoji_ul.addClass ('body-form-emoji-ul-switch')
 				emoji_flag = false
 			} else {
-				emoji_ul.removeClass('body-form-emoji-ul-switch')
-				$(document).off('click', emoji_click)
+				emoji_ul.removeClass ('body-form-emoji-ul-switch')
+				$ (document).off ('click', emoji_click)
 				// document.onclick = null
 				emoji_flag = true
 			}
@@ -1864,28 +1864,28 @@
 		 * @param the 目标元素
 		 */
 		function func2 (that, the) {
-			return that === null || the === null ? false : func3(that, the)
+			return that === null || the === null ? false : func3 (that, the)
 		}
 
 		function func3 (that, the) {
-			if (that === the) {
+			if ( that === the ) {
 				return true
 			}
-			if ($(that)[0].tagName === 'BODY') {
+			if ( $ (that)[0].tagName === 'BODY' ) {
 				return false
 			}
-			return func3($(that).parent()[0], the)
+			return func3 ($ (that).parent ()[0], the)
 		}
 
 		//	填写信息框的大小切换
-		let body_form = $(`.body-form-i:eq(0)`)
-		let body_form_body = $(`#body-form-i-body`)
+		let body_form = $ (`.body-form-i:eq(0)`)
+		let body_form_body = $ (`#body-form-i-body`)
 		let body_form_flag = true
 		let body_form_time
-		body_form.click(function () {
-			if (body_form_flag) {
-				body_form_body.addClass('body-form-i-body-switch')
-				body_form_time = setTimeout(function () {
+		body_form.click (function () {
+			if ( body_form_flag ) {
+				body_form_body.addClass ('body-form-i-body-switch')
+				body_form_time = setTimeout (function () {
 					document.onclick = body_form_click
 				}, 200)
 				body_form_flag = false
@@ -1893,133 +1893,133 @@
 		})
 
 		function body_form_click (event) {
-			if (func2(event.target, body_form_body[0])) {
-				body_form_body.addClass('body-form-i-body-switch')
+			if ( func2 (event.target, body_form_body[0]) ) {
+				body_form_body.addClass ('body-form-i-body-switch')
 				body_form_flag = false
 			} else {
-				body_form_body.removeClass('body-form-i-body-switch')
+				body_form_body.removeClass ('body-form-i-body-switch')
 				document.onclick = null
 				body_form_flag = true
 			}
 		}
 
 // 评论提交
-		let submit = $(`#body-form-submit`)
+		let submit = $ (`#body-form-submit`)
 
 		// 判断用户名是否合法
-		let user_name = $(`#body-form-i-body-name`)
-		let user_eMail = $(`#body-form-i-body-email`)
+		let user_name = $ (`#body-form-i-body-name`)
+		let user_eMail = $ (`#body-form-i-body-email`)
 
-		submit.click(function () {
-			if (user_name.val().length !== 0 || user_eMail.val().length !== 0) {
-				if (user_name.val().length >= 10) {
-					toErr('用户名过长')
+		submit.click (function () {
+			if ( user_name.val ().length !== 0 || user_eMail.val ().length !== 0 ) {
+				if ( user_name.val ().length >= 10 ) {
+					toErr ('用户名过长')
 					return
 				}
-				if (!/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(user_eMail.val())) {
-					toErr('邮箱格式非法')
+				if ( !/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test (user_eMail.val ()) ) {
+					toErr ('邮箱格式非法')
 					return
 				}
 				body_anonymous_flag = false
-				anonymous_btn_click()
+				anonymous_btn_click ()
 			} else {
 				body_anonymous_flag = true
-				anonymous_btn_click()
+				anonymous_btn_click ()
 			}
 
-			let main = body_form_main.html().replace(/^[&nbsp; ]*[&nbsp;]*|[&nbsp; ]*$/gm, '')
-			if (main.length === 0) {
-				toErr('不能发布空内容')
+			let main = body_form_main.html ().replace (/^[&nbsp; ]*[&nbsp;]*|[&nbsp; ]*$/gm, '')
+			if ( main.length === 0 ) {
+				toErr ('不能发布空内容')
 			} else {
-				if (statisticsText(main) >= 500) {
-					toErr('文本内容过长')
+				if ( statisticsText (main) >= 500 ) {
+					toErr ('文本内容过长')
 				} else {
 					//	这里的内容一定是合法的长度
-					let str = strShorten(body_form_main.html())
-					$.get('http://127.0.0.1:3000/getKey', {
+					let str = strShorten (body_form_main.html ())
+					$.get ('http://127.0.0.1:3000/getKey', {
 						'Access-Control-Allow-Origin': 'http://127.0.0.1:3000',
 						'Access-Control-Allow-Credentials': 'true',
 						'Origin': 'http://127.0.0.1:3000',
 					}, function (data) {
-						$.post('http://127.0.0.1:3000/sendComment', {
-							name: encrypt(data.key, data.offset, user_name.val()),
-							eMail: encrypt(data.key, data.offset, user_eMail.val()),
+						$.post ('http://127.0.0.1:3000/sendComment', {
+							name: encrypt (data.key, data.offset, user_name.val ()),
+							eMail: encrypt (data.key, data.offset, user_eMail.val ()),
 							isAnonymous: !body_anonymous_flag,
 							content: str,
 						}, function (data) {
-							console.log(data)
+							console.log (data)
 						})
 
 					})
 
-					toErr('发送成功')
+					toErr ('发送成功')
 				}
 			}
 		})
 
 		//	匿名按钮的转换
-		let body_anonymous_btn = $(`.body-form-anonymous:eq(0)`)
-		let body_anonymous_1 = $(`#body-form-anonymous-1`)
-		let body_anonymous_2 = $(`#body-form-anonymous-2`)
-		let body_anonymous_3 = $(`#body-form-anonymous-3`)
+		let body_anonymous_btn = $ (`.body-form-anonymous:eq(0)`)
+		let body_anonymous_1 = $ (`#body-form-anonymous-1`)
+		let body_anonymous_2 = $ (`#body-form-anonymous-2`)
+		let body_anonymous_3 = $ (`#body-form-anonymous-3`)
 
-		body_anonymous_btn.click(anonymous_btn_click)
+		body_anonymous_btn.click (anonymous_btn_click)
 
 		function anonymous_btn_click () {
-			if (body_anonymous_flag) {
-				body_anonymous_1.addClass('body-form-anonymous-1-switch')
-				body_anonymous_2.addClass('body-form-anonymous-2-switch')
-				body_anonymous_3.addClass('body-form-anonymous-3-switch')
+			if ( body_anonymous_flag ) {
+				body_anonymous_1.addClass ('body-form-anonymous-1-switch')
+				body_anonymous_2.addClass ('body-form-anonymous-2-switch')
+				body_anonymous_3.addClass ('body-form-anonymous-3-switch')
 				body_anonymous_flag = false
 			} else {
-				body_anonymous_1.removeClass('body-form-anonymous-1-switch')
-				body_anonymous_2.removeClass('body-form-anonymous-2-switch')
-				body_anonymous_3.removeClass('body-form-anonymous-3-switch')
+				body_anonymous_1.removeClass ('body-form-anonymous-1-switch')
+				body_anonymous_2.removeClass ('body-form-anonymous-2-switch')
+				body_anonymous_3.removeClass ('body-form-anonymous-3-switch')
 				body_anonymous_flag = true
 			}
 		}
 
-		let errs = $(`#err`)
+		let errs = $ (`#err`)
 
 		function toErr (str) {
-			let div = document.createElement('div')
-			div.classList.add('body-err')
-			div.classList.add('body-err-hidden')
+			let div = document.createElement ('div')
+			div.classList.add ('body-err')
+			div.classList.add ('body-err-hidden')
 			div.innerHTML = `
 					<div class="body-err-img body-err-img-hidden"></div>
 					<span class="body-err-span body-err-span-hidden">
 						${str}
 					</span>`
-			setTimeout(function () {
-				$(div).removeClass('body-err-hidden')
-				$(div).find('.body-err-img:eq(0)').removeClass('body-err-img-hidden')
-				$(div).find('.body-err-span:eq(0)').removeClass('body-err-span-hidden')
+			setTimeout (function () {
+				$ (div).removeClass ('body-err-hidden')
+				$ (div).find ('.body-err-img:eq(0)').removeClass ('body-err-img-hidden')
+				$ (div).find ('.body-err-span:eq(0)').removeClass ('body-err-span-hidden')
 			}, 100)
-			setTimeout(function () {
+			setTimeout (function () {
 				div.style.bottom = '50rem'
-				setTimeout(function () {
-					div.remove()
+				setTimeout (function () {
+					div.remove ()
 				}, 400)
 			}, 3000)
 
-			errs.append(div)
+			errs.append (div)
 		}
 
 		//	评论内容
-		let body_body = $(`#body-body`)
-		let body_ul = $(`#body-body-ul`)
+		let body_body = $ (`#body-body`)
+		let body_ul = $ (`#body-body-ul`)
 
 		// 根据样式进行新增项目
-		$(document).scroll(function () {
-			let scrollTop = $(document).scrollTop()
-			if (scrollTop + document.documentElement.clientHeight + 10 >= $(document).height()) {
-				for (let i = 0, len = 3; i < len; i++) {
+		$ (document).scroll (function () {
+			let scrollTop = $ (document).scrollTop ()
+			if ( scrollTop + document.documentElement.clientHeight + 10 >= $ (document).height () ) {
+				for ( let i = 0, len = 3; i < len; i++ ) {
 					let main_title = '我是测试添加的测试内容'
-					let date = new Date()
-					let main_time = date.getFullYear() + '-' + date.getMonth() + 1 + '-' + date.getDate() + '  ' +
-							date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+					let date = new Date ()
+					let main_time = date.getFullYear () + '-' + date.getMonth () + 1 + '-' + date.getDate () + '  ' +
+							date.getHours () + ':' + date.getMinutes () + ':' + date.getSeconds ()
 					let main_user_name = '李四'
-					let li = document.createElement('li')
+					let li = document.createElement ('li')
 					li.innerHTML = `
 							<span class="body-lis-name body-lis-name-hidden">
 								${main_user_name}
@@ -2032,35 +2032,35 @@
 								${main_title}
 							</div>
 				`
-					li.classList.add('title-lis')
-					li.classList.add('title-lis-index')
-					body_ul.append(li)
-					setTimeout(function () {
-						$(li).find('.body-lis-name:eq(0)').removeClass('body-lis-name-hidden')
-						$(li).find('.body-lis-time:eq(0)').removeClass('body-lis-time-hidden')
-						$(li).find('.body-lis-title:eq(0)').removeClass('body-lis-title-hidden')
+					li.classList.add ('title-lis')
+					li.classList.add ('title-lis-index')
+					body_ul.append (li)
+					setTimeout (function () {
+						$ (li).find ('.body-lis-name:eq(0)').removeClass ('body-lis-name-hidden')
+						$ (li).find ('.body-lis-time:eq(0)').removeClass ('body-lis-time-hidden')
+						$ (li).find ('.body-lis-title:eq(0)').removeClass ('body-lis-title-hidden')
 					}, 100)
-					li.style.height = $(li).height() + 35 + 'px'
+					li.style.height = $ (li).height () + 35 + 'px'
 				}
 			}
 			// 最顶层的内容进行删除
 			let timer = null
-			if (body_ul.height() >= 1000 && scrollTop >= 1100) {
-				let title_lis = $(`.title-lis-index:eq(0)`)
-				timer = setInterval(debounce(function () {
-					title_lis.find('.body-lis-name:eq(0)').addClass('body-lis-name-hidden')
-					title_lis.find('.body-lis-time:eq(0)').addClass('body-lis-time-hidden')
-					title_lis.find('.body-lis-title:eq(0)').addClass('body-lis-title-hidden')
-					setTimeout(function () {
-						title_lis.addClass('title-lis-hidden')
+			if ( body_ul.height () >= 1000 && scrollTop >= 1100 ) {
+				let title_lis = $ (`.title-lis-index:eq(0)`)
+				timer = setInterval (debounce (function () {
+					title_lis.find ('.body-lis-name:eq(0)').addClass ('body-lis-name-hidden')
+					title_lis.find ('.body-lis-time:eq(0)').addClass ('body-lis-time-hidden')
+					title_lis.find ('.body-lis-title:eq(0)').addClass ('body-lis-title-hidden')
+					setTimeout (function () {
+						title_lis.addClass ('title-lis-hidden')
 					}, 700)
-					setTimeout(function () {
-						title_lis.remove()
+					setTimeout (function () {
+						title_lis.remove ()
 					}, 1700)
-					title_lis.removeClass('title-lis-index')
+					title_lis.removeClass ('title-lis-index')
 				}, 10), 480)
 			} else {
-				clearInterval(timer)
+				clearInterval (timer)
 			}
 		})
 
@@ -2074,45 +2074,45 @@
 			let flag = true
 			return function () {
 				let timer = null
-				if (flag) {
+				if ( flag ) {
 					flag = false
-					callBack()
+					callBack ()
 					// callBack.call(this)
-					timer = setTimeout(() => {
+					timer = setTimeout (() => {
 						flag = true
-						clearTimeout(timer)
+						clearTimeout (timer)
 					}, time)
 				}
 			}
 		}
 
 		//	音乐播放
-		let music = $(`#body-music`)
-		let music_div = $(`#music-div`)
-		let music_show = $(`.music-show:eq(0)`)
-		let music_audio = $(`#body-music-audio`)
-		let elementById = document.getElementById('body-music-audio')
+		let music = $ (`#body-music`)
+		let music_div = $ (`#music-div`)
+		let music_show = $ (`.music-show:eq(0)`)
+		let music_audio = $ (`#body-music-audio`)
+		let elementById = document.getElementById ('body-music-audio')
 		let music_flag = true
 		// 暂停，开始
-		music_div.click(function () {
-			if (music_flag) {
-				elementById.pause()
+		music_div.click (function () {
+			if ( music_flag ) {
+				elementById.pause ()
 				music_flag = false
 			} else {
-				elementById.play()
+				elementById.play ()
 				music_flag = true
 			}
 		})
 		//	切换
 		let music_show_flag = true
-		music_show.click(function () {
-			if (music_show_flag) {
-				music.css({
+		music_show.click (function () {
+			if ( music_show_flag ) {
+				music.css ({
 					left: '-8rem',
 				})
 				music_show_flag = false
 			} else {
-				music.css({
+				music.css ({
 					left: 0,
 				})
 				music_show_flag = true
@@ -2127,18 +2127,18 @@
 			let exg = /\s*<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis\/*\w*.gif" alt="[\u4E00-\u9FA5]*\w*">\s*/g
 			let string = '<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis'
 
-			if (exg.test(str)) {
+			if ( exg.test (str) ) {
 				// 带有表情时的文本实际的长度
-				let num1 = str.replace(exg, '').length
+				let num1 = str.replace (exg, '').length
 
 				// 表情的长度
 				let num2 = 0
 
 				// 记录第一次出现字符的下标
-				let index = str.indexOf(string)
-				while (index >= 0) {
+				let index = str.indexOf (string)
+				while ( index >= 0 ) {
 					num2++
-					index = str.indexOf(string, index + 1)
+					index = str.indexOf (string, index + 1)
 				}
 				return num2 + num1
 			} else {
@@ -2154,7 +2154,7 @@
 		function strShorten (str) {
 			let exg = /<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis\//g
 			let sbuStr = '%^~?'
-			return str.replace(exg, sbuStr)
+			return str.replace (exg, sbuStr)
 		}
 
 		/**
@@ -2165,9 +2165,9 @@
 		function strLong (str) {
 			let string = '%^~?'
 			let strings = '<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis/'
-			let num = str.indexOf(string)
-			if (num >= 0) {
-				return str.replaceAll(string, strings)
+			let num = str.indexOf (string)
+			if ( num >= 0 ) {
+				return str.replaceAll (string, strings)
 			} else {
 				return str
 			}
@@ -2183,12 +2183,12 @@
 		 */
 		function decrypt (key, offset, string) {
 
-			let decryption = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(string))
-			return CryptoJS.AES.decrypt(decryption, CryptoJS.enc.Utf8.parse(key), {
-				iv: CryptoJS.enc.Utf8.parse(offset),
+			let decryption = CryptoJS.enc.Base64.stringify (CryptoJS.enc.Hex.parse (string))
+			return CryptoJS.AES.decrypt (decryption, CryptoJS.enc.Utf8.parse (key), {
+				iv: CryptoJS.enc.Utf8.parse (offset),
 				mode: CryptoJS.mode.CBC,
 				padding: CryptoJS.pad.Pkcs7,
-			}).toString(CryptoJS.enc.Utf8).toString()
+			}).toString (CryptoJS.enc.Utf8).toString ()
 		}
 
 		/**
@@ -2200,12 +2200,12 @@
 		 * @constructor
 		 */
 		function encrypt (key, offset, string) {
-			let encryption = CryptoJS.enc.Utf8.parse(string)
-			return CryptoJS.AES.encrypt(encryption, CryptoJS.enc.Utf8.parse(key), {
-				iv: CryptoJS.enc.Utf8.parse(offset),
+			let encryption = CryptoJS.enc.Utf8.parse (string)
+			return CryptoJS.AES.encrypt (encryption, CryptoJS.enc.Utf8.parse (key), {
+				iv: CryptoJS.enc.Utf8.parse (offset),
 				mode: CryptoJS.mode.CBC,
 				padding: CryptoJS.pad.Pkcs7,
-			}).ciphertext.toString().toUpperCase()
+			}).ciphertext.toString ().toUpperCase ()
 		}
 
 	}

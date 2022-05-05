@@ -23,14 +23,14 @@
 </pre>
 </body>
 <script>
-	let pro = new Promise(((resolve, reject) => {
-		setTimeout(function () {
-			resolve("用户数据")
+	let pro = new Promise (((resolve, reject) => {
+		setTimeout (function () {
+			resolve ('用户数据')
 		}, 1000)
 	}))
 
-	console.log(pro.then((value => {
-		console.log(value);
+	console.log (pro.then ((value => {
+		console.log (value)
 		// return 123
 		// return new Promise(((resolve, reject) => {
 		// 	// resolve("这是测试")
@@ -38,28 +38,27 @@
 		// }))
 		// throw new Error("出错测试")
 	}), (reason => {
-		console.log(reason);
-	})));
-
+		console.log (reason)
+	})))
 
 	//    链式调用
-	let p = new Promise((resolve, reject) => {
-		setTimeout(() => {
-			resolve("第一个")
+	let p = new Promise ((resolve, reject) => {
+		setTimeout (() => {
+			resolve ('第一个')
 		}, 1000)
 	})
 
-	p.then((value => {
-		setTimeout(function () {
-			console.log(value);
+	p.then ((value => {
+		setTimeout (function () {
+			console.log (value)
 		}, 1000)
-	})).then((() => {
-		setTimeout(function () {
-			console.log('第二个');
+	})).then ((() => {
+		setTimeout (function () {
+			console.log ('第二个')
 		}, 2000)
-	})).then((() => {
-		setTimeout(() => {
-			console.log('第三个');
+	})).then ((() => {
+		setTimeout (() => {
+			console.log ('第三个')
 		}, 3000)
 	}))
 

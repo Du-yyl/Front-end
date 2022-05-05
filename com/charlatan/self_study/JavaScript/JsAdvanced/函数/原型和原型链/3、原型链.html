@@ -10,53 +10,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>原型链</title>
-    <style>
+	<meta charset="UTF-8">
+	<title>原型链</title>
+	<style>
 
-    </style>
+	</style>
 </head>
 <body>
 
 </body>
 <script>
-	function Fun1() {
+	function Fun1 () {
 	}
 
-	let fun3 = new Fun1()
+	let fun3 = new Fun1 ()
 	let Fun2 = function () {
 	}
 
-    console.log("Fun1");
-	console.log("+++  " + Fun1.prototype);
-	console.log("---  " + Fun1.__proto__);
+	console.log ('Fun1')
+	console.log ('+++  ' + Fun1.prototype)
+	console.log ('---  ' + Fun1.__proto__)
 
-    console.log("Fun2");
-	console.log("+++  " + Fun2.prototype);
-	console.log("---  " + Fun2.__proto__);
+	console.log ('Fun2')
+	console.log ('+++  ' + Fun2.prototype)
+	console.log ('---  ' + Fun2.__proto__)
 
-	console.log("++++++++++++++++++++++++++++++++++++");
-	console.log(Object.prototype);
-	console.log(Fun1.prototype instanceof Object);
-	console.log(Object.prototype instanceof Object);
+	console.log ('++++++++++++++++++++++++++++++++++++')
+	console.log (Object.prototype)
+	console.log (Fun1.prototype instanceof Object)
+	console.log (Object.prototype instanceof Object)
 
-    console.log("--------------");
-	
-	
-	console.log(Fun1.__proto__ === Object.__proto__);
-	console.log(Fun1.prototype.__proto__ === Object.prototype);
-	console.log(fun3.__proto__.__proto__ === Object.prototype);
-    console.log(fun3.__proto__ === Fun1.prototype);
+	console.log ('--------------')
 
+	console.log (Fun1.__proto__ === Object.__proto__)
+	console.log (Fun1.prototype.__proto__ === Object.prototype)
+	console.log (fun3.__proto__.__proto__ === Object.prototype)
+	console.log (fun3.__proto__ === Fun1.prototype)
 
-	console.log("-------Function-----------------------");
+	console.log ('-------Function-----------------------')
 
-	console.log(Function);
-	console.log(Function.prototype === Function.__proto__ + "");
-	console.log(Function.prototype === Function.__proto__);
-	console.log(Function.prototype === Object.__proto__);
-	console.log("Function.prototype === Function.__proto__" + Function.prototype === Function.__proto__);
-	console.log("Function.prototype === Object.__proto__" + Function.prototype === Object.__proto__);
+	console.log (Function)
+	console.log (Function.prototype === Function.__proto__ + '')
+	console.log (Function.prototype === Function.__proto__)
+	console.log (Function.prototype === Object.__proto__)
+	console.log ('Function.prototype === Function.__proto__' + Function.prototype === Function.__proto__)
+	console.log ('Function.prototype === Object.__proto__' + Function.prototype === Object.__proto__)
 
 </script>
 

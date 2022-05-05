@@ -13,45 +13,45 @@
 	<meta charset="UTF-8">
 	<title>增删改</title>
 	<style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-size: 15px;
-            text-decoration: none;
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
 
-        li {
-            cursor: pointer;
-        }
+		li {
+			cursor: pointer;
+		}
 
-        /*-------以上为默认设置（The above is the default setting）--------*/
+		/*-------以上为默认设置（The above is the default setting）--------*/
 
-        * {
-            margin: 0;
-        }
+		* {
+			margin: 0;
+		}
 
-        .div1 {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            top: 20px;
-            left: 10px;
-            background: blue;
-        }
+		.div1 {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top: 20px;
+			left: 10px;
+			background: blue;
+		}
 
-        .div2 {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            /*top: 50px;*/
-            background: red;
-        }
+		.div2 {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			/*top: 50px;*/
+			background: red;
+		}
 
-        .div3 {
-            position: absolute;
-            top: 250px;
-        }
+		.div3 {
+			position: absolute;
+			top: 250px;
+		}
 
 
 	</style>
@@ -99,21 +99,21 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
 
-	$(function () {
-		let ul1 = $(`#ul1`)
-		let ul2 = $(`#ul2`)
+	$ (function () {
+		let ul1 = $ (`#ul1`)
+		let ul2 = $ (`#ul2`)
 		//向id为ul1的ul下添加一个span(最后)
-		ul1.append(`<span>我是新添加的span</span>`)
+		ul1.append (`<span>我是新添加的span</span>`)
 		//	向id为ul1的ul下添加一个span(最前)
-		ul1.prepend(`<span>我是新添加的span</span>`)
+		ul1.prepend (`<span>我是新添加的span</span>`)
 		//在id为ul1的ul下的li(title为hello)的前面添加span
-		ul1.children('li[title = "hello"]').prepend(`<span>我是新添加的span</span>`)
+		ul1.children ('li[title = "hello"]').prepend (`<span>我是新添加的span</span>`)
 		//	在id为ul1的ul下的li(title为hello)的后面添加span
-		ul1.children('li[title = "hello"]').append(`<span>我是新添加的span</span>`)
+		ul1.children ('li[title = "hello"]').append (`<span>我是新添加的span</span>`)
 		//	将在id为ul2的ul下的li(title为hello)全部替换为p
-		ul2.children('li[title = "hello"]').replaceWith(`<p>我是替换的p</p>`)
+		ul2.children ('li[title = "hello"]').replaceWith (`<p>我是替换的p</p>`)
 		//移除id为ul2的ul下的所有li
-		ul2.children(`li`).remove()
+		ul2.children (`li`).remove ()
 	})
 </script>
 </html>

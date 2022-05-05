@@ -38,7 +38,7 @@
 <script>
 	Vue.config.productionTip = false
 	Vue.prototype.x = 1000
-	let vc1 = Vue.extend({
+	let vc1 = Vue.extend ({
 		name: 'vc',
 		template: `
 			<div>
@@ -54,12 +54,12 @@
 		},
 		methods: {
 			show () {
-				console.log(this.x)
+				console.log (this.x)
 			},
 		},
 	})
 
-	const vm = new Vue({
+	const vm = new Vue ({
 		el: '#root',
 		data: {
 			msg: '测试',
@@ -71,7 +71,7 @@
 			vc1,
 		},
 	})
-	console.log(vc1.prototype.__proto__)
-	console.log(vc1.prototype.__proto__ === Vue.prototype)
+	console.log (vc1.prototype.__proto__)
+	console.log (vc1.prototype.__proto__ === Vue.prototype)
 </script>
 </html>
