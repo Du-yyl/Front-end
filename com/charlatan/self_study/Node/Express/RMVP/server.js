@@ -8,13 +8,13 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-let express = require ('express')
-let server = express ()
+let express = require('express')
+let server = express()
 
-let router = require ('./router')
+let router = require('./router')
 
-server.use ('/', router)
+server.use('/', router)
 
-server.listen (3000, function () {
-	console.log ('3000 ... ')
+server.listen(3000, function () {
+    console.log('3000 ... ')
 })

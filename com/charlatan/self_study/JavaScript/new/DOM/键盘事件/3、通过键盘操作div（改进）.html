@@ -28,7 +28,7 @@
 			let speed = 2
 
 			document.onkeydown = function (event) {
-				if ( event.ctrlKey ) {
+				if (event.ctrlKey) {
 					speed = 5
 				}
 				evKey = event.key
@@ -37,30 +37,30 @@
 				evKey = null
 				speed = 2
 			}
-			let box1 = document.getElementById ('box1')
-			setInterval (function () {
+			let box1 = document.getElementById('box1')
+			setInterval(function () {
 
-				if ( evKey === 'ArrowUp' || evKey === 'w' || evKey === 'W' ) {
-					if ( box1.style.top === '' || parseInt (box1.style.top) <= 0 ) {
+				if (evKey === 'ArrowUp' || evKey === 'w' || evKey === 'W') {
+					if (box1.style.top === '' || parseInt(box1.style.top) <= 0) {
 						box1.style.top = '0px'
 					} else {
 						box1.style.top = box1.offsetTop - speed + 'px'
 					}
 				}
 
-				if ( evKey === 'ArrowDown' || evKey === 's' || evKey === 'S' ) {
+				if (evKey === 'ArrowDown' || evKey === 's' || evKey === 'S') {
 					box1.style.top = box1.offsetTop + speed + 'px'
 				}
 
-				if ( evKey === 'ArrowLeft' || evKey === 'A' || evKey === 'a' ) {
-					if ( box1.style.left === '' || parseInt (box1.style.left) <= 0 ) {
+				if (evKey === 'ArrowLeft' || evKey === 'A' || evKey === 'a') {
+					if (box1.style.left === '' || parseInt(box1.style.left) <= 0) {
 						box1.style.left = '0px'
 					} else {
 						box1.style.left = box1.offsetLeft - speed + 'px'
 					}
 				}
 
-				if ( evKey === 'ArrowRight' || evKey === 'D' || evKey === 'd' ) {
+				if (evKey === 'ArrowRight' || evKey === 'D' || evKey === 'd') {
 					box1.style.left = box1.offsetLeft + speed + 'px'
 				}
 			}, 10)

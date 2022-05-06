@@ -16,14 +16,14 @@
  * @returns {(function(*): void)|*} 函数的形式以闭包形式返回
  */
 function debounce (callback, time, ...args) {
-  let timer = null
-  return (event) => {
-    if (timer !== null) clearTimeout(timer)
-    timer = setTimeout(() => {
-      callback.call(this, event, ...args)
-      timer = null
-    }, time)
-  }
+    let timer = null
+    return (event) => {
+        if (timer !== null) clearTimeout(timer)
+        timer = setTimeout(() => {
+            callback.call(this, event, ...args)
+            timer = null
+        }, time)
+    }
 }
 
 /**
@@ -35,12 +35,12 @@ function debounce (callback, time, ...args) {
  * @returns {(function(*): (*|undefined))|*} 要指定的函数以闭包形式返回
  */
 function throttle (callback, time, ...args) {
-  let flag = true
-  return (event) => {
-    if (flag) {
-      flag = false
-      setTimeout(() => {flag = true}, time)
-      return callback.call(this, event, ...args)
+    let flag = true
+    return (event) => {
+        if (flag) {
+            flag = false
+            setTimeout(() => {flag = true}, time)
+            return callback.call(this, event, ...args)
+        }
     }
-  }
 }

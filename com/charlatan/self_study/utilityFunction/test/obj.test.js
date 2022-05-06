@@ -10,8 +10,8 @@
 
 
 function Person (name, age) {
-  this.name = name
-  this.age = age
+    this.name = name
+    this.age = age
 }
 
 require('../src/对象相关/newInstance')

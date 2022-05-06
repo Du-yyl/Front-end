@@ -36,7 +36,7 @@
 	}
 
 	sup.prototype.showSup = function () {
-		console.log (this.showSup)
+		console.log(this.showSup)
 	}
 
 	function sub () {
@@ -48,10 +48,10 @@
 	// 	console.log(this.showSub);
 	// }
 
-	sub.prototype = new sup ()
-	let sb1 = new sub ()
-	sb1.showSup ()
-	console.log (sb1.__proto__.__proto__)
+	sub.prototype = new sup()
+	let sb1 = new sub()
+	sb1.showSup()
+	console.log(sb1.__proto__.__proto__)
 	/*
 	 * 这里找的其实是原型对象中的原型
 	 * */

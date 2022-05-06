@@ -24,10 +24,10 @@ export default {
   methods: {
     send () {
       //  使用 vue-resource 发送请求
-      this.$http.get ('https://api.github.com/search/users?q=test').then ((res) => {
-        console.log (res.body.items)
+      this.$http.get('https://api.github.com/search/users?q=test').then((res) => {
+        console.log(res.body.items)
       }, (err) => {
-        console.log (err)
+        console.log(err)
       })
     },
   },

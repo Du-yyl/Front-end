@@ -29,29 +29,29 @@
 <script>
 	//	 声明全局变量
 	let cancel = null
-	$ (`.btn:eq(0)`).click (function () {
+	$(`.btn:eq(0)`).click(function () {
 		// 发送请求前，先检测一下，上一个请求是否还存在，如果存在取消上一次，发送这一次
-		if ( cancel !== null ) {
-			cancel ()
+		if (cancel !== null) {
+			cancel()
 		}
-		axios ({
+		axios({
 			method: 'GET',
 			url: 'http://localhost:3000/posts',
 
 			//	配置取消配置属性
-			cancelToken: new axios.CancelToken (function (c) {
+			cancelToken: new axios.CancelToken(function (c) {
 				// 将c的值进行赋值
 				cancel = c
 			}),
-		}).then ((val) => {
-			console.log (val)
+		}).then((val) => {
+			console.log(val)
 		}, (res) => {
-			console.log (res)
+			console.log(res)
 		})
 	})
 
-	$ (`.btn:eq(1)`).click (function () {
-		cancel ()
+	$(`.btn:eq(1)`).click(function () {
+		cancel()
 		cancel = null
 	})
 </script>

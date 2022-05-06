@@ -12,23 +12,23 @@
  检查一个文件是否存在
  */
 
-let fs = require ('fs')
-let isExist_1 = fs.existsSync ('test.txt')
-let isExist_2 = fs.existsSync ('test.tst')
-console.log (isExist_1)
-console.log (isExist_2)
+let fs = require('fs')
+let isExist_1 = fs.existsSync('test.txt')
+let isExist_2 = fs.existsSync('test.tst')
+console.log(isExist_1)
+console.log(isExist_2)
 
 /*
  fs.statSync (path,callback)
  fs.stat (path,callback)
  获取文件状态
  * */
-fs.stat ('test.txt', function (err, stats) {
-	if ( !err ) {
-		console.log (stats)
-	} else {
-		console.log ('程序出错')
-	}
+fs.stat('test.txt', function (err, stats) {
+    if (!err) {
+        console.log(stats)
+    } else {
+        console.log('程序出错')
+    }
 })
 
 /*
@@ -45,7 +45,7 @@ fs.stat ('test.txt', function (err, stats) {
  返回的是一个数组，一个元素就是文件夹或文件名
  * */
 
-console.log (fs.readdirSync ('file_test'))
+console.log(fs.readdirSync('file_test'))
 
 /*
  fs.truncate(path,len,callback)
@@ -93,7 +93,7 @@ console.log (fs.readdirSync ('file_test'))
 // })
 
 // 这个方法因为是间隔一段进行执行的，有时间隔时间很长，interval可以更改间隔时间
-fs.watchFile ('tttt.txt', { interval: 1 }, function (stat, end) {
-	console.log ('修改前大小：' + stat.size)
-	console.log ('修改后大小：' + end.size)
+fs.watchFile('tttt.txt', { interval: 1 }, function (stat, end) {
+    console.log('修改前大小：' + stat.size)
+    console.log('修改后大小：' + end.size)
 })

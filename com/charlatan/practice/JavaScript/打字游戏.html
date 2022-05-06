@@ -228,47 +228,47 @@
 
 <script>
 	window.onload = function () {
-		let spanShow = document.getElementById ('span--show')
-		let spanDian = document.getElementById ('div-anima')
-		let span = document.getElementById ('span')
+		let spanShow = document.getElementById('span--show')
+		let spanDian = document.getElementById('div-anima')
+		let span = document.getElementById('span')
 		let correctCount = 0
 		let numberOfErrors = 0
 		let num = 0
 		let flag = true
-		let span1 = document.getElementById ('span1')
-		let box = document.getElementById ('box')
+		let span1 = document.getElementById('span1')
+		let box = document.getElementById('box')
 		let i = 30
 
 		document.onkeydown = testFun
 
 		function testFun (event) {
-			if ( event.key === ' ' && flag ) {
-				spanShow.classList.add ('span-show-switch-2')
+			if (event.key === ' ' && flag) {
+				spanShow.classList.add('span-show-switch-2')
 				spanDian.style.display = 'none'
-				box.classList.add ('box--1')
+				box.classList.add('box--1')
 
-				Countdown1 ()
-				Countdown ()
+				Countdown1()
+				Countdown()
 				flag = false
-			} else if ( !flag ) {
-				if ( event.key.toUpperCase () === spanShow.innerText ) {
+			} else if (!flag) {
+				if (event.key.toUpperCase() === spanShow.innerText) {
 					num++
 					correctCount++
-					randomLetters ()
+					randomLetters()
 					span.innerText = '正确：' + correctCount + '个，错误： ' + numberOfErrors + '个， 正确率：' +
-							Math.round (correctCount / num * 10000) / 100 + '%'
+							Math.round(correctCount / num * 10000) / 100 + '%'
 				} else {
 					num++
 					numberOfErrors++
 					span.innerText = '正确：' + correctCount + '个，错误： ' + numberOfErrors + '个， 正确率：' +
-							Math.round (correctCount / num * 10000) / 100 + '%'
-					spanShow.classList.add ('span-show-switch-3')
-					setTimeout (function () {
-						spanShow.classList.remove ('span-show-switch-3')
+							Math.round(correctCount / num * 10000) / 100 + '%'
+					spanShow.classList.add('span-show-switch-3')
+					setTimeout(function () {
+						spanShow.classList.remove('span-show-switch-3')
 					}, 200)
 				}
 			} else {
-				alert ('单击空格开始游戏')
+				alert('单击空格开始游戏')
 			}
 		}
 
@@ -276,35 +276,35 @@
 			document.onkeydown = null
 			spanShow.innerText = '3'
 
-			setTimeout (function () {
+			setTimeout(function () {
 				spanShow.innerText = '2'
 			}, 1000)
-			setTimeout (function () {
+			setTimeout(function () {
 				spanShow.innerText = '1'
 			}, 2000)
-			setTimeout (function () {
+			setTimeout(function () {
 				spanShow.innerText = 'GO'
 			}, 3000)
-			setTimeout (function () {
-				randomLetters ()
+			setTimeout(function () {
+				randomLetters()
 				span.style.visibility = 'visible'
-				timer ()
+				timer()
 			}, 4000)
 		}
 
 		const Countdown1 = () => {
-			setTimeout (function () {
+			setTimeout(function () {
 				document.onkeydown = testFun
 			}, 4000)
 		}
 
 		const randomLetters = () => {
-			spanShow.innerText = String.fromCharCode (Math.floor (Math.random () * 26) + 65)
+			spanShow.innerText = String.fromCharCode(Math.floor(Math.random() * 26) + 65)
 		}
 
 		const timer = () => {
 			span1.style.display = 'block'
-			setInterval (function () {
+			setInterval(function () {
 				span1.innerHTML = i--
 			}, 1000)
 		}

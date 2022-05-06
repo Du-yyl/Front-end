@@ -283,16 +283,16 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.js"></script>
 <script>
-	$ ('#myTabs a').click (function (e) {
-		e.preventDefault ()
-		$ (this).tab ('show')
+	$('#myTabs a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
 	})
 
-	$ (`.dropdown-menu > li > a`).click (function (event) {
-		$ (document).scrollTop ($ (`#myTabs`).offset ().top)
-		console.log ($ (this).attr ('href'))
-		$ ('#myTabs > li > a[href="' + ($ (this).attr ('href')) + '"]').tab ('show')
-		event.preventDefault ()
+	$(`.dropdown-menu > li > a`).click(function (event) {
+		$(document).scrollTop($(`#myTabs`).offset().top)
+		console.log($(this).attr('href'))
+		$('#myTabs > li > a[href="' + ($(this).attr('href')) + '"]').tab('show')
+		event.preventDefault()
 	})
 
 </script>

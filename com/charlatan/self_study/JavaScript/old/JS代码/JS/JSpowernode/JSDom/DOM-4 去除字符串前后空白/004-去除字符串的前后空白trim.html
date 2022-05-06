@@ -13,17 +13,17 @@
 		// 去除当前字符串的前后空白
 		// 在当前的方法中的this代表的就是当前字符串.
 		//return this.replace(/^\s+/, "").replace(/\s+$/, "");
-		return this.replace (/^\s+|\s+$/g, '')
+		return this.replace(/^\s+|\s+$/g, '')
 	}
 
 	window.onload = function () {
-		document.getElementById ('btn').onclick = function () {
+		document.getElementById('btn').onclick = function () {
 			// 获取用户名
-			var username = document.getElementById ('username').value
+			var username = document.getElementById('username').value
 			// 去除前后空白
-			username = username.trim ()
+			username = username.trim()
 			// 测试
-			alert ('--->' + username + '<----')
+			alert('--->' + username + '<----')
 		}
 	}
 </script>

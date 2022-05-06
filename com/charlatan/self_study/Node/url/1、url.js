@@ -9,24 +9,24 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-let url = require ('url')
-let log4js = require ('log4js')
+let url = require('url')
+let log4js = require('log4js')
 
-log4js.configure ({
-	appenders: {
-		cheese: {
-			type: 'file',
-			filename: 'cheese.log',
-		},
-	},
-	categories: {
-		default: {
-			appenders: ['cheese'],
-			level: 'error',
-		},
-	},
+log4js.configure({
+    appenders: {
+        cheese: {
+            type: 'file',
+            filename: 'cheese.log',
+        },
+    },
+    categories: {
+        default: {
+            appenders: ['cheese'],
+            level: 'error',
+        },
+    },
 })
-let logger = log4js.getLogger ('cheese')
+let logger = log4js.getLogger('cheese')
 logger.level = 'debug'
 
 let urlString = 'https://www.baidu.com:443/path/index.html?id=2#tag=3'
@@ -39,18 +39,18 @@ let urlString = 'https://www.baidu.com:443/path/index.html?id=2#tag=3'
 // logger.debug(url.parse(urlString))
 
 let urlObj = {
-	protocol: 'https:',
-	slashes: true,
-	auth: null,
-	host: 'www.baidu.com:443',
-	port: '443',
-	hostname: 'www.baidu.com',
-	hash: '#tag=3',
-	search: '?id=2',
-	query: 'id=2',
-	pathname: '/path/index.html',
-	path: '/path/index.html?id=2',
-	href: 'https://www.baidu.com:443/path/index.html?id=2#tag=3',
+    protocol: 'https:',
+    slashes: true,
+    auth: null,
+    host: 'www.baidu.com:443',
+    port: '443',
+    hostname: 'www.baidu.com',
+    hash: '#tag=3',
+    search: '?id=2',
+    query: 'id=2',
+    pathname: '/path/index.html',
+    path: '/path/index.html?id=2',
+    href: 'https://www.baidu.com:443/path/index.html?id=2#tag=3',
 }
 
 /*
@@ -64,15 +64,15 @@ let urlObj = {
  *   可以实现路径的切换，第二个参数是要切换的路径地址
  *  */
 // logger.debug(url.resolve('https://www.hao123.com/a',"../"))
-logger.debug (url.resolve ('https://www.hao123.com/a', '/b'))
+logger.debug(url.resolve('https://www.hao123.com/a', '/b'))
 
 /*
  *
  *  */
 
-let urlParams = new URLSearchParams (url.parse (urlString).search)
+let urlParams = new URLSearchParams(url.parse(urlString).search)
 // logger.debug(urlParams)
-logger.debug ((urlParams.get ('id')))
+logger.debug((urlParams.get('id')))
 
 
 

@@ -15,10 +15,10 @@
  * @returns {number|string} 返回累加结果
  */
 function reduce (callback, initialValue = 0) {
-  for (let i = 0, len = this.length; i < len; i++) {
-    initialValue = callback(initialValue, this[i])
-  }
-  return initialValue
+    for (let i = 0, len = this.length; i < len; i++) {
+        initialValue = callback(initialValue, this[i])
+    }
+    return initialValue
 }
 
 Array.prototype.reduce = reduce

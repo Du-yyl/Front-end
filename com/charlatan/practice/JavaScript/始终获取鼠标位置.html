@@ -51,20 +51,20 @@
 </div>
 </body>
 <script>
-	document.addEventListener ('mousemove', e => {
-		const item = document.querySelectorAll ('#div1')
+	document.addEventListener('mousemove', e => {
+		const item = document.querySelectorAll('#div1')
 
 		const mouseX = e.clientX
 		const mouseY = e.clientY
 
-		item.forEach (sqr => {
+		item.forEach(sqr => {
 			const sqrX = sqr.offsetLeft
 			const sqrY = sqr.offsetTop
 
 			const diffX = mouseX - sqrX
 			const diffY = mouseY - sqrY
 
-			const radians = Math.atan2 (diffY, diffX)
+			const radians = Math.atan2(diffY, diffX)
 
 			const angle = radians * 180 / Math.PI
 

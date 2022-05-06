@@ -63,9 +63,9 @@
 <script type="text/javascript">
 	window.onload = function () {
 
-		let text = document.getElementById ('text')
+		let text = document.getElementById('text')
 
-		text.oninput = debounce (func1, 100)
+		text.oninput = debounce(func1, 100)
 
 		// text.addEventListener('input', debounce())
 
@@ -78,15 +78,15 @@
 		function debounce (func, delay) {
 			let timer = null
 			return function () {
-				if ( timer ) {
-					clearTimeout (timer)
+				if (timer) {
+					clearTimeout(timer)
 				}
-				timer = setTimeout (func, delay)
+				timer = setTimeout(func, delay)
 			}
 		}
 
 		function func1 () {
-			console.log ('我是防抖输出')
+			console.log('我是防抖输出')
 		}
 
 	}

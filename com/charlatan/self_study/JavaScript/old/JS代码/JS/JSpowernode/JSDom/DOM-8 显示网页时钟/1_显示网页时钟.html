@@ -37,20 +37,20 @@
 <script type="text/javascript">
 
 	window.onload = function () {
-		document.getElementById ('xx').onclick = sin
+		document.getElementById('xx').onclick = sin
 
 		function sin () {
-			stp = window.setInterval (function () {
-				var time = new Date ()
-				time = time.toLocaleString ()
-				document.getElementById ('dd').innerHTML = time
+			stp = window.setInterval(function () {
+				var time = new Date()
+				time = time.toLocaleString()
+				document.getElementById('dd').innerHTML = time
 			})
 		}
 
-		document.getElementById ('xx1').onclick = stop
+		document.getElementById('xx1').onclick = stop
 
 		function stop () {
-			window.clearInterval (stp)
+			window.clearInterval(stp)
 		}
 	}
 </script>

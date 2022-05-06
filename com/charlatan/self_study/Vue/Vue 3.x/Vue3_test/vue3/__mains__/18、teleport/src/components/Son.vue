@@ -17,7 +17,7 @@
 </template>
 
 <script>
-const { inject } = require ('@vue/runtime-dom')
+const { inject } = require('@vue/runtime-dom')
 import Dialog from './Dialog'
 
 export default {

@@ -26,14 +26,14 @@
 <script>
 	let num1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 	Array.prototype.num2 = ['我', '是', '原', '型', '链', '上', '的']
-	for ( let i in num1 ) {
-		console.log (num1[i])
+	for (let i in num1) {
+		console.log(num1[i])
 	}
-	console.log ('--------------------------')
+	console.log('--------------------------')
 
-	for ( let i in num1 ) {
-		if ( num1.hasOwnProperty (i) ) {
-			console.log (num1[i])
+	for (let i in num1) {
+		if (num1.hasOwnProperty(i)) {
+			console.log(num1[i])
 		}
 
 	}

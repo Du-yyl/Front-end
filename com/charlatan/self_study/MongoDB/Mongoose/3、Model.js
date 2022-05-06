@@ -8,25 +8,25 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-let mongoose = require ('mongoose')
-mongoose.connect ('mongodb://localhost:/test')
-mongoose.connection.once ('open', function () {
-	console.log ('数据库连接')
+let mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:/test')
+mongoose.connection.once('open', function () {
+    console.log('数据库连接')
 })
 
 let Schema = mongoose.Schema
 
-let studentSchema = new Schema ({
-	name: String,
-	age: Number,
-	sex: {
-		type: String,
-		default: 'female',
-	},
-	address: String,
+let studentSchema = new Schema({
+    name: String,
+    age: Number,
+    sex: {
+        type: String,
+        default: 'female',
+    },
+    address: String,
 })
 
-let StuModel = mongoose.model ('student', studentSchema)
+let StuModel = mongoose.model('student', studentSchema)
 
 /*
  * Model方法：
@@ -138,6 +138,6 @@ let StuModel = mongoose.model ('student', studentSchema)
  *   相对于 length 性能更好，length 是把指定的内容找到后统计个数的，性能较差，而count是指定调用，性能更好
  * */
 
-StuModel.count ({ name: '李四' }, function (err, num) {
-	console.log (arguments)
+StuModel.count({ name: '李四' }, function (err, num) {
+    console.log(arguments)
 })

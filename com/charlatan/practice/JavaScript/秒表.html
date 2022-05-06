@@ -350,16 +350,16 @@
 <script>
 	window.onload = function () {
 
-		let btn_1 = document.getElementById ('start')
-		let btn_2 = document.getElementById ('count')
-		let div_show_1 = document.getElementById ('div-show')
-		let div_show_2 = document.getElementById ('div-show-1')
-		let span_show = document.getElementById ('span-show')
-		let h1 = document.getElementById ('h1')
-		let ul = document.getElementById ('ul-ul')
-		let spans = document.getElementById ('spans')
-		let span_top = document.getElementById ('span-top')
-		let span_first = document.getElementById ('span-first')
+		let btn_1 = document.getElementById('start')
+		let btn_2 = document.getElementById('count')
+		let div_show_1 = document.getElementById('div-show')
+		let div_show_2 = document.getElementById('div-show-1')
+		let span_show = document.getElementById('span-show')
+		let h1 = document.getElementById('h1')
+		let ul = document.getElementById('ul-ul')
+		let spans = document.getElementById('spans')
+		let span_top = document.getElementById('span-top')
+		let span_first = document.getElementById('span-first')
 
 		let flags = true
 		let index = 0
@@ -382,9 +382,9 @@
 		let time1
 
 		btn_1.onclick = () => {
-			if ( flags ) {
-				btn_1.classList.add ('start-show')
-				btn_2.classList.add ('count-show')
+			if (flags) {
+				btn_1.classList.add('start-show')
+				btn_2.classList.add('count-show')
 				div_show_1.style.display = 'none'
 				div_show_2.style.display = 'none'
 				span_show.style.height = '60px'
@@ -392,50 +392,50 @@
 				h1.style.fontSize = '40px'
 				h1.style.color = 'black'
 				btn_1.innerText = '暂停'
-				time_1 = Date.now ()
-				goTime ()
-				goTimes ()
+				time_1 = Date.now()
+				goTime()
+				goTimes()
 				flags = false
 			} else {
-				if ( flag_1 ) {
+				if (flag_1) {
 					btn_1.innerText = '继续'
 					btn_2.innerText = '重置'
 					flag_2 = flag_1 = false
-					clearInterval (timer)
-					clearInterval (timers)
+					clearInterval(timer)
+					clearInterval(timers)
 				} else {
 					btn_1.innerText = '暂停'
 					btn_2.innerText = '计次'
 					flag_2 = flag_1 = true
-					goTime ()
-					goTimes ()
+					goTime()
+					goTimes()
 				}
 			}
 		}
 
 		btn_2.onclick = () => {
-			if ( flag_2 ) {
-				if ( parseInt (ul.offsetHeight) >= 200 ) {
+			if (flag_2) {
+				if (parseInt(ul.offsetHeight) >= 200) {
 					span_top.style.wordSpacing = '40px'
 				}
 				spans.style.height = '400px'
 				index++
 				let timeStr = span_show.innerHTML
-				let li = document.createElement ('li')
-				let span = document.createElement ('span')
+				let li = document.createElement('li')
+				let span = document.createElement('span')
 
 				index = index < 10 ? '0' + index : index
-				span.classList.add ('span-1')
+				span.classList.add('span-1')
 				span.innerText = index_time
-				timeStr = timeStr.replace (/\s*/g, '')
+				timeStr = timeStr.replace(/\s*/g, '')
 
-				let strs1 = span_first.innerText.replace (/\s*/g, '')
+				let strs1 = span_first.innerText.replace(/\s*/g, '')
 				li.innerHTML = index + ' ' + ' <span class=\'span-1\'>' + strs1 + '</span>' + ' ' + timeStr
-				ul.appendChild (li)
+				ul.appendChild(li)
 				index_time_1 = 0
 			} else {
-				btn_1.classList.remove ('start-show')
-				btn_2.classList.remove ('count-show')
+				btn_1.classList.remove('start-show')
+				btn_2.classList.remove('count-show')
 				div_show_1.style.display = 'block'
 				div_show_2.style.display = 'block'
 				span_show.style.height = '0'
@@ -444,24 +444,24 @@
 				h1.style.color = '#7191ff;'
 				btn_1.innerText = '开始'
 				spans.style.height = '0'
-				clearInterval (timer)
+				clearInterval(timer)
 				flags = true
 				btn_2.innerText = '计次'
 				flag_2 = flag_1 = true
 				ul.innerText = ''
 				index = 0
-				clearInterval (timers)
+				clearInterval(timers)
 			}
 		}
 
 		function goTimes () {
-			timers = setInterval (
+			timers = setInterval(
 					() => {
 						index_time_1++
 						time1 = index_time_1
 						ms = time1 % 1000
-						s1 = Math.floor (time1 / 1000)
-						m1 = Math.floor (s1 / 60)
+						s1 = Math.floor(time1 / 1000)
+						m1 = Math.floor(s1 / 60)
 						s1 = s1 % 60
 
 						s1 = s1 < 10 ? '0' + s1 : s1
@@ -473,11 +473,11 @@
 		}
 
 		function goTime () {
-			timer = setInterval (() => {
-				time = Date.now () - time_1
+			timer = setInterval(() => {
+				time = Date.now() - time_1
 				millisecond = time % 1000
-				second = Math.floor (time / 1000)
-				minute = Math.floor (second / 60)
+				second = Math.floor(time / 1000)
+				minute = Math.floor(second / 60)
 				second = second % 60
 				second = second < 10 ? '0' + second : second
 				minute = minute < 10 ? '0' + minute : minute

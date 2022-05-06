@@ -8,4 +8,4 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-console.log ('我是第二个npm测试文件')
+console.log('我是第二个npm测试文件')

@@ -77,21 +77,21 @@
 	 */
 	window.onload = function () {
 		// 给按钮绑定click
-		document.getElementById ('btn').onclick = function () {
-			var email = document.getElementById ('email').value
+		document.getElementById('btn').onclick = function () {
+			var email = document.getElementById('email').value
 			var emailRegExp = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
-			var ok = emailRegExp.test (email)
-			if ( ok ) {
+			var ok = emailRegExp.test(email)
+			if (ok) {
 				//合法
-				document.getElementById ('emailError').innerText = '邮箱地址合法'
+				document.getElementById('emailError').innerText = '邮箱地址合法'
 			} else {
 				// 不合法
-				document.getElementById ('emailError').innerText = '邮箱地址不合法'
+				document.getElementById('emailError').innerText = '邮箱地址不合法'
 			}
 		}
 		// 给文本框绑定focus
-		document.getElementById ('email').onfocus = function () {
-			document.getElementById ('emailError').innerText = ''
+		document.getElementById('email').onfocus = function () {
+			document.getElementById('emailError').innerText = ''
 		}
 	}
 

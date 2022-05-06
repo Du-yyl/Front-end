@@ -29,7 +29,7 @@ export default {
     let age = 20
 
     function sayHello () {
-      console.log (`name:${name},age:${age}`)
+      console.log(`name:${name},age:${age}`)
 
     }
 
@@ -42,7 +42,7 @@ export default {
 
     // 当然也可以返回一个渲染函数，这个返回结果会直接渲染到页面上，并且渲染结果是按返回的结果为主，即使原来有内容，也会进行覆盖
     return () => {
-      return h ('h1', '测试例子')
+      return h('h1', '测试例子')
     }
     // 简写形式
     // return h('h1', '测试例子')

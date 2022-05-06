@@ -16,28 +16,28 @@
  * @returns {Promise<unknown>} 返回一个 promise 实例，通过这个实例的成功和失败决定是否继续
  */
 export default (url, data, method = 'GET') =>
-		new Promise ((resolve, reject) => {
-			wx.request ({
-				url,
-				data,
-				method,
-				header: {
-					// cookie: wx.getStorageSync('cookie')[0],
-					cookie: wx.getStorageSync ('cookie')
-							? wx.getStorageSync ('cookie').find (item => item.indexOf ('MUSIC_U=') !== -1)
-							: '',
-				},
-				success (res) {
-					if ( data.isLogin ) {
-						wx.setStorage ({
-							key: 'cookie',
-							data: res.cookies,
-						})
-					}
-					resolve (res.data)
-				},
-				fail (err) {
-					reject (err)
-				},
-			})
-		})
+    new Promise((resolve, reject) => {
+        wx.request({
+            url,
+            data,
+            method,
+            header: {
+                // cookie: wx.getStorageSync('cookie')[0],
+                cookie: wx.getStorageSync('cookie')
+                    ? wx.getStorageSync('cookie').find(item => item.indexOf('MUSIC_U=') !== -1)
+                    : '',
+            },
+            success (res) {
+                if (data.isLogin) {
+                    wx.setStorage({
+                        key: 'cookie',
+                        data: res.cookies,
+                    })
+                }
+                resolve(res.data)
+            },
+            fail (err) {
+                reject(err)
+            },
+        })
+    })

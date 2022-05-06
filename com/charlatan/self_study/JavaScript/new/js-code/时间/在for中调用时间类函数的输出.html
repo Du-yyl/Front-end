@@ -29,14 +29,14 @@
 	 然后执行其中的同步代码...，如此反复，这样就形成了一个无限的循环。这就是这个过程被称为“事件循环（Event Loop）”的原因。
 	 */
 	function sam () {
-		console.log (1)
-		setTimeout (function () {
-			console.log (2)
+		console.log(1)
+		setTimeout(function () {
+			console.log(2)
 		}, 5)
 	}
 
-	for ( let i = 0; i < 10000; i++ ) {
-		sam ()
+	for (let i = 0; i < 10000; i++) {
+		sam()
 	}
 </script>
 </body>

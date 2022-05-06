@@ -40,17 +40,17 @@
 <div id="result"></div>
 </body>
 <script>
-	let result = document.getElementById ('result')
+	let result = document.getElementById('result')
 	window.onkeydown = function () {
-		let xhr = new XMLHttpRequest ()
+		let xhr = new XMLHttpRequest()
 		//设置响应体数据类型
 		xhr.responseType = 'json'
-		xhr.open ('GET', 'http://127.0.0.1:8000/json-server')
-		xhr.send ()
+		xhr.open('GET', 'http://127.0.0.1:8000/json-server')
+		xhr.send()
 		xhr.onreadystatechange = function () {
-			if ( xhr.readyState === 4 ) {
-				if ( xhr.status >= 200 && xhr.status < 300 ) {
-					console.log (xhr.response)
+			if (xhr.readyState === 4) {
+				if (xhr.status >= 200 && xhr.status < 300) {
+					console.log(xhr.response)
 					result.innerText = xhr.response
 
 					//	手动为数据进行转换
@@ -59,7 +59,7 @@
 					// result.innerHTML = data.name
 
 					//	自动转换，借助响应体数据类型
-					console.log (xhr.response)
+					console.log(xhr.response)
 					// 这个方法可以将JSON对象自动进行转换
 					result.innerText = xhr.response.name
 				}

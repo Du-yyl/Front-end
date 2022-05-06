@@ -15,9 +15,9 @@
  * @returns {array} 返回合并结果
  */
 function concat (...array) {
-  let result = [...this]
-  array.forEach((item) => {Array.isArray(item) ? result.push(...item) : result.push(item)})
-  return result
+    let result = [...this]
+    array.forEach((item) => {Array.isArray(item) ? result.push(...item) : result.push(item)})
+    return result
 }
 
 Array.prototype.concat = concat

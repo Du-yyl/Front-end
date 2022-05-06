@@ -33,7 +33,7 @@
 </body>
 <script>
 	window.onload = function () {
-		document.getElementById ('btn1').onclick = function () {
+		document.getElementById('btn1').onclick = function () {
 			/*
 			 * 通过这个可以返回正在显示的样式，不仅仅是内联中的样式
 			 * getComputerStyle()
@@ -43,9 +43,9 @@
 			 *   第二个参数：可以传递一个伪元素，但是一般不用，是NULL
 			 *   返回值：将指定元素的样式全部封装到了一个对象中
 			 * */
-			let div1 = document.getElementById ('div1')
-			let obj1 = getComputedStyle (div1, null)
-			alert (obj1.width)
+			let div1 = document.getElementById('div1')
+			let obj1 = getComputedStyle(div1, null)
+			alert(obj1.width)
 		}
 	}
 </script>

@@ -26,18 +26,18 @@
 </body>
 <script>
 	function * func () {
-		console.log ('hello world')
+		console.log('hello world')
 		yield '这个表达式是分隔符'
-		console.log ('你好，世界')
+		console.log('你好，世界')
 		yield '可以将代码分割成几块'
 	}
 
-	let fun = func ()
-	console.log (fun.next ())
-	console.log (fun.next ())
-	console.log (fun)
-	for ( let string of func () ) {
-		console.log (string)
+	let fun = func()
+	console.log(fun.next())
+	console.log(fun.next())
+	console.log(fun)
+	for (let string of func()) {
+		console.log(string)
 	}
 </script>
 </html>

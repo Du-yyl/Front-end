@@ -46,13 +46,13 @@
 		 * */
 
 		// let li1 = document.querySelectorAll("li")
-		let li1 = document.getElementsByClassName ('li')
+		let li1 = document.getElementsByClassName('li')
 		//------------------------------------------------------------------------------
-		let li = document.createElement ('li')
+		let li = document.createElement('li')
 		li.innerHTML = '我是新添加的li标签'
 		li.className = 'li'
-		document.getElementById ('ul').appendChild (li)
-		console.log (li1)
+		document.getElementById('ul').appendChild(li)
+		console.log(li1)
 		//-------------------------------------------------------------------------------------
 		// document.getElementById("btn1").onclick = function () {
 		//     let li = document.createElement("li")
@@ -62,9 +62,9 @@
 		//     console.log(li1)
 		// }
 		//-------------------------------------------------------------------------
-		for ( let i = 0; i < li1.length; i++ ) {
+		for (let i = 0; i < li1.length; i++) {
 			li1[i].onclick = function () {
-				alert ('哈哈哈')
+				alert('哈哈哈')
 			}
 		}
 	}

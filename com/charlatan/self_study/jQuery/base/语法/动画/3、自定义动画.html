@@ -65,23 +65,23 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	let btn1 = $ (`#btn1`)
-	let btn2 = $ (`#btn2`)
-	let btn3 = $ (`#btn3`)
-	let btn4 = $ (`#btn4`)
+	let btn1 = $(`#btn1`)
+	let btn2 = $(`#btn2`)
+	let btn3 = $(`#btn3`)
+	let btn4 = $(`#btn4`)
 
-	let div = $ (`.div1:eq(0)`)
+	let div = $(`.div1:eq(0)`)
 
 	/*
 	 1. 逐渐扩大
 	 1). 宽/高都扩为200px
 	 2). 宽先扩为200px, 高后扩为200px
 	 */
-	btn1.click (function () {
-		div.animate ({
+	btn1.click(function () {
+		div.animate({
 			width: 200,
 		}, 400)
-		div.animate ({
+		div.animate({
 			height: 200,
 		}, 800)
 	})
@@ -90,12 +90,12 @@
 	 1).移动到(500, 100)处
 	 2).移动到(100, 20)处
 	 * */
-	btn2.click (function () {
-		div.animate ({
+	btn2.click(function () {
+		div.animate({
 			top: 500,
 			left: 100,
 		}, 800)
-		div.animate ({
+		div.animate({
 			top: 100,
 			left: 20,
 		}, 800)
@@ -105,13 +105,13 @@
 	 1). 移动距离为(100, 50)
 	 2). 移动距离为(-100, -20)*/
 
-	btn3.click (function () {
-		div.animate ({
+	btn3.click(function () {
+		div.animate({
 			top: +100,
 			left: +50,
 		}, 800)
 
-		div.animate ({
+		div.animate({
 			top: -100,
 			left: -20,
 		}, 800)
@@ -124,8 +124,8 @@
 	 jumpToEnd:如果设置成true，则完成队列。可以立即完成动画。
 
 	 * */
-	btn4.click (function () {
-		div.stop (true)
+	btn4.click(function () {
+		div.stop(true)
 	})
 
 </script>

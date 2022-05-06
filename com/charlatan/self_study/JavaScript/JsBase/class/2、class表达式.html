@@ -44,8 +44,8 @@
 		}
 	}
 
-	let inst = new func1 ()
-	console.log (inst.getClassName ()) // Me
+	let inst = new func1()
+	console.log(inst.getClassName()) // Me
 	// console.log(Me.name); // ReferenceError: Me is not defined
 
 	let Parson = new class {
@@ -54,25 +54,25 @@
 		}
 
 		sayName () {
-			console.log (this.name)
+			console.log(this.name)
 		}
 
-	} ('张三')
-	Person.sayName ()
+	}('张三')
+	Person.sayName()
 
 	class Logger {
 		printName (name = 'there') {
-			this.print (`Hello ${name}`)
+			this.print(`Hello ${name}`)
 		}
 
 		print (text) {
-			console.log (text)
+			console.log(text)
 		}
 	}
 
-	const logger = new Logger ()
+	const logger = new Logger()
 	const { printName } = logger
-	printName () // TypeError: Cannot read property 'print' of undefined
+	printName() // TypeError: Cannot read property 'print' of undefined
 
 	/*
 	 *上面代码中，printName方法中的this，默认指向Logger类的实例。但是，如果将这个方法提取出来单独使用，this会指向该方法运行时所在的环境

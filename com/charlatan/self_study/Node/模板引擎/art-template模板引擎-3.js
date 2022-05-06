@@ -8,19 +8,19 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-let template = require ('art-template')
-let fs = require ('fs')
+let template = require('art-template')
+let fs = require('fs')
 
 let tools = {
-	name: 'Lily',
-	// user: {
-	// 	name: '张三',
-	// 	age: 20,
-	// },
-	person: {
-		name: '李四',
-		age: 30,
-	},
+    name: 'Lily',
+    // user: {
+    // 	name: '张三',
+    // 	age: 20,
+    // },
+    person: {
+        name: '李四',
+        age: 30,
+    },
 }
 /*
  自定义变量
@@ -35,15 +35,15 @@ let tools = {
  */
 
 // 标准语法
-console.log (template.render ('name : name {{ name }} {{ set name = \'Tom\' }} {{ name }}', tools))
-console.log (template.render ('name:{{set name=\'Lily\'}} {{ name }}', tools))
+console.log(template.render('name : name {{ name }} {{ set name = \'Tom\' }} {{ name }}', tools))
+console.log(template.render('name:{{set name=\'Lily\'}} {{ name }}', tools))
 
-fs.readFile ('./index.html', function (err, data) {
-	if ( !err ) {
-		console.log (template.render (data.toString (), tools))
-	} else {
-		console.log (err)
-	}
+fs.readFile('./index.html', function (err, data) {
+    if (!err) {
+        console.log(template.render(data.toString(), tools))
+    } else {
+        console.log(err)
+    }
 })
 
 /*

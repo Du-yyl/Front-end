@@ -17,11 +17,11 @@
  * @returns {*[]} 返回数组
  */
 function map (callback) {
-  let arr = []
-  for (let i = 0, len = this.length; i < len; i++) {
-    arr.push(callback(this[i], i, this))
-  }
-  return arr
+    let arr = []
+    for (let i = 0, len = this.length; i < len; i++) {
+        arr.push(callback(this[i], i, this))
+    }
+    return arr
 }
 
 Array.prototype.map = map

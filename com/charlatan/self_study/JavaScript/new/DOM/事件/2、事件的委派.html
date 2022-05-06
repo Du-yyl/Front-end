@@ -17,18 +17,18 @@
 	</style>
 	<script>
 		window.onload = function () {
-			let lis = document.getElementById ('ul').getElementsByClassName ('li')
+			let lis = document.getElementById('ul').getElementsByClassName('li')
 
 			/*
 			 * 这种绑定事件是能像快照一样，在第一次声明时进行了完整的绑定，这种操作需要重新获取
 			 * */
 
-			let btn1 = document.getElementById ('btn1')
+			let btn1 = document.getElementById('btn1')
 			btn1.onclick = function () {
-				let li = document.createElement ('li')
+				let li = document.createElement('li')
 				li.innerHTML = '我是新添加的字符串'
 				li.className = 'li'
-				document.getElementById ('ul').appendChild (li)
+				document.getElementById('ul').appendChild(li)
 			}
 
 			// for (let i = 0; i < lis.length; i++) {
@@ -47,12 +47,12 @@
 			 * event.target.tagName
 			 *   返回的类型是String类型，可以进行判断，进行绑定事件的确认
 			 * */
-			document.getElementById ('ul').onclick = function (event) {
+			document.getElementById('ul').onclick = function (event) {
 				// alert("我是ul绑定的")
 				// alert(this)
 				// alert(event.target.tagName)
-				if ( event.target.tagName === 'LI' ) {
-					alert (123)
+				if (event.target.tagName === 'LI') {
+					alert(123)
 				}
 				// alert (event.target)
 

@@ -311,23 +311,23 @@
 <script>
 	window.onload = function () {
 
-		var name = document.getElementById ('userName')
+		var name = document.getElementById('userName')
 		name_judgement = false
 		name.onblur = function () {
-			var username_span = document.getElementById ('username-span')
-			if ( name.value.trim () === '' ) {
+			var username_span = document.getElementById('username-span')
+			if (name.value.trim() === '') {
 				username_span.innerText = '用户名不能为空'
 				name.value = ''
 				return
 			}
-			if ( name.value.length <= 1 || name.value.length >= 14 ) {
+			if (name.value.length <= 1 || name.value.length >= 14) {
 				username_span.innerText = '用户名长度违法'
 				name.value = ''
 				return
 			}
 			//用户名只能有数字和字母组成，不能含有其它符号（正则表达式）
 			nameRegexp = /^[a-zA-Z0-9]+$/
-			if ( !nameRegexp.test (name.value) ) {
+			if (!nameRegexp.test(name.value)) {
 				username_span.innerText = '用户名只能由字母或数字组成'
 				name.value = ''
 				return
@@ -336,16 +336,16 @@
 			name_judgement = true
 		}
 
-		var password = document.getElementById ('password')
+		var password = document.getElementById('password')
 		password_judgement = false
 		password.onblur = function () {
-			var password_span = document.getElementById ('password-span')
-			if ( password.value === '' ) {
+			var password_span = document.getElementById('password-span')
+			if (password.value === '') {
 				password_span.innerText = '密码不能为空'
 				password.value = ''
 				return
 			}
-			if ( password.value.length <= 8 || password.value.length >= 18 ) {
+			if (password.value.length <= 8 || password.value.length >= 18) {
 				password_span.innerText = '长度违法'
 				password.value = ''
 				return
@@ -354,17 +354,17 @@
 			password_judgement = true
 		}
 
-		var password_again = document.getElementById ('password-again')
+		var password_again = document.getElementById('password-again')
 		password_again_judgement = false
 		password_again.onblur = function () {
 
-			var password_again_span = document.getElementById ('password-again-span')
-			if ( password_again.value === '' ) {
+			var password_again_span = document.getElementById('password-again-span')
+			if (password_again.value === '') {
 				password_again_span.innerText = '确认密码不能为空'
 				password_again.value = ''
 				return
 			}
-			if ( password_again.value !== password.value ) {
+			if (password_again.value !== password.value) {
 				password_again_span.innerText = '两次密码输入不匹配，请确认后重新输入'
 				password_again.value = ''
 				return
@@ -373,16 +373,16 @@
 			password_again_judgement = true
 		}
 
-		var email = document.getElementById ('email')
+		var email = document.getElementById('email')
 		email_judgement = false
 		email.onblur = function () {
-			var email_span = document.getElementById ('email-span')
+			var email_span = document.getElementById('email-span')
 			var eamil_Regexp = /^\w+@\w+.\w+$/
-			if ( email.value === '' ) {
+			if (email.value === '') {
 				email_span.innerText = '邮箱不能为空'
 				return
 			}
-			if ( !eamil_Regexp.test (email.value) ) {
+			if (!eamil_Regexp.test(email.value)) {
 				email_span.innerText = '邮箱格式违法'
 				email.value = ''
 				return
@@ -391,16 +391,16 @@
 			email_judgement = true
 		}
 
-		var form = document.getElementById ('form')
+		var form = document.getElementById('form')
 		form.onclick = function () {
-			if ( name_judgement && password_judgement && password_again_judgement && email_judgement ) {
-				alert ('提交成功')
-				document.getElementById ('main').style.cssText = 'display:block'
-				document.getElementById ('span-name').innerText = '用户名:' + name.value
-				document.getElementById ('span-sex').innerText = '性别:' + document.getElementById ('sex-man').value
-				document.getElementById ('span-email').innerText = '邮箱:' + email.value
+			if (name_judgement && password_judgement && password_again_judgement && email_judgement) {
+				alert('提交成功')
+				document.getElementById('main').style.cssText = 'display:block'
+				document.getElementById('span-name').innerText = '用户名:' + name.value
+				document.getElementById('span-sex').innerText = '性别:' + document.getElementById('sex-man').value
+				document.getElementById('span-email').innerText = '邮箱:' + email.value
 			} else {
-				alert ('你的信息未符合规则')
+				alert('你的信息未符合规则')
 			}
 
 		}

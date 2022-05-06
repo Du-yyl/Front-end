@@ -51,8 +51,8 @@
 	 * 当多次调用定时函数，因为没有将函数清空，速度会不断叠加，所以要每次都要进行清除
 	 * */
 	window.onload = function () {
-		let btn1 = document.getElementById ('btn1')
-		let div1 = document.getElementById ('div1')
+		let btn1 = document.getElementById('btn1')
+		let div1 = document.getElementById('div1')
 		let timer
 		btn1.onclick = function () {
 			let divLeft
@@ -61,19 +61,19 @@
 			 * 将上一次的进行清空，解决速度叠加问题
 			 * */
 			// clearInterval(timer)
-			timer = setInterval (function () {
+			timer = setInterval(function () {
 
 				//这里每次运行都会进行将位置进行偏移
 				divLeft = div1.style.left
 				div1.style.left = div1.offsetLeft + 1 + 'px'
 
 				//这里如果div的宽度超过警戒线，那么将他的left设置为指定的参数，并触发停止
-				if ( parseInt (divLeft) > 700 ) {
+				if (parseInt(divLeft) > 700) {
 					divLeft = '700px'
 					div1.style.left = divLeft
 				}
-				if ( divLeft === '700px' ) {
-					clearInterval (timer)
+				if (divLeft === '700px') {
+					clearInterval(timer)
 				}
 			}, 10)
 

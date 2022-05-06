@@ -37,7 +37,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue ({
+	const vm = new Vue({
 		el: '#root',
 		data: {
 			opacity: 0,
@@ -45,7 +45,7 @@
 		// 完成挂载
 		methods: {
 			'chang-opacity' () {
-				setInterval (() => {
+				setInterval(() => {
 					this.opacity = this.opacity <= 0 ? 1 : this.opacity -= 0.01
 				}, 10)
 			},
@@ -53,7 +53,7 @@
 		computed: {},
 		watch: {},
 		mounted () {
-			setInterval (() => {
+			setInterval(() => {
 				this.opacity = this.opacity <= 0 ? 1 : this.opacity -= 0.01
 			}, 10)
 		},

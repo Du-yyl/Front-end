@@ -28,7 +28,7 @@
 	//解构赋值
 
 	let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 }
-	console.log (x, y, z)
+	console.log(x, y, z)
 
 	// let { x, y, ...z } = null; //  运行时错误
 	// let { x, y, ...z } = undefined; //  运行时错误
@@ -40,7 +40,7 @@
 	let obj = { a: { b: 1 } }
 	let { ...num1 } = obj
 	obj.a.b = 2000
-	console.log (num1.a.b)
+	console.log(num1.a.b)
 
 	/*
 	 * 原始函数baseFunction接受a和b作为参数，函数wrapperFunction在baseFunction的基础上进行了扩展，能够接受多余的参数，并且保留原始函数的行为。
@@ -53,7 +53,7 @@
 	function wrapperFunction ({ x, y, ...restConfig }) {
 		//  使用 x 和 y 参数进行操作
 		//  其余参数传给原始函数
-		return baseFunction (restConfig)
+		return baseFunction(restConfig)
 	}
 </script>
 </html>

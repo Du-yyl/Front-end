@@ -77,11 +77,11 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 <script>
-	$ (function () {
-		let div = $ ('#div')
-		let btn1 = $ ('.btn:eq(0)')
-		let btn2 = $ ('.btn:eq(1)')
-		let ul = $ ('#ul')
+	$(function () {
+		let div = $('#div')
+		let btn1 = $('.btn:eq(0)')
+		let btn2 = $('.btn:eq(1)')
+		let ul = $('#ul')
 		let lis = ''
 
 		// language=HTML
@@ -97,27 +97,27 @@
 		let li9 = `<li value="8" class="li lio"></li>`
 
 		lis += li1 + li2 + li3 + li4 + li5 + li6 + li7 + li8 + li9
-		ul.append (lis)
+		ul.append(lis)
 
 		let arrs = [li1, li2, li3, li4, li5, li6, li7, li8, li9]
 
-		btn2.click (function () {
+		btn2.click(function () {
 			let flag = true
 			let arr = []
 			// 生成随机数
-			while ( flag ) {
+			while (flag) {
 				let l = 9
-				let i = Math.floor (Math.random () * l)
-				if ( arr.indexOf (i) < 0 ) {
-					arr.push (i)
+				let i = Math.floor(Math.random() * l)
+				if (arr.indexOf(i) < 0) {
+					arr.push(i)
 				}
-				if ( arr.length === l ) {
+				if (arr.length === l) {
 					flag = false
 				}
 			}
-			go ()
+			go()
 
-			let li = $ ('.li')
+			let li = $('.li')
 
 			// 能移动码，能往哪里移动
 			function canMove (value, that) {
@@ -191,36 +191,36 @@
 					}
 						break
 					default : {
-						console.log ('123')
+						console.log('123')
 					}
 
 				}
 				let arr = [v1, v2, v3, v4]
-				let lip = $ (`.li`)
-				if ( !$ (that).hasClass ('lio') ) {
-					for ( let number of arr ) {
-						if ( number === -1 ) {
+				let lip = $(`.li`)
+				if (!$(that).hasClass('lio')) {
+					for (let number of arr) {
+						if (number === -1) {
 							continue
 						}
-						if ( $ (lip[number]).hasClass ('lio') ) {
+						if ($(lip[number]).hasClass('lio')) {
 							// 点击的那个元素和要交换的那个元素
 							let lio = lip[number]
 
-							$ (that).prev ().after (lio)
+							$(that).prev().after(lio)
 							// $(lio).after(that)
-							console.log (that, lio)
-							console.log (number)
+							console.log(that, lio)
+							console.log(number)
 							return
 						}
 					}
 				}
 
-				console.log ()
+				console.log()
 			}
 
 			// li点击
-			li.click (function () {
-				canMove ($ (this).index (), this)
+			li.click(function () {
+				canMove($(this).index(), this)
 			})
 
 			/**
@@ -228,11 +228,11 @@
 			 */
 			function go () {
 				let lis = ''
-				for ( let arrElement of arr ) {
+				for (let arrElement of arr) {
 					lis += arrs[arrElement]
 				}
-				ul.empty ()
-				ul.append (lis)
+				ul.empty()
+				ul.append(lis)
 			}
 		})
 
@@ -240,23 +240,23 @@
 		 * 是否完成拼图
 		 * @constructor
 		 */
-		$ (document).click (function () {
-			let lis = $ ('.li')
+		$(document).click(function () {
+			let lis = $('.li')
 			let p = ''
-			for ( let i = 0, len = lis.length; i < len; i++ ) {
+			for (let i = 0, len = lis.length; i < len; i++) {
 				p += lis[i].value
 			}
-			if ( p === '012345678' ) {
-				alert ('完成')
+			if (p === '012345678') {
+				alert('完成')
 			}
 		})
 
 		// 恢复
-		btn1.click (function () {
+		btn1.click(function () {
 			lis = ''
-			ul.empty ()
+			ul.empty()
 			lis += li1 + li2 + li3 + li4 + li5 + li6 + li7 + li8 + li9
-			ul.append (lis)
+			ul.append(lis)
 		})
 
 	})

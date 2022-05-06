@@ -48,8 +48,8 @@ export default {
     //   age: 'age',
     // }),
     // 简写形式【数组写法】
-    ...mapState (['sum', 'name', 'age']),
-    ...mapGetters ({
+    ...mapState(['sum', 'name', 'age']),
+    ...mapGetters({
       calculate: 'calculate',
     }),
   },
@@ -57,20 +57,20 @@ export default {
     add () {
       // 因为逻辑业务简单，直接联系 mutations
       // this.$store.dispatch('add', this.num)
-      this.$store.commit ('ADD', this.num)
+      this.$store.commit('ADD', this.num)
     },
     deadd () {
-      this.$store.commit ('DEADD', this.num)
+      this.$store.commit('DEADD', this.num)
     },
     addOdd () {
-      this.$store.dispatch ('addOdd', this.num)
+      this.$store.dispatch('addOdd', this.num)
     },
     addWait () {
-      this.$store.dispatch ('addWait', this.num)
+      this.$store.dispatch('addWait', this.num)
     },
   },
   mounted () {
-    console.log (this)
+    console.log(this)
   },
 }
 </script>

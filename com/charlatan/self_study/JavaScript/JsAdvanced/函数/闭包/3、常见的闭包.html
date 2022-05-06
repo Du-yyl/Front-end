@@ -26,23 +26,23 @@
 
 		function fn2 () {
 			a++
-			console.log (a)
+			console.log(a)
 		}
 
 		return fn2
 	}
 
-	let a1 = fn1 ()
-	a1 ()
-	a1 ()
+	let a1 = fn1()
+	a1()
+	a1()
 
 	// 2. 将函数作为实参传递给另一个函数调用
 	function showTime (funs, times) {
-		setTimeout (function () {
-			alert (funs)
+		setTimeout(function () {
+			alert(funs)
 		}, times)
 	}
 
-	showTime ('测试', 2000)
+	showTime('测试', 2000)
 </script>
 </html>

@@ -18,9 +18,9 @@
 
 </body>
 <script>
-	let pro = new Promise (((resolve, reject) => {
-		setTimeout (function () {
-			reject ('报错')
+	let pro = new Promise(((resolve, reject) => {
+		setTimeout(function () {
+			reject('报错')
 		}, 1000)
 	}))
 
@@ -30,8 +30,8 @@
 	// 	console.log("失败");
 	// })
 
-	pro.catch (reason => {
-		console.log (reason)
+	pro.catch(reason => {
+		console.log(reason)
 	})
 </script>
 </html>

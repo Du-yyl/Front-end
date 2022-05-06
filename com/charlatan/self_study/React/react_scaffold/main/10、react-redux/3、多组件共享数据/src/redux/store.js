@@ -20,10 +20,10 @@ import person from './reducers/person'
 import thunk from 'redux-thunk'
 
 // 汇总全部的 reducer
-const allReducers = combineReducers ({
-	count,
-	person,
+const allReducers = combineReducers({
+    count,
+    person,
 })
-export default createStore (allReducers, applyMiddleware (thunk))
+export default createStore(allReducers, applyMiddleware(thunk))
 
 

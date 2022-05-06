@@ -16,16 +16,16 @@ let num = 'abcdefghijklmn'
  * @returns {*[]|*} 将分割结果进行返回，当字符串总长度小于分割的长度时，将原字符串返回
  */
 function cut (arr, arrLen) {
-	let lens = arr.length
-	if ( lens <= arrLen ) {
-		return arr
-	} else {
-		let array = []
-		for ( let i = 0, len = lens - arrLen + 1; i < len; i++ ) {
-			array.push (arr.slice (i, i + arrLen))
-		}
-		return array
-	}
+    let lens = arr.length
+    if (lens <= arrLen) {
+        return arr
+    } else {
+        let array = []
+        for (let i = 0, len = lens - arrLen + 1; i < len; i++) {
+            array.push(arr.slice(i, i + arrLen))
+        }
+        return array
+    }
 }
 
 /**
@@ -35,31 +35,31 @@ function cut (arr, arrLen) {
  * @returns {boolean} 结果以布尔值形式进行返回
  */
 function ditto (arr, lens = 5) {
-	if ( arr.length <= 0 ) {
-		return false
-	} else if ( arr.length <= 2 ) {
-		return true
-	} else if ( arr.length <= lens ) {
-		let flag = true
-		let num = arr.charCodeAt (1) - arr.charCodeAt (0)
-		for ( let i = 2; i < arr.length; i++ ) {
-			if ( !(num === arr.charCodeAt (i) - arr.charCodeAt (i - 1)) ) {
-				flag = false
-				break
-			}
-		}
-		return flag
-	} else {
-		let flag = false
-		cut (arr, lens).forEach ((item) => {
-			if ( flag ) {
-				return flag
-			}
-			flag = ditto (item)
-		})
-		return flag
-	}
+    if (arr.length <= 0) {
+        return false
+    } else if (arr.length <= 2) {
+        return true
+    } else if (arr.length <= lens) {
+        let flag = true
+        let num = arr.charCodeAt(1) - arr.charCodeAt(0)
+        for (let i = 2; i < arr.length; i++) {
+            if (!(num === arr.charCodeAt(i) - arr.charCodeAt(i - 1))) {
+                flag = false
+                break
+            }
+        }
+        return flag
+    } else {
+        let flag = false
+        cut(arr, lens).forEach((item) => {
+            if (flag) {
+                return flag
+            }
+            flag = ditto(item)
+        })
+        return flag
+    }
 }
 
 // console.log(cut(num,6));
-console.log (ditto (num))
+console.log(ditto(num))

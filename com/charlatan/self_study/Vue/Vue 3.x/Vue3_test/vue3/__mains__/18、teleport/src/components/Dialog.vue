@@ -31,7 +31,7 @@ import { ref } from 'vue'
 export default {
   name: 'Dialog',
   setup () {
-    let isShow = ref (false)
+    let isShow = ref(false)
 
     return {
       isShow,

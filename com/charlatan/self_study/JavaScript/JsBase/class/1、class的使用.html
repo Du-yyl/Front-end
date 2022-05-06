@@ -74,28 +74,28 @@
 		}
 	}
 
-	let p1 = new Person ('张三', 123)
-	let p2 = new Person ('李四', 123)
+	let p1 = new Person('张三', 123)
+	let p2 = new Person('李四', 123)
 
-	let u1 = new User ('王五', 321)
-	let u2 = new User ('赵六', 321)
+	let u1 = new User('王五', 321)
+	let u2 = new User('赵六', 321)
 
-	console.log (p1.toString ())
-	console.log (p2.toString ())
+	console.log(p1.toString())
+	console.log(p2.toString())
 
-	console.log (u1.toString ())
-	console.log (u2.toString ())
+	console.log(u1.toString())
+	console.log(u2.toString())
 
 	// 事实上，所有定义的属性都定义在指定类的prototype上，输出结果为true
-	console.log (u1.constructor === User.prototype.constructor)
+	console.log(u1.constructor === User.prototype.constructor)
 
-	let u3 = new User ('郑七', 20)
+	let u3 = new User('郑七', 20)
 
-	console.log ('-------' + u3.toString ())
-	console.log (u3._name)
-	console.log (u1._name)
-	console.log (u2._name)
-	console.log (p2.name)
+	console.log('-------' + u3.toString())
+	console.log(u3._name)
+	console.log(u1._name)
+	console.log(u2._name)
+	console.log(p2.name)
 
 	class A {
 		constructor (name, age) {
@@ -108,7 +108,7 @@
 		}
 	}
 
-	let a1 = new A ('123', null)
-	console.log (a1.name)
+	let a1 = new A('123', null)
+	console.log(a1.name)
 </script>
 </html>

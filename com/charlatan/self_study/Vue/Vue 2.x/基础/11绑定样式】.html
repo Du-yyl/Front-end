@@ -117,7 +117,7 @@
 <script>
 	Vue.config.productionTip = false
 	let divs = ['div1', 'div2', 'div3', 'div4', 'div5', 'div6']
-	const vm = new Vue ({
+	const vm = new Vue({
 		el: '#root',
 		data: {
 			name: 'name',
@@ -131,8 +131,8 @@
 		},
 		methods: {
 			changMod () {
-				let num = Math.floor (Math.random () * 6)
-				console.log (num)
+				let num = Math.floor(Math.random() * 6)
+				console.log(num)
 				this.dem = divs[num]
 			},
 		},

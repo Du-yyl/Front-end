@@ -137,7 +137,7 @@ export interface AxiosInstance {
   };
   
   (config: AxiosRequestConfig): AxiosPromise;
-
+  
   (url: string, config?: AxiosRequestConfig): AxiosPromise;
   
   getUri (config?: AxiosRequestConfig): string;
@@ -167,10 +167,10 @@ export interface AxiosInstance {
 }
 
 export interface AxiosStatic extends AxiosInstance {
-CaCancel: CancelStatic;
- ncelToken: CancelTokenStatic;
- 
-create (config?: AxiosRequestConfig): AxiosInstance;
+  CaCancel: CancelStatic;
+  ncelToken: CancelTokenStatic;
+  
+  create (config?: AxiosRequestConfig): AxiosInstance;
   
   isCancel (value: any): boolean;
   

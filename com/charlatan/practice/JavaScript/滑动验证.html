@@ -248,12 +248,12 @@
 </body>
 <script>
 	window.onload = () => {
-		let imgMove = document.getElementById ('img-div-2')
-		let divMove = document.getElementById ('slide-div-slide')
-		let imgSlide = document.getElementById ('img-slide')
-		let show = document.getElementById ('show')
-		let div_body = document.getElementById ('div-body')
-		let div_left = document.getElementById ('div-left')
+		let imgMove = document.getElementById('img-div-2')
+		let divMove = document.getElementById('slide-div-slide')
+		let imgSlide = document.getElementById('img-slide')
+		let show = document.getElementById('show')
+		let div_body = document.getElementById('div-body')
+		let div_left = document.getElementById('div-left')
 
 		imgSlide.onmousedown = event_1 => {
 			let x1 = imgSlide.offsetLeft
@@ -271,26 +271,26 @@
 			document.onmouseup = function () {
 				document.onmousemove = null
 				document.onmouseup = null
-				if ( x >= 145 && x <= 155 ) {
+				if (x >= 145 && x <= 155) {
 					x = 0
-					alert ('恭喜你！完成注册')
+					alert('恭喜你！完成注册')
 					divMove.style.width = x + 'px'
 					imgMove.style.left = x + 'px'
 				} else {
-					imgSlide.classList.add ('error')
-					div_left.classList.add ('img-error')
-					div_body.classList.add ('img-error')
-					timer = setTimeout (function () {
+					imgSlide.classList.add('error')
+					div_left.classList.add('img-error')
+					div_body.classList.add('img-error')
+					timer = setTimeout(function () {
 						x = 0
 						divMove.style.width = x + 'px'
 						imgMove.style.left = x + 'px'
-						div_left.classList.remove ('img-error')
-						div_body.classList.remove ('img-error')
-						imgSlide.classList.remove ('error')
+						div_left.classList.remove('img-error')
+						div_body.classList.remove('img-error')
+						imgSlide.classList.remove('error')
 					}, 500)
 				}
 			}
-			clearTimeout (timer)
+			clearTimeout(timer)
 			return false
 		}
 	}

@@ -19,11 +19,11 @@
 
 	// 希望把数据展示到table当中.
 	window.onload = function () {
-		var displayBtnElt = document.getElementById ('displayBtn')
+		var displayBtnElt = document.getElementById('displayBtn')
 		displayBtnElt.onclick = function () {
 			var emps = data.emps
 			var html = ''
-			for ( var i = 0; i < emps.length; i++ ) {
+			for (var i = 0; i < emps.length; i++) {
 				var emp = emps[i]
 				html += '<tr>'
 				html += '<td>' + emp.empno + '</td>'
@@ -31,8 +31,8 @@
 				html += '<td>' + emp.sal + '</td>'
 				html += '</tr>'
 			}
-			document.getElementById ('emptbody').innerHTML = html
-			document.getElementById ('count').innerHTML = data.total
+			document.getElementById('emptbody').innerHTML = html
+			document.getElementById('count').innerHTML = data.total
 		}
 	}
 </script>

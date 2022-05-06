@@ -26,23 +26,23 @@
 		content.innerHTML = num++
 	}
 
-	$ ('#content')[0].onclick = debounce (count, 1000, true)
+	$('#content')[0].onclick = debounce(count, 1000, true)
 
 	function debounce (func, wait, immediate) {
 		let timeout
 		return function () {
 			let context = this
 			let args = arguments
-			clearTimeout (timeout)
-			if ( immediate ) {
+			clearTimeout(timeout)
+			if (immediate) {
 				let callNow = !timeout
-				timeout = setTimeout (() => {
+				timeout = setTimeout(() => {
 					timeout = null
 				}, wait)
-				if ( callNow ) func.apply (context, args)
+				if (callNow) func.apply(context, args)
 			} else {
-				timeout = setTimeout (function () {
-					func.apply (context, args)
+				timeout = setTimeout(function () {
+					func.apply(context, args)
 				}, wait)
 			}
 		}

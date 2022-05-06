@@ -76,11 +76,11 @@
 	 οncοpy="return false;" oncut="return false;"
 	 * */
 	window.onload = function () {
-		let text = document.getElementById ('text')
-		let span = document.getElementById ('span')
-		let btn1 = document.getElementById ('btn1')
+		let text = document.getElementById('text')
+		let span = document.getElementById('span')
+		let btn1 = document.getElementById('btn1')
 		let ans = ''
-		let numsAns = new Array (4)
+		let numsAns = new Array(4)
 
 		let randoms = [
 			0,
@@ -122,24 +122,24 @@
 		]
 
 		//    产生随机字母
-		for ( let i = 0; i < numsAns.length; i++ ) {
-			let ans1 = Math.floor (Math.random () * randoms.length)
+		for (let i = 0; i < numsAns.length; i++) {
+			let ans1 = Math.floor(Math.random() * randoms.length)
 			ans += randoms[ans1]
 		}
 		span.innerText = ans
 		btn1.onclick = function () {
-			if ( text.value.length !== 4 ) {
-				alert ('输入的长度违法，请确认后重新输入')
+			if (text.value.length !== 4) {
+				alert('输入的长度违法，请确认后重新输入')
 				text.value = ''
 				return
 			}
-			if ( text.value !== ans ) {
-				alert ('你的输入错误，请确认后重新输入')
+			if (text.value !== ans) {
+				alert('你的输入错误，请确认后重新输入')
 				text.value = ''
 				return
 			}
-			if ( text.value === ans ) {
-				alert ('恭喜你！通过测试！')
+			if (text.value === ans) {
+				alert('恭喜你！通过测试！')
 			}
 		}
 	}

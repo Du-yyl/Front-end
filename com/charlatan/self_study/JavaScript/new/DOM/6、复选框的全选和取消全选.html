@@ -17,19 +17,19 @@
 <script>
 	window.onload = function () {
 
-		var v1 = document.getElementById ('check')
-		var aihao = document.getElementsByName ('aihao')
+		var v1 = document.getElementById('check')
+		var aihao = document.getElementsByName('aihao')
 		v1.onclick = function () {
-			for ( let i = 0; i < aihao.length; i++ ) {
+			for (let i = 0; i < aihao.length; i++) {
 				aihao[i].checked = v1.checked
 			}
 		}
 
-		for ( let i = 0; i < aihao.length; i++ ) {
+		for (let i = 0; i < aihao.length; i++) {
 			aihao[i].onclick = function () {
 				var p = 0
-				for ( let j = 0; j < aihao.length; j++ ) {
-					if ( aihao[j].checked ) {
+				for (let j = 0; j < aihao.length; j++) {
+					if (aihao[j].checked) {
 						p++
 					}
 				}

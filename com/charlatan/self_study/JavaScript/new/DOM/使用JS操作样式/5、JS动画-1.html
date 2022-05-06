@@ -31,11 +31,11 @@
 	// 使用setTimeout实现setInterval效果。
 	//  在一个方法中调用执行这个方法，类似递归，但是不同的是这个有时间限制
 	function f1 () {
-		console.log ('f1执行了')
-		setTimeout (f1, 1000)
+		console.log('f1执行了')
+		setTimeout(f1, 1000)
 	}
 
-	f1 ()
+	f1()
 
 	//-------------------------------------------------------------
 
@@ -50,18 +50,18 @@
 
 	var angle = 0
 
-	var box = document.getElementById ('box')
+	var box = document.getElementById('box')
 
 	function update () {
 		// console.log(123);
 		angle += 5
 		box.style.transform = 'rotate(' + angle + 'deg)'
 
-		aniCode = requestAnimationFrame (update)
+		aniCode = requestAnimationFrame(update)
 	}
 
 	// // requestAnimationFrame和setTimeout类似，也会返回一个定时器编号，在触发之前可以取消。
-	var aniCode = requestAnimationFrame (update)
+	var aniCode = requestAnimationFrame(update)
 	//
 	// // setTimeout(function(){
 	// //     cancelAnimationFrame(aniCode);

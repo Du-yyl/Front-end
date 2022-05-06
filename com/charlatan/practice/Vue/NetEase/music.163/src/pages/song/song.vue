@@ -66,10 +66,10 @@ export default {
   },
   components: {},
   mounted () {
-    axios.get ('http://localhost:3000/song/url?id=' + this.$route.query.id).then ((value) => {
+    axios.get('http://localhost:3000/song/url?id=' + this.$route.query.id).then((value) => {
       this.musicUrl = value.data.data[0].url
     })
-    axios.get ('http://localhost:3000/song/detail?ids=' + this.$route.query.id).then ((value) => {
+    axios.get('http://localhost:3000/song/detail?ids=' + this.$route.query.id).then((value) => {
       this.song.name = value.data.songs[0].name
       this.song.singer = value.data.songs[0].ar[0].name
       this.song.imgUrl = value.data.songs[0].al.picUrl

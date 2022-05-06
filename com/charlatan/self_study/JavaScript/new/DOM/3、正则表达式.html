@@ -28,12 +28,12 @@
 	// var regExp_2 = new regExp_2("^\w+$")
 
 	window.onload = function () {
-		document.getElementById ('btn').onclick = function () {
-			if ( regExp_1.test (document.getElementById ('text').value) ) {
-				alert ('验证成功')
+		document.getElementById('btn').onclick = function () {
+			if (regExp_1.test(document.getElementById('text').value)) {
+				alert('验证成功')
 			} else {
-				alert ('输入有误，重新输入')
-				document.getElementById ('text').value = ''
+				alert('输入有误，重新输入')
+				document.getElementById('text').value = ''
 			}
 		}
 	}

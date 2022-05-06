@@ -11,12 +11,12 @@
 import React, { Component } from 'react'
 
 export default class About extends Component {
-	
-	render () {
-		console.log ('About 渲染')
-		return (
-				<h1>这个是 About 中的内容</h1>
-		)
-	}
-	
+    
+    render () {
+        console.log('About 渲染')
+        return (
+            <h1>这个是 About 中的内容</h1>
+        )
+    }
+    
 }

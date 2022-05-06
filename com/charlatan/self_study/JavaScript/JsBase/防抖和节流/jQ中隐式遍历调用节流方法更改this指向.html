@@ -63,7 +63,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 <script>
-	let top_3_sub_lis = $ (`#ul > li`)
+	let top_3_sub_lis = $(`#ul > li`)
 
 	// function debounce(callBack, time) {
 	// 	let flag = true
@@ -95,26 +95,26 @@
 		let flag = true
 		return function () {
 			let timer = null
-			if ( flag ) {
+			if (flag) {
 				flag = false
 				/*
 				 * 当直接进行callBack（）调用的时候，调用者默认是window的，所以为了防止这种情况出现而造成的指向不明的问题，这里直接指定调用
 				 * 者是this
 				 * */
-				callBack.call (this)
-				timer = setTimeout (() => {
+				callBack.call(this)
+				timer = setTimeout(() => {
 					flag = true
-					clearTimeout (timer)
+					clearTimeout(timer)
 				}, time)
 			}
 		}
 	}
 
 	// top_3_sub_lis.click(function () {
-	top_3_sub_lis.click (
-			debounce (function () {
-				console.log ('点击成功')
-				console.log ($ (this).index ())
+	top_3_sub_lis.click(
+			debounce(function () {
+				console.log('点击成功')
+				console.log($(this).index())
 			}, 1000),
 	)
 	// })

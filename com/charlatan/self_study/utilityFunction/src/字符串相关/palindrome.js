@@ -13,9 +13,9 @@
  * @param str
  */
 function palindrome (str) {
-  for (let i = 0, len = Math.floor(str.length); i < len; i++)
-    if (str[i] !== str[str.length - 1 - i]) return false
-  return true
+    for (let i = 0, len = Math.floor(str.length); i < len; i++)
+        if (str[i] !== str[str.length - 1 - i]) return false
+    return true
 }
 
 String.prototype.palindrome = palindrome

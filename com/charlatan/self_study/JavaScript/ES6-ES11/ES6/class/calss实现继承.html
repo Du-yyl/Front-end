@@ -46,7 +46,7 @@
 		}
 
 		read () {
-			console.log ('我在读书')
+			console.log('我在读书')
 		}
 	}
 
@@ -55,21 +55,21 @@
 		#color
 
 		constructor (name, age, id, color) {
-			super (name, age)
+			super(name, age)
 			this.#id = id
 			this.#color = color
 		}
 
 		read () {
-			console.log ('我在子类被重写了')
+			console.log('我在子类被重写了')
 		}
 	}
 
-	let b1 = new Ibook ('jock', 12, 23, 34)
-	let b2 = new Ibook ('tom', 123, 234, 345)
-	console.log (b1)
-	console.log (b2)
+	let b1 = new Ibook('jock', 12, 23, 34)
+	let b2 = new Ibook('tom', 123, 234, 345)
+	console.log(b1)
+	console.log(b2)
 
-	b1.read ()
+	b1.read()
 </script>
 </html>

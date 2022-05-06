@@ -46,12 +46,12 @@ export default {
       this.sum -= this.num
     },
     addOdd () {
-      if ( this.sum % 2 !== 0 ) {
-        this.add ()
+      if (this.sum % 2 !== 0) {
+        this.add()
       }
     },
     addWait () {
-      setTimeout (this.add, 2000)
+      setTimeout(this.add, 2000)
     },
   },
 }

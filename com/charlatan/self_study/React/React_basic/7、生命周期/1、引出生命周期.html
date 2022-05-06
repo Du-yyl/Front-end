@@ -30,13 +30,13 @@
 		 * 组件挂载页面的时候调用
 		 */
 		componentDidMount () {
-			this.timer = setInterval (() => {
-				if ( this.state.openness <= 0 ) {
-					this.setState ({
+			this.timer = setInterval(() => {
+				if (this.state.openness <= 0) {
+					this.setState({
 						openness: 1,
 					})
 				} else {
-					this.setState ({
+					this.setState({
 						openness: this.state.openness -= 0.007,
 					})
 				}
@@ -46,7 +46,7 @@
 
 		// 组件即将销毁
 		componentWillUnmount () {
-			console.log ('即将卸载')
+			console.log('即将卸载')
 		}
 
 		/**
@@ -73,16 +73,16 @@
 		}
 
 		destroy = () => {
-			clearInterval (this.timer)
+			clearInterval(this.timer)
 			// 卸载组件
-			ReactDOM.unmountComponentAtNode (document.getElementById ('test'))
-			console.log ('组件销毁')
+			ReactDOM.unmountComponentAtNode(document.getElementById('test'))
+			console.log('组件销毁')
 
 		}
 
 	}
 
-	ReactDOM.render (<Left/>, document.getElementById ('test'))
+	ReactDOM.render(<Left/>, document.getElementById('test'))
 
 </script>
 </html>

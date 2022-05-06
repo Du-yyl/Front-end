@@ -53,21 +53,21 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
 	Vue.config.productionTip = false
-	Vue.directive ('fbind', {
+	Vue.directive('fbind', {
 		//指令与元素成功绑定时（一上来）
 		bind (element, binding) {
 			element.value = binding.value
 		},
 		//指令所在元素被插入页面时
 		inserted (element, binding) {
-			element.focus ()
+			element.focus()
 		},
 		//指令所在的模板被重新解析时
 		update (element, binding) {
 			element.value = binding.value
 		},
 	})
-	const vm = new Vue ({
+	const vm = new Vue({
 		el: '#root',
 		data: {
 			n: 10,
@@ -77,22 +77,22 @@
 		watch: {},
 		directives: {
 			big (element, binding) {
-				console.log (element, binding.value)
+				console.log(element, binding.value)
 				element.innerText = binding.value * 10
 			}
 			,
 			fbind: {
 				bind (element, binding) {
 					element.value = binding.value * 10
-					console.log ('绑定的时候调用')
+					console.log('绑定的时候调用')
 				},
 				inserted (element, binding) {
-					element.focus ()
-					console.log ('指定元素被插入页面时调用')
+					element.focus()
+					console.log('指定元素被插入页面时调用')
 				},
 				update (element, binding) {
-					element.focus ()
-					console.log ('指定所在模板重新解析时调用')
+					element.focus()
+					console.log('指定所在模板重新解析时调用')
 				},
 			},
 		},

@@ -39,12 +39,12 @@ export default {
   },
   methods: {
     handleChange (event) {
-      pubsub.publish ('changeAll', event.target.checked)
+      pubsub.publish('changeAll', event.target.checked)
     },
   },
   mounted () {
-    pubsub.subscribe ('change', (msg, { num, allNum }) => {
-      console.log (num, allNum)
+    pubsub.subscribe('change', (msg, { num, allNum }) => {
+      console.log(num, allNum)
       num === allNum ? this.isChecked = true : this.isChecked = false
     })
 

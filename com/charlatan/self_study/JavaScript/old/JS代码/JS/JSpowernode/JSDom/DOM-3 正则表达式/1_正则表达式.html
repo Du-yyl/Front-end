@@ -63,21 +63,21 @@
 	 * */
 
 	window.onload = function () {
-		document.getElementById ('btn1').onclick = function () {
-			var email = document.getElementById ('tr1').value
+		document.getElementById('btn1').onclick = function () {
+			var email = document.getElementById('tr1').value
 			var emailRegExp1 = /^\w+@\w+.\w{2,3}$/
-			if ( emailRegExp1.test (email) ) {
-				document.getElementById ('emailError').innerText = '邮箱合法'
+			if (emailRegExp1.test(email)) {
+				document.getElementById('emailError').innerText = '邮箱合法'
 			} else {
-				document.getElementById ('emailError').innerText = '邮箱不合法'
+				document.getElementById('emailError').innerText = '邮箱不合法'
 			}
 
 			//
 			// var emailRegExp = new RegExp("^\w+@\w+.\w+$");
 			// alert(emailRegExp.test(email))
 		}
-		document.getElementById ('emailError').onfocus = function () {
-			document.getElementById ('emailError').innerText = ''
+		document.getElementById('emailError').onfocus = function () {
+			document.getElementById('emailError').innerText = ''
 		}
 
 	}

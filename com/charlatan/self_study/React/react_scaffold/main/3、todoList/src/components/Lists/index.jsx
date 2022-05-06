@@ -13,22 +13,22 @@ import List from '../List'
 import './index.css'
 
 export default class Lists extends Component {
-	
-	render () {
-		let { showMsg, delMsg, comMsg } = this.props
-		return (
-				<div className="div">
-					<ul className="lists">
-						{showMsg.map (item => {
-							return <List
-									className="list"
-									{...item}
-									delMsg={delMsg}
-									comMsg={comMsg}
-									key={item.id}/>
-						})}
-					</ul>
-				</div>
-		)
-	}
+    
+    render () {
+        let { showMsg, delMsg, comMsg } = this.props
+        return (
+            <div className="div">
+                <ul className="lists">
+                    {showMsg.map(item => {
+                        return <List
+                            className="list"
+                            {...item}
+                            delMsg={delMsg}
+                            comMsg={comMsg}
+                            key={item.id}/>
+                    })}
+                </ul>
+            </div>
+        )
+    }
 }

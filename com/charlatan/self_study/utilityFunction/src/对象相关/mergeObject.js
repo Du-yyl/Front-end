@@ -22,21 +22,21 @@
 //   return object
 // }
 function mergeObject (...objs) {
-  let result = {}
-  // 直接遍历多个对象
-  objs.forEach((obj) => {
-    // 对对象的每个属性进行遍历
-    Object.keys(obj).forEach((item) => {
-      // 如果对象中存在这个属性，那么进行数组的拼接
-      if (result.hasOwnProperty(item)) {
-        result[item] = [].concat(result[item], obj[item])
-      } else {
-        // 如果不存在这个属性，直接进行赋值操作
-        result[item] = obj[item]
-      }
+    let result = {}
+    // 直接遍历多个对象
+    objs.forEach((obj) => {
+        // 对对象的每个属性进行遍历
+        Object.keys(obj).forEach((item) => {
+            // 如果对象中存在这个属性，那么进行数组的拼接
+            if (result.hasOwnProperty(item)) {
+                result[item] = [].concat(result[item], obj[item])
+            } else {
+                // 如果不存在这个属性，直接进行赋值操作
+                result[item] = obj[item]
+            }
+        })
     })
-  })
-  return result
+    return result
 }
 
 Object.prototype.mergeObject = mergeObject

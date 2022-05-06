@@ -9,30 +9,30 @@
  */
 
 
-let fs = require ('fs')
-fs.readFile ('./test/test.txt', function (err, data) {
-	if ( err ) {
-		console.log (err)
-	} else {
-		console.log (data.toString ())
-	}
+let fs = require('fs')
+fs.readFile('./test/test.txt', function (err, data) {
+    if (err) {
+        console.log(err)
+    } else {
+        console.log(data.toString())
+    }
 })
 
-console.log ('---------------')
+console.log('---------------')
 
-let pro = new Promise ((resolve, reject) => {
-	fs.readFile ('./test/test.txt', function (err, data) {
-		if ( err ) {
-			reject (err)
-		} else {
-			resolve (data)
-		}
-	})
+let pro = new Promise((resolve, reject) => {
+    fs.readFile('./test/test.txt', function (err, data) {
+        if (err) {
+            reject(err)
+        } else {
+            resolve(data)
+        }
+    })
 })
 
-pro.then ((value) => {
-	console.log (value.toString ())
-	
+pro.then((value) => {
+    console.log(value.toString())
+    
 }, (value) => {
-	console.log (value)
+    console.log(value)
 })

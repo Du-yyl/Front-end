@@ -21,30 +21,30 @@
 
 	function sum () {
 		//访问全局变量
-		alert (i)
+		alert(i)
 	}
 
-	sum ()
+	sum()
 	//全局变量
 	var username = 'zhangsan'
 
 	function sum1 () {
 		var username = 'lisi'
 		//访问的是局部变量
-		alert (username)
+		alert(username)
 	}
 
-	sum1 ()
+	sum1()
 	//访问全局变量
-	alert (username)
+	alert(username)
 
 	//一个变量声明时没有使用var进行声明,这个变量在哪都是全局变量
 	function myfun () {
 		myname = 'wangwu'
 	}
 
-	myfun ()
-	alert (myname)
+	myfun()
+	alert(myname)
 
 </script>
 </body>

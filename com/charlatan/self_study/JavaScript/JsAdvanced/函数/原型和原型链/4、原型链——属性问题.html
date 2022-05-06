@@ -24,18 +24,18 @@
 
 	}
 
-	let fun1 = new Fn ('Tom', 12)
-	let fun2 = new Fn ('jack', 20)
+	let fun1 = new Fn('Tom', 12)
+	let fun2 = new Fn('jack', 20)
 
-	console.log (fun1.__proto__)
-	console.log (fun2.__proto__)
-	console.log (fun2.__proto__ === Fn.prototype)
-	console.log (fun2.__proto__ === fun1.__proto__)
+	console.log(fun1.__proto__)
+	console.log(fun2.__proto__)
+	console.log(fun2.__proto__ === Fn.prototype)
+	console.log(fun2.__proto__ === fun1.__proto__)
 
-	console.log (fun1.__proto__.__proto__)
-	console.log (fun2.__proto__.__proto__)
-	console.log (fun2.__proto__.__proto__ === Object.prototype)
-	console.log (fun2.__proto__.__proto__ === fun1.__proto__.__proto__)
+	console.log(fun1.__proto__.__proto__)
+	console.log(fun2.__proto__.__proto__)
+	console.log(fun2.__proto__.__proto__ === Object.prototype)
+	console.log(fun2.__proto__.__proto__ === fun1.__proto__.__proto__)
 
 
 </script>

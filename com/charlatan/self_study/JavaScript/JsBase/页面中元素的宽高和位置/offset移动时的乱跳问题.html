@@ -64,11 +64,11 @@
 	 *       但是会出现在子div中无法改变位置的情况，移动到父级div才有效
 	 *       使用pointer-events: none;指定移入子div中不会有样式和改变，鼠标移入的其实还是父级的div，来解决这个问题
 	 * */
-	let div = document.getElementById ('div')
-	let show = document.getElementById ('show')
+	let div = document.getElementById('div')
+	let show = document.getElementById('show')
 	document.onmousedown = function (event_1) {
 		document.onmousemove = function (event_2) {
-			if ( !(event_2.target === div) ) {
+			if (!(event_2.target === div)) {
 				let x = event_2.offsetX - 50
 				let y = event_2.offsetY - 50
 

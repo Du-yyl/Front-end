@@ -33,14 +33,14 @@
 	 *       当前节点的最后一个子节点【返回最后一个子元素，不包括空白】
 	 * */
 	window.onload = function () {
-		let ul = document.getElementById ('ul')
+		let ul = document.getElementById('ul')
 		//    获取到ul下所有的子节点
-		let lis = ul.getElementsByTagName ('li')
-		console.log (lis.length)
-		for ( let i = 0; i < lis.length; i++ ) {
-			console.log (lis[i].innerText)
+		let lis = ul.getElementsByTagName('li')
+		console.log(lis.length)
+		for (let i = 0; i < lis.length; i++) {
+			console.log(lis[i].innerText)
 		}
-		console.log ('-----------------------------')
+		console.log('-----------------------------')
 
 		/*
 		 childNodes：
@@ -49,20 +49,20 @@
 		 根据DOM标准，标签间的空白也会被当成文本节点
 		 */
 		let listNodes = ul.childNodes
-		console.log (listNodes.length)
-		for ( let i = 0; i < listNodes.length; i++ ) {
-			console.log (listNodes[i])
+		console.log(listNodes.length)
+		for (let i = 0; i < listNodes.length; i++) {
+			console.log(listNodes[i])
 		}
-		console.log ('+++++++++++++++++++++++++++++++')
+		console.log('+++++++++++++++++++++++++++++++')
 		let listNodes_1 = ul.children
-		console.log (listNodes_1.length)
-		for ( let i = 0; i < listNodes_1.length; i++ ) {
-			console.log (listNodes_1[i])
+		console.log(listNodes_1.length)
+		for (let i = 0; i < listNodes_1.length; i++) {
+			console.log(listNodes_1[i])
 		}
 		//    ========================================
-		console.log (ul.firstChild)
-		console.log (ul.firstElementChild)
-		console.log (ul.lastChild)
+		console.log(ul.firstChild)
+		console.log(ul.firstElementChild)
+		console.log(ul.lastChild)
 
 	}
 

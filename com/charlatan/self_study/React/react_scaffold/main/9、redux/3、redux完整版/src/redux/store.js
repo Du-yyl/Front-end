@@ -17,6 +17,6 @@ import { createStore } from 'redux'
 // 引入为 Count 服务的 reducer
 import count_reducer from './count_reducer'
 
-export default createStore (count_reducer)
+export default createStore(count_reducer)
 
 

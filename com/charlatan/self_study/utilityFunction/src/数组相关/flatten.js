@@ -19,14 +19,14 @@
 // }
 
 function flatten (array = this) {
-  let result = [...array]
-  // 先判断数组中是否存在数组
-  while (result.some((item) => Array.isArray(item))) {
-    // console.log([].concat(...result))
-    console.log(result)
-    result = [].concat(...result)
-  }
-  return result
+    let result = [...array]
+    // 先判断数组中是否存在数组
+    while (result.some((item) => Array.isArray(item))) {
+        // console.log([].concat(...result))
+        console.log(result)
+        result = [].concat(...result)
+    }
+    return result
 }
 
 Array.prototype.flatten = flatten

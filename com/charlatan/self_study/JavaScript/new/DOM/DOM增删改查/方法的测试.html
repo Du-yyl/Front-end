@@ -33,7 +33,7 @@
 	 * @param btnFun 触发事件要完成的方法
 	 */
 	const btnEvent = (btnId, btnEvent, btnFun) => {
-		let thisBtn = document.getElementById (btnId)
+		let thisBtn = document.getElementById(btnId)
 		thisBtn[btnEvent] = btnFun
 	}
 
@@ -43,7 +43,7 @@
 	 * @param btnFun 触发事件要完成的方法
 	 */
 	const btnEvent_1 = (btnId, btnFun) => {
-		let thisBtn = document.getElementById (btnId)
+		let thisBtn = document.getElementById(btnId)
 		thisBtn.onclick = btnFun
 	}
 
@@ -57,24 +57,24 @@
 
 
 	//    正常方式绑定
-	document.getElementById ('btn1').onclick = () => {
-		alert ('哈哈哈哈')
+	document.getElementById('btn1').onclick = () => {
+		alert('哈哈哈哈')
 	}
 
 	//    通过方法进行绑定函数
-	btnEvent_1 ('btn2', () => {
-		alert ('呵呵呵')
+	btnEvent_1('btn2', () => {
+		alert('呵呵呵')
 	})
 
 	//    通过第一种方式进行绑定
-	btnEvent ('btn3', 'onmousemove', () => {
-		alert ('啊啊啊啊啊啊啊啊啊啊啊啊')
+	btnEvent('btn3', 'onmousemove', () => {
+		alert('啊啊啊啊啊啊啊啊啊啊啊啊')
 	})
-	btnEvent ('btn4', 'onclick', () => {
-		alert ('啊啊啊啊啊啊啊啊啊啊啊啊.我是测试4')
+	btnEvent('btn4', 'onclick', () => {
+		alert('啊啊啊啊啊啊啊啊啊啊啊啊.我是测试4')
 	})
-	btnEvent ('btn5', 'onmouseover', () => {
-		alert ('啊啊啊啊啊啊啊啊啊啊啊啊，我是测试5')
+	btnEvent('btn5', 'onmouseover', () => {
+		alert('啊啊啊啊啊啊啊啊啊啊啊啊，我是测试5')
 	})
 </script>
 </body>

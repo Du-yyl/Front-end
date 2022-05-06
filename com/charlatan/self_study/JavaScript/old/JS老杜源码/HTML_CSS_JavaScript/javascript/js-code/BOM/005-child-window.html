@@ -8,9 +8,9 @@
 child window.
 <script type="text/javascript">
 	window.onload = function () {
-		var btn = document.getElementById ('btn')
+		var btn = document.getElementById('btn')
 		btn.onclick = function () {
-			if ( window.top != window.self ) {
+			if (window.top != window.self) {
 				//window.top = window.self;
 				window.top.location = window.self.location
 			}

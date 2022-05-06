@@ -24,21 +24,21 @@
 		 * @param param 这个参数就是要检测进行传入的参数自身
 		 */
 		static [Symbol.hasInstance] (param) {
-			console.log (param)
-			console.log ('我运行了')
+			console.log(param)
+			console.log('我运行了')
 		}
 	}
 
 	let o1 = {}
-	let p1 = new Person ()
+	let p1 = new Person()
 
-	console.log (o1 instanceof Person)
-	console.log (p1 instanceof Person)
+	console.log(o1 instanceof Person)
+	console.log(p1 instanceof Person)
 
 	//	Symbol.isConcatSpreadable 属性不能展开
 	let num1 = [1, 2, 3, 4, 54, 5, 6]
 	let num2 = [1, 2, 3, 4, 5]
 	num2[Symbol.isConcatSpreadable] = false
-	console.log (num1.concat (num2))
+	console.log(num1.concat(num2))
 </script>
 </html>

@@ -40,19 +40,19 @@ export default {
     }
   },
   computed: {
-    ...mapState ('count', ['sum', 'name', 'age']),
-    ...mapGetters ('count', { calculate: 'calculate' }),
+    ...mapState('count', ['sum', 'name', 'age']),
+    ...mapGetters('count', { calculate: 'calculate' }),
   },
   methods: {
-    ...mapMutations ('count', {
+    ...mapMutations('count', {
       add: 'ADD',
       deadd: 'DEADD',
     }),
 
-    ...mapActions ('count', ['addWait', 'addOdd']),
+    ...mapActions('count', ['addWait', 'addOdd']),
   },
   mounted () {
-    console.log (this)
+    console.log(this)
   },
 }
 </script>

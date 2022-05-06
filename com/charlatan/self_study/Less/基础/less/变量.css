@@ -18,25 +18,28 @@ less中的变量是使用@符号进行定义的：
   将属性作为变量时，调用时的调用方式是：@{属性名}
   */
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
+
 #wrap {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border: 1px solid;
-  margin: 0 auto;
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border: 1px solid;
+	margin: 0 auto;
 }
+
 #wrap #inner {
-  width: 100px;
-  height: 100px;
-  background: pink;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+	width: 100px;
+	height: 100px;
+	background: pink;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 }
+
 /*# sourceMappingURL=变量.css.map */

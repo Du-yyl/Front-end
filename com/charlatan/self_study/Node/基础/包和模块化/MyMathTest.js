@@ -17,11 +17,11 @@
  *
  * */
 
-let Maths = require ('./MyMath')
-console.log (Maths.add (1, 2))
-console.log (Maths.mul (1, 2))
-console.log (Maths.mul (6, 2))
+let Maths = require('./MyMath')
+console.log(Maths.add(1, 2))
+console.log(Maths.mul(1, 2))
+console.log(Maths.mul(6, 2))
 
 // Node中提供的模块
-let fs = require ('fs')
-console.log (fs)
+let fs = require('fs')
+console.log(fs)

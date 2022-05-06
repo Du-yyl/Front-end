@@ -23,16 +23,16 @@
 	}
 	let obj2 = obj1
 	obj2.name = '李四'
-	console.log (obj1.name)
-	console.log (obj2.name)
+	console.log(obj1.name)
+	console.log(obj2.name)
 
 	let num1 = 10
 	let num2 = num1
 	num1++
 	num2 += 30
-	console.log (num1, num2)
+	console.log(num1, num2)
 
-	console.log ('--------------------------')
+	console.log('--------------------------')
 	let sam1 = {
 		name: '王五',
 	}
@@ -43,9 +43,9 @@
 		name: '赵六',
 		age: 20,
 	}
-	console.log (sam1.name, sam1.age, sam2.name, sam2.age)
+	console.log(sam1.name, sam1.age, sam2.name, sam2.age)
 
-	console.log ('-------------------------')
+	console.log('-------------------------')
 	let sam3 = {
 		age: 300,
 	}
@@ -57,19 +57,19 @@
 	}
 
 	//同样的，因为方法中将sam3的地址进行重新赋值改变，修改的其实是一个新的内存地址，并不是原本再sam3中的东西，所以，sam3原本的值并没有改变
-	f (sam3)
-	console.log (sam3.age)
+	f(sam3)
+	console.log(sam3.age)
 
-	console.log ('---------------------------')
+	console.log('---------------------------')
 	let num3 = 10
 
 	function f1 (number) {
 		number += 1
 	}
 
-	f1 (num3)
+	f1(num3)
 	//这里将数值进行传入，但是数值在方法中进行了加法运算，但是并没有对原本数值做修改，所以访问到的结果依然是原本的数值，而传入的数值，也在方法结束后内存销毁
-	console.log (num3)
+	console.log(num3)
 
 
 </script>

@@ -31,7 +31,7 @@
 	}
 
 	// 访问JSON对象的属性
-	alert (studentObj.sno + ',' + studentObj.sname + ',' + studentObj.sex)
+	alert(studentObj.sno + ',' + studentObj.sname + ',' + studentObj.sex)
 
 	// 之前没有使用JSON的时候,定义类,创建对象,访问对象的属性.
 	Student = function (sno, sname, sex) {
@@ -39,8 +39,8 @@
 		this.sname = sname
 		this.sex = sex
 	}
-	var stu = new Student ('111', '李四', '男')
-	alert (stu.sno + ',' + stu.sname + ',' + stu.sex)
+	var stu = new Student('111', '李四', '男')
+	alert(stu.sno + ',' + stu.sname + ',' + stu.sex)
 
 	// JSON数组
 	var students = [
@@ -50,9 +50,9 @@
 	]
 
 	// 遍历
-	for ( var i = 0; i < students.length; i++ ) {
+	for (var i = 0; i < students.length; i++) {
 		var stuObj = students[i]
-		alert (stuObj.sno + ',' + stuObj.sname + ',' + stuObj.sex)
+		alert(stuObj.sno + ',' + stuObj.sname + ',' + stuObj.sex)
 	}
 </script>
 </body>

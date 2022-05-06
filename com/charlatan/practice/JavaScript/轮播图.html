@@ -133,91 +133,91 @@
 			'file/Carousel-7.jpg', 'file/Carousel-8.jpg', 'file/Carousel-9.jpg',
 		]
 
-		let btnLeft = document.getElementById ('input-left')
-		let btnRight = document.getElementById ('input-right')
-		let carouseImg = document.getElementById ('img')
+		let btnLeft = document.getElementById('input-left')
+		let btnRight = document.getElementById('input-right')
+		let carouseImg = document.getElementById('img')
 		let indexImg = 0
 		let carouseImgStop = null
-		let lis = document.getElementsByTagName ('li')
+		let lis = document.getElementsByTagName('li')
 
-		document.getElementById ('ul').onmouseover = function () {
-			window.clearInterval (carouseImgStop)
+		document.getElementById('ul').onmouseover = function () {
+			window.clearInterval(carouseImgStop)
 		}
-		document.getElementById ('ul').onmouseout = function () {
-			carouseImgStop = imgMove ()
+		document.getElementById('ul').onmouseout = function () {
+			carouseImgStop = imgMove()
 		}
-		for ( let i = 0; i < lis.length; i++ ) {
+		for (let i = 0; i < lis.length; i++) {
 			lis[i].onclick = function () {
 				indexImg = i
 				carouseImg.src = carouselImg[indexImg]
-				lis[i].classList.add ('li')
-				rMove ()
+				lis[i].classList.add('li')
+				rMove()
 			}
 		}
 
 		btnLeft.onmouseleave = function () {
-			carouseImgStop = imgMove ()
+			carouseImgStop = imgMove()
 		}
 
 		btnLeft.onmouseover = function () {
-			window.clearInterval (carouseImgStop)
+			window.clearInterval(carouseImgStop)
 		}
 
 		btnRight.onmouseleave = function () {
-			carouseImgStop = imgMove ()
+			carouseImgStop = imgMove()
 		}
 
 		btnRight.onmouseover = function () {
-			window.clearInterval (carouseImgStop)
+			window.clearInterval(carouseImgStop)
 		}
 
-		carouseImgStop = imgMove ()
+		carouseImgStop = imgMove()
 
 		carouseImg.onmouseleave = function () {
-			carouseImgStop = imgMove ()
+			carouseImgStop = imgMove()
 		}
 
 		function imgMove () {
-			carouseImgStop = setInterval (function () {
+			carouseImgStop = setInterval(function () {
 				indexImg++
-				if ( indexImg > carouselImg.length - 1 ) {
+				if (indexImg > carouselImg.length - 1) {
 					indexImg = 0
 				}
 				carouseImg.src = carouselImg[indexImg]
-				lis[indexImg].classList.add ('li')
-				rMove ()
+				lis[indexImg].classList.add('li')
+				rMove()
 			}, 2000)
 			return carouseImgStop
 		}
 
 		carouseImg.onmouseover = function () {
-			window.clearInterval (carouseImgStop)
+			window.clearInterval(carouseImgStop)
 		}
 
 		btnLeft.onclick = function () {
 			indexImg--
-			if ( indexImg < 0 ) {
+			if (indexImg < 0) {
 				indexImg = carouselImg.length - 1
 			}
 			carouseImg.src = carouselImg[indexImg]
-			lis[indexImg].classList.add ('li')
-			rMove ()
+			lis[indexImg].classList.add('li')
+			rMove()
 		}
 
 		btnRight.onclick = function () {
 			indexImg++
-			if ( indexImg > carouselImg.length - 1 ) {
+			if (indexImg > carouselImg.length - 1) {
 				indexImg = 0
 			}
 			carouseImg.src = carouselImg[indexImg]
-			lis[indexImg].classList.add ('li')
-			rMove ()
+			lis[indexImg].classList.add('li')
+			rMove()
 		}
 
 		function rMove () {
-			for ( let j = 0; j < lis.length; j++ ) {
-				if ( indexImg !== j ) {
-					lis[j].classList.remove ('li')
+			for (let j = 0; j < lis.length; j++) {
+				if (indexImg !== j) {
+					lis[j].classList.remove('li')
 				}
 			}
 		}

@@ -12,43 +12,43 @@
 // 运算相关配置
 
 export default {
-	namespaced: true,
-	actions: {
-		addOdd (context, value) {
-			
-			console.log (this.state.count.sum)
-			console.log (context.state.sum)
-			console.log (this.state.count.sum)
-			console.log (this.state.count === context.state)
-			
-			if ( this.state.count.sum % 2 !== 0 )
-				context.commit ('ADD', value)
-		},
-		addWait (context, value) {
-			setTimeout (() => {
-				context.commit ('ADD', value)
-			}, 2000)
-		},
-	},
-	
-	mutations: {
-		ADD (state, value) {
-			state.sum += value
-		},
-		DEADD (state, value) {
-			state.sum -= value
-		},
-	},
-	
-	getters: {
-		calculate (state) {
-			return state.sum * 10
-		},
-	},
-	
-	state: {
-		sum: 0,
-		name: '张三',
-		age: 99,
-	},
+    namespaced: true,
+    actions: {
+        addOdd (context, value) {
+            
+            console.log(this.state.count.sum)
+            console.log(context.state.sum)
+            console.log(this.state.count.sum)
+            console.log(this.state.count === context.state)
+            
+            if (this.state.count.sum % 2 !== 0)
+                context.commit('ADD', value)
+        },
+        addWait (context, value) {
+            setTimeout(() => {
+                context.commit('ADD', value)
+            }, 2000)
+        },
+    },
+    
+    mutations: {
+        ADD (state, value) {
+            state.sum += value
+        },
+        DEADD (state, value) {
+            state.sum -= value
+        },
+    },
+    
+    getters: {
+        calculate (state) {
+            return state.sum * 10
+        },
+    },
+    
+    state: {
+        sum: 0,
+        name: '张三',
+        age: 99,
+    },
 }

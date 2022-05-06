@@ -29,12 +29,12 @@
 		/**
 		 * 这里的this是undefined，因为这个代码会经过babel的翻译，而babel开启了严格模式，严格模式中严谨this指向window
 		 */
-		console.log (this)
-		console.log (a, b, c)
+		console.log(this)
+		console.log(a, b, c)
 		return <h1>我是函数定义的组件</h1>
 	}
 
 	//	 渲染组件到页面
-	ReactDOM.render (<Demo/>, document.getElementById ('test'))
+	ReactDOM.render(<Demo/>, document.getElementById('test'))
 </script>
 </html>

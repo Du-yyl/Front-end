@@ -27,16 +27,16 @@
 	function fn () {
 		var num = 0
 		return function () {
-			console.log (++num)
-			console.log (this)
+			console.log(++num)
+			console.log(this)
 		}
 	}
 
-	var fnn = fn ()
-	console.log (fnn ())
-	console.log (fnn ())
-	let f = new fn ()
+	var fnn = fn()
+	console.log(fnn())
+	console.log(fnn())
+	let f = new fn()
 
-	f ()
+	f()
 </script>
 </html>

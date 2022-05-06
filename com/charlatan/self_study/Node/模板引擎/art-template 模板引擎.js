@@ -24,30 +24,30 @@
  {{a + b}}
  */
 
-let template = require ('art-template')
+let template = require('art-template')
 
 let value = {
-	value: 'value',
+    value: 'value',
 }
 
 let data = {
-	data: {
-		key: '数据中的.key',
-	},
+    data: {
+        key: '数据中的.key',
+    },
 }
 
 let base = {
-	a: 0,
-	b: 1,
-	c: 2,
+    a: 0,
+    b: 1,
+    c: 2,
 }
 
-console.log (template.render ('value:{{ value }}', value))
-console.log (template.render ('data.key:{{ data.key }}', data))
-console.log (template.render ('a ? b : c: {{ a ? b : c }}', base))
-console.log (template.render ('a || b: {{ a || b }}', base))
-console.log (template.render ('a && b: {{ a && b }}', base))
-console.log (template.render ('a + b: {{ a + b }}', base))
+console.log(template.render('value:{{ value }}', value))
+console.log(template.render('data.key:{{ data.key }}', data))
+console.log(template.render('a ? b : c: {{ a ? b : c }}', base))
+console.log(template.render('a || b: {{ a || b }}', base))
+console.log(template.render('a && b: {{ a && b }}', base))
+console.log(template.render('a + b: {{ a + b }}', base))
 
 /*
  注意：<% %>与<%= %>的区别在于，<% %>里面是 Js 语句，<%= %>里面是表达式。
@@ -60,5 +60,5 @@ console.log (template.render ('a + b: {{ a + b }}', base))
  <%= a + b %>
  */
 
-console.log (template.render ('value:<%= 1+1 %>', value))
-console.log (template.render ('value:<% value %>', value))
+console.log(template.render('value:<%= 1+1 %>', value))
+console.log(template.render('value:<% value %>', value))

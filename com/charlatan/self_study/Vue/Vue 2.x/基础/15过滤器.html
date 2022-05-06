@@ -40,26 +40,26 @@
 <script>
 	Vue.config.productionTip = false
 	// 定义全局过滤器【这里的过滤器必须一个一个写】
-	Vue.filter ('名字', function () {
+	Vue.filter('名字', function () {
 		return '返回指定的值'
 	})
 
-	const vm = new Vue ({
+	const vm = new Vue({
 		el: '#root',
 		data: {
-			time: Date.now (),
+			time: Date.now(),
 		},
 		methods: {},
 		computed: {
 			fmtTime () {
-				return dayjs (this.time).format ('YYYY年MM月DD日 HH:mm:ss')
+				return dayjs(this.time).format('YYYY年MM月DD日 HH:mm:ss')
 			},
 		},
 		watch: {},
 		filters: {
 			// 在这里定义的过滤器都是局部的，只能在这个实例中使用，不能在其他地方使用
 			timeFormat () {
-				return dayjs (this.time).format ('YYYY年MM月DD日 HH:mm:ss')
+				return dayjs(this.time).format('YYYY年MM月DD日 HH:mm:ss')
 			},
 		},
 	})

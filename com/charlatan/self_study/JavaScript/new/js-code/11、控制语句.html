@@ -19,11 +19,11 @@
 </p>
 <script>
 	var sum = [1, 2, 3, 4, 'String', 'string', true, false, 1.2, 3.14]
-	for ( let i = 0; i < sum.length; i++ ) {
-		alert (sum[i])
+	for (let i = 0; i < sum.length; i++) {
+		alert(sum[i])
 	}
-	for ( const sumKey in sum ) {
-		alert (sum[sumKey])
+	for (const sumKey in sum) {
+		alert(sum[sumKey])
 	}
 
 	function User (name, age) {
@@ -31,9 +31,9 @@
 		this.name = name
 	}
 
-	var u1 = new User ('张三', 12)
-	for ( var u1Name in u1 ) {
-		alert (u1Name)
+	var u1 = new User('张三', 12)
+	for (var u1Name in u1) {
+		alert(u1Name)
 	}
 
 </script>

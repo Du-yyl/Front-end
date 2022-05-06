@@ -1,7 +1,7 @@
 'use strict'
 // 数据格式转化函数
 //引入工具
-var utils = require ('./../utils')
+var utils = require('./../utils')
 
 /**
  * Transform the data for a request or a response
@@ -12,10 +12,10 @@ var utils = require ('./../utils')
  * @returns {*} The resulting transformed data
  */
 module.exports = function transformData (data, headers, fns) {
-	/*eslint no-param-reassign:0*/
-	utils.forEach (fns, function transform (fn) {
-		data = fn (data, headers)
-	})
-	
-	return data
+    /*eslint no-param-reassign:0*/
+    utils.forEach(fns, function transform (fn) {
+        data = fn(data, headers)
+    })
+    
+    return data
 }

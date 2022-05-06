@@ -50,7 +50,7 @@ export default {
   components: {},
   methods: {
     pushShow (now) {
-      this.$router.push ({
+      this.$router.push({
         name: 'now',
         params: {
           id: now.id,
@@ -59,7 +59,7 @@ export default {
       })
     },
     replaceShow (now) {
-      this.$router.replace ({
+      this.$router.replace({
         name: 'now',
         params: {
           id: now.id,
@@ -69,7 +69,7 @@ export default {
     },
   },
   mounted () {
-    console.log (this.$route.meta)
+    console.log(this.$route.meta)
   },
 }
 </script>

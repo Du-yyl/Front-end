@@ -11,36 +11,36 @@
 	var aee1 = []
 	//  数字的类型随意
 	var arr2 = ['sab', 123, true]
-	alert (arr2.length)
+	alert(arr2.length)
 	//  长度是3在第四个位置上赋值
 	//  JS会自动扩容，如果0-3有内容，在第5的位置赋值，可以赋值成功，自动扩容到5，中间没有的元素自定义为undefined
 	arr2[4] = 'test'
-	for ( let i = 0; i < arr2.length; i++ ) {
-		alert (arr2[i])
+	for (let i = 0; i < arr2.length; i++) {
+		alert(arr2[i])
 	}
 	//  不写长度是0
 	var arr3 = []
-	alert (arr3.length)
+	alert(arr3.length)
 	//  写了一个值，这个值就是长度
-	var arr4 = new Array (3)
-	alert (arr4.length)
+	var arr4 = new Array(3)
+	alert(arr4.length)
 	//  写了多个值，这些值就是具体的元素
 	var arr5 = [23, 2, 3, 23, 23, 3]
-	alert (arr5.length)
+	alert(arr5.length)
 	//  连接，选择用什么符号连接
 	var arr6 = [1, 2, 3, 4, 5, 6, 7, 8]
-	var str = arr6.join ('-')
-	alert (str)
+	var str = arr6.join('-')
+	alert(str)
 	//  末尾添加元素
-	arr6.push (10)
-	alert (arr6.join ('-'))
+	arr6.push(10)
+	alert(arr6.join('-'))
 	//  将数组末尾的元素弹出
-	var endElt = arr6.pop ()
-	alert (endElt)
-	alert (arr6.join ('-'))
+	var endElt = arr6.pop()
+	alert(endElt)
+	alert(arr6.join('-'))
 	//  反转数组
-	arr6.reverse ()
-	alert (arr6.join ('='))
+	arr6.reverse()
+	alert(arr6.join('='))
 </script>
 </body>
 </html>

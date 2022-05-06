@@ -18,14 +18,14 @@
  * @returns {(function(*): (*|undefined))|*} 要指定的函数以闭包形式返回
  */
 function throttle (callback, time, ...args) {
-  let flag = true
-  return (event) => {
-    if (flag) {
-      flag = false
-      setTimeout(() => {
-        flag = true
-      }, time)
-      return callback.call(this, event, ...args)
+    let flag = true
+    return (event) => {
+        if (flag) {
+            flag = false
+            setTimeout(() => {
+                flag = true
+            }, time)
+            return callback.call(this, event, ...args)
+        }
     }
-  }
 }

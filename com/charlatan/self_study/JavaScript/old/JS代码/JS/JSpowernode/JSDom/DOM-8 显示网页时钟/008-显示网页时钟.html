@@ -10,48 +10,48 @@
 	 关于JS中内置的支持类：Date，可以用来获取时间/日期。
 	 */
 	// 获取系统当前时间
-	var nowTime = new Date ()
+	var nowTime = new Date()
 	// 输出
 	// document.write(nowTime);
 	// 转换成具有本地语言环境的日期格式.
-	nowTime = nowTime.toLocaleString ()
-	document.write (nowTime)
-	document.write ('<br>')
-	document.write ('<br>')
+	nowTime = nowTime.toLocaleString()
+	document.write(nowTime)
+	document.write('<br>')
+	document.write('<br>')
 	// 当以上格式不是自己想要的,可以通过日期获取年月日等信息,自定制日期格式.
-	var t = new Date ()
-	var year = t.getFullYear () // 返回年信息,以全格式返回.
-	var month = t.getMonth () // 月份是:0-11
+	var t = new Date()
+	var year = t.getFullYear() // 返回年信息,以全格式返回.
+	var month = t.getMonth() // 月份是:0-11
 	// var dayOfWeek = t.getDay(); // 获取的一周的第几天(0-6)
-	var day = t.getDate () // 获取日信息.
-	document.write (year + '年' + (month + 1) + '月' + day + '日')
+	var day = t.getDate() // 获取日信息.
+	document.write(year + '年' + (month + 1) + '月' + day + '日')
 
-	document.write ('<br>')
-	document.write ('<br>')
+	document.write('<br>')
+	document.write('<br>')
 
 	// 重点:怎么获取毫秒数？(从1970年1月1日 00:00:00 000到当前系统时间的总毫秒数)
 	//var times = t.getTime();
 	//document.write(times); // 一般会使用毫秒数当做时间戳. (timestamp)
 
-	document.write (new Date ().getTime ())
+	document.write(new Date().getTime())
 
 </script>
 
 <script type="text/javascript">
 	function displayTime () {
-		var time = new Date ()
-		var strTime = time.toLocaleString ()
-		document.getElementById ('timeDiv').innerHTML = strTime
+		var time = new Date()
+		var strTime = time.toLocaleString()
+		document.getElementById('timeDiv').innerHTML = strTime
 	}
 
 	// 每隔1秒调用displayTime()函数
 	function start () {
 		// 从这行代码执行结束开始,则会不间断的,每隔1000毫秒调用一次displayTime()函数.
-		v = window.setInterval ('displayTime()', 1000)
+		v = window.setInterval('displayTime()', 1000)
 	}
 
 	function stop () {
-		window.clearInterval (v)
+		window.clearInterval(v)
 	}
 </script>
 <br><br>

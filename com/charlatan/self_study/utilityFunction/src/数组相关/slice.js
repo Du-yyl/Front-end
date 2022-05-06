@@ -16,14 +16,14 @@
  * @returns {array} 返回新形成的数组
  */
 function slice (start = 0, end = this.length) {
-  let result = []
-  end = end > this.length ? this.length : end
-  // 如果开始下标比结束还大，如果 end 是 0 或更小，如果是空数组
-  if (end <= start || end <= 0 || this.length === 0) return []
-  for (let i = start, len = end - start; i < len + start; i++) {
-    result.push(this[i])
-  }
-  return result
+    let result = []
+    end = end > this.length ? this.length : end
+    // 如果开始下标比结束还大，如果 end 是 0 或更小，如果是空数组
+    if (end <= start || end <= 0 || this.length === 0) return []
+    for (let i = start, len = end - start; i < len + start; i++) {
+        result.push(this[i])
+    }
+    return result
 }
 
 Array.prototype.slice = slice

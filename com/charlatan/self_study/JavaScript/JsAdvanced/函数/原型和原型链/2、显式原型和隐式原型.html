@@ -30,19 +30,19 @@
 
 	}
 
-	console.log (Fun1.prototype)
+	console.log(Fun1.prototype)
 	//内部语句：this.__proto__ = Fun1.prototype
-	let f1 = new Fun1 ()
+	let f1 = new Fun1()
 
-	console.log (f1.__proto__)
+	console.log(f1.__proto__)
 	//对象的隐式原型的值为其对应构造函数的显式原型的值
-	console.log (Fun1.prototype === f1.__proto__)
+	console.log(Fun1.prototype === f1.__proto__)
 
 	Fun1.prototype.test = function () {
-		console.log ('test()')
+		console.log('test()')
 	}
-	f1.test ()
-	f1.__proto__.test ()
+	f1.test()
+	f1.__proto__.test()
 
 
 </script>

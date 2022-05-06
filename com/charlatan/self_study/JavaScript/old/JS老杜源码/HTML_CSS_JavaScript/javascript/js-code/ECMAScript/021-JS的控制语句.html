@@ -23,14 +23,14 @@
 	// 创建JS数组
 	var arr = [false, true, 1, 2, 'abc', 3.14] // JS中数组中元素的类型随意.元素的个数随意.
 	// 遍历数组
-	for ( var i = 0; i < arr.length; i++ ) {
-		alert (arr[i])
+	for (var i = 0; i < arr.length; i++) {
+		alert(arr[i])
 	}
 
 	// for..in
-	for ( var i in arr ) {
+	for (var i in arr) {
 		//alert(i);
-		alert (arr[i])
+		alert(arr[i])
 	}
 
 	// for..in语句可以遍历对象的属性
@@ -39,21 +39,21 @@
 		this.password = password
 	}
 
-	var u = new User ('张三', '444')
-	alert (u.username + ',' + u.password)
-	alert (u['username'] + ',' + u['password'])
+	var u = new User('张三', '444')
+	alert(u.username + ',' + u.password)
+	alert(u['username'] + ',' + u['password'])
 
-	for ( var shuXingMing in u ) {
+	for (var shuXingMing in u) {
 		//alert(shuXingMing)
 		//alert(typeof shuXingMing) // shuXingMing是一个字符串
-		alert (u[shuXingMing])
+		alert(u[shuXingMing])
 	}
 
-	alert (u.username)
-	alert (u.password)
+	alert(u.username)
+	alert(u.password)
 
-	with ( u ) {
-		alert (username + ',' + password)
+	with (u) {
+		alert(username + ',' + password)
 	}
 
 </script>

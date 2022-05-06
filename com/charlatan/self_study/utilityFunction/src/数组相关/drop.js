@@ -13,11 +13,11 @@
  * @return {drop|*[]} 获取结果的新数组
  */
 function drop (arg) {
-  if (arg <= 0) return []
-  if (arg >= this.length) return this
-  let result = []
-  for (let i = 0, len = arg; i < len; i++) result.push(this[i])
-  return result
+    if (arg <= 0) return []
+    if (arg >= this.length) return this
+    let result = []
+    for (let i = 0, len = arg; i < len; i++) result.push(this[i])
+    return result
 }
 
 Array.prototype.drop = drop

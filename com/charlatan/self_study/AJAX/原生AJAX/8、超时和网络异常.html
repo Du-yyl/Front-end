@@ -42,37 +42,37 @@
 <div id="result"></div>
 </body>
 <script>
-	let result = document.getElementById ('result')
-	let btn = document.getElementById ('btn')
-	let btn1 = document.getElementById ('btn1')
+	let result = document.getElementById('result')
+	let btn = document.getElementById('btn')
+	let btn1 = document.getElementById('btn1')
 
 	let xhr
 
 	btn1.onclick = function () {
-		xhr.abort ()
+		xhr.abort()
 	}
 
 	btn.onclick = function () {
-		xhr = new XMLHttpRequest ()
+		xhr = new XMLHttpRequest()
 
 		//超时2s设置
 		xhr.timeout = 2000
 		//超时回调
 		xhr.ontimeout = function () {
-			alert ('网络异常，请稍后重试')
+			alert('网络异常，请稍后重试')
 		}
 
 		//网络异常回调
 		xhr.onerror = function () {
-			alert ('你的网络由问题')
+			alert('你的网络由问题')
 		}
 
-		xhr.open ('GET', 'http://127.0.0.1:8000/delay')
-		xhr.send ()
+		xhr.open('GET', 'http://127.0.0.1:8000/delay')
+		xhr.send()
 		xhr.onreadystatechange = function () {
-			if ( xhr.readyState === 4 ) {
-				if ( xhr.status >= 200 && xhr.status < 300 ) {
-					console.log (xhr.response)
+			if (xhr.readyState === 4) {
+				if (xhr.status >= 200 && xhr.status < 300) {
+					console.log(xhr.response)
 					result.innerText = xhr.response
 				}
 			}

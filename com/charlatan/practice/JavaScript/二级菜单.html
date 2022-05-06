@@ -79,21 +79,21 @@
 	<script src="../../../../../../MyTool.js"></script>
 	<script>
 		window.onload = function () {
-			let ul = document.getElementById ('ul')
-			let lis = document.getElementsByClassName ('li')
+			let ul = document.getElementById('ul')
+			let lis = document.getElementsByClassName('li')
 			let lis_id
-			for ( let i = 0; i < lis.length; i++ ) {
+			for (let i = 0; i < lis.length; i++) {
 				lis[i].onclick = function () {
-					lis_id = document.getElementById (lis[i].id)
+					lis_id = document.getElementById(lis[i].id)
 					// console.log(lis_id)
-					dynamicAdjustmentOfClasses (lis_id, 'li-switch')
+					dynamicAdjustmentOfClasses(lis_id, 'li-switch')
 				}
 			}
-			document.getElementById ('ul').onclick = function () {
-				for ( let i = 0; i < lis.length; i++ ) {
-					let l_id = document.getElementById (lis[i].id)
-					if ( l_id !== lis_id ) {
-						removeClass (l_id, 'li-switch')
+			document.getElementById('ul').onclick = function () {
+				for (let i = 0; i < lis.length; i++) {
+					let l_id = document.getElementById(lis[i].id)
+					if (l_id !== lis_id) {
+						removeClass(l_id, 'li-switch')
 					}
 				}
 			}

@@ -44,12 +44,12 @@ export default {
   // },
 
   setup () {
-    let num = ref (0)
-    let msg = ref ('测试信息')
+    let num = ref(0)
+    let msg = ref('测试信息')
 
     // 1、监视 ref 所定义的一个数据【常用】
-    watch (num, (newValue, oldValue) => {
-      console.log (newValue, oldValue)
+    watch(num, (newValue, oldValue) => {
+      console.log(newValue, oldValue)
     })
 
     // // 2、同时监视多个数据

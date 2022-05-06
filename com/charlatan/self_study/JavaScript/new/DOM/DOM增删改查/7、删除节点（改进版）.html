@@ -110,60 +110,60 @@
 	window.onload = () => {
 
 		//     let allDel = document.getElementsByName("delete")
-		let allDel = document.querySelectorAll ('.delete')
+		let allDel = document.querySelectorAll('.delete')
 		const delFun = () => {
-			for ( let i = 0; i < allDel.length; i++ ) {
+			for (let i = 0; i < allDel.length; i++) {
 				allDel[i].onclick = function () {
 					/**
 					 * 1、点击使用this进行指定删除的元素，绑定的是this，那么this是谁就删除谁
 					 * 2、找到父元素的父元素（也就是爷爷元素，通过爷爷元素调用方法，删除当前元素的父亲元素
 					 */
-					if ( confirm ('确定要删除' + this.parentNode.firstElementChild.innerHTML + '吗？') ) {
-						this.parentNode.parentNode.removeChild (this.parentNode)
+					if (confirm('确定要删除' + this.parentNode.firstElementChild.innerHTML + '吗？')) {
+						this.parentNode.parentNode.removeChild(this.parentNode)
 					}
 				}
 			}
 		}
-		delFun ()
+		delFun()
 
 		//    添加方法
-		document.getElementById ('submit').onclick = () => {
+		document.getElementById('submit').onclick = () => {
 			//    获取到指定的三个元素
-			let name = document.getElementById ('name').value
-			let email = document.getElementById ('email').value
-			let salary = document.getElementById ('salary').value
+			let name = document.getElementById('name').value
+			let email = document.getElementById('email').value
+			let salary = document.getElementById('salary').value
 
 			let isName = name === ''
 			let isEmail = email === ''
 			let isSalary = salary === ''
 
-			if ( isName || isEmail || isSalary ) {
-				alert ((isName ? 'name  ' : '') + (isEmail ? ' email  ' : '') + (isSalary ? 'salary' : '') + '不能为空')
+			if (isName || isEmail || isSalary) {
+				alert((isName ? 'name  ' : '') + (isEmail ? ' email  ' : '') + (isSalary ? 'salary' : '') + '不能为空')
 			} else {
 				// 程序到这里三个东西一定是有值的，进行添加
-				let tr = document.createElement ('tr')
+				let tr = document.createElement('tr')
 
-				let td_4 = document.createElement ('td')
+				let td_4 = document.createElement('td')
 
 				td_4.innerHTML = 'Delete'
-				td_4.setAttribute ('class', 'delete')
+				td_4.setAttribute('class', 'delete')
 
 				tr.innerHTML = '<td>' + name + '</td>' + '<td>' + email + '</td>' + '<td>' + salary + '</td>'
 
-				tr.appendChild (td_4)
+				tr.appendChild(td_4)
 				//将所有属性添加到tr中
 
 				/*
 				 * table中的元素是在tbody中进行保存的，所以要找到ID的同时找到，tbody的元素并使用第一个进行添加
 				 * */
-				document.getElementById ('employeeTable').getElementsByTagName ('tbody')[0].appendChild (tr)
-				document.getElementById ('name').value = ''
-				document.getElementById ('email').value = ''
-				document.getElementById ('salary').value = ''
+				document.getElementById('employeeTable').getElementsByTagName('tbody')[0].appendChild(tr)
+				document.getElementById('name').value = ''
+				document.getElementById('email').value = ''
+				document.getElementById('salary').value = ''
 			}
 
-			allDel = document.querySelectorAll ('.delete')
-			delFun ()
+			allDel = document.querySelectorAll('.delete')
+			delFun()
 
 		}
 	}

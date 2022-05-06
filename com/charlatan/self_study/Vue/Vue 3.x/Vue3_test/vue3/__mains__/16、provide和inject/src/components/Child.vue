@@ -20,15 +20,15 @@
 <script>
 import Son from '../components/Son'
 
-const { inject } = require ('@vue/runtime-dom')
+const { inject } = require('@vue/runtime-dom')
 export default {
   name: 'Child',
   data () {
     return {}
   },
   setup () {
-    let data = inject ('data')
-    console.log (data)
+    let data = inject('data')
+    console.log(data)
     return {
       data,
     }

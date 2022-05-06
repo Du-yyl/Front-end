@@ -26,6 +26,6 @@
  *   当使用 require 引入模块后，会返回一个对象
  * */
 
-let num = require ('../../node.js')
-console.log (num)
-console.log (num.num1)
+let num = require('../../node.js')
+console.log(num)
+console.log(num.num1)

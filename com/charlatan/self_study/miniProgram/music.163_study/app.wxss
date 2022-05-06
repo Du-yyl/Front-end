@@ -1,6 +1,6 @@
 /*  【使用阿里图图标库】因为小程序中不支持直接使用 css 文件，所以直接使用下载的文件 */
 @import "static/iconfonts/inconfont.wxss";
 
-page{
-  height: 100%;
+page {
+	height: 100%;
 }

@@ -1,13 +1,13 @@
 'use strict'
 // 拦截器管理器构造函数
-var utils = require ('./../utils')
+var utils = require('./../utils')
 
 //声明构造函数  
 //axios.interceptors.request.use
 //axios.interceptors.response.use
 function InterceptorManager () {
-	//创建一个属性
-	this.handlers = []
+    //创建一个属性
+    this.handlers = []
 }
 
 /**
@@ -19,11 +19,11 @@ function InterceptorManager () {
  * @return {Number} An ID used to remove interceptor later
  */
 InterceptorManager.prototype.use = function use (fulfilled, rejected) {
-	this.handlers.push ({
-		fulfilled: fulfilled,
-		rejected: rejected,
-	})
-	return this.handlers.length - 1
+    this.handlers.push({
+        fulfilled: fulfilled,
+        rejected: rejected,
+    })
+    return this.handlers.length - 1
 }
 
 /**
@@ -32,9 +32,9 @@ InterceptorManager.prototype.use = function use (fulfilled, rejected) {
  * @param {Number} id The ID that was returned by `use`
  */
 InterceptorManager.prototype.eject = function eject (id) {
-	if ( this.handlers[id] ) {
-		this.handlers[id] = null
-	}
+    if (this.handlers[id]) {
+        this.handlers[id] = null
+    }
 }
 
 /**
@@ -46,11 +46,11 @@ InterceptorManager.prototype.eject = function eject (id) {
  * @param {Function} fn The function to call for each interceptor
  */
 InterceptorManager.prototype.forEach = function forEach (fn) {
-	utils.forEach (this.handlers, function forEachHandler (h) {
-		if ( h !== null ) {
-			fn (h)
-		}
-	})
+    utils.forEach(this.handlers, function forEachHandler (h) {
+        if (h !== null) {
+            fn(h)
+        }
+    })
 }
 
 module.exports = InterceptorManager

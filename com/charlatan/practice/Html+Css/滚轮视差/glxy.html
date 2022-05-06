@@ -76,12 +76,12 @@
 <!--    </h2>-->
 
 <script>
-	const background = document.querySelector ('.background')
+	const background = document.querySelector('.background')
 
-	document.addEventListener ('scroll', () => {
+	document.addEventListener('scroll', () => {
 		const scrollY = window.scrollY
 
-		if ( scrollY !== 0 ) {
+		if (scrollY !== 0) {
 			background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`
 		} else {
 			background.style.backgroundPosition = ''

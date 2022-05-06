@@ -14,20 +14,20 @@
  * @returns {Promise<unknown>} 返回一个promise对象
  */
 function promiseFs (path) {
-	const fs = require ('fs')
-	return new Promise ((resolve, reject) => {
-		fs.readFile (path, function (err, data) {
-			if ( err )
-				reject (err)
-			else
-				resolve (data)
-			
-		})
-	})
+    const fs = require('fs')
+    return new Promise((resolve, reject) => {
+        fs.readFile(path, function (err, data) {
+            if (err)
+                reject(err)
+            else
+                resolve(data)
+            
+        })
+    })
 }
 
-promiseFs ('./test/test.txt').then ((value) => {
-	console.log (value.toString ())
+promiseFs('./test/test.txt').then((value) => {
+    console.log(value.toString())
 }, (reason) => {
-	console.log (reason)
+    console.log(reason)
 })

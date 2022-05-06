@@ -32,34 +32,34 @@
 	 */
 	// 小string(属于原始类型String)
 	var x = 'king'
-	alert (typeof x) // "string"
+	alert(typeof x) // "string"
 
 	// 大String(属于Object类型)
-	var y = String ('abc')
-	alert (typeof y) // "object"
+	var y = String('abc')
+	alert(typeof y) // "object"
 
 	// 获取字符串的长度
-	alert (x.length) // 4
-	alert (y.length) // 3
+	alert(x.length) // 4
+	alert(y.length) // 3
 
-	alert ('http://www.baidu.com'.indexOf ('http')) // 0
-	alert ('http://www.baidu.com'.indexOf ('https')) // -1
+	alert('http://www.baidu.com'.indexOf('http')) // 0
+	alert('http://www.baidu.com'.indexOf('https')) // -1
 
 	// 判断一个字符串中是否包含某个子字符串？
-	alert ('http://www.baidu.com'.indexOf ('https') >= 0 ? '包含' : '不包含') // 不包含
+	alert('http://www.baidu.com'.indexOf('https') >= 0 ? '包含' : '不包含') // 不包含
 
 	// replace (注意：只替换了第一个)
-	alert ('name=value%name=value%name=value'.replace ('%', '&')) // name=value&name=value%name=value
+	alert('name=value%name=value%name=value'.replace('%', '&')) // name=value&name=value%name=value
 
 	// 继续调用replace方法,就会替换第“二”个.
 	// 想全部替换需要使用正则表达式.
-	alert ('name=value%name=value%name=value'.replace ('%', '&').replace ('%', '&')) // name=value&name=value&name=value
+	alert('name=value%name=value%name=value'.replace('%', '&').replace('%', '&')) // name=value&name=value&name=value
 
 	// 考点:经常问 substr和substring的区别？
 	// substr(startIndex, length)
-	alert ('abcdefxyz'.substr (2, 4)) //cdef
+	alert('abcdefxyz'.substr(2, 4)) //cdef
 	// substring(startIndex, endIndex) 注意:不包含endIndex
-	alert ('abcdefxyz'.substring (2, 4)) //cd
+	alert('abcdefxyz'.substring(2, 4)) //cd
 
 </script>
 </body>

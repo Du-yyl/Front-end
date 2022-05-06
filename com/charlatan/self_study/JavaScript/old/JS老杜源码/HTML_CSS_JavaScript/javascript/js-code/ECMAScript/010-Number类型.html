@@ -22,53 +22,53 @@
 	var v5 = Infinity
 
 	// "number"
-	alert (typeof v1)
-	alert (typeof v2)
-	alert (typeof v3)
-	alert (typeof v4)
-	alert (typeof v5)
+	alert(typeof v1)
+	alert(typeof v2)
+	alert(typeof v3)
+	alert(typeof v4)
+	alert(typeof v5)
 
 	// 关于NaN (表示Not a Number，不是一个数字，但属于Number类型)
 	// 什么情况下结果是一个NaN呢？
 	// 运算结果本来应该是一个数字,最后算完不是一个数字的时候,结果是NaN.
 	var a = 100
 	var b = '中国人'
-	alert (a / b) // 除号显然最后结果应该是一个数字,但是运算的过程中导致最后不是一个数字,那么最后的结果是NaN
+	alert(a / b) // 除号显然最后结果应该是一个数字,但是运算的过程中导致最后不是一个数字,那么最后的结果是NaN
 
 	var e = 'abc'
 	var f = 10
-	alert (e + f) // "abc10"
+	alert(e + f) // "abc10"
 
 	// Infinity (当除数为0的时候，结果为无穷大)
-	alert (10 / 0)
+	alert(10 / 0)
 
 	// 思考:在JS中10 / 3 = ?
-	alert (10 / 3) // 3.3333333333333335
+	alert(10 / 3) // 3.3333333333333335
 
 	// 关于isNaN函数？
 	// 用法：isNaN(数据) ,结果是true表示不是一个数字, 结果是false表示是一个数字.
 	// isNaN : is Not a Number
 	function sum (a, b) {
-		if ( isNaN (a) || isNaN (b) ) {
-			alert ('参与运算的必须是数字！')
+		if (isNaN(a) || isNaN(b)) {
+			alert('参与运算的必须是数字！')
 			return
 		}
 		return a + b
 	}
 
-	sum (100, 'abc')
-	alert (sum (100, 200))
+	sum(100, 'abc')
+	alert(sum(100, 200))
 
 	// parseInt():可以将字符串自动转换成数字,并且取整数位.
-	alert (parseInt ('3.9999')) // 3
-	alert (parseInt (3.9999)) // 3
+	alert(parseInt('3.9999')) // 3
+	alert(parseInt(3.9999)) // 3
 
 	// parseFloat():可以将字符串自动转换成数字.
-	alert (parseFloat ('3.14') + 1) // 4.14
-	alert (parseFloat ('3.2') + 1) // 4.2
+	alert(parseFloat('3.14') + 1) // 4.14
+	alert(parseFloat('3.2') + 1) // 4.2
 
 	// Math.ceil()
-	alert (Math.ceil ('2.1')) // 3
+	alert(Math.ceil('2.1')) // 3
 
 </script>
 </body>

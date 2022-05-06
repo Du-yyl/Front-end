@@ -35,7 +35,7 @@
 	// console.log(b.n, b.m, c.n, c.m);
 	// console.log(b.constructor.prototype.n);
 	//	2 3 ; 2 3
-	console.log ('----------------------')
+	console.log('----------------------')
 
 	// function F() {
 	// }
@@ -58,31 +58,31 @@
 	}
 
 	Fun.prototype.a = function () {
-		console.log ('我是Fun中的a（）')
+		console.log('我是Fun中的a（）')
 	}
 	Fun.prototype.b = function () {
-		console.log ('我是Fun中的b（）')
+		console.log('我是Fun中的b（）')
 	}
 
 	Object.prototype.a = function () {
-		console.log ('我是Object中的a（）')
+		console.log('我是Object中的a（）')
 	}
 	Object.prototype.b = function () {
-		console.log ('我是Object中的b（）')
+		console.log('我是Object中的b（）')
 	}
 
 	Function.prototype.a = function () {
-		console.log ('我是Function中的a（）')
+		console.log('我是Function中的a（）')
 	}
 	Function.prototype.b = function () {
-		console.log ('我是Function中的b（）')
+		console.log('我是Function中的b（）')
 	}
 
 	let obj = {}
-	let fun = new Fun ()
+	let fun = new Fun()
 
-	fun.a ()
-	fun.b ()
+	fun.a()
+	fun.b()
 	/*
 	 * `
 	 * 这里因为fun是通过new的Fun产生的，Fun中有指定的属性，直接使用
@@ -90,32 +90,32 @@
 	 *   // 我是Fun中的a（）
 	 *	// 我是Fun中的b（）
 	 * */
-	Fun.a ()
-	Fun.b ()
+	Fun.a()
+	Fun.b()
 	/*
 	 * `
 	 * Fun是通过new的Function产生的，他的隐式原型指向的是Function（）
 	 * // 我是Function中的a（）
 	 * // 我是Function中的b（）
 	 * */
-	obj.a ()
-	obj.b ()
+	obj.a()
+	obj.b()
 	/*
 	 * ·
 	 * obj是通过new Object产生的，所以他的隐式原型指向的是Object中的prototype
 	 * // 我是Object中的a（）
 	 * // 我是Object中的b（）
 	 * */
-	Object.a ()
-	Object.b ()
+	Object.a()
+	Object.b()
 	/*
 	 * ·
 	 * Object是new 的Function产生的，所以隐式原型指向的是Function
 	 * // 我是Function中的a（）
 	 * // 我是Function中的b（）
 	 * */
-	Function.a ()
-	Function.b ()
+	Function.a()
+	Function.b()
 	/*
 	 * ·
 	 * Function是通过Function产生的，所以隐式原型指向的Function

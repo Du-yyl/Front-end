@@ -36,7 +36,7 @@ export default {
   components: {},
   methods: {
     showHidden () {
-      console.log ('我是测试文字')
+      console.log('我是测试文字')
       this.isShow = !this.isShow
     },
   },

@@ -53,13 +53,13 @@
 	 2. ul标签的第2个span后代标签
 	 5. id为cc的li标签的所有兄弟li标签
 	 */
-	$ (function () {
-		console.log ($ (`ul > span:eq(1)`).html ())
+	$(function () {
+		console.log($(`ul > span:eq(1)`).html())
 	})
 	//	 ul标签的父标签
-	console.log ($ (`ul:parent`).html ())
+	console.log($(`ul:parent`).html())
 	//	id为cc的li标签的前面的所有li标签
-	$ (`ul`).children (`#cc`).prevAll ('li').css ({
+	$(`ul`).children(`#cc`).prevAll('li').css({
 		backgroundColor: 'red',
 	})
 </script>

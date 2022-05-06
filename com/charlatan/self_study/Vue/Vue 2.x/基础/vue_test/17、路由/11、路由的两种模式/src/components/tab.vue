@@ -41,7 +41,7 @@ export default {
   components: {},
   methods: {
     change (index) {
-      console.log (window.location.href = 'http://localhost:8080/#/' + this.tabs[index].value)
+      console.log(window.location.href = 'http://localhost:8080/#/' + this.tabs[index].value)
     },
   },
 }

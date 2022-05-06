@@ -15,16 +15,16 @@
  * @returns {(function(*): void)|*} 函数的形式以闭包形式返回
  */
 function debounce (callback, time, ...args) {
-  let timer = null
-  return (event) => {
-    // 如果时间不是 null 那么证明这个不是第一次进入，或者时间还没有结束，那么直接开启一个新的定时器，并将上一个关闭
-    if (timer !== null) {
-      clearTimeout(timer)
+    let timer = null
+    return (event) => {
+        // 如果时间不是 null 那么证明这个不是第一次进入，或者时间还没有结束，那么直接开启一个新的定时器，并将上一个关闭
+        if (timer !== null) {
+            clearTimeout(timer)
+        }
+        timer = setTimeout(() => {
+            callback.call(this, event, ...args)
+            // 如果这个执行了，那么一定是停下来了，定时器走完，所以这里将时间标记重置为 null
+            timer = null
+        }, time)
     }
-    timer = setTimeout(() => {
-      callback.call(this, event, ...args)
-      // 如果这个执行了，那么一定是停下来了，定时器走完，所以这里将时间标记重置为 null
-      timer = null
-    }, time)
-  }
 }

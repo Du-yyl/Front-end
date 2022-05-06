@@ -60,9 +60,9 @@ num1 = 200
  *       当前模块的完整路径
  * */
 
-console.log (exports)
-console.log (module.exports)
-console.log (exports === module.exports)
+console.log(exports)
+console.log(module.exports)
+console.log(exports === module.exports)
 // console.log(module);
-console.log (__dirname)
-console.log (__filename)
+console.log(__dirname)
+console.log(__filename)

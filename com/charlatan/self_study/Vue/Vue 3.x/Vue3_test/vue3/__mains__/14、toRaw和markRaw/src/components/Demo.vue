@@ -41,14 +41,14 @@
 import { ref, reactive, shallowReactive, shallowRef } from 'vue'
 import { markRaw, readonly, shallowReadonly, toRaw, toRef } from '@vue/runtime-dom'
 
-const { toRefs } = require ('@vue/runtime-dom')
+const { toRefs } = require('@vue/runtime-dom')
 
 export default {
   name: 'Demo',
   setup () {
-    let num = ref (0)
+    let num = ref(0)
 
-    let person = reactive ({
+    let person = reactive({
       obj_1: '第一个数据',
       obj_2: '第一个数据',
       obj_s: {
@@ -63,8 +63,8 @@ export default {
      * 这种方式只能转换reactive定义的数据，不能转换ref定义的数据
      */
     function showRow () {
-      console.log ('123')
-      console.log (toRaw (person))
+      console.log('123')
+      console.log(toRaw(person))
     }
 
     /**
@@ -72,14 +72,14 @@ export default {
      * markRaw 将数据变成不是响应式的
      */
     function addAttr () {
-      person.attr = markRaw ({
+      person.attr = markRaw({
         name: '第一个属性',
         attr: '配置这个属性的基本测试数据',
       })
     }
 
     return {
-      ...toRefs (person),
+      ...toRefs(person),
       num,
       showRow,
       addAttr,

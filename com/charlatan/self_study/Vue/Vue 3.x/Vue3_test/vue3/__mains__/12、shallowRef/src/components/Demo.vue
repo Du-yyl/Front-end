@@ -34,12 +34,12 @@
 import { ref, reactive, shallowReactive, shallowRef } from 'vue'
 import { toRef } from '@vue/runtime-dom'
 
-const { toRefs } = require ('@vue/runtime-dom')
+const { toRefs } = require('@vue/runtime-dom')
 
 export default {
   name: 'Demo',
   setup () {
-    let num = ref (0)
+    let num = ref(0)
 
     /**
      * 这种方式数据也是响应式的，不过只会是浅层次的绑定，并且第二层及以后的内容都没办法获取到【浅响应式】
@@ -50,7 +50,7 @@ export default {
         // 如果通过 shallowRef 进行处理，那么就会将这个对象直接进行了封装，不会通过 proxy 进行处理，所以也就不能进行响应式的处理了
 
         // let person = shallowReactive({
-    let person = shallowRef ({
+    let person = shallowRef({
           obj_1: '第一个数据',
           obj_2: '第一个数据',
           obj_s: {
@@ -62,7 +62,7 @@ export default {
         })
 
     return {
-      ...toRefs (person),
+      ...toRefs(person),
     }
   },
 

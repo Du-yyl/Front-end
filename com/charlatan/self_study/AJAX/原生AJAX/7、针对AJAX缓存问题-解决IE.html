@@ -40,22 +40,22 @@
 <div id="result"></div>
 </body>
 <script>
-	let result = document.getElementById ('result')
+	let result = document.getElementById('result')
 	window.onkeydown = function () {
 
-		let xhr = new XMLHttpRequest ()
+		let xhr = new XMLHttpRequest()
 		// xhr.open('GET', 'http://127.0.0.1:8000/ie')
 		//浏览器读取缓存问题的解决
 		/*
 		 * 为发送的请求添加一个事件戳，时间戳是不会相同的，所以每次访问都已一个新的访问，不会进行冲突和一直读取缓存的问题
 		 * */
-		xhr.open ('GET', 'http://127.0.0.1:8000/ie?t=' + Date.now ())
+		xhr.open('GET', 'http://127.0.0.1:8000/ie?t=' + Date.now())
 
-		xhr.send ()
+		xhr.send()
 		xhr.onreadystatechange = function () {
-			if ( xhr.readyState === 4 ) {
-				if ( xhr.status >= 200 && xhr.status < 300 ) {
-					console.log (xhr.response)
+			if (xhr.readyState === 4) {
+				if (xhr.status >= 200 && xhr.status < 300) {
+					console.log(xhr.response)
 					result.innerText = xhr.response
 
 				}

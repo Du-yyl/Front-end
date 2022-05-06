@@ -35,8 +35,8 @@
 // }
 
 function ArrayDeduplication () {
-  // 使用 es6 的新特性进行实现
-  return [...new Set(this)]
+    // 使用 es6 的新特性进行实现
+    return [...new Set(this)]
 }
 
 Array.prototype.ArrayDeduplication = ArrayDeduplication

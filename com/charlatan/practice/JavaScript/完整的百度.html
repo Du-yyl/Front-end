@@ -633,55 +633,55 @@
 		'八塘镇', '新塘乡', '瓦塘乡', '覃塘区', '覃塘镇', '东龙镇', '三里镇', '黄练镇', '石卡镇', '五里镇', '山北乡', '樟木乡', '蒙公乡', '大岭乡',
 	]
 
-	let ul = document.getElementById ('show-ul')
-	let search = document.getElementById ('main-search')
-	let show_div = document.getElementById ('show')
-	let div_show = document.getElementById ('show-div-div')
-	let lis = document.getElementsByClassName ('li')
+	let ul = document.getElementById('show-ul')
+	let search = document.getElementById('main-search')
+	let show_div = document.getElementById('show')
+	let div_show = document.getElementById('show-div-div')
+	let lis = document.getElementsByClassName('li')
 	let index_li = 0
 
-	console.log (lis)
+	console.log(lis)
 
 	// search.focus()
 	// show_div.classList.add("show-div-switch")
 
 	//获取焦点事件
 	ul.onmousedown = function () {
-		console.log ('点击成功')
-		show_div.classList.add ('show-div-switch')
-		div_show.classList.add ('show-class-switch')
+		console.log('点击成功')
+		show_div.classList.add('show-div-switch')
+		div_show.classList.add('show-class-switch')
 
-		search.focus ()
+		search.focus()
 	}
 	show_div.onmousedown = function () {
-		console.log ('点击成功')
-		show_div.classList.add ('show-div-switch')
-		div_show.classList.add ('show-class-switch')
+		console.log('点击成功')
+		show_div.classList.add('show-div-switch')
+		div_show.classList.add('show-class-switch')
 
-		search.focus ()
+		search.focus()
 	}
 	//----------------------------------------
 	ul.onclick = function () {
-		console.log ('点击成功')
-		show_div.classList.add ('show-div-switch')
-		div_show.classList.add ('show-class-switch')
+		console.log('点击成功')
+		show_div.classList.add('show-div-switch')
+		div_show.classList.add('show-class-switch')
 
-		search.focus ()
+		search.focus()
 	}
 	show_div.onclick = function () {
-		console.log ('点击成功')
-		show_div.classList.add ('show-div-switch')
-		div_show.classList.add ('show-class-switch')
+		console.log('点击成功')
+		show_div.classList.add('show-div-switch')
+		div_show.classList.add('show-class-switch')
 
-		search.focus ()
+		search.focus()
 	}
 
 	//获取焦点时的样式
 	search.onfocus = function () {
-		show_div.classList.add ('show-div-switch')
-		div_show.classList.add ('show-class-switch')
+		show_div.classList.add('show-div-switch')
+		div_show.classList.add('show-class-switch')
 		document.onkeydown = function (event) {
-			if ( event.key === 'ArrowDown' ) {
+			if (event.key === 'ArrowDown') {
 
 			}
 		}
@@ -689,9 +689,9 @@
 
 	//失去焦点时的样式
 	search.onblur = function () {
-		console.log ('失去样式')
-		show_div.classList.remove ('show-div-switch')
-		div_show.classList.remove ('show-class-switch')
+		console.log('失去样式')
+		show_div.classList.remove('show-div-switch')
+		div_show.classList.remove('show-class-switch')
 
 	}
 
@@ -702,9 +702,9 @@
 	search.oninput = function () {
 		ul.innerHTML = ''
 		str = search.value
-		globalSearch (str).forEach (function (self) {
+		globalSearch(str).forEach(function (self) {
 			// ul.innerHTML = ''
-			ul.appendChild (self)
+			ul.appendChild(self)
 		})
 	}
 
@@ -714,14 +714,14 @@
 	 * @returns {*[]} 静字符串拼接成一个li标签数组后返回
 	 */
 	function globalSearch (value) {
-		let indexExp = new RegExp ('^.*\[' + value + '\].*$')
+		let indexExp = new RegExp('^.*\[' + value + '\].*$')
 		// let indexExp = new RegExp('^(?=.*?' + value + ').*$')
 
 		let dateIndex = 0
 		let li_list = []
-		date.forEach (function (self) {
-			if ( indexExp.test (self) && dateIndex < 6 ) {
-				let li = document.createElement ('li')
+		date.forEach(function (self) {
+			if (indexExp.test(self) && dateIndex < 6) {
+				let li = document.createElement('li')
 				li.innerText = self
 				li_list[dateIndex] = li
 				dateIndex++

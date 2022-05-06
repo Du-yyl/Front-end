@@ -77,17 +77,17 @@
 
 	//	----------------------------------------------------------------
 
-	arr.forEach ((item, index) => {
-		arr.splice (index, 1)
-		console.log (1)
+	arr.forEach((item, index) => {
+		arr.splice(index, 1)
+		console.log(1)
 		//这里隐性让index自增加1
 		index++
 	});
 
 	//	解决方式：
-	[...arr].forEach ((item, index) => {
-		arr.splice (index, 1)
-		console.log (1)
+	[...arr].forEach((item, index) => {
+		arr.splice(index, 1)
+		console.log(1)
 	})
 
 

@@ -43,7 +43,7 @@
 	 *   这个对象中封装了指定函数响应的一切信息，包括鼠标位置，那个按键被按下
 	 * */
 	window.onload = function () {
-		document.getElementById ('div2').onmousemove = function (event) {
+		document.getElementById('div2').onmousemove = function (event) {
 			/*
 			 * clientX 返回当事件被触发时，鼠标指针的水平坐标。
 			 * clientY 返回当事件被触发时，鼠标指针的垂直坐标。
@@ -51,15 +51,15 @@
 			 *
 			 * pageX和pageY获取的是根据页面定位的说平和垂直距离
 			 * */
-			let div1 = document.getElementById ('div1')
-			let div2 = document.getElementById ('div2')
+			let div1 = document.getElementById('div1')
+			let div2 = document.getElementById('div2')
 
 			let x = event.clientX
 			let y = event.clientY
 			div1.innerText = 'X:' + x + 'px,' + 'Y:' + y + 'px'
 		}
-		document.getElementById ('div2').onmouseout = function () {
-			document.getElementById ('div1').innerText = ''
+		document.getElementById('div2').onmouseout = function () {
+			document.getElementById('div1').innerText = ''
 			// alert(12313)
 		}
 	}

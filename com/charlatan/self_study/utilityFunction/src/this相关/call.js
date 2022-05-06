@@ -23,18 +23,18 @@
  */
 function call (func, obj, ...args) {
 //  当 this 将被指定为 null 或 undefined 时会自动替换为全局对象，原始值会被覆盖
-  if (obj === null || obj === undefined) {
-    // globalThis es11退出的新特性，指定全局对象，在 node 环境下全局是 global
-    obj = globalThis
-  }
+    if (obj === null || obj === undefined) {
+        // globalThis es11退出的新特性，指定全局对象，在 node 环境下全局是 global
+        obj = globalThis
+    }
 //  为指定的对象实例新添加一个对象参数
-  obj.temp = func
+    obj.temp = func
 //  调用 obj 中的方法
-  let result = obj.temp(...args)
+    let result = obj.temp(...args)
 //  删除 obj 中的对象参数
-  delete obj.temp
+    delete obj.temp
 //  返回运行结果
-  return result || undefined
+    return result || undefined
 }
 
 /**
@@ -44,12 +44,12 @@ function call (func, obj, ...args) {
  * @returns {*|undefined} 将函数的调用的返回值进行返回，如果没有返回值，返回的是 undefined
  */
 Function.prototype.call = function (obj, ...args) {
-  if (obj === null || obj === undefined) {
-    obj = globalThis
-  }
-  // 和上面的逻辑类似，不过通过实例定义时，调用的方法会在传入的 this 中进行保存
-  obj.temp = this
-  let result = obj.temp(...args)
-  delete obj.temp
-  return result || undefined
+    if (obj === null || obj === undefined) {
+        obj = globalThis
+    }
+    // 和上面的逻辑类似，不过通过实例定义时，调用的方法会在传入的 this 中进行保存
+    obj.temp = this
+    let result = obj.temp(...args)
+    delete obj.temp
+    return result || undefined
 }

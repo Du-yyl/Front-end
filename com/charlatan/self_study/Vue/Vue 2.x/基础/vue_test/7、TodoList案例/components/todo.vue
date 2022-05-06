@@ -27,8 +27,8 @@ export default {
   },
   methods: {
     deletes () {
-      console.log ('删除方法')
-      this.removeObj (this.Obj)
+      console.log('删除方法')
+      this.removeObj(this.Obj)
     },
   },
   props: {

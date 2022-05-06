@@ -37,30 +37,30 @@
 </body>
 <script>
 
-	console.log (this)
-	console.log (num1)
-	console.log (fn)
+	console.log(this)
+	console.log(num1)
+	console.log(fn)
 
 	function fn () {
 	}
 
 	var num1 = 10
-	fn (1, 2, 3)
+	fn(1, 2, 3)
 
-	console.log ('-----------------')
+	console.log('-----------------')
 
 	function fnn (a1) {
-		console.log (this)
-		console.log (a1)
-		console.log (arguments)
-		a3 ()
+		console.log(this)
+		console.log(a1)
+		console.log(arguments)
+		a3()
 	}
 
 	function a3 () {
-		console.log ('a3()')
+		console.log('a3()')
 	}
 
-	fnn (1, 2, 3, 4)
+	fnn(1, 2, 3, 4)
 
 
 </script>

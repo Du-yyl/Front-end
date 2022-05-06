@@ -72,29 +72,29 @@
 <script>
 	window.onload = function () {
 		let flag = false
-		document.getElementById ('info').onscroll = function () {
-			let info = document.getElementById ('info')
+		document.getElementById('info').onscroll = function () {
+			let info = document.getElementById('info')
 			//当满足 scrollHeight - scrollTop === clientHeight 时
 			//      整体宽度，       距离顶部高度     可见高度
 			let num = info.scrollHeight - info.scrollTop
 
-			if ( num <= (info.clientHeight + 100) ) {
-				document.getElementById ('btn1').style.cursor = 'pointer'
-				document.getElementById ('btn1').style.color = ' #01204f'
-				document.getElementById ('btn1').style.backgroundColor = '#dddddd;'
+			if (num <= (info.clientHeight + 100)) {
+				document.getElementById('btn1').style.cursor = 'pointer'
+				document.getElementById('btn1').style.color = ' #01204f'
+				document.getElementById('btn1').style.backgroundColor = '#dddddd;'
 				flag = true
 			}
 		}
 
-		document.getElementById ('btn1').onclick = function () {
-			let info = document.getElementById ('info')
+		document.getElementById('btn1').onclick = function () {
+			let info = document.getElementById('info')
 			//当满足scrollHeight - scrollTop === clientHeight时
 			let num = info.scrollHeight - info.scrollTop
 			// alert(num)
-			if ( flag ) {
-				alert ('注册成功')
+			if (flag) {
+				alert('注册成功')
 			} else {
-				alert ('请仔细阅读协议才能完成注册')
+				alert('请仔细阅读协议才能完成注册')
 				info.scrollTop = 0
 			}
 		}

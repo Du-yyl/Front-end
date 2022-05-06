@@ -15,11 +15,11 @@
  * @returns {*[]} 返回第一个匹配的值
  */
 function find (callback) {
-  for (let i = 0, len = this.length; i < len; i++) {
-    if (callback(this[i], i, this))
-      return this[i]
-  }
-  return undefined
+    for (let i = 0, len = this.length; i < len; i++) {
+        if (callback(this[i], i, this))
+            return this[i]
+    }
+    return undefined
 }
 
 Array.prototype.find = find

@@ -37,8 +37,8 @@
 		 * @param item
 		 */
 		ref = (item) => {
-			console.log ('内联函数执行了')
-			console.log (item)
+			console.log('内联函数执行了')
+			console.log(item)
 			this.input1 = item
 		}
 
@@ -60,13 +60,13 @@
 		}
 
 		changMsg = () => {
-			this.state.flag = this.setState ({ flag: !this.state.flag })
+			this.state.flag = this.setState({ flag: !this.state.flag })
 		}
 		showClick = () => {
-			console.log (this.input1.value)
+			console.log(this.input1.value)
 		}
 	}
 
-	ReactDOM.render (<Demo/>, document.getElementById ('test'))
+	ReactDOM.render(<Demo/>, document.getElementById('test'))
 </script>
 </html>

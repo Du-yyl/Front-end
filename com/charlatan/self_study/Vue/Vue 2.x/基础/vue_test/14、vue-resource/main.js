@@ -13,10 +13,10 @@ import App from './App'
 // 引入插件
 import resource from 'vue-resource'
 // 使用插件
-Vue.use (resource)
+Vue.use(resource)
 Vue.config.productionTip = false
-const vm = new Vue ({
-	el: '#app',
-	render: createElement => createElement (App),
-	
+const vm = new Vue({
+    el: '#app',
+    render: createElement => createElement(App),
+    
 })

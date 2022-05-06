@@ -12,12 +12,12 @@ import React, { Component } from 'react'
 import './index.css'
 
 export default class Index extends Component {
-	
-	render () {
-		return (
-				<span className="title">
+    
+    render () {
+        return (
+            <span className="title">
         你好，世界
       </span>
-		)
-	}
+        )
+    }
 }

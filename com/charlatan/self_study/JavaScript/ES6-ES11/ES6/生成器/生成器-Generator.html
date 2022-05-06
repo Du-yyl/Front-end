@@ -27,8 +27,8 @@
 		return yield agrs
 	}
 
-	let gen = func ('测试')
-	console.log (gen.next ())
+	let gen = func('测试')
+	console.log(gen.next())
 	/*
 	 上面代码中，调用 Generator 函数，会返回一个内部指针（即遍历器 ）g 。这是 Generator 函数不同于普通函数的另一个地方，
 	 即执行它不会返回结果，返回的是指针对象。调用指针 g 的 next 方法，会移动内部指针（即执行异步任务的第一段），

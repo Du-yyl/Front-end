@@ -15,14 +15,14 @@
 	 }*/
 
 	String.prototype.trim = function () {
-		return this.replace (/^\s+$/, '').replace (/^\s+$/, '')
+		return this.replace(/^\s+$/, '').replace(/^\s+$/, '')
 	}
 
 	window.onload = function () {
-		document.getElementById ('btn1').onclick = function () {
-			var su1 = document.getElementById ('tr1').value
-			var s = su1.trim ()
-			document.getElementById ('s1').innerText = s
+		document.getElementById('btn1').onclick = function () {
+			var su1 = document.getElementById('tr1').value
+			var s = su1.trim()
+			document.getElementById('s1').innerText = s
 		}
 	}
 </script>

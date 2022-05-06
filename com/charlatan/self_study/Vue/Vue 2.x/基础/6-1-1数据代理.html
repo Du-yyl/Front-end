@@ -35,7 +35,7 @@
 		sex: 'man',
 	}
 
-	Object.defineProperty (person, 'age', {
+	Object.defineProperty(person, 'age', {
 		value: num,
 		enumerable: true,
 		writable: true,
@@ -43,17 +43,17 @@
 
 		// 监听读取
 		get () {
-			console.log ('get运行了')
+			console.log('get运行了')
 			return num
 		},
 		// 监听修改
 		set (value) {
-			console.log ('set运行了')
+			console.log('set运行了')
 			num = value
 		},
 	})
 
-	console.log (person)
+	console.log(person)
 
 </script>
 </html>

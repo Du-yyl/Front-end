@@ -25,8 +25,8 @@
 <script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
 <script type="text/babel">
 	class Longin extends React.Component {
-		username = React.createRef ()
-		userPassword = React.createRef ()
+		username = React.createRef()
+		userPassword = React.createRef()
 
 		render () {
 			return (
@@ -39,13 +39,13 @@
 		}
 
 		login = (event) => {
-			event.preventDefault ()
-			console.log (this.username)
-			console.log (this.userPassword)
+			event.preventDefault()
+			console.log(this.username)
+			console.log(this.userPassword)
 		}
 	}
 
-	ReactDOM.render (<Longin/>, document.getElementById ('test'))
+	ReactDOM.render(<Longin/>, document.getElementById('test'))
 
 </script>
 </html>

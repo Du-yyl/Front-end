@@ -15,12 +15,12 @@
  * @returns {boolean} 返回第一个匹配的下标
  */
 function every (callback) {
-  let result = 0
-  for (let i = 0, len = this.length; i < len; i++) {
-    if (!callback(this[i], i, this))
-      return false
-  }
-  return true
+    let result = 0
+    for (let i = 0, len = this.length; i < len; i++) {
+        if (!callback(this[i], i, this))
+            return false
+    }
+    return true
 }
 
 Array.prototype.every = every

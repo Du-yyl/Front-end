@@ -21,10 +21,10 @@ import App from './App'
 // 引入指定的内容
 import { Button, Row } from 'element-ui'
 // 注册引入的组件
-Vue.component (Button.name, Button)
-Vue.component (Row)
+Vue.component(Button.name, Button)
+Vue.component(Row)
 
 Vue.config.productionTip = false
-const vm = new Vue ({
-	el: '#app', render: createElement => createElement (App),
+const vm = new Vue({
+    el: '#app', render: createElement => createElement(App),
 })

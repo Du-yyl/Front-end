@@ -768,18 +768,18 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 <script>
-	let lis_l = $ (`#sidebar-left-ul > li`)
-	let lis_r = $ (`#sidebar-right-div-ul > li`)
+	let lis_l = $(`#sidebar-left-ul > li`)
+	let lis_r = $(`#sidebar-right-div-ul > li`)
 
 	let index = 0
-	lis_l.mouseover (function () {
-		index = $ (this).index ()
-		lis_l.removeClass ('show')
-		$ (lis_l[index]).addClass ('show')
-		lis_r.css ({
+	lis_l.mouseover(function () {
+		index = $(this).index()
+		lis_l.removeClass('show')
+		$(lis_l[index]).addClass('show')
+		lis_r.css({
 			display: 'none',
 		})
-		$ (lis_r[index]).css ({
+		$(lis_r[index]).css({
 			display: 'block',
 		})
 	})

@@ -13,16 +13,16 @@
  * @return {any[]}
  */
 function difference (array) {
-  let result = []
-  if (this.length === 0)
-    return []
-  
-  if (array.length === 0)
-    return this
-  return this.filter((item) => {
-    return !array.includes(item)
-  })
-  
+    let result = []
+    if (this.length === 0)
+        return []
+    
+    if (array.length === 0)
+        return this
+    return this.filter((item) => {
+        return !array.includes(item)
+    })
+    
 }
 
 Array.prototype.difference = difference

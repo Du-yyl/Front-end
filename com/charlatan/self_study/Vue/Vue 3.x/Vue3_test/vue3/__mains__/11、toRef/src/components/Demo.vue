@@ -34,13 +34,13 @@
 import { ref, reactive } from 'vue'
 import { toRef } from '@vue/runtime-dom'
 
-const { toRefs } = require ('@vue/runtime-dom')
+const { toRefs } = require('@vue/runtime-dom')
 
 export default {
   name: 'Demo',
   setup () {
-    let num = ref (0)
-    let person = reactive ({
+    let num = ref(0)
+    let person = reactive({
       obj_1: '第一个数据',
       obj_2: '第一个数据',
       obj_s: {
@@ -85,7 +85,7 @@ export default {
 
     // 通过结构赋值将所有的内容全部进行解构进行，
     return {
-      ...toRefs (person),
+      ...toRefs(person),
     }
   },
 

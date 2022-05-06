@@ -38,13 +38,13 @@
 	// 配置超时时间
 	axios.defaults.timeout = 3000
 
-	$ ('.btn:eq(0)').click (function () {
-		axios ({
+	$('.btn:eq(0)').click(function () {
+		axios({
 			url: '/posts',
-		}).then ((val) => {
-			console.log (val)
+		}).then((val) => {
+			console.log(val)
 		}, (res) => {
-			console.log (res)
+			console.log(res)
 		})
 	})
 </script>

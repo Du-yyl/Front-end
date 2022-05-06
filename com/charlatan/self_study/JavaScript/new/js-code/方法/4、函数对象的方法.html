@@ -16,7 +16,7 @@
 <body>
 <script>
 	function sam (a, b) {
-		alert (this + '我是sam方法，并且输出了' + '--a-->' + a + '--b-->' + b)
+		alert(this + '我是sam方法，并且输出了' + '--a-->' + a + '--b-->' + b)
 	}
 
 	/*
@@ -36,15 +36,15 @@
 	 *   3、以构造行数的形式调用，this是创建新建的那个对象
 	 *   4、使用call和apply调用时，this是指定的那个对象
 	 * */
-	sam ()
-	sam.call ()
-	sam.apply ()
+	sam()
+	sam.call()
+	sam.apply()
 
 	let l1 = {}
-	sam.call (l1)
+	sam.call(l1)
 
-	sam.call (l1, 2, 3)
-	sam.apply (l1, [2, 3])
+	sam.call(l1, 2, 3)
+	sam.apply(l1, [2, 3])
 </script>
 </body>
 </html>

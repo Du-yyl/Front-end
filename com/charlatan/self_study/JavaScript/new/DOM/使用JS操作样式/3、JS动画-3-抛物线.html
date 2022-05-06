@@ -25,7 +25,7 @@
 </head>
 <script>
 	window.onload = function () {
-		let box = document.getElementById ('box')
+		let box = document.getElementById('box')
 
 		let x = 0
 		let y = 0
@@ -41,20 +41,20 @@
 			x += xSpeed
 			y += ySpeed
 
-			if ( x >= window.innerWidth - box.offsetWidth ) {
+			if (x >= window.innerWidth - box.offsetWidth) {
 				x = window.innerWidth - box.offsetWidth
 				xSpeed = -(xSpeed + Acceleration)
 			}
-			if ( y >= window.innerHeight - box.offsetHeight ) {
+			if (y >= window.innerHeight - box.offsetHeight) {
 				y = window.innerHeight - box.offsetHeight
 				ySpeed = -ySpeed
 			}
 
-			if ( x <= 0 ) {
+			if (x <= 0) {
 				x = 0
 				xSpeed = -xSpeed
 			}
-			if ( y <= 0 ) {
+			if (y <= 0) {
 				y = 0
 				ySpeed = -ySpeed
 			}
@@ -62,9 +62,9 @@
 			box.style.left = x + 'px'
 			box.style.top = y + 'px'
 
-			requestAnimationFrame (moveFun)
+			requestAnimationFrame(moveFun)
 		}
-		requestAnimationFrame (moveFun)
+		requestAnimationFrame(moveFun)
 	}
 </script>
 <body>

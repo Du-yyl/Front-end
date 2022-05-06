@@ -15,11 +15,11 @@
  * @returns {*[]} 返回第一个匹配的下标
  */
 function findIndex (callback) {
-  for (let i = 0, len = this.length; i < len; i++) {
-    if (callback(this[i], i, this))
-      return i
-  }
-  return -1
+    for (let i = 0, len = this.length; i < len; i++) {
+        if (callback(this[i], i, this))
+            return i
+    }
+    return -1
 }
 
 Array.prototype.findIndex = findIndex

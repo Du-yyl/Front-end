@@ -9,13 +9,13 @@
  */
 
 export default {
-	install (Vue) {
-		Vue.prototype.hello = () => {
-			console.log ('你好 啊')
-		}
-		Vue.mixin ({
-			num1: 100,
-			num2: 200,
-		})
-	},
+    install (Vue) {
+        Vue.prototype.hello = () => {
+            console.log('你好 啊')
+        }
+        Vue.mixin({
+            num1: 100,
+            num2: 200,
+        })
+    },
 }

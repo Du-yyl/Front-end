@@ -8,12 +8,12 @@
  *
  */
 function Cancel (message) {
-	this.message = message
+    this.message = message
 }
 
 //原型添加 toString 方法
 Cancel.prototype.toString = function toString () {
-	return 'Cancel' + (this.message ? ': ' + this.message : '')
+    return 'Cancel' + (this.message ? ': ' + this.message : '')
 }
 //原型添加 __CANCEL__ 属性
 Cancel.prototype.__CANCEL__ = true

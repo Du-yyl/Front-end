@@ -29,7 +29,7 @@ export default {
   },
   components: {},
   computed: {
-    ...mapState ('persons', ['persons']),
+    ...mapState('persons', ['persons']),
   },
 }
 </script>

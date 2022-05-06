@@ -9,11 +9,11 @@
  */
 
 const mixin = {
-	methods: {
-		show () {
-			alert (this.msg)
-		},
-	},
+    methods: {
+        show () {
+            alert(this.msg)
+        },
+    },
 }
 export default mixin
 /*

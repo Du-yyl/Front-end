@@ -15,12 +15,12 @@
  * @returns {boolean} 返回匹配结果
  */
 function some (callback) {
-  let result = 0
-  for (let i = 0, len = this.length; i < len; i++) {
-    if (callback(this[i], i, this))
-      return true
-  }
-  return false
+    let result = 0
+    for (let i = 0, len = this.length; i < len; i++) {
+        if (callback(this[i], i, this))
+            return true
+    }
+    return false
 }
 
 Array.prototype.some = some

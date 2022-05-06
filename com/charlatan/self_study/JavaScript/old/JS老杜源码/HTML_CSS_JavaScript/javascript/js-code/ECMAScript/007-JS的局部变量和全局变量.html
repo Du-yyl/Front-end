@@ -22,10 +22,10 @@
 
 	function accessI () {
 		// 访问的是全局变量
-		alert ('i = ' + i)
+		alert('i = ' + i)
 	}
 
-	accessI ()
+	accessI()
 
 	// 全局变量
 	var username = 'jack'
@@ -34,20 +34,20 @@
 		// 局部变量
 		var username = 'lisi'
 		// 就近原则:访问局部变量
-		alert ('username = ' + username)
+		alert('username = ' + username)
 	}
 
 	// 调用函数
-	accessUsername ()
+	accessUsername()
 	// 访问全局变量
-	alert ('username = ' + username)
+	alert('username = ' + username)
 
 	function accessAge () {
 		var age = 20
-		alert ('年龄 = ' + age)
+		alert('年龄 = ' + age)
 	}
 
-	accessAge ()
+	accessAge()
 
 	// 报错(语法不对)
 	// alert("age = " + age);
@@ -59,9 +59,9 @@
 	}
 
 	// 访问函数
-	myfun ()
+	myfun()
 
-	alert ('myname = ' + myname) // myname = dujubin
+	alert('myname = ' + myname) // myname = dujubin
 
 </script>
 </body>

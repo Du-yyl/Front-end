@@ -16,17 +16,17 @@
 		],
 	}
 	window.onload = function () {
-		document.getElementById ('bt').onclick = function () {
+		document.getElementById('bt').onclick = function () {
 			var html = ''
-			for ( let i = 0; i < emp.temp.length; i++ ) {
+			for (let i = 0; i < emp.temp.length; i++) {
 				html += '<tr>'
 				html += '  <th>' + emp.temp[i].no + '</th>'
 				html += '  <th>' + emp.temp[i].name + '</th>'
 				html += '  <th>' + emp.temp[i].sex + '</th>'
 				html += '</tr>'
 			}
-			document.getElementById ('t2').innerHTML = html
-			document.getElementById ('s1').innerText = emp.total
+			document.getElementById('t2').innerHTML = html
+			document.getElementById('s1').innerText = emp.total
 		}
 	}
 </script>

@@ -11,7 +11,7 @@ import Vue from 'vue'
 import App from './App'
 
 Vue.config.productionTip = false
-const vm = new Vue ({
-	el: '#app',
-	render: createElement => createElement (App),
+const vm = new Vue({
+    el: '#app',
+    render: createElement => createElement(App),
 })

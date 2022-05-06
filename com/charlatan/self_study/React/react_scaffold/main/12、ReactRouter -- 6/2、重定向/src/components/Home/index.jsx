@@ -11,11 +11,11 @@
 import React, { Component } from 'react'
 
 export default class Home extends Component {
-	
-	render () {
-		return (
-				<h1>这是 Home 中的内容</h1>
-		)
-	}
-	
+    
+    render () {
+        return (
+            <h1>这是 Home 中的内容</h1>
+        )
+    }
+    
 }

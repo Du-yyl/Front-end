@@ -10,8 +10,8 @@
 
 
 // 将指定文件夹中的内容定义为静态资源，可以只通过路径进行访问
-let express = require ('express')
-let server = express ()
+let express = require('express')
+let server = express()
 
 // 公开指定文件夹
 // 公开后可以直接通过 ./文件夹名称/ xxx 的形式进行访问
@@ -25,15 +25,15 @@ let server = express ()
 
 // 另一种特殊形式
 // 这里的第一个参数并不知指定文件夹的名称，而是别名，访问的时候必须使用 /file/ 进行访问，否则无效
-server.use ('/file/', express.static ('../Express/'))
+server.use('/file/', express.static('../Express/'))
 
-server.get ('/', function (request, response) {
-	console.log (request.url)
-	response.send ('你好，世界！')
+server.get('/', function (request, response) {
+    console.log(request.url)
+    response.send('你好，世界！')
 })
 
-server.listen (3000, function () {
-	console.log ('port 3000 is listening ... ')
+server.listen(3000, function () {
+    console.log('port 3000 is listening ... ')
 })
 
 

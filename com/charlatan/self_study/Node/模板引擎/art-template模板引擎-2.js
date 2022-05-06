@@ -7,13 +7,13 @@
  *
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
-let template = require ('art-template')
+let template = require('art-template')
 
 let tools = {
-	data: ['第一个数据', '第二个数据', '第三个数据', '第四个数据', '第五个数据', '第六个数据', '第七个数据', '第八个数据'],
-	user: 'aaa',
-	test1: 'test1111111111',
-	test2: 'test2222222222',
+    data: ['第一个数据', '第二个数据', '第三个数据', '第四个数据', '第五个数据', '第六个数据', '第七个数据', '第八个数据'],
+    user: 'aaa',
+    test1: 'test1111111111',
+    test2: 'test2222222222',
 }
 
 /*
@@ -34,11 +34,11 @@ let tools = {
  % } %>
  */
 
-console.log (template.render (' {{if user==="aaa"}}' +
-		'   <h2>{{test1}}</h2>' +
-		' {{else if user==="bbb"}}' +
-		'   <h2>{{test2}}</h2>' +
-		' {{/if}}', tools))
+console.log(template.render(' {{if user==="aaa"}}' +
+    '   <h2>{{test1}}</h2>' +
+    ' {{else if user==="bbb"}}' +
+    '   <h2>{{test2}}</h2>' +
+    ' {{/if}}', tools))
 
 /*
  循环输出
@@ -64,14 +64,14 @@ console.log (template.render (' {{if user==="aaa"}}' +
  */
 
 // 标准语法
-console.log (template.render ('多种数据：{{ each data }} {{$index}} --> {{$value}} {{ /each }}', tools))
-console.log ('-----------------------')
+console.log(template.render('多种数据：{{ each data }} {{$index}} --> {{$value}} {{ /each }}', tools))
+console.log('-----------------------')
 // 自定义键值名称
-console.log (template.render ('自定义的键值：{{ each data i item }} {{item}} -> {{i}} {{ /each }}', tools))
-console.log ('----------')
+console.log(template.render('自定义的键值：{{ each data i item }} {{item}} -> {{i}} {{ /each }}', tools))
+console.log('----------')
 
 // 原始语法
-console.log (template.render ('原始语法：' +
-		'<% for (var i = 0 ; i < data.length ; i++ ) { %>' +
-		'<%= i %> <%= data[i] %>' +
-		'<% } %>', tools))
+console.log(template.render('原始语法：' +
+    '<% for (var i = 0 ; i < data.length ; i++ ) { %>' +
+    '<%= i %> <%= data[i] %>' +
+    '<% } %>', tools))

@@ -34,14 +34,14 @@
 	Axios.prototype.request = function (config) {
 		//    发送请求
 		// 创建一个Promise对象
-		let promise = Promise.resolve (config)
+		let promise = Promise.resolve(config)
 		//	 声明一个数组，【undefined的作用就是占位】
 		let chains = [dispatchRequest, undefined]
-		return promise.then (chains[0], chains[1])
+		return promise.then(chains[0], chains[1])
 	}
 
 	function dispatchRequest (config) {
-		return xhrAdapter (config).then ((res) => {
+		return xhrAdapter(config).then((res) => {
 			return res
 		}, (err) => {
 			throw err
@@ -50,18 +50,18 @@
 
 	// adapter 适配器
 	function xhrAdapter (config) {
-		return new Promise ((res, rej) => {
+		return new Promise((res, rej) => {
 			//  发送Ajax请求
-			let xhr = new XMLHttpRequest ()
-			xhr.open (config.method, config.url)
-			xhr.send ()
+			let xhr = new XMLHttpRequest()
+			xhr.open(config.method, config.url)
+			xhr.send()
 			xhr.onreadystatechange = function () {
-				if ( xhr.readyState === 4 && xhr.status === 200 ) {
-					console.log (xhr.response)
-					res ({
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					console.log(xhr.response)
+					res({
 						config: config,
 						data: xhr.response,
-						headers: xhr.getAllResponseHeaders (),
+						headers: xhr.getAllResponseHeaders(),
 						// xhr 的请求对象
 						request: xhr,
 						// 响应状态码
@@ -70,21 +70,21 @@
 						statusText: xhr.statusText,
 					})
 				} else {
-					rej (new Error ('请求失败，失败的状态码是：' + xhr.status))
+					rej(new Error('请求失败，失败的状态码是：' + xhr.status))
 				}
 			}
 		})
 	}
 
-	let axios = Axios.prototype.request.bind (null)
+	let axios = Axios.prototype.request.bind(null)
 
-	axios ({
+	axios({
 		method: 'GET',
 		url: 'http://localhost:3000/posts',
-	}).then ((val) => {
-		console.log (val)
+	}).then((val) => {
+		console.log(val)
 	}, (res) => {
-		console.log (res)
+		console.log(res)
 	})
 </script>
 </html>

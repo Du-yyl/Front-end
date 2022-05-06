@@ -12367,10 +12367,10 @@
 
 
 	<script>
-		var hashMatch = document.location.href.match (/#+(.*wd=[^&].+)/)
+		var hashMatch = document.location.href.match(/#+(.*wd=[^&].+)/)
 
-		if ( hashMatch && hashMatch[0] && hashMatch[1] ) {
-			document.location.replace ('http://' + location.host + '/s?' + hashMatch[1])
+		if (hashMatch && hashMatch[0] && hashMatch[1]) {
+			document.location.replace('http://' + location.host + '/s?' + hashMatch[1])
 		}
 		var bds = {
 			comm: {
@@ -12394,26 +12394,26 @@
 		}
 
 		//防止从结果页打开的页面中通过opener.xxx来影响百度页面
-		var isOldIE = /msie [6-8]\b/.test (navigator.userAgent.toLowerCase ())
-		if ( !isOldIE ) {
+		var isOldIE = /msie [6-8]\b/.test(navigator.userAgent.toLowerCase())
+		if (!isOldIE) {
 			var al_arr = []
 			var selfOpen = window.open
-			eval ('var open = selfOpen;')
-			var isIE = navigator.userAgent.indexOf ('MSIE') != -1 && !window.opera
+			eval('var open = selfOpen;')
+			var isIE = navigator.userAgent.indexOf('MSIE') != -1 && !window.opera
 			var E = bds.ecom = {}
 			document.cookie = 'ISWR=;domain=.baidu.com;path=/;expires=Fri, 02-Jan-1970 00:00:00 GMT'
 			var detectIntervals = [{ status: 18, time: 6000 }, { status: 17, time: 10000 }]
 
-			detectIntervals.forEach (function (detect) {
-				setTimeout (function () {
-					var lefter = document.getElementById ('content_left')
-					var rsnum = document.getElementsByClassName ('result').length
-					var contentno = document.getElementsByClassName ('content_none').length
-					if ( !lefter && !rsnum && !contentno ) {
-						var date = new Date ()
-						date.setTime (date.getTime () + 5 * 60 * 1000)
+			detectIntervals.forEach(function (detect) {
+				setTimeout(function () {
+					var lefter = document.getElementById('content_left')
+					var rsnum = document.getElementsByClassName('result').length
+					var contentno = document.getElementsByClassName('content_none').length
+					if (!lefter && !rsnum && !contentno) {
+						var date = new Date()
+						date.setTime(date.getTime() + 5 * 60 * 1000)
 						document.cookie = 'ISWR=' + detect.status + ';domain=.baidu.com;path=/;expires=' +
-								date.toGMTString () + ';'
+								date.toGMTString() + ';'
 					}
 				}, detect.time)
 			})
@@ -12474,12 +12474,12 @@
 			}
 
 			var get = function (url) {
-						if ( location.protocol === 'http' ) {
+						if (location.protocol === 'http') {
 							return url
 						}
 						var reg = /^(http[s]?:\/\/)?([^\/]+)(.*)/,
-								matches = url.match (reg)
-						url = list.hasOwnProperty (matches[2]) && (list[matches[2]] + matches[3]) || url
+								matches = url.match(reg)
+						url = list.hasOwnProperty(matches[2]) && (list[matches[2]] + matches[3]) || url
 						return url
 					},
 					set = function (kdomain, vdomain) {
@@ -12489,41 +12489,41 @@
 				get: get,
 				set: set,
 			}
-		}) ()
+		})()
 	</script>
 
 
 	<script data-for="result" type="text/javascript">function G (n) {
-		return document.getElementById (n)
+		return document.getElementById(n)
 	}
 
 	function ns_c_pj (n, e) {
-		var t = encodeURIComponent (window.document.location.href), i = '', s = '', o = '',
+		var t = encodeURIComponent(window.document.location.href), i = '', s = '', o = '',
 				r = bds && bds.comm && bds.comm.did ? bds.comm.did : ''
-		wd = bds.comm.queryEnc, nsclickDomain = bds && bds.util && bds.util.domain ? bds.util.domain.get (
+		wd = bds.comm.queryEnc, nsclickDomain = bds && bds.util && bds.util.domain ? bds.util.domain.get(
 				'http://nsclick.baidu.com') : 'http://nsclick.baidu.com', img = window['BD_PS_C' +
-		(new Date).getTime ()] = new Image, src = ''
-		for ( v in n ) {
+		(new Date).getTime()] = new Image, src = ''
+		for (v in n) {
 			switch (v) {
 				case'title':
-					s = encodeURIComponent (n[v].replace (/<[^<>]+>/g, ''))
+					s = encodeURIComponent(n[v].replace(/<[^<>]+>/g, ''))
 					break
 				case'url':
-					s = encodeURIComponent (n[v])
+					s = encodeURIComponent(n[v])
 					break
 				default:
 					s = n[v]
 			}
 			i += v + '=' + s + '&'
 		}
-		if ( o = '&mu=' + t, src = nsclickDomain + '/v.gif?pid=201&' + (e || '') + i + 'path=' + t + '&wd=' + wd +
+		if (o = '&mu=' + t, src = nsclickDomain + '/v.gif?pid=201&' + (e || '') + i + 'path=' + t + '&wd=' + wd +
 				'&rsv_sid=' + (bds.comm.ishome && bds.comm.indexSid ? bds.comm.indexSid : bds.comm.sid) + '&rsv_did=' +
-				r + '&t=' + (new Date).getTime (), 'undefined' != typeof Cookie && 'undefined' !=
-		typeof Cookie.get ) Cookie.get ('H_PS_SKIN') && '0' != Cookie.get ('H_PS_SKIN') &&
+				r + '&t=' + (new Date).getTime(), 'undefined' != typeof Cookie && 'undefined' !=
+		typeof Cookie.get) Cookie.get('H_PS_SKIN') && '0' != Cookie.get('H_PS_SKIN') &&
 		(src += '&rsv_skin=1') else {
 			var c = ''
 			try {
-				c = parseInt (document.cookie.match (new RegExp ('(^| )H_PS_SKIN=([^;]*)(;|$)'))[2])
+				c = parseInt(document.cookie.match(new RegExp('(^| )H_PS_SKIN=([^;]*)(;|$)'))[2])
 			} catch (a) {
 			}
 			c && '0' != c && (src += '&rsv_skin=1')
@@ -12532,145 +12532,145 @@
 	}
 
 	function ns_c (n, e) {
-		return e === !0 ? ns_c_pj (n, 'pj=www&rsv_sample=1&') : ns_c_pj (n, 'pj=www&')
+		return e === !0 ? ns_c_pj(n, 'pj=www&rsv_sample=1&') : ns_c_pj(n, 'pj=www&')
 	}
 
 	window.A || (window.bds = window.bds || {}, bds.util = bds.util || {}, bds.util.getWinWidth = function () {
 		return window.document.documentElement.clientWidth
 	}, bds.util.setContainerWidth = function () {
-		var n = G ('container'), e = G ('wrapper'), t = function (n, e) {
-			e.className = e.className.replace (n, '')
+		var n = G('container'), e = G('wrapper'), t = function (n, e) {
+			e.className = e.className.replace(n, '')
 		}, i = function (n, e) {
-			e.className = (e.className + ' ' + n).replace (/^\s+/g, '')
+			e.className = (e.className + ' ' + n).replace(/^\s+/g, '')
 		}, s = function (n, e) {
-			return n.test (e.className)
+			return n.test(e.className)
 		}, o = 1217
-		bds.util.getWinWidth () < o ? (n &&
-		(t (/\bcontainer_l\b/g, n), s (/\bcontainer_s\b/, n) || i ('container_s', n)), e &&
-		(t (/\bwrapper_l\b/g, e), s (/\bwrapper_s\b/, e) || i ('wrapper_s', e)), bds.comm.containerSize = 's') : (n &&
-		(t (/\bcontainer_s\b/g, n), s (/\bcontainer_l\b/, n) || i ('container_l', n)), e &&
-		(t (/\bwrapper_s\b/g, e), s (/\bwrapper_l\b/, e) || i ('wrapper_l', e)), bds.comm.containerSize = 'l')
+		bds.util.getWinWidth() < o ? (n &&
+		(t(/\bcontainer_l\b/g, n), s(/\bcontainer_s\b/, n) || i('container_s', n)), e &&
+		(t(/\bwrapper_l\b/g, e), s(/\bwrapper_s\b/, e) || i('wrapper_s', e)), bds.comm.containerSize = 's') : (n &&
+		(t(/\bcontainer_s\b/g, n), s(/\bcontainer_l\b/, n) || i('container_l', n)), e &&
+		(t(/\bwrapper_s\b/g, e), s(/\bwrapper_l\b/, e) || i('wrapper_l', e)), bds.comm.containerSize = 'l')
 	}, function () {
 		var n = [], e = !1, t = function (n, e) {
 			try {
-				n.call (e)
+				n.call(e)
 			} catch (t) {
 			}
 		}, i = function () {
 			this.ids = [], this.has = !0, this.list = [], this.logs = [], this.loadTimes = [], this.groupData = [], this.mergeFns = [], this._currentContainer = null
 		}
-		window.A = bds.aladdin = {}, t (i, window.A), bds.ready = function (i) {
-			'function' == typeof i && (e ? t (i) : n.push (i))
+		window.A = bds.aladdin = {}, t(i, window.A), bds.ready = function (i) {
+			'function' == typeof i && (e ? t(i) : n.push(i))
 		}, bds.doReady = function () {
-			for ( e = !0; n.length; ) t (n.shift ())
+			for (e = !0; n.length;) t(n.shift())
 		}, bds.clearReady = function () {
 			e = !1, n = []
 		}, A.__reset = i
 		var s = function () {
-			var n = document.getElementsByTagName ('script')
+			var n = document.getElementsByTagName('script')
 			return function () {
 				var e = n[n.length - 1]
 				window.currentScriptElem && (e = window.currentScriptElem)
-				for ( var t = e; t; ) {
-					if ( t.className && /(?:^|\s)result(?:-op)?(?:$|\s)/.test (t.className) &&
-							(tplname = t.getAttribute ('tpl')) ) return t
+				for (var t = e; t;) {
+					if (t.className && /(?:^|\s)result(?:-op)?(?:$|\s)/.test(t.className) &&
+							(tplname = t.getAttribute('tpl'))) return t
 					t = t.parentNode
 				}
 			}
-		} (), o = function (n, e, t) {
+		}(), o = function (n, e, t) {
 			var i
-			if ( n.initIndex ? i = A.groupData[n.initIndex - 1] : (i = {
+			if (n.initIndex ? i = A.groupData[n.initIndex - 1] : (i = {
 				container: n,
 				data: {},
 				handlers: [],
-			}, n.initIndex = A.groupData.length + 1, A.groupData.push (i)), 'function' == typeof e ) i.handlers.push (
-					e) else if ( 'object' == typeof e ) for ( var s in e ) e.hasOwnProperty (s) &&
+			}, n.initIndex = A.groupData.length + 1, A.groupData.push(i)), 'function' == typeof e) i.handlers.push(
+					e) else if ('object' == typeof e) for (var s in e) e.hasOwnProperty(s) &&
 			(i.data[s] = e[s]) else i.data[e] = t
 		}
 		A.init = A.setup = function (n, e) {
-			if ( void 0 !== n && null !== n ) {
-				var t = A._currentContainer || s ()
-				t && o (t, n, e)
+			if (void 0 !== n && null !== n) {
+				var t = A._currentContainer || s()
+				t && o(t, n, e)
 			}
 		}, A.merge = function (n, e) {
-			A.mergeFns.push ({ tplName: n, fn: e })
+			A.mergeFns.push({ tplName: n, fn: e })
 		}
-	} ())</script>
+	}())</script>
 
 
 	<script data-for="result">
 		(function () {
 			var perfkey = 'headEnd'
-			if ( !perfkey ) {
+			if (!perfkey) {
 				return
 			}
-			if ( !window.__perf_www_datas ) {
+			if (!window.__perf_www_datas) {
 				window.__perf_www_datas = {}
 			}
-			var t = performance && performance.now && performance.now ()
+			var t = performance && performance.now && performance.now()
 			window.__perf_www_datas[perfkey] = t
-		}) ()
+		})()
 	</script>
 	<script data-for="result">!function () {
 		function e (e) {
-			if ( !e ) return !1
-			var r = document.cookie.indexOf ('webbtest=1') > -1
-			return r || Math.random () < e
+			if (!e) return !1
+			var r = document.cookie.indexOf('webbtest=1') > -1
+			return r || Math.random() < e
 		}
 
 		function r (r, n) {
-			if ( void 0 === n && (n = 'except'), !e (d.sample[r.group]) ) return ''
+			if (void 0 === n && (n = 'except'), !e(d.sample[r.group])) return ''
 			var o = bds.comm.qid || '',
-					t = d.logServer + '?pid=' + d.pid + '&lid=' + o + '&ts=' + Date.now () + '&type=' + n + '&group=' +
-							r.group + '&info=' + encodeURIComponent (JSON.stringify (r.info)) + '&dim=' +
-							encodeURIComponent (JSON.stringify (r.dim || {})),
+					t = d.logServer + '?pid=' + d.pid + '&lid=' + o + '&ts=' + Date.now() + '&type=' + n + '&group=' +
+							r.group + '&info=' + encodeURIComponent(JSON.stringify(r.info)) + '&dim=' +
+							encodeURIComponent(JSON.stringify(r.dim || {})),
 					i = new Image
 			return i.src = t, t
 		}
 
 		function n (e) {
 			var r
-			if ( '' !== e.id ) return 'id("' + e.id + '")'
-			if ( e === document.body ) return e.tagName
-			for ( var o = 0, t = (null === (r = null === e || void 0 === e ? void 0 : e.parentNode) || void 0 === r
+			if ('' !== e.id) return 'id("' + e.id + '")'
+			if (e === document.body) return e.tagName
+			for (var o = 0, t = (null === (r = null === e || void 0 === e ? void 0 : e.parentNode) || void 0 === r
 					? void 0
-					: r.childNodes) ? e.parentNode.childNodes : [], i = 0; i < t.length; i++ ) {
+					: r.childNodes) ? e.parentNode.childNodes : [], i = 0; i < t.length; i++) {
 				var a = t[i]
-				if ( a === e ) return n (e.parentNode) + '/' + e.tagName + '[' + (o + 1) + ']'
+				if (a === e) return n(e.parentNode) + '/' + e.tagName + '[' + (o + 1) + ']'
 				1 === a.nodeType && a.tagName === e.tagName && o++
 			}
 			return ''
 		}
 
 		function o (e) {
-			var r = document.createElement ('a')
+			var r = document.createElement('a')
 			return r.href = e, r
 		}
 
 		function t (e) {
-			var r = o (e).hostname
-			return /\.baidu|bcebos|bdstatic|baidubce|bdimg\.com/.test (r) ? r : 'other'
+			var r = o(e).hostname
+			return /\.baidu|bcebos|bdstatic|baidubce|bdimg\.com/.test(r) ? r : 'other'
 		}
 
 		function i (e, o) {
-			var i = e.getAttribute ('src')
-			if ( i ) {
-				o.msg = i, o.errLen = ++c, o.xpath = n (e)
-				var a = { info: o, dim: { host: t (i) }, group: 'imgError' }
-				r (a, 'et_comm'), window.imgErrList.push ({ info: o, time: (new Date).getTime () })
+			var i = e.getAttribute('src')
+			if (i) {
+				o.msg = i, o.errLen = ++c, o.xpath = n(e)
+				var a = { info: o, dim: { host: t(i) }, group: 'imgError' }
+				r(a, 'et_comm'), window.imgErrList.push({ info: o, time: (new Date).getTime() })
 			}
 		}
 
 		function a (e) {
 			try {
 				var n = { info: {}, dim: {}, group: '' }, o = n.info, t = e.target, a = navigator.connection || {}
-				if ( o.downlink = a.downlink, o.effectiveType = a.effectiveType, o.rtt = a.rtt, o.deviceMemory = navigator.deviceMemory ||
+				if (o.downlink = a.downlink, o.effectiveType = a.effectiveType, o.rtt = a.rtt, o.deviceMemory = navigator.deviceMemory ||
 						0, o.hardwareConcurrency = navigator.hardwareConcurrency || 0, o.saveData = !!a.saveData, t &&
-				t.nodeName && 'img' === t.nodeName.toLowerCase () ) return void i (t, o)
+				t.nodeName && 'img' === t.nodeName.toLowerCase()) return void i(t, o)
 				var d = t.localName || '', c = t.src || ''
-				d && 'script' === d && (n.group = 'jsnotfound', o.msg = c, o.file = c, r (n))
+				d && 'script' === d && (n.group = 'jsnotfound', o.msg = c, o.file = c, r(n))
 			} catch (m) {
-				console.error (m)
+				console.error(m)
 			}
 		}
 
@@ -12679,8 +12679,8 @@
 			sample: { jsnotfound: .02, imgError: .02 },
 			logServer: 'https://sp1.baidu.com/5b1ZeDe5KgQFm2e88IuM_a/mwb2.gif',
 		}, c = 0
-		window.imgErrList = [], window.addEventListener && window.addEventListener ('error', a, !0)
-	} ()</script>
+		window.imgErrList = [], window.addEventListener && window.addEventListener('error', a, !0)
+	}()</script>
 
 </head>
 
@@ -12691,8 +12691,8 @@
 <div id="wrapper" class="wrapper_l wrapper_new">
 
 
-	<script>if ( window.bds && bds.util && bds.util.setContainerWidth ) {
-		bds.util.setContainerWidth (1280)
+	<script>if (window.bds && bds.util && bds.util.setContainerWidth) {
+		bds.util.setContainerWidth(1280)
 	}</script>
 	<div id="head">
 		<div class="head_wrapper">
@@ -12747,15 +12747,17 @@
 			<div id="u"><a class="toindex" href="/">百度首页</a><a class="pf" href="javascript:" name="tj_settingicon">设置<i
 					class="c-icon c-icon-triangle-down"></i></a><a id="user"
 			                                                       class="username"
-			                                                       href="https://www.baidu.com/my/index"><span class="s-top-img-wrapper"><img
+			                                                       href="https://www.baidu.com/my/index"><span
+					class="s-top-img-wrapper"><img
 					src="https://himg.bdimg.com/sys/portraitn/item/public.1.f529c212.2hXhQOLrNdXPAvHjIAdkFg"/></span><span
 					class="s-top-username">155*****613</span></a>
 				<div class="bdpfmenu"></div>
 			</div>
 			<div id="u1"><a id="virus-2020"
 			                class="mnav sp"
-			                href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1" name="tj_trvirus">抗击肺炎</a><a class="mnav"
-			                                                             href="http://news.baidu.com" name="tj_trnews">新闻</a><a
+			                href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1"
+			                name="tj_trvirus">抗击肺炎</a><a class="mnav"
+			                                             href="http://news.baidu.com" name="tj_trnews">新闻</a><a
 					class="mnav" href="https://www.hao123.com" name="tj_trhao123">hao123</a><a
 					class="mnav" href="http://map.baidu.com" name="tj_trmap">地图</a><a class="mnav"
 			                                                                          href="http://v.baidu.com"
@@ -12806,8 +12808,8 @@
 
 			//异步下发起下次搜索时重置变量
 			var preXhrs = [], $ = window.$
-			if ( $ ) {
-				$ (window).on ('swap_begin', function () {
+			if ($) {
+				$(window).on('swap_begin', function () {
 					_imgWatch = []             //图片加载观察list，如果没有onload，进行容错
 					_domLoaded = []            //标识对应dom是否已下载
 					_data = []                 //暂存请求回调数据
@@ -12824,8 +12826,8 @@
 					_ispdc = false            //是否开启了性能统计
 
 					//停止正在执行的base64回调操作
-					for ( var i = 0; i < preXhrs.length; i++ ) {
-						preXhrs[i].abort ()
+					for (var i = 0; i < preXhrs.length; i++) {
+						preXhrs[i].abort()
 					}
 				})
 			}
@@ -12833,16 +12835,16 @@
 			//初始化方法
 			var init = function (imgRight, imgLeft, isPreload) {
 				var imgArr = imgRight || [], imgArr2 = imgLeft || []
-				if ( window.__IS_IMG_PREFETCH ) {
+				if (window.__IS_IMG_PREFETCH) {
 					//异步base64去重
 					function filter (img) {
-						return !window.__IS_IMG_PREFETCH.hasOwnProperty (img)
+						return !window.__IS_IMG_PREFETCH.hasOwnProperty(img)
 					}
 
-					imgArr = $.grep (imgArr, filter)
-					imgArr2 = $.grep (imgArr2, filter)
+					imgArr = $.grep(imgArr, filter)
+					imgArr2 = $.grep(imgArr2, filter)
 				}
-				if ( window.__IMG_PRELOAD && isPreload ) {
+				if (window.__IMG_PRELOAD && isPreload) {
 					//定义loadState，防止callback乱序
 					_loadState['cbr'] = 0
 					_loadState['cbpr'] = 0
@@ -12850,162 +12852,162 @@
 					_hasPreload = 1 //标记页面中有预取
 
 					var imgPreloadList = window.__IMG_PRELOAD = {}
-					for ( var i = 0; i < imgArr.length; i++ ) {
-						if ( !imgPreloadList.hasOwnProperty (imgArr[i]) ) {
+					for (var i = 0; i < imgArr.length; i++) {
+						if (!imgPreloadList.hasOwnProperty(imgArr[i])) {
 							window.__IMG_PRELOAD[imgArr[i]] = true
 						}
 					}
-				} else if ( window.__IMG_PRELOAD && !isPreload ) {
+				} else if (window.__IMG_PRELOAD && !isPreload) {
 					//同步base64右侧去重
 					var tmpArr = []
-					for ( var i = 0; i < imgArr.length; i++ ) {
-						if ( !window.__IMG_PRELOAD.hasOwnProperty (imgArr[i]) ) {
-							tmpArr.push (imgArr[i])
+					for (var i = 0; i < imgArr.length; i++) {
+						if (!window.__IMG_PRELOAD.hasOwnProperty(imgArr[i])) {
+							tmpArr.push(imgArr[i])
 						}
 					}
 					imgArr = tmpArr
 					//TODO
 					//提取出函数
 				}
-				if ( _opt.b64Exp ) {
+				if (_opt.b64Exp) {
 					_expGroup = _opt.b64Exp
-					if ( _expGroup == 1 ) {
+					if (_expGroup == 1) {
 						_domain = 'http://b2.bdstatic.com/' /*base64 new domain sample deploy*/
 						_dt = 2
 					}
 				}
 				_ispdc = _opt.pdc > 0 ? true : false
-				_reqTime = new Date () * 1
-				if ( _expGroup == 2 ) {
+				_reqTime = new Date() * 1
+				if (_expGroup == 2) {
 					//左右分别发请求
-					if ( imgArr2.length > 0 ) {
+					if (imgArr2.length > 0) {
 						_hasSpImg = true
-						loadJs (_domain + 'image?imglist=' + imgArr2.join (',') + '&cb=bds.base64.cbl')
+						loadJs(_domain + 'image?imglist=' + imgArr2.join(',') + '&cb=bds.base64.cbl')
 					}
-					if ( !isPreload ) {
-						cbl ({})
+					if (!isPreload) {
+						cbl({})
 					}
 				}
-				if ( imgArr.length > 0 ) {
+				if (imgArr.length > 0) {
 					//发送请求
-					if ( isPreload ) {
-						loadJs (_domain + 'image?imglist=' + imgArr.join (',') + '&cb=bds.base64.cbpr')
+					if (isPreload) {
+						loadJs(_domain + 'image?imglist=' + imgArr.join(',') + '&cb=bds.base64.cbpr')
 					} else {
-						loadJs (_domain + 'image?imglist=' + imgArr.join (',') + '&cb=bds.base64.cbr')
+						loadJs(_domain + 'image?imglist=' + imgArr.join(',') + '&cb=bds.base64.cbr')
 					}
-					if ( _ispdc ) {
-						if ( bds.ready ) {
-							bds.ready (function () {
-								setTimeout (function () {
-									var _bottag = botTag.get ()
+					if (_ispdc) {
+						if (bds.ready) {
+							bds.ready(function () {
+								setTimeout(function () {
+									var _bottag = botTag.get()
 									var logstr = 'dt=' + _dt + '&time=' + ((_reqEnd > 0) ? (_reqEnd - _reqTime) : 0) +
 											'&bot=' + _bottag + '&rcount=' + imgArr.length
 									window._B64_REQ_LOG = ((_reqEnd > 0) ? (_reqEnd - _reqTime) : 0) + '_' +
 											imgArr.length
-									if ( _expGroup == 2 && _reqEndL > 0 ) {
-										var _apics = document.getElementById ('ala_img_pics')
+									if (_expGroup == 2 && _reqEndL > 0) {
+										var _apics = document.getElementById('ala_img_pics')
 										var _lcount = (_apics && _apics.children) ? _apics.children.length : 0
 										logstr += '&time2=' + (_reqEndL - _reqTime) + '&lcount=' + _lcount
 									}
-									if ( Math.random () * 100 < 10 ) {
-										sendLog (logstr)
+									if (Math.random() * 100 < 10) {
+										sendLog(logstr)
 									}
 								}, 2000)
 							})
 						}
 					}
 				} else {
-					if ( !isPreload ) {
-						cbr ({})
+					if (!isPreload) {
+						cbr({})
 					}
 				}
-				if ( imgArr.length > 0 || imgArr2.length > 0 ) {
-					if ( !isPreload ) {
-						watchReq (imgArr.length)
+				if (imgArr.length > 0 || imgArr2.length > 0) {
+					if (!isPreload) {
+						watchReq(imgArr.length)
 					}
 				}
 			}
 
 			//异步加载js
 			function crc32 (str) {
-				if ( typeof str == 'string' ) {
+				if (typeof str == 'string') {
 					var i, crc = 0, j = 0
-					for ( i = 0; i < str.length; i++ ) {
+					for (i = 0; i < str.length; i++) {
 						j = i % 20 + 1
-						crc += str.charCodeAt (i) << j
+						crc += str.charCodeAt(i) << j
 					}
-					return Math.abs (crc)
+					return Math.abs(crc)
 				}
 				return 0
 			}
 
 			var loadJs = function (url) {
-				var matchs = url.match (/.*(bds\.base64\.cb[rl])/)
-				if ( !matchs ) {
+				var matchs = url.match(/.*(bds\.base64\.cb[rl])/)
+				if (!matchs) {
 					return
 				}
-				var imglist = url.match (/imglist=([^&]*)/)
-				if ( !imglist || !imglist[1] ) {
+				var imglist = url.match(/imglist=([^&]*)/)
+				if (!imglist || !imglist[1]) {
 					return
 				}
 				//see b64_base_popstate.js, this just sync result page
-				callback_name = crc32 (imglist[1].replace (/,/g, ''))
-				callback_name = 'cb_' + (callback_name + '').substr (Math.max (0, callback_name.length - 8), 8) + '_0'
+				callback_name = crc32(imglist[1].replace(/,/g, ''))
+				callback_name = 'cb_' + (callback_name + '').substr(Math.max(0, callback_name.length - 8), 8) + '_0'
 				window[callback_name] = function (data) {
-					if ( matchs[1] == 'bds.base64.cbr' ) {
-						cbr (data)
-					} else if ( matchs[1] == 'bds.base64.cbl' ) {
-						cbl (data)
+					if (matchs[1] == 'bds.base64.cbr') {
+						cbr(data)
+					} else if (matchs[1] == 'bds.base64.cbl') {
+						cbl(data)
 					}
 					window[callback_name] = null
 				}
-				var url = matchs[0].replace (/bds\.base64\.cb[rl]/, callback_name)
+				var url = matchs[0].replace(/bds\.base64\.cb[rl]/, callback_name)
 
-				var a = document.createElement ('script')
-				a.setAttribute ('type', 'text/javascript')
-				a.setAttribute ('src', url)
-				a.setAttribute ('defer', 'defer')
-				a.setAttribute ('async', 'true')
-				document.getElementsByTagName ('head')[0].appendChild (a)
+				var a = document.createElement('script')
+				a.setAttribute('type', 'text/javascript')
+				a.setAttribute('src', url)
+				a.setAttribute('defer', 'defer')
+				a.setAttribute('async', 'true')
+				document.getElementsByTagName('head')[0].appendChild(a)
 			}
 
 			//图片回填
 			var imgLoad = function (data, side) {
-				if ( _finish[side] ) {
+				if (_finish[side]) {
 					return
 				}
 				_finish[side] = true
-				if ( side == 'right' ) {
-					botTag.ot (false) //设置超时标记减1.
+				if (side == 'right') {
+					botTag.ot(false) //设置超时标记减1.
 				}
 				//获取所有图片，通过data-base64-id属性获取需要回填的图片
-				var img = document.getElementById (
+				var img = document.getElementById(
 						_expGroup != 1 ? ((side == 'left') ? _containerLeftId : _containerRightId) : _containerAllId).
-						getElementsByTagName ('IMG')
-				for ( var i = 0; i < imgs.length; i++ ) {
-					var b64Id = imgs[i].getAttribute ('data-b64-id')
-					if ( b64Id ) {
+						getElementsByTagName('IMG')
+				for (var i = 0; i < imgs.length; i++) {
+					var b64Id = imgs[i].getAttribute('data-b64-id')
+					if (b64Id) {
 						var find = false
-						if ( data.hasOwnProperty (b64Id) ) {
-							setSrc (imgs[i], data[b64Id])
+						if (data.hasOwnProperty(b64Id)) {
+							setSrc(imgs[i], data[b64Id])
 							find = true
 						}
-						if ( !find ) {
+						if (!find) {
 							//小容错
-							failover (imgs[i])
+							failover(imgs[i])
 						}
 					}
 				}
-				fail_ie7 ()
+				fail_ie7()
 			}
 
 			function fail_ie7 () {
 				//外层容错 IE7
-				setTimeout (function () {
-					for ( var i = 0; i < _imgWatch.length; i++ ) {
+				setTimeout(function () {
+					for (var i = 0; i < _imgWatch.length; i++) {
 						var n = _imgWatch[i]
-						if ( !n.loaded ) {
-							failover (n.obj)
+						if (!n.loaded) {
+							failover(n.obj)
 						}
 					}
 					_imgWatch = []
@@ -13015,20 +13017,20 @@
 			function setSrc (img, data) {
 				try {
 					img.onerror = function () {
-						failover (this)
+						failover(this)
 					}
 
 					//标记监视，供容错检查
-					_imgWatch.push ({
+					_imgWatch.push({
 						obj: img,
 						loaded: false,
 					})
 
 					img.onload = function () {
 						//标记已加载
-						for ( var i = 0; i < _imgWatch.length; i++ ) {
+						for (var i = 0; i < _imgWatch.length; i++) {
 							var m = _imgWatch[i]
-							if ( m.obj == this ) {
+							if (m.obj == this) {
 								m.loaded = true
 							}
 						}
@@ -13036,40 +13038,40 @@
 					img.src = 'data:image\/jpeg;base64,' + data
 				} catch (e) {
 					//触发exception
-					failover (img)
+					failover(img)
 				}
 			}
 
 			//容错，回填原始src
 			var failover = function (img) {
-				if ( img.getAttribute ('data-b64-id') != null && img.getAttribute ('data-b64-id') != '' &&
-						img.getAttribute ('data-src') != null ) {
-					img.src = img.getAttribute ('data-src')
+				if (img.getAttribute('data-b64-id') != null && img.getAttribute('data-b64-id') != '' &&
+						img.getAttribute('data-src') != null) {
+					img.src = img.getAttribute('data-src')
 				}
 			}
 
 			var watchReq = function (len) {
 				var wt = 1250
-				if ( len < 6 ) {
+				if (len < 6) {
 					wt = 1000
-				} else if ( len > 10 ) {
+				} else if (len > 10) {
 					wt = 1500
 				}
-				setTimeout (function () {
-					if ( !_dataLoaded['right'] ) {
-						var img = document.getElementById (_containerRightId).getElementsByTagName ('IMG')
-						for ( var i = 0; i < imgs.length; i++ ) {
-							failover (imgs[i])
+				setTimeout(function () {
+					if (!_dataLoaded['right']) {
+						var img = document.getElementById(_containerRightId).getElementsByTagName('IMG')
+						for (var i = 0; i < imgs.length; i++) {
+							failover(imgs[i])
 						}
 						_finish['right'] = true
 						//设置超时标记
-						botTag.ot (true)
+						botTag.ot(true)
 					}
-					setTimeout (function () {
-						if ( _hasSpImg && !_dataLoaded['left'] ) {
-							var img = document.getElementById (_containerLeftId).getElementsByTagName ('IMG')
-							for ( var i = 0; i < imgs.length; i++ ) {
-								failover (imgs[i])
+					setTimeout(function () {
+						if (_hasSpImg && !_dataLoaded['left']) {
+							var img = document.getElementById(_containerLeftId).getElementsByTagName('IMG')
+							for (var i = 0; i < imgs.length; i++) {
+								failover(imgs[i])
 							}
 							_finish['left'] = true
 						}
@@ -13092,29 +13094,29 @@
 			 */
 			var botTag = {
 				ot: function (isInc) {
-					var _bottag = botTag.get ()
-					if ( isInc ) {
-						if ( _bottag < 6 ) {
+					var _bottag = botTag.get()
+					if (isInc) {
+						if (_bottag < 6) {
 							_bottag++
 						}
 					} else {
-						if ( _bottag > 0 ) {
+						if (_bottag > 0) {
 							_bottag--
 						}
 					}
-					if ( _bottag >= 2 ) {
-						var date = new Date ()
-						date.setTime (date.getTime () + 24 * 3600 * 1000 * 5)
+					if (_bottag >= 2) {
+						var date = new Date()
+						date.setTime(date.getTime() + 24 * 3600 * 1000 * 5)
 						//此处设置cookie
-						document.cookie = 'B64_BOT=1; expires=' + date.toGMTString ()
+						document.cookie = 'B64_BOT=1; expires=' + date.toGMTString()
 						//_bottag = 0;
-					} else if ( _bottag < 1 ) {
-						if ( document.cookie.match ('B64_BOT=1') ) {
+					} else if (_bottag < 1) {
+						if (document.cookie.match('B64_BOT=1')) {
 							document.cookie = 'B64_BOT=0;'
 						}
 					}
 					try {
-						if ( window.localStorage ) {
+						if (window.localStorage) {
 							window.localStorage[_BOTTAGLSNAME] = _bottag
 						}
 					} catch (e) {
@@ -13122,9 +13124,9 @@
 				},
 				get: function () {
 					try {
-						if ( window.localStorage ) {
+						if (window.localStorage) {
 							var _bottag = window.localStorage[_BOTTAGLSNAME]
-							_bottag = _bottag ? parseInt (_bottag) : 0
+							_bottag = _bottag ? parseInt(_bottag) : 0
 						} else {
 							return 0
 						}
@@ -13137,49 +13139,49 @@
 
 			//请求回调方法 - 右侧
 			var cbr = function (data) {
-				_reqEnd = new Date () * 1
-				if ( _ispdc && bds.comm && _reqTime > 0 && _reqEnd > 0 ) {
+				_reqEnd = new Date() * 1
+				if (_ispdc && bds.comm && _reqTime > 0 && _reqEnd > 0) {
 					bds.comm.cusval = 'b64_' + _dt + '_' + (_reqEnd - _reqTime)
 				}
 				_loadState['cbr'] = 1
-				callback (data, 'right')
+				callback(data, 'right')
 			}
 
 			//请求回调方法 - 左侧
 			var cbl = function (data) {
-				_reqEndL = new Date () * 1
-				callback (data, 'left')
+				_reqEndL = new Date() * 1
+				callback(data, 'left')
 			}
 
 			//请求回调方法 - 预取
 			var cbpr = function (data) {
 				_loadState['cbpr'] = 1
-				callback (data, 'right')
+				callback(data, 'right')
 			}
 
 			var callback = function (data, side) {
 				_dataLoaded[side] = _hasPreload ? (_loadState.cbpr && _loadState.cbr) : true
 
-				if ( data ) {
-					if ( _data[side] === undefined ) {
+				if (data) {
+					if (_data[side] === undefined) {
 						_data[side] = {}
 					}
-					for ( var key in data ) {
-						if ( data.hasOwnProperty (key) ) {
+					for (var key in data) {
+						if (data.hasOwnProperty(key)) {
 							_data[side][key] = data[key]
 						}
 					}
 				}
-				if ( _domLoaded[side] && _dataLoaded[side] ) {
-					imgLoad (_data[side], side)
+				if (_domLoaded[side] && _dataLoaded[side]) {
+					imgLoad(_data[side], side)
 				}
 			}
 
 			//设置Dom加载完成
 			var setDomLoad = function (side) {
 				_domLoaded[side] = true
-				if ( _dataLoaded[side] ) {
-					imgLoad (_data[side], side)
+				if (_dataLoaded[side]) {
+					imgLoad(_data[side], side)
 				}
 			}
 
@@ -13189,31 +13191,31 @@
 			var sendLog = function (src) {
 				var loghost = 'http://nsclick.baidu.com/v.gif?pid=315&rsv_yc_log=3&'
 
-				var n = 'b64log__' + (new Date ()).getTime (),
-						c = window[n] = new Image ()
+				var n = 'b64log__' + (new Date()).getTime(),
+						c = window[n] = new Image()
 				c.onload = (c.onerror = function () {
 					window[n] = null
 				})
-				c.src = loghost + src + '&_t=' + new Date () * 1 //LOG统计地址
+				c.src = loghost + src + '&_t=' + new Date() * 1 //LOG统计地址
 				c = null //释放变量c，避免产生内存泄漏的可能
 			}
 
 			//定义测速函数:
 			//请求回调 - 测速
 			cbs = function (data) {
-				_rest = new Date () * 1
-				if ( (_rest - _rsst) < 1500 ) {
-					botTag.ot (false)
+				_rest = new Date() * 1
+				if ((_rest - _rsst) < 1500) {
+					botTag.ot(false)
 				} else {
-					botTag.ot (true)
+					botTag.ot(true)
 				}
 			}
 
 			//测试速度
 			ts = function () {
 				_expGroup = 3
-				_rsst = new Date () * 1
-				loadJs (_domain +
+				_rsst = new Date() * 1
+				loadJs(_domain +
 						'image?imglist=1241886729_3226161681_58,1072899117_2953388635_58,2469877062_2085031320_58,155831992_309216365_58,2539127170_1607411613_58,1160777122_283857721_58,1577144716_3149119526_58,2339041784_1038484334_58&cb=bds.base64.cbs')
 			}
 
@@ -13227,7 +13229,7 @@
 				ts: ts,
 				predictImg: predictImg,
 			}
-		}) ()
+		})()
 
 	</script>
 
@@ -16711,16 +16713,16 @@
 			bds.comm.rightResultExist = false
 			bds.comm.protectNum = 0
 			bds.comm.zxlNum = 0
-			bds.comm.pageNum = parseInt ('1') || 1
+			bds.comm.pageNum = parseInt('1') || 1
 
-			bds.comm.pageSize = parseInt ('10') || 10
+			bds.comm.pageSize = parseInt('10') || 10
 			bds.comm.encTn = '07d40j/emEyfPzczyUhdDkgmCn0C9K9e2C3KYykrciraOChYURBipE8ry/4'
 			bds.se.mon = {
 				'loadedItems': [], 'load': function () {
 				}, 'srvt': -1,
 			}
 			try {
-				bds.se.mon.srvt = parseInt (document.cookie.match (new RegExp ('(^| )BDSVRTM=([^;]*)(;|$)'))[2])
+				bds.se.mon.srvt = parseInt(document.cookie.match(new RegExp('(^| )BDSVRTM=([^;]*)(;|$)'))[2])
 				document.cookie = 'BDSVRTM=;expires=Sat, 01 Jan 2000 00:00:00 GMT'
 			} catch (e) {
 				bds.se.mon.srvt = -1
@@ -16765,64 +16767,63 @@
 			bds.comm.bfe_sample = null;
 
 			(function () {
-				if ( bds && bds.util && bds.util.domain ) {
+				if (bds && bds.util && bds.util.domain) {
 					var domainUtil = bds.util.domain
 					var list = {
-								'graph.baidu.com': 'https://sp1.baidu.com/-aYHfD0a2gU2pMbgoY3K',
-								'p.qiao.baidu.com': 'https://sp1.baidu.com/5PoXdTebKgQFm2e88IuM_a',
-								'vse.baidu.com': 'https://sp3.baidu.com/6qUDsjip0QIZ8tyhnq',
-								'hdpreload.baidu.com': 'https://sp3.baidu.com/7LAWfjuc_wUI8t7jm9iCKT-xh_',
-								'lcr.open.baidu.com': '//pcrec.baidu.com',
-								'kankan.baidu.com': 'https://sp3.baidu.com/7bM1dzeaKgQFm2e88IuM_a',
-								'xapp.baidu.com': 'https://sp2.baidu.com/yLMWfHSm2Q5IlBGlnYG',
-								'dr.dh.baidu.com': 'https://sp1.baidu.com/-KZ1aD0a2gU2pMbgoY3K',
-								'xiaodu.baidu.com': 'https://sp1.baidu.com/yLsHczq6KgQFm2e88IuM_a',
-								'sensearch.baidu.com': 'https://sp1.baidu.com/5b11fzupBgM18t7jm9iCKT-xh_',
-								's1.bdstatic.com': 'https://dss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K',
-								'olime.baidu.com': 'https://sp1.baidu.com/8bg4cTva2gU2pMbgoY3K',
-								'app.baidu.com': 'https://sp2.baidu.com/9_QWsjip0QIZ8tyhnq',
-								'i.baidu.com': 'https://sp1.baidu.com/74oIbT3kAMgDnd_',
-								'c.baidu.com': 'https://sp1.baidu.com/9foIbT3kAMgDnd_',
-								'sclick.baidu.com': 'https://sp1.baidu.com/5bU_dTmfKgQFm2e88IuM_a',
-								'nsclick.baidu.com': 'https://sp1.baidu.com/8qUJcD3n0sgCo2Kml5_Y_D3',
-								'sestat.baidu.com': 'https://sp1.baidu.com/5b1ZeDe5KgQFm2e88IuM_a',
-								'eclick.baidu.com': 'https://sp3.baidu.com/-0U_dTmfKgQFm2e88IuM_a',
-								'api.map.baidu.com': 'https://sp2.baidu.com/9_Q4sjOpB1gCo2Kml5_Y_D3',
-								'ecma.bdimg.com': 'https://dss1.bdstatic.com/-0U0bXSm1A5BphGlnYG',
-								'ecmb.bdimg.com': 'https://dss0.bdstatic.com/-0U0bnSm1A5BphGlnYG',
-								't1.baidu.com': 'https://t1.baidu.com',
-								't2.baidu.com': 'https://t2.baidu.com',
-								't3.baidu.com': 'https://t3.baidu.com',
-								't10.baidu.com': 'https://t10.baidu.com',
-								't11.baidu.com': 'https://t11.baidu.com',
-								't12.baidu.com': 'https://t12.baidu.com',
-								'i7.baidu.com': 'https://dss0.baidu.com/73F1bjeh1BF3odCf',
-								'i8.baidu.com': 'https://dss0.baidu.com/73x1bjeh1BF3odCf',
-								'i9.baidu.com': 'https://dss0.baidu.com/73t1bjeh1BF3odCf',
-								'b1.bdstatic.com': 'https://dss0.bdstatic.com/9uN1bjq8AAUYm2zgoY3K',
-								'ss.bdimg.com': 'https://dss1.bdstatic.com/5aV1bjqh_Q23odCf',
-								'opendata.baidu.com': 'https://sp1.baidu.com/8aQDcjqpAAV3otqbppnN2DJv',
-								'api.open.baidu.com': 'https://sp1.baidu.com/9_Q4sjW91Qh3otqbppnN2DJv',
-								'tag.baidu.com': 'https://sp1.baidu.com/6LMFsjip0QIZ8tyhnq',
-								'f3.baidu.com': 'https://sp2.baidu.com/-uV1bjeh1BF3odCf',
-								's.share.baidu.com': 'https://sp1.baidu.com/5foZdDe71MgCo2Kml5_Y_D3',
-								'bdimg.share.baidu.com': 'https://dss1.baidu.com/9rA4cT8aBw9FktbgoI7O1ygwehsv',
-								'1.su.bdimg.com': 'https://dss0.bdstatic.com/k4oZeXSm1A5BphGlnYG',
-								'2.su.bdimg.com': 'https://dss1.bdstatic.com/kvoZeXSm1A5BphGlnYG',
-								'3.su.bdimg.com': 'https://dss2.bdstatic.com/kfoZeXSm1A5BphGlnYG',
-								'4.su.bdimg.com': 'https://dss3.bdstatic.com/lPoZeXSm1A5BphGlnYG',
-								'5.su.bdimg.com': 'https://dss0.bdstatic.com/l4oZeXSm1A5BphGlnYG',
-								'6.su.bdimg.com': 'https://dss1.bdstatic.com/lvoZeXSm1A5BphGlnYG',
-								'7.su.bdimg.com': 'https://dss2.bdstatic.com/lfoZeXSm1A5BphGlnYG',
-								'8.su.bdimg.com': 'https://dss3.bdstatic.com/iPoZeXSm1A5BphGlnYG',
-							}
+						'graph.baidu.com': 'https://sp1.baidu.com/-aYHfD0a2gU2pMbgoY3K',
+						'p.qiao.baidu.com': 'https://sp1.baidu.com/5PoXdTebKgQFm2e88IuM_a',
+						'vse.baidu.com': 'https://sp3.baidu.com/6qUDsjip0QIZ8tyhnq',
+						'hdpreload.baidu.com': 'https://sp3.baidu.com/7LAWfjuc_wUI8t7jm9iCKT-xh_',
+						'lcr.open.baidu.com': '//pcrec.baidu.com',
+						'kankan.baidu.com': 'https://sp3.baidu.com/7bM1dzeaKgQFm2e88IuM_a',
+						'xapp.baidu.com': 'https://sp2.baidu.com/yLMWfHSm2Q5IlBGlnYG',
+						'dr.dh.baidu.com': 'https://sp1.baidu.com/-KZ1aD0a2gU2pMbgoY3K',
+						'xiaodu.baidu.com': 'https://sp1.baidu.com/yLsHczq6KgQFm2e88IuM_a',
+						'sensearch.baidu.com': 'https://sp1.baidu.com/5b11fzupBgM18t7jm9iCKT-xh_',
+						's1.bdstatic.com': 'https://dss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K',
+						'olime.baidu.com': 'https://sp1.baidu.com/8bg4cTva2gU2pMbgoY3K',
+						'app.baidu.com': 'https://sp2.baidu.com/9_QWsjip0QIZ8tyhnq',
+						'i.baidu.com': 'https://sp1.baidu.com/74oIbT3kAMgDnd_',
+						'c.baidu.com': 'https://sp1.baidu.com/9foIbT3kAMgDnd_',
+						'sclick.baidu.com': 'https://sp1.baidu.com/5bU_dTmfKgQFm2e88IuM_a',
+						'nsclick.baidu.com': 'https://sp1.baidu.com/8qUJcD3n0sgCo2Kml5_Y_D3',
+						'sestat.baidu.com': 'https://sp1.baidu.com/5b1ZeDe5KgQFm2e88IuM_a',
+						'eclick.baidu.com': 'https://sp3.baidu.com/-0U_dTmfKgQFm2e88IuM_a',
+						'api.map.baidu.com': 'https://sp2.baidu.com/9_Q4sjOpB1gCo2Kml5_Y_D3',
+						'ecma.bdimg.com': 'https://dss1.bdstatic.com/-0U0bXSm1A5BphGlnYG',
+						'ecmb.bdimg.com': 'https://dss0.bdstatic.com/-0U0bnSm1A5BphGlnYG',
+						't1.baidu.com': 'https://t1.baidu.com',
+						't2.baidu.com': 'https://t2.baidu.com',
+						't3.baidu.com': 'https://t3.baidu.com',
+						't10.baidu.com': 'https://t10.baidu.com',
+						't11.baidu.com': 'https://t11.baidu.com',
+						't12.baidu.com': 'https://t12.baidu.com',
+						'i7.baidu.com': 'https://dss0.baidu.com/73F1bjeh1BF3odCf',
+						'i8.baidu.com': 'https://dss0.baidu.com/73x1bjeh1BF3odCf',
+						'i9.baidu.com': 'https://dss0.baidu.com/73t1bjeh1BF3odCf',
+						'b1.bdstatic.com': 'https://dss0.bdstatic.com/9uN1bjq8AAUYm2zgoY3K',
+						'ss.bdimg.com': 'https://dss1.bdstatic.com/5aV1bjqh_Q23odCf',
+						'opendata.baidu.com': 'https://sp1.baidu.com/8aQDcjqpAAV3otqbppnN2DJv',
+						'api.open.baidu.com': 'https://sp1.baidu.com/9_Q4sjW91Qh3otqbppnN2DJv',
+						'tag.baidu.com': 'https://sp1.baidu.com/6LMFsjip0QIZ8tyhnq',
+						'f3.baidu.com': 'https://sp2.baidu.com/-uV1bjeh1BF3odCf',
+						's.share.baidu.com': 'https://sp1.baidu.com/5foZdDe71MgCo2Kml5_Y_D3',
+						'bdimg.share.baidu.com': 'https://dss1.baidu.com/9rA4cT8aBw9FktbgoI7O1ygwehsv',
+						'1.su.bdimg.com': 'https://dss0.bdstatic.com/k4oZeXSm1A5BphGlnYG',
+						'2.su.bdimg.com': 'https://dss1.bdstatic.com/kvoZeXSm1A5BphGlnYG',
+						'3.su.bdimg.com': 'https://dss2.bdstatic.com/kfoZeXSm1A5BphGlnYG',
+						'4.su.bdimg.com': 'https://dss3.bdstatic.com/lPoZeXSm1A5BphGlnYG',
+						'5.su.bdimg.com': 'https://dss0.bdstatic.com/l4oZeXSm1A5BphGlnYG',
+						'6.su.bdimg.com': 'https://dss1.bdstatic.com/lvoZeXSm1A5BphGlnYG',
+						'7.su.bdimg.com': 'https://dss2.bdstatic.com/lfoZeXSm1A5BphGlnYG',
+						'8.su.bdimg.com': 'https://dss3.bdstatic.com/iPoZeXSm1A5BphGlnYG',
+					}
 
-
-					for ( var i in list ) {
-						domainUtil.set (i, list[i])
+					for (var i in list) {
+						domainUtil.set(i, list[i])
 					}
 				}
-			}) ()
+			})()
 
 			bds.comm.samContentNewStyle = 1
 			bds.comm.isPeakStyle = 1
@@ -16880,6 +16881,7 @@
 			}
 
 
+
 		</script>
 
 		<script id="query-data" data-for="result-data" type="application/json">{
@@ -16892,33 +16894,39 @@
 			"ubsurl": "https:\/\/sp1.baidu.com\/5bU_dTmfKgQFm2e88IuM_a\/w.gif",
 			"cid": "0",
 			"topicPn": ""
-		}</script>
+		}
+		</script>
 
 		<script id="sample-data" data-for="result-data" type="application/json">{
 			"sampleval": [
 				"sam_search_tool"
 			],
 			"sid": "34945_34994_34067_31254_34862_34902_34584_34518_34917_34813_26350_34825_34865_34789"
-		}</script>
+		}
+		</script>
 		<script id="user-data" data-for="result-data" type="application/json">{
 			"user": "155*****613",
 			"username": "155*****613",
 			"isLogin": 1,
 			"userPortrait": "https:\/\/himg.bdimg.com\/sys\/portraitn\/item\/public.1.f529c212.2hXhQOLrNdXPAvHjIAdkFg"
-		}</script>
+		}
+		</script>
 
 		<script id="peak-style-data" data-for="result-data" type="application/json">{
 			"isHit": "1",
 			"mode": "dark",
 			"color": "246,77,35"
-		}</script>
+		}
+		</script>
 		<script id="conf-data" data-for="result-data" type="application/json">{
 			"staticDomain": "https://pss.bdstatic.com",
 			"env": "prod"
-		}</script>
+		}
+		</script>
 		<script id="aging-data" data-for="result-data" type="application/json">{
 			"disableVoice": ""
-		}</script>
+		}
+		</script>
 		<script>
 			(function () {
 				var imgArr = [], imgArr2 = []
@@ -16938,20 +16946,20 @@
 					'4115440922_1014252587_58',
 				]
 				//构造数据 - 左侧
-				bds.base64.init (imgArr, imgArr2)
-			}) ()
+				bds.base64.init(imgArr, imgArr2)
+			})()
 		</script>
 
 
 		<div id="container" class="container_s sam_newgrid" data-w="1280">
 			<script>
-				bds.util.setContainerWidth (1280)
-				bds.ready (function () {
-					$ (window).on ('resize', function () {
-						bds.util.setContainerWidth ()
-						bds.event.trigger ('se.window_resize')
+				bds.util.setContainerWidth(1280)
+				bds.ready(function () {
+					$(window).on('resize', function () {
+						bds.util.setContainerWidth()
+						bds.event.trigger('se.window_resize')
 					})
-					bds.util.setContainerWidth ()
+					bds.util.setContainerWidth()
 				})
 			</script>
 
@@ -16959,15 +16967,15 @@
 			<script data-for="result">
 				(function () {
 					var perfkey = 'resultStart'
-					if ( !perfkey ) {
+					if (!perfkey) {
 						return
 					}
-					if ( !window.__perf_www_datas ) {
+					if (!window.__perf_www_datas) {
 						window.__perf_www_datas = {}
 					}
-					var t = performance && performance.now && performance.now ()
+					var t = performance && performance.now && performance.now()
 					window.__perf_www_datas[perfkey] = t
-				}) ()
+				})()
 			</script>
 
 
@@ -17449,7 +17457,7 @@
 										</div>
 
 										<script>
-											A.setup ({ platform: 'pc', showType: '' })
+											A.setup({ platform: 'pc', showType: '' })
 										</script>
 
 
@@ -17911,8 +17919,8 @@
 
 
 			<script>
-				if ( bds.base64 ) {
-					bds.base64.setDomLoad ('right')
+				if (bds.base64) {
+					bds.base64.setDomLoad('right')
 				}
 			</script>
 
@@ -18191,7 +18199,8 @@
 
 
 				<div id="1" class="result-op c-container new-pmd"
-				     data-click="{'p1':'1','rsv_bdr':'0','fm':'alop',rsv_stl:'0'}" data-op="{'y':'BDC66A6F'}" fk="11478_百度热搜"
+				     data-click="{'p1':'1','rsv_bdr':'0','fm':'alop',rsv_stl:'0'}" data-op="{'y':'BDC66A6F'}"
+				     fk="11478_百度热搜"
 				     mu="https://top.baidu.com/board" srcid="11478"
 				     tpl="url">
 
@@ -18353,14 +18362,14 @@
 				       fk=""
 				       mu="http://shouji.baidu.com/soft/item?docid=30451782&from=web_alad_2_2" srcid="35">
 					<script type=text/javascript>function _aMI (e) {
-						for ( var t = document.getElementById ('op_wiseapp_td').getElementsByTagName ('A'), n = 0; n <
-						t.length; n++ ) if ( t[n] == e ) return n
+						for (var t = document.getElementById('op_wiseapp_td').getElementsByTagName('A'), n = 0; n <
+						t.length; n++) if (t[n] == e) return n
 						return t.length - 2
 					}
 
 					function _aMC (e) {
-						for ( var t = e, n = -1; t = t.parentNode; ) if ( n = parseInt (t.getAttribute ('id')), n >
-						0 ) return n
+						for (var t = e, n = -1; t = t.parentNode;) if (n = parseInt(t.getAttribute('id')), n >
+						0) return n
 					}</script>
 					<style type=text/css>.op_wiseapp_toptext {
 						color: #4bad37;
@@ -18584,19 +18593,19 @@
 								- <a class=op_LAMP href="http://open.baidu.com/" target=_blank></a></div>
 							<script>!function () {
 								function o (o) {
-									return document.getElementById (o)
+									return document.getElementById(o)
 								}
 
 								function e (o, e) {
-									var t = Array.prototype.slice.call (arguments).slice (2)
+									var t = Array.prototype.slice.call(arguments).slice(2)
 									return function (a) {
-										return e.apply (o, [a || window.event].concat (t))
+										return e.apply(o, [a || window.event].concat(t))
 									}
 								}
 
 								function t (o, t, a) {
-									t.addEventListener ? t.addEventListener (o, a, !1) : t.attachEvent &&
-											t.attachEvent ('on' + o, e (t, a))
+									t.addEventListener ? t.addEventListener(o, a, !1) : t.attachEvent &&
+											t.attachEvent('on' + o, e(t, a))
 								}
 
 								function a () {
@@ -18610,20 +18619,20 @@
 								function p () {
 									var o = new Image
 									o.src = 'https://sp2.baidu.com/9_V1bjeh1BF3odCf?tj=soft_30451782_百度&f=web_alad_2_2&r=' +
-											Math.random ()
+											Math.random()
 								}
 
-								t ('mouseover', o ('op_wiseapp_dltopc'), a), t ('mouseout', o ('op_wiseapp_dltopc'),
+								t('mouseover', o('op_wiseapp_dltopc'), a), t('mouseout', o('op_wiseapp_dltopc'),
 										n), window.OP_WISEAPP_DLTJ = p
-								var s, i = o ('op_wiseapp_qrbox'), c = o ('op_wiseapp_qrimg'), r = !1
-								t ('mouseover', o ('op_wiseapp_qrlink'), function () {
+								var s, i = o('op_wiseapp_qrbox'), c = o('op_wiseapp_qrimg'), r = !1
+								t('mouseover', o('op_wiseapp_qrlink'), function () {
 									r ? i.className = 'op_wiseapp_qrboxshow' : (s = new Image, s.onload = function () {
 										c.src = this.src, r = !0, i.className = 'op_wiseapp_qrboxshow'
 									}, s.src = 'https://sp0.baidu.com/9_Q4sjW91Qh3otqbppnN2DJv/pae/component/api/qrcode?text=http%3A%2F%2Fmobile.baidu.com%2Fitem%3Fdocid%3D30451782%26ala%3Dpsapp')
-								}), t ('mouseout', o ('op_wiseapp_qrlink'), function () {
+								}), t('mouseout', o('op_wiseapp_qrlink'), function () {
 									i.className = ''
 								})
-							} ()</script>
+							}()</script>
 						</td>
 					</tr>
 				</table>
@@ -19888,15 +19897,15 @@
 			<script data-for="result">
 				(function () {
 					var perfkey = 'resultEnd'
-					if ( !perfkey ) {
+					if (!perfkey) {
 						return
 					}
-					if ( !window.__perf_www_datas ) {
+					if (!window.__perf_www_datas) {
 						window.__perf_www_datas = {}
 					}
-					var t = performance && performance.now && performance.now ()
+					var t = performance && performance.now && performance.now()
 					window.__perf_www_datas[perfkey] = t
-				}) ()
+				})()
 			</script>
 
 
@@ -20112,23 +20121,23 @@
         type="text/javascript"></script>
 
 
-<script type="text/javascript">define ('modules/monitor/log-send', ['require', 'exports'], function (e, o) {
+<script type="text/javascript">define('modules/monitor/log-send', ['require', 'exports'], function (e, o) {
 	'use strict'
 
 	function t (e) {
-		if ( !e ) return !1
-		var o = document.cookie.indexOf ('webbtest=1') > -1
-		return o || Math.random () < e
+		if (!e) return !1
+		var o = document.cookie.indexOf('webbtest=1') > -1
+		return o || Math.random() < e
 	}
 
 	function i (e, o) {
-		if ( void 0 === o && (o = 'except'), !e.group || !t (n.sample[e.group]) ) return ''
+		if (void 0 === o && (o = 'except'), !e.group || !t(n.sample[e.group])) return ''
 		var i = '1_87'
 		bds.comm.ishome && (i = '1_79')
 		var r = bds.comm.qid || bds.comm.queryId,
-				s = n.logServer + '?pid=' + i + '&lid=' + r + '&ts=' + Date.now () + '&type=' + o + '&group=' +
-						e.group + '&info=' + encodeURIComponent (JSON.stringify (e.info)) + '&dim=' +
-						encodeURIComponent (JSON.stringify (e.dim || {})),
+				s = n.logServer + '?pid=' + i + '&lid=' + r + '&ts=' + Date.now() + '&type=' + o + '&group=' +
+						e.group + '&info=' + encodeURIComponent(JSON.stringify(e.info)) + '&dim=' +
+						encodeURIComponent(JSON.stringify(e.dim || {})),
 				a = new Image
 		return a.src = s, s
 	}
@@ -20140,12 +20149,12 @@
 		logServer: 'https://sp1.baidu.com/5b1ZeDe5KgQFm2e88IuM_a/mwb2.gif',
 	}
 	o.send = i
-}), define ('modules/monitor/js-except', ['require', 'exports', './log-send'], function (e, o, t) {
+}), define('modules/monitor/js-except', ['require', 'exports', './log-send'], function (e, o, t) {
 	'use strict'
 
 	function i (e, o) {
-		if ( o.indexOf ('chrome-extension://') > -1 || o.indexOf ('moz-extension://') > -1 ) return !1
-		var t = e.toLowerCase ()
+		if (o.indexOf('chrome-extension://') > -1 || o.indexOf('moz-extension://') > -1) return !1
+		var t = e.toLowerCase()
 		return 'script error.' === t || 'script error' === t ? !1 : !0
 	}
 
@@ -20153,56 +20162,56 @@
 		try {
 			var n = { info: {}, dim: {}, group: '' }, r = n.info, s = e.target || e.srcElement,
 					a = navigator.connection || {}
-			if ( r.downlink = a.downlink, r.effectiveType = a.effectiveType, r.rtt = a.rtt, r.deviceMemory = navigator.deviceMemory ||
+			if (r.downlink = a.downlink, r.effectiveType = a.effectiveType, r.rtt = a.rtt, r.deviceMemory = navigator.deviceMemory ||
 					0, r.hardwareConcurrency = navigator.hardwareConcurrency || 0, r.saveData = !!a.saveData, s !==
-			window && 'onerror' !== o ) return
+			window && 'onerror' !== o) return
 			var c = e.error || {}, m = c.stack || ''
-			e.message && i (e.message, m) &&
-			(n.group = 'jserror', r.msg = e.message, r.file = e.filename, r.ln = e.lineno, r.col = e.colno, r.stack = m.split (
-					'\n').slice (0, 3).join ('\n'), t.send (n))
+			e.message && i(e.message, m) &&
+			(n.group = 'jserror', r.msg = e.message, r.file = e.filename, r.ln = e.lineno, r.col = e.colno, r.stack = m.split(
+					'\n').slice(0, 3).join('\n'), t.send(n))
 		} catch (p) {
-			console.error (p)
+			console.error(p)
 		}
 	}
 
 	function r () {
-		var e, o = !1, t = navigator.userAgent.toLowerCase (), i = /msie ([0-9]+)/.exec (t)
-		if ( i && i[1] ) {
-			if ( e = parseInt (i[1], 10), 7 >= e ) return
+		var e, o = !1, t = navigator.userAgent.toLowerCase(), i = /msie ([0-9]+)/.exec(t)
+		if (i && i[1]) {
+			if (e = parseInt(i[1], 10), 7 >= e) return
 			9 >= e && (o = !0)
 		}
 		o ? window.onerror = function (e, o, t, i) {
-			n ({ message: e, filename: o, lineno: t, colno: i }, 'onerror')
-		} : window.addEventListener && window.addEventListener ('error', n, !0)
+			n({ message: e, filename: o, lineno: t, colno: i }, 'onerror')
+		} : window.addEventListener && window.addEventListener('error', n, !0)
 	}
 
 	o.__esModule = !0, o.listenerExcept = void 0, o.listenerExcept = r
 })
 var Cookie = {
 	set: function (e, o, t, i, n, r) {
-		document.cookie = e + '=' + (r ? o : escape (o)) + (n ? '; expires=' + n.toGMTString () : '') +
+		document.cookie = e + '=' + (r ? o : escape(o)) + (n ? '; expires=' + n.toGMTString() : '') +
 				(i ? '; path=' + i : '; path=/') + (t ? '; domain=' + t : '')
 	}, get: function (e, o) {
-		var t = document.cookie.match (new RegExp ('(^| )' + e + '=([^;]*)(;|$)'))
-		return null != t ? unescape (t[2]) : o
+		var t = document.cookie.match(new RegExp('(^| )' + e + '=([^;]*)(;|$)'))
+		return null != t ? unescape(t[2]) : o
 	}, clear: function (e, o, t) {
-		this.get (e) && (document.cookie = e + '=' + (o ? '; path=' + o : '; path=/') + (t ? '; domain=' + t : '') +
+		this.get(e) && (document.cookie = e + '=' + (o ? '; path=' + o : '; path=/') + (t ? '; domain=' + t : '') +
 				';expires=Fri, 02-Jan-1970 00:00:00 GMT')
 	},
 }
 !function () {
 	function save (e) {
 		var o = []
-		for ( tmpName in options ) options.hasOwnProperty (tmpName) && 'duRobotState' !== tmpName &&
-		o.push ('"' + tmpName + '":"' + options[tmpName] + '"')
-		var t = '{' + o.join (',') + '}'
-		bds.comm.personalData ? $.ajax ({
-			url: '//www.baidu.com/ups/submit/addtips/?product=ps&tips=' + encodeURIComponent (t) + '&_r=' +
-					(new Date).getTime (),
+		for (tmpName in options) options.hasOwnProperty(tmpName) && 'duRobotState' !== tmpName &&
+		o.push('"' + tmpName + '":"' + options[tmpName] + '"')
+		var t = '{' + o.join(',') + '}'
+		bds.comm.personalData ? $.ajax({
+			url: '//www.baidu.com/ups/submit/addtips/?product=ps&tips=' + encodeURIComponent(t) + '&_r=' +
+					(new Date).getTime(),
 			success: function () {
-				writeCookie (), 'function' == typeof e && e ()
+				writeCookie(), 'function' == typeof e && e()
 			},
-		}) : (writeCookie (), 'function' == typeof e && setTimeout (e, 0))
+		}) : (writeCookie(), 'function' == typeof e && setTimeout(e, 0))
 	}
 
 	function set (e, o) {
@@ -20214,41 +20223,41 @@ var Cookie = {
 	}
 
 	function writeCookie () {
-		if ( options.hasOwnProperty ('sugSet') ) {
+		if (options.hasOwnProperty('sugSet')) {
 			var e = '0' == options.sugSet ? '0' : '3'
-			clearCookie ('sug'), Cookie.set ('sug', e, document.domain, '/', expire30y)
+			clearCookie('sug'), Cookie.set('sug', e, document.domain, '/', expire30y)
 		}
-		if ( options.hasOwnProperty ('sugStoreSet') ) {
+		if (options.hasOwnProperty('sugStoreSet')) {
 			var e = 0 == options.sugStoreSet ? '0' : '1'
-			clearCookie ('sugstore'), Cookie.set ('sugstore', e, document.domain, '/', expire30y)
+			clearCookie('sugstore'), Cookie.set('sugstore', e, document.domain, '/', expire30y)
 		}
-		if ( options.hasOwnProperty ('isSwitch') ) {
+		if (options.hasOwnProperty('isSwitch')) {
 			var o = { 0: '2', 1: '0', 2: '1' }, e = o[options.isSwitch]
-			clearCookie ('ORIGIN'), Cookie.set ('ORIGIN', e, document.domain, '/', expire30y)
+			clearCookie('ORIGIN'), Cookie.set('ORIGIN', e, document.domain, '/', expire30y)
 		}
-		if ( options.hasOwnProperty ('imeSwitch') ) {
+		if (options.hasOwnProperty('imeSwitch')) {
 			var e = options.imeSwitch
-			clearCookie ('bdime'), Cookie.set ('bdime', e, document.domain, '/', expire30y)
+			clearCookie('bdime'), Cookie.set('bdime', e, document.domain, '/', expire30y)
 		}
 	}
 
 	function writeBAIDUID () {
-		var e, o, t, i = Cookie.get ('BAIDUID');
-		/FG=(\d+)/.test (i) && (o = RegExp.$1), /SL=(\d+)/.test (i) && (t = RegExp.$1), /NR=(\d+)/.test (i) &&
-		(e = RegExp.$1), options.hasOwnProperty ('resultNum') && (e = options.resultNum), options.hasOwnProperty (
-				'resultLang') && (t = options.resultLang), Cookie.set ('BAIDUID',
-				i.replace (/:.*$/, '') + ('undefined' != typeof t ? ':SL=' + t : '') +
+		var e, o, t, i = Cookie.get('BAIDUID');
+		/FG=(\d+)/.test(i) && (o = RegExp.$1), /SL=(\d+)/.test(i) && (t = RegExp.$1), /NR=(\d+)/.test(i) &&
+		(e = RegExp.$1), options.hasOwnProperty('resultNum') && (e = options.resultNum), options.hasOwnProperty(
+				'resultLang') && (t = options.resultLang), Cookie.set('BAIDUID',
+				i.replace(/:.*$/, '') + ('undefined' != typeof t ? ':SL=' + t : '') +
 				('undefined' != typeof e ? ':NR=' + e : '') + ('undefined' != typeof o ? ':FG=' + o : ''), '.baidu.com',
 				'/', expire30y, !0)
 	}
 
 	function clearCookie (e) {
-		Cookie.clear (e, '/'), Cookie.clear (e, '/', document.domain), Cookie.clear (e, '/',
-				'.' + document.domain), Cookie.clear (e, '/', '.baidu.com')
+		Cookie.clear(e, '/'), Cookie.clear(e, '/', document.domain), Cookie.clear(e, '/',
+				'.' + document.domain), Cookie.clear(e, '/', '.baidu.com')
 	}
 
 	function reset (e) {
-		options = defaultOptions, save (e)
+		options = defaultOptions, save(e)
 	}
 
 	var defaultOptions = {
@@ -20262,61 +20271,61 @@ var Cookie = {
 		resultLang: 0,
 		duRobotState: '000',
 	}, options = {}, tmpName, expire30y = new Date
-	expire30y.setTime (expire30y.getTime () + 94608e7)
+	expire30y.setTime(expire30y.getTime() + 94608e7)
 	try {
-		if ( bds && bds.comm && bds.comm.personalData ) {
-			if ( 'string' == typeof bds.comm.personalData &&
-			(bds.comm.personalData = eval ('(' + bds.comm.personalData + ')')), !bds.comm.personalData ) return
-			for ( tmpName in bds.comm.personalData ) defaultOptions.hasOwnProperty (tmpName) &&
-			bds.comm.personalData.hasOwnProperty (tmpName) && 'SUCCESS' == bds.comm.personalData[tmpName].ErrMsg &&
+		if (bds && bds.comm && bds.comm.personalData) {
+			if ('string' == typeof bds.comm.personalData &&
+			(bds.comm.personalData = eval('(' + bds.comm.personalData + ')')), !bds.comm.personalData) return
+			for (tmpName in bds.comm.personalData) defaultOptions.hasOwnProperty(tmpName) &&
+			bds.comm.personalData.hasOwnProperty(tmpName) && 'SUCCESS' == bds.comm.personalData[tmpName].ErrMsg &&
 			(options[tmpName] = bds.comm.personalData[tmpName].value)
 		}
 		try {
-			parseInt (options.resultNum) || delete options.resultNum, parseInt (options.resultLang) || '0' ==
+			parseInt(options.resultNum) || delete options.resultNum, parseInt(options.resultLang) || '0' ==
 			options.resultLang || delete options.resultLang
 		} catch (e) {
 		}
-		writeCookie (), 'sugSet' in options || (options.sugSet = 3 != Cookie.get ('sug', 3) ? 0 : 1), 'sugStoreSet' in
-		options || (options.sugStoreSet = Cookie.get ('sugstore', 0))
-		var BAIDUID = Cookie.get ('BAIDUID')
+		writeCookie(), 'sugSet' in options || (options.sugSet = 3 != Cookie.get('sug', 3) ? 0 : 1), 'sugStoreSet' in
+		options || (options.sugStoreSet = Cookie.get('sugstore', 0))
+		var BAIDUID = Cookie.get('BAIDUID')
 		'resultNum' in options ||
-		(options.resultNum = /NR=(\d+)/.test (BAIDUID) && RegExp.$1 ? parseInt (RegExp.$1) : 10), 'resultLang' in
+		(options.resultNum = /NR=(\d+)/.test(BAIDUID) && RegExp.$1 ? parseInt(RegExp.$1) : 10), 'resultLang' in
 		options ||
-		(options.resultLang = /SL=(\d+)/.test (BAIDUID) && RegExp.$1 ? parseInt (RegExp.$1) : 0), 'isSwitch' in
+		(options.resultLang = /SL=(\d+)/.test(BAIDUID) && RegExp.$1 ? parseInt(RegExp.$1) : 0), 'isSwitch' in
 		options ||
-		(options.isSwitch = 2 == Cookie.get ('ORIGIN', 0) ? 0 : 1 == Cookie.get ('ORIGIN', 0) ? 2 : 1), 'imeSwitch' in
-		options || (options.imeSwitch = Cookie.get ('bdime', 0))
+		(options.isSwitch = 2 == Cookie.get('ORIGIN', 0) ? 0 : 1 == Cookie.get('ORIGIN', 0) ? 2 : 1), 'imeSwitch' in
+		options || (options.imeSwitch = Cookie.get('bdime', 0))
 	} catch (e) {
 	}
 	window.UPS = { writeBAIDUID: writeBAIDUID, reset: reset, get: get, set: set, save: save }
-} (), function () {
-	require (['modules/monitor/js-except'], function (e) {
-		e.listenerExcept ()
+}(), function () {
+	require(['modules/monitor/js-except'], function (e) {
+		e.listenerExcept()
 	})
 	var e = 'https://pss.bdstatic.com/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js';
 	('Mac68K' == navigator.platform || 'MacPPC' == navigator.platform || 'Macintosh' == navigator.platform ||
 			'MacIntel' == navigator.platform) &&
-	(e = 'https://pss.bdstatic.com/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js'), setTimeout (
+	(e = 'https://pss.bdstatic.com/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js'), setTimeout(
 			function () {
-				$.ajax ({ url: e, cache: !0, dataType: 'script' })
+				$.ajax({ url: e, cache: !0, dataType: 'script' })
 			}, 0)
 	var o = navigator && navigator.userAgent ? navigator.userAgent : '',
 			t = document && document.cookie ? document.cookie : '',
-			i = !!(o.match (/(msie [2-8])/i) || o.match (/windows.*safari/i) && !o.match (/chrome/i) ||
-					o.match (/(linux.*firefox)/i) || o.match (/Chrome\/29/i) || o.match (/mac os x.*firefox/i) ||
-					t.match (/\bISSW=1/) || 0 == UPS.get ('isSwitch'))
+			i = !!(o.match(/(msie [2-8])/i) || o.match(/windows.*safari/i) && !o.match(/chrome/i) ||
+					o.match(/(linux.*firefox)/i) || o.match(/Chrome\/29/i) || o.match(/mac os x.*firefox/i) ||
+					t.match(/\bISSW=1/) || 0 == UPS.get('isSwitch'))
 	bds && bds.comm &&
 	(bds.comm.supportis = !i, bds.comm.isui = !0), window.__restart_confirm_timeout = !0, window.__confirm_timeout = 8e3, window.__disable_is_guide = !0, window.__disable_swap_to_empty = !0, window.__switch_add_mask = !0, bds.comm.newindex &&
-	$ (window).on ('index_off', function () {
-		$ ('<div class="c-tips-container" id="c-tips-container"></div>').
-				insertAfter ('#wrapper'), window.__sample_dynamic_tab && $ ('#s_tab').remove ()
-	}), bds.comm && bds.comm.ishome && Cookie.get ('H_PS_PSSID') && (bds.comm.indexSid = Cookie.get ('H_PS_PSSID'))
-	var n = $ (document).find ('#s_tab').find ('a')
-	n && n.length > 0 && n.each (function (e, o) {
-		o.innerHTML && o.innerHTML.match (/新闻/) &&
-		(o.innerHTML = '资讯', o.href = '//www.baidu.com/s?rtt=1&bsst=1&cl=2&tn=news&word=', o.setAttribute ('sync', !0))
+	$(window).on('index_off', function () {
+		$('<div class="c-tips-container" id="c-tips-container"></div>').
+				insertAfter('#wrapper'), window.__sample_dynamic_tab && $('#s_tab').remove()
+	}), bds.comm && bds.comm.ishome && Cookie.get('H_PS_PSSID') && (bds.comm.indexSid = Cookie.get('H_PS_PSSID'))
+	var n = $(document).find('#s_tab').find('a')
+	n && n.length > 0 && n.each(function (e, o) {
+		o.innerHTML && o.innerHTML.match(/新闻/) &&
+		(o.innerHTML = '资讯', o.href = '//www.baidu.com/s?rtt=1&bsst=1&cl=2&tn=news&word=', o.setAttribute('sync', !0))
 	})
-} ()</script>
+}()</script>
 <script src="https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/polyfill_9354efa.js"
         type="text/javascript"></script>
 <script src="https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_2b213cf.js"
@@ -20383,78 +20392,78 @@ var Cookie = {
 			},
 		}
 		var nodePlaceholder = '{"bundles": {"search-ui-pc/core_ffbd457":["search-ui-pc/WujiContainer/WujiContainer_90b5ed5","search-ui-pc/WujiContainer/WujiComponent_e804f5a","search-ui-pc/Title/Title_1cf415d","search-ui-pc/Row/Row_737bddc","search-ui-pc/Row/Span_adb51c7","search-ui-pc/Label/Label_d8edf51","search-ui-pc/Image/Image_1767b44","search-ui-pc/Board/Board_a98a42e","search-ui-pc/Link/Link_53f45fd","search-ui-pc/Slink/Slink_55cf830","search-ui-pc/SlinkItem/SlinkItem_160d01b"],"search-ui-pc/enhance_3d78938":["search-ui-pc/Audio/Audio_862e212","search-ui-pc/AudioBubble/AudioBubble_474c428","search-ui-pc/Button/Button_7cd58b7","search-ui-pc/Calendar/Calendar_a625ffc","search-ui-pc/Checkbox/Checkbox_90fb951","search-ui-pc/Fold/Fold_efbb9ff","search-ui-pc/ImageSet/ImageSet_85e4e72","search-ui-pc/ImageVideo/ImageVideo_404f20d","search-ui-pc/ImgContent/ImgContent_0cde1c8","search-ui-pc/Input/Input_af9b40d","search-ui-pc/More/More_85e08b3","search-ui-pc/PageNav/PageNav_b787678","search-ui-pc/Popup/Popup_9ccac0a","search-ui-pc/Radio/Radio_1795cf0","search-ui-pc/Radio/RadioGroup_2698804","search-ui-pc/Rank/Rank_0ba0b03","search-ui-pc/Scroll/Scroll_c9e6b59","search-ui-pc/ScrollVideo/ScrollVideo_d7d9a31","search-ui-pc/Select/Select_0e0debc","search-ui-pc/Source/Source_cf06d97","search-ui-pc/Star/Star_412b87c","search-ui-pc/Swiper/Swiper_311c941","search-ui-pc/Tab/Tab_f436e5a","search-ui-pc/Tab/TabItem_8c06175","search-ui-pc/Table/Table_28b033e","search-ui-pc/Table/TableColumn_1dba738","search-ui-pc/Table/TableRow_e454bd2","search-ui-pc/Tag/Tag_2112819","search-ui-pc/TagSearch/TagSearch_ab929de","search-ui-pc/TextLine/TextLine_68a2402","search-ui-pc/Toast/Toast_fb74d94","search-ui-pc/Tts/Tts_1dcf257","search-ui-pc/Video/Video_f5154c8","search-ui-pc/VideoArticle/VideoArticle_82968e5"]}, "paths": {"search-ui-pc/core_ffbd457":"https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/cache/static/search-ui-pc/core_ffbd457","search-ui-pc/enhance_3d78938":"https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/cache/static/search-ui-pc/enhance_3d78938"}}'
-		if ( typeof nodePlaceholder === 'string' ) {
+		if (typeof nodePlaceholder === 'string') {
 			try {
-				nodePlaceholder = JSON.parse (nodePlaceholder)
-				require.config (nodePlaceholder)
-				window.searchUiPcNode = processData (nodePlaceholder)
+				nodePlaceholder = JSON.parse(nodePlaceholder)
+				require.config(nodePlaceholder)
+				window.searchUiPcNode = processData(nodePlaceholder)
 			} catch (e) {
 			}
 		}
-		require.config (searchMap)
-		window.searchUiPc = processData (searchMap)
+		require.config(searchMap)
+		window.searchUiPc = processData(searchMap)
 
 		function processData (config) {
-			if ( !config || !config.bundles ) {
+			if (!config || !config.bundles) {
 				return
 			}
 			var bundles = config.bundles
 			var componentList = []
 			var list = {}
-			for ( var key in bundles ) {
-				componentList = componentList.concat (bundles[key])
+			for (var key in bundles) {
+				componentList = componentList.concat(bundles[key])
 			}
-			componentList.forEach (function (item, index) {
-				var key = item.split ('_')[0]
-				key = key.match (/^search-ui-pc\/(.+)/)[1].replace (/\//g, '_')
+			componentList.forEach(function (item, index) {
+				var key = item.split('_')[0]
+				key = key.match(/^search-ui-pc\/(.+)/)[1].replace(/\//g, '_')
 				list[key] = item
 			})
 			return list
 		}
-	}) ()
+	})()
 </script>
 
 
 <script>
-	A.merge ('url', function () {
-		A.setup (function () {
+	A.merge('url', function () {
+		A.setup(function () {
 			function mouseover (e) {
-				clearTimeout (tipout)
+				clearTimeout(tipout)
 				var e = e || event
 				this.parentNode.style.zIndex = _this.p1 + 2
-				var classNameEnd = this.className.slice (-8), $tips = _this.find ('.op_url_tips_' + classNameEnd)
-				if ( $tips.length > 0 ) $tips.css ('left', this.offsetLeft), $tips.hover (function () {
-					clearTimeout (tipout), $tips.removeClass ('op_url_hidden')
+				var classNameEnd = this.className.slice(-8), $tips = _this.find('.op_url_tips_' + classNameEnd)
+				if ($tips.length > 0) $tips.css('left', this.offsetLeft), $tips.hover(function () {
+					clearTimeout(tipout), $tips.removeClass('op_url_hidden')
 				}, function () {
-					clearTimeout (tipout), tipout = setTimeout (function () {
-						$tips.addClass ('op_url_hidden')
+					clearTimeout(tipout), tipout = setTimeout(function () {
+						$tips.addClass('op_url_hidden')
 					}, 100)
-				}), tipover = setTimeout (function () {
-					$tips.removeClass ('op_url_hidden')
+				}), tipover = setTimeout(function () {
+					$tips.removeClass('op_url_hidden')
 				}, 100)
 			}
 
 			function mouseout () {
-				clearTimeout (tipover)
-				var classNameEnd = this.className.slice (-8)
+				clearTimeout(tipover)
+				var classNameEnd = this.className.slice(-8)
 				this.parentNode.style.zIndex = _this.p1 + 2
-				var $tips = _this.find ('.op_url_tips_' + classNameEnd)
-				if ( $tips.length > 0 ) tipout = setTimeout (function () {
-					$tips.addClass ('op_url_hidden')
+				var $tips = _this.find('.op_url_tips_' + classNameEnd)
+				if ($tips.length > 0) tipout = setTimeout(function () {
+					$tips.addClass('op_url_hidden')
 				}, 100)
 			}
 
-			var _this = this, tipover, tipout, $renzheng = _this.find ('.op_url_renzheng')
-			if ( $renzheng.length > 0 ) $renzheng.mouseover (mouseover), $renzheng.mouseout (mouseout)
-			var $safeico = _this.find ('.op_url_safeico_new')
-			if ( $safeico.length > 0 ) $safeico.mouseover (mouseover), $safeico.mouseout (mouseout)
-			if ( _this.find ('.op_url_guanwang').length < 1 && $renzheng.length < 1 ) _this.find (
-					'.op_url_showurl_url').css ('marginLeft', '0px')
+			var _this = this, tipover, tipout, $renzheng = _this.find('.op_url_renzheng')
+			if ($renzheng.length > 0) $renzheng.mouseover(mouseover), $renzheng.mouseout(mouseout)
+			var $safeico = _this.find('.op_url_safeico_new')
+			if ($safeico.length > 0) $safeico.mouseover(mouseover), $safeico.mouseout(mouseout)
+			if (_this.find('.op_url_guanwang').length < 1 && $renzheng.length < 1) _this.find(
+					'.op_url_showurl_url').css('marginLeft', '0px')
 			this.dispose = function () {
-				clearTimeout (tipout), clearTimeout (tipover)
+				clearTimeout(tipout), clearTimeout(tipover)
 			}
-			var $socialArea = _this.find ('.op_url_social_area')
-			new bds.se.tip ({
+			var $socialArea = _this.find('.op_url_social_area')
+			new bds.se.tip({
 				target: $socialArea,
 				align: 'left',
 				mode: 'over',
@@ -20464,46 +20473,46 @@ var Cookie = {
 			})
 		})
 	})
-	A.merge ('bk_polysemy', function () {
-		A.setup (function () {
+	A.merge('bk_polysemy', function () {
+		A.setup(function () {
 			function isInVisibleArea (elem) {
-				if ( !elem || !elem.getBoundingClientRect ) return false
-				var rect = elem.getBoundingClientRect ()
+				if (!elem || !elem.getBoundingClientRect) return false
+				var rect = elem.getBoundingClientRect()
 				return rect.top < window.innerHeight && rect.bottom > 0
 			}
 
 			function getVideos (pn, callback) {
-				$.ajax ({
+				$.ajax({
 					url: videoUrl,
 					data: { lemmaId: _this.data.lemmaid, from: 'aladdin', scene: 'pc', pn: pn, rn: videoRn },
 					dataType: 'jsonp',
 					success: function (res) {
-						if ( 0 === res.errno && res.data && res.data.list && res.data.list.length ) callback (
-								res) else callback (false)
+						if (0 === res.errno && res.data && res.data.list && res.data.list.length) callback(
+								res) else callback(false)
 					},
 					error: function () {
-						callback (false)
+						callback(false)
 					},
 				})
 			}
 
 			function handleBrandVideo (url) {
-				if ( 0 === brandVideo.length ) window.open (url) else try {
-					var list = brandVideo, showVideo = list.splice (0, 1)
-					$videoPlayer.attr ('src', showVideo[0].content.playUrl.mp4), videoPlay (list)
+				if (0 === brandVideo.length) window.open(url) else try {
+					var list = brandVideo, showVideo = list.splice(0, 1)
+					$videoPlayer.attr('src', showVideo[0].content.playUrl.mp4), videoPlay(list)
 				} catch (e) {
-					window.open (url)
+					window.open(url)
 				}
 			}
 
 			function initRecommendVideo (list) {
-				if ( list.length ) {
+				if (list.length) {
 					recommendLength = list.length > recommendLength ? recommendLength : list.length
-					for ( var page = Math.ceil (recommendLength / recommendPer), html = '', dotHtml = '', i = 0; i <
-					recommendPer * page; i++ ) {
-						if ( html += i % recommendPer === 0
+					for (var page = Math.ceil(recommendLength / recommendPer), html = '', dotHtml = '', i = 0; i <
+					recommendPer * page; i++) {
+						if (html += i % recommendPer === 0
 								? '<li class="c-clearfix op-bk-polysemy-recommend__slide">'
-								: '', i >= recommendLength ) html += '<a class="c-span' +
+								: '', i >= recommendLength) html += '<a class="c-span' +
 								(1 == _this.data.newStyle ? '3' : '6') + ' op-bk-polysemy-recommend__item"></a>' else {
 							var baseUrl = _this.data.url + '&secondId=' + list[i].secondId
 							html += [
@@ -20513,32 +20522,32 @@ var Cookie = {
 								list[i].content.cover.url + ') no-repeat center center;background-size: cover;"></div>',
 								'<p class="op-bk-polysemy-recommend__title">' + list[i].content.title + '</p>',
 								'</a>',
-							].join ('')
+							].join('')
 						}
 						html += i % recommendPer === recommendPer - 1 ? '</li>' : ''
 					}
-					if ( $recommendWrap.append (html), page > 1 ) {
-						for ( var i = 0; i < page; i++ ) dotHtml += '<i class="op-bk-polysemy__dots-item"></i>'
-						$dotWrap.append (dotHtml)
+					if ($recommendWrap.append(html), page > 1) {
+						for (var i = 0; i < page; i++) dotHtml += '<i class="op-bk-polysemy__dots-item"></i>'
+						$dotWrap.append(dotHtml)
 					}
-					_this.find ('.op-bk-polysemy-recommend__item').on ('click', function () {
-						clickstream.logActClick ({
+					_this.find('.op-bk-polysemy-recommend__item').on('click', function () {
+						clickstream.logActClick({
 							page: 'pc-polysemy',
 							element: 'video-recommend-clk',
 							video_id: _this.data.secondid,
 							lemmaid: _this.data.lemmaid,
 						})
 					})
-				} else _this.find ('.op-bk-polysemy-video__control').addClass ('empty')
+				} else _this.find('.op-bk-polysemy-video__control').addClass('empty')
 			}
 
 			function videoPlay (list) {
-				if ( $imgWrap.hide (), $contentWrap ) $contentWrap.removeClass ('c-span9').
-						removeClass ('c-span18').
-						addClass ('c-span' + (1 == _this.data.newStyle ? '12' : '24'))
-				if ( $videoWrap.show (), $video.play (), $video.controls = true, 0 ===
-				$recommendWrap.children ().length ) initRecommendVideo (list)
-				clickstream.logActClick ({
+				if ($imgWrap.hide(), $contentWrap) $contentWrap.removeClass('c-span9').
+						removeClass('c-span18').
+						addClass('c-span' + (1 == _this.data.newStyle ? '12' : '24'))
+				if ($videoWrap.show(), $video.play(), $video.controls = true, 0 ===
+				$recommendWrap.children().length) initRecommendVideo(list)
+				clickstream.logActClick({
 					page: 'pc-polysemy',
 					element: 'video-play-clk',
 					video_id: _this.data.secondid,
@@ -20547,7 +20556,7 @@ var Cookie = {
 			}
 
 			function logActualPlay () {
-				clickstream.logActVideo ({
+				clickstream.logActVideo({
 					page: 'pc-polysemy',
 					video_action: 'play',
 					video_id: _this.data.secondid,
@@ -20557,44 +20566,44 @@ var Cookie = {
 				})
 			}
 
-			var _this = this, $focusrightf = _this.find ('.op-bk-polysemy-focusrightf:first span')
-			if ( $focusrightf.length ) $focusrightf.last ().remove ()
+			var _this = this, $focusrightf = _this.find('.op-bk-polysemy-focusrightf:first span')
+			if ($focusrightf.length) $focusrightf.last().remove()
 			window.clickstream = { init: {} }
 			var clickstream = window.clickstream
-			require.config (
+			require.config(
 					{ paths: { clickstream: 'https://bkssl.bdimg.com/static/clickstream-mis/dist/static/js/index' } })
-			var $playBtn = _this.find ('.op-bk-polysemy-play')[0], playBtnShowed = false
-			require (['clickstream'], function (cl) {
-				if ( cl.init ({
+			var $playBtn = _this.find('.op-bk-polysemy-play')[0], playBtnShowed = false
+			require(['clickstream'], function (cl) {
+				if (cl.init({
 					appname: 'baike',
 					platform: 'web',
 					device: 'pc',
-				}), clickstream = cl, isInVisibleArea ($playBtn) ) playBtnShowed = true, cl.logViewEl ({
+				}), clickstream = cl, isInVisibleArea($playBtn)) playBtnShowed = true, cl.logViewEl({
 					page: 'pc-polysemy',
 					element: 'video-play-show',
 					video_id: _this.data.secondid,
 					lemmaid: _this.data.lemmaid,
 				})
-			}), window.addEventListener ('scroll', function () {
-				if ( !playBtnShowed && isInVisibleArea ($playBtn) ) playBtnShowed = true, clickstream.logViewEl ({
+			}), window.addEventListener('scroll', function () {
+				if (!playBtnShowed && isInVisibleArea($playBtn)) playBtnShowed = true, clickstream.logViewEl({
 					page: 'pc-polysemy',
 					element: 'video-play-show',
 					video_id: _this.data.secondid,
 					lemmaid: _this.data.lemmaid,
 				})
 			})
-			var $imgWrap = _this.find ('.op-bk-polysemy-imgWrap'),
-					$videoWrap = _this.find ('.op-bk-polysemy-video__wrap'),
-					$videoPlayer = _this.find ('.op-bk-polysemy-video'), $video = $videoPlayer.get (0),
-					$videoLayer = _this.find ('.op-bk-polysemy-video__layer'),
-					$recommendWrap = _this.find ('.op-bk-polysemy-video__recommend'),
-					$contentWrap = _this.find ('.op-bk-polysemy-piccontent'),
-					$dotWrap = _this.find ('.op-bk-polysemy__dots'),
+			var $imgWrap = _this.find('.op-bk-polysemy-imgWrap'),
+					$videoWrap = _this.find('.op-bk-polysemy-video__wrap'),
+					$videoPlayer = _this.find('.op-bk-polysemy-video'), $video = $videoPlayer.get(0),
+					$videoLayer = _this.find('.op-bk-polysemy-video__layer'),
+					$recommendWrap = _this.find('.op-bk-polysemy-video__recommend'),
+					$contentWrap = _this.find('.op-bk-polysemy-piccontent'),
+					$dotWrap = _this.find('.op-bk-polysemy__dots'),
 					timer = null, duration = 0, played3Seconds = false, playedAll = false, hasCarousel = false,
 					videoUrl = 'https://baike.baidu.com/api/second/video/list', videoRn = 10, recommendPer = 3,
 					recommendLength = 4 * recommendPer, brandVideo, hasBrandVideo = false
 			try {
-				brandVideo = JSON.parse (_this.data.brandVideo), hasBrandVideo = brandVideo.length > 0
+				brandVideo = JSON.parse(_this.data.brandVideo), hasBrandVideo = brandVideo.length > 0
 			} catch (e) {
 			}
 			var carousel = {
@@ -20608,275 +20617,275 @@ var Cookie = {
 					btnNext: '.carousel-next',
 					btnDots: '.carousel-dots',
 				}, width: 0, timer: null, init: function (d, b) {
-					this.opts = $.extend (this.opts, b), this.$wrap = d.find (this.opts.wrap), this.$slide = d.find (
-							this.opts.slide), this.$btnPrev = d.find (this.opts.btnPrev), this.$btnNext = d.find (
-							this.opts.btnNext), this.$btnDots = d.find (
-							this.opts.btnDots), this.width = this.$slide.outerWidth (
+					this.opts = $.extend(this.opts, b), this.$wrap = d.find(this.opts.wrap), this.$slide = d.find(
+							this.opts.slide), this.$btnPrev = d.find(this.opts.btnPrev), this.$btnNext = d.find(
+							this.opts.btnNext), this.$btnDots = d.find(
+							this.opts.btnDots), this.width = this.$slide.outerWidth(
 							true), this.len = this.$slide.length, this.index = this.opts.index < 0 || this.opts.index >
 					this.len - 1 ? 0 : this.opts.index
-					var c = this.$slide.first ().clone (), a = this.$slide.last ().clone ()
-					this.$wrap.prepend (a).append (c).css ({
+					var c = this.$slide.first().clone(), a = this.$slide.last().clone()
+					this.$wrap.prepend(a).append(c).css({
 						width: (this.len + 2) * this.width,
 						left: -(this.index + 1) * this.width,
-					}), this.eventBind (), this.setDots (), this.loop ()
+					}), this.eventBind(), this.setDots(), this.loop()
 				}, loop: function () {
 					var a = this
-					if ( a.opts.auto ) a.timer = setInterval (function () {
-						a.animate (-a.width)
+					if (a.opts.auto) a.timer = setInterval(function () {
+						a.animate(-a.width)
 					}, a.opts.time)
 				}, animate: function (c) {
 					var a = this
-					if ( this.$wrap.is (':animated') ) return false else {
-						var b = parseInt (this.$wrap.css ('left'))
-						c += b, this.$wrap.animate ({ left: c }, 500, function () {
-							if ( c < 0 && c < -a.len * a.width ) a.$wrap.css ('left', -a.width) else if ( c >= 0 && c >
-									-a.width ) a.$wrap.css ('left', -a.len * a.width)
-							a.index = parseInt (a.$wrap.css ('left')) / -a.width - 1, a.setDots ()
+					if (this.$wrap.is(':animated')) return false else {
+						var b = parseInt(this.$wrap.css('left'))
+						c += b, this.$wrap.animate({ left: c }, 500, function () {
+							if (c < 0 && c < -a.len * a.width) a.$wrap.css('left', -a.width) else if (c >= 0 && c >
+									-a.width) a.$wrap.css('left', -a.len * a.width)
+							a.index = parseInt(a.$wrap.css('left')) / -a.width - 1, a.setDots()
 						})
 					}
 				}, setDots: function (a) {
-					if ( void 0 == a ) a = this.index else this.index = a < 0 || a > this.len - 1 ? this.index : a
-					this.$btnDots.removeClass ('active').eq (a).addClass ('active')
+					if (void 0 == a) a = this.index else this.index = a < 0 || a > this.len - 1 ? this.index : a
+					this.$btnDots.removeClass('active').eq(a).addClass('active')
 				}, eventBind: function () {
 					var a = this
-					this.$btnPrev.click (function () {
-						clearInterval (a.timer), a.animate (a.width), a.loop ()
-					}), this.$btnNext.click (function () {
-						clearInterval (a.timer), a.animate (-a.width), a.loop ()
-					}), this.$btnDots.each (function (b) {
-						$ (this).click (function () {
-							if ( $ (this).hasClass ('active') ) return false else clearInterval (a.timer), a.animate (
-									-(b - a.index) * a.width), a.loop ()
+					this.$btnPrev.click(function () {
+						clearInterval(a.timer), a.animate(a.width), a.loop()
+					}), this.$btnNext.click(function () {
+						clearInterval(a.timer), a.animate(-a.width), a.loop()
+					}), this.$btnDots.each(function (b) {
+						$(this).click(function () {
+							if ($(this).hasClass('active')) return false else clearInterval(a.timer), a.animate(
+									-(b - a.index) * a.width), a.loop()
 						})
-					}), this.$slide.hover (function () {
-						clearInterval (a.timer)
+					}), this.$slide.hover(function () {
+						clearInterval(a.timer)
 					}, function () {
-						a.loop ()
+						a.loop()
 					})
 				},
 			}
-			$imgWrap.on ('click', function () {
-				if ( document.createElement ('video').play ) if ( !$videoPlayer.attr (
-						'src') ) if ( hasBrandVideo ) handleBrandVideo ($imgWrap.data ('url'))
-				else getVideos (1, function (res) {
-						if ( !res ) window.open ($imgWrap.data ('url')) else try {
-							var list = res.data.list, showVideo = list.splice (0, 1)
-							if ( $videoPlayer.attr ('src',
-									showVideo[0].content.playUrl.mp4), res.data.hasMore ) getVideos (2,
+			$imgWrap.on('click', function () {
+				if (document.createElement('video').play) if (!$videoPlayer.attr(
+						'src')) if (hasBrandVideo) handleBrandVideo($imgWrap.data('url'))
+				else getVideos(1, function (res) {
+						if (!res) window.open($imgWrap.data('url')) else try {
+							var list = res.data.list, showVideo = list.splice(0, 1)
+							if ($videoPlayer.attr('src',
+									showVideo[0].content.playUrl.mp4), res.data.hasMore) getVideos(2,
 									function (response) {
-										videoPlay (list.concat (response.data.list))
-									}) else videoPlay (list)
+										videoPlay(list.concat(response.data.list))
+									}) else videoPlay(list)
 						} catch (e) {
-							window.open ($imgWrap.data ('url'))
+							window.open($imgWrap.data('url'))
 						}
-					}) else videoPlay ([]) else window.open ($imgWrap.data ('url'))
-			}), $video.addEventListener ('play', function () {
-				$video.controls = true, $videoLayer.hide (), timer = setInterval (function () {
-					if ( duration += 1, !played3Seconds && duration >=
-					3 ) played3Seconds = true, clickstream.logActVideo ({
+					}) else videoPlay([]) else window.open($imgWrap.data('url'))
+			}), $video.addEventListener('play', function () {
+				$video.controls = true, $videoLayer.hide(), timer = setInterval(function () {
+					if (duration += 1, !played3Seconds && duration >=
+					3) played3Seconds = true, clickstream.logActVideo({
 						page: 'pc-polysemy',
 						video_action: 'validplay',
 						video_id: _this.data.secondid,
 						lemmaid: _this.data.lemmaid,
 					})
-				}, 1e3), clearInterval (carousel.timer)
-			}), $video.addEventListener ('pause', function () {
-				clearInterval (timer)
-			}), $video.addEventListener ('timeupdate', function () {
-				if ( !playedAll && $video.currentTime > .8 *
-						$video.duration ) playedAll = true, clickstream.logActVideo ({
+				}, 1e3), clearInterval(carousel.timer)
+			}), $video.addEventListener('pause', function () {
+				clearInterval(timer)
+			}), $video.addEventListener('timeupdate', function () {
+				if (!playedAll && $video.currentTime > .8 *
+						$video.duration) playedAll = true, clickstream.logActVideo({
 					page: 'pc-polysemy',
 					video_action: 'play',
 					video_id: _this.data.secondid,
 					video_position_p: .8,
 					lemmaid: _this.data.lemmaid,
 				})
-			}), $video.addEventListener ('ended', function () {
-				if ( $video.controls = false, $videoLayer.show (), !hasCarousel && recommendLength >
-				recommendPer ) hasCarousel = true, carousel.init (_this.find ('.op-bk-polysemy-video__container'), {
+			}), $video.addEventListener('ended', function () {
+				if ($video.controls = false, $videoLayer.show(), !hasCarousel && recommendLength >
+				recommendPer) hasCarousel = true, carousel.init(_this.find('.op-bk-polysemy-video__container'), {
 					wrap: '.op-bk-polysemy-video__recommend',
 					slide: '.op-bk-polysemy-recommend__slide',
 					btnDots: '.op-bk-polysemy__dots-item',
-				}) else if ( hasCarousel ) carousel.setDots (0), carousel.$wrap.css (
-						{ left: -carousel.width }), carousel.loop ()
-				logActualPlay (), clearInterval (timer), duration = 0, played3Seconds = false, playedAll = false
-			}), _this.find ('.op-bk-polysemy-video__close').on ('click', function () {
-				if ( $video.pause (), $videoWrap.hide (), $videoLayer.hide (), $contentWrap ) $contentWrap.removeClass (
+				}) else if (hasCarousel) carousel.setDots(0), carousel.$wrap.css(
+						{ left: -carousel.width }), carousel.loop()
+				logActualPlay(), clearInterval(timer), duration = 0, played3Seconds = false, playedAll = false
+			}), _this.find('.op-bk-polysemy-video__close').on('click', function () {
+				if ($video.pause(), $videoWrap.hide(), $videoLayer.hide(), $contentWrap) $contentWrap.removeClass(
 						'c-span12').
-						removeClass ('c-span24').
-						addClass ('c-span' + (1 == _this.data.newStyle ? '9' : '18'))
-				if ( $imgWrap.show (), clearInterval (carousel.timer), clearInterval (
-						timer), !$video.ended ) logActualPlay ()
-			}), _this.find ('.op-bk-polysemy-video__replay').on ('click', function () {
-				$videoLayer.hide (), $video.controls = true, $video.play (), clearInterval (
-						carousel.timer), clickstream.logActClick ({
+						removeClass('c-span24').
+						addClass('c-span' + (1 == _this.data.newStyle ? '9' : '18'))
+				if ($imgWrap.show(), clearInterval(carousel.timer), clearInterval(
+						timer), !$video.ended) logActualPlay()
+			}), _this.find('.op-bk-polysemy-video__replay').on('click', function () {
+				$videoLayer.hide(), $video.controls = true, $video.play(), clearInterval(
+						carousel.timer), clickstream.logActClick({
 					page: 'pc-polysemy',
 					element: 'video-replay-clk',
 					video_id: _this.data.secondid,
 					lemmaid: _this.data.lemmaid,
 				})
-			}), _this.find ('.op-bk-polysemy-video__btn').on ('click', function () {
-				clickstream.logActClick ({
+			}), _this.find('.op-bk-polysemy-video__btn').on('click', function () {
+				clickstream.logActClick({
 					page: 'pc-polysemy',
 					element: 'video-enter-clk',
 					video_id: _this.data.secondid,
 					lemmaid: _this.data.lemmaid,
 				})
 			}), this.dispose = function () {
-				clearInterval (carousel.timer), clearInterval (timer)
+				clearInterval(carousel.timer), clearInterval(timer)
 			}
 		})
 	})
-	A.merge ('right_recommends_merge', function () {
-		A.setup (function () {
+	A.merge('right_recommends_merge', function () {
+		A.setup(function () {
 			function bindLayers ($btns, a) {
-				if ( bds.se && bds.se.tip ) $.each ($btns, function (i, v) {
-					var $v = $ (v), $parent = $v.parents ('.opr-recommends-merge-item'),
-							$layer = $parent.find ('.opr-recommends-merge-layer-p'),
-							$contentHtml = $layer.find ('.opr-recommends-merge-layer'), x = getX ($v)
-					$.each ($contentHtml.find ('img'), function (i, v) {
-						var $v = $ (v)
-						if ( $v.attr ('data-img') ) $v.attr ('src', $v.attr ('data-img'))
+				if (bds.se && bds.se.tip) $.each($btns, function (i, v) {
+					var $v = $(v), $parent = $v.parents('.opr-recommends-merge-item'),
+							$layer = $parent.find('.opr-recommends-merge-layer-p'),
+							$contentHtml = $layer.find('.opr-recommends-merge-layer'), x = getX($v)
+					$.each($contentHtml.find('img'), function (i, v) {
+						var $v = $(v)
+						if ($v.attr('data-img')) $v.attr('src', $v.attr('data-img'))
 					})
-					var tip = new bds.se.tip ({
+					var tip = new bds.se.tip({
 						target: v,
 						align: 'right',
 						content: $contentHtml,
 						arrow: { offset: x },
 						offset: { x: x, y: 25 },
 					})
-					obj.push ({ dom: v, tip: tip })
+					obj.push({ dom: v, tip: tip })
 				})
 			}
 
-			var _this = this, $layerbtns = _this.find ('.opr-recommends-merge-layerbtn'),
-					$moreBtn = _this.find ('.opr-recommends-merge-more-btn'),
-					$dodgeBtn = _this.find ('.opr-recommends-merge-dodge'),
-					$dodgeTip = _this.find ('.opr-recommends-merge-dodge-tip'),
-					$content = _this.find ('.opr-recommends-merge-content'), obj = [],
+			var _this = this, $layerbtns = _this.find('.opr-recommends-merge-layerbtn'),
+					$moreBtn = _this.find('.opr-recommends-merge-more-btn'),
+					$dodgeBtn = _this.find('.opr-recommends-merge-dodge'),
+					$dodgeTip = _this.find('.opr-recommends-merge-dodge-tip'),
+					$content = _this.find('.opr-recommends-merge-content'), obj = [],
 					pageFormat = bds.comm.containerSize,
 					showType = _this.data.showType, getX = function ($o) {
-						$o = $ ($o)
-						var $container = $ (_this.container),
-								x = $container.width () - ($o.offset ().left - $container.offset ().left) - $o.width (),
+						$o = $($o)
+						var $container = $(_this.container),
+								x = $container.width() - ($o.offset().left - $container.offset().left) - $o.width(),
 								maxX = 185
-						if ( x < 0 ) x = 0 else if ( x > maxX ) x = maxX
+						if (x < 0) x = 0 else if (x > maxX) x = maxX
 						return x
 					}
-			if ( $dodgeBtn[0] && function () {
-				$dodgeBtn.click (function () {
-					var $this = $ (this)
-					if ( $content.toggle (), '隐藏信息' == $this.html () ) {
-						if ( '1' == showType ) $.setCookie ('BD_CON_LEVEL', '1',
-								{ expires: 15552e6 }) else $.removeCookie ('BD_CON_LEVEL')
-						$this.html ('继续浏览'), $dodgeTip.html ('以下图片可能让您感觉不适，您可以')
+			if ($dodgeBtn[0] && function () {
+				$dodgeBtn.click(function () {
+					var $this = $(this)
+					if ($content.toggle(), '隐藏信息' == $this.html()) {
+						if ('1' == showType) $.setCookie('BD_CON_LEVEL', '1',
+								{ expires: 15552e6 }) else $.removeCookie('BD_CON_LEVEL')
+						$this.html('继续浏览'), $dodgeTip.html('以下图片可能让您感觉不适，您可以')
 					} else {
-						if ( $this.html ('隐藏信息'), '1' == showType ) $.removeCookie ('BD_CON_LEVEL') else $.setCookie (
+						if ($this.html('隐藏信息'), '1' == showType) $.removeCookie('BD_CON_LEVEL') else $.setCookie(
 								'BD_CON_LEVEL', '1', { expires: 15552e6 })
-						$dodgeTip.html ('如果以下图片让您感觉不适，您可以')
+						$dodgeTip.html('如果以下图片让您感觉不适，您可以')
 					}
 				})
-			} (), 'pc' == _this.data.platform ) bds.event.on ('se.window_resize', function () {
-				if ( bds.comm.containerSize !== pageFormat ) pageFormat = bds.comm.containerSize, $.each (obj,
+			}(), 'pc' == _this.data.platform) bds.event.on('se.window_resize', function () {
+				if (bds.comm.containerSize !== pageFormat) pageFormat = bds.comm.containerSize, $.each(obj,
 						function (i, v) {
-							var tip = v.tip, _x = getX (v.dom)
-							tip.setOffset ({ x: _x }), tip.setArrow ({ offset: _x })
+							var tip = v.tip, _x = getX(v.dom)
+							tip.setOffset({ x: _x }), tip.setArrow({ offset: _x })
 						})
-			}), bds.event.on ('se.api_tip_ready', function () {
-				bindLayers ($layerbtns)
-			}), bindLayers ($layerbtns)
-			$moreBtn.on ('click', function () {
-				var $this = $ (this), dom_this = $this[0]
-				if ( $moreTxt = $this.find ('span'), $moreIcon = $this.find ('.c-icon'), $panel = $this.parent ().
-						next ('.opr-recommends-merge-panel'), !dom_this.moreLists &&
-				(dom_this.moreLists = []), $this.hasClass ('opr-recommends-merge-close') ) {
-					if ( $moreTxt.text ('展开'), bds && bds.comm && bds.comm.samContentNewStyle ) $moreIcon.text ('')
-					else $moreIcon.removeClass ('c-icon-chevron-top').addClass ('c-icon-chevron-bottom')
-					$ (dom_this.moreLists).hide ()
+			}), bds.event.on('se.api_tip_ready', function () {
+				bindLayers($layerbtns)
+			}), bindLayers($layerbtns)
+			$moreBtn.on('click', function () {
+				var $this = $(this), dom_this = $this[0]
+				if ($moreTxt = $this.find('span'), $moreIcon = $this.find('.c-icon'), $panel = $this.parent().
+						next('.opr-recommends-merge-panel'), !dom_this.moreLists &&
+				(dom_this.moreLists = []), $this.hasClass('opr-recommends-merge-close')) {
+					if ($moreTxt.text('展开'), bds && bds.comm && bds.comm.samContentNewStyle) $moreIcon.text('')
+					else $moreIcon.removeClass('c-icon-chevron-top').addClass('c-icon-chevron-bottom')
+					$(dom_this.moreLists).hide()
 				} else {
-					if ( $moreTxt.text ('收起'), bds && bds.comm && bds.comm.samContentNewStyle ) $moreIcon.text (
-							'') else $moreIcon.addClass ('c-icon-chevron-top').removeClass ('c-icon-chevron-bottom')
-					if ( !dom_this.moreLists.length ) {
-						var $textarea = $panel.find ('.opr-recommends-merge-more-textarea'), $moreLayerBtns = []
-						$panel.append ($textarea.val ()), $textarea.remove (), dom_this.moreLists = $panel.find (
-								'.opr-recommends-merge-morelists'), $moreLayerBtns = dom_this.moreLists.find (
+					if ($moreTxt.text('收起'), bds && bds.comm && bds.comm.samContentNewStyle) $moreIcon.text(
+							'') else $moreIcon.addClass('c-icon-chevron-top').removeClass('c-icon-chevron-bottom')
+					if (!dom_this.moreLists.length) {
+						var $textarea = $panel.find('.opr-recommends-merge-more-textarea'), $moreLayerBtns = []
+						$panel.append($textarea.val()), $textarea.remove(), dom_this.moreLists = $panel.find(
+								'.opr-recommends-merge-morelists'), $moreLayerBtns = dom_this.moreLists.find(
 								'.opr-recommends-merge-layerbtn')
-						var $_imgs = dom_this.moreLists.find ('.opr-recommends-merge-img')
-						$.each ($_imgs, function (i, v) {
-							var $v = $ (v)
-							$v.attr ('src', $v.attr ('data-img'))
+						var $_imgs = dom_this.moreLists.find('.opr-recommends-merge-img')
+						$.each($_imgs, function (i, v) {
+							var $v = $(v)
+							$v.attr('src', $v.attr('data-img'))
 						})
-						var $_imgsB = dom_this.moreLists.find ('.opr-recommends-merge-imgtext')
-						if ( $_imgsB.parent ().remove (), 'pc' == _this.data.platform ) bds.event.on (
+						var $_imgsB = dom_this.moreLists.find('.opr-recommends-merge-imgtext')
+						if ($_imgsB.parent().remove(), 'pc' == _this.data.platform) bds.event.on(
 								'se.api_tip_ready', function () {
-									bindLayers ($moreLayerBtns)
-								}), bindLayers ($moreLayerBtns, 1)
-					} else $ (dom_this.moreLists).show ()
+									bindLayers($moreLayerBtns)
+								}), bindLayers($moreLayerBtns, 1)
+					} else $(dom_this.moreLists).show()
 				}
-				$this.toggleClass ('opr-recommends-merge-close')
+				$this.toggleClass('opr-recommends-merge-close')
 			})
-			var $userIcon = _this.find ('.opr-recommends-merge-user-layer-icon'),
-					$layerCon = _this.find ('.opr-recommends-merge-user-layer-con'),
-					$layerp1 = _this.find ('.opr-recommends-merge-user-layer-p1'),
-					$layerp2 = _this.find ('.opr-recommends-merge-user-layer-p2')
-			$layerCon.on ('click', function (e) {
-				e.preventDefault ()
-			}), $userIcon.hover (function () {
-				$layerCon.removeClass ('opr-recommends-merge-user-layer-hide'), ns_c && ns_c ({
+			var $userIcon = _this.find('.opr-recommends-merge-user-layer-icon'),
+					$layerCon = _this.find('.opr-recommends-merge-user-layer-con'),
+					$layerp1 = _this.find('.opr-recommends-merge-user-layer-p1'),
+					$layerp2 = _this.find('.opr-recommends-merge-user-layer-p2')
+			$layerCon.on('click', function (e) {
+				e.preventDefault()
+			}), $userIcon.hover(function () {
+				$layerCon.removeClass('opr-recommends-merge-user-layer-hide'), ns_c && ns_c({
 					item: 'right_recommends_merge',
 					act: 'user_hover',
 					qid: bds.comm.qid,
 				})
 			}, function () {
-				$layerCon.addClass ('opr-recommends-merge-user-layer-hide')
-			}), $userIcon.on ('click', function (e) {
-				e.preventDefault ()
-			}), $layerCon.hover (function () {
-				$layerCon.removeClass ('opr-recommends-merge-user-layer-hide')
+				$layerCon.addClass('opr-recommends-merge-user-layer-hide')
+			}), $userIcon.on('click', function (e) {
+				e.preventDefault()
+			}), $layerCon.hover(function () {
+				$layerCon.removeClass('opr-recommends-merge-user-layer-hide')
 			}, function () {
-				$layerCon.addClass ('opr-recommends-merge-user-layer-hide')
+				$layerCon.addClass('opr-recommends-merge-user-layer-hide')
 			})
 			var userLayerTimer
-			$layerCon.find ('button').on ('click', function () {
-				$layerp1.remove (), $layerCon.find ('button').remove (), $layerp2.text (
-						'感谢您的反馈'), userLayerTimer = setTimeout (function () {
-					$userIcon.hide (), $layerCon.css ('z-index', '999'), $layerCon.fadeOut ()
+			$layerCon.find('button').on('click', function () {
+				$layerp1.remove(), $layerCon.find('button').remove(), $layerp2.text(
+						'感谢您的反馈'), userLayerTimer = setTimeout(function () {
+					$userIcon.hide(), $layerCon.css('z-index', '999'), $layerCon.fadeOut()
 				}, 600)
 			}), _this.dispose = function () {
-				userLayerTimer && clearTimeout (userLayerTimer), $layerCon.stop ()
+				userLayerTimer && clearTimeout(userLayerTimer), $layerCon.stop()
 			}
 		})
 	})
-	A.merge ('right_toplist1', function () {
-		A.setup (function () {
-			var _this = this, $tb = _this.find ('tbody'), $refresh = _this.find ('.toplist-refresh-btn'),
-					$a = _this.find ('.FYB_RD tbody a'), currentPage = 0
-			if ( _this.data.num > 0 ) $refresh.on ('click', function (e) {
-				if ( currentPage < _this.data.num - 1 ) ++currentPage else currentPage = 0
-				$tb.hide (), $tb.eq (currentPage).show (), e.preventDefault ()
+	A.merge('right_toplist1', function () {
+		A.setup(function () {
+			var _this = this, $tb = _this.find('tbody'), $refresh = _this.find('.toplist-refresh-btn'),
+					$a = _this.find('.FYB_RD tbody a'), currentPage = 0
+			if (_this.data.num > 0) $refresh.on('click', function (e) {
+				if (currentPage < _this.data.num - 1) ++currentPage else currentPage = 0
+				$tb.hide(), $tb.eq(currentPage).show(), e.preventDefault()
 			})
-			$a.each (function (i) {
-				$a.eq (i).attr ('href', $a.eq (i).attr ('href') + '&rqid=' + window.bds.comm.qid)
+			$a.each(function (i) {
+				$a.eq(i).attr('href', $a.eq(i).attr('href') + '&rqid=' + window.bds.comm.qid)
 			})
 			var pn = 15, reRender = function () {
-				var $tr = _this.find ('tr'), reg = new RegExp ('(^|&)rsf=([^&]*)', 'i')
-				$tb.each (function (i) {
-					$tb.eq (i).html ($tr.slice (i * pn, Math.min ((i + 1) * pn), $tr.length - i * pn))
-				}), _this.data.num = Math.ceil ($tr.length / pn), $a.each (function (i) {
-					var new_href = $a.eq (i).attr ('href').replace (reg, function (value) {
-						var valueArr = value.slice (5).split ('_')
-						if ( valueArr[3] % 15 == 0 ) valueArr[1] = valueArr[3] -
-								14, valueArr[2] = valueArr[3] else if ( valueArr[1] = valueArr[3] - valueArr[3] % 15 +
+				var $tr = _this.find('tr'), reg = new RegExp('(^|&)rsf=([^&]*)', 'i')
+				$tb.each(function (i) {
+					$tb.eq(i).html($tr.slice(i * pn, Math.min((i + 1) * pn), $tr.length - i * pn))
+				}), _this.data.num = Math.ceil($tr.length / pn), $a.each(function (i) {
+					var new_href = $a.eq(i).attr('href').replace(reg, function (value) {
+						var valueArr = value.slice(5).split('_')
+						if (valueArr[3] % 15 == 0) valueArr[1] = valueArr[3] -
+								14, valueArr[2] = valueArr[3] else if (valueArr[1] = valueArr[3] - valueArr[3] % 15 +
 								1, valueArr[2] = valueArr[3] - valueArr[3] % 15 + 15, valueArr[2] >
-						$a.length ) valueArr[2] = $a.length
-						return '&rsf=' + valueArr.join ('_')
+						$a.length) valueArr[2] = $a.length
+						return '&rsf=' + valueArr.join('_')
 					})
-					$a.eq (i).attr ('href', new_href)
+					$a.eq(i).attr('href', new_href)
 				})
 			}
-			$ (window).on ('swap_end', function (e, cacheItem) {
-				if ( 1 === $ ('#con-ar').children ('.result-op').length &&
-						!$ ('#con-ar').hasClass ('nocontent') ) reRender ()
+			$(window).on('swap_end', function (e, cacheItem) {
+				if (1 === $('#con-ar').children('.result-op').length &&
+						!$('#con-ar').hasClass('nocontent')) reRender()
 			})
 		})
 	})
@@ -20886,13 +20895,13 @@ var Cookie = {
 		b64Exp: -1,
 		pdc: 0,
 	}
-	if ( bds.comm.supportis ) {
+	if (bds.comm.supportis) {
 		window.__restart_confirm_timeout = true
 		window.__confirm_timeout = 8000
 		window.__disable_is_guide = true
 		window.__disable_swap_to_empty = true
 	}
-	initPreload ({
+	initPreload({
 		'isui': true,
 		'index_form': '#form',
 		'index_kw': '#kw',
@@ -20904,7 +20913,7 @@ var Cookie = {
 
 <script type="text/javascript">
 	(function () {
-		bds.amd.addConfig ({
+		bds.amd.addConfig({
 			'paths': {
 				'search-ui/v2/core': '//www.baidu.com/cache/atom/search-ui/v2/core_4f18d6d',
 				'search-ui/v2/few': '//www.baidu.com/cache/atom/search-ui/v2/few_708d2f8',
@@ -21096,7 +21105,7 @@ var Cookie = {
 				],
 			},
 		})
-	}) ()
+	})()
 </script>
 
 

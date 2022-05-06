@@ -40,20 +40,20 @@
 <div id="result"></div>
 </body>
 <script>
-	let result = document.getElementById ('result')
+	let result = document.getElementById('result')
 	result.onmouseover = function () {
 		// 创建对象
-		let xhr = new XMLHttpRequest ()
+		let xhr = new XMLHttpRequest()
 		// 初始化请求
-		xhr.open ('POST', 'http://127.0.0.1:8000/server')
+		xhr.open('POST', 'http://127.0.0.1:8000/server')
 		//	发送请求
-		xhr.send ()
+		xhr.send()
 		//	是否正确返回
 
 		xhr.onreadystatechange = function () {
-			if ( xhr.readyState === 4 ) {
-				if ( xhr.status >= 200 && xhr.status < 300 ) {
-					console.log (xhr.response)
+			if (xhr.readyState === 4) {
+				if (xhr.status >= 200 && xhr.status < 300) {
+					console.log(xhr.response)
 					result.innerText = xhr.response
 				}
 			}

@@ -15,9 +15,9 @@ import App from './App'
 import plugins from '@/plugins'
 
 // 应用插件
-Vue.use (plugins)
+Vue.use(plugins)
 Vue.config.productionTip = false
-const vm = new Vue ({
-	el: '#app',
-	render: createElement => createElement (App),
+const vm = new Vue({
+    el: '#app',
+    render: createElement => createElement(App),
 })

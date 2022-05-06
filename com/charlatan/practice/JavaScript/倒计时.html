@@ -391,32 +391,32 @@
 
 <script>
 	window.onload = function () {
-		let box = document.getElementById ('box')
-		let spanShow = document.getElementById ('span-show')
-		let ranges = document.getElementsByClassName ('g-progress')
-		let times = document.getElementsByClassName ('time')
-		let btn_go = document.getElementById ('btn-go')
-		let box2 = document.getElementById ('box2')
+		let box = document.getElementById('box')
+		let spanShow = document.getElementById('span-show')
+		let ranges = document.getElementsByClassName('g-progress')
+		let times = document.getElementsByClassName('time')
+		let btn_go = document.getElementById('btn-go')
+		let box2 = document.getElementById('box2')
 
-		for ( let i = 0; i < ranges.length; i++ ) {
+		for (let i = 0; i < ranges.length; i++) {
 			ranges[i].onmousedown = function () {
 				ranges[i].onmousemove = function () {
 					let flag = false
 					times[i].value = ranges[i].value
-					for ( let j = 0; j < ranges.length; j++ ) {
-						if ( parseInt (ranges[j].value) === 0 ) {
+					for (let j = 0; j < ranges.length; j++) {
+						if (parseInt(ranges[j].value) === 0) {
 							flag = true
 						} else {
 							flag = false
 							break
 						}
 					}
-					if ( flag ) {
-						btn_go.classList.remove ('btn-go-show')
+					if (flag) {
+						btn_go.classList.remove('btn-go-show')
 						spanShow.style.display = 'block'
 						flag = false
 					} else {
-						btn_go.classList.add ('btn-go-show')
+						btn_go.classList.add('btn-go-show')
 						spanShow.style.display = 'none'
 						flag = true
 					}
@@ -424,20 +424,20 @@
 				ranges[i].onchange = function () {
 					let flag = false
 					times[i].value = ranges[i].value
-					for ( let j = 0; j < ranges.length; j++ ) {
-						if ( parseInt (ranges[j].value) === 0 ) {
+					for (let j = 0; j < ranges.length; j++) {
+						if (parseInt(ranges[j].value) === 0) {
 							flag = true
 						} else {
 							flag = false
 							break
 						}
 					}
-					if ( flag ) {
-						btn_go.classList.remove ('btn-go-show')
+					if (flag) {
+						btn_go.classList.remove('btn-go-show')
 						spanShow.style.display = 'block'
 						flag = false
 					} else {
-						btn_go.classList.add ('btn-go-show')
+						btn_go.classList.add('btn-go-show')
 						spanShow.style.display = 'none'
 						flag = true
 					}
@@ -448,27 +448,27 @@
 			}
 		}
 
-		for ( let i = 0; i < times.length; i++ ) {
+		for (let i = 0; i < times.length; i++) {
 
 			times[i].oninput = function () {
 				let flag = false
 				times[i].value = times[i].value >= 60 ? 60 : times[i].value
 				times[i].value = times[i].value <= 0 ? 0 : times[i].value
 				ranges[i].value = times[i].value
-				for ( let j = 0; j < ranges.length; j++ ) {
-					if ( parseInt (ranges[j].value) === 0 ) {
+				for (let j = 0; j < ranges.length; j++) {
+					if (parseInt(ranges[j].value) === 0) {
 						flag = true
 					} else {
 						flag = false
 						break
 					}
 				}
-				if ( flag ) {
-					btn_go.classList.remove ('btn-go-show')
+				if (flag) {
+					btn_go.classList.remove('btn-go-show')
 					spanShow.style.display = 'block'
 					flag = false
 				} else {
-					btn_go.classList.add ('btn-go-show')
+					btn_go.classList.add('btn-go-show')
 					flag = true
 					spanShow.style.display = 'none'
 				}
@@ -480,28 +480,28 @@
 			box2.style.height = '500px'
 			box.style.display = 'none'
 
-			let pause = document.getElementById ('pause')
-			let reset = document.getElementById ('reset')
-			let hour = document.getElementById ('span1')
-			let minute = document.getElementById ('span2')
-			let second = document.getElementById ('span3')
+			let pause = document.getElementById('pause')
+			let reset = document.getElementById('reset')
+			let hour = document.getElementById('span1')
+			let minute = document.getElementById('span2')
+			let second = document.getElementById('span3')
 			let timer
 			let index = 0
 			let flags_1 = true
-			let totalSeconds = (parseInt (ranges[0].value) * 60 * 60) + (parseInt (ranges[1].value) * 60) +
-					(parseInt (ranges[2].value))
+			let totalSeconds = (parseInt(ranges[0].value) * 60 * 60) + (parseInt(ranges[1].value) * 60) +
+					(parseInt(ranges[2].value))
 			let totalIndex = totalSeconds
 			hour.innerText = ranges[0].value.length === 1 ? '0' + ranges[0].value + ' : ' : ranges[0].value + ' : '
 			minute.innerText = ranges[1].value.length === 1 ? '0' + ranges[1].value + ' : ' : ranges[1].value + ' : '
 			second.innerText = ranges[2].value.length === 1 ? '0' + ranges[2].value : ranges[2].value
 
 			pause.onclick = function () {
-				if ( flags_1 ) {
-					clearInterval (timer)
+				if (flags_1) {
+					clearInterval(timer)
 					pause.innerText = '继续'
 					flags_1 = false
 				} else {
-					goTime ()
+					goTime()
 					pause.innerText = '暂停'
 					flags_1 = true
 				}
@@ -511,48 +511,48 @@
 				box2.style.width = '0'
 				box2.style.height = '0'
 				box.style.display = 'block'
-				btn_go.classList.remove ('btn-go-show')
+				btn_go.classList.remove('btn-go-show')
 				2
-				for ( let i = 0; i < times.length; i++ ) {
+				for (let i = 0; i < times.length; i++) {
 					times[i].value = ranges[i].value = 0
 				}
-				clearInterval (timer)
+				clearInterval(timer)
 				box2.style.background = 'conic-gradient(#c6ffb6 0, #ffcc00, red ' + 0 + '%, #c6ffb6 0)'
 
 			}
 
 			function goTime () {
-				timer = setInterval (function () {
+				timer = setInterval(function () {
 					totalSeconds--
 					index++
 
-					if ( totalSeconds === -1 ) {
-						clearInterval (timer)
-						alert ('时间到，点击确认自动重置')
+					if (totalSeconds === -1) {
+						clearInterval(timer)
+						alert('时间到，点击确认自动重置')
 						spanShow.style.display = 'block'
 						box2.style.width = '0'
 						box2.style.height = '0'
 						box.style.display = 'block'
-						btn_go.classList.remove ('btn-go-show')
+						btn_go.classList.remove('btn-go-show')
 						2
-						for ( let i = 0; i < times.length; i++ ) {
+						for (let i = 0; i < times.length; i++) {
 							times[i].value = ranges[i].value = 0
 						}
 						box2.style.background = 'conic-gradient(#c6ffb6 0, #ffcc00, red ' + 0 + '%, #c6ffb6 0)'
 					}
 
-					let h1 = parseInt (totalSeconds / 3600) === 0 ? 0 : parseInt (totalSeconds / 3600)
-					let m1 = parseInt (totalSeconds / 60 % 60) === 0 ? 0 : parseInt (totalSeconds / 60 % 60)
-					let s1 = Math.ceil (totalSeconds % 60)
+					let h1 = parseInt(totalSeconds / 3600) === 0 ? 0 : parseInt(totalSeconds / 3600)
+					let m1 = parseInt(totalSeconds / 60 % 60) === 0 ? 0 : parseInt(totalSeconds / 60 % 60)
+					let s1 = Math.ceil(totalSeconds % 60)
 					hour.innerText = h1 < 10 ? '0' + h1 + ' : ' : h1 + ' : '
 					minute.innerText = m1 < 10 ? '0' + m1 + ' : ' : m1 + ' : '
 					second.innerText = s1 < 10 ? '0' + s1 : s1
 					box2.style.background = 'conic-gradient(#c6ffb6 0, #ffcc00, red ' +
-							Math.ceil (index / totalIndex * 10000) / 100 + '%, #c6ffb6 0)'
+							Math.ceil(index / totalIndex * 10000) / 100 + '%, #c6ffb6 0)'
 				}, 1000)
 			}
 
-			goTime ()
+			goTime()
 		}
 	}
 </script>

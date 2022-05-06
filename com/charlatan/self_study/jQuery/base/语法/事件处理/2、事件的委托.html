@@ -41,16 +41,16 @@
 	 1. 点击 li 背景就会变为红色
 	 2. 点击 btn1 就添加一个 li
 	 */
-	$ (function () {
+	$(function () {
 		// let lis = $(`ul > li`).click(function () {
 		// 	this.style.backgroundColor = "red"
 		// })
-		let lis = $ (`ul`).click (function () {
-			console.log (this.target.tagName)
+		let lis = $(`ul`).click(function () {
+			console.log(this.target.tagName)
 		})
 
-		$ (`#btn`).click (function () {
-			$ (`ul`).append (`<li class="color">我是新添加的li</li>`)
+		$(`#btn`).click(function () {
+			$(`ul`).append(`<li class="color">我是新添加的li</li>`)
 		})
 	})
 

@@ -42,19 +42,19 @@
 	let a = {
 		b: function () {
 			let func = function () {
-				console.log (this.c)
-				console.log (this)
-			}.bind (this)
-			console.log (this)
-			func ()
+				console.log(this.c)
+				console.log(this)
+			}.bind(this)
+			console.log(this)
+			func()
 		},
 		c: 'Hello!',
 	}
-	a.b ()
+	a.b()
 
 	//第二种绑定方法
 	function f (y, z) {
-		console.log ('-->', this.x, y, z)
+		console.log('-->', this.x, y, z)
 		return this.x + y + z
 	}
 
@@ -63,8 +63,8 @@
 	 从第二个参数起，会依次传递给原始函数，这里的第二个参数2，即是f函数的y参数，最后调用m(3)的时候，
 	 这里的3便是最后一个参数z了，所以执行结果为1 + 2 + 3 = 6
 	 */
-	var m = f.bind ({ x: 1 }, 2)
-	console.log (m (3))
+	var m = f.bind({ x: 1 }, 2)
+	console.log(m(3))
 
 </script>
 </html>

@@ -24,10 +24,10 @@ export default {
   components: {},
   methods: {
     back () {
-      this.$router.back ()
+      this.$router.back()
     },
     go () {
-      this.$router.forward ()
+      this.$router.forward()
     },
   },
 }

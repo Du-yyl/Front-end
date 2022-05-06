@@ -2874,20 +2874,20 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	$ (function () {
+	$(function () {
 
 		//top-1
-		let top_1_download = $ (`.top-1-left-download`)
-		let top_1_li_down = $ (`#top-1-left-ul > li:eq(10)`)
-		let gouwuche_div = $ (`#top-1-right-gouwuche-down`)
-		let gouwuche_btn = $ (`#top-1-right-gouwuche-span`)
+		let top_1_download = $(`.top-1-left-download`)
+		let top_1_li_down = $(`#top-1-left-ul > li:eq(10)`)
+		let gouwuche_div = $(`#top-1-right-gouwuche-down`)
+		let gouwuche_btn = $(`#top-1-right-gouwuche-span`)
 
 		//top-2
-		let top_2_uls = $ (`#top-2-center-show > ul`)
-		let top_2_lis = $ (`#top-2-center-show > ul > li`)
-		let top_2_cen_li = $ (`#top-2-center-ul > li:nth-child(-n+7)`)
-		let top_2_show = $ (`#top-2-center-show`)
-		let top_2_input = $ (`#top-2-right-input`)
+		let top_2_uls = $(`#top-2-center-show > ul`)
+		let top_2_lis = $(`#top-2-center-show > ul > li`)
+		let top_2_cen_li = $(`#top-2-center-ul > li:nth-child(-n+7)`)
+		let top_2_show = $(`#top-2-center-show`)
+		let top_2_input = $(`#top-2-right-input`)
 
 		/**
 		 * 防抖方法
@@ -2902,12 +2902,12 @@
 				let timer = null
 				time = time || 1000
 				Caller = Caller || window
-				if ( flag ) {
+				if (flag) {
 					flag = false
-					callBack.call (Caller)
-					timer = setTimeout (() => {
+					callBack.call(Caller)
+					timer = setTimeout(() => {
 						flag = true
-						clearTimeout (timer)
+						clearTimeout(timer)
 					}, time)
 				}
 			}
@@ -2915,14 +2915,14 @@
 
 		/*购物车按钮方法*/
 		function gouwuche_btn_func1 () {
-			gouwuche_div.css ({
+			gouwuche_div.css({
 				height: 140,
 				boxShadow: '0 0 5px 5px #cc99cc',
 			})
 		}
 
 		function gouwuche_btn_func2 () {
-			gouwuche_div.css ({
+			gouwuche_div.css({
 				height: 0,
 				boxShadow: '0 0 5px 5px transparent',
 			})
@@ -2930,28 +2930,28 @@
 
 		/*购物车下拉方法*/
 		function gouwuche_div_func1 () {
-			gouwuche_div.css ({
+			gouwuche_div.css({
 				height: 140,
 				boxShadow: '0 0 5px 5px #bcc3ce',
 			})
 		}
 
 		function gouwuche_div_func2 () {
-			gouwuche_div.css ({
+			gouwuche_div.css({
 				height: 0,
 				boxShadow: '0 0 5px 5px transparent',
 			})
 		}
 
 		//鼠标移入下载APP的li
-		top_1_li_down.hover (function () {
-			top_1_download.css ({
+		top_1_li_down.hover(function () {
+			top_1_download.css({
 				height: 140,
 				boxShadow: ' 0 0 5px 5px #f59850',
 
 			})
 		}, function () {
-			top_1_download.css ({
+			top_1_download.css({
 				height: 0,
 				boxShadow: ' 0 0 5px 5px transparent',
 
@@ -2959,72 +2959,72 @@
 		})
 
 		//鼠标移入下载APP的div，增加一个样式
-		top_1_download.hover (function () {
-			top_1_download.css ({
+		top_1_download.hover(function () {
+			top_1_download.css({
 				height: 140,
 				boxShadow: '0 0 5px 5px #bcc3ce',
 
 			})
 
 		}, function () {
-			top_1_download.css ({
+			top_1_download.css({
 				height: 0,
 				boxShadow: '0 0 5px 5px transparent',
 			})
 		})
 
 		//鼠标移入购物车下拉
-		gouwuche_btn.hover (
-				debounce (gouwuche_btn_func1, 150),
-				debounce (gouwuche_btn_func2, 150),
+		gouwuche_btn.hover(
+				debounce(gouwuche_btn_func1, 150),
+				debounce(gouwuche_btn_func2, 150),
 		)
 		//鼠标移入购物车
-		gouwuche_div.hover (
-				debounce (gouwuche_div_func1, 150),
-				debounce (gouwuche_div_func2, 150),
+		gouwuche_div.hover(
+				debounce(gouwuche_div_func1, 150),
+				debounce(gouwuche_div_func2, 150),
 		)
 
 		//移入指定li出现下拉
-		top_2_lis.hover (function () {
-			this.classList.add (`top-2-center-show-li`)
+		top_2_lis.hover(function () {
+			this.classList.add(`top-2-center-show-li`)
 		}, function () {
-			this.classList.remove (`top-2-center-show-li`)
+			this.classList.remove(`top-2-center-show-li`)
 		})
 
 		let index_down_show
 
 		//移入指定li更改对应的图片
-		top_2_cen_li.hover (function () {
-			index_down_show = $ (this).index ()
+		top_2_cen_li.hover(function () {
+			index_down_show = $(this).index()
 
-			top_2_show.css ({
+			top_2_show.css({
 				height: 240,
 				borderTop: '1px solid black',
 			})
 			top_2_uls[index_down_show].style.display = 'flex'
 		}, function () {
-			top_2_show.css ({
+			top_2_show.css({
 				height: 0,
 				borderTop: '1px solid transparent',
 			})
-			$ (top_2_uls).css ({
+			$(top_2_uls).css({
 				display: 'none',
 			})
 		})
 
 		//移入图片保证图片的正常显示
-		top_2_show.hover (function () {
-			top_2_show.css ({
+		top_2_show.hover(function () {
+			top_2_show.css({
 				height: 240,
 				borderTop: '1px solid black',
 			})
 			top_2_uls[index_down_show].style.display = 'flex'
 		}, function () {
-			top_2_show.css ({
+			top_2_show.css({
 				height: 0,
 				borderTop: '1px solid transparent',
 			})
-			$ (top_2_uls).css ({
+			$(top_2_uls).css({
 				display: 'none',
 			})
 		})
@@ -3035,8 +3035,8 @@
 			'测试11', '测试12', '测试13', '测试14', '测试15',
 		]
 		let top_2_input_i = 0
-		setInterval (function () {
-			top_2_input.attr ({
+		setInterval(function () {
+			top_2_input.attr({
 				placeholder: top_2_right_texts[top_2_input_i],
 			})
 			top_2_input_i++
@@ -3044,86 +3044,86 @@
 		}, 2000)
 
 		//top-3
-		let top_3_show = $ (`#top-3-left-ul-show`)
-		let top_3 = $ (`#top-3-left-ul > li`)
-		let top_3_show_ul = $ (`.top-3-left-ul-show-ul`)
-		let top_3_lis = $ (`.top-3-left-ul-show-ul > li`)
+		let top_3_show = $(`#top-3-left-ul-show`)
+		let top_3 = $(`#top-3-left-ul > li`)
+		let top_3_show_ul = $(`.top-3-left-ul-show-ul`)
+		let top_3_lis = $(`.top-3-left-ul-show-ul > li`)
 
 		//鼠标移入左边栏改样式
-		top_3.hover (function () {
-			top_3_show_ul.css ({
+		top_3.hover(function () {
+			top_3_show_ul.css({
 				display: 'none',
 			})
-			top_3_show.css ({
+			top_3_show.css({
 				width: 1076,
 			})
-			top_3_show_ul[$ (this).index ()].style.display = 'block'
+			top_3_show_ul[$(this).index()].style.display = 'block'
 
 		}, function () {
-			top_3_show.css ({
+			top_3_show.css({
 				width: 0,
 			})
-			top_3_show_ul.css ({
+			top_3_show_ul.css({
 				display: 'none',
 			})
 		})
 
 		//鼠标移入对应的展开的ul中，样式保持
-		top_3_show_ul.hover (function () {
-			top_3_show.css ({
+		top_3_show_ul.hover(function () {
+			top_3_show.css({
 				width: 1076,
 			})
-			top_3_show_ul.css ({
+			top_3_show_ul.css({
 				display: 'none',
 			})
-			top_3_show_ul[$ (this).index ()].style.display = 'block'
+			top_3_show_ul[$(this).index()].style.display = 'block'
 		}, function () {
-			top_3_show.css ({
+			top_3_show.css({
 				width: 0,
 			})
-			top_3_show_ul.css ({
+			top_3_show_ul.css({
 				display: 'none',
 			})
 		})
 
 		//鼠标移入单个li标签中的样式
-		top_3_lis.hover (function () {
-			this.classList.add (`top_3_left_ul_show_animation_class`)
+		top_3_lis.hover(function () {
+			this.classList.add(`top_3_left_ul_show_animation_class`)
 		}, function () {
-			this.classList.remove (`top_3_left_ul_show_animation_class`)
+			this.classList.remove(`top_3_left_ul_show_animation_class`)
 
 		})
 
 		//	轮播图
-		let top_3_nav_lis = $ (`#top-3-center-body-ul-1 > li`)
+		let top_3_nav_lis = $(`#top-3-center-body-ul-1 > li`)
 		let top_3_navIndex = 0
-		let top_3_btn_l = $ (`#top-3-center-div-btn-left`)
-		let top_3_btn_r = $ (`#top-3-center-div-btn-right`)
+		let top_3_btn_l = $(`#top-3-center-div-btn-left`)
+		let top_3_btn_r = $(`#top-3-center-div-btn-right`)
 		let top_3_timer = null
-		let top_3_body = $ (`#top-3-center-div`)
-		let top_3_sub_lis = $ (`#top-3-center-body-ul-2 > li`)
+		let top_3_body = $(`#top-3-center-div`)
+		let top_3_sub_lis = $(`#top-3-center-body-ul-2 > li`)
 		//轮播图自动定时
-		top_3_timer = setInterval (autoChange_1, 3000)
-		top_3_body.hover (function () {
-			clearInterval (top_3_timer)
+		top_3_timer = setInterval(autoChange_1, 3000)
+		top_3_body.hover(function () {
+			clearInterval(top_3_timer)
 		}, function () {
-			top_3_timer = setInterval (autoChange_1, 3000)
+			top_3_timer = setInterval(autoChange_1, 3000)
 		})
 
 		//自动转换的方法，由定时器调用
 		function autoChange_1 () {
-			top_3_sub_lis.css ({
+			top_3_sub_lis.css({
 				border: '3px solid transparent',
 				backgroundColor: 'white',
 			})
-			$ (top_3_nav_lis).css ({
+			$(top_3_nav_lis).css({
 				opacity: 0,
 			})
-			$ (top_3_nav_lis[top_3_navIndex]).css ({
+			$(top_3_nav_lis[top_3_navIndex]).css({
 				opacity: 1,
 			})
 			top_3_navIndex = top_3_navIndex === 3 ? 0 : ++top_3_navIndex
-			$ (top_3_sub_lis[top_3_navIndex]).css ({
+			$(top_3_sub_lis[top_3_navIndex]).css({
 				border: '3px solid #ffffff',
 				backgroundColor: '#898989',
 
@@ -3132,39 +3132,39 @@
 
 		//点击切换方法，由点击函数来调用
 		function autoChange_2 () {
-			top_3_sub_lis.css ({
+			top_3_sub_lis.css({
 				border: '3px solid transparent',
 				backgroundColor: 'white',
 			})
-			$ (top_3_nav_lis).css ({
+			$(top_3_nav_lis).css({
 				opacity: 0,
 			})
-			$ (top_3_nav_lis[top_3_navIndex]).css ({
+			$(top_3_nav_lis[top_3_navIndex]).css({
 				opacity: 1,
 			})
-			$ (top_3_sub_lis[top_3_navIndex]).css ({
+			$(top_3_sub_lis[top_3_navIndex]).css({
 				border: '3px solid #ffffff',
 				backgroundColor: '#898989',
 			})
 		}
 
 		//点击方法
-		top_3_btn_l.click (debounce (() => {
+		top_3_btn_l.click(debounce(() => {
 			top_3_navIndex = top_3_navIndex === 0 ? 3 : --top_3_navIndex
-			autoChange_2 ()
+			autoChange_2()
 		}, 900))
 
 		//点击方法
-		top_3_btn_r.click (debounce (() => {
+		top_3_btn_r.click(debounce(() => {
 			top_3_navIndex = top_3_navIndex === 3 ? 0 : ++top_3_navIndex
-			autoChange_2 ()
+			autoChange_2()
 		}, 900))
 
 		// 点击小圆点切换图片
-		for ( let i = 0, len = top_3_sub_lis.length; i < len; i++ ) {
+		for (let i = 0, len = top_3_sub_lis.length; i < len; i++) {
 			top_3_sub_lis[i].onclick = function () {
 				top_3_navIndex = i
-				autoChange_2 ()
+				autoChange_2()
 			}
 		}
 

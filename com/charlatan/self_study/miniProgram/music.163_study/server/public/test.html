@@ -15,42 +15,42 @@
 	const phone = ''
 	const password = ''
 	const port = 3000
-	if ( !phone || !password ) {
+	if (!phone || !password) {
 		const msg = '请设置你的手机号码和密码'
-		alert (msg)
-		throw new Error (msg)
+		alert(msg)
+		throw new Error(msg)
 	}
-	$.ajax ({
+	$.ajax({
 		imageUrl: `http://localhost:${port}/login/cellphone?phone=${phone}&password=${password}`,
 		success: function (data) {
-			console.log (data)
-			$.ajax ({
+			console.log(data)
+			$.ajax({
 				imageUrl: `http://localhost:${port}/recommend/resource `,
 				xhrFields: {
 					withCredentials: true, //关键
 				},
 				success: function (data) {
-					console.log (data)
+					console.log(data)
 				},
 				error: function (err) {
-					console.log (err)
+					console.log(err)
 				},
 			})
 		},
 		error: function (err) {
-			console.log (err)
+			console.log(err)
 		},
 	})
 
-	axios ({
+	axios({
 		imageUrl: `http://localhost:${port}/login/cellphone?phone=${phone}&password=${password}`,
-	}).then (function (res) {
-		console.log (res.data)
-		axios ({
+	}).then(function (res) {
+		console.log(res.data)
+		axios({
 			imageUrl: `http://localhost:${port}/recommend/resource`,
 			withCredentials: true, //关键
-		}).then (function (res) {
-			console.log (res.data)
+		}).then(function (res) {
+			console.log(res.data)
 		})
 	})
 </script>

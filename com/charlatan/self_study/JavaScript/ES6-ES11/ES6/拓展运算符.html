@@ -24,14 +24,14 @@
 <script>
 	let nums = [1, 2, 3, 4, 4, 3, 5, 6, 7, 5]
 	// let div = document.querySelectorAll(".div")
-	let div = document.getElementsByClassName ('div')
+	let div = document.getElementsByClassName('div')
 
 	function func () {
-		console.log (arguments)
+		console.log(arguments)
 	}
 
-	func (...nums)
-	func (nums)
+	func(...nums)
+	func(nums)
 
 	//	数组合并
 	let num1 = [1, 1, 1, 1, 1, 1, 1, 1]
@@ -39,11 +39,11 @@
 	let num3 = [3, 3, 3, 3, 3, 3, 3, 3]
 	let num4 = [4, 4, 4, 4, 4, 4, 4, 4]
 
-	console.log (...num1, ...num2, ...num3, ...num4)
+	console.log(...num1, ...num2, ...num3, ...num4)
 
 	//	将伪数组转换为真正的数组
-	console.log (div)
-	console.log (...div)
+	console.log(div)
+	console.log(...div)
 
 </script>
 </html>

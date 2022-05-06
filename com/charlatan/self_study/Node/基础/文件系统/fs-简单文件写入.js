@@ -25,14 +25,14 @@
  *   这种方式只是对异步方法的封装
  * */
 
-let fs = require ('fs')
-fs.writeFile ('test.txt', '我是简单文件写入', { flag: 'a' }, function (err) {
-	// if (!err){
-	// 	console.log("写入成功");
-	// }else {
-	// 	console.log("写入失败");
-	// }
-	
-	let str = err ? '写入失败' : '写入成功'
-	console.log (str)
+let fs = require('fs')
+fs.writeFile('test.txt', '我是简单文件写入', { flag: 'a' }, function (err) {
+    // if (!err){
+    // 	console.log("写入成功");
+    // }else {
+    // 	console.log("写入失败");
+    // }
+    
+    let str = err ? '写入失败' : '写入成功'
+    console.log(str)
 })

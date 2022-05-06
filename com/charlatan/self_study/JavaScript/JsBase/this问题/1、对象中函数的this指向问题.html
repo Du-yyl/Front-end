@@ -35,10 +35,10 @@
 	let obj = {
 		num: 10,
 		func: function () {
-			console.log ('我是obj中的函数，这次的this是：--->' + this)
-			console.log (this)
+			console.log('我是obj中的函数，这次的this是：--->' + this)
+			console.log(this)
 			// console.log(num);
-			console.log (this.num)
+			console.log(this.num)
 		},
 
 	}
@@ -46,10 +46,10 @@
 	let o1 = obj.func
 
 	//这次的调用前没有指定，所以它的下标默认调用者是window，返回的是window
-	o1 ()
-	console.log ('-----------------')
+	o1()
+	console.log('-----------------')
 
 	//这个调用者很明确，就是obj，所以不用考虑调用者的问题
-	obj.func ()
+	obj.func()
 </script>
 </html>

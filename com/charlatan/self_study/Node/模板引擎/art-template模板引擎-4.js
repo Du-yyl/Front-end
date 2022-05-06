@@ -8,7 +8,7 @@
  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
  */
 
-let template = require ('art-template')
+let template = require('art-template')
 
 /*
  子模板
@@ -25,7 +25,7 @@ let template = require ('art-template')
  <% include('./header.art') %>
  <% include('./header.art', data) %>
  */
-template.render ()
+template.render()
 
 /*
  标准语法
@@ -38,4 +38,4 @@ template.render ()
  <% block('head', function(){ %> ... <% }) %>
  */
 
-console.log ('{{extend \'./layout.art\'}}')
+console.log('{{extend \'./layout.art\'}}')

@@ -30,7 +30,7 @@ export default class Snake {
   get X (): number {
     return this.head.offsetLeft
   }
-  
+
 //  设置坐标
   set X (value) {
     if (this.X !== value) {
@@ -56,7 +56,7 @@ export default class Snake {
       
     }
   }
-
+  
   get Y (): number {
     return this.head.offsetTop
   }

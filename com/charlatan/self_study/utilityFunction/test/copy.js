@@ -10,9 +10,9 @@
 
 require('../src/拷贝/deepCopy')
 let obj = {
-  a: 1,
-  b: [1, 2, 3],
-  c: { a: 1, b: 2 },
+    a: 1,
+    b: [1, 2, 3],
+    c: { a: 1, b: 2 },
 }
 obj.b.push(obj.c)
 obj.c.d = obj.b

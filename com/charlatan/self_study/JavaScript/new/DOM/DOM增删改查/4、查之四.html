@@ -15,16 +15,16 @@
 
 <script>
 	// 获取body元素
-	let body = document.getElementsByTagName ('body')[0]
-	console.log (body)
+	let body = document.getElementsByTagName('body')[0]
+	console.log(body)
 	//    在document中保存的有一个属性body。他保存的是body的引用
 	let body_1 = document.body
-	console.log (body)
+	console.log(body)
 
 	//all代表页面中所有的元素
 	let all = document.all
-	console.log (all)
-	console.log (all.length)
+	console.log(all)
+	console.log(all.length)
 
 	//    ====================
 	//    根据元素的class属性值查询一组元素节点对象
@@ -32,8 +32,8 @@
 	 * document.getElementsByClassName(ID)
 	 *   根据class属性值，获取一组元素节点对象
 	 * */
-	let box1 = document.getElementsByClassName ('box1')
-	console.log (box1)
+	let box1 = document.getElementsByClassName('box1')
+	console.log(box1)
 
 	//    获取指定class中的div【可以模仿CSS中样式的选择进行精确的选择】
 	/*
@@ -47,11 +47,11 @@
 	 *   找到所有符合标准的元素
 	 * 封装到一个数组中返回
 	 * */
-	var div = document.querySelector ('#a div')
-	alert (div)
-	let dov1 = document.querySelectorAll ('div')
-	alert (dov1)
-	alert (dov1.length)
+	var div = document.querySelector('#a div')
+	alert(div)
+	let dov1 = document.querySelectorAll('div')
+	alert(dov1)
+	alert(dov1.length)
 </script>
 </body>
 </html>

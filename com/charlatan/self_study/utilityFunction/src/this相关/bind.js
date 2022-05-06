@@ -17,19 +17,19 @@
  * @returns {function()} 返回的 function
  */
 Function.prototype.bind = function (obj, ...args) {
-  /**
-   * 返回一个函数，这个函数会接收参数，并且在第二次调用时，如果第一次调用方法时没有指定参数，那么这个参数会传入原本参数中
-   * @param {*}arg 第二次要传入的参数
-   * @returns {*|undefined} 返回运行结果或 undefined
-   */
-  return (...arg) => {
-    // 函数的返回内容和 call 一致
-    if (obj === undefined || obj === null) {
-      obj = globalThis
+    /**
+     * 返回一个函数，这个函数会接收参数，并且在第二次调用时，如果第一次调用方法时没有指定参数，那么这个参数会传入原本参数中
+     * @param {*}arg 第二次要传入的参数
+     * @returns {*|undefined} 返回运行结果或 undefined
+     */
+    return (...arg) => {
+        // 函数的返回内容和 call 一致
+        if (obj === undefined || obj === null) {
+            obj = globalThis
+        }
+        obj.temp = this
+        let result = obj.temp(...args, ...arg)
+        delete obj.temp
+        return result || undefined
     }
-    obj.temp = this
-    let result = obj.temp(...args, ...arg)
-    delete obj.temp
-    return result || undefined
-  }
 }

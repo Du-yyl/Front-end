@@ -17,48 +17,48 @@ import mag from '@/pages/mag'
 import news from '@/pages/news'
 import now from '@/pages/now'
 
-const router = new VueRouter ({
-	mode: 'history',
-	routes: [
-		{
-			path: '/about', component: about, name: 'about', meta: {
-				title: '关于',
-			},
-		}, {
-			path: '/home', component: home, name: 'home', meta: {
-				title: '主页',
-			},
-			
-			children: [
-				{
-					path: 'mag', component: mag, name: 'mag', meta: {
-						isAuth: true, title: '信息',
-					},
-				},
-				
-				{
-					path: 'news', component: news, meta: {
-						isAuth: true, title: '新闻',
-					}, children: [
-						{
-							path: '/home/news/now/:id/:title',
-							component: now,
-							name: 'now',
-							props ({ query: { id, title } }) {
-								return {
-									id, title,
-								}
-							},
-						},
-					],
-				},
-			],
-		}, {
-			path: '/user', component: user, name: 'user', meta: {
-				title: '用户',
-			},
-		},
-	],
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/about', component: about, name: 'about', meta: {
+                title: '关于',
+            },
+        }, {
+            path: '/home', component: home, name: 'home', meta: {
+                title: '主页',
+            },
+            
+            children: [
+                {
+                    path: 'mag', component: mag, name: 'mag', meta: {
+                        isAuth: true, title: '信息',
+                    },
+                },
+                
+                {
+                    path: 'news', component: news, meta: {
+                        isAuth: true, title: '新闻',
+                    }, children: [
+                        {
+                            path: '/home/news/now/:id/:title',
+                            component: now,
+                            name: 'now',
+                            props ({ query: { id, title } }) {
+                                return {
+                                    id, title,
+                                }
+                            },
+                        },
+                    ],
+                },
+            ],
+        }, {
+            path: '/user', component: user, name: 'user', meta: {
+                title: '用户',
+            },
+        },
+    ],
 })
 
 export default router

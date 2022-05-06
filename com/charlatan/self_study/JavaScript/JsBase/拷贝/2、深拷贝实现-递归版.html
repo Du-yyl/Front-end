@@ -30,8 +30,8 @@
 		bool: true, // boolean
 		unf: undefined, // undefined
 		nul: null, // null
-		sym: Symbol ('sym'), // symbol
-		bign: BigInt (1n), // bigint
+		sym: Symbol('sym'), // symbol
+		bign: BigInt(1n), // bigint
 
 		// =========== 2.Object类型 ===========
 		// 普通对象
@@ -73,26 +73,26 @@
 		],
 		// 函数
 		func: function () {
-			console.log ('我是一个函数')
+			console.log('我是一个函数')
 		},
 		// 日期
-		date: new Date (0),
+		date: new Date(0),
 		// 正则
-		reg: new RegExp ('/我是一个正则/ig'),
+		reg: new RegExp('/我是一个正则/ig'),
 		// Map
-		map: new Map ().set ('mapKey', 1),
+		map: new Map().set('mapKey', 1),
 		// Set
-		set: new Set ().add ('set'),
+		set: new Set().add('set'),
 		// =========== 3.其他 ===========
-		[Symbol ('1')]: 1,  // Symbol作为key
+		[Symbol('1')]: 1,  // Symbol作为key
 	}
 	// 4.添加不可枚举属性
-	Object.defineProperty (obj, 'innumerable', {
+	Object.defineProperty(obj, 'innumerable', {
 		enumerable: false,
 		value: '不可枚举属性',
 	})
 	// 5.设置原型对象
-	Object.setPrototypeOf (obj, {
+	Object.setPrototypeOf(obj, {
 		proto: 'proto',
 	})
 	// // 6.设置loop成循环引用的属性
@@ -104,12 +104,12 @@
 	 * @returns {{}|*} 将拷贝结果作为对象进行返回
 	 */
 	function deepClone (target) {
-		if ( typeof target === 'object' && target ) {
+		if (typeof target === 'object' && target) {
 			let cloneObj = {}
-			for ( const key in target ) { // 遍历
+			for (const key in target) { // 遍历
 				const val = target[key]
-				if ( typeof val === 'object' && val ) {
-					cloneObj[key] = deepClone (val) // 是对象就再次调用该函数递归
+				if (typeof val === 'object' && val) {
+					cloneObj[key] = deepClone(val) // 是对象就再次调用该函数递归
 				} else {
 					cloneObj[key] = val // 基本类型的话直接复制值
 				}
@@ -120,6 +120,6 @@
 		}
 	}
 
-	console.log (deepClone (obj))
+	console.log(deepClone(obj))
 </script>
 </html>

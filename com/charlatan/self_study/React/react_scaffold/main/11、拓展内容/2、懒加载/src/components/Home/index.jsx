@@ -11,12 +11,12 @@
 import React, { Component } from 'react'
 
 export default class Home extends Component {
-	
-	render () {
-		console.log ('Home 渲染')
-		return (
-				<h1>这是 Home 中的内容</h1>
-		)
-	}
-	
+    
+    render () {
+        console.log('Home 渲染')
+        return (
+            <h1>这是 Home 中的内容</h1>
+        )
+    }
+    
 }

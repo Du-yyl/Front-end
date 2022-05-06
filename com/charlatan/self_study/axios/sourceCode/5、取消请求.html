@@ -42,37 +42,37 @@
 	 * @returns {*}
 	 */
 	Axios.prototype.request = function (config) {
-		return dispatchRequest (config)
+		return dispatchRequest(config)
 	}
 
 	function dispatchRequest (config) {
-		return xhrAdapter (config)
+		return xhrAdapter(config)
 	}
 
 	//xhrAdapter
 	function xhrAdapter (config) {
-		return new Promise ((res, rej) => {
-			let xhr = new XMLHttpRequest ()
-			xhr.open (config.method, config.url)
-			xhr.send ()
+		return new Promise((res, rej) => {
+			let xhr = new XMLHttpRequest()
+			xhr.open(config.method, config.url)
+			xhr.send()
 			xhr.onreadystatechange = function () {
-				if ( xhr.readyState === 4 && xhr.status === 200 ) {
-					console.log (xhr.response)
-					res ({
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					console.log(xhr.response)
+					res({
 						status: xhr.status,
 						statusText: xhr.statusText,
 					})
 				} else {
-					new Error ('错误')
+					new Error('错误')
 				}
 			}
 			// 如果配置了 cancelToken，那么就会走这个进行处理
-			if ( config.cancelToken ) {
+			if (config.cancelToken) {
 				//	对 cancelToken 对象身上的promise进行成功的回调
-				config.cancelToken.promise.then ((value) => {
-					xhr.abort ()
+				config.cancelToken.promise.then((value) => {
+					xhr.abort()
 					//	整体结果设置为失败
-					rej ('请求取消')
+					rej('请求取消')
 				})
 			}
 		})
@@ -87,48 +87,48 @@
 	function CancelToken (executor) {
 		//定义一个变量
 		let resolvePromise
-		this.promise = new Promise ((res, rej) => {
+		this.promise = new Promise((res, rej) => {
 			//  将 res 赋值给 resolvePromise
 			resolvePromise = res
 		})
 		//	调用 executor
-		executor (function () {
+		executor(function () {
 			// 执行res函数
-			resolvePromise ()
+			resolvePromise()
 		})
 	}
 
-	let context = new Axios ({})
+	let context = new Axios({})
 	// 创建 axios 对象
-	let axios = Axios.prototype.request.bind (context)
+	let axios = Axios.prototype.request.bind(context)
 
-	console.log (axios)
+	console.log(axios)
 
 	//	 声明全局变量
 	let cancel = null
-	$ (`.btn:eq(0)`).click (function () {
+	$(`.btn:eq(0)`).click(function () {
 		// 发送请求前，先检测一下，上一个请求是否还存在，如果存在取消上一次，发送这一次
-		if ( cancel !== null ) {
-			cancel ()
+		if (cancel !== null) {
+			cancel()
 		}
-		axios ({
+		axios({
 			method: 'GET',
 			url: 'http://localhost:3000/posts',
 
 			//	配置取消配置属性
-			cancelToken: new CancelToken (function (c) {
+			cancelToken: new CancelToken(function (c) {
 				// 将c的值进行赋值
 				cancel = c
 			}),
-		}).then ((val) => {
-			console.log (val)
+		}).then((val) => {
+			console.log(val)
 		}, (res) => {
-			console.log (res)
+			console.log(res)
 		})
 	})
 
-	$ (`.btn:eq(1)`).click (function () {
-		cancel ()
+	$(`.btn:eq(1)`).click(function () {
+		cancel()
 		cancel = null
 	})
 

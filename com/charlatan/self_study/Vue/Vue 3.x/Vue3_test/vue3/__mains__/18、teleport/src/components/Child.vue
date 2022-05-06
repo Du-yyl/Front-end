@@ -19,7 +19,7 @@
 <script>
 import Son from '../components/Son'
 
-const { inject } = require ('@vue/runtime-dom')
+const { inject } = require('@vue/runtime-dom')
 export default {
   name: 'Child',
   components: {

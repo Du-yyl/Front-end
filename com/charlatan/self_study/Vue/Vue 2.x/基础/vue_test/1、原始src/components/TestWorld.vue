@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     show () {
-      console.log ('我是点击按钮的结果')
+      console.log('我是点击按钮的结果')
     },
   },
 }

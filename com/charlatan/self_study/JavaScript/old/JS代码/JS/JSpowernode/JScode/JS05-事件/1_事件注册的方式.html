@@ -10,7 +10,7 @@
 	//回调函数的特点：自己把这个函数代码写出来，但是这个函数不是自己负责调用，由其他程序进行调用
 
 	function sayHello (username) {
-		alert ('你好，' + username)
+		alert('你好，' + username)
 	}
 
 </script>
@@ -25,7 +25,7 @@
 <input id='mybtn2' type="button" value="第四个按钮">
 <script type="text/javascript">
 	function dosome () {
-		alert ('dosome')
+		alert('dosome')
 	}
 
 	/*
@@ -33,20 +33,20 @@
 	 * window代表整个页面，document代表整个HTML页面【内置对象，可以直接用，document代表整个HTML页面】
 	 * getElementById ： 通过ID获取这个页面中的元素，可以拿到按钮对象
 	 * */
-	var s = document.getElementById ('mybtn')
+	var s = document.getElementById('mybtn')
 	//因为定义的按钮中可以有这个属性，那么就可以通过这种方式赋予这个按钮这个属性
 	//这行代码的含义：将dosome这个函数注册到onclick事件上
 	s.onclick = dosome // 这里是都没有括号的，有括号是错误写法
 
 	//这里也可以使用新定义的匿名函数
-	var s1 = document.getElementById ('mybtn1')
+	var s1 = document.getElementById('mybtn1')
 	s1.onclick = function () {
-		alert ('按钮三输出了')
+		alert('按钮三输出了')
 	}
 
 	//一行代码写出来
-	document.getElementById ('mybtn2').onclick = function () {
-		alert ('按钮四输出了')
+	document.getElementById('mybtn2').onclick = function () {
+		alert('按钮四输出了')
 	}
 </script>
 </body>

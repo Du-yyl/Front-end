@@ -38,13 +38,13 @@ export default {
   components: {},
   methods: {
     chang () {
-      console.log ('加法调用')
+      console.log('加法调用')
       this.num++
     },
     chang1 () {
       // 触发事件
-      this.$emit ('self')
-      this.$emit ('self2')
+      this.$emit('self')
+      this.$emit('self2')
     },
     chang2 () {
       // 解绑一个事件
@@ -52,12 +52,12 @@ export default {
       //  解绑多个事件
       // this.$off(['self', 'self2'])
       // 解绑所有事件
-      this.$off ()
+      this.$off()
     },
     chang3 () {
       // 当vc销毁后，自定义的组件事件都会被销毁【因为这些事件是绑定在vc上的】
       // 【当vm被销毁时，自定义的组件和自定义事件都会失效，但是原生绑定的事件不受影响】
-      this.$destroy ()
+      this.$destroy()
     },
   },
 

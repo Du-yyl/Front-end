@@ -21,27 +21,27 @@
  * @returns {Model<DocType>} 将内容进行封装，并将映射返回，提供外部操作
  */
 function conn_mongo (schema, collection, databases = 'data', url = 'localhost') {
-	let mongoose = require ('mongoose')
-	mongoose.connect ('mongodb://' + url + ':/' + databases).then ()
-	mongoose.connection.once ('open', (err) => {
-		console.log ('数据库连接成功')
-	})
-	let Schema = new mongoose.Schema (schema)
-	return mongoose.model (collection, Schema)
+    let mongoose = require('mongoose')
+    mongoose.connect('mongodb://' + url + ':/' + databases).then()
+    mongoose.connection.once('open', (err) => {
+        console.log('数据库连接成功')
+    })
+    let Schema = new mongoose.Schema(schema)
+    return mongoose.model(collection, Schema)
 }
 
 let obj = {
-	name: String,
-	age: Number,
-	address: String,
+    name: String,
+    age: Number,
+    address: String,
 }
 
-let model = conn_mongo (obj, 'students', 'test')
+let model = conn_mongo(obj, 'students', 'test')
 
-model.find ({}, function (err, data) {
-	if ( !err ) {
-		console.log (data)
-	}
+model.find({}, function (err, data) {
+    if (!err) {
+        console.log(data)
+    }
 })
 
 // model.create({

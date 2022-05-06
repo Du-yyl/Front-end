@@ -12,13 +12,13 @@ import React, { Component } from 'react'
 import css from './index.module.css'
 
 export default class Welcome extends Component {
-	
-	render () {
-		return (
-				<div className={css.title}>
-					欢迎来到，React 测试你好
-				</div>
-		)
-	}
-	
+    
+    render () {
+        return (
+            <div className={css.title}>
+                欢迎来到，React 测试你好
+            </div>
+        )
+    }
+    
 }

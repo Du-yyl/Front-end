@@ -76,10 +76,10 @@
 <script>
 	window.onload = function () {
 		let x = 100
-		let div_red = document.getElementById ('red-div')
-		let ul = document.getElementById ('ul')
-		let lis = document.getElementsByClassName ('li')
-		for ( let i = 0; i < lis.length; i++ ) {
+		let div_red = document.getElementById('red-div')
+		let ul = document.getElementById('ul')
+		let lis = document.getElementsByClassName('li')
+		for (let i = 0; i < lis.length; i++) {
 			lis[i].onmouseenter = function () {
 				div_red.style.left = (i * 50 + x) + 'px'
 			}

@@ -19,9 +19,9 @@
 	但是在if语句中不能使用break或continue
 </p>
 <script>
-	for ( let i = 0; i < 5; i++ ) {
-		console.log (i)
-		if ( i === 1 ) {
+	for (let i = 0; i < 5; i++) {
+		console.log(i)
+		if (i === 1) {
 			// break
 
 		}
@@ -34,8 +34,8 @@
 	 *       因为break语句默认结束的最近的一层循环，使用break 加 循环名，直接结束指定的循环，无论是不是最近的
 	 * */
 	hello:
-			for ( let i = 0; i < 5; i++ ) {
-				for ( let j = 0; j < 5; j++ ) {
+			for (let i = 0; i < 5; i++) {
+				for (let j = 0; j < 5; j++) {
 					break hello
 				}
 			}

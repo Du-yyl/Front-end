@@ -184,16 +184,16 @@
 </div>
 </body>
 <script>
-	let ul = document.getElementById ('ul')
+	let ul = document.getElementById('ul')
 	let mv
 	let ulNode = ''
-	fetch ('http://39.96.88.57:9090/api/www/music/mvList?pid=236682871&pn=1&rn=30&httpsStatus=1').then (
+	fetch('http://39.96.88.57:9090/api/www/music/mvList?pid=236682871&pn=1&rn=30&httpsStatus=1').then(
 			function (res) {
-				return res.json ()
+				return res.json()
 			},
-	).then (function (data) {
+	).then(function (data) {
 		let nums = data.data.mvlist
-		for ( let i = 0; i < nums.length; i++ ) {
+		for (let i = 0; i < nums.length; i++) {
 
 			ulNode += `<li>
 				<div class="img-div">

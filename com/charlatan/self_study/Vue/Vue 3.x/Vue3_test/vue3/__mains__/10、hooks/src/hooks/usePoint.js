@@ -13,25 +13,25 @@ import { reactive } from 'vue'
 import { onBeforeUnmount, onMounted } from '@vue/runtime-dom'
 
 function usePoint () {
-	let point = reactive ({
-		x: 0,
-		y: 0,
-	})
-	
-	let listener = (event) => {
-		point.x = event.pageX
-		point.y = event.pageY
-	}
-	
-	onMounted (() => {
-		window.addEventListener ('click', listener)
-	})
-	onBeforeUnmount (() => {
-		window.removeEventListener ('click', listener)
-	})
-	
-	// 将内容指定的内容计算并操作完毕，将需要的内容进行返回
-	return point
+    let point = reactive({
+        x: 0,
+        y: 0,
+    })
+    
+    let listener = (event) => {
+        point.x = event.pageX
+        point.y = event.pageY
+    }
+    
+    onMounted(() => {
+        window.addEventListener('click', listener)
+    })
+    onBeforeUnmount(() => {
+        window.removeEventListener('click', listener)
+    })
+    
+    // 将内容指定的内容计算并操作完毕，将需要的内容进行返回
+    return point
 }
 
 // 将整个方法进行暴漏

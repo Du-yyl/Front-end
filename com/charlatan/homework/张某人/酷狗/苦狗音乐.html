@@ -2575,19 +2575,19 @@
 </body>
 <script>
 	// 轮播图
-	let banner_left = document.getElementById ('top-2-center-left')
-	let banner_right = document.getElementById ('top-2-center-right')
-	let banner_lis = document.getElementById ('top-2-center-center-ul-2').getElementsByTagName ('li')
-	let banner_img = document.getElementById ('top-2-center-center-ul-li-img')
-	fetch ('http://39.96.88.57:9090/api/www/banner/index/bannerList?httpsStatus=1&reqId=62631c30-6e0f-11ec-9610-aff7c1796bb4').
-			then (r => r.json ()).
-			then (res => {
+	let banner_left = document.getElementById('top-2-center-left')
+	let banner_right = document.getElementById('top-2-center-right')
+	let banner_lis = document.getElementById('top-2-center-center-ul-2').getElementsByTagName('li')
+	let banner_img = document.getElementById('top-2-center-center-ul-li-img')
+	fetch('http://39.96.88.57:9090/api/www/banner/index/bannerList?httpsStatus=1&reqId=62631c30-6e0f-11ec-9610-aff7c1796bb4').
+			then(r => r.json()).
+			then(res => {
 				let bg_imgs = []
 				bg_imgs = res.data
 				let index = 0
 				banner_left.onclick = function () {
 					banner_img.src = bg_imgs[index = index >= res.data.length - 1 ? 0 : ++index].pic
-					for ( let bannerLi of banner_lis ) {
+					for (let bannerLi of banner_lis) {
 						bannerLi.style.backgroundColor = 'rgba(229, 193, 14, 0.82)'
 						bannerLi.style.border = '4px solid transparent'
 					}
@@ -2596,16 +2596,16 @@
 				}
 				banner_right.onclick = function () {
 					banner_img.src = bg_imgs[index = index <= 0 ? res.data.length - 1 : --index].pic
-					for ( let bannerLi of banner_lis ) {
+					for (let bannerLi of banner_lis) {
 						bannerLi.style.backgroundColor = 'rgba(229, 193, 14, 0.82)'
 						bannerLi.style.border = '4px solid transparent'
 					}
 					banner_lis[index].style.backgroundColor = '#cbbb1e'
 					banner_lis[index].style.border = '4px solid #fff2f2'
 				}
-				for ( let i = 0; i < banner_lis.length; i++ ) {
+				for (let i = 0; i < banner_lis.length; i++) {
 					banner_lis[i].onclick = function () {
-						for ( let bannerLi of banner_lis ) {
+						for (let bannerLi of banner_lis) {
 							bannerLi.style.backgroundColor = 'rgba(229, 193, 14, 0.82)'
 							bannerLi.style.border = '4px solid transparent'
 						}
@@ -2618,28 +2618,28 @@
 			})
 
 	// 推荐歌单的tab切换
-	let body_ul_lis = document.getElementsByClassName ('body-1-last-div-ul-li-switch')
-	fetch ('http://39.96.88.57:9090/api/www/playlist/index/tags?httpsStatus=1&reqId=62636a50-6e0f-11ec-9610-aff7c1796bb4').
-			then (r => r.json ()).
-			then (res => {
-				for ( let i = 0; i < body_ul_lis.length; i++ ) {
+	let body_ul_lis = document.getElementsByClassName('body-1-last-div-ul-li-switch')
+	fetch('http://39.96.88.57:9090/api/www/playlist/index/tags?httpsStatus=1&reqId=62636a50-6e0f-11ec-9610-aff7c1796bb4').
+			then(r => r.json()).
+			then(res => {
+				for (let i = 0; i < body_ul_lis.length; i++) {
 					body_ul_lis[i].innerHTML = res.data[i].name
 				}
 			})
 
 	// 歌单榜
-	let body_2_imgs = document.getElementsByClassName ('body-3-li-img-2')
-	let body_2_ul_lis = document.getElementsByClassName ('body-3-lu-ul-ul')
-	fetch ('http://39.96.88.57:9090/api/www/bang/index/bangList?httpsStatus=1&reqId=62639161-6e0f-11ec-9610-aff7c1796bb4').
-			then (r => r.json ()).
-			then (res => {
-				for ( let i = 0; i < res.data.length; i++ ) {
+	let body_2_imgs = document.getElementsByClassName('body-3-li-img-2')
+	let body_2_ul_lis = document.getElementsByClassName('body-3-lu-ul-ul')
+	fetch('http://39.96.88.57:9090/api/www/bang/index/bangList?httpsStatus=1&reqId=62639161-6e0f-11ec-9610-aff7c1796bb4').
+			then(r => r.json()).
+			then(res => {
+				for (let i = 0; i < res.data.length; i++) {
 					body_2_imgs.src = res.data[i].pic
 				}
-				for ( let i = 0; i < body_2_ul_lis.length; i++ ) {
-					let elementsByTagName = body_2_ul_lis[i].getElementsByTagName ('li')
+				for (let i = 0; i < body_2_ul_lis.length; i++) {
+					let elementsByTagName = body_2_ul_lis[i].getElementsByTagName('li')
 					let li = ''
-					for ( let j = 0; j < elementsByTagName.length; j++ ) {
+					for (let j = 0; j < elementsByTagName.length; j++) {
 						li += `
 				<li>
                     <div class="body-3-li-ul-ul-lu-left-div">
@@ -2661,11 +2661,11 @@
 			})
 
 	//	歌手推荐
-	let body_3_lis = document.getElementsByClassName ('body-4-top-right-li')
-	fetch ('http://39.96.88.57:9090/api/www/artist/index/tags?httpsStatus=1&reqId=0254a090-6e12-11ec-950c-155e05dc59b9').
-			then (r => r.json ()).
-			then (res => {
-				for ( let i = 0; i < body_3_lis.length; i++ ) {
+	let body_3_lis = document.getElementsByClassName('body-4-top-right-li')
+	fetch('http://39.96.88.57:9090/api/www/artist/index/tags?httpsStatus=1&reqId=0254a090-6e12-11ec-950c-155e05dc59b9').
+			then(r => r.json()).
+			then(res => {
+				for (let i = 0; i < body_3_lis.length; i++) {
 					body_3_lis[i].innerHTML = res.data[i].name
 				}
 			})

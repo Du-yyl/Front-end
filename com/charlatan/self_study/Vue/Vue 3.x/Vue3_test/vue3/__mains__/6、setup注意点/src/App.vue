@@ -16,8 +16,8 @@ export default {
   },
   setup () {
     function get (num) {
-      alert ('get方法执行了')
-      console.log ('获取到的数据', num)
+      alert('get方法执行了')
+      console.log('获取到的数据', num)
     }
 
     return {

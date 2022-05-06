@@ -17,14 +17,14 @@
 </template>
 
 <script>
-const { inject } = require ('@vue/runtime-dom')
+const { inject } = require('@vue/runtime-dom')
 export default {
   name: 'Son',
   data () {
     return {}
   },
   setup () {
-    let data = inject ('data')
+    let data = inject('data')
     return {
       data,
     }

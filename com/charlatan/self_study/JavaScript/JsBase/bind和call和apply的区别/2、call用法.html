@@ -22,27 +22,27 @@
 </pre>
 </body>
 <script>
-	console.log (Object.prototype.toString.call ('qq'))            // [Object String] 返回值都是字符串类型
-	console.log (Object.prototype.toString.call (12))              // [object Number]
-	console.log (Object.prototype.toString.call (false))           // [object Boolean]
-	console.log (Object.prototype.toString.call (undefined))       // [object Undefined]
-	console.log (Object.prototype.toString.call (null))            // [object Null]
-	console.log (Object.prototype.toString.call (function () {
+	console.log(Object.prototype.toString.call('qq'))            // [Object String] 返回值都是字符串类型
+	console.log(Object.prototype.toString.call(12))              // [object Number]
+	console.log(Object.prototype.toString.call(false))           // [object Boolean]
+	console.log(Object.prototype.toString.call(undefined))       // [object Undefined]
+	console.log(Object.prototype.toString.call(null))            // [object Null]
+	console.log(Object.prototype.toString.call(function () {
 	}))    // [object Function]
-	console.log (Object.prototype.toString.call ([]))              // [object Array]
-	console.log (Object.prototype.toString.call ({}))              // [object Object]
+	console.log(Object.prototype.toString.call([]))              // [object Array]
+	console.log(Object.prototype.toString.call({}))              // [object Object]
 	//	=============================================================
 	let str = 'hello world'
 	// console.log(Array.prototype.reverse.call(str)); //此时会报错误，即引用类型错误，就是说只有数组才能使用reverse这个方法；(错误写法)
 	//方法一：这种方法内有使用call()
-	var arr = Array.from (str).reverse ().join ('') //将字符串转化为数组，在进行翻转，然后在进行拼接
-	console.log (arr)
-	console.log (typeof arr) //string
+	var arr = Array.from(str).reverse().join('') //将字符串转化为数组，在进行翻转，然后在进行拼接
+	console.log(arr)
+	console.log(typeof arr) //string
 	//方法二：
-	var rs = Array.prototype.reverse.call (str.split ('')).join ('')
+	var rs = Array.prototype.reverse.call(str.split('')).join('')
 	//splice(start,length)方法用于把一个字符串分割成字符串数组，start 表示从指定的地方分割字符串    length表示分割的长度。
 	//返回一个一个字符串数组 如果把空字符串 ("") 用为参数那么字符串中的每个字符之间都会被分割
-	console.log (rs)
-	console.log (typeof arr) //string
+	console.log(rs)
+	console.log(typeof arr) //string
 </script>
 </html>

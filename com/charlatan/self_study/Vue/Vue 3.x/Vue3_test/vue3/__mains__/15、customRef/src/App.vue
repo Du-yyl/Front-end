@@ -12,13 +12,13 @@
 
 import { customRef, watch } from '@vue/runtime-dom'
 
-const { ref } = require ('@vue/runtime-dom')
+const { ref } = require('@vue/runtime-dom')
 
 export default {
   name: 'App',
   setup () {
     // let inputValue = ref('')
-    let inputValue = myRef ('')
+    let inputValue = myRef('')
     let timer
 
     /**
@@ -30,7 +30,7 @@ export default {
       /**
        * 调用Vue提供的 customRef 方法，这个方法会有一个参数，是一个方法，通过这个方法进行详细的配置
        */
-      return customRef (
+      return customRef(
           /**
            * 配置的详细方法，这个方法会有两个参数，并要配置 get 和 set 方法，通过set和get的调用来获取指定内容的改变
            * @param track{Function} 追踪指定内容的触发
@@ -40,18 +40,18 @@ export default {
           (track, trigger) => {
             return {
               get () {
-                console.log ('读取数据')
+                console.log('读取数据')
                 // 追踪指定内容的改变
-                track ()
+                track()
                 return value
               },
               set (newValue) {
-                console.log ('修改数据')
+                console.log('修改数据')
                 value = newValue
-                clearTimeout (timer)
+                clearTimeout(timer)
                 // 使 Vue 重新解析模板
-                timer = setTimeout (() => {
-                  trigger ()
+                timer = setTimeout(() => {
+                  trigger()
                 }, 500)
               },
             }

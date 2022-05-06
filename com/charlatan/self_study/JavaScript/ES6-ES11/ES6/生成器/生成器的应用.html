@@ -25,9 +25,9 @@
 <script>
 	// 数组扁平化
 	function * arrayExpansion (array) {
-		for ( let i = 0; i < array.length; i++ ) {
-			if ( Array.isArray (array[i]) )
-				yield * arrayExpansion (array[i])
+		for (let i = 0; i < array.length; i++) {
+			if (Array.isArray(array[i]))
+				yield * arrayExpansion(array[i])
 			else
 				yield array[i]
 		}
@@ -35,11 +35,11 @@
 
 	let nums = [1, 2, 3, 3, 4, 5, [1, 2, 3, 4, 5, [1, 2, 3, 4, [4, 5, 6]]]]
 	let num = []
-	for ( const arrayExpansionElement of arrayExpansion (nums) ) {
-		num.push (arrayExpansionElement)
+	for (const arrayExpansionElement of arrayExpansion(nums)) {
+		num.push(arrayExpansionElement)
 	}
-	console.log (num)
-	console.log ('我是断点')
+	console.log(num)
+	console.log('我是断点')
 
 	// 关联定时器
 	// function func1() {

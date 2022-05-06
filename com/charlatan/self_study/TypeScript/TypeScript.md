@@ -7,6 +7,7 @@
 3. TS代码需要通过编译器编译为JS，然后再交由JS解析器执行。
 4. TS完全兼容JS，换言之，任何的JS代码都可以直接当成JS使用。
 5.
+
 相较于JS而言，TS拥有了静态类型，更加严格的语法，更强大的功能；TS可以在代码执行前就完成代码的检查，减小了运行时异常的出现的几率；TS代码可以编译为任意版本的JS代码，可有效解决不同JS运行环境的兼容问题；同样的功能，TS的代码量要大于JS，但由于TS的代码结构更加清晰，变量类型更加明确，在后期代码的维护中TS却远远胜于JS。
 
 ## 变量类型
@@ -38,7 +39,7 @@
     1. 类型：
 
        |  类型   |       例子        |              描述              |
-             | :-----: | :---------------: | :----------------------------: |
+                    | :-----: | :---------------: | :----------------------------: |
        | number  |    1, -33, 2.5    |            任意数字            |
        | string  | 'hi', "hi", `hi`  |           任意字符串           |
        | boolean |    true、false    |       布尔值true或false        |
@@ -382,16 +383,16 @@
 
                 - ```json
           "files": [
-              "core.ts",
-              "sys.ts",
-              "types.ts",
-              "scanner.ts",
-              "parser.ts",
-              "utilities.ts",
-              "binder.ts",
-              "checker.ts",
-              "tsc.ts"
-            ]
+          "core.ts",
+          "sys.ts",
+          "types.ts",
+          "scanner.ts",
+          "parser.ts",
+          "utilities.ts",
+          "binder.ts",
+          "checker.ts",
+          "tsc.ts"
+          ]
           ```
 
                 - 列表中的文件都会被TS编译器所编译
@@ -603,34 +604,30 @@
                 - clean-webpack-plugin
                     - webpack中的清除插件，每次构建都会先清除目录
 
-    3. 根目录下创建webpack的配置文件webpack.config.js
+  3. 根目录下创建webpack的配置文件webpack.config.js
 
-        - ```javascript
-       const path = require("path");
-       const HtmlWebpackPlugin = require("html-webpack-plugin");
-       const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-       
-       module.exports = {
-           optimization:{
-               minimize: false // 关闭代码压缩，可选
-           },
-       
-           entry: "./src/index.ts",
-           
-           devtool: "inline-source-map",
-           
-           devServer: {
-               contentBase: './dist'
-           },
-       
-           output: {
+      - ```javascript
+     const path = require("path"); const HtmlWebpackPlugin = require("html-webpack-plugin"); const { CleanWebpackPlugin
+     } = require("clean-webpack-plugin");
+
+     module.exports = { optimization:{ minimize: false // 关闭代码压缩，可选 },
+
+         entry: "./src/index.ts",
+         
+         devtool: "inline-source-map",
+         
+         devServer: {
+             contentBase: './dist'
+         },
+
+         output: {
                path: path.resolve(__dirname, "dist"),
                filename: "bundle.js",
                environment: {
                    arrowFunction: false // 关闭webpack的箭头函数，可选
                }
            },
-       
+
            resolve: {
                extensions: [".ts", ".js"]
            },
@@ -646,52 +643,47 @@
                    }
                ]
            },
-       
-           plugins: [
+
+         plugins: [
                new CleanWebpackPlugin(),
                new HtmlWebpackPlugin({
                    title:'TS测试'
                }),
            ]
-       
-       }
+
+     }
        ```
 
     4. 根目录下创建tsconfig.json，配置可以根据自己需要
 
         - ```json
        {
-           "compilerOptions": {
-               "target": "ES2015",
-               "module": "ES2015",
-               "strict": true
-           }
-       }
+       "compilerOptions": {
+       "target": "ES2015",
+       "module": "ES2015",
+       "strict": true } }
        ```
 
-    5. 修改package.json添加如下配置
+  5. 修改package.json添加如下配置
 
-        - ```json
-       {
-         ...略...
-         "scripts": {
-           "test": "echo \"Error: no test specified\" && exit 1",
-           "build": "webpack",
-           "start": "webpack serve --open chrome.exe"
-         },
-         ...略...
-       }
-       ```
+      - ```json
+     { ...略...
+     "scripts": {
+     "test": "echo \"Error: no test specified\" && exit 1",
+     "build": "webpack",
+     "start": "webpack serve --open chrome.exe"
+     }, ...略... }
+     ```
 
-    6. 在src下创建ts文件，并在并命令行执行```npm run build```对代码进行编译，或者执行```npm start```来启动开发服务器
+  6. 在src下创建ts文件，并在并命令行执行```npm run build```对代码进行编译，或者执行```npm start```来启动开发服务器
 
-       ## TypeScript面向对象
+     ## TypeScript面向对象
 
-       > 面向对象三大特征：**<u>封装，继承，多态</u>**
+     > 面向对象三大特征：**<u>封装，继承，多态</u>**
 
-        - 封装
+      - 封装
 
-          > 将指定的内容不进行暴漏，从而保证数据的安全性
+        > 将指定的内容不进行暴漏，从而保证数据的安全性
 
             1. public **公共的** 任意位置都能访问
 
@@ -707,52 +699,48 @@
                  }
                ```
 
-     - 继承
-     
-       - TS中实现继承
-     
-         和JS的内容基本相同，不过实现了更多的东西
-     
-         ```ts
-           function () {
-             class Person {
-               name: string
-               age: number
-               
-               constructor (name: string, age: number) {
-                 this.name = name
-                 this.age = age
-               }
-                 
-               sayHello () {
-                 console.log('你好')
-               }
-             }
-             
-             class Xiao extends Person {
-               sayHello () {
-                 console.log('我是子类的你好')
-               }
-             }
-         ```
-     
-       - 抽象类实现
-     
-         抽象类和一般类区别不大，**不过抽线类是专门用来被继承的**
-     
-         抽象方法：
-     
-         - **只有抽象类能定义抽象方法**
-         - 抽象方法由`abstract`开始
-         - 不用写方法体
-         - **子类必须对其进行实现**
-     
-         定义实现抽象类，使用`abstract`进行实现，并且可以通过这个关键字定义抽象方法
-     
-         
-     
-         
-     
+    - 继承
+
+        - TS中实现继承
+
+          和JS的内容基本相同，不过实现了更多的东西
+
+          ```ts
+            function () {
+              class Person {
+                name: string
+                age: number
+                
+                constructor (name: string, age: number) {
+                  this.name = name
+                  this.age = age
+                }
+                  
+                sayHello () {
+                  console.log('你好')
+                }
+              }
+              
+              class Xiao extends Person {
+                sayHello () {
+                  console.log('我是子类的你好')
+                }
+              }
+          ```
+
+        - 抽象类实现
+
+          抽象类和一般类区别不大，**不过抽线类是专门用来被继承的**
+
+          抽象方法：
+
+            - **只有抽象类能定义抽象方法**
+            - 抽象方法由`abstract`开始
+            - 不用写方法体
+            - **子类必须对其进行实现**
+
+          定义实现抽象类，使用`abstract`进行实现，并且可以通过这个关键字定义抽象方法
+
          ```ts
              abstract class Person {
                name: string

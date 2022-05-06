@@ -33,36 +33,36 @@
 	}
 
 	Axios.prototype.request = function (config) {
-		console.log ('发送请求', config.method)
+		console.log('发送请求', config.method)
 	}
 
 	Axios.prototype.get = function (config) {
-		return this.request ({ method: 'GET' })
+		return this.request({ method: 'GET' })
 	}
 
 	Axios.prototype.post = function (config) {
-		return this.request ({ method: 'POST' })
+		return this.request({ method: 'POST' })
 	}
 
 	function createInstance (config) {
-		let context = new Axios (config)
+		let context = new Axios(config)
 		//	 创建函数【此时的 instance 不能作为对象使用
-		let instance = Axios.prototype.request.bind (context)
+		let instance = Axios.prototype.request.bind(context)
 
 		//	为了让 instance 能直接使用原型中的方法【将Axios.prototype中的方法添加到instance函数上】
-		Object.keys (Axios.prototype).forEach ((item) => {
+		Object.keys(Axios.prototype).forEach((item) => {
 			// 将原型中的函数绑定在instance上，并且将this通过bind进行指定
-			instance[item] = Axios.prototype[item].bind (context)
+			instance[item] = Axios.prototype[item].bind(context)
 		})
 
 		// 为 instance 添加default和interceptors
-		Object.keys (context).forEach ((item) => {
+		Object.keys(context).forEach((item) => {
 			instance[item] = context[item]
 		})
 		return instance
 	}
 
-	let axios = createInstance ()
-	axios ({ method: 'GET' })
+	let axios = createInstance()
+	axios({ method: 'GET' })
 </script>
 </html>

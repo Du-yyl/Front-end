@@ -10,14 +10,14 @@
 	 * eval函数作用：
 	 *   将字符串当成JS代码解释执行
 	 * */
-	window.eval ('var i = 100;')
-	alert ('i = ' + i) // i = 100
+	window.eval('var i = 100;')
+	alert('i = ' + i) // i = 100
 
 	var fromJava = '{"name":"zhangsan","password":"123"}' //这是java程序给发过来的json格式的"字符串"
 	// 将以上的json格式的字符串转换成json对象
-	window.eval ('var jsonObj = ' + fromJava)
+	window.eval('var jsonObj = ' + fromJava)
 	// 访问json对象
-	alert (jsonObj.name + ',' + jsonObj.password) // 在前端取数据.
+	alert(jsonObj.name + ',' + jsonObj.password) // 在前端取数据.
 
 
 </script>

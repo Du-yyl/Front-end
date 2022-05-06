@@ -7,12 +7,12 @@
 <script>
 import Demo from './components/Demo'
 
-const { ref } = require ('@vue/runtime-dom')
+const { ref } = require('@vue/runtime-dom')
 
 export default {
   name: 'App',
   setup () {
-    let flag = ref (true)
+    let flag = ref(true)
     return {
       flag,
     }

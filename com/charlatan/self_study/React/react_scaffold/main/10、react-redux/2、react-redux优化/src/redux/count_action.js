@@ -14,26 +14,26 @@ import { ADD, SUBTRACT } from './constant'
  */
 
 const createAddAction = data => ({
-	type: ADD,
-	data,
+    type: ADD,
+    data,
 })
 
 const createSubtractAction = data => ({
-	type: SUBTRACT,
-	data,
+    type: SUBTRACT,
+    data,
 })
 
 const createAsyncAdd = (data, time) => {
-	return (dispatch) => {
-		setTimeout (() => {
-			console.log (dispatch)
-			dispatch (createAddAction (data))
-		}, time)
-	}
+    return (dispatch) => {
+        setTimeout(() => {
+            console.log(dispatch)
+            dispatch(createAddAction(data))
+        }, time)
+    }
 }
 
 export {
-	createSubtractAction,
-	createAddAction,
-	createAsyncAdd,
+    createSubtractAction,
+    createAddAction,
+    createAsyncAdd,
 }

@@ -25,11 +25,11 @@ export default {
   components: {},
   methods: {
     send () {
-      console.log ('发送请求')
-      axios.get ('http://localhost:8080/ask/students').then ((res) => {
-        console.log ('ok', res.data)
+      console.log('发送请求')
+      axios.get('http://localhost:8080/ask/students').then((res) => {
+        console.log('ok', res.data)
       }, (err) => {
-        console.log ('err', err.message)
+        console.log('err', err.message)
       })
     },
   },

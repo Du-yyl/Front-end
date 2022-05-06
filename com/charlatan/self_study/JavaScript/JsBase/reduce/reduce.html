@@ -36,7 +36,7 @@
 	// let arr = [1, 2, 3]
 	let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 1]
 
-	let num = arr.reduce (
+	let num = arr.reduce(
 			/**
 			 * 当函数不指定从第几个开始时，默认从第二个开始进行遍历操作，当在末尾指定要从第一个开始时，会从指定的下标开始遍历
 			 * 如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。
@@ -47,21 +47,21 @@
 			 * @returns {number}
 			 */
 			(previousValue, currentValue, index, array) => {
-				console.log ('上一次返回的值', previousValue, '当前被处理的元素', currentValue, '当前元素的索引', index)
+				console.log('上一次返回的值', previousValue, '当前被处理的元素', currentValue, '当前元素的索引', index)
 				return 1
 			}, 1) //这里指定了初始值
 
-	console.log (num)
+	console.log(num)
 
 	// 使用reduce求数组累加和
-	let add = arr.reduce ((pre, cur) => {
+	let add = arr.reduce((pre, cur) => {
 		return pre + cur
 	}, 0)
-	console.log (add)
+	console.log(add)
 
-	console.log ('-------------')
+	console.log('-------------')
 
-	let numNum = arr.reduce (
+	let numNum = arr.reduce(
 			/**
 			 * 计算数组中每个元素出现的次数
 			 * 思路：先判断当前的内容（cur）在不在指定对象中
@@ -72,17 +72,17 @@
 			 * @returns {{}}
 			 */
 			(pre, cur) => {
-				if ( cur in pre )
+				if (cur in pre)
 					pre[cur]++
 				else
 					pre[cur] = 1
 				return pre
 			}, {})
 
-	console.log (numNum)
+	console.log(numNum)
 
 	//	 数组去重
-	console.log (arr.reduce ((pre, cur) => !pre.includes (cur) ? pre.concat (cur) : pre, []))
+	console.log(arr.reduce((pre, cur) => !pre.includes(cur) ? pre.concat(cur) : pre, []))
 
 	//	 将多维数组转化为一维
 	let ars = [1, [2, [3, [4, [5, [6, [7, [8, [9, [0]]]]]]]]]]
@@ -92,8 +92,8 @@
 	 * @param arr 要变化的数组
 	 * @returns {*}
 	 */
-	const ar = arr => arr.reduce ((pre, cur) => pre.concat (Array.isArray (cur) ? ar (cur) : cur), [])
+	const ar = arr => arr.reduce((pre, cur) => pre.concat(Array.isArray(cur) ? ar(cur) : cur), [])
 
-	console.log (ar (ars))
+	console.log(ar(ars))
 </script>
 </html>

@@ -21,17 +21,17 @@
 	let b = null
 	let c = undefined
 
-	console.log ('------------')
-	console.log (b === typeof b)
-	console.log (c === typeof c)
+	console.log('------------')
+	console.log(b === typeof b)
+	console.log(c === typeof c)
 
 	/*
 	 * typeof的返回值是指定数据的类型，使用字符串进行返回
 	 *   虽然数值是undefined，但是返回值是字符串类型的数据
 	 * */
-	console.log (a, typeof a, typeof a === 'undefined', a === undefined)
-	console.log (a === typeof a)
-	console.log ('--------------------------------------------')
+	console.log(a, typeof a, typeof a === 'undefined', a === undefined)
+	console.log(a === typeof a)
+	console.log('--------------------------------------------')
 	/*
 	 * instanceof用于判断一个数据是不是一个对象的实例
 	 *   其中，函数也是对象，所以instanceof的结果是Object
@@ -40,7 +40,7 @@
 		name: '张三',
 		age: 123,
 		fun: function () {
-			console.log ('你好')
+			console.log('你好')
 		},
 	}
 
@@ -49,15 +49,15 @@
 		this.age = age
 	}
 
-	let sam1 = new Sam ('李四', 14)
+	let sam1 = new Sam('李四', 14)
 
-	console.log (obj1 instanceof Sam)
-	console.log (obj1 instanceof Object)
-	console.log (obj1.fun instanceof Object)
+	console.log(obj1 instanceof Sam)
+	console.log(obj1 instanceof Object)
+	console.log(obj1.fun instanceof Object)
 
-	let sam2 = new Sam ('测试', 13)
-	console.log ('--------------------')
-	console.log (sam2.name)
+	let sam2 = new Sam('测试', 13)
+	console.log('--------------------')
+	console.log(sam2.name)
 
 	/*
 	 * 1. undefined与null的区别?
@@ -68,7 +68,7 @@
 	 * a = null //让a指向的对象成为垃圾对象
 	 * */
 	let sam = {}
-	console.log (sam)
+	console.log(sam)
 	sam2 = null
 	// console.log(sam2.age)
 

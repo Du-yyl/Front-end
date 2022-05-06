@@ -1,6 +1,6 @@
 module.exports = {
-	toBoolean (val) {
-		if ( val === '' ) return val
-		return val === 'true' || val == '1'
-	},
+    toBoolean (val) {
+        if (val === '') return val
+        return val === 'true' || val == '1'
+    },
 }

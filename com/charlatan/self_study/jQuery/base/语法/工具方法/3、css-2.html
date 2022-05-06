@@ -84,18 +84,18 @@
 	 2. 点击 btn2
 	 设置 div2 相对于页面的左上角的位置
 	 */
-	$ (function () {
-		let div1 = $ (`.div1`)
-		let div2 = $ (`.div2`)
-		$ (`#btn1`).click (function () {
-			console.log ('div1 相对于页面左上角的位置' + div1.offset ().left, div1.offset ().top)
-			console.log ('div2 相对于页面左上角的位置' + div2.offset ().left, div2.offset ().top)
-			console.log (' div1 相对于父元素左上角的位置' + div1.position ().left, div1.position ().top)
-			console.log (' div2 相对于父元素左上角的位置' + div2.position ().left, div2.position ().top)
+	$(function () {
+		let div1 = $(`.div1`)
+		let div2 = $(`.div2`)
+		$(`#btn1`).click(function () {
+			console.log('div1 相对于页面左上角的位置' + div1.offset().left, div1.offset().top)
+			console.log('div2 相对于页面左上角的位置' + div2.offset().left, div2.offset().top)
+			console.log(' div1 相对于父元素左上角的位置' + div1.position().left, div1.position().top)
+			console.log(' div2 相对于父元素左上角的位置' + div2.position().left, div2.position().top)
 		})
 
-		$ (`#btn2`).click (function () {
-			div2.offset ({
+		$(`#btn2`).click(function () {
+			div2.offset({
 				left: 200,
 				top: 200,
 			})

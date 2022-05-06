@@ -18,17 +18,17 @@
  *           err 错误
  *           data读取内容
  * */
-let fs = require ('fs')
-fs.readFile ('test.txt', function (err, data) {
-	if ( !err ) {
-		console.log (data.toString ())
-		fs.writeFile ('ttest.txt', data, function (err) {
-			if ( !err ) {
-				console.log ('文件写入成功')
-			}
-		})
-	} else {
-		console.log ('文件读取错误')
-	}
-	
+let fs = require('fs')
+fs.readFile('test.txt', function (err, data) {
+    if (!err) {
+        console.log(data.toString())
+        fs.writeFile('ttest.txt', data, function (err) {
+            if (!err) {
+                console.log('文件写入成功')
+            }
+        })
+    } else {
+        console.log('文件读取错误')
+    }
+    
 })

@@ -14,11 +14,11 @@
  * @return {string}
  */
 function reverseString (str) {
-  let result = []
-  for (let i = 0, len = str.length; i < len; i++) {
-    result.push(str[len - 1 - i])
-  }
-  return result.join('')
+    let result = []
+    for (let i = 0, len = str.length; i < len; i++) {
+        result.push(str[len - 1 - i])
+    }
+    return result.join('')
 }
 
 String.prototype.reverseString = reverseString

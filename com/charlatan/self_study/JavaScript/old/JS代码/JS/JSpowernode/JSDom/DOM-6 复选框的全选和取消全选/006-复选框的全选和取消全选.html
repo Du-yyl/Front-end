@@ -31,22 +31,22 @@
 
 	window.onload = function () {
 
-		var aihaos = document.getElementsByName ('aihao')
-		var firstChk = document.getElementById ('firstChk')
+		var aihaos = document.getElementsByName('aihao')
+		var firstChk = document.getElementById('firstChk')
 		firstChk.onclick = function () {
-			for ( var i = 0; i < aihaos.length; i++ ) {
+			for (var i = 0; i < aihaos.length; i++) {
 				aihaos[i].checked = firstChk.checked
 			}
 		}
 
 		// 对以上数组进行遍历
 		var all = aihaos.length
-		for ( var i = 0; i < aihaos.length; i++ ) {
+		for (var i = 0; i < aihaos.length; i++) {
 			aihaos[i].onclick = function () {
 				var checkedCount = 0
 				// 总数量和选中的数量相等的时候,第一个复选框选中.
-				for ( var i = 0; i < aihaos.length; i++ ) {
-					if ( aihaos[i].checked ) {
+				for (var i = 0; i < aihaos.length; i++) {
+					if (aihaos[i].checked) {
 						checkedCount++
 					}
 				}

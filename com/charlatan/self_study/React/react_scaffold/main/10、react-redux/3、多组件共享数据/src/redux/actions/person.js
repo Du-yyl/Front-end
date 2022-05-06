@@ -11,12 +11,12 @@
 import { ADD_PERSON } from '../constant'
 
 const createAddPersonAction = (data) => {
-	return {
-		type: ADD_PERSON,
-		data,
-	}
+    return {
+        type: ADD_PERSON,
+        data,
+    }
 }
 
 export {
-	createAddPersonAction,
+    createAddPersonAction,
 }

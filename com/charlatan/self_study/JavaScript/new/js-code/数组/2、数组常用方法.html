@@ -72,25 +72,25 @@
 	 注释：请注意，splice() 方法与 slice() 方法的作用是不同的，splice() 方法会直接对数组进行修改。
 	 */
 	let arrayNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-	console.log (arrayNum.slice (2, 6))
-	console.log (arrayNum.slice (-8, -4))
-	console.log (arrayNum.slice (-8))
-	console.log (arrayNum.slice (2))
-	console.log (arrayNum)
+	console.log(arrayNum.slice(2, 6))
+	console.log(arrayNum.slice(-8, -4))
+	console.log(arrayNum.slice(-8))
+	console.log(arrayNum.slice(2))
+	console.log(arrayNum)
 
-	console.log ('------------------------')
+	console.log('------------------------')
 
-	console.log (arrayNum.splice (2, 3))
+	console.log(arrayNum.splice(2, 3))
 	/*
 	 * 这个方法直接将指定的位置往后的位置直接进行截断，并且在原数组直接操作
 	 * */
-	console.log (arrayNum)
-	arrayNum.splice (4, 1, '测试')
+	console.log(arrayNum)
+	arrayNum.splice(4, 1, '测试')
 	/*
 	 * 将指定字段位置的内容进行截断，并返回被截断位置的内容，并可以赋新的值*/
-	console.log (arrayNum)
-	arrayNum.splice (2, 3, '测试-1')
-	console.log (arrayNum)
+	console.log(arrayNum)
+	arrayNum.splice(2, 3, '测试-1')
+	console.log(arrayNum)
 
 </script>
 </body>

@@ -19,7 +19,7 @@ export default {
   name: 'App',
   components: {},
   setup () {
-    let obj = reactive ({
+    let obj = reactive({
       obj_1: '第一个数据',
       obj_2: '第二个数据',
       arr: [

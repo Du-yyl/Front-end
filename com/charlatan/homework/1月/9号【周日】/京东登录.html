@@ -650,19 +650,19 @@
 </body>
 <script>
 	window.onload = () => {
-		let imgMove = document.getElementById ('img-div-2')
-		let divMove = document.getElementById ('slide-div-slide')
-		let imgSlide = document.getElementById ('img-slide')
-		let div_body = document.getElementById ('div-body')
-		let div_left = document.getElementById ('div-left')
+		let imgMove = document.getElementById('img-div-2')
+		let divMove = document.getElementById('slide-div-slide')
+		let imgSlide = document.getElementById('img-slide')
+		let div_body = document.getElementById('div-body')
+		let div_left = document.getElementById('div-left')
 
-		let sink = document.getElementById ('sink')
+		let sink = document.getElementById('sink')
 
 		imgSlide.onmousedown = event_1 => {
 			let timer
 			let x
 			document.onmousemove = event_2 => {
-				console.log (event_1.clientX)
+				console.log(event_1.clientX)
 				x = event_2.clientX - event_1.clientX
 				x = x <= 0 ? 0 : x
 				x = x >= 310 ? 310 : x
@@ -673,72 +673,72 @@
 			document.onmouseup = function () {
 				document.onmousemove = null
 				document.onmouseup = null
-				if ( x >= 145 && x <= 155 ) {
+				if (x >= 145 && x <= 155) {
 					x = 0
-					alert ('恭喜你！登录成功')
+					alert('恭喜你！登录成功')
 					divMove.style.width = x + 'px'
 					imgMove.style.left = x + 'px'
 				} else {
-					imgSlide.classList.add ('error')
-					div_left.classList.add ('img-error')
-					div_body.classList.add ('img-error')
-					timer = setTimeout (function () {
+					imgSlide.classList.add('error')
+					div_left.classList.add('img-error')
+					div_body.classList.add('img-error')
+					timer = setTimeout(function () {
 						x = 0
 						divMove.style.width = x + 'px'
 						imgMove.style.left = x + 'px'
-						div_left.classList.remove ('img-error')
-						div_body.classList.remove ('img-error')
-						imgSlide.classList.remove ('error')
+						div_left.classList.remove('img-error')
+						div_body.classList.remove('img-error')
+						imgSlide.classList.remove('error')
 					}, 500)
 				}
 			}
-			clearTimeout (timer)
+			clearTimeout(timer)
 			return false
 		}
 
-		let top_btn_l = document.getElementById ('center-left')
-		let top_btn_r = document.getElementById ('center-right')
-		let show_l = document.getElementById ('center-body-left')
-		let show_r = document.getElementById ('center-body-right')
+		let top_btn_l = document.getElementById('center-left')
+		let top_btn_r = document.getElementById('center-right')
+		let show_l = document.getElementById('center-body-left')
+		let show_r = document.getElementById('center-body-right')
 		// 左右div切换
 		top_btn_l.onclick = () => {
-			top_btn_l.classList.add ('center-top-switch')
-			top_btn_r.classList.remove ('center-top-switch')
+			top_btn_l.classList.add('center-top-switch')
+			top_btn_r.classList.remove('center-top-switch')
 			show_l.style.display = 'block'
 			show_r.style.display = 'none'
 		}
 		top_btn_r.onclick = () => {
-			top_btn_r.classList.add ('center-top-switch')
-			top_btn_l.classList.remove ('center-top-switch')
+			top_btn_r.classList.add('center-top-switch')
+			top_btn_l.classList.remove('center-top-switch')
 			show_l.style.display = 'none'
 			show_r.style.display = 'block'
 		}
 
-		let username = document.getElementById ('center-body-right-username-input')
-		let password = document.getElementById ('center-body-right-password-input')
-		let hint_span = document.getElementById ('center-body-right-password-hint-span')
-		let hint_span_san = document.getElementById ('center-body-right-password-hin-span-san')
+		let username = document.getElementById('center-body-right-username-input')
+		let password = document.getElementById('center-body-right-password-input')
+		let hint_span = document.getElementById('center-body-right-password-hint-span')
+		let hint_span_san = document.getElementById('center-body-right-password-hin-span-san')
 		let pw
-		let hint = document.getElementById ('center-body-right-password-hint')
-		let hm = document.getElementById ('center-body-right-password-hint-m')
-		let hp = document.getElementById ('center-body-right-password-hint-p')
+		let hint = document.getElementById('center-body-right-password-hint')
+		let hm = document.getElementById('center-body-right-password-hint-m')
+		let hp = document.getElementById('center-body-right-password-hint-p')
 
-		let hint_s_1 = document.getElementById ('hint-span-1')
-		let hint_s_2 = document.getElementById ('hint-span-2')
-		let hint_s_3 = document.getElementById ('hint-span-3')
-		let hint_s_4 = document.getElementById ('hint-span-4')
+		let hint_s_1 = document.getElementById('hint-span-1')
+		let hint_s_2 = document.getElementById('hint-span-2')
+		let hint_s_3 = document.getElementById('hint-span-3')
+		let hint_s_4 = document.getElementById('hint-span-4')
 
-		let hs1 = document.getElementById ('center-body-right-password-hint-span-1')
-		let hs2 = document.getElementById ('center-body-right-password-hint-span-2')
-		let hs3 = document.getElementById ('center-body-right-password-hint-span-3')
-		let hs4 = document.getElementById ('center-body-right-password-hint-span-4')
+		let hs1 = document.getElementById('center-body-right-password-hint-span-1')
+		let hs2 = document.getElementById('center-body-right-password-hint-span-2')
+		let hs3 = document.getElementById('center-body-right-password-hint-span-3')
+		let hs4 = document.getElementById('center-body-right-password-hint-span-4')
 
 		let s1 = true
 		let s2 = true
 		let s3 = true
 		let s4 = true
 
-		let login = document.getElementById ('center-body-right-login')
+		let login = document.getElementById('center-body-right-login')
 
 		//	密码提示的出现和改变
 		password.onfocus = function () {
@@ -747,7 +747,7 @@
 			hint_span.style.paddingTop = '9px'
 			hint_span.style.height = '77px'
 			hint_span_san.style.display = 'block'
-			go ()
+			go()
 		}
 		password.onblur = function () {
 			hint_span.style.width = '0'
@@ -770,20 +770,20 @@
 		function go () {
 			pw = password.value
 			// 密码强度
-			if ( pw.length > 0 ) {
+			if (pw.length > 0) {
 				hint.style.display = 'block'
-				let num = pass (pw)
-				if ( num === 1 ) {
+				let num = pass(pw)
+				if (num === 1) {
 					hm.style.display = 'none'
-				} else if ( num === 2 ) {
+				} else if (num === 2) {
 					hm.style.display = 'block'
 					hp.style.display = 'none'
-				} else if ( num === 3 ) {
+				} else if (num === 3) {
 					hp.style.display = 'block'
 				}
 
 				// 密码长度
-				if ( pw.length >= 8 && pw.length <= 18 ) {
+				if (pw.length >= 8 && pw.length <= 18) {
 					hint_s_1.innerText = '√'
 					hs1.style.color = 'white'
 					s1 = true
@@ -795,7 +795,7 @@
 
 				//	不能存在连续的字母数字
 
-				if ( !/([a-zA-Z0-9])\1{3}/.test (pw) ) {
+				if (!/([a-zA-Z0-9])\1{3}/.test(pw)) {
 					hint_s_4.innerText = '√'
 					hs4.style.color = 'white'
 					s2 = true
@@ -806,7 +806,7 @@
 				}
 
 				//	不能出现中文和空格
-				if ( !/[\u4e00-\u9fa5|\s]/.test (pw) ) {
+				if (!/[\u4e00-\u9fa5|\s]/.test(pw)) {
 					hint_s_3.innerText = '√'
 					hs3.style.color = 'white'
 					s3 = true
@@ -817,8 +817,8 @@
 				}
 
 				//	不能存在连续的字符
-				if ( pw.length > 6 ) {
-					if ( !ditto (pw, 6) ) {
+				if (pw.length > 6) {
+					if (!ditto(pw, 6)) {
 						hint_s_2.innerText = '√'
 						hs2.style.color = 'white'
 						s2 = true
@@ -854,12 +854,12 @@
 		 */
 		function cut (arr, arrLen) {
 			let lens = arr.length
-			if ( lens <= arrLen ) {
+			if (lens <= arrLen) {
 				return arr
 			} else {
 				let array = []
-				for ( let i = 0, len = lens - arrLen + 1; i < len; i++ ) {
-					array.push (arr.slice (i, i + arrLen))
+				for (let i = 0, len = lens - arrLen + 1; i < len; i++) {
+					array.push(arr.slice(i, i + arrLen))
 				}
 				return array
 			}
@@ -872,15 +872,15 @@
 		 * @returns {boolean} 结果以布尔值形式进行返回
 		 */
 		function ditto (arr, lens = 5) {
-			if ( arr.length <= 0 ) {
+			if (arr.length <= 0) {
 				return false
-			} else if ( arr.length <= 2 ) {
+			} else if (arr.length <= 2) {
 				return true
-			} else if ( arr.length <= lens ) {
+			} else if (arr.length <= lens) {
 				let flag = true
-				let num = arr.charCodeAt (1) - arr.charCodeAt (0)
-				for ( let i = 2; i < arr.length; i++ ) {
-					if ( !(num === arr.charCodeAt (i) - arr.charCodeAt (i - 1)) ) {
+				let num = arr.charCodeAt(1) - arr.charCodeAt(0)
+				for (let i = 2; i < arr.length; i++) {
+					if (!(num === arr.charCodeAt(i) - arr.charCodeAt(i - 1))) {
 						flag = false
 						break
 					}
@@ -888,11 +888,11 @@
 				return flag
 			} else {
 				let flag = false
-				cut (arr, lens).forEach ((item, index, self) => {
-					if ( flag ) {
+				cut(arr, lens).forEach((item, index, self) => {
+					if (flag) {
 						return flag
 					}
-					flag = ditto (item)
+					flag = ditto(item)
 				})
 				return flag
 			}
@@ -905,23 +905,23 @@
 		 */
 		const pass = str => {
 			let num = 0
-			if ( /[1-9]/.test (str) ) {
+			if (/[1-9]/.test(str)) {
 				num++
 			}
-			if ( /[a-z|A-Z]/.test (str) ) {
+			if (/[a-z|A-Z]/.test(str)) {
 				num++
 			}
-			if ( /[`~!@#$%^&*()_\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘'，。、]/.test (str) ) {
+			if (/[`~!@#$%^&*()_\-+=<>?:"{}|,.\/;'\\[\]·~！@#￥%……&*（）——\-+={}|《》？：“”【】、；‘'，。、]/.test(str)) {
 				num++
 			}
 			return num
 		}
 
 		//	眼的切换
-		let password_eye = document.getElementById ('center-body-right-password-eye')
+		let password_eye = document.getElementById('center-body-right-password-eye')
 		let eye_flag = true
 		password_eye.onclick = function () {
-			if ( eye_flag ) {
+			if (eye_flag) {
 				password_eye.style.background = 'white url("file/open-eye.png") no-repeat 10px'
 				password_eye.style.backgroundSize = '23px'
 				password.type = 'text'
@@ -935,13 +935,13 @@
 		}
 
 		login.onclick = function () {
-			if ( username.value !== 'admin' ) {
-				alert ('用户名错误，禁止登录')
-			} else if ( pass (pw) === 1 ) {
-				alert ('密码强度过低,禁止登录')
-			} else if ( !s1 || !s2 || !s3 || !s4 ) {
+			if (username.value !== 'admin') {
+				alert('用户名错误，禁止登录')
+			} else if (pass(pw) === 1) {
+				alert('密码强度过低,禁止登录')
+			} else if (!s1 || !s2 || !s3 || !s4) {
 				// }else if (false&&true){
-				alert ('你的密码有不正确选项，禁止登录')
+				alert('你的密码有不正确选项，禁止登录')
 			} else {
 
 				sink.style.display = 'block'

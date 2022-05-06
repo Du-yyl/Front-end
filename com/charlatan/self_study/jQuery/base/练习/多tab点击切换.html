@@ -106,16 +106,16 @@
 	// 	})
 	// })
 
-	$ (function () {
+	$(function () {
 		let currIndex = 0
-		let divs = $ (`#container > div`)
-		$ (`#tab > li`).click (function () {
-			let index = $ (this).index ()
-			$ (divs[index]).css ({
+		let divs = $(`#container > div`)
+		$(`#tab > li`).click(function () {
+			let index = $(this).index()
+			$(divs[index]).css({
 				display: 'block',
 			})
-			if ( index !== divs[currIndex] ) {
-				$ (divs[currIndex]).css ({
+			if (index !== divs[currIndex]) {
+				$(divs[currIndex]).css({
 					display: 'none',
 				})
 				currIndex = index

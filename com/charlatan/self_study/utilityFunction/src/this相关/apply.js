@@ -21,11 +21,11 @@ apply：
  * @returns {*|undefined} 返回执行结果，没有结果返回 undefined
  */
 Function.prototype.apply = function (obj, argArray) {
-  if (obj === undefined || obj === null) {
-    obj = globalThis
-  }
-  obj.temp = this
-  let result = obj.temp(...argArray)
-  delete obj.temp
-  return result || undefined
+    if (obj === undefined || obj === null) {
+        obj = globalThis
+    }
+    obj.temp = this
+    let result = obj.temp(...argArray)
+    delete obj.temp
+    return result || undefined
 }

@@ -26,12 +26,12 @@ export default {
   },
   methods: {
     add () {
-      let value = this.value.trim ()
-      if ( value === '' ) {
-        console.log ('请输入内容')
+      let value = this.value.trim()
+      if (value === '') {
+        console.log('请输入内容')
         this.value = ''
       } else {
-        this.addObj ({ id: nanoid (), value, done: false })
+        this.addObj({ id: nanoid(), value, done: false })
         this.value = ''
       }
     },

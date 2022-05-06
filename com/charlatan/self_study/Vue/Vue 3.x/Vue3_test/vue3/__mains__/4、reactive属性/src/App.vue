@@ -18,13 +18,13 @@ export default {
   name: 'App',
   components: {},
   setup () {
-    let name = ref ('李四')
-    let age = ref (50)
-    let obj = ref ({
+    let name = ref('李四')
+    let age = ref(50)
+    let obj = ref({
       obj_1: '测试数据1',
       obj_2: '测试数据2',
     })
-    let num = reactive ({
+    let num = reactive({
       rea_1: 'reactive第一个测试数据',
       rea_2: 'reactive第二个测试数据',
     })
@@ -32,8 +32,8 @@ export default {
     function changInfo () {
       obj.value.obj_1 = '第一个数据修改测试例子'
 
-      console.log (num.rea_1)
-      console.log (num)
+      console.log(num.rea_1)
+      console.log(num)
     }
 
     return {

@@ -14,16 +14,16 @@ import { ADD, SUBTRACT } from './constant'
  */
 
 const createAppAction = data => ({
-	type: ADD,
-	data,
+    type: ADD,
+    data,
 })
 
 const createSubtractAction = data => ({
-	type: SUBTRACT,
-	data,
+    type: SUBTRACT,
+    data,
 })
 
 export {
-	createSubtractAction,
-	createAppAction,
+    createSubtractAction,
+    createAppAction,
 }

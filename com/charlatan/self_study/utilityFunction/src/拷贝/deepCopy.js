@@ -61,33 +61,33 @@
 // }
 
 function deepCopy (arg, map = new Map()) {
-  // 性能优化版本，终极版
-  if (typeof arg === 'object' && arg !== null) {
-    // 先进行判断，原来是否克隆过
-    let flag = map.get(arg)
-    if (flag) {
-      // 如果克隆过，直接将原来的克隆结果进行返回
-      return flag
-    }
-    let isArray = Array.isArray(arg)
-    let result = isArray ? [] : {}
-    // 将新的结果存储在容器中
-    map.set(arg, result)
-    // 数组 和 对象 进入不同的代码
-    if (isArray) {
-      arg.forEach((item, index) => {
-        result[index] = deepCopy(item, map)
-      })
+    // 性能优化版本，终极版
+    if (typeof arg === 'object' && arg !== null) {
+        // 先进行判断，原来是否克隆过
+        let flag = map.get(arg)
+        if (flag) {
+            // 如果克隆过，直接将原来的克隆结果进行返回
+            return flag
+        }
+        let isArray = Array.isArray(arg)
+        let result = isArray ? [] : {}
+        // 将新的结果存储在容器中
+        map.set(arg, result)
+        // 数组 和 对象 进入不同的代码
+        if (isArray) {
+            arg.forEach((item, index) => {
+                result[index] = deepCopy(item, map)
+            })
+        } else {
+            Object.keys(arg).forEach((item) => {
+                result[item] = deepCopy(arg[item], map)
+            })
+        }
+        
+        return result
     } else {
-      Object.keys(arg).forEach((item) => {
-        result[item] = deepCopy(arg[item], map)
-      })
+        return arg
     }
-    
-    return result
-  } else {
-    return arg
-  }
 }
 
 Object.prototype.deepCopy = deepCopy

@@ -22,28 +22,28 @@
 
 	let arr = [1, 2, 3]
 	// 展开一个数组
-	console.log (...arr)
+	console.log(...arr)
 
-	console.log ('-----------')
+	console.log('-----------')
 	// 复制一个数组，也称为拷贝数组
 	let arr2 = [...arr]
-	arr2.push (4)
+	arr2.push(4)
 	// 并且不会对arr造成影响
-	console.log ('arr', arr)
-	console.log ('arr2', arr2)
+	console.log('arr', arr)
+	console.log('arr2', arr2)
 
-	console.log ('-----------')
+	console.log('-----------')
 
 	// 连接数组
 	let arr3 = [...arr, ...arr2]
-	console.log (arr3)
+	console.log(arr3)
 
-	console.log ('---------------------')
+	console.log('---------------------')
 
 	let ce = [1, 23, 123, 123, 1231, 2, [12, 31, 231, 231, 23123, [1, 231, 231, 23123]]]
-	let ci = ce.join ()
-	for ( let i = 0; i < ci.length; i++ ) {
-		console.log (ci[i])
+	let ci = ce.join()
+	for (let i = 0; i < ci.length; i++) {
+		console.log(ci[i])
 	}
 
 

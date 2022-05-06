@@ -31,8 +31,8 @@
 		render () {
 			return (
 					<form action="https://www.baidu.com" onSubmit={this.login}>
-						账号：<input onChange={this.saveData ('username')} name="username" type="text"/>
-						密码：<input onChange={this.saveData ('password')} name="userPassword" type="password"/>
+						账号：<input onChange={this.saveData('username')} name="username" type="text"/>
+						密码：<input onChange={this.saveData('password')} name="userPassword" type="password"/>
 						<button>登录</button>
 					</form>
 			)
@@ -57,19 +57,19 @@
 					 * 这个函数调用的时候是通过触发事件进行的调用，调用的时候保存触发事件的不同元素
 					 * @param event
 					 */ {
-				this.setState ({
+				this.setState({
 					[dataType]: event.target.value,
 				})
 			}
 		}
 		login = (event) => {
-			event.preventDefault ()
-			console.log (this.state.username)
-			console.log (this.state.password)
+			event.preventDefault()
+			console.log(this.state.username)
+			console.log(this.state.password)
 		}
 	}
 
-	ReactDOM.render (<Longin/>, document.getElementById ('test'))
+	ReactDOM.render(<Longin/>, document.getElementById('test'))
 
 </script>
 </html>

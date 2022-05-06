@@ -62,24 +62,24 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	$ (function () {
+	$(function () {
 		/*
 		 3. 点击btn3, 淡出/淡入切换，动画结束时提示“动画结束了”
 		 */
-		let btn1 = $ (`#btn1`)
-		let btn2 = $ (`#btn2`)
-		let btn3 = $ (`#btn3`)
-		let div = $ (`.div1`)
-		btn1.click (function () {
-			div.fadeOut (1000)
+		let btn1 = $(`#btn1`)
+		let btn2 = $(`#btn2`)
+		let btn3 = $(`#btn3`)
+		let div = $(`.div1`)
+		btn1.click(function () {
+			div.fadeOut(1000)
 		})
-		btn2.click (function () {
-			div.fadeIn (1000)
+		btn2.click(function () {
+			div.fadeIn(1000)
 		})
 
-		btn3.click (function () {
-			$ ('.div1').fadeToggle (2000, function () {
-				alert ('动画结束了')
+		btn3.click(function () {
+			$('.div1').fadeToggle(2000, function () {
+				alert('动画结束了')
 			})
 		})
 	})

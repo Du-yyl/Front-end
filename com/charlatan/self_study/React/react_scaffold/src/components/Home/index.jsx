@@ -13,22 +13,22 @@ import { NavLink, Outlet, useRoutes } from 'react-router-dom'
 import routes from '../../routes'
 
 export default function Home () {
-	const element = useRoutes (routes)
-	
-	return (
-			<div>
-				<h3>我是Home的内容</h3>
-				<div>
-					<ul className="nav nav-tabs">
-						<li>
-							<NavLink to="news">News</NavLink>
-						</li>
-						<li>
-							<NavLink to="./message">Message</NavLink>
-						</li>
-					</ul>
-					<Outlet/>
-				</div>
-			</div>
-	)
+    const element = useRoutes(routes)
+    
+    return (
+        <div>
+            <h3>我是Home的内容</h3>
+            <div>
+                <ul className="nav nav-tabs">
+                    <li>
+                        <NavLink to="news">News</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="./message">Message</NavLink>
+                    </li>
+                </ul>
+                <Outlet/>
+            </div>
+        </div>
+    )
 }

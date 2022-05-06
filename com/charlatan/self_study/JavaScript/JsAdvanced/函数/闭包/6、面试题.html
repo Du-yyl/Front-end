@@ -32,8 +32,8 @@
 			}
 		},
 	}
-	console.log (object.getNameFunc () ())
-	console.log (object.getNameFunc ())
+	console.log(object.getNameFunc()())
+	console.log(object.getNameFunc())
 	/*
 	 *   这里直接执行的函数直接调用的是object.getNameFunc()，他的返回对象是一个函数，这个函数的执行对象是window，
 	 *   所以结果会返回the window
@@ -52,7 +52,7 @@
 			}
 		},
 	}
-	console.log (object2.getNameFunc () ())
+	console.log(object2.getNameFunc()())
 	/*
 	 * 这里调用的是和上面一样的，但是返回的是this的调用Object中的this，并进行赋值
 	 * 所以这里的返回的Object中的this

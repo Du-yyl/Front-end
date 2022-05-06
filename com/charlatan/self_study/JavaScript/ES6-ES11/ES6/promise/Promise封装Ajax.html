@@ -44,8 +44,8 @@
 </div>
 </body>
 <script>
-	let btn = document.getElementById ('btn')
-	let div = document.getElementById ('div')
+	let btn = document.getElementById('btn')
+	let div = document.getElementById('div')
 
 	// btn.onclick = function () {
 	// 	let xhr = new XMLHttpRequest()
@@ -61,26 +61,26 @@
 	// }
 
 	btn.onclick = function () {
-		let xhr = new XMLHttpRequest ()
-		xhr.open ('GET', 'http://127.0.0.1:8000/server')
-		xhr.send ()
-		let pro = new Promise (((resolve, reject) => {
+		let xhr = new XMLHttpRequest()
+		xhr.open('GET', 'http://127.0.0.1:8000/server')
+		xhr.send()
+		let pro = new Promise(((resolve, reject) => {
 			xhr.onreadystatechange = function () {
-				if ( xhr.readyState === 4 ) {
-					if ( xhr.status >= 200 && xhr.status <= 300 ) {
+				if (xhr.readyState === 4) {
+					if (xhr.status >= 200 && xhr.status <= 300) {
 						div.innerText = xhr.response
-						resolve (xhr.response)
+						resolve(xhr.response)
 					}
-					reject ('获取失败')
+					reject('获取失败')
 				}
-				resolve ('状态准备失败')
+				resolve('状态准备失败')
 			}
 		}))
 
-		pro.then ((value => {
-			console.log (value)
+		pro.then((value => {
+			console.log(value)
 		}), (reason => {
-					console.log (reason)
+					console.log(reason)
 				}
 		))
 	}

@@ -18,30 +18,30 @@
 	}
 
 	// 调用函数sum
-	var retValue = sum (1, 2)
-	alert (retValue)
+	var retValue = sum(1, 2)
+	alert(retValue)
 
-	var retValue2 = sum ('jack') // jack赋值给a变量,b变量没有赋值系统默认赋值undefined
-	alert (retValue2) // jackundefined
+	var retValue2 = sum('jack') // jack赋值给a变量,b变量没有赋值系统默认赋值undefined
+	alert(retValue2) // jackundefined
 
-	var retValue3 = sum ()
-	alert (retValue3) // NaN (NaN是一个具体存在的值，该值表示不是数字。Not a Number)
+	var retValue3 = sum()
+	alert(retValue3) // NaN (NaN是一个具体存在的值，该值表示不是数字。Not a Number)
 
-	var retValue4 = sum (1, 2, 3)
-	alert ('结果=' + retValue4) // 结果=3
+	var retValue4 = sum(1, 2, 3)
+	alert('结果=' + retValue4) // 结果=3
 
 	function test1 (username) {
-		alert ('test1')
+		alert('test1')
 	}
 
 	/*
 	 在JS当中，函数的名字不能重名，当函数重名的时候，后声明的函数会将之前声明的同名函数覆盖。
 	 */
 	function test1 () {
-		alert ('test1 test1')
+		alert('test1 test1')
 	}
 
-	test1 ('lisi') // 这个调用的是第二个test1()函数.
+	test1('lisi') // 这个调用的是第二个test1()函数.
 
 </script>
 </body>

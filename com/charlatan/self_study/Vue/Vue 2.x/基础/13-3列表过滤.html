@@ -31,7 +31,7 @@
 <script>
 	Vue.config.productionTip = false
 
-	const vm = new Vue ({
+	const vm = new Vue({
 		el: '#root',
 		data: {
 			persons: [
@@ -67,8 +67,8 @@
 		methods: {},
 		computed: {
 			fullPer (value) {
-				return this.persons.filter ((item) => {
-					return item.name.indexOf (this.input) !== -1
+				return this.persons.filter((item) => {
+					return item.name.indexOf(this.input) !== -1
 				})
 			},
 		},

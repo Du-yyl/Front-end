@@ -97,10 +97,10 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
-	$ (function () {
-		let inner = $ (`.inner`)
-		$ ('.out').on ('click', function () {
-			console.log ('out clicked2')
+	$(function () {
+		let inner = $(`.inner`)
+		$('.out').on('click', function () {
+			console.log('out clicked2')
 		})
 		//	给.out绑定点击监听(用两种方法绑定)
 		/*		$(`.out`).click(function () {
@@ -118,10 +118,10 @@
 		 .mouseleave(function () {
 		 alert("离开，，，")
 		 })*/
-		inner.on ((`mouseenter`), function () {
-			alert ('进入,,,')
-		}).on ((`mouseleave`), function () {
-			alert ('离开,,,')
+		inner.on((`mouseenter`), function () {
+			alert('进入,,,')
+		}).on((`mouseleave`), function () {
+			alert('离开,,,')
 		})
 		/*				$(`.inner`).hover(function () {
 		 alert("进入。。。")
@@ -130,34 +130,34 @@
 		 }*/
 
 		//	点击btn1解除.inner上的所有事件监听
-		$ (`#btn1`).on ('click', function () {
-			$ (`.inner`).off ()
+		$(`#btn1`).on('click', function () {
+			$(`.inner`).off()
 		})
 
 		//	点击btn2解除.inner上的mouseover事件
-		$ (`#btn2`).on ('click', function () {
-			$ (`.inner`).off ('mouseleave')
+		$(`#btn2`).on('click', function () {
+			$(`.inner`).off('mouseleave')
 		})
 
 		//	点击btn3得到事件坐标
-		$ (`#btn3`).on ('click', function (event) {
-			console.log ('距离最近的div' + event.offsetX, event.offsetY)
-			console.log ('距离页面最顶部的距离（非可视区域）' + event.pageX, event.pageY)
-			console.log ('距离页面顶部（可视距离）' + event.clientX, event.clientY)
+		$(`#btn3`).on('click', function (event) {
+			console.log('距离最近的div' + event.offsetX, event.offsetY)
+			console.log('距离页面最顶部的距离（非可视区域）' + event.pageX, event.pageY)
+			console.log('距离页面顶部（可视距离）' + event.clientX, event.clientY)
 		})
 
 		//	点击.inner区域, 外部点击监听不响应
-		inner.click (function (event) {
-			console.log ('123123')
+		inner.click(function (event) {
+			console.log('123123')
 			// 停止事件冒泡
-			event.stopPropagation ()
+			event.stopPropagation()
 		})
 
 		//	点击链接, 如果当前时间是偶数不跳转
-		$ (`#test4`).click (function (event) {
-			let time = new Date ()
-			if ( time % 2 === 0 ) {
-				event.preventDefault ()
+		$(`#test4`).click(function (event) {
+			let time = new Date()
+			if (time % 2 === 0) {
+				event.preventDefault()
 			}
 		})
 	})

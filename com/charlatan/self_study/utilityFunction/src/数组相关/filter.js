@@ -17,12 +17,12 @@
  * @returns {*[]} 返回的是一个新数组
  */
 function filter (callback) {
-  let arr = []
-  for (let i = 0, len = this.length; i < len; i++) {
-    if (callback(this[i], i, this))
-      arr.push(this[i])
-  }
-  return arr
+    let arr = []
+    for (let i = 0, len = this.length; i < len; i++) {
+        if (callback(this[i], i, this))
+            arr.push(this[i])
+    }
+    return arr
 }
 
 Array.prototype.filter = filter

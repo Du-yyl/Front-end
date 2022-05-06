@@ -40,10 +40,10 @@ export default {
       // this.$store.commit('persons/ADDTO',obj)
 
       // 访问到的是 actions 中的方法
-      this.$store.dispatch ('persons/addTo', obj).then (() => {
-        console.log ('添加成功')
+      this.$store.dispatch('persons/addTo', obj).then(() => {
+        console.log('添加成功')
       }, () => {
-        console.log ('添加失败')
+        console.log('添加失败')
       })
     },
   },

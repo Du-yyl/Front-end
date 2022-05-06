@@ -15,11 +15,11 @@
  * @returns {*|undefined} 将函数的调用的返回值进行返回，如果没有返回值，返回的是 undefined
  */
 Function.prototype.call = function (obj, ...args) {
-  obj = obj === null || obj === undefined ? globalThis : obj
-  obj.temp = this
-  let result = obj.temp(...args)
-  delete obj.temp
-  return result || undefined
+    obj = obj === null || obj === undefined ? globalThis : obj
+    obj.temp = this
+    let result = obj.temp(...args)
+    delete obj.temp
+    return result || undefined
 }
 
 /**
@@ -29,13 +29,13 @@ Function.prototype.call = function (obj, ...args) {
  * @returns {function()} 返回的 function
  */
 Function.prototype.bind = function (obj, ...args) {
-  return (...arg) => {
-    obj = obj === null || obj === undefined ? globalThis : obj
-    obj.temp = this
-    let result = obj.temp(...args, ...arg)
-    delete obj.temp
-    return result || undefined
-  }
+    return (...arg) => {
+        obj = obj === null || obj === undefined ? globalThis : obj
+        obj.temp = this
+        let result = obj.temp(...args, ...arg)
+        delete obj.temp
+        return result || undefined
+    }
 }
 /**
  * 基本内容和 call 一样
@@ -44,9 +44,9 @@ Function.prototype.bind = function (obj, ...args) {
  * @returns {*|undefined} 返回执行结果，没有结果返回 undefined
  */
 Function.prototype.apply = function (obj, argArray) {
-  obj = obj === null || obj === undefined ? globalThis : obj
-  obj.temp = this
-  let result = obj.temp(...argArray)
-  delete obj.temp
-  return result || undefined
+    obj = obj === null || obj === undefined ? globalThis : obj
+    obj.temp = this
+    let result = obj.temp(...argArray)
+    delete obj.temp
+    return result || undefined
 }

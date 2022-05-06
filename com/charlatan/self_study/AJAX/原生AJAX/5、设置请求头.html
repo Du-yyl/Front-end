@@ -48,23 +48,23 @@
 </pre>
 </body>
 <script>
-	let result = document.getElementById ('result')
+	let result = document.getElementById('result')
 	result.onmouseover = function () {
 		//	创建对象
-		let xhr = new XMLHttpRequest ()
+		let xhr = new XMLHttpRequest()
 		//	初始化请求
-		xhr.open ('POST', 'http://127.0.0.1:8000/server')
+		xhr.open('POST', 'http://127.0.0.1:8000/server')
 
 		//设置请求头
-		xhr.setRequestHeader ('Content-Type', 'application/x-www-form-urlencoded')
-		xhr.setRequestHeader ('name', 'zhangSan')
+		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+		xhr.setRequestHeader('name', 'zhangSan')
 
 		//	发送请求
-		xhr.send ()
+		xhr.send()
 		//	绑定改变，并接受返回
 		xhr.onreadystatechange = function () {
-			if ( xhr.readyState === 4 ) {
-				if ( xhr.status >= 200 && xhr.status < 300 ) {
+			if (xhr.readyState === 4) {
+				if (xhr.status >= 200 && xhr.status < 300) {
 					result.innerText = xhr.response
 				}
 			}

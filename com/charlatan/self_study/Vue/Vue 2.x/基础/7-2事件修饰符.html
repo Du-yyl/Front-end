@@ -129,35 +129,35 @@
 <script>
 	Vue.config.productionTip = false
 
-	let vm = new Vue ({
+	let vm = new Vue({
 		el: '#root',
 		data: {
 			name: 'Jack',
 		},
 		methods: {
 			show (event) {
-				alert ('这是测试的例子')
+				alert('这是测试的例子')
 				return void (0)
 			},
 			func1 () {
-				console.log ('我是div1')
+				console.log('我是div1')
 			},
 			func2 (event) {
 				// 原生取消事件的冒泡
 				// event.stopPropagation()
-				console.log ('我是div2')
+				console.log('我是div2')
 			},
 			func3 () {
-				console.log ('div3')
+				console.log('div3')
 			},
 			func4 () {
-				console.log ('div4')
+				console.log('div4')
 			},
 			func5 () {
-				console.log ('div5')
+				console.log('div5')
 			},
 			func6 () {
-				console.log ('我触发了')
+				console.log('我触发了')
 			},
 		},
 	})

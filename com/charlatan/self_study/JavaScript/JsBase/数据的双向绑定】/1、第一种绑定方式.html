@@ -25,7 +25,7 @@
 </pre>
 </body>
 <script>
-	var elems = [document.getElementById ('el'), document.getElementById ('input')]
+	var elems = [document.getElementById('el'), document.getElementById('input')]
 
 	var data = {
 		value: 'hello!',
@@ -36,7 +36,7 @@
 			this.innerHTML = str
 		},
 		value: function (str) {
-			this.setAttribute ('value', str)
+			this.setAttribute('value', str)
 		},
 	}
 
@@ -44,17 +44,17 @@
 		/**
 		 * 扫描带指令的节点属性
 		 */
-		for ( var i = 0, len = elems.length; i < len; i++ ) {
+		for (var i = 0, len = elems.length; i < len; i++) {
 			var elem = elems[i]
 			elem.command = []
-			for ( var j = 0, len1 = elem.attributes.length; j < len1; j++ ) {
+			for (var j = 0, len1 = elem.attributes.length; j < len1; j++) {
 				var attr = elem.attributes[j]
-				if ( attr.nodeName.indexOf ('q-') >= 0 ) {
+				if (attr.nodeName.indexOf('q-') >= 0) {
 					/**
 					 * 调用属性指令，这里可以使用数据改变检测
 					 */
-					command[attr.nodeName.slice (2)].call (elem, data[attr.nodeValue])
-					elem.command.push (attr.nodeName.slice (2))
+					command[attr.nodeName.slice(2)].call(elem, data[attr.nodeValue])
+					elem.command.push(attr.nodeName.slice(2))
 				}
 			}
 		}
@@ -65,23 +65,23 @@
 	 */
 	function mvSet (key, value) {
 		data[key] = value
-		scan ()
+		scan()
 	}
 
 	/**
 	 * 数据绑定监听
 	 */
-	elems[1].addEventListener ('keyup', function (e) {
-		mvSet ('value', e.target.value)
+	elems[1].addEventListener('keyup', function (e) {
+		mvSet('value', e.target.value)
 	}, false)
 
-	scan ()
+	scan()
 
 	/**
 	 * 改变数据更新视图
 	 */
-	setTimeout (function () {
-		mvSet ('value', 'fuck')
+	setTimeout(function () {
+		mvSet('value', 'fuck')
 	}, 1000)
 
 </script>

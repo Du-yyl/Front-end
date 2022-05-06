@@ -29,7 +29,7 @@ import { computed } from '@vue/runtime-dom'
 export default {
   name: 'Demo',
   setup () {
-    let person = reactive ({
+    let person = reactive({
       firstName: '',
       subName: '',
     })
@@ -40,12 +40,12 @@ export default {
     // })
 
     // 完整写法
-    person.name = computed ({
+    person.name = computed({
       get () {
         return person.firstName + '-' + person.subName
       },
       set (value) {
-        let arr = value.split ('-')
+        let arr = value.split('-')
         person.firstName = arr[0]
         person.subName = arr[1]
       },

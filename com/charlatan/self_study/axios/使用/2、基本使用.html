@@ -31,22 +31,22 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
 <script>
-	$ ('.btn:eq(0)').click (function () {
-		axios ({
+	$('.btn:eq(0)').click(function () {
+		axios({
 			// 请求类型
 			method: 'GET',
 			//	 URL
 			url: 'http://localhost:3000/posts',
-		}).then ((val) => {
-			console.log (val)
+		}).then((val) => {
+			console.log(val)
 		}, (res) => {
-			console.log (res)
+			console.log(res)
 		})
 	})
 
 	// 添加文章
-	$ ('.btn:eq(1)').click (function () {
-		axios ({
+	$('.btn:eq(1)').click(function () {
+		axios({
 			// 请求类型
 			method: 'POST',
 			//	 URL
@@ -56,16 +56,16 @@
 				title: '这是测试例子',
 				author: '李四',
 			},
-		}).then ((val) => {
-			console.log (val)
+		}).then((val) => {
+			console.log(val)
 		}, (res) => {
-			console.log (res)
+			console.log(res)
 		})
 	})
 
 	//修改文章
-	$ ('.btn:eq(2)').click (function () {
-		axios ({
+	$('.btn:eq(2)').click(function () {
+		axios({
 			// 请求类型
 			method: 'PUT',
 			//	 URL
@@ -75,25 +75,25 @@
 				title: '这是测试例子',
 				author: '王五',
 			},
-		}).then ((val) => {
-			console.log (val)
+		}).then((val) => {
+			console.log(val)
 		}, (res) => {
-			console.log (res)
+			console.log(res)
 		})
 	})
 
 	//删除数据
-	$ ('.btn:eq(3)').click (function () {
-		axios ({
+	$('.btn:eq(3)').click(function () {
+		axios({
 			// 请求类型
 			method: 'delete',
 			//	 URL
 			url: 'http://localhost:3000/posts/2',
 
-		}).then ((val) => {
-			console.log (val)
+		}).then((val) => {
+			console.log(val)
 		}, (res) => {
-			console.log (res)
+			console.log(res)
 		})
 	})
 
