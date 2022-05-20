@@ -2,7 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/com/git/airbnb/javascript" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/com/git/bilibili-user" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web/src/com/git/bilibili-user" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web代码/src" vcs="Git" />
   </component>
 </project>

@@ -1,0 +1,152 @@
+```html
+<!--
+  ~ Date:2021/12/19 12:43 42
+  ~ Name:多tab点击切换.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>多tab点击切换</title>
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        /*-------以上为默认设置（The above is the default setting）--------*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #tab li {
+            float: left;
+            list-style: none;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            text-align: center;
+        }
+        #container {
+            position: relative;
+        }
+        #content1, #content2, #content3 {
+            width: 300px;
+            height: 100px;
+            padding: 30px;
+            position: absolute;
+            top: 40px;
+            left: 0;
+        }
+        #tab, #content1 {
+            background-color: #ffcc00;
+        }
+        #tab2, #content2 {
+            background-color: #ff00cc;
+        }
+        #tab3, #content3 {
+            background-color: #00ccff;
+        }
+   </style>
+</head>
+<body>
+<h2>多Tab点击切换</h2>
+<ul id="tab">
+   <li id="tab" value="1">10元套餐</li>
+   <li id="tab2" value="2">30元套餐</li>
+   <li id="tab3" value="3">50元包月</li>
+</ul>
+<div id="container">
+   <div id="content1">
+      10元套餐详情：<br/>&nbsp;每月套餐内拨打100分钟，超出部分2毛/分钟
+   </div>
+   <div id="content2" style="display: none">
+      30元套餐详情：<br/>&nbsp;每月套餐内拨打300分钟，超出部分1.5毛/分钟
+   </div>
+   <div id="content3" style="display: none">
+      50元包月详情：<br/>&nbsp;每月无限量随心打
+   </div>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</html>
+```
+
+实现效果：点击对应的li标签，实现对象的切换
+
+解法1：
+
+```javascript
+<script>
+    $(function () {
+        let index
+        let lis = $(`#tab > li`)
+        let conts = $(`#container > div`)
+        //隐式遍历
+        lis.click(function () {
+           conts.css({
+              display: 'none'
+           })
+           index = $(this).index()
+           conts[index].style.display = 'block'
+        })
+    })
+    
+</script>
+```
+
+思路：
+
+​		第一行：在JQ中写要执行的函数，加载完毕后执行
+
+​		第12行：因为这里查找的是DOM元素，所以不能直接使用JQ中的css（）方法，要使用原生进行设置
+
+​	第一步：查找到要进行点击和变换的标签，并进行绑定【这里注意：JQ中的集合元素可以直接进行绑定，他会在底层进行隐式遍历，不用再进行遍历即可完成全部的绑定】
+
+​	第二步：因为要将指定对应的下标的div设置为显示，而其他的是隐藏状态，所以直接将所有的div设置成隐藏，再对象指定的那个重新进行设置
+
+​		
+
+解法2：
+
+​	
+
+```javascript
+<script>
+   $(function () {
+      let currIndex = 0
+      let divs = $(`#container > div`)
+      $(`#tab > li`).click(function () {
+         let index = $(this).index()
+         $(divs[index]).css({
+            display: 'block'
+         })
+         $(divs[currIndex]).css({
+            display: "none"
+         })
+         currIndex = index
+      })
+   })
+</script>
+```
+
+上一种方法可以实现对应效果，但是因为每一次点击都会对所有的元素进行操作，所以效率更低，这种解法只对要修改的元素进行设置，效率更高
+
+​	第一步：找到要设置和修改的元素集合，并绑定事件，先设置显示的元素下标（currIndex）
+
+​	第二步：当发生点击事件时，获取到指定点击的下标，并将指定的div设置为显示
+
+​	第三步：将原来显示的div设置为隐藏，并为显示的div的下标重新进行赋值

@@ -1,7 +1,0 @@
-{
-  "name": "Node",
-  "version": "1.0.0",
-  "devDependencies": {
-    "log4js": "^6.3.0"
-  }
-}
