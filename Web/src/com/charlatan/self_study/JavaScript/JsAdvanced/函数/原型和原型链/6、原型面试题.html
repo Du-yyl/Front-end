@@ -1,0 +1,126 @@
+<!--
+  ~ Date:2021/12/13 12:40 07
+  ~ Name:6、原型面试题.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/函数/原型和原型链
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型面试题</title>
+	<style>
+
+	</style>
+</head>
+<body>
+
+</body>
+<script>
+	// function A() {}
+	// A.prototype.n = 1
+	//
+	// let b = new A();
+	// console.log(b);
+	// A.prototype = {
+	// 	n: 2,
+	// 	m: 3
+	// }
+	//
+	// let c = new A();
+	// console.log(c);
+	// console.log(b.n, b.m, c.n, c.m);
+	// console.log(b.constructor.prototype.n);
+	//	2 3 ; 2 3
+	console.log('----------------------')
+
+	// function F() {
+	// }
+	//
+	// Object.prototype.a = function () {
+	// 	console.log("a()");
+	// }
+	// Function.prototype.b = function () {
+	// 	console.log("b()");
+	// }
+	//
+	// let f = new F();
+	//
+	// f.a()
+	// // f.b()
+	// F.a()
+	// F.b()
+
+	function Fun () {
+	}
+
+	Fun.prototype.a = function () {
+		console.log('我是Fun中的a（）')
+	}
+	Fun.prototype.b = function () {
+		console.log('我是Fun中的b（）')
+	}
+
+	Object.prototype.a = function () {
+		console.log('我是Object中的a（）')
+	}
+	Object.prototype.b = function () {
+		console.log('我是Object中的b（）')
+	}
+
+	Function.prototype.a = function () {
+		console.log('我是Function中的a（）')
+	}
+	Function.prototype.b = function () {
+		console.log('我是Function中的b（）')
+	}
+
+	let obj = {}
+	let fun = new Fun()
+
+	fun.a()
+	fun.b()
+	/*
+	 * `
+	 * 这里因为fun是通过new的Fun产生的，Fun中有指定的属性，直接使用
+	 * 输出：
+	 *   // 我是Fun中的a（）
+	 *	// 我是Fun中的b（）
+	 * */
+	Fun.a()
+	Fun.b()
+	/*
+	 * `
+	 * Fun是通过new的Function产生的，他的隐式原型指向的是Function（）
+	 * // 我是Function中的a（）
+	 * // 我是Function中的b（）
+	 * */
+	obj.a()
+	obj.b()
+	/*
+	 * ·
+	 * obj是通过new Object产生的，所以他的隐式原型指向的是Object中的prototype
+	 * // 我是Object中的a（）
+	 * // 我是Object中的b（）
+	 * */
+	Object.a()
+	Object.b()
+	/*
+	 * ·
+	 * Object是new 的Function产生的，所以隐式原型指向的是Function
+	 * // 我是Function中的a（）
+	 * // 我是Function中的b（）
+	 * */
+	Function.a()
+	Function.b()
+	/*
+	 * ·
+	 * Function是通过Function产生的，所以隐式原型指向的Function
+	 * // 我是Function中的a（）
+	 * // 我是Function中的b（）
+	 * */
+</script>
+</html>

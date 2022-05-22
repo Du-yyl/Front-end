@@ -1,0 +1,70 @@
+<!--
+  ~ Time:2022/3/22 17:17 15
+  ~ Name:4、props属性限制.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/5、组件的三大属性
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+
+</head>
+<body>
+<div id="test"></div>
+<div id="test1"></div>
+</body>
+
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<!--    引入PropTypes进行类型限制-->
+<script src="../../ReactLibrary/oldVersionOfReact/prop-types.js"></script>
+<script type="text/babel">
+	class Person extends React.Component {
+
+		render () {
+			return (
+					<ul>
+						数据展示：
+						<li>名字：{this.props.name}</li>
+						<li>年龄：{this.props.age}</li>
+						<li>msg：{this.props.msg}</li>
+					</ul>
+			)
+		}
+
+	}
+
+	// 定义指定组件的 propTypes ，通过这个进行限制
+	Person.propTypes = {
+		// 限制类型是字符串类型
+		name: PropTypes.string,
+		// 这个字段表示指定内容是必须存在的
+		age: PropTypes.string.isRequired,
+		// 指定内容必须是字符串
+		msg: PropTypes.string,
+
+		//	指定数字
+		// 	PropTypes.number
+		//	指定方法
+		// 	PropTypes.func
+	}
+	// 这里配置 props 中的默认信息，如果一个内容没有定义会来这里寻找
+	Person.defaultProps = {
+		msg: '测试数据',
+	}
+
+	let person = { name: '测试', age: '20' }
+	// 类似与解构赋值，通过这种形式可以更加简洁
+	ReactDOM.render(<Person {...person}  />, document.getElementById('test'))
+	ReactDOM.render(<Person name="jack" age="10" msg="321"/>, document.getElementById('test1'))
+</script>
+</html>

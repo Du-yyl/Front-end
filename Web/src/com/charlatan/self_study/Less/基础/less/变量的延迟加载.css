@@ -1,0 +1,24 @@
+/**
+  * Date:2021/12/29 16:18 10
+  * Name:变量的延迟加载.less
+  * Path:Web代码/src/com/charlatan/self_study/Less/基础/less
+  * ProjectName:WWW
+  * Author:charlatan
+  *
+  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  */
+/*
+less中的变量都是延时加载的，并且都是块作用域
+有点类型JS中的变量提升，当运行到three时，会先将指定代码块中的所有内容加载完毕再进行赋值
+所以，赋值为3，
+因为less中的作用域是块作用域，所以最后的one输出是 1
+*/
+.class {
+	one: 1;
+}
+
+.class .brass {
+	three: 3;
+}
+
+/*# sourceMappingURL=变量的延迟加载.css.map */

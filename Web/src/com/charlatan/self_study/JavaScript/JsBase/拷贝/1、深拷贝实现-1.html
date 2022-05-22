@@ -1,0 +1,128 @@
+<!--
+  ~ Date:2021/12/24 11:24 07
+  ~ Name:1、深拷贝实现-1.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/拷贝
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>深拷贝</title>
+
+</head>
+<body>
+<pre>
+	依据简单的元素属性进行实现
+		JSON
+
+	JSON.stringfy() 存在以下一些问题：
+		执行会报错：存在BigInt类型、循环引用。
+		拷贝Date引用类型会变成字符串。
+		键值会消失：对象的值中为Function、Undefined、Symbol 这几种类型，。
+		键值变成空对象：对象的值中为Map、Set、RegExp这几种类型。
+		无法拷贝：不可枚举属性、对象的原型链。
+		补充：其他更详细的内容请查看官方文档：JSON.stringify()
+		由于以上种种限制条件，JSON.stringfy() 方式仅限于深拷贝一些普通的对象
+</pre>
+</body>
+<script>
+	//测试使用的数据
+
+	const obj = {
+		// =========== 1.基础数据类型 ===========
+		num: 0, // number
+		str: '', // string
+		bool: true, // boolean
+		unf: undefined, // undefined
+		nul: null, // null
+		sym: Symbol('sym'), // symbol
+		bign: BigInt(1n), // bigint
+
+		// =========== 2.Object类型 ===========
+		// 普通对象
+		obj_1: {
+			name: '我是一个对象',
+			id: 1,
+		},
+		//多维对象
+		obj_2: {
+			a: 1,
+			b: 2,
+			c: 3,
+			d: {
+				a: 12,
+				b: 22,
+				c: 32,
+				d: {
+					a: 123,
+					b: 223,
+					c: 333,
+					d: {
+						e: 9999,
+					},
+				},
+			},
+		},
+		// 数组
+		arr_1: [0, 1, 2],
+
+		//多维数组
+		arr_2: [
+			1, 2, 3, 4, 5, 6, [
+				12, 22, 32, 42, [
+					123, 223, 333, 423, [
+						9999,
+					],
+				],
+			],
+		],
+		// 函数
+		func: function () {
+			console.log('我是一个函数')
+		},
+		// 日期
+		date: new Date(0),
+		// 正则
+		reg: new RegExp('/我是一个正则/ig'),
+		// Map
+		map: new Map().set('mapKey', 1),
+		// Set
+		set: new Set().add('set'),
+		// =========== 3.其他 ===========
+		[Symbol('1')]: 1,  // Symbol作为key
+	}
+	// 4.添加不可枚举属性
+	Object.defineProperty(obj, 'innumerable', {
+		enumerable: false,
+		value: '不可枚举属性',
+	})
+	// 5.设置原型对象
+	Object.setPrototypeOf(obj, {
+		proto: 'proto',
+	})
+	// 6.设置loop成循环引用的属性
+	obj.loop = obj
+
+	/**
+	 * 使用JSON的方法进行深拷贝
+	 * 传入一个字符串，使用JSON的方法进行相互转换实现深拷贝
+	 * @param target 传入的字符串
+	 * @returns {any} 返回的深拷贝的对象
+	 */
+	function deepClone (target) {
+		if (typeof target === 'object' || target !== null) {
+			return JSON.parse(JSON.stringify(target))
+		} else {
+			return target
+		}
+	}
+
+	console.log(deepClone(obj))
+
+
+</script>
+</html>

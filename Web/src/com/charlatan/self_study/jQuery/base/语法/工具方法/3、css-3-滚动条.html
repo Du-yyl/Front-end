@@ -1,0 +1,64 @@
+<!--
+  ~ Date:2021/12/20 13:40 34
+  ~ Name:3、css-3-滚动条.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base/核心/核心函数/工具方法
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚动条</title>
+
+</head>
+<body style="height: 2000px;">
+<div style="border:1px solid black;width:100px;height:150px;overflow:auto">
+	This is some text. This is some text. This is some text. This is some text.
+	This is some text. This is some text. This is some text. This is some text.
+	This is some text. This is some text. This is some text. This is some text.
+	This is some text. This is some text. This is some text. This is some text.
+	This is some text. This is some text. This is some text. This is some text.
+	This is some text. This is some text. This is some text. This is some text.
+	his is some text.
+</div>
+<br>
+<br>
+<br>
+<button id="btn1">得到scrollTop</button>
+<button id="btn2">设置scrollTop</button>
+
+<hr>
+<pre>
+	1. scrollTop():
+	  读取/设置滚动条的Y坐标
+	2. $(document.body).scrollTop()+$(document.documentElement).scrollTop()
+	  读取页面滚动条的Y坐标(兼容chrome和IE)
+	3. $('body,html').scrollTop(60);
+	  滚动到指定位置(兼容chrome和IE)
+</pre>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+	/*
+	 需求:
+	 1. 得到div或页面滚动条的坐标
+	 2. 让div或页面的滚动条滚动到指定位置
+	 */
+	$(function () {
+		let btn1 = $(`#btn1`)
+		let btn2 = $(`#btn2`)
+		btn1.click(function () {
+			console.log('body的滚动条' + $(`html`).scrollTop())
+			console.log('div的滚动条' + $(`div:eq(0)`).scrollTop())
+		})
+
+		btn2.click(function () {
+			$(`div:eq(0)`).scrollTop(200)
+		})
+	})
+
+</script>
+</html>

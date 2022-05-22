@@ -1,0 +1,51 @@
+<!--
+  ~ Time:2022/2/22 10:46 32
+  ~ Name:16-5v-pre.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>v-pre</title>
+
+</head>
+<body>
+<div id="root">
+	<span v-pre>n -> {{ n }}</span>
+	<span v-pre>n -> {{ m }}</span>
+	<span v-pre>n -> {{ x }}</span>
+</div>
+<hr>
+<pre>
+	v-pre指令：
+		1.跳过其所在节点的编译过程。
+		2.可利用它跳过：没有使用指令语法、没有使用插值语法的节点，会加快编译。
+	对于在Vue的模板中不需要进行Vue加载的内容，可以使用，可以加快运行速度
+
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			n: 10,
+			m: 12,
+			x: 15,
+		},
+		methods: {},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

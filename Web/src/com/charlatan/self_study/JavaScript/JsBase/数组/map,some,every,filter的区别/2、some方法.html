@@ -1,0 +1,42 @@
+<!--
+  ~ Date:2021/12/29 11:42 26
+  ~ Name:2、some方法.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/数组/map,some,every,filter的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>some</title>
+
+</head>
+<body>
+<pre>
+	some()：用于检测数组中的元素是否满足指定条件（函数提供）
+	输出为：true
+
+	some方法会依次执行数组的每个元素；
+		如果有一个元素满足条件，则表达式返回true , 剩余的元素不会再执行检测
+		如果没有满足条件的元素，则返回false
+	function形参和map一样
+	注意：some不会改变原数组，some不会检查空数组
+
+	some()为数组中的每一个元素执行一次回调函数，直到找到一个使得回调函数返回一个“真值”（即可转换为布尔值 true 的值），
+	如果找到了这样一个值，some() 将会立即返回 true；否则，some() 返回 false
+</pre>
+</body>
+<script>
+	let nums = [1, 2, 3, 3, 4, 5, 65, 76, 7]
+	if (nums.some(item => {
+		return item > 200
+	})) {
+		console.log('有大于200的')
+	} else {
+		console.log('没有大于200的')
+	}
+</script>
+</html>

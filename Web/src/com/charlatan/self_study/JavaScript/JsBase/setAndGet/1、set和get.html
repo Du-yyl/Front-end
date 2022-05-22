@@ -1,0 +1,61 @@
+<!--
+  ~ Date:2021/12/17 10:44 25
+  ~ Name:1、set和get.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/setAndGet
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>set和get</title>
+
+</head>
+<body>
+<pre>
+	    get是获得属性的一种方法。
+		set是设置属性的一种方法。
+		get负责查询，不带任何参数。
+		set负责设置，是通过参数的形式传递。
+
+
+	get和set是方法，所以可以进行判断。
+	get一般是得到，需要返回。
+	set是创建，不需要返回。
+	每一个对象都有一个get和set方法。
+	如果调用的是对象内部的属性，命名格式是变量名前面添加。
+
+	在对象初始化时定义。
+	在对象定义后定义。
+</pre>
+</body>
+<script>
+	var person = {
+		_name: 'lisi',
+		_age: 18,
+		//_name的只读。
+		get name () {
+
+			return this._name
+		},
+		//_age的读写。
+
+		set age (Age) {
+			this._age = Age
+		},
+		get age () {
+			return this._age
+		},
+	}
+
+	console.log(person._name + ' ' + person._age)//lisi 18
+	person.name = 'lily'
+	person.age = 21
+	console.log(person.name + ' ' + person.age)//lisi 21
+	console.log(person._name + ' ' + person._age)//lisi 21
+	//因为_name只读不写，所以name不会发生改变。
+</script>
+</html>

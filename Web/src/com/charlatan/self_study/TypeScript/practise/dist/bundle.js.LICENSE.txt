@@ -1,0 +1,39 @@
+/*!*
+  * Time:2022/3/31 17:52 35
+  * Name:food.ts
+  * Path:src/module
+  * ProjectName:practise
+  * Author:charlatan
+  *
+  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  */
+
+/*!*
+  * Time:2022/3/31 17:53 00
+  * Name:ScorePanel.ts
+  * Path:src/module
+  * ProjectName:practise
+  * Author:charlatan
+  *
+  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  */
+
+/*!*
+  * Time:2022/3/31 17:56 35
+  * Name:Snake.ts
+  * Path:src/module
+  * ProjectName:practise
+  * Author:charlatan
+  *
+  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  */
+
+/*!*
+ * Time:2022/3/31 15:43 32
+ * Name:index.ts
+ * Path:src
+ * ProjectName:practise
+ * Author:charlatan
+ *
+ *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+ */

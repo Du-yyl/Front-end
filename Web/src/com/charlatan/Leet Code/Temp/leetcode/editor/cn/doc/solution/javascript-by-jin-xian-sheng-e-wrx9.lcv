@@ -1,0 +1,48 @@
+### 解题思路
+
+根据题意，我们遍历数组，当我们遍历到数组 `i` 位置时，我们可以算出与该数字相对的数
+
+* javascript
+
+```javascript
+other = target - nums[i]
+```
+
+那么这个 other 会有2种情况，
+1. 在 `i` 之前遍历过
+2. 在 `i` 之前没遍历过
+   当出现第一种情况时，我们直接返回之前的 other 的下标与当前i，组成答案
+   否则记录当前 i 的值与 i 的下标，用 map 记录，方便后续查找
+
+### 代码
+
+* javascript
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    // 暴力遍历
+    // for(let i = 0, len = nums.length; i<len-1; i++) {
+    //     for(let j = i+1; j < len; j++) {
+    //         if(nums[i] + nums[j] == target){
+    //             return [i, j]
+    //         }
+    //     }
+    // }
+    // return null;
+    let map = new Map();
+    for(let i = 0, len = nums.length; i < len; i++) {
+        if(map.has(target-nums[i])) {
+            return [map.get(target-nums[i]), i];
+        } else {
+            map.set(nums[i], i)
+        }
+    }
+    return null
+};
+```
+

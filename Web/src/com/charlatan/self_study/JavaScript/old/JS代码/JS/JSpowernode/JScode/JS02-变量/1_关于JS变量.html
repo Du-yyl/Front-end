@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于JS变量</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	 * JavaScript 中的变量：
+	 *   声明：
+	 *     var 变量名(variable);
+	 *   赋值：
+	 *     变量名 = 值;
+	 *   JavaScript是弱类型编程语言,没有编译阶段,一个变量可以随意赋值,赋什么值都行
+	 * */
+	//在JS中一个值没有被赋值,那么这个变量会被自动赋值：undefined【undefined是一个具体存在的值]
+
+	var i
+	alert('i = ' + i)//  undefined
+	alert(undefined)
+
+	//undefined是一个值
+	var k = undefined
+	alert('k = ' + k)
+
+	//一个变量没有声明或定义,直接访问;会报错
+	// alert("p = " + p);/*这是一个语法错误*/
+
+	var a, b, c = 200
+	//a,b是undefined,c的值是200
+	alert('a = ' + a)
+	alert('b = ' + b)
+	alert('c = ' + c)
+
+	a = false
+	alert('a = ' + a)
+	a = 'abc'
+	alert('a = ' + a)
+	a = 12.2
+	alert('a = ' + a)
+
+</script>
+</body>
+</html>

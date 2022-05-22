@@ -1,0 +1,88 @@
+<!--
+  ~ Time:2022/3/23 17:47 34
+  ~ Name:1、引出生命周期.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/7、生命周期
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+<div id="test"></div>
+</body>
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	class Left extends React.Component {
+		timer
+
+		/**
+		 * 组件挂载页面的时候调用
+		 */
+		componentDidMount () {
+			this.timer = setInterval(() => {
+				if (this.state.openness <= 0) {
+					this.setState({
+						openness: 1,
+					})
+				} else {
+					this.setState({
+						openness: this.state.openness -= 0.007,
+					})
+				}
+				// this.state.openness = this.state.openness <= 0 ? 1 : this.state.openness - 0.1
+			}, 1)
+		}
+
+		// 组件即将销毁
+		componentWillUnmount () {
+			console.log('即将卸载')
+		}
+
+		/**
+		 * 初始化渲染，状态更新后调用
+		 * @returns {JSX.Element}
+		 */
+		render () {
+			return (
+					<div>
+						<h1 style={
+							{
+								opacity: this.state.openness,
+							}
+						}>
+							组件的循环展示
+						</h1>
+						<button onClick={this.destroy}>销毁内容</button>
+					</div>
+			)
+		}
+
+		state = {
+			openness: 1,
+		}
+
+		destroy = () => {
+			clearInterval(this.timer)
+			// 卸载组件
+			ReactDOM.unmountComponentAtNode(document.getElementById('test'))
+			console.log('组件销毁')
+
+		}
+
+	}
+
+	ReactDOM.render(<Left/>, document.getElementById('test'))
+
+</script>
+</html>

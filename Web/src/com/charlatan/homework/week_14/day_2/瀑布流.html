@@ -1,0 +1,128 @@
+<!--
+  ~ Date:2022/1/4 19:00 49
+  ~ Name:瀑布流&懒加载.html
+  ~ Path:Web代码/src/com/charlatan/homework/week_14/day_2
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>瀑布流</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		a:link {
+			color: #b700ff;
+		}
+
+		a:visited {
+			color: #0066ff;
+		}
+
+		a:hover {
+			color: #FF00FF;
+		}
+
+		a:active {
+			color: #ff8800;
+		}
+
+		*::selection {
+			color: #fff99a;
+			background-color: #ff961b;
+		}
+
+		ul:after {
+			content: "";
+			height: 0;
+			clear: both;
+			overflow: hidden;
+			display: block;
+			visibility: hidden;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		label, button {
+			user-select: none;
+			/*pointer-events:none;*/
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#bigBox {
+			width: 1400px;
+			position: absolute;
+			right: 0;
+			left: 0;
+			background-color: #00ff9d;
+			margin: auto;
+		}
+
+		#bigBox:after {
+			display: none;
+			clear: both;
+			content: '';
+			visibility: hidden;
+		}
+
+		#bigBox > div {
+			width: 250px;
+			float: left;
+			margin: 15px;
+			position: relative;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="bigBox">
+	<div id="in1" class="in"></div>
+	<div id="in2" class="in"></div>
+	<div id="in3" class="in"></div>
+	<div id="in4" class="in"></div>
+	<div id="in5" class="in"></div>
+</div>
+</body>
+<script src="tool/homework.js" type="text/javascript"></script>
+
+<script>
+	let div = document.getElementById('bigBox')
+	let ins = document.getElementsByClassName('in')
+
+	for (let datum of data) {
+		let sample = ins[0].offsetHeight
+		let pl = ins[0]
+
+		let img_self = datum.img_url.split('?')[1].split('x')
+		let width = 250
+		let height = width * img_self[1] / img_self[0]
+
+		let img = document.createElement('img')
+		img.src = datum.img_url
+		img.title = datum.title
+		img.style.width = '250px'
+		img.style.height = height + 'px'
+		for (let in1 of ins) {
+			pl = sample > in1.offsetHeight ? in1 : pl
+		}
+		pl.appendChild(img)
+	}
+</script>
+</html>
+
+

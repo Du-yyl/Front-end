@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS代码的执行顺序</title>
+</head>
+<!--  设置页面元素全部加载完毕再进行绑定，这样可以保证在绑定属性时，内存中一定有对象的ID，这时不用考虑按钮和绑定属性的前后关系-->
+<!--  指定的方法在整个页面加载完成后执行，dosome（）在页面全部加载完时执行，这是的按钮二一定会在内存中，所以不用担心前后位置关系-->
+<body onload="dosome()">
+<input id="btn1" type="button" value="第一个按钮"/>
+<script type="text/javascript">
+	document.getElementById('btn1').onclick = function () {
+		alert('按钮一输出了')
+	}
+</script>
+<!--<input type="button" value="第一个按钮" id = "btn1"/>  按钮必须在绑定属性前进行注册，反之在先绑定时没存没有相应的绑定选项，会绑定失败-->
+
+
+<script type="text/javascript">
+	function dosome () {
+		document.getElementById('btn2').onclick = function () {
+			alert('按钮二输出')
+		}
+	}
+</script>
+<input id="btn2" type="button" value="第二个按钮"/>
+
+</body>
+</html>

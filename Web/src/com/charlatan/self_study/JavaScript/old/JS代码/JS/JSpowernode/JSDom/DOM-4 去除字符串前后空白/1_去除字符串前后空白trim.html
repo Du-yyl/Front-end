@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>去除字符串前后空白</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*window.onload = function (){
+	 document.getElementById('btn1').onclick = function (){
+	 var su = document.getElementById('tr1').value;
+	 var s = su.trim();
+	 document.getElementById('s1').innerText = s;
+	 }
+	 }*/
+
+	String.prototype.trim = function () {
+		return this.replace(/^\s+$/, '').replace(/^\s+$/, '')
+	}
+
+	window.onload = function () {
+		document.getElementById('btn1').onclick = function () {
+			var su1 = document.getElementById('tr1').value
+			var s = su1.trim()
+			document.getElementById('s1').innerText = s
+		}
+	}
+</script>
+
+
+<input id='tr1' type="text"/>
+<span id='s1' style="color: red ; font-size: 12px"></span>
+<br>
+<input id='btn1' type="button" value="按一下按钮输出用户名">
+</body>
+</html>

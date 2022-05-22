@@ -1,0 +1,51 @@
+<!--
+  ~ Time:2022/3/23 16:36 32
+  ~ Name:1、非受控组件.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/6、事件处理
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+<div id="test"></div>
+</body>
+
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	class Longin extends React.Component {
+		username = React.createRef()
+		userPassword = React.createRef()
+
+		render () {
+			return (
+					<form action="https://www.baidu.com" onSubmit={this.login}>
+						账号：<input name="username" ref={this.username} type="text"/>
+						密码：<input name="userPassword" ref={this.userPassword} type="password"/>
+						<button>登录</button>
+					</form>
+			)
+		}
+
+		login = (event) => {
+			event.preventDefault()
+			console.log(this.username)
+			console.log(this.userPassword)
+		}
+	}
+
+	ReactDOM.render(<Longin/>, document.getElementById('test'))
+
+</script>
+</html>

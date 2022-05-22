@@ -1,0 +1,71 @@
+<!--
+  ~ Date:2021/12/1 上午11:37
+  ~ Name:2、查之二.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/DOM增删改查/2、查之二.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查</title>
+</head>
+<body>
+<ul id="ul">
+	<li>12345</li>
+	<li>1235</li>
+	<li>1245</li>
+	<li>1345</li>
+	<li>345</li>
+</ul>
+<script>
+	/*
+	 *   getElementsByTagName()及其属性：
+	 *       返回指定id的子节点
+	 *   childNodes：
+	 *       返回当前节点的所有子节点【包括空白】
+	 *   firstChild：
+	 *       当前节点的第一个子节点【包括空白节点】
+	 *   lastChild：
+	 *       当前节点的最后一个子节点【返回最后一个子元素，不包括空白】
+	 * */
+	window.onload = function () {
+		let ul = document.getElementById('ul')
+		//    获取到ul下所有的子节点
+		let lis = ul.getElementsByTagName('li')
+		console.log(lis.length)
+		for (let i = 0; i < lis.length; i++) {
+			console.log(lis[i].innerText)
+		}
+		console.log('-----------------------------')
+
+		/*
+		 childNodes：
+		 返回当前节点的所有子节点
+		 但是这个方法会获取包括文本节点在内的所有节点【会多输出文本间的空白节点】
+		 根据DOM标准，标签间的空白也会被当成文本节点
+		 */
+		let listNodes = ul.childNodes
+		console.log(listNodes.length)
+		for (let i = 0; i < listNodes.length; i++) {
+			console.log(listNodes[i])
+		}
+		console.log('+++++++++++++++++++++++++++++++')
+		let listNodes_1 = ul.children
+		console.log(listNodes_1.length)
+		for (let i = 0; i < listNodes_1.length; i++) {
+			console.log(listNodes_1[i])
+		}
+		//    ========================================
+		console.log(ul.firstChild)
+		console.log(ul.firstElementChild)
+		console.log(ul.lastChild)
+
+	}
+
+</script>
+</body>
+</html>

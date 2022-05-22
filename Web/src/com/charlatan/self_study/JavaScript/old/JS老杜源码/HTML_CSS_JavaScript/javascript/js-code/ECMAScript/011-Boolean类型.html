@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Boolean类型</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	 1、 JS中的布尔类型永远都只有两个值：true和false （这一点和java相同。）
+	 2、在Boolean类型中有一个函数叫做：Boolean()。
+	 语法格式：
+	 Boolean(数据)
+	 Boolean()函数的作用是将非布尔类型转换成布尔类型。
+	 */
+	// var username = "lucy";
+	var username = ''
+
+	/*
+	 if(Boolean(username)){
+	 alert("欢迎你" + username);
+	 }else{
+	 alert("用户名不能为空！");
+	 }
+	 */
+
+	/*
+	 if(username){
+	 alert("欢迎你" + username);
+	 }else{
+	 alert("用户名不能为空！");
+	 }
+	 */
+
+	// 规律:“有"就转换成true,"没有"就转换成false.
+	alert(Boolean(1)) // true
+	alert(Boolean(0)) // false
+	alert(Boolean('')) // false
+	alert(Boolean('abc')) // true
+	alert(Boolean(null)) // false
+	alert(Boolean(NaN)) // false
+	alert(Boolean(undefined)) // false
+	alert(Boolean(Infinity)) // true
+
+	/*
+	 while(10 / 3){
+	 alert("hehe");
+	 }
+	 */
+
+	for (var i = 0; i < 10; i++) {
+		alert('i = ' + i)
+	}
+
+	// Null类型只有一个值,null
+	alert(typeof null) // "object"
+
+</script>
+</body>
+</html>

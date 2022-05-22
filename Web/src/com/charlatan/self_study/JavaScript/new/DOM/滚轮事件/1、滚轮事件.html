@@ -1,0 +1,59 @@
+<!--
+  ~ Date:2021/12/6 18:46 18
+  ~ Name:1、滚轮事件.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/滚轮事件
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚轮事件</title>
+	<style>
+		body {
+			height: 2000px;
+		}
+
+		#div {
+			width: 100px;
+			height: 100px;
+			background-color: #1cdb31;
+			position: absolute;
+			top: 100px;
+			transtion: all 1.43s;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			//    div高度随滚轮的滚动而增加
+			let div = document.getElementById('div')
+			div.onmousewheel = function (event) {
+				// div.style.height = body.scrollTop + "px"
+				/*
+				 * event.wheelDelta
+				 *   可以获取滚轮的滚动方向，向上为负，向下为正
+				 * */
+				console.log(event.wheelDelta)
+				if (event.wheelDelta > 0) {
+					div.style.height = div.scrollHeight - 10 + 'px'
+				} else {
+					div.style.height = div.scrollHeight + 10 + 'px'
+				}
+				// div.style.height += event.clientY
+
+				/*
+				 * 当浏览器有滚轮时，在页面使用滚动，浏览器的滚轮也会跟随移动，如果不希望，可以使用return false解决
+				 * */
+				return false
+			}
+		}
+	</script>
+</head>
+<body>
+<div id="div"></div>
+<!-- /#div -->
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!--
+  ~ Date:2021/12/20 20:29 21
+  ~ Name:2、事件的委派解决问题.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base/核心/核心函数/事件处理
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件的委派解决问题</title>
+
+</head>
+<body>
+
+<ul>
+	<li>11111</li>
+	<li>1111111</li>
+	<li>111111111</li>
+	<li>11111111111</li>
+</ul>
+
+<li>22222</li>
+<ul>
+	3333
+</ul>
+<br>
+<button id="btn">添加新的li</button>
+<button id="btn2">删除ul上的事件委托的监听器</button>
+<br>
+<hr>
+<pre>
+	1. 事件委托:
+	  * 将多个子元素(li)的事件监听委托给父辈元素(ul)处理
+	  * 监听回调是加在了父辈元素上
+	  * 当操作任何一个子元素(li)时, 事件会冒泡到父辈元素(ul)
+	  * 父辈元素不会直接处理事件, 而是根据event.target得到发生事件的子元素(li), 通过这个子元素调用事件回调函数
+	2. 事件委托的2方:
+	  * 委托方: 业主  li
+	  * 被委托方: 中介  ul
+	3. 使用事件委托的好处
+	  * 添加新的子元素, 自动有事件响应处理
+	  * 减少事件监听的数量: n==>1
+	4. jQuery的事件委托API
+		语法：
+			$(委托的父元素).delegate(被委托元素, 发生事件, 回调函数)
+	  * 设置事件委托: $(parentSelector).delegate(childrenSelector, eventName, callback)
+	  * 移除事件委托: $(parentSelector).undelegate(eventName)
+</pre>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<script>
+	/*
+	 需求：
+	 1. 点击 li 背景就会变为红色
+	 2. 点击 btn1 就添加一个 li
+	 */
+	$(function () {
+		let ul = $(`ul:eq(0)`)
+		let btn = $(`#btn`)
+		let btn2 = $(`#btn2`)
+		/*		语法：
+		 $(委托的父元素).delegate(被委托元素, 发生事件, 回调函数)*/
+		ul.delegate('li', 'click', function () {
+			this.style.backgroundColor = 'red'
+		})
+		btn.click(function () {
+			ul.append(`<li>i am new li</li>`)
+		})
+		btn2.click(function () {
+			ul.undelegate('click')
+		})
+	})
+</script>
+
+</html>

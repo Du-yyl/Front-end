@@ -1,0 +1,46 @@
+<!--
+  ~ Date:2021/11/13 上午9:34
+  ~ Name:4-2、解决高度塌陷.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML/基础/HtmlBase/浮动/4-2、解决高度塌陷.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>解决高度塌陷</title>
+	<style>
+		#box {
+			width: 300px;
+			border: 1px solid;
+			overflow: hidden;
+		}
+
+		#a {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: left;
+		}
+
+		#b {
+			width: 100px;
+			height: 100px;
+			background-color: greenyellow;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+<p>
+	使用overflow解决高度塌陷
+</p>
+<div id="box">
+	<div id="a"></div>
+	<div id="b"></div>
+</div>
+</body>
+</html>

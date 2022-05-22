@@ -1,0 +1,42 @@
+<!--
+  ~ Date:2021/12/13 9:55 00
+  ~ Name:4、原型链——属性问题.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/函数/原型和原型链
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型链——属性问题</title>
+</head>
+<body>
+
+
+</body>
+<script>
+	function Fn (name, age) {
+		this.name = name
+		this.age = age
+
+	}
+
+	let fun1 = new Fn('Tom', 12)
+	let fun2 = new Fn('jack', 20)
+
+	console.log(fun1.__proto__)
+	console.log(fun2.__proto__)
+	console.log(fun2.__proto__ === Fn.prototype)
+	console.log(fun2.__proto__ === fun1.__proto__)
+
+	console.log(fun1.__proto__.__proto__)
+	console.log(fun2.__proto__.__proto__)
+	console.log(fun2.__proto__.__proto__ === Object.prototype)
+	console.log(fun2.__proto__.__proto__ === fun1.__proto__.__proto__)
+
+
+</script>
+</html>

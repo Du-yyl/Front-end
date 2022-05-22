@@ -1,0 +1,40 @@
+<!--
+  ~ Date:2021/12/21 10:43 12
+  ~ Name:1、隐转和运算.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/隐转和运算
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隐转和运算</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	let num1 = 1 / 0
+	let num2 = 0 / 0
+
+	console.log(num1)
+	console.log(num2)
+
+	let nums = [1]
+	let bool1 = 1 in nums
+	console.log(1 in nums)
+	console.log(bool1)
+
+	/*
+	 * 题解：
+	 *   1 in [1]    的返回值是false
+	 *   in操作符在数组中进行操作时，需要使用下标的形式进行访问，【固有属性除外，length等】
+	 *   所以这里的 1 in [1] 并不是指的 1 这个元素，而是指的是 index 为 1 的下标，数组长度是1，
+	 *   所以存在 index 为 1 的元素，返回false
+	 * */
+</script>
+</html>

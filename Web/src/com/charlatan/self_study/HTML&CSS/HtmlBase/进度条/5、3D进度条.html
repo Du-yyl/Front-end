@@ -1,0 +1,86 @@
+<!--
+  ~ Date:2021/12/14 21:44 08
+  ~ Name:5、3D进度条.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/HTML&CSS/HtmlBase/进度条
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D进度条</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		.demo-cube {
+			position: relative;
+
+
+		}
+
+		li .top {
+			transform: rotateX(90deg) translateZ(50px);
+		}
+
+		li .back {
+			transform: rotateX(-180deg) translateZ(50px);
+		}
+
+		li .cube {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 300px;
+			height: 100px;
+			transform-style: preserve-3d;
+			transform: translate(-50%, -50%) rotateX(-33.5deg);
+
+
+		}
+
+		li .cube .front {
+			transform: translateZ(50px);
+		}
+
+		li .cube .bottom {
+			transform: rotateX(-90deg) translateZ(50px);
+		}
+
+		li .cube li {
+			position: absolute;
+			width: 300px;
+			height: 100px;
+			background: linear-gradient(90deg, rgba(156, 39, 176, .3), rgba(255, 34, 109, .8) 70%, rgba(255, 255, 255, .6) 70%, rgba(255, 255, 255, .6));
+		}
+
+	</style>
+</head>
+<body>
+<div class="demo-cube perspective">
+	<ul class="cube">
+		<li class="top"></li>
+		<li class="bottom"></li>
+		<li class="front"></li>
+		<li class="back"></li>
+		<li class="right"></li>
+		<li class="left"></li>
+	</ul>
+</div>
+
+</body>
+</html>

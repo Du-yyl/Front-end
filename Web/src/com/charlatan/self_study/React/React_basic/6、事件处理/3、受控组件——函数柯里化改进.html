@@ -1,0 +1,75 @@
+<!--
+  ~ Time:2022/3/23 17:19 21
+  ~ Name:3、受控组件——函数柯里化改进.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/6、事件处理
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+</head>
+
+<body>
+<div id="test"></div>
+</body>
+<!--
+
+-->
+
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	class Longin extends React.Component {
+		render () {
+			return (
+					<form action="https://www.baidu.com" onSubmit={this.login}>
+						账号：<input onChange={this.saveData('username')} name="username" type="text"/>
+						密码：<input onChange={this.saveData('password')} name="userPassword" type="password"/>
+						<button>登录</button>
+					</form>
+			)
+		}
+
+		state = {
+			username: '',
+			password: '',
+		}
+
+		/**
+		 * 使用函数的柯里化 —— 通过函数调用继续返回函数的形式，实现多次接收最后同一处理的函数编码形式
+		 * 1. 首先调用的时候 saveData 会先调用一次，并将指定的类型传入，然后返回的是一个函数
+		 * 2、 返回的函数中通过运行返回的函数继续运行
+		 * @param dataType 不同数据类型进行不同的保存
+		 * @returns {(function(*): void)|*} 返回一个函数，提供给回调使用
+		 */
+		saveData = (dataType) => {
+
+			return (event) =>
+					/**
+					 * 这个函数调用的时候是通过触发事件进行的调用，调用的时候保存触发事件的不同元素
+					 * @param event
+					 */ {
+				this.setState({
+					[dataType]: event.target.value,
+				})
+			}
+		}
+		login = (event) => {
+			event.preventDefault()
+			console.log(this.state.username)
+			console.log(this.state.password)
+		}
+	}
+
+	ReactDOM.render(<Longin/>, document.getElementById('test'))
+
+</script>
+</html>

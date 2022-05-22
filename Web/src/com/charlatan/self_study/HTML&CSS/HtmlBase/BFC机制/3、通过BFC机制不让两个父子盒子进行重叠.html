@@ -1,0 +1,39 @@
+<!--
+  ~ Date:2021/11/19 上午10:12
+  ~ Name:3、通过BFC机制不让两个父子盒子进行重叠.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/基础/HtmlBase/BFC机制/3、通过BFC机制不让两个父子盒子进行重叠.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>防止父子盒子不进行重叠</title>
+	<style>
+		.a {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: left;
+
+		}
+
+		.b {
+			width: 50px;
+			height: 40px;
+			background-color: green;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+<p>
+	使用BFC机制避免盒子的重叠,出发BFC机制将被覆盖的元素显现
+</p>
+<div class="a"></div>
+<div class="b"></div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!--
+  ~  Project Name: charlatan
+  ~  File Name: 1、个人所得税计算
+  ~  Date: 2021/12/2 19:25
+  ~  Author : charlatan
+  ~ 
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个税计算</title>
+</head>
+<body>
+<!--<script>-->
+<!--    let salary = prompt("请输入你的工资", "0")-->
+<!--    let personalIncomeTax ;-->
+<!--    let payable;-->
+<!--    let threeInsuranceDeductions;-->
+<!--    let threeGoldsToBePaid;-->
+<!--    let salaryToMe;-->
+
+<!--    salary /= 1-->
+
+<!--    while (isNaN(salary)) {-->
+<!--        alert("你的输入违法")-->
+<!--        salary = prompt("请输入你的工资", "0")-->
+<!--    }-->
+<!--    threeGoldsToBePaid =  salary * 0.12-->
+<!--    threeInsuranceDeductions = salary - threeGoldsToBePaid-->
+<!--    payable = threeInsuranceDeductions - -->
+
+<!--    alert("测试")-->
+
+<!--        <!DOCTYPE html>-->
+<!--    <html lang="en">-->
+
+<!--        <head>-->
+<!--        <meta charset="UTF-8">-->
+<!--        <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--        <title>Document</title>-->
+<!--    </head>-->
+
+<!--    <body>-->
+
+<!--    </body>-->
+<!--    -->
+
+<!--</html>-->
+<!--</script>-->
+<script>
+	var A = prompt('请输入你的工资') * 1
+
+	var A1 = (A - [(A * 0.08) + (A * 0.02) + (A * 0.005) + (A * 0.12)])
+	/* 多余部分工资 要纳的税 */
+	var A2 = A1 - 3500
+	if (A2 < 1500) {
+		var A3 = A2 * 0.003
+		alert(A3)
+	} else if (1500 < A2 && A2 < 4500) {
+		var A3 = A2 * 0.1 - 105
+		alert(A3)
+	} else if (4500 < A2 && A2 < 9000) {
+		var A3 = A2 * 0.2 - 555
+		alert(A3)
+	} else if (9000 < A2 && A2 < 35000) {
+		var A3 = A2 * 0.25 - 1005
+		alert(A3)
+	} else if (35000 < A2 && A2 < 55000) {
+		var A3 = A2 * 0.3 - 2755
+		alert(A3)
+	} else if (55000 < A2 && A2 < 80000) {
+		var A3 = A2 * 0.35 - 5505
+		alert(A3)
+	} else if (A2 > 80000) {
+		var A3 = A2 * 0.45 - 13505
+		alert('要交的税：' + A3)
+	}
+</script>
+</body>
+</html>

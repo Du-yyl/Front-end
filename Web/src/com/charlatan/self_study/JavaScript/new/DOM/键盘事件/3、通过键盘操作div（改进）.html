@@ -1,0 +1,74 @@
+<!--
+  ~ Date:2021/12/7 12:53 12
+  ~ Name:3、通过键盘操作div（改进）.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/键盘事件
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>通过键盘操作div（改进）</title>
+	<style>
+		#box1 {
+			width: 100px;
+			height: 100px;
+			background-color: #c8ffce;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			let evKey
+			let speed = 2
+
+			document.onkeydown = function (event) {
+				if (event.ctrlKey) {
+					speed = 5
+				}
+				evKey = event.key
+			}
+			document.onkeyup = function () {
+				evKey = null
+				speed = 2
+			}
+			let box1 = document.getElementById('box1')
+			setInterval(function () {
+
+				if (evKey === 'ArrowUp' || evKey === 'w' || evKey === 'W') {
+					if (box1.style.top === '' || parseInt(box1.style.top) <= 0) {
+						box1.style.top = '0px'
+					} else {
+						box1.style.top = box1.offsetTop - speed + 'px'
+					}
+				}
+
+				if (evKey === 'ArrowDown' || evKey === 's' || evKey === 'S') {
+					box1.style.top = box1.offsetTop + speed + 'px'
+				}
+
+				if (evKey === 'ArrowLeft' || evKey === 'A' || evKey === 'a') {
+					if (box1.style.left === '' || parseInt(box1.style.left) <= 0) {
+						box1.style.left = '0px'
+					} else {
+						box1.style.left = box1.offsetLeft - speed + 'px'
+					}
+				}
+
+				if (evKey === 'ArrowRight' || evKey === 'D' || evKey === 'd') {
+					box1.style.left = box1.offsetLeft + speed + 'px'
+				}
+			}, 10)
+		}
+	</script>
+</head>
+<body>
+<div id="box1"></div>
+<!-- /#box1 -->
+</body>
+</html>

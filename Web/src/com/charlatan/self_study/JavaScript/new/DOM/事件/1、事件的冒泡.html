@@ -1,0 +1,60 @@
+<!--
+  ~ Date:2021/12/5 12:20 15
+  ~ Name:1、事件的冒泡.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/事件
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件的冒泡</title>
+	<style>
+		#div {
+			width: 200px;
+			height: 200px;
+			background-color: #9090a8;
+		}
+
+		#span {
+			background-color: red;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			document.getElementById('div').onclick = function (event) {
+				alert('我是div')
+				event.cancelBubble = true
+			}
+			document.getElementById('span').onclick = function (event) {
+				alert('我是span')
+				event.cancelBubble = true
+			}
+			document.body.onclick = function (event) {
+				alert('我是body')
+				event.cancelBubble = true
+			}
+		}
+	</script>
+</head>
+<body>
+<!--
+    事件的冒泡（Bubble）
+        所谓的冒泡就是指，当后代元素的事件被触发时，其祖先元素的相同事件也会被触发
+        大部分情况冒泡是有益的，但是有一些情况需要取消冒泡
+    取消冒泡：
+         使用event.cancelBubble = true进行取消冒泡，
+-->
+<div id="div">
+	我是div
+	<span id="span">
+      我是span
+  </span>
+	<!-- /#span -->
+</div>
+<!-- /#div -->
+</body>
+</html>

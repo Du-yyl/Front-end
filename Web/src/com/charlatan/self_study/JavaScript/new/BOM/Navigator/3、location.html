@@ -1,0 +1,46 @@
+<!--
+  ~ Date:2021/12/7 11:33 46
+  ~ Name:3、location.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/BOM/Navigator
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>location</title>
+</head>
+<body>
+<button id="btn1" type="button"> 我是按钮</button>
+<div id="div"></div>
+<script>
+	/*
+	 * location
+	 *   封装了浏览器的地址栏信息
+	 *   如果将这个地址栏信息进行修改，那么就会自动跳转到这个路径
+	 *   并生成历史记录
+	 * */
+	let btn1 = document.getElementById('btn1')
+	btn1.onclick = function () {
+		// document.getElementById("div").innerText = location
+		location = `https://www.baidu.com`
+
+		/*
+
+		 assign()    加载新的文档。
+		 和直接修改location一样
+		 reload()    重新加载当前文档。
+		 和刷新按钮功能一样
+		 【如果传的东西是true，表示强制清除缓存刷新】
+		 replace()   用新的文档替换当前文档。
+		 使用一个新的页面替换当前页面，调用完毕跳转页面，这个跳转没有历史记录
+
+		 */
+
+	}
+</script>
+</body>
+</html>

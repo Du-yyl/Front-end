@@ -1,0 +1,45 @@
+<!--
+  ~ Date:2021/12/27 12:23 03
+  ~ Name:2、Symbol常见方法.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/symbol
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Symbol常见方法</title>
+
+</head>
+<body>
+<pre>
+	Symbol.for()
+		如果我们要重复使用一个 symbol 时，可以用到 Symbol.for() 方法。Symbol.for() 方法接受一个字符串参数，会在全局中搜索有没有以该参数命名的 symbol 的值，
+		如果查找到就返回这个值。如果没有查到则重新生成一个值，并将该值以参数名称注册到全局。
+	
+		但是Symbol就不会，它会重新创建一个新的地址，和内容，所以返回结果是flase
+
+	 Symbol.keyFor()
+		Symbol.keyFor() 方法表示获取一个 symbol 的值在全局中注册的命名参数 key，
+		只有使用 Symbol.for() 创建的值才会有注册的命名参数，使用 Symbol() 生成的值则没有：
+</pre>
+</body>
+<script>
+	// 第一个创建的方法会注册到全局，当又有一个新的相同的值进行注册时，就会直接进行赋值，所以引用和内容都是相同的
+	let sl1 = Symbol.for('find')
+	let sl2 = Symbol.for('find')
+
+	let sl3 = Symbol('test')
+	let sl4 = Symbol('test')
+
+	console.log(sl1 === sl2)
+	console.log(sl3 === sl4)
+
+	console.log(Symbol.keyFor(sl1))
+
+
+</script>
+</html>

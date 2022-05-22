@@ -1,0 +1,36 @@
+<!--
+  ~ Date:2021/12/20 10:39 09
+  ~ Name:2、parseInt.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/隐式转换
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+解析字符串时，会忽略字符串前后的空格；如果字符串前面为-，-会保留在转换结果中；如果数字前面为+，转换后将删掉+号；
+如果字符串前面为除空格、+和-以外的特殊符号或除 a～f（或 A～F）之外的非数字字符，字符串将不会被解析，返回结果为 NaN；
+在字符串中包含了空格、+、-和小数点“。”等特殊符号或非数字的字符时，解析将在遇到这些字符时停止，并返回已解析的结果；
+如果字符串是空字符串，返回结果为 NaN。
+</body>
+<script>
+	console.log((parseInt('1101', 2)))  //以2为基数的1101字符串解析后的结果为：13
+	console.log((parseInt('a37f', 16))) //以16为基数的a37f字符串解析后的结果为：41855
+	console.log((parseInt('123')))     //);以10为基数的123字符串解析后的结果为：123
+	console.log((parseInt('  123')))  //);字符串前面的空格会被忽略，结果为：123
+	console.log((parseInt('12 3')))    //字符串中包含了空格，解析到空格时停止，结果为12
+	console.log((parseInt('12.345'))) //字符串中包含了小数点，解析到小数点时停止，结果为12
+	console.log((parseInt('xy123')))  //);字符串前面包含了非数字字符“x”，无法解析，返回结果为：NaN
+	console.log((parseInt('123xy4'))) //);字符串中包含了非数字字符“xy”，解析到“x”时停止，结果为：123
+
+	let a = 3
+	console.log('5' + a - a, 5 - a + a)
+</script>
+</html>

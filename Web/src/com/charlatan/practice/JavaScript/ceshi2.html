@@ -1,0 +1,86 @@
+<!--
+  ~ Date:2021/12/24 9:35 56
+  ~ Name:ceshi2.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/practice/JavaScript
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceeshi</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#div {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+
+		#div:focus {
+
+		}
+	</style>
+</head>
+<body>
+<label>
+
+</label>
+
+<div id="div"></div>
+
+
+<input id="text" type="text">
+
+
+</body>
+<script>
+	let div = document.getElementById('div')
+	let text = document.getElementById('text')
+
+	div.addEventListener('click', function () {
+		console.log('click')
+		text.focus()
+	}, false)
+	div.addEventListener('mouseover', function () {
+		console.log('mouseover')
+		text.focus()
+	}, false)
+	div.addEventListener('mouseenter', function () {
+		console.log('mouseenter')
+		text.focus()
+	}, false)
+	div.addEventListener('mouseup', function () {
+		console.log('mouseup')
+		text.focus()
+	}, false)
+	div.addEventListener('mousedown', function () {
+		console.log('mousedown')
+		text.focus()
+	}, false)
+
+	text.onfocus = function () {
+		console.log('我获取焦点了')
+	}
+	text.onblur = function () {
+		console.log('我失去焦点了')
+	}
+
+</script>
+</html>

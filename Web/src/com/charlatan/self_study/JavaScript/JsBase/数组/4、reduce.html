@@ -1,0 +1,39 @@
+<!--
+  ~ Date:2021/12/17 12:05 31
+  ~ Name:4、reduce.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/数组
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reduce</title>
+
+</head>
+<body>
+reduce() 作用对数组中所有的内容进行汇总
+</body>
+<script>
+
+
+	//reduce() 方法的使用
+	let nums = [10, 20, 30]
+	let add = nums.reduce((pre, cur) => {
+		console.log(pre, cur)
+		return pre + cur
+	}, 0)
+	console.log(add)
+
+	//这里的 0 ，是pre 的初始值
+	//第一次 pre:0   cur:10
+	//第二次 pre:0+10  cur:20
+	//第三次 pre:0+10+20  cur：30
+	//60
+
+
+</script>
+</html>

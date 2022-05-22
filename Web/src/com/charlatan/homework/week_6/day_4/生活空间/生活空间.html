@@ -1,0 +1,348 @@
+<!--
+  ~ Date:2021/11/25 下午6:42
+  ~ Name:生活空间.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_6/day_4/生活空间/生活空间.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>生活空间</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		#box {
+			width: 1600px;
+			height: 900px;
+			background-color: #bfb2b2;
+			margin: 0 auto;
+		}
+
+		#top {
+			width: 100%;
+			height: 75px;
+			/*background-color: green;*/
+			position: sticky;
+		}
+
+		#top-left {
+			width: 260px;
+			height: 100%;
+			position: absolute;
+			left: 120px;
+			background: #faad39 url("file/logo.png") no-repeat 30px 0;
+		}
+
+		#top-center {
+			width: 500px;
+			height: 100%;
+			/*background-color: red;*/
+			position: absolute;
+			left: 500px;
+		}
+
+		#top-center-ul {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+		}
+
+		#top-center-ul li {
+			width: 50px;
+			height: 100%;
+			line-height: 75px;
+			text-align: center;
+			margin: 0 20px;
+			background-color: whitesmoke;
+			transition: all .2s;
+		}
+
+		#top-center-ul li:hover {
+			cursor: pointer;
+			color: #faad39;
+			border-bottom: 2px solid #faad39;
+			height: 73px;
+		}
+
+		#search {
+			width: 300px;
+
+			height: 50px;
+			border: 1px solid #a09a9a;
+			border-radius: 5px;
+			position: absolute;
+			right: 20px;
+			top: 10px;
+		}
+
+		#fangdajing {
+			position: absolute;
+			right: 330px;
+			top: 20px;
+		}
+
+		#body-1 {
+			width: 100%;
+			height: 700px;
+			/*background-color: red;*/
+			position: relative;
+		}
+
+		#body-1-img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.left {
+			width: 500px;
+			height: 322px;
+			/* background-color: red; */
+			display: inline-block;
+		}
+
+		.right {
+			width: 680px;
+			height: 322px;
+			/* background-color: yellow; */
+			/* margin-left: 50px; */
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.rTop {
+			width: 650px;
+			height: 172px;
+			margin-left: 30px;
+			margin-bottom: 40px;
+			/* background-color: red; */
+			padding-top: 30px;
+			box-sizing: border-box;
+		}
+
+		.rTop h3 {
+			font-size: 20px;
+			color: #333;
+			font-weight: normal;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+
+		.rTop span {
+			color: #faad39;
+			font-size: 16px;
+		}
+
+		.rTop .price {
+			font-size: 25px;
+			margin-left: 8px;
+		}
+
+		.rBottom {
+			width: 680px;
+			height: 110px;
+			background-color: #faad39;
+		}
+
+		.more {
+			width: 160px;
+			height: 42px;
+			border: 1px solid #999;
+			margin-top: 25px;
+			font-size: 18px;
+			color: #666;
+			text-align: center;
+			line-height: 42px;
+		}
+
+		.more:hover {
+			color: #faad39;
+			border: 1px solid #faad39;
+		}
+
+		.more:hover img {
+			display: none;
+		}
+
+		.item {
+			width: 204px;
+			height: 110px;
+			/* background-color: red; */
+			display: inline-block;
+			margin-left: 15px;
+			line-height: 110px;
+		}
+
+		.item img {
+			margin: 30px 10px 0 30px;
+		}
+
+		.item span {
+			font-size: 18px;
+			color: #fff;
+			line-height: 110px;
+			vertical-align: top;
+
+		}
+
+		.box1 {
+			width: 1180px;
+			height: 322px;
+			margin: 100px auto;
+			/*background-color: rgb(224, 222, 222);*/
+			font-size: 0;
+		}
+
+
+		#body-2 {
+			width: 100%;
+			height: 200px;
+			background-color: white;
+			position: relative;
+		}
+
+		#body-2-left {
+			width: 200px;
+			height: 200px;
+			background-color: white;
+			left: 200px;
+			position: absolute;
+			font-size: 180px;
+			line-height: 180px;
+			color: #f5f5f5;
+		}
+
+		#body-2-left-span1 {
+			font-size: 35px;
+			color: #333333;
+			line-height: 20px;
+			position: absolute;
+			top: 70px;
+			left: 50px;
+
+		}
+
+		#body-2-left-span2 {
+			font-size: 19px;
+			color: #999999;
+			line-height: 20px;
+			left: 50px;
+			top: 120px;
+			position: absolute;
+		}
+
+		#body-2-right {
+			width: 600px;
+			height: 200px;
+			/*background-color: green;*/
+			position: absolute;
+			right: 200px;
+		}
+
+		#body-2-right-ul {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+		}
+
+		#body-2-right-ul li {
+			width: 100px;
+			margin: 0 40px;
+			line-height: 200px;
+		}
+
+		#body-2-right-ul li:hover {
+			color: #faad39;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="box">
+	<div id="top">
+		<div id="top-left"></div>
+		<div id="top-center">
+			<ul id="top-center-ul">
+				<li>首页</li>
+				<li>产品</li>
+				<li>我们</li>
+				<li>动态</li>
+				<li>联系</li>
+			</ul>
+		</div>
+		<div id="top-right">
+			<label for="search">
+				<img id="fangdajing" alt="放大镜" height="30" src="file/fangdajing.png">
+				<input id="search" placeholder="搜索" type="search">
+			</label>
+		</div>
+	</div>
+	<div id="body-1">
+		<img id="body-1-img" alt="" src="file/banner.jpg">
+	</div>
+	<div id="body-2">
+		<div id="body-2-left">
+			01
+			<p id="body-2-left-span1">
+				产品
+			</p>
+			<p id="body-2-left-span2">
+				PRODUCT
+			</p>
+		</div>
+		<div id="body-2-right">
+			<ul id="body-2-right-ul">
+				<li>全部</li>
+				<li>客厅</li>
+				<li>卧室</li>
+				<li>舞厅</li>
+				<li>厨房</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box1">
+		<div class="left">
+			<img alt="" src="file/a279fbeea3424dfa4e9fc8da36f90baa.jpg">
+		</div>
+		<div class="right">
+			<div class="rTop">
+				<h3>展示产品标题七</h3>
+				<span>￥</span><span class="price">980</span>
+				<div class="more">
+					MORE <img alt="" src="./img/icon5.png">
+				</div>
+			</div>
+			<div class="rBottom">
+				<div class="item">
+					<img alt="" src="./img/icon2.png">
+					<span>7天退换货</span>
+				</div>
+				<div class="item">
+					<img alt="" src="./img/icon3.png">
+					<span>供货安装</span>
+				</div>
+				<div class="item">
+					<img alt="" src="./img/icon4.png">
+					<span>三年质保</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

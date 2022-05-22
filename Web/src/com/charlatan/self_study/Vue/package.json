@@ -1,0 +1,9 @@
+{
+  "name": "Vue",
+  "version": "1.0.0",
+  "dependencies": {
+    "@vue/compiler-dom": "^3.2.31",
+    "@vue/runtime-dom": "^3.2.31",
+    "@vue/shared": "^3.2.31"
+  }
+}

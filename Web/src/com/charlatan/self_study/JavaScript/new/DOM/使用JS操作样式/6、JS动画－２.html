@@ -1,0 +1,70 @@
+<!--
+  ~ Date:2021/12/8 11:29 07
+  ~ Name:6、JS动画－２.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/使用JS操作样式
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS动画-2</title>
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+
+</head>
+<script>
+	window.onload = function () {
+		let box = document.getElementById('box')
+
+		let x = 0
+		let y = 0
+
+		let speed = 2
+
+		let xSpeed = speed
+		let ySpeed = speed
+
+		const moveFun = () => {
+			x += xSpeed
+			y += ySpeed
+
+			if (x >= window.innerWidth - box.offsetWidth) {
+				x = window.innerWidth - box.offsetWidth
+				xSpeed = -xSpeed
+			}
+			if (y >= window.innerHeight - box.offsetHeight) {
+				y = window.innerHeight - box.offsetHeight
+				ySpeed = -ySpeed
+			}
+
+			if (x <= 0) {
+				x = 0
+				xSpeed = -xSpeed
+			}
+			if (y <= 0) {
+				y = 0
+				ySpeed = -ySpeed
+			}
+
+			box.style.left = x + 'px'
+			box.style.top = y + 'px'
+			requestAnimationFrame(moveFun)
+		}
+		requestAnimationFrame(moveFun)
+	}
+</script>
+<body>
+<div id="box"></div>
+<!-- /#box -->
+</body>
+</html>

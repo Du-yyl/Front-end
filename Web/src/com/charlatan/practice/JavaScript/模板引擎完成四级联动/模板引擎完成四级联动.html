@@ -1,0 +1,57 @@
+<!--
+  ~ Date:2022/1/13 13:32 21
+  ~ Name:模板引擎完成四级联动.html
+  ~ Path:Web代码/src/com/charlatan/practice/JavaScript/模板引擎完成四级联动
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模板引擎完成四级联动</title>
+
+</head>
+<body>
+<label for="s1">
+	省
+</label>
+<select id="s1">
+	{{ each o1 }}
+	<option class="s1"> {{ $value }}</option>
+	{{ /each   }}
+</select>
+
+<label for="s2">
+	市
+</label>
+<select id="s2">
+	{{ each o2 }}
+	<option class="s2"> {{ $value }}</option>
+	{{ /each   }}
+</select>
+
+<label for="s3">
+	市
+</label>
+<select id="s3">
+	{{ each o3 }}
+	<option class="s3"> {{ $value }}</option>
+	{{ /each   }}
+</select>
+
+<label for="s4">
+	市
+</label>
+<select id="s4">
+	{{ each o4 }}
+	<option class="s4"> {{ $value }}</option>
+	{{ /each   }}
+</select>
+
+
+</body>
+<script src="./Web代码/src/com/charlatan/practice/JavaScript/模板引擎完成四级联动/模板引擎完成四级联动.js"></script>
+</html>

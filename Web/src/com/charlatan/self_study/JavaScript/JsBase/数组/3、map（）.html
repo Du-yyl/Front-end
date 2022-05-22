@@ -1,0 +1,54 @@
+<!--
+  ~ Date:2021/12/17 12:00 48
+  ~ Name:3、map（）.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/数组
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>map</title>
+
+</head>
+<body>
+<pre>
+	对数组的每个元素都遍历一次，同时返回一个新的值，注：返回的数据长度和原始数据长度是一致的
+
+	可以对数组的每个元素进行相应的处理
+
+	定义和用法
+		map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。
+		map() 方法按照原始数组元素顺序依次处理元素。
+		注意： map() 不会对空数组进行检测。
+		注意： map() 不会改变原始数组。
+</pre>
+</body>
+<script>
+
+	// map() 方法的使用
+	let nums = [10, 20, 30, 40, 50]
+	// let newnums = nums.map(function(n){
+	// 	return n * 3
+	// })
+	// console.log(newnums);  // 30,60,90,120,150
+	let num1 = nums.map(item => item + 10)
+	console.log(num1)
+
+	var m = new Map([['Michael', 95], ['Bob', 75], ['Tracy', 85]])
+	m.get('Michael') // 95
+
+	// var m = new Map(); // 空Map
+	m.set('Adam', 67) // 添加新的key-value
+	m.set('Bob', 59)
+	m.has('Adam') // 是否存在key 'Adam': true
+	m.get('Adam') // 67
+	m.delete('Adam') // 删除key 'Adam'
+	m.get('Adam') // undefined
+
+
+</script>
+</html>

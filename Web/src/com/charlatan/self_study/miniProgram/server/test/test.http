@@ -1,0 +1,8 @@
+### 网易
+POST https://music.163.com/weapi/personalized/playlist?limit=10&total=true&n=1000
+
+### 本地
+GET http://localhost:3000/personalized?limit=10
+
+###
+POST https://music.163.com/weapi/personalized/playlist?limit=10

@@ -1,0 +1,15 @@
+/**
+  * Date:2021/12/29 15:57 31
+  * Name:less中的注释.less
+  * Path:Web代码/src/com/charlatan/self_study/Less/基础/css
+  * ProjectName:WWW
+  * Author:charlatan
+  *
+  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  */
+/*
+在less中只有这种注释是能暴漏的，其他的都是在less内部进行查看的
+这是能暴漏出去的注释
+//是不能被翻译出去的
+*/
+/*# sourceMappingURL=less中的注释.css.map */

@@ -1,0 +1,53 @@
+<!--
+  ~ Time:2022/3/23 15:48 02
+  ~ Name:10、createRef.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/5、组件的三大属性
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+
+</head>
+<body>
+<div id="test"></div>
+</body>
+<!--
+
+-->
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	class Demo extends React.Component {
+		// 使用最新的API进行ref的创建
+		// 通过这种方式创建的 ref 相当与创建了一个容器，用来保存待会要进行指定的内容
+		// 这个容器中会包含一个对象，第一个属性值就是要保存的这个元素，通过这个可以获取 value
+		// 这个容器是专人专用的，只能保存一个属性的内容
+		input = React.createRef()
+
+		render () {
+			return (
+					<div>
+						<input type="text" ref={this.input}/>
+						<button onClick={this.showClick}>点击提示内容</button>
+					</div>
+			)
+		}
+
+		showClick = () => {
+			console.log(this.input.current.value)
+		}
+	}
+
+	ReactDOM.render(<Demo/>, document.getElementById('test'))
+</script>
+</html>

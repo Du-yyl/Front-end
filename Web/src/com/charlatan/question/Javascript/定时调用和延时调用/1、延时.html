@@ -1,0 +1,48 @@
+<!--
+  ~ Date:2021/12/21 11:23 52
+  ~ Name:1、延时.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/定时调用和延时调用
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>延时</title>
+
+</head>
+<body>
+
+
+</body>
+<script>
+
+	for (let i = 0, len = 5; i < len; i++) {
+		setTimeout(function () {
+			console.log(i)
+		}, 1000 * i)
+	}
+
+	// var i
+	// for (i = 0, len = 5; i < len; i++) {
+	// 	setTimeout(function () {
+	// 		console.log(i);
+	// 	}, 1000 * i)
+	// }
+
+	/*
+	 * 题解：
+	 *   let情况：
+	 *       当函数开始执行的时候，先执行for的同步函数，这里因为setTime是闭包函数，每一次都会为function中
+	 *       的i重新进行赋值，他访问的是每一次为自己赋值的i
+	 *   var情况：
+	 *       函数的执行依然和let的情况相同，但是因为var存在变量提升，所以会先对var进行赋值，当运行完后，访问的只有全局变量的i
+	 *       所以输出的 i 都是同一个数值
+	 *
+	 * */
+
+</script>
+</html>

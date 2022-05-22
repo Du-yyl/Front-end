@@ -1,0 +1,49 @@
+<!--
+  ~ Time:2022/2/25 11:50 35
+  ~ Name:localStorage.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础/vue_test/8、浏览器本地存储
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>localStorage</title>
+
+</head>
+<body>
+<button id="btn1">存储数据</button>
+<button id="btn2">读取数据</button>
+<button id="btn3">删除数据</button>
+<button id="btn4">清空数据</button>
+</body>
+<script>
+	let btn1 = document.getElementById('btn1')
+	let btn2 = document.getElementById('btn2')
+	let btn3 = document.getElementById('btn3')
+	let btn4 = document.getElementById('btn4')
+
+	let p = { name: '测试', age: 10 }
+	btn1.onclick = function () {
+		window.localStorage.setItem('名字', '测试内容1')
+		window.localStorage.setItem('名字', JSON.stringify(p))
+	}
+
+	btn2.onclick = function () {
+		console.log(localStorage.getItem('名字'))
+	}
+
+	btn3.onclick = function () {
+		localStorage.removeItem('名字')
+	}
+
+	btn4.onclick = function () {
+		localStorage.clear()
+	}
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!--
+  ~ Date:2021/12/25 16:03 54
+  ~ Name:2、AJAX设置请求参数.html
+  ~ Path:Web代码/src/com/charlatan/self_study/AJAX/原生AJAX
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX设置请求参数</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+
+		#result {
+			width: 200px;
+			height: 100px;
+			border: 1px solid #12a9c9;
+		}
+	</style>
+</head>
+<body>
+<button id="btn" type="button">发送请求</button>
+<div id="result"></div>
+
+<hr>
+<pre>
+	在AJAX传输中加入参数的方式：
+		在要访问的链接后，加入 ? 属性1 = 属性值 & 属性2 = 属性值 & 属性3 = 属性值
+		http://127.0.0.1:8000/server?a=100&b=200&c=300
+</pre>
+</body>
+<script>
+	let btn = document.getElementById('btn')
+	let result = document.getElementById('result')
+	btn.onclick = function () {
+		//    AJAX的四个步骤：
+		// 第一步：   创建对象
+		let xhr = new XMLHttpRequest()
+
+		//	第二步：    初始化   设置请求方法和url
+		xhr.open('GET', 'http://127.0.0.1:8000/server?a=100&b=200&c=300')
+
+		//第三步：发送请求
+		xhr.send()
+
+		/*第四步： 事件绑定，处理服务端发送的结果*/
+		xhr.onreadystatechange = function () {
+			//	这里进行判断，当服务端返回全部结果在进行运行指定的东西
+			if (xhr.readyState === 4) {
+				//	判断响应状态码
+				//	2XX 开始的都表示成功
+				if (xhr.status >= 200 && xhr.status < 300) {
+					//	处理结果
+					//	结果包括：行  头   空行  体
+					//	相应行处理
+					console.log(xhr.status) //响应码
+					console.log(xhr.statusText) // 状态字符串
+					console.log(xhr.getAllResponseHeaders()) // 响应头 \ 所有的响应头
+					console.log(xhr.response) // 响应体
+
+					result.innerText = xhr.response
+				}
+			}
+		}
+	}
+</script>
+</html>

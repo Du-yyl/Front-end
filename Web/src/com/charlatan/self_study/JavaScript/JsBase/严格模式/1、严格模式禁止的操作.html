@@ -1,0 +1,52 @@
+<!--
+  ~ Date:2021/12/27 13:48 54
+  ~ Name:1、严格模式禁止的操作.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/严格模式
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>严格模式禁止的语法</title>
+
+</head>
+<body>
+<pre>
+	严格模式会报错的操作：
+		在不声明变量的情况下使用变量；
+		在不声明对象的情况下使用对象
+	删除变量（或对象）
+	删除变量（或对象）是不允许的：
+	删除函数是不允许的：
+	重复参数名是不允许的：
+	八进制数值文本是不允许的：
+	转义字符是不允许的：
+	写入只读属性是不允许的：
+	写入只能获取的属性是不允许的：
+	删除不可删除的属性是不允许的：
+	字符串 "eval" 和 'arguments' 不可用作变量：
+	with 语句是不允许的：
+	处于安全考虑，不允许 eval() 在其被调用的作用域中创建变量
+
+	在类似 f() 的函数调用中，this 的值是全局对象。在严格模式中，现在它成为了 undefined。
+</pre>
+</body>
+<script>
+	// 开启严格模式
+	'use strict'
+
+	function func () {
+		return function () {
+			console.log(this)
+		}
+	}
+
+	let fn = func()
+	fn()
+
+</script>
+</html>

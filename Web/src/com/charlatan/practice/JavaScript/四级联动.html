@@ -1,0 +1,114 @@
+<!--
+  ~ Date:2021/12/16 14:21 15
+  ~ Name:四级联动.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/practice/JavaScript
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>四级联动</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#h1 {
+			font-size: 50px;
+			font-weight: 100;
+			color: #48cce7;
+		}
+
+		#label {
+			position: absolute;
+			top: 160px;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+<h1 id="h1">
+	请选择你的区域
+</h1>
+<label id="label">
+	选择你的位置：
+	<select id="choose-1"></select>
+	<select id="choose-2"></select>
+	<select id="choose-3"></select>
+	<select id="choose-4"></select>
+</label>
+</body>
+<script src="data/area.js" type="text/javascript"></script>
+<script>
+	window.onload = () => {
+		let choose_1 = document.getElementById('choose-1')
+		let choose_2 = document.getElementById('choose-2')
+		let choose_3 = document.getElementById('choose-3')
+		let choose_4 = document.getElementById('choose-4')
+		let city
+		for (let areaKey in area) {
+			let option_1 = document.createElement('option')
+			option_1.classList.add('options-1')
+			option_1.innerText = areaKey
+			choose_1.appendChild(option_1)
+		}
+
+		choose_1.onchange = () => {
+			console.log('-------')
+			console.log(area[choose_1.value][0])
+			change_city()
+			change_region()
+		}
+		change_city()
+
+		function change_city () {
+			city = area[choose_1.value][0]
+			choose_2.innerText = ''
+			for (let cityKey in city) {
+				let option_2 = document.createElement('option')
+				option_2.classList.add('options-2')
+				option_2.innerText = cityKey
+				choose_2.appendChild(option_2)
+			}
+		}
+
+		choose_2.onchange = () => {
+			change_region()
+		}
+		change_region()
+
+		function change_region () {
+			let regions = city[choose_2.value]
+			choose_3.innerText = ''
+			city[choose_2.value].forEach(function (item) {
+				for (let itemKey in item) {
+					console.log(itemKey)
+					let option_3 = document.createElement('option')
+					option_3.classList.add('options-3')
+					option_3.innerHTML = itemKey
+					choose_3.appendChild(option_3)
+				}
+			})
+		}
+
+		console.log(city[choose_2.value][2].管城回族区)
+		console.log('------->' + city[choose_2.value][0])
+		console.log(JSON.stringify(city[choose_2.value][2]))
+
+	}
+</script>
+</html>

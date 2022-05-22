@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS的控制语句</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	 1、if
+	 2、switch
+
+	 3、while
+	 4、do .. while..
+	 5、for循环
+
+	 6、break
+	 7、continue
+
+	 8、for..in语句（了解）
+	 9、with语句（了解）
+	 */
+	// 创建JS数组
+	var arr = [false, true, 1, 2, 'abc', 3.14] // JS中数组中元素的类型随意.元素的个数随意.
+	// 遍历数组
+	for (var i = 0; i < arr.length; i++) {
+		alert(arr[i])
+	}
+
+	// for..in
+	for (var i in arr) {
+		//alert(i);
+		alert(arr[i])
+	}
+
+	// for..in语句可以遍历对象的属性
+	User = function (username, password) {
+		this.username = username
+		this.password = password
+	}
+
+	var u = new User('张三', '444')
+	alert(u.username + ',' + u.password)
+	alert(u['username'] + ',' + u['password'])
+
+	for (var shuXingMing in u) {
+		//alert(shuXingMing)
+		//alert(typeof shuXingMing) // shuXingMing是一个字符串
+		alert(u[shuXingMing])
+	}
+
+	alert(u.username)
+	alert(u.password)
+
+	with (u) {
+		alert(username + ',' + password)
+	}
+
+</script>
+</body>
+</html>
+
+<!--
+	public class Test{
+		public static void main(String[] args){
+			int[] arr = {1,2,3,4,5,6};
+			int[] arr2 = new int[5]; // 等同于：int[] arr2 = {0,0,0,0,0};
+			String[] arr3 = {"a","b","c"};
+			String[] arr4 = new String[3]; // 等同于：String[] arr4 = {null,null,null};
+		}
+	}
+-->

@@ -1,0 +1,55 @@
+<!--
+  ~ Date:2021/11/26 上午11:18
+  ~ Name:6、复选框的全选和取消全选.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/6、复选框的全选和取消全选.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复选框的全选和取消全选</title>
+</head>
+<body>
+<script>
+	window.onload = function () {
+
+		var v1 = document.getElementById('check')
+		var aihao = document.getElementsByName('aihao')
+		v1.onclick = function () {
+			for (let i = 0; i < aihao.length; i++) {
+				aihao[i].checked = v1.checked
+			}
+		}
+
+		for (let i = 0; i < aihao.length; i++) {
+			aihao[i].onclick = function () {
+				var p = 0
+				for (let j = 0; j < aihao.length; j++) {
+					if (aihao[j].checked) {
+						p++
+					}
+				}
+				v1.checked = (aihao.length === p)
+				/*if (p < aihao.length) {
+				 v1.checked = false
+				 return
+				 }
+				 if (p === aihao.length) {
+				 v1.checked = true
+				 }*/
+			}
+		}
+	}
+</script>
+<input id="check" type="checkbox"> <br>
+<input id="checkbox1" class="aihao" name="aihao" type="checkbox" value="爱好1">爱好1 <br>
+<input id="checkbox2" class="aihao" name="aihao" type="checkbox" value="爱好2">爱好2 <br>
+<input id="checkbox3" class="aihao" name="aihao" type="checkbox" value="爱好3">爱好3 <br>
+<input id="checkbox4" class="aihao" name="aihao" type="checkbox" value="爱好4">爱好4 <br>
+<input id="checkbox5" class="aihao" name="aihao" type="checkbox" value="爱好5">爱好5 <br>
+</body>
+</html>

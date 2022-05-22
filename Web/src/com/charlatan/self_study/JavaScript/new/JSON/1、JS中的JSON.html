@@ -1,0 +1,54 @@
+<!--
+  ~ Date:2021/12/7 20:22 07
+  ~ Name:1、JS中的JSON.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/JSON
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS中的JSON</title>
+</head>
+<body>
+
+</body>
+<script>
+	/*
+	 * JS中有一个对象是JSON，他可以将JSON转换为js对象，也可以将js对象转换成JSON
+	 *   parse()
+	 *       可以将JSON字符串转换为js对象
+	 *
+	 * stringify()
+	 *       可以将js对象转换成JSON字符串
+	 *
+	 * eval()
+	 *       可以执行一段字符串类型的JS代码，并将结果返回
+	 *       如果解析的是JSON字符串，那么会将{}识别成代码块进行执行
+	 *           如果不希望被当代码块解析，那么需要在字符串前后添加一个（）
+	 *
+	 * 开发中不建议使用，效率慢，安全隐患
+	 * */
+	let obj = '[1,2,3,4,5,4,3,3,23]'
+
+	let o = JSON.parse(obj)
+
+	let s = JSON.stringify(o)
+	console.log(s)
+
+	var c1 = '  console.log(\'hello world\')'
+	eval(c1)
+
+	var str1 = {
+		name: '张三',
+		age: 12,
+		sex: '男',
+	}
+	var str2 = JSON.stringify(str1)
+	var str3 = eval('(' + str2 + ')')
+	console.log(str3)
+</script>
+</html>

@@ -1,0 +1,125 @@
+// 设置变量
+@bgColor: #b7d4a8;
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font: bold 20px "Courier New";
+
+  #main {
+    width: 600px;
+    height: 700px;
+    background: @bgColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 3%;
+    border: 10px solid;
+
+    #stage {
+      width: 504px;
+      height: 504px;
+      background: @bgColor;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border: 2px solid #788d6c;
+
+      #snake {
+        & > div {
+          width: 10px;
+          height: 10px;
+          background: #000;
+          border: 1px solid @bgColor;
+          position: absolute;
+          //transition: all .2s;
+
+          &:nth-child(6n+1) {
+            background: #d2ffe9;
+          }
+
+          &:nth-child(6n+2) {
+            background: #c1ffe9;
+          }
+
+          &:nth-child(6n+3) {
+            background: #e9ffc3;
+          }
+
+          &:nth-child(6n+4) {
+            background: #ffd5b3;
+          }
+
+          &:nth-child(6n+5) {
+            background: #ffd2cf;
+          }
+
+          &:nth-child(6n+6) {
+            background: #bad2ff;
+          }
+
+        }
+      }
+
+      & > #food {
+        width: 10px;
+        height: 10px;
+        background: #ff0000;
+        border: 1px solid @bgColor;
+        position: absolute;
+        top: 110px;
+        left: 100px;
+      }
+
+      & > #food1 {
+        width: 10px;
+        height: 10px;
+        background: @bgColor;
+        border: 1px solid @bgColor;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+        display: flex;
+        // 设置横轴为主轴，并且换行
+        flex-flow: row wrap;
+        // 设置主轴和侧轴的空白空间
+        justify-content: space-between;
+        align-content: space-between;
+
+        & > div {
+          width: 4px;
+          height: 4px;
+          background: #000;
+          transform: rotate(45deg);
+          border-radius: 1px;
+        }
+      }
+    }
+
+    #score-panel {
+      width: 500px;
+      height: 100px;
+      background: @bgColor;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 15px;
+      display: flex;
+      // 设置主轴对其方式
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+
+

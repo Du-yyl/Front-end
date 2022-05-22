@@ -1,0 +1,65 @@
+<!--
+  ~ Time:2022/2/22 10:29 40
+  ~ Name:16-3 v-cloak.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>v-cloak</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 15px YouYuan;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		[v-cloak] {
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+<div id="root">
+	<span v-cloak>{{ test }}</span>
+</div>
+<hr>
+<pre>
+v-cloak指令（没有值）：
+	1.本质是一个特殊属性，Vue实例创建完毕并接管容器后，会删掉v-cloak属性。
+	2.使用css配合v-cloak可以解决网速慢时页面展示出{{ xxx }}的问题。
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			test: '我是测试文本',
+		},
+		methods: {},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

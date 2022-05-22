@@ -1,0 +1,89 @@
+<!--
+  ~ Date:2021/12/25 13:40 01
+  ~ Name:1、get.html
+  ~ Path:Web代码/src/com/charlatan/self_study/AJAX/原生AJAX
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>get</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+
+		#result {
+			width: 200px;
+			height: 100px;
+			border: 1px solid #12a9c9;
+		}
+	</style>
+</head>
+<body>
+<button id="btn" type="button">发送请求</button>
+<div id="result"></div>
+</body>
+<script>
+	let btn = document.getElementById('btn')
+	let result = document.getElementById('result')
+	btn.onclick = function () {
+		//    AJAX的四个步骤：
+		//    创建对象
+		let xhr = new XMLHttpRequest()
+
+		//	初始化   设置请求方法和url
+		//	第一个是什么样的请求，第二个是怎么发
+		xhr.open('GET', 'http://127.0.0.1:8000/server')
+
+		//第三步：发送请求
+		xhr.send()
+
+		/*
+		 第四步： 事件绑定，处理服务端发送的结果
+		 on       当，，，时
+		 readystate   xhr对象中的一个属性，表示状态 ，五个值：
+		 0   表示未初始化，开始时的状态就是0
+		 1   open方法已经调用完毕
+		 2   send方法调用完毕
+		 3   服务端返回部分接口
+		 4   服务端返回所有接口
+		 change    改变
+		 */
+		xhr.onreadystatechange = function () {
+			//	这里进行判断，当服务端返回全部结果在进行运行指定的东西
+			if (xhr.readyState === 4) {
+				//	判断响应状态码
+				//	2XX 开始的都表示成功
+				if (xhr.status >= 200 && xhr.status < 300) {
+					//	处理结果
+					//	结果包括：行  头   空行  体
+					//	相应行处理
+					console.log(xhr.status) //响应码
+					console.log(xhr.statusText) // 状态字符串
+					console.log(xhr.getAllResponseHeaders()) // 响应头 \ 所有的响应头
+					console.log(xhr.response) // 响应体
+
+					result.innerText = xhr.response
+				}
+			}
+		}
+	}
+
+</script>
+</html>

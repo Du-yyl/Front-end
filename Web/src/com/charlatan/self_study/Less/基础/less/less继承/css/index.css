@@ -1,0 +1,17 @@
+/**
+  * Date:2021/12/30 11:07 19
+  * Name:index.less
+  */
+.center {
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: auto;
+	display: block;
+}
+
+.center:hover {
+	background-color: red !important;
+}
+
+/*# sourceMappingURL=index.css.map */

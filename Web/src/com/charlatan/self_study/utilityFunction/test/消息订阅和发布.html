@@ -1,0 +1,59 @@
+<!--
+  ~ Time:2022/4/20 15:58 34
+  ~ Name:消息订阅和发布.html
+  ~ Path:test
+  ~ ProjectName:utilityFunction
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>消息订阅和发布</title>
+
+</head>
+<body>
+
+</body>
+<script src="../src/消息订阅和发布/消息订阅和发布.js"></script>
+<script>
+	let id1 = PubSub.subscribe('send', function (data) {
+		console.log('测试')
+		console.log(data)
+	})
+	let id2 = PubSub.subscribe('send', function (data) {
+		console.log('测试')
+		console.log(data)
+	})
+	let id3 = PubSub.subscribe({}, function (data) {
+		console.log('测试')
+		console.log(data)
+	})
+	let id4 = PubSub.subscribe('sends', function (data) {
+		console.log('测试')
+		console.log(data)
+	})
+	let id5 = PubSub.subscribe('sends', function (data) {
+		console.log('测试')
+		console.log(data)
+	})
+	let id6 = PubSub.subscribe('__uid__', function (data) {
+		console.log('测试')
+		console.log(data)
+	})
+	console.log(id1, id2, id3)
+	PubSub.unsubscribe(id2)
+	PubSub.unsubscribe(id2)
+	PubSub.unsubscribe()
+	PubSub.unsubscribe({})
+	PubSub.unsubscribe('__uid__')
+	PubSub.unsubscribe('send')
+	PubSub.unsubscribe('sends')
+	PubSub.publish('send', '数据')
+	console.log(PubSub.events)
+</script>
+</html>

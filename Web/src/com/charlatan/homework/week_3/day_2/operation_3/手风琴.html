@@ -1,0 +1,119 @@
+<!--
+  ~ Date:2021/11/9 下午7:53
+  ~ Name:手风琴.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_3/day_2/operation_3/手风琴.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		#box {
+			margin: 100px auto;
+			width: 1470px;
+			overflow: hidden;
+		}
+
+		#b_ul li {
+			width: 210px;
+			float: left;
+			transition: all 1s;
+			cursor: pointer;
+			text-align: center;
+		}
+
+		.l_1:hover {
+			width: 600px !important;
+		}
+
+		.li_s {
+			width: 25px;
+			height: 150px;
+			display: block;
+			font-size: 29px;
+			font-weight: bold;
+			position: absolute;
+			color: whitesmoke;
+			top: 200px;
+			text-align: center;
+			margin-left: 80px;
+			opacity: 1;
+			transition: all 1s;
+		}
+
+		/*------------------------*/
+		#b_ul:hover .l_1 {
+			width: 145px;
+		}
+
+		.l_1:hover .li_s {
+			/*display: none;*/
+			opacity: 0;
+
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="box">
+	<ul id="b_ul">
+		<li class="l_1"><img height="390" src="file/img1.jpg" width="600">
+			<span class="li_s">
+                温泉酒店
+            </span>
+		</li>
+
+		<li class="l_1"><img height="390" src="file/img2.jpg" width="600">
+			<span class="li_s">
+                温泉酒店
+            </span>
+		</li>
+
+		<li class="l_1"><img height="390" src="file/img3.jpg" width="600">
+			<span class="li_s">
+                温泉酒店
+            </span>
+		</li>
+
+		<li class="l_1"><img height="390" src="file/img4.jpg" width="600">
+			<span class="li_s">
+                温泉酒店
+            </span>
+		</li>
+
+		<li class="l_1"><img height="390" src="file/img5.jpg" width="600">
+			<span class="li_s">
+                温泉酒店
+            </span>
+		</li>
+
+		<li class="l_1"><img height="390" src="file/img6.jpg" width="600">
+			<span class="li_s">
+                温泉酒店
+            </span>
+		</li>
+
+		<li class="l_1"><img height="390" src="file/img7.jpg" width="600">
+			<span class="li_s">
+                温泉酒店
+            </span>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

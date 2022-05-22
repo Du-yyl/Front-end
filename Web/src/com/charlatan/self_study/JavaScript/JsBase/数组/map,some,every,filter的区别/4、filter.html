@@ -1,0 +1,33 @@
+<!--
+  ~ Date:2021/12/29 11:54 46
+  ~ Name:4、filter.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/数组/map,some,every,filter的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter</title>
+
+</head>
+<body>
+<pre>
+	filter：创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素
+
+	filter()方法会返回一个新数组，该新数组的元素是符合回到函数中筛选条件的结果
+	filter()为数组中的每个元素调用一次 callback 函数，并利用所有使得回调函数返回 true 或等价于 true 的值的元素创建一个新数组；
+	如果没有任何的项符合筛选的条件(false)，那么filter()方法将返回一个空的数组
+</pre>
+</body>
+<script>
+	let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	let num1 = nums.filter(item => {
+		return item > 5
+	})
+	console.log(num1)
+</script>
+</html>

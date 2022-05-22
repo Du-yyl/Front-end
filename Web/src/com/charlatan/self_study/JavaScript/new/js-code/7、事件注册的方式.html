@@ -1,0 +1,38 @@
+<!--
+  ~ Date:2021/11/24 下午7:07
+  ~ Name:7、事件注册的方式.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/7、事件注册的方式.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件注册的方式</title>
+</head>
+<body>
+<p>
+	使用回调函数
+</p>
+<input id="butt1" onclick="sayHello()" type="button" value="我是一个按钮">
+<p>
+	完全使用js
+</p>
+<input id="but2" type="button" value="我是按钮2">
+<script>
+	function sayHello () {
+		alert('你好')
+	}
+
+	function sayHello2 () {
+		alert('hello')
+	}
+
+	var v1 = window.document.getElementById('but2')
+	v1.onclick = sayHello2
+</script>
+</body>
+</html>

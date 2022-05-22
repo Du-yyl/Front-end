@@ -1,0 +1,187 @@
+.header {
+	height: 90rpx;
+	background: #ffffff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.header .icon-Magnifier {
+	font-size: 40rpx;
+}
+
+.header .search {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.header .icon-24gl-delete {
+	font-size: 34rpx;
+	position: absolute;
+	font-weight: bold;
+	color: #000000;
+	right: 160rpx;
+	top: 30rpx;
+}
+
+.header .cancel {
+	font-size: 33rpx;
+	color: #000;
+	font-weight: 100;
+}
+
+.searchResult {
+	width: 100%;
+	max-width: 900rpx;
+	background: #ffffff;
+}
+
+.searchResult .answer {
+	width: 100%;
+	padding: 0 20rpx;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+}
+
+.searchResult .answer .icon-Magnifier {
+	font-size: 40rpx;
+	position: relative;
+	top: 30rpx;
+}
+
+.searchResult .answer .an {
+	position: relative;
+	top: -25rpx;
+	left: 10rpx;
+	font-size: 34rpx;
+	width: 600rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+/* 搜索历史*/
+.searchHistory {
+	width: 90%;
+	min-height: 100rpx;
+	max-height: 290rpx;
+	/* background: #f8dcdc; */
+	padding: 0 5%;
+	overflow: hidden;
+
+}
+
+.searchHistory .heard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.searchHistory .heard .title {
+	position: relative;
+	line-height: 0rpx;
+}
+
+.searchHistory .heard .icon-clean {
+	line-height: 80rpx;
+}
+
+.searchHistory .ul {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.searchHistory .ul .li {
+	margin: 1%;
+	padding: 1% 5%;
+	background: #eaeaea;
+	border-radius: 20rpx;
+}
+
+/* 热搜 */
+.hotSong {
+	width: 98%;
+	position: relative;
+	left: 1%;
+}
+
+.hotSong .header {
+	padding: 0;
+	line-height: 0rpx;
+}
+
+.hotSong .body {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.hotSong .body .lis {
+	width: 47%;
+	height: 90rpx;
+	overflow: hidden;
+	/* background: #efd2d2; */
+	margin: 10rpx;
+	display: flex;
+	flex-direction: row;
+}
+
+.hotSong .body .lis .rank {
+	line-height: 90rpx;
+	width: 70rpx;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}
+
+.hotSong .body .lis .introduce {
+	display: flex;
+	flex-direction: column;
+}
+
+.hotSong .body .lis .introduce .title {
+	font-size: 36rpx;
+	font-weight: bold;
+	max-width: 260rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.hotSong .body .lis .introduce .title .image {
+	width: 20rpx;
+	height: 20rpx;
+	position: relative;
+	top: -20rpx;
+}
+
+
+.hotSong .body .lis .introduce .hint {
+	margin-top: 20rpx;
+}
+
+
+.hotSong .body .lis .introduce .subTitle {
+	display: block;
+	font-size: 29rpx;
+	max-width: 270rpx;
+	font-weight: 100;
+
+	/* background: #000; */
+	color: #444444;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

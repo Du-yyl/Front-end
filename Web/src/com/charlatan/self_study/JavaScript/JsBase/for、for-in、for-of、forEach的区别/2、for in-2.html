@@ -1,0 +1,41 @@
+<!--
+  ~ Date:2021/12/17 13:36 41
+  ~ Name:2、for in-2.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/for、for-in、for-of、forEach的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forin</title>
+
+</head>
+<body>
+<pre>
+	for…in：遍历数组索引、对象的属性
+	使用for…in遍历时，原型链上的所有属性都将被访问
+
+	解决方法：使用hasOwnProperty()
+	hasOwnProperty()方法可以检测一个属性是存在于实例中，还是存在于原型中。这个方法只在给定属性存在于对象实例中时，才会返回true。
+</pre>
+</body>
+<script>
+	let num1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	Array.prototype.num2 = ['我', '是', '原', '型', '链', '上', '的']
+	for (let i in num1) {
+		console.log(num1[i])
+	}
+	console.log('--------------------------')
+
+	for (let i in num1) {
+		if (num1.hasOwnProperty(i)) {
+			console.log(num1[i])
+		}
+
+	}
+</script>
+</html>

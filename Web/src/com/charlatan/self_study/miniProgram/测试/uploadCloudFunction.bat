@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-4gki3qevd8cb738e --n quickstartFunctions --r --project "D:\Front-end\Web\src\com\charlatan\self_study\miniProgram\测试" --report_first --report

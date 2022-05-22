@@ -1,0 +1,94 @@
+<!--
+  ~ Date:2021/11/4 下午7:39
+  ~ Name:operation_1.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_2/day_4/operation_1.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+	<style>
+		#ti {
+			width: 700px;
+			height: 700px;
+			background-color: #CCFFFF;
+			border-radius: 100%;
+			position: relative;
+			margin: 100px auto;
+			background-image: url("file/1.jpg");
+			background-size: 700px;
+		}
+
+		/*--------------------------*/
+		#t1 {
+			height: 500px;
+			width: 20px;
+			background-color: #10ff00;
+			border-radius: 100%;
+			position: absolute;
+			z-index: 9999;
+			left: 330px;
+			animation: t1 60s linear infinite;
+			transform-origin: 50% 70%;
+		}
+
+		@keyframes t1 {
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		#t2 {
+			height: 400px;
+			width: 20px;
+			background-color: #1100ff;
+			border-radius: 100%;
+			position: absolute;
+			left: 330px;
+			z-index: 9999;
+			top: 40px;
+			animation: t2 3600s linear infinite;
+			transform-origin: 50% 76%;
+		}
+
+		@keyframes t2 {
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		#t3 {
+			height: 300px;
+			width: 20px;
+			background-color: red;
+			border-radius: 100%;
+			position: absolute;
+			left: 330px;
+			top: 90px;
+			z-index: 9999;
+			animation: t3 43200s linear infinite;
+			transform-origin: 50% 85%;
+		}
+
+		@keyframes t3 {
+			100% {
+				-webkit-transform: rotate(360deg);
+
+			}
+		}
+	</style>
+</head>
+<body>
+
+<div id="ti">
+	<div id="t1"></div>
+	<div id="t2"></div>
+	<div id="t3"></div>
+</div>
+</body>
+</html>

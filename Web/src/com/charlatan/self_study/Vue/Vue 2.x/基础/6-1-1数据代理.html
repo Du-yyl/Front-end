@@ -1,0 +1,59 @@
+<!--
+  ~ Time:2022/2/17 21:43 22
+  ~ Name:6-1-1数据代理.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>数据代理</title>
+
+</head>
+<body>
+
+<pre>
+	ES6中新属性：
+		Object.defineProperty（指定对象，要添加的新字段，添加的配置）
+			通过enumerable:true 可以将属性设置成可被遍历的（默认不能遍历
+			通过writable:true 可以设置内容是可修改的（默认不可
+			通过configurable:true 可以设置是否可删除（默认不可
+
+	数据代理：通过一个对象代理另一个对象中属性的读和写
+</pre>
+</body>
+<script>
+	let num = 10
+	let person = {
+		name: '张三',
+		sex: 'man',
+	}
+
+	Object.defineProperty(person, 'age', {
+		value: num,
+		enumerable: true,
+		writable: true,
+		configurable: true,
+
+		// 监听读取
+		get () {
+			console.log('get运行了')
+			return num
+		},
+		// 监听修改
+		set (value) {
+			console.log('set运行了')
+			num = value
+		},
+	})
+
+	console.log(person)
+
+</script>
+</html>

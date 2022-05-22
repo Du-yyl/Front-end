@@ -1,0 +1,49 @@
+<!--
+  ~ Time:2022/2/22 10:00 57
+  ~ Name:16-1Vue常用指令.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Vue常用指令</title>
+
+</head>
+<body>
+<div id="root">
+	<span v-text="text"></span>
+	<h3 v-text="h3"></h3>
+
+</div>
+
+<hr>
+<pre>
+	v-text会替换到指定模块中的全部内容
+	v-text不会检测可能存在的代码的编译，会直接进行将指定字符串放在指定位置，并将内容全部替换
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			text: '测试文本',
+			// language=HTML
+			h3: '<h3>我是在script中的进行测试的标签</h3>',
+		},
+		methods: {},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

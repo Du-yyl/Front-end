@@ -1,0 +1,51 @@
+<!--
+  ~ Date:2021/12/27 12:13 43
+  ~ Name:1、symbol基本介绍.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/symbol
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>symbol基本介绍</title>
+
+</head>
+<body>
+<pre>
+	symbol 的值是通过 Symbol() 函数生成，每一个 symbol 的值都是唯一的，并且 symbol 类型的值可以作为对象的属性标识符使用，这也是 symbol 类型设计的目的。
+	所以现在对象属性名可以为两种类型：
+		一种就是原本的字符串类型，
+		一种即为新增的 symbol 类型。
+	凡是使用 symbol 命名的属性都是独一无二的，保证不与其他属性名产生冲突。
+
+	创建一个 symbol 的值需要使用 Symbol() 函数，而不能使用 new 命令。
+	由于生成的 symbol 是一个值而不是对象，所以不能为其添加属性。
+	Symbol() 函数可以接受一个字符串作为参数，表示对该值的描述，因此即使定义 symbol 使用相同的参数互相之间也不是相同的：
+
+
+
+	symbol特殊点：
+		symbol 不会隐式转换为字符串【如有需要可以进行手动转换】
+		symbol 也不能与其他类型的值进行运算
+
+</pre>
+
+</body>
+<script>
+	let sl1 = Symbol('test')
+	console.log(sl1)
+	alert(sl1.toString())
+
+	// 获得定义 symbol 时的描述：
+	console.log((sl1.description))
+
+	// symbol 转换为其他类型
+	console.log(Boolean(sl1)) // true
+	console.log(parseInt(sl1)) // NaN
+	console.log(Number(sl1)) // TypeError: Cannot convert a Symbol value to a number
+</script>
+</html>

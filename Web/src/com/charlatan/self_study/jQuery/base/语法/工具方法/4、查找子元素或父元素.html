@@ -1,0 +1,66 @@
+<!--
+  ~ Date:2021/12/20 14:35 15
+  ~ Name:4、查找子元素或父元素.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base/核心/核心函数/工具方法
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查找</title>
+
+</head>
+<body>
+<div id="div1" class="box" title="one">class为box的div1</div>
+<div id="div2" class="box">class为box的div2</div>
+<div id="div3">div3</div>
+<span class="box">class为box的span</span>
+<br/>
+<div>
+	<ul>
+		<span>span文本1</span>
+		<li>AAAAA</li>
+		<li class="box2" title="hello">BBBBB</li>
+		<li id='cc' class="box">CCCCC</li>
+		<li title="hello">DDDDDD</li>
+		<li title="two"><span>span文本2</span></li>
+		<span>span文本3</span>
+	</ul>
+	<span>span文本444</span><br>
+	<li>eeeee</li>
+	<li>EEEEE</li>
+	<br>
+	<hr>
+
+</div>
+<pre>
+		在已经匹配出的元素集合中根据选择器查找孩子/父母/兄弟标签
+		1. children(): 子标签中找
+		2. find() : 后代标签中找
+		3. parent() : 父标签
+		4. prevAll() : 前面所有的兄弟标签
+		5. nextAll() : 后面所有的兄弟标签
+		6. siblings() : 前后所有的兄弟标签
+</pre>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+	/*
+	 2. ul标签的第2个span后代标签
+	 5. id为cc的li标签的所有兄弟li标签
+	 */
+	$(function () {
+		console.log($(`ul > span:eq(1)`).html())
+	})
+	//	 ul标签的父标签
+	console.log($(`ul:parent`).html())
+	//	id为cc的li标签的前面的所有li标签
+	$(`ul`).children(`#cc`).prevAll('li').css({
+		backgroundColor: 'red',
+	})
+</script>
+</html>

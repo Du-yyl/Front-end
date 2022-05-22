@@ -1,0 +1,315 @@
+<!--
+  ~ Date:2021/12/8 15:32 45
+  ~ Name:打字游戏.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/practice/JavaScript
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打字游戏</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box-1 {
+			width: 460px;
+			height: 460px;
+			border-radius: 50%;
+			position: absolute;
+			top: 10px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			transition: all .7s;
+		}
+
+		.box--1 {
+			width: 460px;
+			height: 460px;
+			border-radius: 50%;
+			border: 7px solid black;
+			position: absolute;
+			top: 10px;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		.span-show {
+			position: relative;
+			left: 20px;
+			top: 170px;
+			font-size: 50px;
+		}
+
+		#div-anima {
+			width: 200px;
+			height: 30px;
+			position: absolute;
+			top: calc(70% - 50px);
+			left: 26%;
+			font-size: 60px;
+		}
+
+		.span-dian {
+			width: 20px;
+			height: 20px;
+			/*background-color: grey;*/
+			position: relative;
+			line-height: 20px;
+			float: left;
+			top: -15px;
+			left: 50px;
+		}
+
+		#span-dian-1 {
+			animation: animation-top ease 1s infinite;
+
+		}
+
+		#span-dian-2 {
+			animation: animation-down ease 1s infinite;
+
+		}
+
+		#span-dian-3 {
+			animation: animation-top ease 1s infinite;
+
+		}
+
+		#span-dian-4 {
+			animation: animation-down ease 1s infinite;
+
+		}
+
+		#span-dian-5 {
+			animation: animation-top ease 1s infinite;
+
+		}
+
+		@keyframes animation-top {
+			0% {
+				top: -10px;
+			}
+			50% {
+				top: -20px;
+			}
+			100% {
+				top: -10px;
+			}
+		}
+
+		@keyframes animation-down {
+			0% {
+				top: -20px;
+			}
+			50% {
+				top: -10px;
+			}
+			100% {
+				top: -20px;
+			}
+		}
+
+
+		.span-show-switch-1 {
+			font-size: 350px;
+			/*font-size: 50px;*/
+			font-weight: 300;
+			left: 0;
+			top: -30px;
+			/*background-color: red;*/
+			line-height: 570px;
+			text-align: center;
+		}
+
+		.span-show-switch-2 {
+			font-size: 250px;
+			/*font-size: 50px;*/
+			font-weight: 300;
+			left: 0;
+			top: -50px;
+			/*background-color: red;*/
+			line-height: 570px;
+			text-align: center;
+		}
+
+		.span-show-switch-3 {
+			font-size: 250px;
+			/*font-size: 50px;*/
+			font-weight: 300;
+			left: 0;
+			top: -50px;
+			/*background-color: red;*/
+			line-height: 570px;
+			text-align: center;
+			animation: yaose ease .2s;
+		}
+
+		@keyframes yaose {
+
+			0% {
+				color: black;
+				left: 20px;
+			}
+			33% {
+				color: red;
+				left: 60px;
+			}
+
+			66% {
+				color: greenyellow;
+				left: -40px;
+			}
+			100% {
+				color: black;
+				left: 20px;
+			}
+		}
+
+		#span {
+			position: absolute;
+			left: calc(50% - 200px);
+			top: 60%;
+			font-size: 20px;
+			visibility: hidden;
+			transition: all 1s;
+		}
+
+		#span1 {
+			position: absolute;
+			left: calc(50% - 90px);
+			top: 70%;
+			font-size: 30px;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+<div id="box" class="box-1">
+	<div id="span--show" class="span-show">
+		按空格键开始游戏
+		<!--        A-->
+	</div>
+	<div id="div-anima">
+		<p id="span-dian-1" class="span-dian">.</p>
+		<!-- /#span-dian-1 -->
+		<p id="span-dian-2" class="span-dian">.</p>
+		<!-- /#span-dian-2 -->
+		<p id="span-dian-3" class="span-dian">.</p>
+		<!-- /#span-dian-3 -->
+		<p id="span-dian-4" class="span-dian">.</p>
+		<!-- /#span-dian-4 -->
+		<p id="span-dian-5" class="span-dian">.</p>
+		<!-- /#span-dian-5 -->
+		<!-- /#span-show -->
+	</div>
+	<!-- /#div-anima -->
+
+</div>
+<!-- /#box -->
+<span id="span">
+    正确： 0个， 错误： 0个， 正确率： 100%
+</span>
+<!-- /#span -->
+<span id="span1">
+    剩余时间
+</span>
+<!-- /#span1 -->
+</body>
+
+<script>
+	window.onload = function () {
+		let spanShow = document.getElementById('span--show')
+		let spanDian = document.getElementById('div-anima')
+		let span = document.getElementById('span')
+		let correctCount = 0
+		let numberOfErrors = 0
+		let num = 0
+		let flag = true
+		let span1 = document.getElementById('span1')
+		let box = document.getElementById('box')
+		let i = 30
+
+		document.onkeydown = testFun
+
+		function testFun (event) {
+			if (event.key === ' ' && flag) {
+				spanShow.classList.add('span-show-switch-2')
+				spanDian.style.display = 'none'
+				box.classList.add('box--1')
+
+				Countdown1()
+				Countdown()
+				flag = false
+			} else if (!flag) {
+				if (event.key.toUpperCase() === spanShow.innerText) {
+					num++
+					correctCount++
+					randomLetters()
+					span.innerText = '正确：' + correctCount + '个，错误： ' + numberOfErrors + '个， 正确率：' +
+							Math.round(correctCount / num * 10000) / 100 + '%'
+				} else {
+					num++
+					numberOfErrors++
+					span.innerText = '正确：' + correctCount + '个，错误： ' + numberOfErrors + '个， 正确率：' +
+							Math.round(correctCount / num * 10000) / 100 + '%'
+					spanShow.classList.add('span-show-switch-3')
+					setTimeout(function () {
+						spanShow.classList.remove('span-show-switch-3')
+					}, 200)
+				}
+			} else {
+				alert('单击空格开始游戏')
+			}
+		}
+
+		const Countdown = () => {
+			document.onkeydown = null
+			spanShow.innerText = '3'
+
+			setTimeout(function () {
+				spanShow.innerText = '2'
+			}, 1000)
+			setTimeout(function () {
+				spanShow.innerText = '1'
+			}, 2000)
+			setTimeout(function () {
+				spanShow.innerText = 'GO'
+			}, 3000)
+			setTimeout(function () {
+				randomLetters()
+				span.style.visibility = 'visible'
+				timer()
+			}, 4000)
+		}
+
+		const Countdown1 = () => {
+			setTimeout(function () {
+				document.onkeydown = testFun
+			}, 4000)
+		}
+
+		const randomLetters = () => {
+			spanShow.innerText = String.fromCharCode(Math.floor(Math.random() * 26) + 65)
+		}
+
+		const timer = () => {
+			span1.style.display = 'block'
+			setInterval(function () {
+				span1.innerHTML = i--
+			}, 1000)
+		}
+	}
+
+
+</script>
+</html>

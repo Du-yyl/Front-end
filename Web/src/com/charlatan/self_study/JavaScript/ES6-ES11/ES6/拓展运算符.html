@@ -1,0 +1,49 @@
+<!--
+  ~ Date:2022/1/4 15:23 41
+  ~ Name:拓展运算符.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拓展运算符</title>
+
+</head>
+<body>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+</body>
+<script>
+	let nums = [1, 2, 3, 4, 4, 3, 5, 6, 7, 5]
+	// let div = document.querySelectorAll(".div")
+	let div = document.getElementsByClassName('div')
+
+	function func () {
+		console.log(arguments)
+	}
+
+	func(...nums)
+	func(nums)
+
+	//	数组合并
+	let num1 = [1, 1, 1, 1, 1, 1, 1, 1]
+	let num2 = [2, 2, 2, 2, 2, 2, 2, 2]
+	let num3 = [3, 3, 3, 3, 3, 3, 3, 3]
+	let num4 = [4, 4, 4, 4, 4, 4, 4, 4]
+
+	console.log(...num1, ...num2, ...num3, ...num4)
+
+	//	将伪数组转换为真正的数组
+	console.log(div)
+	console.log(...div)
+
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!--
+  ~ Time:2022/1/15 18:13 28
+  ~ Name:响应式2.html
+  ~ Path:Web代码/src/com/charlatan/self_study/HTML&CSS/HtmlBase/响应式
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width = device-width, initial-scale = 1.0" name="viewport">
+	<title>响应式</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 13.333vw YouYuan;
+			text-decoration: none;
+		}
+
+		div {
+			/* font-size: 14px; */
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		#body {
+			font-size: 14px;
+		}
+
+		/* #div1{ */
+		/* 	font-size: 14px; */
+		/* } */
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#div {
+			width: 3.75rem;
+			height: 200px;
+			background-color: red;
+			font: inherit;
+			/* font-size: 15px; */
+		}
+
+
+	</style>
+</head>
+<body id="body">
+<div id="div1">
+	<div id="div">
+		移动端的开发中，写死的px的宽度和长度，在不同的设备中会有不同的表现，为了统一不同视口下的表现 使用
+
+		vw ( viewport width )
+		100 vw 表示一个视口宽度【vw的值永远是根据视口的宽度进行计算的】
+	</div>
+</div>
+
+</body>
+
+</html>

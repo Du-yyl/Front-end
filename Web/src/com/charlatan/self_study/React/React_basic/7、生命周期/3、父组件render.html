@@ -1,0 +1,74 @@
+<!--
+  ~ Time:2022/3/23 21:38 35
+  ~ Name:3、父组件render.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/7、生命周期
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title></title>
+
+</head>
+<body>
+<div id="test"></div>
+</body>
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	class A extends React.Component {
+		render () {
+			return (
+					<div>
+						A组件
+						<button onClick={this.click}>更新B组件信息</button>
+						<hr/>
+						<B msg={this.state.msg}></B>
+					</div>
+			)
+		}
+
+		state = {
+			msg: '第一个测试信息',
+		}
+
+		click = () => {
+			this.setState({
+				msg: '第二个测试信息',
+			})
+		}
+
+	}
+
+	class B extends React.Component {
+
+		// 组件将要接收新的 props 钩子
+		componentWillReceiveProps (props) {
+			console.log(props)
+			console.log('B--componentWillReceiveUpdate')
+		}
+
+		render () {
+			return (
+					<div>
+						B组件
+						<div>
+							展示信息：
+							{this.props.msg}
+						</div>
+					</div>
+			)
+		}
+	}
+
+	ReactDOM.render(<A/>, document.getElementById('test'))
+
+</script>
+</html>

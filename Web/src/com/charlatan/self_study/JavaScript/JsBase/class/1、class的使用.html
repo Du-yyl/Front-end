@@ -1,0 +1,114 @@
+<!--
+  ~ Date:2021/12/27 13:40 12
+  ~ Name:1、class的使用.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/class
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>class的使用</title>
+
+</head>
+<body>
+<pre>
+	构造方法
+		构造方法是一种特殊的方法：
+
+		它必须有确切的名称的 “constructor”
+		创建新对象时自动执行
+		用于初始化对象属性
+		如果您没有定义构造方法，JavaScript 会添加一个空的构造方法。
+</pre>
+</body>
+<script>
+	/**
+	 * 使用原始的func进行定义一个类
+	 * @param name 名字
+	 * @param age 年龄
+	 * @constructor
+	 */
+	function Person (name, age) {
+		this.name = name
+		this.age = age
+	}
+
+	Person.prototype.toString = function () {
+		return 'name:' + this.name + '; age:' + this.age
+	}
+
+	class User {
+		/**
+		 * 使用ES6中的class进行定义会更加便捷【constant为构造方法，用于接收数据来创建对象】
+		 * 事实上，类的所有方法都定义在类的prototype属性上面。
+		 * @param name 名字
+		 * @param age 年龄
+		 */
+		constructor (name, age) {
+			this._name = name
+			this._age = age
+		}
+
+		get name () {
+			return this._name
+		}
+
+		set name (value) {
+			this._name = value
+		}
+
+		get age () {
+			return this._age
+		}
+
+		set age (value) {
+			this._age = value
+		}
+
+		toString () {
+			return 'name:' + this._name + '; age:' + this._age
+		}
+	}
+
+	let p1 = new Person('张三', 123)
+	let p2 = new Person('李四', 123)
+
+	let u1 = new User('王五', 321)
+	let u2 = new User('赵六', 321)
+
+	console.log(p1.toString())
+	console.log(p2.toString())
+
+	console.log(u1.toString())
+	console.log(u2.toString())
+
+	// 事实上，所有定义的属性都定义在指定类的prototype上，输出结果为true
+	console.log(u1.constructor === User.prototype.constructor)
+
+	let u3 = new User('郑七', 20)
+
+	console.log('-------' + u3.toString())
+	console.log(u3._name)
+	console.log(u1._name)
+	console.log(u2._name)
+	console.log(p2.name)
+
+	class A {
+		constructor (name, age) {
+			this.name = name
+			this.age = age
+		}
+
+		toString () {
+			return '321'
+		}
+	}
+
+	let a1 = new A('123', null)
+	console.log(a1.name)
+</script>
+</html>

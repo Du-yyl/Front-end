@@ -1,0 +1,95 @@
+<!--
+  ~ Date:2021/12/16 20:51 36
+  ~ Name:4、forEach的特殊点.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/for、for-in、for-of、forEach的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forEach的特殊点</title>
+
+</head>
+<body>
+<pre>
+		forEach不支持break
+		forEach并不支持break操作，使用break会导致报错。
+
+		forEach中使用return无效
+		直接再for循环中使用return会报错（函数中使用for可以return），forEach中使用return不会报错，但rerutn并不会生效
+
+		forEach删除自身元素index不会被重置
+		forEach在遍历跑完回调函数后，会隐性让index自增，
+
+
+		for循环可以控制循环起点（i初始化的数字决定循环的起点），forEach只能默认从索引0开始。
+		for循环过程中支持修改索引（修改 i），但forEach做不到（底层控制index自增，我们无法左右它）。
+	</pre>
+</body>
+<script>
+	// let arr = [1, 2, 3, 4],
+	// 	i = 0,
+	// 	length = arr.length;
+
+	// for (; i < length; i++) {
+	// 	console.log(arr[i]); //1,2
+	// 	if (arr[i] === 2) {
+	// 		break;
+	// 	}
+	// }
+
+	// arr.forEach((self, index) => {
+	// 	console.log(self);
+	// 	if (self === 2) {
+	// 		break; //报错
+	// 	}
+	// })
+
+	//	---------------------------------------------
+
+	let arr = [1, 2, 3, 4]
+
+	// function find(array, num) {
+	// 	array.forEach((self, index) => {
+	// 		if (self === num) {
+	// 			return index;
+	// 		}
+	// 	});
+	// }
+	//
+	// let index = find(arr, 2);// undefined
+
+	// function find(array, num) {
+	// 	let _index;
+	// 	array.forEach((self, index) => {
+	// 		if (self === num) {
+	// 			_index = index;
+	// 		}
+	// 	});
+	// 	return _index;
+	// }
+	//
+	// let index = find(arr, 2);
+
+	//	----------------------------------------------------------------
+
+	arr.forEach((item, index) => {
+		arr.splice(index, 1)
+		console.log(1)
+		//这里隐性让index自增加1
+		index++
+	});
+
+	//	解决方式：
+	[...arr].forEach((item, index) => {
+		arr.splice(index, 1)
+		console.log(1)
+	})
+
+
+</script>
+</html>

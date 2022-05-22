@@ -1,0 +1,32 @@
+<!--
+  ~ Date:2021/12/6 12:39 10
+  ~ Name:获取节点的输出1.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/DOM增删改查
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cehi</title>
+</head>
+
+<body>
+<label for="name">姓名：</label><input id="name" type="text"/>
+<input id="but" type="button" value="提交"/>
+<script>
+	var name1 = document.getElementById('name')
+	var but = document.getElementById('but')
+
+	but.onclick = function () {
+		var name = name.value
+		alert(name)
+		console.log(name)
+
+	}
+</script>
+</body>
+</html>

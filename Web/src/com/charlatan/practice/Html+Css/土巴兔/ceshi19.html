@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Document</title>
+	<style>
+		.my_input {
+			position: relative;
+			width: 180px;
+		}
+
+		.my_input_inner {
+			/* input输入框默认的display就是inline-block */
+			/* 设置box-sizing */
+			box-sizing: border-box;
+			/* 宽度为100% */
+			width: 100%;
+			height: 40px;
+			/* 设置输入框的边框颜色 */
+			border: 1px solid orange;
+			/* 设置outline为none，否则在input状态为focus时会有外边框 */
+			outline: none;
+			/* 设置输入框的背景颜色 */
+			background-color: gray;
+			/* 设置输入框的圆角 */
+			border-radius: 10px;
+			/* 设置光标以及文本的颜色 */
+			color: yellowgreen;
+			font-size: inherit;
+			/* 设置左右内边距为30px 用于展示图标 */
+			padding: 0 30px;
+			transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+		}
+
+		.my_input_inner:focus {
+			/* 设置input状态为focus时的边框颜色 */
+			border: 1px solid red;
+		}
+
+		.my_input_suffix {
+			/* 开启绝对定位 */
+			position: absolute;
+			/* 确定位置 */
+			right: 5px;
+			/* 设置高度 */
+			/*
+                高度为百分比
+                当前元素的position为absolute
+                所以它的包含块是离它最近的position的值不是static的祖先元素的内边距区域
+                所以百分比是相对于div.my_input的内容区高度而言
+             */
+			height: 100%;
+			top: 0;
+			text-align: center;
+			transition: all .3s;
+			pointer-events: none;
+		}
+
+		.my_input_suffix_icon {
+			/* 设置display为inline-block */
+			display: inline-block;
+			/* 设置宽度 */
+			width: 25px;
+			/* 设置高度 */
+			/*
+                高度为百分比
+                当前元素的position为static
+                所以它的包含块是离它最近的祖先块元素 也就是span.my_input_suffix
+                所以百分比是相对于span.my_input_suffix的内容区高度而言
+             */
+			height: 40px;
+			/* 设置行高和 */
+			/*
+                设置line-height为40px
+                内部元素会在line-height中居中
+                这样就能呈现视觉上的垂直居中
+            */
+			line-height: 40px;
+			/* 设置行内的内容水平居中 */
+			text-align: center;
+		}
+
+		.my_input_suffix_icon:before {
+			color: pink;
+			font-style: normal;
+			content: 'X';
+		}
+
+		.my_input_preffix {
+			position: absolute;
+			left: 5px;
+			height: 100%;
+			top: 0;
+			text-align: center;
+			transition: all .3s;
+			pointer-events: none;
+		}
+
+		.my_input_preffix_icon {
+			display: inline-block;
+			width: 25px;
+			height: 40px;
+			/* 这里我们换一种垂直对齐方式 */
+			/* 这里不设置line-height */
+			/* line-height: 40px; */
+			text-align: center;
+		}
+
+		.my_input_preffix_icon:before {
+			color: pink;
+			/* 设置高度 */
+			height: 100%;
+			/* 通过flex来垂直对齐before中的内容 */
+			display: flex;
+			align-items: center;
+			font-style: normal;
+			content: 'X';
+		}
+	</style>
+</head>
+<body>
+<div class="my_input">
+	<input class="my_input_inner" type="text">
+	<span class="my_input_suffix">
+            <i class="my_input_suffix_icon"></i>
+        </span>
+	<span class="my_input_preffix">
+            <i class="my_input_preffix_icon"></i>
+        </span>
+</div>
+</body>
+</html>

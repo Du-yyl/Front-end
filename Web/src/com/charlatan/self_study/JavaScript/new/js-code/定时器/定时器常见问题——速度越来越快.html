@@ -1,0 +1,83 @@
+<!--
+  ~ Date:2021/12/7 14:28 13
+  ~ Name:定时器常见问题——速度越来越快.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/定时器
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器常见问题</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#div1 {
+			width: 50px;
+			height: 50px;
+			margin-top: 20px;
+			position: absolute;
+			left: 0;
+			background-color: #35ff51;
+		}
+
+		#div2 {
+			width: 1px;
+			height: 800px;
+			background-color: black;
+			position: absolute;
+			top: 0;
+			left: 700px;
+		}
+	</style>
+</head>
+<body>
+<button id="btn1" type="button">
+	我是按钮
+</button>
+<div id="div1"></div>
+<!-- /#div1 -->
+<div id="div2"></div>
+<!-- /#div2 -->
+</body>
+<script>
+	/*
+	 * 当多次调用定时函数，因为没有将函数清空，速度会不断叠加，所以要每次都要进行清除
+	 * */
+	window.onload = function () {
+		let btn1 = document.getElementById('btn1')
+		let div1 = document.getElementById('div1')
+		let timer
+		btn1.onclick = function () {
+			let divLeft
+
+			/*
+			 * 将上一次的进行清空，解决速度叠加问题
+			 * */
+			// clearInterval(timer)
+			timer = setInterval(function () {
+
+				//这里每次运行都会进行将位置进行偏移
+				divLeft = div1.style.left
+				div1.style.left = div1.offsetLeft + 1 + 'px'
+
+				//这里如果div的宽度超过警戒线，那么将他的left设置为指定的参数，并触发停止
+				if (parseInt(divLeft) > 700) {
+					divLeft = '700px'
+					div1.style.left = divLeft
+				}
+				if (divLeft === '700px') {
+					clearInterval(timer)
+				}
+			}, 10)
+
+		}
+	}
+</script>
+</html>

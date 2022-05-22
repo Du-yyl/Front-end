@@ -1,0 +1,97 @@
+<!--
+  ~ Date:2021/11/29 下午9:02
+  ~ Name:2、数组常用方法.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/数组/2、数组常用方法.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组常用方法</title>
+</head>
+<body>
+<script>
+	//    slice() 和 splice()
+
+	/*
+	 定义和用法
+	 slice()
+	 方法可从已有的数组中返回选定的元素。
+
+	 语法
+	 arrayObject.slice(start, end)
+
+	 参数                描述
+	 start  | 必需    |  规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。
+	 |        |  也就是说，-1指最后一个元素，-2指倒数第二个元素，以此类推。
+	 end    | 可选    |  规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从start到数组结束的所有元素。
+	 |        |  如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。
+
+	 返回值
+	 返回一个新的数组，包含从start到end （不包括该元素）的arrayObject中的元素。
+
+	 说明
+	 请注意，该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法
+	 Array.splice()。
+
+	 提示和注释
+	 注释：您可使用负值从数组的尾部选取元素。
+
+	 注释：
+	 如果end未被规定，那么slice()方法会选取从start到数组结尾的所有元素。
+	 ------------------------------------------------------------------------------------------------------------------------
+
+	 定义和用法
+	 splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。
+
+	 注释：该方法会改变原始数组。
+	 语法
+	 arrayObject.splice(index,howmany,item1,.....,itemX)
+
+	 参数                             描述
+	 index              | 必需。  |   整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+	 howmany            | 必需。  |   要删除的项目数量。如果设置为 0，则不会删除项目。
+	 item1, ..., itemX  | 可选。  |   向数组添加的新项目。
+
+	 返回值
+	 类型         描述
+	 Array       包含被删除项目的新数组，如果有的话。
+
+	 说明
+	 splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。
+	 如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。
+
+	 浏览器支持
+	 所有主流浏览器都支持 splice() 方法。
+
+	 提示和注释
+	 注释：请注意，splice() 方法与 slice() 方法的作用是不同的，splice() 方法会直接对数组进行修改。
+	 */
+	let arrayNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+	console.log(arrayNum.slice(2, 6))
+	console.log(arrayNum.slice(-8, -4))
+	console.log(arrayNum.slice(-8))
+	console.log(arrayNum.slice(2))
+	console.log(arrayNum)
+
+	console.log('------------------------')
+
+	console.log(arrayNum.splice(2, 3))
+	/*
+	 * 这个方法直接将指定的位置往后的位置直接进行截断，并且在原数组直接操作
+	 * */
+	console.log(arrayNum)
+	arrayNum.splice(4, 1, '测试')
+	/*
+	 * 将指定字段位置的内容进行截断，并返回被截断位置的内容，并可以赋新的值*/
+	console.log(arrayNum)
+	arrayNum.splice(2, 3, '测试-1')
+	console.log(arrayNum)
+
+</script>
+</body>
+</html>

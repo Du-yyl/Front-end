@@ -1,0 +1,51 @@
+<!--
+  ~ Date:2021/12/27 11:43 29
+  ~ Name:10、Number（）转换规则.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/数据类型和变量问题
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Number转换规则</title>
+
+</head>
+<body>
+<pre>
+	NUmber（）转换规则：
+		1、如果时Boolean值，反别是1和0
+		2、如果是null，转为0
+		3、如果是undefined，转为0
+		4、如果是字符串：
+			只转换数字，如果有正负号，会转换成十进制，前导0会被忽略；
+			浮点形式，前导0会被忽略；
+			如果字符串中包含十六进制，会将其转换为相同大小的10进制
+		5、是对象，调用对象的valueOf()方法，如果结果是NaN则调用toString方法
+</pre>
+</body>
+<script>
+	function a () {
+
+	}
+
+	console.log(Number(null))
+	console.log(Number(undefined))
+	console.log(Number(NaN))
+	console.log(Number(123))
+	console.log(Number('123abc'))
+	console.log(Number('abc123'))
+	console.log(Number('qwe'))
+	console.log(Number(a))
+	console.log(Number(false))
+	console.log(Number(true))
+	console.log(Number(''))
+	console.log(Number([]))
+	console.log(Number([0]))
+	console.log(Number('0'))
+	console.log(Number())
+</script>
+</html>

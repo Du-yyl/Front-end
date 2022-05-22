@@ -1,0 +1,56 @@
+<!--
+  ~ Time:2022/2/18 10:01 03
+  ~ Name:7-1事件的基本使用.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>事件的基本使用</title>
+
+</head>
+<body>
+<div id="root">
+	你好，{{ name }}
+	<button type="button" v-on:click="show">按钮</button>
+	<hr>
+	简写形式
+	<button type="button" @click="show">按钮2</button>
+	<hr>
+	传入参数
+	<button type="button" @click="show2(12,12,$event)">按钮3</button>
+</div>
+<pre>
+	当传入参数时，指定对象event不会被保留，要想使用，要用 $event 进行占位
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	let vm = new Vue({
+		el: '#root',
+		data: {
+			name: 'tom',
+		},
+		methods: {
+			show (event) {
+				alert('你好')
+				console.log(this)
+				console.log(event)
+			},
+			show2 (num1, num2, event) {
+				console.log(num1 + num2)
+				console.log(event)
+			},
+		},
+	})
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!--
+  ~ Date:2022/1/4 16:31 38
+  ~ Name:symbol中的内置属性.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>symbol中的内置属性</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	class Person {
+		/**
+		 * 进行类型检测，不同的是Symbol中的这个属性是自己控制的，并不是程序内置的
+		 * @param param 这个参数就是要检测进行传入的参数自身
+		 */
+		static [Symbol.hasInstance] (param) {
+			console.log(param)
+			console.log('我运行了')
+		}
+	}
+
+	let o1 = {}
+	let p1 = new Person()
+
+	console.log(o1 instanceof Person)
+	console.log(p1 instanceof Person)
+
+	//	Symbol.isConcatSpreadable 属性不能展开
+	let num1 = [1, 2, 3, 4, 54, 5, 6]
+	let num2 = [1, 2, 3, 4, 5]
+	num2[Symbol.isConcatSpreadable] = false
+	console.log(num1.concat(num2))
+</script>
+</html>

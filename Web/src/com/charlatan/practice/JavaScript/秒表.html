@@ -1,0 +1,492 @@
+<!--
+  ~ Date:2021/12/15 19:09 54
+  ~ Name:秒表.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/practice/JavaScript
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+	<meta charset="UTF-8">
+	<title>秒表</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#box {
+			width: 400px;
+			height: 760px;
+			background-color: #deffef;
+			position: absolute;
+			top: 70px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			border-radius: 10px;
+		}
+
+		#h1 {
+			/*font-size: 40px;*/
+			letter-spacing: 30px;
+			/*display: block;*/
+			text-align: center;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 60px;
+			font-size: 80px;
+			font-weight: 100;
+			color: #7191ff;
+			transition: all .6s;
+			user-select: none;
+		}
+
+		#start {
+			transition: all .7s ease;
+			border: 2px solid #B4C4FF;
+			background-color: #f1fdf4;
+			position: absolute;
+			cursor: pointer;
+			z-index: 10;
+		}
+
+		#start:hover {
+			box-shadow: 0 0 5px 5px #ffe8b7;
+		}
+
+		.start {
+			width: 170px;
+			height: 170px;
+			border-radius: 50%;
+			font-size: 50px;
+			font-weight: 100;
+			top: 250px;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		.start-show {
+			top: 600px;
+			left: -240px;
+			width: 100px;
+			height: 100px;
+			font-size: 25px;
+		}
+
+		#div-show {
+			background-color: transparent;
+			top: 230px;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			border-radius: 50%;
+			border: 2px solid black;
+			animation: color-switch .9s infinite;
+			z-index: 0
+		}
+
+		#count {
+			transition: all .7s ease;
+			border: 2px solid #B4C4FF;
+			background-color: #f1fdf4;
+			position: absolute;
+			cursor: pointer;
+		}
+
+		#count:hover {
+			box-shadow: 0 0 5px 5px #ffe8b7;
+		}
+
+		.count {
+			border-radius: 50%;
+			font-weight: 100;
+			left: 120px;
+			margin: auto;
+			width: 150px;
+			height: 150px;
+			font-size: 50px;
+			top: 255px;
+		}
+
+		.count-show {
+			top: 600px;
+			left: 270px;
+			width: 100px;
+			height: 100px;
+			font-size: 25px;
+
+		}
+
+		#div-show-1 {
+			background-color: transparent;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 230px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			border-radius: 50%;
+			border: 2px solid black;
+			animation: color-switch .56s infinite;
+			z-index: 0
+
+		}
+
+		@keyframes color-switch {
+			0% {
+				top: 230px;
+				width: 200px;
+				height: 200px;
+				border: 2px solid black;
+			}
+			10% {
+				top: 228px;
+				width: 205px;
+				height: 205px;
+				border: 2px solid #3e3e3e;
+			}
+			20% {
+				top: 226px;
+				width: 210px;
+				height: 210px;
+				border: 2px solid #656565;
+			}
+			30% {
+				top: 224px;
+				width: 215px;
+				height: 215px;
+				border: 2px solid #656565;
+			}
+			40% {
+				top: 222px;
+				width: 220px;
+				height: 220px;
+				border: 2px solid #a8a8a8;
+			}
+			50% {
+				top: 220px;
+				width: 225px;
+				height: 225px;
+				border: 2px solid #a8a8a8;
+			}
+			60% {
+				top: 218px;
+				width: 230px;
+				height: 230px;
+				border: 2px solid #aaaaaa;
+			}
+			70% {
+				top: 216px;
+				width: 235px;
+				height: 235px;
+				border: 2px solid #b1b1b1;
+			}
+			80% {
+				top: 214px;
+				width: 240px;
+				height: 240px;
+				border: 2px solid #dcdcdc;
+			}
+			90% {
+				top: 212px;
+				width: 245px;
+				height: 245px;
+				border: 2px solid rgba(248, 248, 248, 0);
+			}
+			100% {
+				top: 210px;
+				width: 250px;
+				height: 250px;
+				border: 2px solid rgba(255, 255, 255, 0);
+			}
+		}
+
+
+		#span-show {
+			position: absolute;
+			top: 90px;
+			/*left: 0;*/
+			right: 0;
+			/*text-align: center;*/
+			font-size: 40px;
+			font-weight: 200;
+			overflow: hidden;
+			height: 0;
+			transition: all .4s ease;
+			user-select: none;
+			left: 80px;
+		}
+
+		#spans {
+			width: 320px;
+			height: 0;
+			background-color: #f9ffe1;
+			border-radius: 5px;
+			box-shadow: 0 0 5px 5px #bce8f1;
+			position: absolute;
+			top: 170px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			overflow: hidden;
+			transition: all .5s ease;
+		}
+
+		#span-first {
+			position: absolute;
+			right: 0;
+			left: 0;
+			text-align: center;
+			font-size: 20px;
+			font-weight: 100;
+
+		}
+
+		#span-first:after {
+			display: block;
+			width: 150px;
+			height: 1px;
+			background-color: #B4C4FF;
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 35px;
+			left: 0;
+			margin: auto;
+		}
+
+		#span-top {
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 50px;
+			padding-left: 30px;
+			text-align: left;
+			word-spacing: 50px;
+			/*word-spacing: 44px;*/
+
+		}
+
+		#spans-show {
+			width: 270px;
+			height: 300px;
+			background-color: #ffffff;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			top: 80px;
+			padding: 5px 10px;
+			overflow: auto;
+		}
+
+		#spans-show li {
+			text-align: center;
+			word-spacing: 40px;
+			background-color: #daf5dd;
+			line-height: 24px;
+			box-shadow: 0 0 3px 3px #abd2dc;
+			margin: 10px 0;
+			border-radius: 4px;
+		}
+
+		.span-1 {
+			color: #ffb2b2;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="box">
+	<h1 id="h1">
+		秒表
+	</h1>
+	<span id="span-show">
+		00 : 00 : 000
+	</span>
+	<div id="spans">
+		<span id="span-first">
+			00 : 00 : 000    <br>
+		</span>
+		<span id="span-top">
+			计次 单圈时间 总时间
+		</span>
+		<div id="spans-show">
+			<ul id="ul-ul"></ul>
+		</div>
+	</div>
+	<button id="start" class="start" type="button">
+		开始
+	</button>
+	<div id="div-show"></div>
+	<div id="div-show-1"></div>
+	<button id="count" class="count" type="button">
+		计次
+	</button>
+</div>
+<div id="div"></div>
+<span id="span"></span>
+</body>
+<script>
+	window.onload = function () {
+
+		let btn_1 = document.getElementById('start')
+		let btn_2 = document.getElementById('count')
+		let div_show_1 = document.getElementById('div-show')
+		let div_show_2 = document.getElementById('div-show-1')
+		let span_show = document.getElementById('span-show')
+		let h1 = document.getElementById('h1')
+		let ul = document.getElementById('ul-ul')
+		let spans = document.getElementById('spans')
+		let span_top = document.getElementById('span-top')
+		let span_first = document.getElementById('span-first')
+
+		let flags = true
+		let index = 0
+		let flag_1 = true
+		let flag_2 = true
+
+		let timer
+		let timers
+		let time
+		let minute = 0
+		let second = 0
+		let millisecond = 0
+		let time_1
+		let index_time_1 = 0
+
+		let index_time = 0
+		let m1 = 0
+		let s1 = 0
+		let ms = 0
+		let time1
+
+		btn_1.onclick = () => {
+			if (flags) {
+				btn_1.classList.add('start-show')
+				btn_2.classList.add('count-show')
+				div_show_1.style.display = 'none'
+				div_show_2.style.display = 'none'
+				span_show.style.height = '60px'
+				h1.style.top = '0'
+				h1.style.fontSize = '40px'
+				h1.style.color = 'black'
+				btn_1.innerText = '暂停'
+				time_1 = Date.now()
+				goTime()
+				goTimes()
+				flags = false
+			} else {
+				if (flag_1) {
+					btn_1.innerText = '继续'
+					btn_2.innerText = '重置'
+					flag_2 = flag_1 = false
+					clearInterval(timer)
+					clearInterval(timers)
+				} else {
+					btn_1.innerText = '暂停'
+					btn_2.innerText = '计次'
+					flag_2 = flag_1 = true
+					goTime()
+					goTimes()
+				}
+			}
+		}
+
+		btn_2.onclick = () => {
+			if (flag_2) {
+				if (parseInt(ul.offsetHeight) >= 200) {
+					span_top.style.wordSpacing = '40px'
+				}
+				spans.style.height = '400px'
+				index++
+				let timeStr = span_show.innerHTML
+				let li = document.createElement('li')
+				let span = document.createElement('span')
+
+				index = index < 10 ? '0' + index : index
+				span.classList.add('span-1')
+				span.innerText = index_time
+				timeStr = timeStr.replace(/\s*/g, '')
+
+				let strs1 = span_first.innerText.replace(/\s*/g, '')
+				li.innerHTML = index + ' ' + ' <span class=\'span-1\'>' + strs1 + '</span>' + ' ' + timeStr
+				ul.appendChild(li)
+				index_time_1 = 0
+			} else {
+				btn_1.classList.remove('start-show')
+				btn_2.classList.remove('count-show')
+				div_show_1.style.display = 'block'
+				div_show_2.style.display = 'block'
+				span_show.style.height = '0'
+				h1.style.top = '60px'
+				h1.style.fontSize = '80px'
+				h1.style.color = '#7191ff;'
+				btn_1.innerText = '开始'
+				spans.style.height = '0'
+				clearInterval(timer)
+				flags = true
+				btn_2.innerText = '计次'
+				flag_2 = flag_1 = true
+				ul.innerText = ''
+				index = 0
+				clearInterval(timers)
+			}
+		}
+
+		function goTimes () {
+			timers = setInterval(
+					() => {
+						index_time_1++
+						time1 = index_time_1
+						ms = time1 % 1000
+						s1 = Math.floor(time1 / 1000)
+						m1 = Math.floor(s1 / 60)
+						s1 = s1 % 60
+
+						s1 = s1 < 10 ? '0' + s1 : s1
+						m1 = m1 < 10 ? '0' + m1 : m1
+						ms = ms < 100 ? '0' + ms : ms
+						ms = ms < 10 ? '00' + ms : ms
+						span_first.innerText = m1 + ' : ' + s1 + ' : ' + ms
+					}, 1)
+		}
+
+		function goTime () {
+			timer = setInterval(() => {
+				time = Date.now() - time_1
+				millisecond = time % 1000
+				second = Math.floor(time / 1000)
+				minute = Math.floor(second / 60)
+				second = second % 60
+				second = second < 10 ? '0' + second : second
+				minute = minute < 10 ? '0' + minute : minute
+				millisecond = millisecond < 10 ? '0' + millisecond : millisecond
+				millisecond = millisecond < 100 ? '0' + millisecond : millisecond
+
+				span_show.innerText = minute + ' : ' + second + ' : ' + millisecond
+			}, 31)
+		}
+	}
+</script>
+</html>

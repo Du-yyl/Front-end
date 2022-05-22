@@ -1,0 +1,17 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+Map <Integer, Integer> map = new HashMap<Integer, Integer>();
+        //将target-x的结果和map中的所有元素按个比对
+        for (int i = 0; i < nums.length; i++) {
+            //如果有对比上的元素就输出
+            if (map.containsKey(target - nums[i])){
+                return new int[] {map.get(target - nums[i]), i};
+            }
+            //如果程序运行到这里，说明现在Map中还没有匹配的元素，那么将nums[i]放在下一个位置上
+            map.put(nums[i] ,i);
+        }
+        return new int[0];
+    }
+}
+//runtime:1 ms
+//memory:38.3 MB

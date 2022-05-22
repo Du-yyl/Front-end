@@ -1,0 +1,122 @@
+<!--
+  ~ Date:2021/11/15 上午11:02
+  ~ Name:直邮.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/直邮/直邮.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>直邮</title>
+	<style>
+		#box {
+			width: 100%;
+			height: 500px;
+			background-color: #d7efc6;
+			position: absolute;
+			top: 200px;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		#box_left_ul {
+			position: absolute;
+			left: 50px;
+			top: -10px;
+			width: 220px;
+			height: 400px;
+			background-color: #fdc0c0;
+		}
+
+		#box_left_ul li {
+			width: 200px;
+			height: 40px;
+			background-color: rgba(0, 0, 0, 0.60);
+			position: relative;
+			left: -40px;
+			padding-left: 50px;
+			text-align: left;
+			color: #fbd7ce;
+		}
+
+		.hot {
+			color: red;
+		}
+
+		/*-------------------------------*/
+		#div {
+			width: 200px;
+			height: 400px;
+			background-color: #bec1d1;
+			position: absolute;
+			left: 250px;
+			top: 0;
+			display: none;
+			/*display: block;*/
+		}
+
+		#box_left_ul:hover #div {
+			display: block;
+		}
+
+
+		/*-------------------------------*/
+		#li1 {
+			background: url("file/a1.png") no-repeat 10px 5px;
+			background-size: 25px;
+		}
+
+		#li2 {
+			background: url("file/a2.png") no-repeat 10px 5px;
+			background-size: 25px;
+		}
+
+		#box_left_ul li:hover {
+			color: #33383d;
+			background-color: rgba(255, 255, 255, 0.34);
+			cursor: pointer;
+		}
+
+		#li1:hover {
+			background-image: url("file/a1_1.png");
+		}
+
+		#li2:hover {
+			background-image: url("file/a2_2.png");
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="box">
+	<div id="box_left">
+		<ul id="box_left_ul">
+			<li id="li1">
+				web大全端全站开发
+				<sup class="hot">
+					Hot
+				</sup>
+
+			</li>
+
+			<li id="li2">
+				web大
+				<sup class="hot">
+					Hot
+				</sup>
+
+			</li>
+
+			<div id="div"></div>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

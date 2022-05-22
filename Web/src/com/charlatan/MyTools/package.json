@@ -1,0 +1,7 @@
+{
+  "name": "MyTools",
+  "version": "1.0.0",
+  "dependencies": {
+    "big-integer": "^1.6.51"
+  }
+}

@@ -1,0 +1,44 @@
+<!--
+  ~ Date:2022/1/3 11:56 47
+  ~ Name:6、this和原型.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/this
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this指向</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	function Father (age) {
+		this.age = age
+	}
+
+	function Son (age) {
+		Father.call(this)
+	}
+
+	Son.prototype = Father.prototype
+
+	Father.prototype.getAge = function () {
+		console.log(40)
+	}
+	Son.prototype.getAge = function () {
+		console.log(18)
+	}
+
+	var father = new Father(40)
+	var son = new Son(18)
+	son.getAge()
+	father.getAge()
+
+</script>
+</html>

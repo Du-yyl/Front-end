@@ -1,0 +1,35 @@
+<!--
+  ~ Date:2021/12/27 10:40 00
+  ~ Name:数组去重-2.html
+  ~ Path:Web代码/src/com/charlatan/practice/JavaScript
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组去重</title>
+
+</head>
+<body>
+
+</body>
+<script>
+	let nums = [1, 2, 3, 3, 3, 4, 4, 5, 5, 6, 7, 7, 8, 9, 3, 9, 1, 8, 6, 5]
+	for (let i = 0; i < nums.length; i++) {
+		for (let j = i + 1; j < nums.length; j++) {
+			if (nums[i] === nums[j]) {
+				nums.splice(j, 1)
+				//当删除了当前j所在的元素以后，后边的元素会自动补位
+				//此时将不会在比较这个元素吧，我需要在比较一次j所在位置的元素
+				//使j自减
+				j--
+			}
+		}
+	}
+	console.log(nums)
+</script>
+</html>

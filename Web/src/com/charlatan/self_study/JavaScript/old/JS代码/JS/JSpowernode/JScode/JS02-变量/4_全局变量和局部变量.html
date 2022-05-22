@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全局和局部变量</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	 * 全局变量：
+	 *   1、在函数体之外声明的变量
+	 *   2、浏览器打开时生成，浏览器关闭时销毁,因为一直在浏览器内存中,所以很耗费内存
+	 *   3、能使用局部变量,尽量使用局部变量
+	 * 局部变量：
+	 *   1、在函数体中声明的变量,包括一个函数的形参都属于局部变量
+	 *   2、局部变量的生命周期,在函数执行时内存空间开辟,在函数执行结束后,内存释放
+	 *   3、局部变量生命周期较短
+	 * */
+	//全局变量
+	var i = 100
+
+	function sum () {
+		//访问全局变量
+		alert(i)
+	}
+
+	sum()
+	//全局变量
+	var username = 'zhangsan'
+
+	function sum1 () {
+		var username = 'lisi'
+		//访问的是局部变量
+		alert(username)
+	}
+
+	sum1()
+	//访问全局变量
+	alert(username)
+
+	//一个变量声明时没有使用var进行声明,这个变量在哪都是全局变量
+	function myfun () {
+		myname = 'wangwu'
+	}
+
+	myfun()
+	alert(myname)
+
+</script>
+</body>
+</html>

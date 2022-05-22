@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>去除字符串的前后空白trim</title>
+</head>
+<body>
+<script type="text/javascript">
+	// 低版本的IE浏览器不支持字符串的trim()函数,怎么办？
+	// 可以自己对String类扩展一个全新的trim()函数!
+	String.prototype.trim = function () {
+		// alert("扩展之后的trim方法");
+		// 去除当前字符串的前后空白
+		// 在当前的方法中的this代表的就是当前字符串.
+		//return this.replace(/^\s+/, "").replace(/\s+$/, "");
+		return this.replace(/^\s+|\s+$/g, '')
+	}
+
+	window.onload = function () {
+		document.getElementById('btn').onclick = function () {
+			// 获取用户名
+			var username = document.getElementById('username').value
+			// 去除前后空白
+			username = username.trim()
+			// 测试
+			alert('--->' + username + '<----')
+		}
+	}
+</script>
+<input id="username" type="text"/>
+<input id="btn" type="button" value="获取用户名"/>
+</body>
+</html>
+
+<!--
+表单验证：
+	（1）用户名不能为空
+	（2）用户名必须在6-14位之间
+	（3）用户名只能有数字和字母组成，不能含有其它符号（正则表达式）
+	（4）密码和确认密码一致，邮箱地址合法。
+	（5）统一失去焦点验证
+	（6）错误提示信息统一在span标签中提示，并且要求字体12号，红色。
+	（7）文本框再次获得焦点后，清空错误提示信息，如果文本框中数据不合法要求清空文本框的value
+	（8）最终表单中所有项均合法方可提交
+-->

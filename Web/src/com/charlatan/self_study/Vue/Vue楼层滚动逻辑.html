@@ -1,0 +1,83 @@
+<!--
+  ~ Time:2022/5/10 10:31 17
+  ~ Name:index.html
+  ~ Path:
+  ~ ProjectName:Front-end
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 15px YouYuan;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		.div {
+			height: 5000px;
+			border-bottom: 20px solid red;
+		}
+
+
+	</style>
+</head>
+<body>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+</body>
+<script>
+	/*
+	你左边的部分是一个列表，通过更新数据判断显示第几个，然后通过这个方法更新数据
+	比如：默认显示第一个，将这个数据存到 vuex 中，然后通过这个方法进行更新，然后获取更新后数据，进行局部刷新，就好了
+	 */
+	let div = document.getElementById('div')
+
+	function f () {
+		// 获取视口高度
+		let H = window.innerHeight
+		// 获取滚动距离
+		let st = document.body.scrollTop || document.documentElement.scrollTop
+		// 定义要显示的内容
+		let count
+		// 获取要展示的列表【对应你的就是那么 ref 】
+		let div = document.getElementsByClassName('div')
+		// 将获取的内容全部进行遍历，判断用户在看哪个
+		for (let i = 0; i < div.length; i++) {
+			// 获取最高
+			let offsetTop = div[i].offsetTop
+			// 获取看到的高度
+			let offsetHeight = div[i].offsetHeight
+			// 判断用户是否看到
+			if (
+					offsetTop - H / 2 <= st &&
+					offsetTop - H / 2 + offsetHeight >= st
+			) {
+				// 这里对显示的内容进行定义，显示第几个
+				count = i
+				console.log(count)
+			}
+		}
+	}
+
+	window.addEventListener('scroll', f)
+</script>
+</html>

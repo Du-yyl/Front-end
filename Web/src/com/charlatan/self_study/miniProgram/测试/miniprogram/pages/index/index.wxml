@@ -1,0 +1,27 @@
+<!--miniprogram/components/cloudTipModal/index.wxml-->
+<view class="install_tip" wx:if="{{showUploadTip}}">
+    <swiper>
+        <swiper-item>
+            1
+        </swiper-item>
+        <swiper-item>
+            2
+        </swiper-item>
+        <swiper-item>
+            3
+        </swiper-item>
+        <swiper-item>
+            4
+        </swiper-item>
+        <swiper-item>
+            5
+        </swiper-item>
+    </swiper>
+
+    <button>
+        左
+    </button>
+    <button>
+        右
+    </button>
+</view>

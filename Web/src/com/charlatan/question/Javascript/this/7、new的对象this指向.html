@@ -1,0 +1,60 @@
+<!--
+  ~ Date:2022/1/4 9:34 55
+  ~ Name:7、new的对象this指向.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/this
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>new的对象的this指向</title>
+
+</head>
+<body>
+<pre>
+	new对象时的操作：
+		1、新建一个对象
+		2、把this的指向指向指向这个对象
+		3、执行构造函数内的代码
+		4、返回一个新对象
+
+	this的绑定：
+		1、默认绑定，指向window
+		2、new绑定，指向对象
+
+	44行的return：
+		在构造函数中，如果不写this，默认返回创建对象的实例对象，加入return并返回一个基本数据类型
+		返回的仍然是创建的实例对象；如果返回对象一个对象的话，那么返回该对象，原本指向的this会被无效化【指向的window】
+
+
+
+
+</pre>
+</body>
+<script>
+	function User (name) {
+		this.name = name
+		console.log((this))
+		console.log((this.toString()) + '<---')
+		console.log('--->' + (JSON.stringify(this)))
+
+		// return false
+		// return {
+		// 	name:'jack',
+		//     age:20
+		// }
+
+	}
+
+	let u1 = new User('jack')
+	// let test = User()
+	// console.log(test);
+	console.log(u1)
+
+
+</script>
+</html>

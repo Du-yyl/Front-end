@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示网页时钟</title>
+</head>
+<body>
+<!--//   /*
+//   * JavaScript 中的内置类： Date 可以用来获取时间/日期
+//   *
+//   * */
+// //  获取系统当前时间
+//   var nowTime = new Date()
+//   // document.write(nowTime)
+// //  转换具有本地语言环境的日期格式
+//   nowTime = nowTime.toLocaleString();
+//   // document.write(nowTime)
+// //
+//   var t = new Date()
+//   //  以全格式返回年信息
+//   var year = t.getFullYear()
+//   //  月份是0-11
+//   var month = t.getMonth();
+//   //  获取一周中第几天（0-6）
+//   var day = t.getDay()
+//   //  获取日信息
+//   var Date = t.getDate()
+//   var time = t.getTime()
+//
+//   var hours = t.getHours()
+//   document.write("年" + year + "月" +month +"日"+ day +'时间'+ time +'小时'+ hours +'日期' +Date )
+//   document.write("<br>")
+// //  怎么获取毫秒数（从1970年1月1日 00:00:00 000 到当前系统时间的总毫秒数
+//   var times = t.getTime()
+//   document.write(times)-->
+
+<script type="text/javascript">
+
+	window.onload = function () {
+		document.getElementById('xx').onclick = sin
+
+		function sin () {
+			stp = window.setInterval(function () {
+				var time = new Date()
+				time = time.toLocaleString()
+				document.getElementById('dd').innerHTML = time
+			})
+		}
+
+		document.getElementById('xx1').onclick = stop
+
+		function stop () {
+			window.clearInterval(stp)
+		}
+	}
+</script>
+<input id='xx' type="button" value="显示系统当前时间">
+<input id='xx1' type="button" value="停止显示系统当前时间">
+<br>
+<br>
+<div id='dd'></div>
+
+</body>
+</html>

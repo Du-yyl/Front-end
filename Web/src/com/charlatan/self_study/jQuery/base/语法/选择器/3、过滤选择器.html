@@ -1,0 +1,92 @@
+<!--
+  ~ Date:2021/12/18 16:22 08
+  ~ Name:3、过滤选择器.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base/核心/核心函数/选择器
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过滤选择器</title>
+
+</head>
+<body>
+<div id="div1" class="box">class为box的div1</div>
+<div id="div2" class="box">class为box的div2</div>
+<div id="div3">div3</div>
+<span class="box">class为box的span</span>
+<br/>
+<ul>
+	<li>AAAAA</li>
+	<li title="hello">BBBBB</li>
+	<li class="box">CCCCC</li>
+	<li title="hello">DDDDDD</li>
+	<li title="two">BBBBB</li>
+	<li style="display:none">我本来是隐藏的</li>
+</ul>
+<hr>
+<pre>
+	在原有选择器匹配的元素中进一步进行过滤的选择器
+	  * 基本
+	  * 内容
+	  * 可见性
+	  * 属性
+</pre>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+
+	/*
+	 需求:
+	 1. 选择第一个div
+	 2. 选择最后一个class为box的元素
+	 3. 选择所有class属性不为box的div
+	 4. 选择第二个和第三个li元素
+	 5. 选择内容为BBBBB的li
+	 6. 选择隐藏的li
+	 7. 选择有title属性的li元素
+	 8. 选择所有属性title为hello的li元素
+	 */
+	$(`div:first`).css({
+		backgroundColor: 'red',
+	})
+	$(`.box:last`).css({
+		color: 'blue',
+	})
+	$(`div:not(.box)`).css({
+		backgroundColor: 'green',
+	})
+	/*
+	 :gt(index)
+	 匹配所有大于给定索引值的元素
+	 :lt(index)
+	 匹配所有小于给定索引值的元素
+	 * */
+	//多个选择是依次执行的，并不是同时执行的
+	$(`li:gt(0):lt(2)`).css({
+		backgroundColor: 'blue',
+	})
+	/*	
+	 :contains(text)
+	 匹配包含给定文本的元素
+	 */
+
+	$(`li:contains('BBBBB')`).css({
+		backgroundColor: 'red',
+	})
+	$(`li:hidden`).css({
+		display: 'block',
+	})
+
+	$(`li[title]`).css({
+		color: 'red',
+	})
+	$(`*[title='hello']`).css({
+		fontSize: '20px',
+	})
+</script>
+</html>

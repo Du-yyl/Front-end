@@ -1,0 +1,43 @@
+<!--
+  ~ Date:2022/1/6 12:14 49
+  ~ Name:生成器.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>生成器</title>
+
+</head>
+<body>
+<pre>
+  生成器就是一个特殊的函数 在函数的定义时加入一个 * 位置在function和函数名中间； 通过生成器定义的函数不会直接执行； 调用生成器会有一个返回值； 要调用生成器要使用生成器的返回值调用next（）方法进行调用输出
+
+  生成器可以在定义的方法中分成几份进行分段调用 yield 可以理解为函数中的分隔符，每一次每一次调用next都会执行的是下一个
+
+    	并且生成器是实现iterate接口的，可以直接调用进行指定内容数据的遍历，
+    	会将指定的方法中的全部数据包括 yield 中分割的字符
+</pre>
+</body>
+<script>
+	function * func () {
+		console.log('hello world')
+		yield '这个表达式是分隔符'
+		console.log('你好，世界')
+		yield '可以将代码分割成几块'
+	}
+
+	let fun = func()
+	console.log(fun.next())
+	console.log(fun.next())
+	console.log(fun)
+	for (let string of func()) {
+		console.log(string)
+	}
+</script>
+</html>

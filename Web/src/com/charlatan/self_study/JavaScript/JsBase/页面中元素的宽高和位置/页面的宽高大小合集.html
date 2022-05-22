@@ -1,0 +1,52 @@
+<!--
+  ~ Date:2021/12/6 21:14 43
+  ~ Name:页面的宽高大小合集.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/键盘事件
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceshi</title>
+</head>
+<body>
+
+
+<script language="JavaScript">
+	function test () {
+		var s = ''
+		s += '\r\n网页可见区域宽：' + document.body.clientWidth
+		s += '\r\n网页可见区域高：' + document.body.clientHeight
+		s += '\r\n网页可见区域宽：' + document.body.offsetWidth + ' (包括边线的宽)'
+		s += '\r\n网页可见区域高：' + document.body.offsetHeight + ' (包括边线的宽)'
+		s += '\r\n网页正文全文宽：' + document.body.scrollWidth
+		s += '\r\n网页正文全文高：' + document.body.scrollHeight
+		s += '\r\n网页被卷去的高：' + document.body.scrollTop
+		s += '\r\n网页被卷去的左：' + document.body.scrollLeft
+		s += '\r\n网页正文部分上：' + window.screenTop
+		s += '\r\n网页正文部分左：' + window.screenLeft
+		s += '\r\n屏幕分辨率的高：' + window.screen.height
+		s += '\r\n屏幕分辨率的宽：' + window.screen.width
+		s += '\r\n屏幕可用工作区高度：' + window.screen.availHeight
+		s += '\r\n屏幕可用工作区宽度：' + window.screen.availWidth
+
+		// innerWidth，浏览器工作区域的宽高
+		console.log('浏览器工作区域的宽高' + window.innerWidth)
+		console.log(window.innerHeight)
+
+		// 浏览器窗口的宽高
+		console.log('浏览器窗口的宽高' + window.outerWidth)
+		console.log(window.outerHeight)
+		console.log('-------------------------------')
+		console.log(s)
+	}
+</script>
+
+<a href="javascript:test()">点击我查看信息</a>
+
+</body>
+</html>

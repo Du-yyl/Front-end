@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<title>HTML��Ƕ��JS����ĵ�һ�ַ�ʽ</title>
+</head>
+<body>
+
+<!--
+    1��Ҫʵ�ֵĹ��ܣ�
+        �û�������°�ť��������Ϣ��
+
+    2��JavaScript��һ���¼������͵ı�����ԣ������¼�ȥ������Ȼ��ִ�ж�Ӧ�ĳ���
+    ��JavaScript���кܶ��¼���������һ���¼���������굥�������ʣ�click�������κ�
+    �¼������Ӧһ���¼����������onclick����ע�⣺�¼����¼�����������ǣ�
+    �¼���������¼�����ǰ���һ��on���������¼��������HTML��ǩ�����Դ���
+    �ġ�
+
+    3��onclick="js����"��ִ��ԭ����ʲô��
+        ҳ��򿪵�ʱ��js���벢����ִ�У�ֻ�ǰ����JavaScript����ע�ᵽ��ť��click�¼����ˡ�
+        �������ť����click�¼�֮��ע����onclick�����js����ᱻ������Զ����á�
+
+    4����ôʹ��JavaScript���뵯����Ϣ��
+        ��JavaScript����һ�����õĶ������window��ȫ��Сд������ֱ������ʹ�ã�window����������������
+        window������һ����������:alert���÷��ǣ�window.alert("��Ϣ");�����Ϳ��Ե����ˡ�
+
+    5��JavaScript�е��ַ�������ʹ��˫���ţ�Ҳ����ʹ�õ����š�
+
+    6��JavaScript�е�һ��������֮�����ʹ�÷ֺš�;����Ҳ���Բ��á�
+-->
+<input onclick="window.alert('hello js')" type="button" value="hello"/>
+
+<input onclick='window.alert("hello jscode")' type="button" value="hello"/>
+
+<input onclick="window.alert('hello zhangsan')
+													window.alert('hello lis')
+													window.alert('hello wangwu')" type="button" value="hello"/>
+
+<!-- window. ����ʡ�ԡ�-->
+<input onclick="alert('hello zhangsan')
+													alert('hello lis')
+													alert('hello wangwu')" type="button" value="hello"/>
+
+<input onclick="alert('hello zhangsan');
+													alert('hello lis');
+													alert('hello wangwu');" type="button" value="hello"/>
+
+</body>
+</html>

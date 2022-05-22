@@ -1,0 +1,51 @@
+<!--
+  ~ Date:2021/11/15 上午10:48
+  ~ Name:ceshi7.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/practice/在人间/ceshi7.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+	<style>
+		#a {
+			width: 100px;
+			height: 100px;
+			background-color: #CCFFFF;
+		}
+
+		#b {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			/*display: none;*/
+			visibility: hidden;
+			position: absolute;
+			top: 150px;
+			transition: all 1s;
+
+		}
+
+		#a:hover #b {
+			/*display: block;*/
+			visibility: visible;
+		}
+
+
+	</style>
+</head>
+<body>
+<p>
+	可以让div停一秒再消失
+</p>
+<div id="a">
+	<div id="b"></div>
+</div>
+
+</body>
+</html>

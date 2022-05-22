@@ -1,0 +1,42 @@
+<!--
+  ~ Date:2022/1/4 16:43 51
+  ~ Name:迭代器.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>迭代器</title>
+
+</head>
+<body>
+<pre>
+	ES6中创建了一种新的数据遍历形式 迭代器
+		这个属性是通过Symbol中的属性进行实现的
+	也就是 for of
+	for of中存在的是一个确定的键值，而不是下标
+		工作原理：
+			创建一个对象指针，指向当前数据结构的其实位置；
+			第一次调用对象的next方法，指针自动指向数据中的第一个成员；
+			接下来不断调用next方法，指针一直向后移动，知道移动到最后一个成员；
+			每调用next方法返回一个包含value和done属性的对象【value是指定数组中的成员，done是指定数组是否到最后的一个状态，done为true时，表示遍历到头
+		需要自定义遍历数据的时候，可以使用迭代器
+</pre>
+</body>
+<script>
+	let num1 = [1, 2, 3, 4, 5, 6, 7, 8]
+
+	let iterator = num1[Symbol.iterator]()
+	console.log(iterator)
+	console.log(iterator.next())
+	console.log(iterator.next())
+	console.log(iterator.next())
+	console.log(iterator.next())
+	console.log(iterator.next())
+</script>
+</html>

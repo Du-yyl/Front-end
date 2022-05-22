@@ -1,0 +1,54 @@
+<!--
+  ~ Time:2022/3/2 10:09 05
+  ~ Name:caew.html
+  ~ Path:Web/src/com/charlatan/self_study/HTML&CSS/HtmlBase/file
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 15px YouYuan;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#div {
+			width: 400px;
+			user-select: none;
+		}
+
+		.img {
+			width: 100%;
+			user-select: none;
+			/* 图片不能选中和拖动 */
+			pointer-events: none;
+		}
+
+
+	</style>
+</head>
+<body>
+<div id="div">
+	<img alt="" class="img" src="../file/text_1.jpg">
+</div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!--
+  ~ Date:2022/1/6 14:25 52
+  ~ Name:生成器的应用.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>生成器应用</title>
+
+</head>
+<body>
+<pre>
+	yield :
+		yield是ES6的新关键字，使生成器函数执行暂停，yield关键字后面的表达式的值返回给生成器的调用者。它可以被认为是一个基于生成器的版本的return关键字。
+		yield关键字实际返回一个IteratorResult（迭代器）对象，它有两个属性，value和done，分别代表返回值和是否完成。
+		yield无法单独工作，需要配合generator(生成器)的其他函数，如next，懒汉式操作，展现强大的主动控制特性。
+</pre>
+</body>
+<script>
+	// 数组扁平化
+	function * arrayExpansion (array) {
+		for (let i = 0; i < array.length; i++) {
+			if (Array.isArray(array[i]))
+				yield * arrayExpansion(array[i])
+			else
+				yield array[i]
+		}
+	}
+
+	let nums = [1, 2, 3, 3, 4, 5, [1, 2, 3, 4, 5, [1, 2, 3, 4, [4, 5, 6]]]]
+	let num = []
+	for (const arrayExpansionElement of arrayExpansion(nums)) {
+		num.push(arrayExpansionElement)
+	}
+	console.log(num)
+	console.log('我是断点')
+
+	// 关联定时器
+	// function func1() {
+	// 	setTimeout(function () {
+	// 		console.log("111");
+	// 		f.next()
+	//
+	// 	}, 1000)
+	// }
+	//
+	// function func2() {
+	// 	setTimeout(function () {
+	// 		console.log("111");
+	// 		f.next()
+	//
+	// 	}, 2000)
+	// }
+	//
+	// function func3() {
+	// 	setTimeout(function () {
+	// 		console.log("111");
+	// 		f.next()
+	//
+	// 	}, 3000)
+	// }
+	//
+	// function* fun() {
+	// 	func1()
+	// 	yield
+	// 	func2()
+	// 	yield
+	// 	func3()
+	// 	yield
+	// }
+	//
+	// let f = fun()
+	// f.next()
+
+	//	获取方法中的数据
+	// function func1() {
+	// 	setTimeout(() => {
+	// 		let data = "用户"
+	// 		f.next(data)
+	// 	}, 1000)
+	// }
+	//
+	// function func2() {
+	// 	setTimeout(() => {
+	// 		let data = "商品"
+	// 		f.next(data)
+	// 	}, 1000)
+	// }
+	//
+	// function func3() {
+	// 	setTimeout(() => {
+	// 		let data = "信息"
+	// 		f.next(data)
+	// 	}, 1000)
+	// }
+	//
+	// function* func() {
+	// 	let user = yield func1()
+	// 	console.log(user);
+	//
+	// 	let shop = yield func2()
+	// 	console.log(shop);
+	// 	let god = yield  func3()
+	// 	console.log(god);
+	// }
+	//
+	// let f = func()
+	// f.next()
+
+	// let arr = [1,2,3,4,5,6,7,8]
+	// function* arrFun() {
+	// 	for (let number of arr) {
+	// 		yield number
+	//
+	// 	}
+	// }
+	// let f = arrFun()
+	// console.log("----------------");
+	// console.log(f.next());
+	// console.log(f.next());
+	// console.log(f.next());
+	// console.log(f.next());
+	// console.log(f.next());
+	// console.log(f.next());
+	// console.log("------------^^");
+
+</script>
+</html>

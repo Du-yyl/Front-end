@@ -1,0 +1,70 @@
+<!--
+  ~ Date:2021/12/21 11:00 22
+  ~ Name:1、最精确判断数据类型的办法.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/数据类型的判断
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>判断数据类型最精确的方法</title>
+
+</head>
+<body>
+<pre>
+	使用Object原型中的toString方法
+
+	使用typeof判断数据类型，只能区分基本类型，即：number、string、undefined、boolean、object。
+	对于null、array、function、object来说，使用typeof都会统一返回object字符串。
+
+	可以通过Object.prototype.toString方法，判断某个对象之属于哪种内置类型。
+	分为null、string、boolean、number、undefined、array、function、object、date、math。
+</pre>
+</body>
+<script>
+	let o1 = 123
+
+	let o2 = '123'
+
+	let o3 = true
+
+	let o4 = {
+		num: 123,
+	}
+
+	let o5 = function () {
+	}
+
+	let o6 = [123, 1, 2, 34, 54, 6555]
+
+	let o7 = {
+		name: '张三',
+		age: 12,
+	}
+	o7 = JSON.parse(JSON.stringify(o7))
+
+	let o8 = new Date()
+
+	function Obj () {
+	}
+
+	let o9 = new Obj()
+
+	let o0 = / /
+
+	console.log(Object.prototype.toString.call(o1).slice(8, -1))
+	console.log(Object.prototype.toString.call(o2).slice(8, -1))
+	console.log(Object.prototype.toString.call(o3).slice(8, -1))
+	console.log(Object.prototype.toString.call(o4).slice(8, -1))
+	console.log(Object.prototype.toString.call(o5).slice(8, -1))
+	console.log(Object.prototype.toString.call(o6).slice(8, -1))
+	console.log(Object.prototype.toString.call(o7).slice(8, -1))
+	console.log(Object.prototype.toString.call(o8).slice(8, -1))
+	console.log(Object.prototype.toString.call(o9).slice(8, -1))
+	console.log(Object.prototype.toString.call(o0).slice(8, -1))
+</script>
+</html>

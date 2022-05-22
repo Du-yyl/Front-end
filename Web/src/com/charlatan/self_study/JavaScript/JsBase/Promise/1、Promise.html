@@ -1,0 +1,179 @@
+<!--
+  ~ Date:2022/1/4 10:46 33
+  ~ Name:1、Promise.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/Promise
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Promise</title>
+
+</head>
+<body>
+<pre>
+	Promise对象是CommonJS工作组提出的一种规范，目的是为异步操作提供统一接口。
+		Promises是一个对象，也就是说与其他JavaScript对象的用法，没有什么两样；其次，它起到代理作用（proxy），
+		充当异步操作与回调函数之间的中介。它使得异步操作具备同步操作的接口，使得程序具备正常的同步运行的流程，回调函数不必再一层层嵌套。
+		简单说，它的思想是，每一个异步任务立刻返回一个Promise对象，由于是立刻返回，所以可以采用同步操作的流程。
+		这个Promises对象有一个then方法，允许指定回调函数，在异步任务完成后调用。
+</pre>
+</body>
+<script>
+	// 当不使用promise时，嵌套是最为方便的
+
+	/*
+	 setTimeout(function () {
+	 console.log("我第一个输出");
+	 setTimeout(function () {
+	 console.log("我第二个输出");
+	 setTimeout(function () {
+	 console.log("我第三个输出");
+	 setTimeout(function () {
+	 console.log("我第四个输出");
+	 setTimeout(function () {
+	 console.log("我第五个输出");
+	 setTimeout(function () {
+	 console.log("我第六个输出");
+	 setTimeout(function () {
+	 console.log("我第七个输出");
+	 setTimeout(function () {
+	 console.log("我第八个输出");
+	 setTimeout(function () {
+	 console.log("我第九个输出");
+	 setTimeout(function () {
+	 console.log("我第十个输出");
+	 console.log("全部输出完毕");
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+	 }, 1000)
+
+	 * */
+
+	//	使用promise，将要进行执行的方法都列出来
+
+	// const promise = new Promise((resolve, reject) => {
+	// 	resolve('fulfilled'); // 状态由 pending => fulfilled
+	// });
+	// promise.then(result => { // onFulfilled
+	// 	console.log("-->"+result); // 'fulfilled'
+	// }, reason => { // onRejected 不会被调用
+
+	// })
+
+	// new Promise(step1).then((step1))
+
+	// const promise = new Promise((resolve, reject) => {
+	// 	reject('rejected'); // 状态由 pending => rejected
+	// });
+	// promise.then(result => { // onFulfilled 不会被调用
+	//
+	// }, reason => { // onRejected
+	// 	console.log(rejected); // 'rejected'
+	// })
+	//
+	//
+	// new Promise(function (resolve, reject) {
+	// 	console.log("Run");
+	// });
+
+	// resolve 和 reject 都是函数，其中调用 resolve 代表一切正常，reject 是出现异常时所调用的：
+	// new Promise((resolve, reject) => {
+	// 	step1()
+	// }).then(
+	//
+	// ).catch(err => {
+	// 	console.log(err);
+	// }).finally(() => {
+	// 	console.log("End");
+	// })
+
+	//
+	new Promise(function (resolve, reject) {
+		console.log(1111)
+		resolve(2222)
+	}).then(function (value) {
+		console.log(value)
+		return 3333
+	}).then(function (value) {
+		console.log(value)
+		throw 'An error'
+	}).catch(function (err) {
+		console.log(err)
+	})
+
+	//--------------------------------------------------------------------------
+	function step1 () {
+		setTimeout(function () {
+			console.log('我是第一个')
+		}, 1000)
+	}
+
+	function step2 () {
+		setTimeout(function () {
+			return '我是第二个'
+		}, 1000)
+	}
+
+	function step3 () {
+		setTimeout(function () {
+			console.log('我是第三个')
+		}, 1000)
+	}
+
+	function step4 () {
+		setTimeout(function () {
+			console.log('我是第四个')
+		}, 1000)
+	}
+
+	function step5 () {
+		setTimeout(function () {
+			console.log('我是第五个')
+		}, 1000)
+	}
+
+	function step6 () {
+		setTimeout(function () {
+			console.log('我是第六个')
+		}, 1000)
+	}
+
+	function step7 () {
+		setTimeout(function () {
+			console.log('我是第七个')
+		}, 1000)
+	}
+
+	function step8 () {
+		setTimeout(function () {
+			console.log('我是第八个')
+		}, 1000)
+	}
+
+	function step9 () {
+		setTimeout(function () {
+			console.log('我是第九个')
+		}, 1000)
+	}
+
+	function step10 () {
+		setTimeout(function () {
+			console.log('我是第十个')
+		}, 1000)
+	}
+
+
+</script>
+</html>

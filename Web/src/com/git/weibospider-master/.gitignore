@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+.vscode
+__pycache__/
+logs
+celerybeat-schedule.db
+.env
+config/spider.yaml
+*.pyc
+.cache/
+*/.cache/

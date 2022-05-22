@@ -1,0 +1,38 @@
+<!--
+  ~ Date:2021/12/17 12:56 17
+  ~ Name:4、forEach遍历.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/for、for-in、for-of、forEach的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forEach遍历</title>
+
+</head>
+<body>
+<pre>
+		forEach对于数组的遍历
+
+		标准的for循环中的i是number类型,表示的是数组的下标
+		foreach循环中的i表示的是数组的key是string类型,因为js中一切皆为对象。
+
+	.forEach()不能遍历对象
+	</pre>
+</body>
+<script>
+	let str = [1, 2, 3, 4, 5, 6, 7]
+	str.forEach(item => console.log(item))
+	str.forEach(item => console.log(item + 10))
+	console.log('---------------------------------')
+
+	for (let i in str) {
+		console.log(typeof i)
+	}
+
+</script>
+</html>

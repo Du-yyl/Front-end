@@ -1,0 +1,72 @@
+<!--
+  ~ Date:2021/11/30 下午9:58
+  ~ Name:密码的可见和不可见.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/practice/JavaScript/密码的可见和不可见.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>密码的密码的可见和不可见</title>
+	<style>
+		#text {
+			width: 200px;
+			height: 40px;
+			position: absolute;
+			top: calc(30% - 20px);
+			left: calc(30% - 50px);
+			font-size: 20px;
+			color: #525050;
+		}
+
+		#text::placeholder {
+			font-size: 20px;
+			color: #525050;
+		}
+
+		#div-img {
+			position: absolute;
+			left: 45%;
+			top: 265px;
+			width: 20px;
+			height: 20px;
+		}
+
+		#img {
+			width: 100%;
+		}
+
+
+	</style>
+</head>
+<body>
+<label for="text">
+	<input id="text" placeholder=" 请输入密码" type="password">
+</label>
+<div id="div-img">
+	<img id="img" alt="" height="20" src="file/passwordEyeDown.png">
+</div>
+<script>
+	window.onload = function () {
+		let flag = false
+		document.getElementById('div-img').onclick = function () {
+
+			if (flag) {
+				document.getElementById('text').type = 'password'
+				document.getElementById('img').src = 'file/passwordEyeDown.png'
+				flag = false
+			} else {
+				document.getElementById('text').type = 'text'
+				document.getElementById('img').src = 'file/passwordEyeOpen.png'
+				flag = true
+			}
+		}
+	}
+
+</script>
+</body>
+</html>

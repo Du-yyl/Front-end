@@ -1,0 +1,68 @@
+<!--
+  ~ Time:2022/3/1 15:08 06
+  ~ Name:2、模拟axios.html
+  ~ Path:Web/src/com/charlatan/self_study/axios/sourceCode
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>模拟axios</title>
+
+</head>
+
+<body>
+
+</body>
+<script>
+	function Axios (config) {
+		// 初始化【为了创建 default 默认属性】
+		this.defults = config
+
+		// 配置默认的拦截器
+		this.intercepters = {
+			request: {},
+			response: {},
+		}
+	}
+
+	Axios.prototype.request = function (config) {
+		console.log('发送请求', config.method)
+	}
+
+	Axios.prototype.get = function (config) {
+		return this.request({ method: 'GET' })
+	}
+
+	Axios.prototype.post = function (config) {
+		return this.request({ method: 'POST' })
+	}
+
+	function createInstance (config) {
+		let context = new Axios(config)
+		//	 创建函数【此时的 instance 不能作为对象使用
+		let instance = Axios.prototype.request.bind(context)
+
+		//	为了让 instance 能直接使用原型中的方法【将Axios.prototype中的方法添加到instance函数上】
+		Object.keys(Axios.prototype).forEach((item) => {
+			// 将原型中的函数绑定在instance上，并且将this通过bind进行指定
+			instance[item] = Axios.prototype[item].bind(context)
+		})
+
+		// 为 instance 添加default和interceptors
+		Object.keys(context).forEach((item) => {
+			instance[item] = context[item]
+		})
+		return instance
+	}
+
+	let axios = createInstance()
+	axios({ method: 'GET' })
+</script>
+</html>

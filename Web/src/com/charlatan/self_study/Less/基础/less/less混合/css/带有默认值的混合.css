@@ -1,0 +1,58 @@
+/*
+  * Date:2021/12/29 16:24 52
+  * Name:less中嵌套规则.less
+  * Path:Web代码/src/com/charlatan/self_study/Less/基础/less
+  * ProjectName:WWW
+  * Author:charlatan
+  *
+  *  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#wrap {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border: 1px solid;
+	margin: 0 auto;
+}
+
+#wrap #inner1 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: black;
+	width: 200px;
+	height: 200px;
+	transition: all 0.7s ease-in-out;
+}
+
+#wrap #inner1:hover {
+	background-color: greenyellow;
+}
+
+#wrap #inner2 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: black;
+	width: 200px;
+	height: 200px;
+	top: 300px;
+	margin: auto;
+	transition: all 0.7s ease-in-out;
+}
+
+#wrap #inner2:hover {
+	background-color: greenyellow;
+}
+
+/*# sourceMappingURL=带有默认值的混合.css.map */

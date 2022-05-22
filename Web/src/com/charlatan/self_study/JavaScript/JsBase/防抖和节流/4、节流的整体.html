@@ -1,0 +1,52 @@
+<!--
+  ~ Date:2021/12/21 16:40 04
+  ~ Name:4、节流的整体.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/防抖和节流
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节流</title>
+
+</head>
+<body>
+
+</body>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script>
+	let num = 1
+
+	function count () {
+		content.innerHTML = num++
+	}
+
+	$('#content')[0].onclick = debounce(count, 1000, true)
+
+	function debounce (func, wait, immediate) {
+		let timeout
+		return function () {
+			let context = this
+			let args = arguments
+			clearTimeout(timeout)
+			if (immediate) {
+				let callNow = !timeout
+				timeout = setTimeout(() => {
+					timeout = null
+				}, wait)
+				if (callNow) func.apply(context, args)
+			} else {
+				timeout = setTimeout(function () {
+					func.apply(context, args)
+				}, wait)
+			}
+		}
+	}
+</script>
+
+</html>

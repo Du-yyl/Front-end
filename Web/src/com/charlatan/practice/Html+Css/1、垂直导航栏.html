@@ -1,0 +1,72 @@
+<!--
+  ~ Date:2021/11/8 下午2:54
+  ~ Name:1、垂直导航栏.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/practice/导航条/1、垂直导航栏.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>垂直导航栏</title>
+	<style>
+		#box {
+			width: 400px;
+			height: 400px;
+			position: relative;
+			left: 100px;
+			top: 100px;
+			z-index: 1;
+			background-color: #d7efc6;
+
+		}
+
+		#box_ul {
+			position: absolute;
+			left: 20px;
+			top: 10px;
+
+		}
+
+		.box_ul_li {
+			list-style: none;
+			width: 50px;
+			height: 40px;
+			background-color: whitesmoke;
+			border-radius: 9%;
+			border: 1px solid black;
+			text-align: center;
+			line-height: 40px;
+
+
+		}
+
+		.box_ul_li:hover {
+			color: white;
+			background-color: #5f5e5e;
+		}
+	</style>
+</head>
+<body>
+<div id="box">
+	<ul id="box_ul">
+		<li class="box_ul_li">
+			选项1
+		</li>
+		<li class="box_ul_li">
+			选项2
+		</li>
+		<li class="box_ul_li">
+			选项3
+		</li>
+		<li class="box_ul_li">
+			选项4
+		</li>
+
+	</ul>
+</div>
+</body>
+</html>

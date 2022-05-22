@@ -1,0 +1,629 @@
+<!--
+  ~ Date:2021/11/23 下午5:36
+  ~ Name:神灯广告伞.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_6/day_2/神灯广告伞/神灯广告伞.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>神灯广告伞</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		#box {
+			width: 1622px;
+			height: 2000px;
+			margin: auto;
+		}
+
+		#top-1 {
+			width: 100%;
+			height: 130px;
+			/*background-color: red;*/
+
+		}
+
+		#top-1-left {
+			margin-top: 10px;
+			margin-left: 200px;
+		}
+
+		#top-1-right-img {
+			margin-left: 700px;
+		}
+
+		#top-1-right-span1 {
+			color: #d30300;
+			margin-left: 1320px;
+			margin-top: -80px;
+		}
+
+		#top-1-right-span2 {
+			margin-left: 1320px;
+			margin-top: 20px;
+			color: #cccccc;
+		}
+
+		/*--------------top-2-----------------------*/
+		#top-2 {
+			width: 100%;
+			height: 70px;
+			/*background-color: #1c80d9;*/
+			/*border-bottom: 1px solid;*/
+			background-color: #ff0000;
+		}
+
+		#top-2-ul {
+			margin-left: 180px;
+			color: white;
+		}
+
+		#top-2-ul li {
+			float: left;
+			margin-left: 40px;
+			line-height: 70px;
+		}
+
+		#top-2-ul li:hover {
+			cursor: pointer;
+			color: #4192de;
+		}
+
+		#clear {
+			clear: both;
+		}
+
+		/*-----------body-1------------------------*/
+		#body-1 {
+			width: 100%;
+			height: 550px;
+			background-color: white;
+			/*border-bottom: 1px solid;*/
+			/*background-color: rgba(255, 0, 0, 0.38);*/
+		}
+
+		#body-1-left {
+			margin-left: 200px;
+			width: 260px;
+			height: 100%;
+			/*background-color: green;*/
+			background-color: white;
+		}
+
+		#body-1-ul {
+			width: 100px;
+			height: 200px;
+			/*background-color: #1c80d9;*/
+			margin-left: 90px;
+			margin-top: 10px;
+			border-top: 2px dashed #dddddd;
+		}
+
+		#body-1-ul li {
+			height: 25px;
+			color: #a4aebc;
+			text-align: right;
+		}
+
+		#body-1-botton-top-top {
+			width: 256px;
+			height: 36px;
+			border: 1px solid #e1e1e1;
+			border-top: 2px solid #ff0000;
+		}
+
+		#body-1--botton-top-img-top {
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+
+		#body-1-botton-top-img-top-span1 {
+			line-height: 36px;
+			margin-left: 10px;
+			font-weight: 700;
+		}
+
+		#body-1-botton-top-img-top-span2 {
+			color: #96a1b2;
+			margin-left: 90px;
+		}
+
+		#body-1--botton-top-img-center {
+			margin-top: 4px;
+		}
+
+		#body-1-last-ul {
+			margin-left: 20px;
+		}
+
+		#body-1-right {
+			width: 670px;
+			height: 550px;
+			/*background-color: green;*/
+			margin-top: -550px;
+			margin-left: 570px;
+		}
+
+		#body-1-right-top {
+			border: 1px solid #e1e1e1;
+			border-top: 2px solid #ff0000;
+			height: 30px;
+		}
+
+		#body-1-right-top-img {
+			margin-left: 10px;
+			margin-top: 6px;
+		}
+
+		#body-1-right-top-span1 {
+			font-weight: 700;
+		}
+
+		#body-1-right-top-span2 {
+			color: #bcc3ce;
+			margin-left: 510px;
+		}
+
+		#body-1-right-last {
+			width: 670px;
+			height: 500px;
+			/*background-color: red;*/
+			margin: 6px auto;
+
+		}
+
+		#body-1-right-last li {
+			margin-top: 10px;
+			width: 190px;
+			height: 230px;
+			/*background-color: #007180;*/
+			text-align: center;
+			margin-bottom: 20px;
+			float: left;
+			margin-left: 20px;
+		}
+
+		.body-1-right-li-span {
+			text-align: center;
+			background-color: white;
+		}
+
+		#body-1-right-last li:after {
+			content: "";
+			display: block;
+			clear: both;
+			overflow: hidden;
+		}
+
+		/*    ---------body-2------------------------*/
+		#body-2-left {
+			width: 580px;
+			height: 500px;
+			/*background-color: #c7c0c0;*/
+			margin-left: 200px;
+		}
+
+		#body-2-left-top {
+			/*background-color: green;*/
+			width: 100%;
+			height: 40px;
+			border: 1px solid #e1e1e1;
+			border-top: 2px solid #ff0f0f;
+
+		}
+
+		#body-2-left-top-img {
+			margin-left: 10px;
+		}
+
+		#body-2-left-top-span1 {
+			margin-left: 5px;
+			font-weight: 700;
+
+		}
+
+		#body-2-left-top-span2 {
+			margin-left: 406px;
+			/*font-weight: 700;*/
+			/*color: #96a1b2;*/
+		}
+
+		#body-2-left-last {
+			width: 560px;
+			height: 430px;
+			/*background-color: red;*/
+			margin: 10px auto;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		#body-2-left-last-span-p1 {
+			text-indent: 2em;
+			width: 500px;
+			margin-left: 150px;
+			margin-top: -145px;
+			line-height: 30px;
+		}
+
+		#body-2-left-last-span-p2 {
+			width: 500px;
+			text-indent: 2em;
+			margin-left: 150px;
+			line-height: 30px;
+		}
+
+		#body-2-left-last-span-p3 {
+			width: 100%;
+			text-indent: 2em;
+			line-height: 30px;
+		}
+
+		#body-2-left-last-span-p4 {
+			width: 100%;
+			text-indent: 2em;
+			line-height: 30px;
+		}
+
+		#body-2-right {
+			width: 400px;
+			height: 480px;
+			/*background-color: rgba(255, 0, 0, 0.46);*/
+			margin-left: 800px;
+			margin-top: -500px;
+		}
+
+		#body-2-right-top {
+			width: 100%;
+			height: 30px;
+			/*background-color: dodgerblue;*/
+
+		}
+
+		#body-2-right-top-span1 {
+			margin-left: 5px;
+			font-weight: 700;
+		}
+
+		#body-2-right-top-span2 {
+			padding-left: 240px;
+			/*color: #96a1b2;*/
+		}
+
+		#body-2-right-ul {
+			width: 100%;
+			height: 400px;
+			/*background-color: green;*/
+		}
+
+		#body-2-right-ul li {
+			width: 100%;
+			margin-top: 10px;
+			height: 30px;
+		}
+
+		.body-2-right-li-span1 {
+			text-align: left;
+		}
+
+		.body-2-right-li-span2 {
+			margin-left: 210px;
+		}
+
+		#foot-1 {
+			width: 1000px;
+			height: 50px;
+			line-height: 50px;
+			border: 2px solid;
+			margin-left: 200px;
+		}
+
+		#foot-1-ul li {
+			float: left;
+			margin-left: 20px;
+		}
+
+
+		#foot-2 {
+			margin-top: 10px;
+			width: 100%;
+			height: 90px;
+			background-color: #fff8dc;
+		}
+
+		#foot-2-ul {
+			width: 600px;
+			color: #f3b1b0;
+			margin: 1px auto;
+			height: 100%;
+			background-color: red;
+			text-align: center;
+		}
+
+		#foot-2-ul span {
+
+			margin-left: 70px;
+		}
+
+	</style>
+</head>
+<body>
+<div id="box">
+	<div id="top-1">
+		<img id="top-1-left" alt="logo" height="85" src="file/logo.png">
+		<img id="top-1-right-img" alt="电话" height="85" src="file/tele.png">
+		<p id="top-1-right-span1">
+			0361-11111111
+		</p>
+		<p id="top-1-right-span2">
+			7*24小时服务热线
+		</p>
+	</div>
+	<div id="top-2">
+		<ul id="top-2-ul">
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li>我是li标签</li>
+			<li id="clear"></li>
+		</ul>
+	</div>
+	<div id="top-3">
+		<img id="top-3-img" alt="北京" height="490px" src="file/hengfu.png">
+	</div>
+	<div id="body-1">
+		<div id="body-1-left">
+			<img id="body-1-left-img" alt="logo" height="66" src="file/logo.png">
+			<ul id="body-1-ul">
+				<li>我是l标签</li>
+				<li>我是i标签</li>
+				<li>我li标签</li>
+				<li>我是l标签</li>
+				<li>我是l标签</li>
+				<li>我是l标签</li>
+				<li>我是l标签</li>
+				<li>我是l签</li>
+			</ul>
+			<div id="body-1-botton-top">
+				<div id="body-1-botton-top-top">
+					<img id="body-1--botton-top-img-top" alt="图片" height="16" src="file/before.png">
+					<span id="body-1-botton-top-img-top-span1">
+                        联系我们
+                    </span>
+					<span id="body-1-botton-top-img-top-span2">
+                        more...
+                    </span>
+				</div>
+
+				<img id="body-1--botton-top-img-center" alt="图片" height="86" src="file/about.png">
+				<ul id="body-1-last-ul">
+					<li>郑州公司</li>
+					<li>电话：0000-11111111</li>
+					<li>传真：0000-11111111</li>
+					<li>手机：11111111111</li>
+					<li>地址：啦啦啦啦啦</li>
+					<li>网址：www.baidu.com</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div id="body-1-right">
+			<div id="body-1-right-top">
+				<img id="body-1-right-top-img" alt="图片" height="16" src="file/before.png">
+				<span id="body-1-right-top-span1">
+                    推荐产品
+                </span>
+				<span id="body-1-right-top-span2">
+                    more...
+                </span>
+			</div>
+			<ul id="body-1-right-last">
+				<li>
+					<img alt="伞" class="body-1-right-last-li" height="200px"
+					     src="file/pic.png">
+					<span class="body-1-right-li-span">
+                        啦啦啦新都会
+                    </span>
+				</li>
+				<li>
+					<img alt="伞" class="body-1-right-last-li" height="200px"
+					     src="file/pic.png">
+					<span class="body-1-right-li-span">
+                        啦啦啦新都会
+                    </span>
+				</li>
+				<li>
+					<img alt="伞" class="body-1-right-last-li" height="200px"
+					     src="file/pic.png">
+					<span class="body-1-right-li-span">
+                        啦啦啦新都会
+                    </span>
+				</li>
+				<li>
+					<img alt="伞" class="body-1-right-last-li" height="200px"
+					     src="file/pic.png">
+					<span class="body-1-right-li-span">
+                        啦啦啦新都会
+                    </span>
+				</li>
+				<li>
+					<img alt="伞" class="body-1-right-last-li" height="200px"
+					     src="file/pic.png">
+					<span class="body-1-right-li-span">
+                        啦啦啦新都会
+                    </span>
+				</li>
+				<li>
+					<img alt="伞" class="body-1-right-last-li" height="200px"
+					     src="file/pic.png">
+					<span class="body-1-right-li-span">
+                        啦啦啦新都会
+                    </span>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="body-2">
+
+		<div id="body-2-left">
+			<div id="body-2-left-top">
+				<img id="body-2-left-top-img" alt="图片" height="15" src="file/before.png">
+				<span id="body-2-left-top-span1">
+                    公司简介
+                </span>
+				<span id="body-2-left-top-span2">
+                    more...
+                </span>
+			</div>
+			<div id="body-2-left-last">
+				<img id="body-2-left-last-img" alt="图片" height="150" src="file/pic.png">
+
+				<p id="body-2-left-last-span-p1">
+					在《彷徨》中，鲁迅站在革命民主主义的立场上：提出国民性改造和民族彻底解放等主题，贯穿着反
+					对封建主义的重大主题。
+				</p>
+				<p id="body-2-left-last-span-p2">
+					首先，《彷徨》充分表现了在封建制度鄱封建宗法势力长期统治下，农村广大贫苦农民遭受残酷经济
+					剥削和精挫奴役的悲剧命运。例如《祝福》的深刻性正是在于描写了祥林嫂在封建神权下所感到的恐怖。
+				</p>
+				<p id="body-2-left-last-span-p3">
+					其次，《彷徨》表现了鲁迅对知识乡命运与道路的关注。他着重从知识分子在中国革命中的重要地位和
+					作用这个角度进行描绘和考察，因此，他的剖析、同情、批判，最能切中肯綮，发人深思。在鲁迅的笔
+					下，主要刻画了封建卫道士，如《肥皂》中的四铭和《高老夫子》中的高尔础。这类人物有一个共同的
+					特点，就是满嘴仁义道德，一肚子男盗女娼。通过对他们龌龊心理入木三分的剖析，揭露其伪君子的丑
+					恶嘴脸。第三类是颓唐的知识分子形象。
+				</p>
+				<p id="body-2-left-last-span-p4">
+					鲁迅的小说结构大都是单线发展，很少有错综复杂的结构，常常是将生活中的几个生活片断串联起来，
+					构成“离去一归来一再离去”的复调式结构。如《祝福》《在酒楼上》《孤独者》等小说，讲的都是别
+					人的事，但在讲的过程中又不时穿插“我”的个人经历。比如《祝福》有三个描写视点：即“我”“祥林
+					嫂”“鲁镇”。“祥林嫂”与“鲁镇”的关系意在表现小说的“吃人”主题，这是读者普遍关注、一看便知的
+					。“我”与“鲁镇”的关系则暗含了“离去一归来一再离去”的情节模式，“虽说是故乡，然而也没有家，
+					所以只好寓在鲁四老爷的宅子里。”这样的叙述显然就是“离去”又“归来”的表述。而“我”决计要离开
+					鲁镇的，因为“我”作为一个知识者，一次偶然的回乡居然扮演了祥林嫂灵魂审问者的角色，祥林嫂的
+					死， “我”虽然不是罪魁祸首，但显示出“我”灵魂深处的浅薄和软弱，而这一切又与鲁镇的传统精神不
+					无相关联。因此“我”的“再离去”就是对家乡生存困境的逃避。
+				</p>
+			</div>
+		</div>
+
+		<div id="body-2-right">
+			<div id="body-2-right-top">
+				<img id="body-2-right-top-img" alt="图片" height="11" src="file/before.png">
+				<span id="body-2-right-top-span1">
+                    广告动态
+                </span>
+				<span id="body-2-right-top-span2">
+                    more...
+                </span>
+				<ul id="body-2-right-ul">
+					<li>
+                        <span class="body-2-right-li-span1">
+                            呜啦啦啦啦
+                        </span>
+						<span class="body-2-right-li-span2">
+                            2022-02-02
+                        </span>
+					</li>
+					<li>
+                        <span class="body-2-right-li-span1">
+                            呜啦啦啦啦
+                        </span>
+						<span class="body-2-right-li-span2">
+                            2022-02-02
+                        </span>
+					</li>
+					<li>
+                        <span class="body-2-right-li-span1">
+                            呜啦啦啦啦
+                        </span>
+						<span class="body-2-right-li-span2">
+                            2022-02-02
+                        </span>
+					</li>
+					<li>
+                        <span class="body-2-right-li-span1">
+                            呜啦啦啦啦
+                        </span>
+						<span class="body-2-right-li-span2">
+                            2022-02-02
+                        </span>
+					</li>
+					<li>
+                        <span class="body-2-right-li-span1">
+                            呜啦啦啦啦
+                        </span>
+						<span class="body-2-right-li-span2">
+                            2022-02-02
+                        </span>
+					</li>
+					<li>
+                        <span class="body-2-right-li-span1">
+                            呜啦啦啦啦
+                        </span>
+						<span class="body-2-right-li-span2">
+                            2022-02-02
+                        </span>
+					</li>
+					<li>
+                        <span class="body-2-right-li-span1">
+                            呜啦啦啦啦
+                        </span>
+						<span class="body-2-right-li-span2">
+                            2022-02-02
+                        </span>
+					</li>
+					<li>
+                        <span class="body-2-right-li-span1">
+                            呜啦啦啦啦
+                        </span>
+						<span class="body-2-right-li-span2">
+                            2022-02-02
+                        </span>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="foot-1">
+		<ul id="foot-1-ul">
+			<li>友情链接</li>
+			<li>友情链接</li>
+			<li>友情链接</li>
+		</ul>
+	</div>
+	<div id="foot-2">
+		<div id="foot-2-ul">
+			<span>版权所有：镇州欧冠呢个公司</span>
+			<span>技术支持：镇州公司</span>
+			<span>电话：0000-11111111</span>
+			<span>传真：0000000000000</span>
+			<span>联系人：张三</span>
+			<span>郑州的阿斯额u发哈我i</span>
+		</div>
+	</div>
+</div>
+</body>
+</html>

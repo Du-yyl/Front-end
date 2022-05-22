@@ -1,0 +1,35 @@
+<!--
+  ~ Date:2021/12/27 17:20 00
+  ~ Name:数组下标问题.html
+  ~ Path:Web代码/src/com/charlatan/self_study/AJAX/原生AJAX
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceshi</title>
+
+</head>
+<body>
+
+</body>
+<script>
+
+	fetch('http://39.96.88.57:9090/api/www/artist/artistInfo?category=0&pn=1&rn=100').then(
+			function (res) {
+				return res.json()
+			},
+	).then(function (data) {
+		let nums = data.data.artistList
+		for (let i = 0; i < nums.length; i++) {
+			console.log(nums[i])
+		}
+	})
+
+
+</script>
+</html>

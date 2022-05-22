@@ -1,0 +1,43 @@
+<!--
+  ~ Date:2021/12/7 10:18 52
+  ~ Name:1、navigator.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/BOM/Navigator
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>navigator</title>
+</head>
+<body>
+<script>
+	/*
+	 * BOM对象：
+	 *   Window
+	 *       代表整个浏览器窗口，同时window也是网页中的全局对象
+	 *   Navigator
+	 *       代表当前浏览器信息，通过这个对象可以识别不同的浏览器
+	 *   Location
+	 *       代表当前浏览器的，的历史记录，可以通过这个对象操作浏览器历史记录，
+	 *   History
+	 *       操作浏览器向前先后翻页
+	 * */
+	//获取到浏览器名字，因为IE所以不常用了
+	const { appName } = navigator
+	alert(appName)
+	//获取用户代理
+	/*
+	 * 谷歌    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+	 * 火狐    Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:94.0) Gecko/20100101 Firefox/94.0
+	 * Edge   Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36 Edg/96.0.1054.43
+	 * */
+	const { userAgent } = navigator
+	alert(userAgent)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+  ~ Date:2021/12/17 11:20 44
+  ~ Name:3、set——2.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/setAndGet
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>set</title>
+
+</head>
+<body>
+<pre>
+	注意：Set的遍历顺序，就是插入的顺序，和Array一样
+
+	WeakSet()？
+	和Set结构类似，也是不重复的值的集合，但WeakSet的成员只能是对象。
+
+	语法：new Set([iterable])
+	参数：
+		iterable 如果传递一个可迭代对象，它的所有元素将被添加到新的 Set中；如果不指定此参数或其值为null，则新的 Set为空
+
+		delete() 方法可以从一个 Set 对象中删除指定的元素
+			语法：mySet.delete(value)
+			参数：value 将要删除的元素
+			返回值：成功删除返回 true，否则返回 false
+</pre>
+</body>
+<script>
+	//  将Set结构转为数组：
+	let array = Array.from(new Set([1, 2, 3, 4, 5]))
+	console.log([...new Set([1, 2, 3, 4, 5])])
+
+	let s1 = Array.from(new Set([1, 2, 3, 4]))
+	console.log(s1)
+
+
+</script>
+</html>

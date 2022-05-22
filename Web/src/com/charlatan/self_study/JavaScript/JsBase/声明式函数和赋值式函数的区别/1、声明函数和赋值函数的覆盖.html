@@ -1,0 +1,48 @@
+<!--
+  ~ Date:2021/12/27 10:00 22
+  ~ Name:1、声明函数和赋值函数的覆盖.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/声明式函数和赋值式函数的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>声明函数和赋值函数的覆盖</title>
+
+</head>
+<body>
+<pre>
+	赋值函数相当于直接进行的赋值，所以当第二次进行绑定的时候，会出现赋值错误
+	赋值式函数在生命前不能使用，因为变量提升，它的值是undefined（命名式函数不会出现这个问题）
+
+	命名式函数当两个函数同一个名字的时候，不会出现命名错误，但是随后的方法会进行覆盖
+
+</pre>
+</body>
+<script>
+
+	// let func1 = function () {
+	// 	alert("这是第一个赋值式函数")
+	// }
+
+	let func1 = function () {
+		alert('这是第二个赋值式函数')
+	}
+
+	// function func1() {
+	// 	alert("这是声明式函数-1")
+	// }
+
+	function func1 () {
+		alert('这是赋值式函数-2')
+	}
+
+	func1()
+
+
+</script>
+</html>

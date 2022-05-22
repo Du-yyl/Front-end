@@ -1,0 +1,89 @@
+<!--
+  ~ Date:2021/12/3 9:32 35
+  ~ Name:增删改练习.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/DOM增删改查
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>增删改练习</title>
+</head>
+<body>
+<ul id="ul-1">
+	<li id="ul-1-li-1">我是第一个元素的li1</li>
+	<li id="ul-1-li-2">我是第一个元素的li2</li>
+	<li id="ul-1-li-3">我是第一个元素的li3</li>
+	<li id="ul-1-li-4">我是第一个元素的li4</li>
+	<li id="ul-1-li-5">我是第一个元素的li5</li>
+</ul>
+<ul id="ul-2">
+	<li id="ul-2-li-1">我是第二个元素的li1</li>
+	<li id="ul-2-li-2">我是第二个元素的li2</li>
+	<li id="ul-2-li-3">我是第二个元素的li3</li>
+	<li id="ul-2-li-4">我是第二个元素的li4</li>
+	<li id="ul-2-li-5">我是第二个元素的li5</li>
+</ul>
+<ul id="ul-3">
+	<li id="ul-3-li-1">我是第三个元素的li1</li>
+	<li id="ul-3-li-2">我是第三个元素的li2</li>
+	<li id="ul-3-li-3">我是第三个元素的li3</li>
+	<li id="ul-3-li-4">我是第三个元素的li4</li>
+	<li id="ul-3-li-5">我是第三个元素的li5</li>
+</ul>
+
+<script>
+	/*
+	 * 为第一个元素的第三个子元素后添加先的测试节点
+	 * */
+	//创建节点
+	let new_1 = document.createElement('li')
+	//创建要添加节点的文本
+	let new_text_1 = document.createTextNode('我是为第三个元素添加的子元素')
+	//将文本节点添加到新创建的元素中，完成整合
+	new_1.appendChild(new_text_1)
+	// 将整合好的节点进行添加
+	document.getElementById('ul-1').insertBefore(new_1, document.getElementById('ul-1-li-3'))
+
+	/*
+	 * 为第二个元素的最后一个元素后添加新的测试节点
+	 * */
+	let new_2 = document.createElement('li')
+	let new_text_2 = document.createTextNode('我是在第二个测试中要添加的元素')
+	new_2.appendChild(new_text_2)
+	// 直接在指定的父元素的末尾进行添加
+	document.getElementById('ul-2').appendChild(new_2)
+
+	/*
+	 * 替换第二个元素的第三个节点
+	 * */
+	let new_3 = document.createElement('li')
+	let new_text_3 = document.createTextNode('我是进行替换第三个元素的节点')
+	new_3.appendChild(new_text_3)
+	//    进行元素的替换
+	document.getElementById('ul-2').replaceChild(new_3, document.getElementById('ul-2-li-3'))
+
+	/*
+	 * 在第三个元素后添加新的节点
+	 * */
+	// 直接修改父元素中的元素
+	document.getElementById('ul-3').innerHTML += '<li>我是要进行添加的元素</li>'
+
+	/*
+	 * 在第一个后添加新的测试元素
+	 * */
+	let new_5 = document.createElement('li')
+	new_5.innerHTML = '我是要在第一个元素中添加的新元素'
+	document.getElementById('ul-1').appendChild(new_5)
+
+	/*
+	 * 删除第一个元素原本的第一个元素
+	 * */
+	document.getElementById('ul-1-li-1').parentNode.removeChild(document.getElementById('ul-1-li-1'))
+</script>
+</body>
+</html>

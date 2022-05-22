@@ -1,0 +1,44 @@
+<!--
+  ~ Date:2021/12/11 15:15 24
+  ~ Name:this.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/基础特殊问题
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+</head>
+<body>
+
+</body>
+<script>
+	/*
+	 2. 如何确定this的值?
+	 * test()
+	 * obj.test()
+	 * new test()
+	 * test.call(obj)
+	 * */
+	let per1 = {
+		name: '张三',
+	}
+	let per2 = {
+		name: '李四',
+	}
+
+	function fun1 () {
+		function fun2 () {
+			console.log(this)
+		}
+
+		fun2.call(per2)
+	}
+
+	fun1.call(per1)
+</script>
+</html>

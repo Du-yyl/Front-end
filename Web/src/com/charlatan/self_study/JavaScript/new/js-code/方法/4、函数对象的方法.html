@@ -1,0 +1,50 @@
+<!--
+  ~ Date:2021/11/30 上午11:07
+  ~ Name:4、函数对象的方法.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/方法/4、函数对象的方法.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数对象的方法</title>
+</head>
+<body>
+<script>
+	function sam (a, b) {
+		alert(this + '我是sam方法，并且输出了' + '--a-->' + a + '--b-->' + b)
+	}
+
+	/*
+	 * 函数对象的方法：
+	 *   call（）和 apply（）
+	 *       使用函数进行调用
+	 *   当函数调用这两个方法时都会调用函数执行
+	 *   当调用call（）和apply（）时，可以将一个对象作为第一个参数，此时这个对象将会成为执行函数的this
+	 * 可以修改函数执行时的this
+	 *
+	 * call()方法，可以将实参在对象之后依次传递
+	 * apply()方法，需要将实参封装到一个数组中统一传递
+	 *
+	 * this:
+	 *   1、以函数调用时，this永远是window
+	 *   2、以方法的形式调用时，this是调用方法的对象
+	 *   3、以构造行数的形式调用，this是创建新建的那个对象
+	 *   4、使用call和apply调用时，this是指定的那个对象
+	 * */
+	sam()
+	sam.call()
+	sam.apply()
+
+	let l1 = {}
+	sam.call(l1)
+
+	sam.call(l1, 2, 3)
+	sam.apply(l1, [2, 3])
+</script>
+</body>
+</html>

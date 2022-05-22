@@ -1,0 +1,68 @@
+<!--
+  ~ Time:2022/2/21 21:44 07
+  ~ Name:15过滤器.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>过滤器</title>
+
+</head>
+<body>
+<div id="root">
+	<h2>显示格式化后的时间</h2>
+	<h2>
+		{{ time }}
+		<br>
+		<br>
+		{{ fmtTime }}
+		<br>
+		<br>
+		{{ time | timeFormat }}
+	</h2>
+</div>
+<hr>
+<pre>
+	这里的过滤器，会拿着time传给，timeFormat，然后将返回值将整个内容全部替换
+	第二个变量的是指就是方法
+</pre>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"></script>
+<script>
+	Vue.config.productionTip = false
+	// 定义全局过滤器【这里的过滤器必须一个一个写】
+	Vue.filter('名字', function () {
+		return '返回指定的值'
+	})
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			time: Date.now(),
+		},
+		methods: {},
+		computed: {
+			fmtTime () {
+				return dayjs(this.time).format('YYYY年MM月DD日 HH:mm:ss')
+			},
+		},
+		watch: {},
+		filters: {
+			// 在这里定义的过滤器都是局部的，只能在这个实例中使用，不能在其他地方使用
+			timeFormat () {
+				return dayjs(this.time).format('YYYY年MM月DD日 HH:mm:ss')
+			},
+		},
+	})
+
+</script>
+</html>

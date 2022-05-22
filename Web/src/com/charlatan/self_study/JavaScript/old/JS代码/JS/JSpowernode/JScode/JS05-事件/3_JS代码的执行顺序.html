@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS代码的执行顺序</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// 给页面绑定一个属性，之后等到加载完后再执行 ’ = ‘后的函数
+	// 页面加载时将匿名函数绑定给window的load事件
+	// load事件完成后才会继续执行回调函数
+	window.onload = function () {
+		// document.onload = function (){
+		document.getElementById('btn1').onclick = function () {
+			alert('按钮一输出')
+		}
+	}
+</script>
+
+<input id="btn1" type="button" value="第一个按钮"/>
+
+</body>
+</html>

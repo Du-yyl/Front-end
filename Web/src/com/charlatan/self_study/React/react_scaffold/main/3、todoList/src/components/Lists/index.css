@@ -1,0 +1,23 @@
+/**
+  * Time:2022/3/25 13:01 21
+  * Name:index.less
+  */
+* {
+	list-style: none;
+	text-decoration: none;
+}
+
+.div {
+	width: auto;
+	height: auto;
+	background: #ea9c9c;
+	position: relative;
+}
+
+.div .lists .list {
+	width: 100%;
+	height: 30px;
+	background: #20b8cc;
+}
+
+/*# sourceMappingURL=index.css.map */

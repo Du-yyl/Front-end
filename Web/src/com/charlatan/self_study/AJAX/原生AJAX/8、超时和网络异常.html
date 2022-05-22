@@ -1,0 +1,83 @@
+<!--
+  ~ Date:2021/12/26 17:01 01
+  ~ Name:8、超时和网络异常.html
+  ~ Path:Web代码/src/com/charlatan/self_study/AJAX/原生AJAX
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>超时和网络异常</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 15px;
+			text-decoration: none;
+		}
+
+		li {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+		#result {
+			width: 100px;
+			height: 200px;
+			border: 1px solid;
+		}
+
+
+	</style>
+</head>
+<body>
+<button id="btn" type="button">我是按钮</button>
+<button id="btn1" type="button">我是按钮2</button>
+<div id="result"></div>
+</body>
+<script>
+	let result = document.getElementById('result')
+	let btn = document.getElementById('btn')
+	let btn1 = document.getElementById('btn1')
+
+	let xhr
+
+	btn1.onclick = function () {
+		xhr.abort()
+	}
+
+	btn.onclick = function () {
+		xhr = new XMLHttpRequest()
+
+		//超时2s设置
+		xhr.timeout = 2000
+		//超时回调
+		xhr.ontimeout = function () {
+			alert('网络异常，请稍后重试')
+		}
+
+		//网络异常回调
+		xhr.onerror = function () {
+			alert('你的网络由问题')
+		}
+
+		xhr.open('GET', 'http://127.0.0.1:8000/delay')
+		xhr.send()
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4) {
+				if (xhr.status >= 200 && xhr.status < 300) {
+					console.log(xhr.response)
+					result.innerText = xhr.response
+				}
+			}
+		}
+	}
+
+</script>
+</html>

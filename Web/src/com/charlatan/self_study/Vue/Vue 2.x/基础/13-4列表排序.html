@@ -1,0 +1,87 @@
+<!--
+  ~ Time:2022/2/20 15:39 35
+  ~ Name:13-4列表排序.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>列表排序</title>
+
+</head>
+<body>
+<div id="root">
+	<button type="button" @click="Ascending">升序</button>
+	<button type="button" @click="Descending">降序</button>
+	<hr>
+	<ul>
+		<li v-for="per in persons" :key="per.id">
+			{{ per.name }} - {{ per.age }} - {{ per.sex }}
+		</li>
+	</ul>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			persons: [
+				{
+					name: '马冬梅',
+					age: 1,
+					sex: '女',
+					id: '001',
+				}, {
+					name: '周冬雨',
+					age: 13,
+					sex: '女',
+					id: '002',
+				}, {
+					name: '周杰伦',
+					age: 4,
+					sex: '男',
+					id: '003',
+				}, {
+					name: '张杰',
+					age: 15,
+					sex: '男',
+					id: '004',
+				}, {
+					name: '马云',
+					age: 6,
+					sex: '男',
+					id: '005',
+				},
+			],
+			ketValue: '',
+		},
+		methods: {
+			Ascending () {
+				console.log('升序')
+				this.persons = this.persons.sort((a, b) => {
+					return a.age - b.age
+				})
+			},
+			Descending () {
+				console.log('降序')
+				this.persons = this.persons.sort((a, b) => {
+					return b.age - a.age
+				})
+			},
+		},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

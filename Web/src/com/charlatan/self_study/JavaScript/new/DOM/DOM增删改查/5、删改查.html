@@ -1,0 +1,109 @@
+<!--
+  ~  Project Name: WWW
+  ~  File Name: 5、删改查
+  ~  Date: 2021/12/2 10:11
+  ~  Author : charlatan
+  ~ 
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删改查</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: #ff0000;
+		}
+	</style>
+</head>
+<body>
+<input id="btn1" type="button" value="我是按钮1">
+<input id="btn2" type="button" value="我是按钮2">
+<input id="btn3" type="button" value="我是按钮3">
+<input id="btn4" type="button" value="我是按钮4">
+<input id="btn5" type="button" value="我是按钮5">
+
+<ul id="ul">
+	<li id="li1">测试1</li>
+	<li id="li2">测试2</li>
+	<li id="li3">测试3</li>
+
+</ul>
+
+</body>
+<script>
+	/*
+	 * 增加节点
+	 *   在“测试1”后增加节点
+	 *    document.createElement()
+	 *   可以用与创建一个元素节点对象，需要一个标签作为参数，根据这个标签名创建对象节点，并将他作为返回值进行返回
+	 *    appendChild()
+	 *   向一个父节点中添加子节点
+	 * */
+	//先创建一个指定的对象节点，需要什么创建什么
+	let btn1 = document.createElement('li')
+	console.log(btn1)
+	//    到这里对象节点创建好了，创建对象节点的文本节点
+	let text = document.createTextNode('我是测试6')
+	console.log(text)
+	//    将文本节点设置为li的子节点
+	btn1.appendChild(text)
+	//    添加到指定节点下
+	document.getElementById('ul').appendChild(btn1)
+
+	//在指定节点前添加元素
+	let li2 = document.createElement('li')
+	let text_1 = document.createTextNode('我的是测试7')
+	li2.appendChild(text_1)
+	/*
+	 *   insertBefore（）
+	 * 在指定子节点插入指定节点
+	 *   语法：
+	 *       父节点：insertBefore（新节点，旧节点）
+	 *
+	 * */
+	document.getElementById('ul').insertBefore(li2, document.getElementById('li1'))
+
+	//    替换节点
+	/*
+	 * 使用replaceChild（ 新的节点，旧的节点）
+	 *   替换指定节点【通过父节点进行调用】
+	 * */
+	let btn3 = document.getElementById('li3')
+	let li3 = document.createElement('li')
+	let text_3 = document.createTextNode('我是替换第三个li的东西')
+	// console.log(li3.appendChild(text_3))
+	li3.appendChild(text_3)
+	document.getElementById('ul').replaceChild(li3, btn3)
+
+	//    删除指定元素
+	/*
+	 * removeChild( 子节点 )
+	 *   删除指定元素【父元素调用】
+	 * */
+	/*
+	 * 这种方式还要找到指定节点的父元素，进行改进
+	 * */
+	// document.getElementById("ul").removeChild(li3)
+
+	//    先找到要删除的节点，然后通过属性找到要删除的元素的父元素，然后通过父元素删除这个元素
+	//这个不用知道父节点是谁，更加灵活和常用
+	li3.parentNode.removeChild(li3)
+
+	/*
+	 * 使用inner的方式完成添加属性的操作
+	 *   使用innerHtml也能完成相关操作，并且更常用
+	 * 这种方式直接会替换元素中的所有元素，所以要使用+=进行添加操作
+	 * */
+	document.getElementById('ul').innerHTML += '<li>我是通过inner的方式添加的元素</li>'
+	//    最推荐的方式
+	let li = document.createElement('li')
+	li.innerHTML = '我是最推荐的方式'
+	document.getElementById('ul').appendChild(li)
+
+</script>
+</html>

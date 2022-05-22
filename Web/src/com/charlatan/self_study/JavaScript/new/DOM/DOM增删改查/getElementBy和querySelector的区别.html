@@ -1,0 +1,73 @@
+<!--
+  ~ Date:2021/12/4 9:50 50
+  ~ Name:getElementBy和querySelector的区别.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/DOM增删改查
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getElementBy和querySelector的区别</title>
+</head>
+<body>
+<input id="btn1" type="button" value="我是按钮">
+<ul id="ul">
+	<li class="li">我是li标签</li>
+	<!-- /.li -->
+	<li class="li">我是li标签</li>
+	<!-- /.li -->
+	<li class="li">我是li标签</li>
+	<!-- /.li -->
+	<li class="li">我是li标签</li>
+	<!-- /.li -->
+	<li class="li">我是li标签</li>
+	<!-- /.li -->
+</ul>
+<!-- /#ul -->
+
+
+</body>
+<script>
+	window.onload = function () {
+		/*
+		 在js里面qu1erySelector()选择的标签是静态的
+		 也就是说在选中之后，能够一直保存，也就是脱离了被选择的成为副本，除非是要保存选中的标签，否则不会轻易地使用querySelector()。
+
+		 在js里面getElementsByClassName()选择的标签是动态的，所以是相互映射，在调用时，我们一般使用这种标签，因为可以及时的反映在页面上。
+		 */
+
+		/*
+		 * 这里的按钮的点击事件是在整个页面都全部静态加载完后才会进行点击事件的应用，在页面没有完全加载时，点击事件是不能被创建的，只是被声明，
+		 * 并不能使用，当整个页面被完全加载时，他是加载好的
+		 * */
+
+		// let li1 = document.querySelectorAll("li")
+		let li1 = document.getElementsByClassName('li')
+		//------------------------------------------------------------------------------
+		let li = document.createElement('li')
+		li.innerHTML = '我是新添加的li标签'
+		li.className = 'li'
+		document.getElementById('ul').appendChild(li)
+		console.log(li1)
+		//-------------------------------------------------------------------------------------
+		// document.getElementById("btn1").onclick = function () {
+		//     let li = document.createElement("li")
+		//     li.innerHTML = "我是新添加的li标签"
+		//     li.className = "li"
+		//     document.getElementById("ul").appendChild(li)
+		//     console.log(li1)
+		// }
+		//-------------------------------------------------------------------------
+		for (let i = 0; i < li1.length; i++) {
+			li1[i].onclick = function () {
+				alert('哈哈哈')
+			}
+		}
+	}
+
+</script>
+</html>

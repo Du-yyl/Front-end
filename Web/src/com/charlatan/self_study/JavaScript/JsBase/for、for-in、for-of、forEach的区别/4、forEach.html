@@ -1,0 +1,64 @@
+<!--
+  ~ Date:2021/12/16 20:30 53
+  ~ Name:4、forEach.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/for、for-in、for-of、forEach的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forEach</title>
+
+</head>
+<body>
+<pre>
+	<code>
+	.forEach() 方法工作方式是为列表中的每个元素传入当前元素、索引和列表（正在循环的整个数组），对于迭代器的每次调用，函数都会接收三个参数（元素、索引、列表）调用。
+	如果列表是 JavaScript 对象，则迭代器参数将是 (value、key、list)。
+    .forEach() 方法可以替代过去的 for ，而对于不需要访问索引的遍历则建议使用 for...of ，因为它的遍历效率比 .forEach() 快。
+
+		与for循环一样，forEach也属于完整遍历数组的方法，并会对数组每项元素执行提供的回调函数
+
+		语法：
+			arr.forEach(function(self,index,arr){},this);
+		self：数组当前遍历的元素，默认从左往右依次获取数组元素。
+		index：数组当前元素的索引，第一个元素索引为0，依次类推。
+		arr：当前遍历的数组。
+		this：回调函数中this指向。
+
+
+	</code>
+</pre>
+</body>
+<script>
+	const arrayMonths = ['一月', '二月', '三月']
+	arrayMonths.forEach((value, index, list) => {
+		console.log(value) // 一月,二月,三月
+		console.log(index) // 0,1,1
+		console.log(list) // [ '一月', '二月', '三月' ],[ '一月', '二月', '三月' ]，[ '一月', '二月', '三月' ]
+	})
+	console.log('---------------------')
+
+	let arr1 = [1, 2, 3, 4]
+	let obj = {
+		a: 1,
+	}
+	arr1.forEach(function (self, index, arr) {
+		console.log(`当前元素为${self}索引为${index},属于数组${arr},this是：${this}`)
+		//做个简单计算
+		console.log(self + this.a)
+	}, obj)
+	//	----使用第三个参数进行去重
+	console.log('----------------------------------')
+	let arr3 = [1, 2, 1, 3, 1]
+	let arr2 = []
+	arr3.forEach(function (self, index, arr) {
+		arr.indexOf(self) === index ? arr2.push(self) : null
+	})
+	console.log(arr2) //[1,2,3]
+</script>
+</html>

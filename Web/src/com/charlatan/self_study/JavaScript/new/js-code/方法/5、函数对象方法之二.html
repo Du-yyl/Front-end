@@ -1,0 +1,37 @@
+<!--
+  ~ Date:2021/11/30 上午11:24
+  ~ Name:5、函数对象方法之二.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/方法/5、函数对象方法之二.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数对象方法二</title>
+</head>
+<body>
+<script>
+	/*
+	 * 调用函数时，浏览器会创建两个隐含的变量：
+	 *   1、函数的上下文对象this
+	 *   2、封装实参对象 arguments
+	 *       arguments时一个类数组对象，可以称作索引，调用传递的实参都是通过这个进行传递
+	 *       arguments.length直接返回的是传入函数的实参个数
+	 *       也可以通过arguments数组中的下标直接访问到实参的数据
+	 *     arguments中有一个属性：callee
+	 *       可以直接指向当前调用函数的对象
+	 * */
+	function sam () {
+		alert(arguments.length)
+		console.log(arguments.callee)
+	}
+
+	sam(1, 2, 2, 2, 2)
+
+</script>
+</body>
+</html>

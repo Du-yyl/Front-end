@@ -1,0 +1,156 @@
+<!--
+  ~ Date:2021/11/8 上午10:58
+  ~ Name:百度导航条.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/homework/week_3/day_1/operation_1/百度导航条.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度导航条</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#box {
+			height: 2000px;
+		}
+
+		#top {
+			width: 100%;
+			height: 300px;
+			position: absolute;
+			background-color: whitesmoke;
+			top: 0;
+
+		}
+
+		#body {
+			width: 100%;
+			height: 40px;
+			position: sticky;
+			top: 0;
+			display: block;
+			background-color: #01204f;
+			margin-top: 300px;
+		}
+
+		.bd_li {
+			list-style: none;
+			float: left;
+			display: inline;
+			position: relative;
+			color: #ffffff;
+			font-weight: bold;
+			text-align: center;
+			width: 90px;
+			/*border-right: solid 1px white;*/
+			z-index: 99999999999999;
+		}
+
+		#BD {
+			position: absolute;
+			left: 140px;
+			line-height: 40px;
+		}
+
+		#i {
+			position: relative;
+			top: 2px;
+			left: 0;
+		}
+
+		/*.bd_li:hover{*/
+		/*    background-color: red;*/
+		/*}*/
+
+
+		/*#fast{*/
+		/*    background-color: red;*/
+		/*}*/
+
+
+		#q {
+			position: absolute;
+
+		}
+
+
+		#w {
+			width: 90px;
+			height: 40px;
+			position: absolute;
+			background-color: red;
+			transition: left 2s;
+			left: 140px;
+		}
+
+		#w:hover {
+			/*display: block;*/
+			left: 400px;
+		}
+
+		/*#li_4:hover #w{*/
+		/*    left: 400px;*/
+		/*}*/
+
+
+	</style>
+</head>
+<body>
+<div id="box">
+	<div id="top"></div>
+	<div id="body">
+		<div id="q"></div>
+		<div id="w"></div>
+		<ul id="BD">
+			<li id="fast" class="bd_li">
+				<img id="i" height="20" src="file/img.png">
+				首页&nbsp;
+			</li>
+
+			<li id="li_2" class="bd_li">
+				国内&nbsp;
+			</li>
+			<li id="li_3" class="bd_li">
+				国际&nbsp;
+			</li>
+			<li id="li_4" class="bd_li">
+				财经&nbsp;
+			</li>
+			<li id="li_5" class="bd_li">
+				娱乐&nbsp;
+			</li>
+			<li id="li_6" class="bd_li">
+				体育&nbsp;
+			</li>
+			<li id="li_7" class="bd_li">
+				互联网&nbsp;
+			</li>
+			<li id="li_8" class="bd_li">
+				科技&nbsp;
+			</li>
+			<li id="li_9" class="bd_li">
+				游戏&nbsp;
+			</li>
+			<li id="li_10" class="bd_li">
+				女人&nbsp;
+			</li>
+			<li id="li_11" class="bd_li">
+				汽车&nbsp;
+			</li>
+			<li id="li_12" class="bd_li">
+				房产&nbsp;
+			</li>
+		</ul>
+	</div>
+
+</div>
+</body>
+</html>

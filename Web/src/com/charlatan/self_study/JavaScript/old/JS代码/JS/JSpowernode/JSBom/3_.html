@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-</title>
+</head>
+<body>
+<script type="text/javascript">
+	setTop = function () {
+		if (window.top !== window.self) {
+			window.top.location = window.self.location
+		}
+	}
+</script>
+3显示了
+<input onclick="window.history.back()" type="button" value="后退">
+<input onclick="window.history.go(-1)" type="button" value="后退">
+<br>
+<br>
+<br>
+如果这个窗口不是顶级窗口，将他设置成顶级窗口
+<input id="bt" onclick="setTop()" type="button" value="顶级窗口">
+</body>
+</html>

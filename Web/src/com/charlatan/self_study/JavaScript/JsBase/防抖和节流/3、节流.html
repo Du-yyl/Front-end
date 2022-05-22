@@ -1,0 +1,79 @@
+<!--
+  ~ Date:2021/12/21 16:11 57
+  ~ Name:3、节流.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/防抖和节流
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节流</title>
+
+</head>
+<body>
+2.加入节流后的：【移入div在控制台打印语句】
+<input id="text" name="text" type="text">
+<hr>
+<pre>
+	原理：规定一个时间，在这个时间段内的所有事件都会一起被执行
+	一般用于：resize，touchmove移动DOM，上拉列表加载数据等
+
+```js
+var input = document.querySelector('input');
+        function fn1(callback,time){
+            var flag = true;
+            return function(){
+                if (flag) {
+                    flag = false;
+                    callback();
+                    setTimeout(()=>{
+                        flag = true
+                    },time)
+                }
+            }
+        }
+        function fn2(){
+            console.log('节流');
+        }
+```
+
+</pre>
+</body>
+<script>
+	window.onload = function () {
+		let text = document.getElementById('text')
+		text.oninput = throttling(func1, 1000)
+
+		// text.oninput = func1
+
+		/**
+		 * 节流的方法
+		 * @param callback 回调函数
+		 * @param time 多久触发一次
+		 * @returns {(function(): void)|*} 闭包函数返回
+		 */
+		function throttling (callback, time) {
+			let flag = true
+			return function () {
+				let timer = null
+				if (flag) {
+					flag = false
+					callback()
+					timer = setTimeout(() => {
+						flag = true
+						clearTimeout(timer)
+					}, time)
+				}
+			}
+		}
+
+		function func1 () {
+			console.log('我是节流')
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!--
+  ~ Time:2022/2/19 19:25 54
+  ~ Name:13-1列表渲染.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Vue/Vue 2.x/基础
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>列表渲染</title>
+
+</head>
+<body>
+<div id="root">
+	<ul>
+		<!--		遍历数组-->
+		<li v-for="per of  persons" :key="per.id">
+			{{ per.name }} - {{ per.age }}
+		</li>
+	</ul>
+	<!--	遍历对象-->
+	<hr>
+	<ul>
+		<li v-for="item in car">
+			{{ item }}
+		</li>
+	</ul>
+	<hr>
+	<ul>
+		<li v-for="(key,value) in car">
+			{{ key }}-{{ value }}
+		</li>
+	</ul>
+
+	<hr>
+	<ul>
+		<li v-for="(item) in str">
+			{{ item }}
+		</li>
+	</ul>
+
+	<ul>
+		<li v-for="(key,value) in str">
+			{{ key }} - {{ value }}
+		</li>
+	</ul>
+
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	Vue.config.productionTip = false
+
+	const vm = new Vue({
+		el: '#root',
+		data: {
+			persons: [
+				{
+					id: '001',
+					name: '张三',
+					age: 10,
+				}, {
+					id: '002',
+					name: '李四',
+					age: 11,
+				}, {
+					id: '003',
+					name: '王五',
+					age: 12,
+				}, {
+					id: '004',
+					name: '赵六',
+					age: 13,
+				},
+			],
+			car: {
+				color: '黑色',
+				name: '奥迪',
+				num: '100W',
+			},
+			str: 'Snow flame bluetooth condo delivered infected pirates, involving colon. ',
+		},
+		methods: {},
+		computed: {},
+		watch: {},
+	})
+
+</script>
+</html>

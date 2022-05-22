@@ -1,0 +1,67 @@
+<!--
+  ~ Date:2021/12/13 14:10 56
+  ~ Name:2、执行上下文和执行上下文栈.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsAdvanced/函数/执行上下文和执行上下文栈
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>执行上下文和执行上下文栈</title>
+
+</head>
+<body>
+<pre>
+	 全局执行上下文
+	   在执行全局代码前将window确定为全局执行上下文
+	   对全局数据进行预处理
+	     var定义的全局变量==>undefined, 添加为window的属性
+	     function声明的全局函数==>赋值(fun), 添加为window的方法
+	     this==>赋值(window)
+	   开始执行全局代码
+
+	 函数执行上下文
+	   在调用函数, 准备执行函数体之前, 创建对应的函数执行上下文对象
+	   对局部数据进行预处理
+	     形参变量==>赋值(实参)==>添加为执行上下文的属性
+	     arguments==>赋值(实参列表), 添加为执行上下文的属性
+	     var定义的局部变量==>undefined, 添加为执行上下文的属性
+	     function声明的函数 ==>赋值(fun), 添加为执行上下文的方法
+	     this==>赋值(调用函数的对象)
+	开始执行函数体代码
+</pre>
+</body>
+<script>
+
+	console.log(this)
+	console.log(num1)
+	console.log(fn)
+
+	function fn () {
+	}
+
+	var num1 = 10
+	fn(1, 2, 3)
+
+	console.log('-----------------')
+
+	function fnn (a1) {
+		console.log(this)
+		console.log(a1)
+		console.log(arguments)
+		a3()
+	}
+
+	function a3 () {
+		console.log('a3()')
+	}
+
+	fnn(1, 2, 3, 4)
+
+
+</script>
+</html>

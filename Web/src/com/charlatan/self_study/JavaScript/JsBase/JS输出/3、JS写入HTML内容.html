@@ -1,0 +1,31 @@
+<!--
+  ~ Date:2021/11/26 下午4:10
+  ~ Name:3、JS写入HTML内容.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML和CSS/基础/JsBase/JS输出/3、JS写入HTML内容.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS写入HTML内容</title>
+</head>
+<body>
+<div id="div">
+	我是div内中的元素
+</div>
+<p>
+	也可以完成简单的运算
+</p>
+<script>
+	window.document.getElementById('div').innerText = '我是js中要输出的内容'
+	window.document.getElementById('div').innerHTML = '<font color=\'red\'>用户名不能为空</font>'
+	// window.document.getElementById('div').innerText="<fontcolor='red'>用户名不能为空</font>";
+
+</script>
+
+</body>
+</html>

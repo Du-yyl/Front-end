@@ -1,0 +1,40 @@
+<!--
+  ~ Date:2021/12/29 11:50 26
+  ~ Name:3、every.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/JsBase/数组/map,some,every,filter的区别
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>every</title>
+
+</head>
+<body>
+<pre>
+	every：用于检测数组所有元素是否都符合指定条件（通过函数提供）
+
+	every和some正好相反：
+		如果数组中检测到有一个元素不满足，则整个表达式返回 false ，且剩余的元素不会再进行检测。
+		如果所有元素都满足条件，则返回 true。
+		function形参同上
+		注意：some不会改变原数组，some不会检查空数组
+
+	返回一个boolean，判断每个元素是否符合func条件
+</pre>
+</body>
+<script>
+	let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	if (nums.every(item => {
+		return item > 10
+	})) {
+		console.log('每个数都大于10')
+	} else {
+		console.log('可能有小于10的数字')
+	}
+</script>
+</html>

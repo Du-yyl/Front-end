@@ -1,0 +1,68 @@
+<!--
+  ~ Date:2021/11/18 下午7:45
+  ~ Name:5、动画的反复交替.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/HTML&CSS/基础/HtmlBase/动画/5、动画的反复交替.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画的反复</title>
+	<style>
+		@keyframes example {
+			0% {
+				background-color: red;
+				left: 0px;
+				top: 0px;
+			}
+			25% {
+				background-color: yellow;
+				left: 200px;
+				top: 0px;
+			}
+			50% {
+				background-color: blue;
+				left: 200px;
+				top: 200px;
+			}
+			75% {
+				background-color: green;
+				left: 0px;
+				top: 200px;
+			}
+			100% {
+				background-color: red;
+				left: 0px;
+				top: 0px;
+			}
+		}
+
+		div {
+			width: 100px;
+			height: 100px;
+			position: relative;
+			background-color: red;
+			animation-name: example;
+			animation-duration: 4s;
+			animation-direction: alternate;
+		}
+	</style>
+</head>
+<body>
+<div id=""></div>
+<p>
+	animation-direction 属性指定是向前播放、向后播放还是交替播放动画。 <br>
+	<br>
+	animation-direction 属性可接受以下值： <br>
+	<br>
+	normal - 动画正常播放（向前）。默认值 <br>
+	reverse - 动画以反方向播放（向后） <br>
+	alternate - 动画先向前播放，然后向后 <br>
+	alternate-reverse - 动画先向后播放，然后向前 <br>
+</p>
+</body>
+</html>

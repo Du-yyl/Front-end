@@ -1,0 +1,54 @@
+<!--
+  ~ Date:2022/1/6 14:19 36
+  ~ Name:生成器中的this.html
+  ~ Path:Web代码/src/com/charlatan/self_study/JavaScript/ES6-ES11/ES6
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>生成器中的this</title>
+
+</head>
+<body>
+<pre>
+	 调用构造函数F，返回实例对象f
+	 将构造函数内部中的this指向这个实例对象
+	 将构造函数中的原型对象赋值给实例对象的原型
+	 执行构造函数中的代码
+
+	调用Generator函数会返回遍历器对象，而不是实例对象，因此无法获取到this指向的实例对象上的私有属性和方法。
+	但是这个遍历器对象可以继承Generator函数的prototype原型对象上的属性和方法(公有属性和方法)。
+
+	生成器中的this是默认指向的window，但是可以通过call等方法进行修改
+
+</pre>
+</body>
+<script>
+	function * func () {
+		console.log('你好')
+		console.log(this)
+		yield 111
+		console.log('hello')
+		console.log(this)
+		yield 222
+	}
+
+	let obj = {}
+
+	let fun = func()
+	fun.next()
+	fun.next()
+	fun.next()
+
+	let fun1 = func.call(obj)
+	fun1.next()
+	fun1.next()
+	fun1.next()
+	fun1.next()
+</script>
+</html>

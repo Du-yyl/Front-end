@@ -1,0 +1,48 @@
+<!--
+  ~ Date:2021/12/24 10:46 19
+  ~ Name:3、this内存问题.html
+  ~ Path:Web代码/src/com/charlatan/question/Javascript/this
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this内存问题</title>
+
+</head>
+<body>
+<pre>
+	返回的属性和方法形成闭包，进行调用的时候，是单独的内存空间，互不影响；
+
+	第三个调用的时候是调用的属性，而前两个都是闭包产生的值，返回的属性无法产生闭包，所以不会访问闭包的内存，返回的值依然是4399
+</pre>
+</body>
+<script>
+	function test () {
+		var n = 4399
+
+		function add () {
+			n++
+			console.log(n)
+			// console.log(this);
+
+		}
+
+		return { n: n, add: add }
+	}
+
+	var r1 = test()
+	var r2 = test()
+
+	r1.add()
+	r2.add()
+
+	console.log(r1.n)
+	r2.add()
+
+</script>
+</html>

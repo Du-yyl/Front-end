@@ -1,0 +1,65 @@
+<header id="top" class="navbar navbar-static-top bs-docs-nav">
+  <div class="container">
+    <div class="navbar-header">
+      <button aria-controls="bs-navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-navbar"
+              data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">Bootstrap</a>
+    </div>
+    <nav id="bs-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li
+          if page.slug== {%
+        "getting-started" %} class="active"{% endif %}>
+        <a href="{{ site.baseurl }}/getting-started/">Getting started</a>
+        </li>
+        <li
+          if page.slug== {%
+        "css" %} class="active"{% endif %}>
+        <a href="{{ site.baseurl }}/css/">CSS</a>
+        </li>
+        <li
+          if page.slug== {%
+        "components" %} class="active"{% endif %}>
+        <a href="{{ site.baseurl }}/components/">Components</a>
+        </li>
+        <li
+          if page.slug== {%
+        "js" %} class="active"{% endif %}>
+        <a href="{{ site.baseurl }}/javascript/">JavaScript</a>
+        </li>
+        <li
+          if page.slug== {%
+        "customize" %} class="active"{% endif %}>
+        <a href="{{ site.baseurl }}/customize/">Customize</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#"
+             role="button">
+            v{{ site.current_version }} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="https://getbootstrap.com/">Latest (4.x)</a></li>
+            <li><a href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a></li>
+            <li class="divider"></li>
+            <li class="active"><a href="https://getbootstrap.com/docs/{{ site.docs_version }}/">v{{
+                site.current_version
+              }}</a></li>
+            <li><a href="https://getbootstrap.com/docs/3.3/">v3.3.7</a></li>
+            <li><a href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ site.themes }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes')">Themes</a>
+        </li>
+        <li><a href="{{ site.expo }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
+        <li><a href="{{ site.blog }}" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

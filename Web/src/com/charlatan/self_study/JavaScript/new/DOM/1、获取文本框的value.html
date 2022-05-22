@@ -1,0 +1,32 @@
+<!--
+  ~ Date:2021/11/25 上午11:45
+  ~ Name:1、获取文本框的value.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/1、获取文本框的value.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取文本框的value</title>
+</head>
+<body>
+<input id="text" type="text" value="">
+<input id="btn1" type="button" value="我是按钮">
+<script>
+	window.onload = function () {
+		// alert(document.getElementById('text').value)
+		// document.getElementById('text').onkeydown = function (){
+		//     document.getElementById('text').value = 'this is a test'
+		// }
+		document.getElementById('btn1').onclick = function () {
+			alert(document.getElementById('text').value)
+		}
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>内置支持类Array</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	 // 创建长度为0的数组
+	 var arr = [];
+	 alert(arr.length);
+
+	 // 数据类型随意
+	 var arr2 = [1,2,3,false,"abc",3.14];
+	 alert(arr2.length);
+
+	 // 下标会越界吗
+	 arr2[7] = "test"; // 自动扩容.
+
+	 document.write("<br>");
+
+	 // 遍历
+	 for(var i = 0; i < arr2.length; i++){
+	 document.write(arr2[i] + "<br>");
+	 }
+
+	 // 另一种创建数组的对象的方式
+	 var a = new Array();
+	 alert(a.length); // 0
+
+	 var a2 = new Array(3); // 3表示长度.
+	 alert(a2.length);
+
+	 var a3 = new Array(3,2);
+	 alert(a3.length); // 2
+	 */
+
+	var a = [1, 2, 3, 9]
+	var str = a.join('-')
+	alert(str) // "1-2-3-9"
+
+	// 在数组的末尾添加一个元素(数组长度+1)
+	a.push(10)
+	alert(a.join('-'))
+
+	// 将数组末尾的元素弹出(数组长度-1)
+	var endElt = a.pop()
+	alert(endElt)
+	alert(a.join('-'))
+
+	// 注意:JS中的数组可以自动模拟栈数据结构:后进先出,先进后出原则.
+	// push压栈
+	// pop弹栈
+
+	// 反转数组.
+	a.reverse()
+	alert(a.join('='))
+</script>
+</body>
+</html>

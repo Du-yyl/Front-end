@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS中的数据类型</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	 1、虽然JS中的变量在声明的时候不需要指定数据类型，但是在赋值，每一个数据还是有类型的，所以
+	 这里也需要学习一下JS包括哪些数据类型？
+	 JS中数据类型有：原始类型、引用类型。
+	 原始类型：Undefined、Number、String、Boolean、Null
+	 引用类型：Object以及Object的子类
+
+	 2、ES规范(ECMAScript规范)，在ES6之后，又基于以上的6种类型之外添加了一种新的类型：Symbol
+
+	 3、JS中有一个运算符叫做typeof，这个运算符可以在程序的运行阶段动态的获取变量的数据类型。
+	 typeof运算符的语法格式：
+	 typeof 变量名
+	 typeof运算符的运算结果是以下6个字符串之一：注意字符串都是全部小写。
+	 "undefined"
+	 "number"
+	 "string"
+	 "boolean"
+	 "object"
+	 "function"
+
+	 4、在JS当中比较字符串是否相等使用“==”完成。没有equals。
+	 */
+
+	/*
+	 // 求和,要求a变量和b变量将来的数据类型必须是数字,不能是其他类型
+	 // 因为以下定义的这个sum函数是为了完成两个数字的求和.
+	 function sum(a, b){
+	 if(typeof a == "number" && typeof b == "number"){
+	 return a + b;
+	 }
+	 alert(a + "," + b + "必须都为数字！");
+	 }
+
+	 // 别人去调用以上你写的sum函数.
+	 var retValue = sum(false, "abc");
+	 alert(retValue); // undefined
+
+	 var retValue2 = sum(1, 2);
+	 alert(retValue2); // 3
+	 */
+
+	var i
+	alert(typeof i) // "undefined"
+
+	var k = 10
+	alert(typeof k) // "number"
+
+	var f = 'abc'
+	alert(typeof f) // "string"
+
+	var d = null
+	alert(typeof d) // "object"  null属于Null类型,但是typeof运算符的结果是"object"
+
+	var flag = false
+	alert(typeof flag) // "boolean"
+
+	var obj = {}
+	alert(typeof obj) // "object"
+
+	// sayHello是一个函数.
+	function sayHello () {
+
+	}
+
+	alert(typeof sayHello) // "function"
+
+
+</script>
+</body>
+</html>

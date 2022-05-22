@@ -1,0 +1,137 @@
+<!--
+  ~ Time:2022/3/1 11:57 09
+  ~ Name:7、取消请求.html
+  ~ Path:Web代码/src/com/charlatan/self_study/axios/使用
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>取消请求</title>
+	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+	<h2 class="page-header">基本使用</h2>
+	<button class="btn btn-primary">发送请求</button>
+	<button class="btn btn-warning">取消请求</button>
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.js"></script>-->
+<script>
+	/**
+	 * 构造函数
+	 * @param config
+	 * @constructor
+	 */
+	function Axios (config) {
+		this.config = config
+	}
+
+	/**
+	 * 原型中的 request
+	 * @param config
+	 * @returns {*}
+	 */
+	Axios.prototype.request = function (config) {
+		return dispatchRequest(config)
+	}
+
+	function dispatchRequest (config) {
+		return xhrAdapter(config)
+	}
+
+	//xhrAdapter
+	function xhrAdapter (config) {
+		return new Promise((res, rej) => {
+			let xhr = new XMLHttpRequest()
+			xhr.open(config.method, config.url)
+			xhr.send()
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					console.log(xhr.response)
+					res({
+						status: xhr.status,
+						statusText: xhr.statusText,
+					})
+				} else {
+					new Error('错误')
+				}
+			}
+			// 如果配置了 cancelToken，那么就会走这个进行处理
+			if (config.cancelToken) {
+				//	对 cancelToken 对象身上的promise进行成功的回调
+				config.cancelToken.promise.then((value) => {
+					xhr.abort()
+					//	整体结果设置为失败
+					rej('请求取消')
+				})
+			}
+		})
+	}
+
+	/**
+	 * 当形参的函数被传递后，会先执行构造函数，如果调用 executor ，那么就会将executor中的方法为原来的实参进行赋值，
+	 * 在赋值的函数中，将 promise 的成功回调进行了赋值转移，并调用，然后将成功的回调中，完成了发送的取消
+	 * @param executor 传入的是一个函数，这个函数可以接收一个实参
+	 * @constructor
+	 */
+	function CancelToken (executor) {
+		//定义一个变量
+		let resolvePromise
+		this.promise = new Promise((res, rej) => {
+			//  将 res 赋值给 resolvePromise
+			resolvePromise = res
+		})
+		//	调用 executor
+		executor(function () {
+			// 执行res函数
+			resolvePromise()
+		})
+	}
+
+	let context = new Axios({})
+	// 创建 axios 对象
+	let axios = Axios.prototype.request.bind(context)
+
+	console.log(axios)
+
+	//	 声明全局变量
+	let cancel = null
+	$(`.btn:eq(0)`).click(function () {
+		// 发送请求前，先检测一下，上一个请求是否还存在，如果存在取消上一次，发送这一次
+		if (cancel !== null) {
+			cancel()
+		}
+		axios({
+			method: 'GET',
+			url: 'http://localhost:3000/posts',
+
+			//	配置取消配置属性
+			cancelToken: new CancelToken(function (c) {
+				// 将c的值进行赋值
+				cancel = c
+			}),
+		}).then((val) => {
+			console.log(val)
+		}, (res) => {
+			console.log(res)
+		})
+	})
+
+	$(`.btn:eq(1)`).click(function () {
+		cancel()
+		cancel = null
+	})
+
+
+</script>
+</html>

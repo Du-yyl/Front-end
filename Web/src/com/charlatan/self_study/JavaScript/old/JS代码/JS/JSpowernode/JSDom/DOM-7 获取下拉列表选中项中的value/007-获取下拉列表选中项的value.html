@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>获取下拉列表选中项的value</title>
+</head>
+<body>
+<!--
+<select onchange="alert(this.value)">
+  <option value="">--请选择省份--</option>
+  <option value="001">河北省</option>
+  <option value="002">河南省</option>
+  <option value="003">山东省</option>
+  <option value="004">山西省</option>
+</select>
+-->
+
+<script type="text/javascript">
+	window.onload = function () {
+		var provinceListElt = document.getElementById('provinceList')
+		provinceListElt.onchange = function () {
+			// 获取选中项的value
+			alert(provinceListElt.value)
+		}
+	}
+</script>
+<select id="provinceList">
+	<option value="">--请选择省份--</option>
+	<option value="001">河北省</option>
+	<option value="002">河南省</option>
+	<option value="003">山东省</option>
+	<option value="004">山西省</option>
+</select>
+
+</body>
+</html>
+
+<!--
+省份和市区的关系是：1对多
+省份表t_province
+id      pcode      pname
+----------------------------
+1       001        河北省
+2       002        河南省
+3       003        山东省
+4       004        山西省
+
+市区表t_city
+id      ccode      cname       pcode(fk)
+----------------------------------------------
+1       101        石家庄         001
+2       102        保定         001
+3       103        邢台         001
+4       104        承德         001
+5       105        张家口         001
+6       106        邯郸         001
+7       107        衡水         001
+
+前端用户选择的假设是河北省，那么必须获取到河北省的pcode，获取到001
+然后将001发送提交给服务器，服务器底层执行一条SQL语句：
+	select * from t_city where pcode = '001';
+
+	返回一个List集合，List<City> cityList;
+
+	cityList响应浏览器，浏览器在解析cityList集合转换成一个新的下拉列表。
+
+-->

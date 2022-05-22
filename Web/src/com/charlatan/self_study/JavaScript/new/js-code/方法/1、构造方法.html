@@ -1,0 +1,40 @@
+<!--
+  ~ Date:2021/11/29 下午3:13
+  ~ Name:1、构造方法.html
+  ~ Path:D:/WWW/Web代码/src/com/charlatan/self_study/me/JavaScript/new/js-code/构造方法/1、构造方法.html
+  ~ Project:Web代码
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构造方法</title>
+</head>
+<body>
+<script>
+
+	function Person (no, name, age) {
+		this.no = no
+		this.name = name
+		this.age = age
+	}
+
+	function Dog (no, name) {
+		this.no = no
+		this.name = name
+	}
+
+	let n1 = new Person(1, '张三', 12)
+	let n2 = new Person(1, '李四', 22)
+	console.log(n1.no === n2.no)
+	let d1 = new Dog(1, 'tom')
+	console.log(n1.name, n1.age, n1.no)
+	console.log(typeof Person)
+	console.log(d1 instanceof Dog)
+	console.log(d1 instanceof Person)
+</script>
+</body>
+</html>

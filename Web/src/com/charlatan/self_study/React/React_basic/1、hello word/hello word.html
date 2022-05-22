@@ -1,0 +1,39 @@
+<!--
+  ~ Time:2022/3/20 16:16 56
+  ~ Name:hello word.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/1、hello word
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+<div id="text">
+
+</div>
+</body>
+<!--    引入核心库-->
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<!--    引入DOM库-->
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<!--    用于将 jsx 转为 js-->
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<!--    这里写的类型是babel，不是原生JS，通过 Babel 进行翻译-->
+<script type="text/babel">
+	//	创建虚拟ＤＯＭ
+	const VDom = <h1>Hello World</h1>   // 这里使用的是JSX，不能使用引号进行包裹
+	//	渲染虚拟DOM到页面
+	ReactDOM.render(VDom, document.getElementById('text'))
+
+</script>
+
+</html>

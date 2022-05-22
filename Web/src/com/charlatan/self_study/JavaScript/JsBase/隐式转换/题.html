@@ -1,0 +1,67 @@
+<!--
+  ~ Date:2021/12/20 10:57 03
+  ~ Name:题.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/JsBase/隐式转换
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>题</title>
+
+</head>
+<body>
+<pre>
+	复杂数据类型转成number数据类型：
+		1.先使用 valueOf() 方法获取原始值，如果原始值不是number数据类型，则使用 toString() 方法转成string；
+		2.再通过 Number() 方法装成number数据类型
+		需要注意的：空数组的toString()方法会得到空字符串，而空对象的toString()方法会得到字符串[object Object]
+</pre>
+</body>
+<script>
+	console.log([] == ![])
+	// - 第一步，![] 会变成 false
+	// - 第二步，应用 规则2 ，题目变成： [] == 0
+	// - 第三步，应用 规则5 ，[]的valueOf是0，题目变成： 0 == 0
+	// - 所以， 答案是 true ！//
+
+	/*
+	 * （1） [].valueOf().toString() 得到空字符串 ""
+	 （2） ![] = false
+	 （3） Number("") == Number(false) 成立 都是0
+	 * */
+
+	console.log([undefined] == false)
+	/*	- 第一步，应用 规则5 ，[undefined]通过toString变成 '',
+	 题目变成  '' == false
+	 - 第二步，应用 规则2 ，题目变成  '' == 0
+	 - 第三步，应用 规则3 ，题目变成  0 == 0
+	 - 所以， 答案是 true ！
+	 // 但是 if([undefined]) 又是个true！*/
+
+	console.log([] == 0)
+	/*
+	 *   （1）[].valueOf().toString() 得到空字符串
+	 （2）Number("") == 0 成立
+	 * */
+
+	console.log(![] == 0)
+	// （1）逻辑非优先级高于关系运算符 ![] = false (空数组转布尔得到true， )
+	// （2）false == 0 成立
+
+	console.log([] == [])
+	//	引用类型数据存在堆内存中，栈内存中存储的是地址，所以他们的结果是false
+
+	console.log({} == !{})
+	// （1） {}.valueOf().toString() 得到字符串'[object Object]'
+	// （2） !{} = false
+	// （3） Number('[object Object]') == Number(false) 不成立，因为转换到最后 是NaN 和 0比较，所以结果为 false
+
+	console.log({} == {})
+	// 引用类型数据存在堆内存中，栈内存中存储的是地址，所以他们的结果是false
+</script>
+</html>

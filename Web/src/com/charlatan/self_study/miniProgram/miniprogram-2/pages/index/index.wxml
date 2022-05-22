@@ -1,0 +1,11 @@
+<view class="indexContainer">
+    <image class="avatarUrl" src="{{ avaUrl }}"></image>
+    <text class="userName">{{msg}}</text>
+    <button open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">
+        获取用户信息按钮
+    </button>
+    <view class="showTitle" catchtap="toLog">
+        <text catchtap="toLog">你好，世界</text>
+    </view>
+</view>
+

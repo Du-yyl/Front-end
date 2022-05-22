@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object类型</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	 * Object
+	 *   Object类型都是Object的超类，自定义的类型默认继承Object,继承Object函数和属性
+	 *   Object包含的属性：
+	 *     prototype 属性【给类动态的扩展属性和函数】
+	 *     constructor 属性
+	 *   Object包含的函数：
+	 *     toString()
+	 *     valueOf()
+	 *     toLocaleString()
+	 *   JS定义类，new对象
+	 *     定义类：
+	 *       function 类名 （形参）{
+	 *
+	 *       }
+	 *       类名 = function （形参）{
+	 *
+	 *       }
+	 *   创建对象的语法：
+	 *     new 构造方法名(实参); 构造方法名和类名一致
+	 * 在JS中类的定义，同时也是构造函数的定义
+	 * */
+	function sayHello (username) {
+		alert('你好，' + username)
+	}
+
+	//这种方式是将sayHello当成普通函数调用
+	sayHello('jack')
+	//这种方式是将sayHello当成一个类来创建对象
+	var obj = new sayHello()   //obj是一个引用，保存内存地址指向堆中的对象
+	alert(obj)
+
+	function user (a, b, c) {
+		//声明user类中有三个属性
+		this.name = a
+		this.age = b
+		this.no = c
+	}
+
+	var zhangsan = new user('zhangsan', 15, 1)
+	var lisi = new user('lisi', 15, 2)
+	alert(zhangsan.name)
+	alert(zhangsan['age'])
+
+	users = function (name, no, num) {
+		this.name = name
+		this.no = no
+		this.num = num
+		this.getName = function () {
+			return this.name
+		}
+	}
+	var a1 = new users('西瓜', 1, 100)
+	var a2 = new users('香蕉', 2, 200)
+	var a11 = a1.getName()
+	alert(a11)
+	var a22 = a2.getName()
+	alert(a22)
+
+	//可以通过prototype属性给类动态拓展属性以及函数
+	//users这个类使用prototype动态的拓展了getNo这个函数
+	users.prototype.getNo = function () {
+		return this.no
+	}
+	var a222 = a2.getNo()
+	var a111 = a1.getNo()
+	alert(a222)
+	alert(a111)
+
+	//不仅可以扩展自定义的类，还可以扩展本来提供的类
+	String.prototype.fin = function () {
+		alert('这是一个测试')
+	}
+	'测试'.fin()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!--
+  ~ Date:2021/12/6 9:58 55
+  ~ Name:2、事件的委派.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/JavaScript/new/DOM/事件
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件的委派</title>
+	<style>
+
+	</style>
+	<script>
+		window.onload = function () {
+			let lis = document.getElementById('ul').getElementsByClassName('li')
+
+			/*
+			 * 这种绑定事件是能像快照一样，在第一次声明时进行了完整的绑定，这种操作需要重新获取
+			 * */
+
+			let btn1 = document.getElementById('btn1')
+			btn1.onclick = function () {
+				let li = document.createElement('li')
+				li.innerHTML = '我是新添加的字符串'
+				li.className = 'li'
+				document.getElementById('ul').appendChild(li)
+			}
+
+			// for (let i = 0; i < lis.length; i++) {
+			//     lis[i].onclick = function () {
+			//         alert("我是第" + (i + 1) + "个元素")
+			//     }
+			// }
+
+			/*
+			 * 为li标签绑定一次，并为所有的都完成
+			 *
+			 * 在使用时，是因为ul拥有更大的点击几率，所以点击ul中li其实是点击ul进行触发的
+			 * 要完成点击不同的li就要进行点击对象的确认
+			 * 使用 event.target来确保点击的对象，当点击的对象不对时不进行条件的触发
+			 *
+			 * event.target.tagName
+			 *   返回的类型是String类型，可以进行判断，进行绑定事件的确认
+			 * */
+			document.getElementById('ul').onclick = function (event) {
+				// alert("我是ul绑定的")
+				// alert(this)
+				// alert(event.target.tagName)
+				if (event.target.tagName === 'LI') {
+					alert(123)
+				}
+				// alert (event.target)
+
+			}
+		}
+	</script>
+</head>
+<body>
+<input id="btn1" type="button" value="我是按钮">
+<ul id="ul">
+	<li class="li">我是字符一</li>
+	<li class="li">我是字符二</li>
+	<li class="li">我是字符三</li>
+	<p>
+		123
+	</p>
+</ul>
+<!-- /#ul -->
+</body>
+</html>

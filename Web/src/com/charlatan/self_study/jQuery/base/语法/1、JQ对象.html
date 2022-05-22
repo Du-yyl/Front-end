@@ -1,0 +1,102 @@
+<!--
+  ~ Date:2021/12/18 14:05 09
+  ~ Name:1、JQ对象.html
+  ~ Path:Web代码/src/com/charlatan/self_study/me/jQuery/base/核心/JQ对象
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQ对象</title>
+
+</head>
+<body>
+<pre>
+	1. jQuery对象是一个包含所有匹配的任意多个dom元素的伪数组对象
+	2. 基本行为
+	  * size()/length: 包含的DOM元素个数
+	  * [index]/get(index): 得到对应位置的DOM元素
+	  * each(): 遍历包含的所有DOM元素
+	  * index(): 得到在所在兄弟元素中的下标
+</pre>
+<hr>
+<button>测试一</button>
+<button>测试二</button>
+<button id="btn3">测试三</button>
+<button>测试四</button>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+	$(function () {
+		let $buttons = $(`button`)
+		console.log('一共有：' + $buttons.length + '个按钮')
+		// console.log($buttons.length, $buttons.size());
+
+		//两种方法找到指定元素的文本
+		console.log($buttons[1].innerHTML)
+		console.log($buttons.get(1).innerHTML)
+
+		console.log('--------------------')
+
+		$.each($buttons, function (index) {
+			console.log($buttons[index].innerHTML)
+		})
+		/**
+		 * 这个each方法也能通过先进行指定再直接写其中的方法，并通过指定的回调函数进行指定指定的函数
+		 * function的第一个参数是数组的下标，第二个元素是DOM元素
+		 * 这个方法中返回的this直接是每次循环遍历的指定DOM对象
+		 */
+		$buttons.each(function (index, domElement) {
+			console.log(index, domElement.innerHTML, this)
+		})
+
+		//	当简写这个函数，直接打印this
+		$buttons.each(function () {
+			console.log(this.innerHTML)
+		})
+		console.log('----------------')
+		let $btn3 = $(`#btn3`)
+		console.log($btn3.text())
+		// console.log($btn3.innerHTML);
+		$buttons.each(function (index) {
+			if ($btn3.text().toString() === this.innerHTML.toString()) {
+				console.log('第' + (index + 1) + '个')
+			}
+		})
+		console.log('-------------------------')
+
+		/*
+		 如果不给 .index() 方法传递参数，那么返回值就是这个jQuery对象集合中第一个元素相对于其同辈元素的位置。
+		 如果参数是一组DOM元素或者jQuery对象，那么返回值就是传递的元素相对于原先集合的位置。
+		 如果参数是一个选择器，那么返回值就是原先元素相对于选择器匹配元素中的位置。如果找不到匹配的元素，则返回-1
+		 */
+		console.log($buttons.index($btn3))
+
+		/*
+		 * 伪数组：
+		 *   Object对象
+		 *   length属性
+		 *   数值下标属性
+		 *       但是不属于Array
+		 *
+		 * 伪数组有数组的特性，但是没有数组的方法和行为并且是Object类型的对象
+		 * 【forEach、push（）、pop（）、splice（）是数组独有方法】
+		 * */
+		console.log($buttons instanceof Array)
+		let notArr = {}
+		notArr.length = 2
+		notArr[0] = '123'
+		notArr[1] = '234'
+		for (let i = 0, len = notArr.length; i < len; i++) {
+			console.log(notArr[i])
+		}
+		console.log(notArr.forEach, $buttons.forEach)
+
+	})
+
+</script>
+</html>

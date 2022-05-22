@@ -1,0 +1,72 @@
+<!--
+  ~ Time:2022/3/23 15:32 25
+  ~ Name:9、回调ref的执行次数问题.html
+  ~ Path:Web/src/com/charlatan/self_study/React/React_basic/5、组件的三大属性
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+<div id="test"></div>
+</body>
+<!--
+	在 ref 中定义一个内联函数，这个函数会在第一渲染的时候调用一次，
+	在这个组件被更改是会重新调用这个函数，并且调用两次，第一次调用的时候获取的参数是 null
+	这个问题在实际使用的时候不会出现什么影响，不过会有这个问题
+	因为每次组件的重新渲染会重新定义这个函数来保证正确，所以这个方法在更新的时候会多次执行
+
+	可以将内联函数定义成一个指定函数，通过函数名字调用，就能解决这个问题
+-->
+<script src="../../ReactLibrary/oldVersionOfReact/react.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/react-dom.development.js"></script>
+<script src="../../ReactLibrary/oldVersionOfReact/babel.min.js"></script>
+<script type="text/babel">
+	class Demo extends React.Component {
+		/**
+		 * 将这个函数定义为外部的，在重新渲染组件的时候，会直接找到这个函数，就不会进行这个函数的重新定义，从而解决问题
+		 * @param item
+		 */
+		ref = (item) => {
+			console.log('内联函数执行了')
+			console.log(item)
+			this.input1 = item
+		}
+
+		render () {
+			return (
+					<div>
+						<h1>
+							{this.state.flag ? '第一个信息' : '第二个信息'}
+						</h1>
+						<input type="text" ref={this.ref}/>
+						<button onClick={this.showClick}>点击提示内容</button>
+						<button onClick={this.changMsg}>点击更新内容</button>
+					</div>
+			)
+		}
+
+		state = {
+			flag: true,
+		}
+
+		changMsg = () => {
+			this.state.flag = this.setState({ flag: !this.state.flag })
+		}
+		showClick = () => {
+			console.log(this.input1.value)
+		}
+	}
+
+	ReactDOM.render(<Demo/>, document.getElementById('test'))
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!--
+  ~ Time:2022/3/26 18:05 36
+  ~ Name:featch.html
+  ~ Path:Web/src/com/charlatan/self_study/JavaScript/JsBase/featch
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Title</title>
+
+</head>
+<body>
+<!--
+	fetch 请求过程 【关注分离的思想】
+	首先进行指定内容的发送，先向服务器联系（确认指定内容是否存在，但是不关注结果，即使返回的404也会返回成功）
+	如果测试发送成功，就会进行下一步，除非不可抗力，如断网等，第一步就会出错
+
+	如果第一步已经出错了，不能返回成功或失败的回调（因为下一个then中会进行处理，应该返回一个 怕padding 中的promise 通过这个阻止下一个的运行
+	第一步没有问题，可以进入下一步，通过第一步返回的 response.json() 进行内容的获取，如果是成功的回调，
+	那么就将数据输出，如果错误，将错误原因进行返回
+-->
+</body>
+<script>
+
+
+	//发送网络请求---使用fetch发送（未优化）
+	/* fetch(`https://api.github.com/search/users?q=1`).then(
+	 response => {
+	 console.log('联系服务器成功了');
+	 return response.json()
+	 },
+	 error => {
+	 console.log('联系服务器失败了',error);
+	 return new Promise(()=>{})
+	 }
+	 ).then(
+	 response => {console.log('获取数据成功了',response);},
+	 error => {console.log('获取数据失败了',error);}
+	 ) */
+
+
+	//发送网络请求---使用fetch发送（优化）
+	try {
+		const response = await fetch(`https://api.github.com/search/users?q=1`)
+		const data = await response.json()
+		console.log(data)
+	} catch (error) {
+		console.log('请求出错', error)
+	}
+
+</script>
+</html>
