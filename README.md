@@ -36,6 +36,8 @@ charlatan
 
 - [x] jQuery
 
+- [x] Bootstrap
+
 - [x] Less
 
 - [x] AJAX
@@ -44,13 +46,13 @@ charlatan
 
 - [x] MongoDB
 
-- [x] promise
-
-- [x] axios
-
 - [ ] ECharts
 
 - [x] Vue
+
+- [x] promise
+
+- [x] axios
 
 - [x] webpack
 
