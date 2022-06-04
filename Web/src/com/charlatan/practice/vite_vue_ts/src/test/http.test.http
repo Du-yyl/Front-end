@@ -1,0 +1,26 @@
+### 主页链接
+GET https://mall.api.epet.com/v3/index/home.html?pet_type=cat&version=596&is_single=0&isWeb=1&system=wap
+
+
+
+
+
+
+/**
+
+
+HTTP/1.1 200 OK
+Date: Tue, 31 May 2022 03:18:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.1.9
+P3P: CP=CAO PSA OUR
+Set-Cookie: X15t_ssid=3TW22rMRd20Tde2W; expires=Fri, 28-May-2032 03:18:23 GMT; Max-Age=315360000; path=/; domain=.epet.com
+Set-Cookie: X15t_mall_uid=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.epet.com
+Set-Cookie: X15t_cs_auth=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.epet.com
+Set-Cookie: X15t_gott_auth=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.epet.com
+Set-Cookie: X15t_gott_auth_refresh=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.epet.com
+Set-Cookie: X15t_ac_id=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.epet.com
+Set-Cookie: X15t_PET_ID=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.epet.com
+

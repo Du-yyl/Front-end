@@ -1,0 +1,19 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "dependencies": {
+    "underscore": "^1.13.2"
+  },
+  "devDependencies": {
+    "jquery": "^1.12.4"
+  },
+  "scripts": {
+    "hello": "echo  hello",
+    "npm_js": "node npm_test.js & node npm_test_2.js",
+    "start": "node npm_test.js",
+    "test": "node npm_test_2.js"
+  },
+  "config": {
+    "env": "production"
+  }
+}

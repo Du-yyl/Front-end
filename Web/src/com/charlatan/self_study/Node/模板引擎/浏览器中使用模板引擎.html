@@ -1,0 +1,51 @@
+<!--
+  ~ Date:2022/1/12 19:02 12
+  ~ Name:浏览器中使用模板引擎.html
+  ~ Path:Web代码/src/com/charlatan/self_study/Node/模板引擎
+  ~ ProjectName:WWW
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浏览器中使用模板引擎</title>
+
+</head>
+<body>
+
+<script src="/node_modules/art-template/lib/template-web.js"></script>
+
+<script id="tpl" type="text/x-handlebars-template">
+	hello ,{{ name }}
+	第一个数据：{{ data1 }}
+	第二个数据：{{ data2 }}
+	第三个数据：{{ data3 }}
+	多个数据：{{ each hobbies }} {{ $value }} {{ /each }}
+
+	<!--	{{each}}-->
+	<!--		{{ $value }}-->
+			<!--	{{/each}}-->
+
+	{{each hobbies}}
+	{{$index}} {{$value}}
+	{{/each}}
+
+</script>
+
+<script>
+	let ret = template('tpl', {
+		name: 'Jack',
+		data1: '第一个数据',
+		data2: '第二个数据',
+		data3: '第三个数据',
+		hobbies: ['第一个', '第二个', '第三个', '第四个', '第五个', '第六个', '第七个'],
+	})
+
+	console.log(ret)
+</script>
+
+</body>
+</html>

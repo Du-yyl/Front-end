@@ -1,0 +1,2213 @@
+<!--
+  ~ Time:2022/1/21 13:18 05
+  ~ Name:index.html
+  ~ Path:留言板
+  ~ ProjectName:Node
+  ~ Author:charlatan
+  ~
+  ~  Il n'ya qu'un héroïsme au monde : c'est de voir le monde tel qu'il est et de l'aimer.
+  -->
+<!DOCTYPE html>
+<html lang="en" xmlns="div" xmlns="">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta content="*" http-equiv="Access-Control-Allow-Origin">
+	<title>my</title>
+	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
+	<style>
+
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font: 500 1vw/1.3em YouYuan;
+			/* 字体选择： STKaiti fangsong STCaiyun FZShuTi */
+			text-decoration: none;
+		}
+
+		a:link {
+			color: #b700ff;
+		}
+
+		a:visited {
+			color: #0066ff;
+		}
+
+		a:hover {
+			color: #FF00FF;
+		}
+
+		a:active {
+			color: #ff8800;
+		}
+
+		*::selection {
+			color: #fff99a;
+			background-color: #ff961b;
+		}
+
+		*::placeholder {
+			font: 500 .5rem YouYuan;
+		}
+
+		*::placeholder {
+			cursor: pointer;
+		}
+
+		ul:after {
+			content: "";
+			height: 0;
+			clear: both;
+			overflow: hidden;
+			display: block;
+			visibility: hidden;
+		}
+
+		li {
+			cursor: pointer;
+			position: relative;
+			list-style: none;
+		}
+
+		label, button {
+			user-select: none;
+			/*pointer-events:none;*/
+		}
+
+		input {
+			padding: .1rem 0 .1rem .1rem;
+			font: 500 .8rem YouYuan;
+		}
+
+		button {
+			cursor: pointer;
+		}
+
+		/*-------以上为默认设置（The above is the default setting）--------*/
+
+
+		body::-webkit-scrollbar { /*滚动条整体样式*/
+			width: 1rem; /*高宽分别对应横竖滚动条的尺寸*/
+			/* scrollbar-arrow-color: #45e169; */
+		}
+
+		body::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+			border-radius: 2rem;
+			-webkit-box-shadow: inset 0 0 5px rgba(54, 234, 87, 0.8);
+			background: rgba(86, 229, 174, 0.8);
+			scrollbar-arrow-color: #46f667;
+		}
+
+		body::-webkit-scrollbar-track { /*滚动条里面轨道*/
+			/* -webkit-box-shadow: inset 0 0 5px rgba(184, 203, 201, 0.2); */
+			border-radius: 2rem;
+			background: white;
+		}
+
+
+		/*  导航条  */
+		#heard {
+			width: 100%;
+			height: 5rem;
+			background: #ffffff;
+			position: sticky;
+			top: 0;
+			padding: 0 10rem 0 10rem;
+			font: 15px "";
+			border-bottom: 2px solid red;
+			z-index: 10;
+		}
+
+		/* ---------left---------------- */
+		.heard-nav-left {
+			position: relative;
+			font: 1.4em/5rem "";
+			top: 0;
+		}
+
+		/* ---------center----------------- */
+		.heard-nav-center {
+			position: absolute;
+			top: 0;
+			left: 30%;
+			background-color: #ffffff;
+			height: 5rem;
+			width: 55rem;
+		}
+
+		#heard-nav-center-ul {
+			z-index: 1;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			align-items: center;
+			position: relative;
+		}
+
+		.heard-nav-center-ul-li {
+			background: #ffffff;
+			height: 5rem;
+			position: relative;
+			/* z-index: 1; */
+			width: 9rem;
+			display: flex;
+			padding-top: 1.4rem;
+			justify-content: center;
+			transition: color .5s ease-in-out;
+			z-index: 10;
+		}
+
+		.heard-nav-center-ul-li:hover {
+			color: red;
+		}
+
+		.heard-nav-center-li-img-div {
+			display: inline-block;
+			background: url("file/piaoliuping.png") no-repeat 0;
+			background-size: 2rem;
+			width: 2rem;
+			height: 2rem;
+			position: relative;
+		}
+
+		.heard-nav-right-search-switch {
+			width: 9rem;
+			height: 3px;
+			background-color: #cff599;
+			position: absolute;
+			bottom: -4px;
+			border-radius: 50px 50px 50px 50px;
+			box-shadow: 0 0 2px 2px #91e884;
+			z-index: 2;
+			left: .3rem;
+			transition: all .4s cubic-bezier(0, .4, .6, 1.2);
+		}
+
+		/* -------right------------ */
+		#heard-nav-right {
+			position: absolute;
+			right: 20vw;
+			top: 0;
+			height: 5rem;
+			background: #c8f3e3;
+		}
+
+		#heard-nav-right-search-img-div {
+			width: 3.5rem;
+			height: 3.5rem;
+			background-color: #dadec1;
+			border: 0 solid #abea8d;
+			border-radius: 50%;
+			box-sizing: border-box;
+			transition: all .3s ease-in-out;
+			margin-top: .5rem;
+			cursor: pointer;
+			z-index: 5;
+		}
+
+		#heard-nav-right-search-img-div:hover {
+			border: 1.75rem solid #e34a4a;
+		}
+
+		.heard-nav-right-search-img {
+			width: 2rem;
+			position: absolute;
+			top: 1.3rem;
+			left: .6rem;
+			z-index: 5;
+			transition: all .5s ease-in-out;
+		}
+
+		/* 搜索框下拉 */
+		.heard-nav-right-input-div {
+			width: 100%;
+			height: 5.6rem;
+			background: #c73232;
+			position: absolute;
+			top: -5.6rem;
+			left: 0;
+			z-index: 3;
+			transition: all .2s ease-in-out;
+		}
+
+		.heard-nav-right-search-img-input-show {
+			top: 1.5rem;
+			width: 2.7rem;
+			left: -12rem;
+		}
+
+		.heard-nav-right-search {
+			width: 70rem;
+			height: 4rem;
+			position: absolute;
+			top: .8rem;
+			left: 25%;
+			padding-left: 1rem;
+			font: 1.5rem "";
+			border: none;
+			outline: none;
+			background-color: #c73232;
+			color: white;
+		}
+
+		.heard-nav-right-search::placeholder {
+			padding-left: .2rem;
+			color: white;
+			font: 1.5rem "";
+		}
+
+		.heard-nav-right-input-cancel {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: .5rem;
+			right: 35rem;
+		}
+
+		.heard-nav-right-input-cancel-1 {
+			width: 30px;
+			height: 5px;
+			background-color: #9cd7ad;
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: auto;
+			top: 20px;
+			border-radius: 50px 50px 50px 50px;
+			transform: rotate(45deg);
+		}
+
+		.heard-nav-right-input-cancel-2 {
+			width: 30px;
+			height: 5px;
+			border-radius: 50px 50px 50px 50px;
+			background-color: #9cd7ad;
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: auto;
+			transform: rotate(-45deg);
+			top: 20px;
+		}
+
+		/* 	下拉提示内容 */
+		.heard-nav-right-input-hint {
+			z-index: 10;
+			width: 80rem;
+			background-color: #9cd7ad;
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 5.6rem;
+			margin: auto;
+			/* 旋转轴 */
+			transform-origin: top;
+			transform: perspective(10rem) rotateX(270deg);
+			transition: all .4s .3s;
+			border-radius: 0 0 10px 10px;
+		}
+
+		.heard-nav-right-input-hint-switch {
+			transform: perspective(20rem) rotateX(360deg);
+			background-color: #0066ff;
+		}
+
+		#heard-nav-right-input-hint-ul {
+			margin-top: 2rem;
+			z-index: 10;
+			position: relative;
+		}
+
+		#heard-nav-right-input-hint-ul > li {
+			font: 1.8rem/3.6rem "";
+			padding-left: 5rem;
+			z-index: 10;
+			position: relative;
+		}
+
+		#heard-nav-right-input-hint-ul > li:hover {
+			background-color: burlywood;
+		}
+
+		.heard-nav-right-input-hint-ul-li-foc {
+			background-color: #c8e5bc;
+			border-bottom: 1px solid palegreen;
+		}
+
+		/* 导航条下的文字 */
+		#heard-top {
+			width: 90vw;
+			height: 40rem;
+			background-color: #c8e5bc;
+			position: relative;
+			left: calc(50% - 45vw);
+			z-index: 0;
+			display: flex;
+			border-radius: 10px;
+			top: 10px;
+		}
+
+		.heard-top-main {
+			position: relative;
+			top: 20rem;
+		}
+
+		/* 发送评论 */
+		#body-form {
+			width: 90vw;
+			height: 30rem;
+			background-color: #d5fdaa;
+			position: relative;
+			left: calc(50% - 45vw);
+			border-radius: 10px;
+		}
+
+		.body-form-title {
+			font: 3rem "";
+		}
+
+
+		.body-form-input {
+			width: 70vw;
+			position: relative;
+			left: 10rem;
+			top: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			height: 10rem;
+			padding: 1rem;
+			background-color: #f3f3f3;
+			resize: none;
+
+			overflow-y: auto;
+			overflow-x: hidden;
+			border: 1px solid #cbbb1e;
+			outline: none;
+			border-radius: 5px;
+		}
+
+		.body-form-input:focus {
+			border: 1px solid #646464;
+			box-shadow: 0 0 3px 3px #c8e5bc;
+		}
+
+		.body-form-input::placeholder {
+			font: 1.3rem "";
+		}
+
+
+		/* 滚动条样式 */
+		.body-form-input::-webkit-scrollbar {
+			width: 9px;
+		}
+
+		.body-form-input::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-color: #c76666;
+		}
+
+		/* emoji */
+
+		.body-form-emoji {
+			position: relative;
+			left: 10rem;
+			top: 2rem;
+			width: 6rem;
+			cursor: pointer;
+			border: 1px solid red;
+			text-align: center;
+			height: 3rem;
+			line-height: 3rem;
+			border-radius: 3px;
+			transition: all .5s;
+			background-color: #f3f3f3;
+			user-select: none;
+		}
+
+		.body-form-emoji:hover {
+			color: black;
+			background-color: #e8e8e8;
+
+		}
+
+
+		.body-form-emoji-ul {
+			width: 30rem;
+			height: 0;
+			background-color: #ffffff;
+			position: absolute;
+			top: 18rem;
+			left: 4rem;
+			display: flex;
+			justify-content: left;
+			flex-wrap: wrap;
+			border-radius: 5px;
+			overflow: hidden;
+			transition: all .7s;
+			z-index: 20;
+		}
+
+		.body-form-emoji-ul-switch {
+			width: 30rem;
+			height: 20rem;
+			background-color: #ffffff;
+			position: absolute;
+			top: 22rem;
+			left: 4rem;
+			display: flex;
+			justify-content: left;
+			flex-wrap: wrap;
+			overflow-y: scroll;
+			border: 1px solid grey;
+			border-radius: 5px;
+			padding: .9rem;
+		}
+
+		.body-form-emoji-lis {
+			user-select: none;
+			width: 37px;
+			margin: .4rem;
+		}
+
+		#body-form-emoji-ul::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		#body-form-emoji-ul::-webkit-scrollbar-track {
+			padding: 10px;
+		}
+
+		#body-form-emoji-ul::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-color: #c76666;
+		}
+
+
+		.body-form-emoji-lis-gif {
+			width: 100%;
+		}
+
+
+		/* 填写信息 */
+		.body-form-i {
+			position: relative;
+			left: 18rem;
+			text-align: center;
+			height: 3rem;
+			line-height: 3rem;
+			width: 10rem;
+			border: 1px solid #c8e5bc;
+			border-radius: 4px;
+			background-color: #ece8e3;
+			cursor: pointer;
+			top: -1rem;
+			user-select: none;
+		}
+
+		.body-form-i-body {
+
+			width: 21rem;
+			height: 0;
+			background-color: #c8e5bc;
+			position: absolute;
+			padding: 0;
+			top: 9rem;
+			left: 15rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			border: none;
+			border-radius: 4px;
+			overflow: hidden;
+			transition: all .4s ease-in-out;
+		}
+
+		.body-form-i-body-switch {
+			width: 21rem;
+			height: 8rem;
+			background-color: #c8e5bc;
+			position: absolute;
+			padding: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #8a8a8a;
+			border-radius: 4px;
+		}
+
+		.body-form-i-body-name {
+			outline: none;
+			border: 1px solid #c8e5bc;
+			border-radius: 2px;
+			padding-left: .5rem;
+		}
+
+		.body-form-i-body-name:focus {
+			border: 1px solid #ffcb05;
+		}
+
+		.body-form-i-body-email {
+			outline: none;
+			border: 1px solid #c8e5bc;
+			border-radius: 2px;
+			padding-left: .5rem;
+		}
+
+		.body-form-i-body-email:focus {
+			border: 1px solid #ffcb05;
+		}
+
+		/* 是否匿名 */
+		.body-form-anonymous {
+			position: relative;
+			top: -4rem;
+			height: 3rem;
+			left: 30rem;
+			width: 12rem;
+			line-height: 3rem;
+			background-color: white;
+			user-select: none;
+			cursor: pointer;
+		}
+
+		.body-form-anonymous-1 {
+			width: 3.3rem;
+			height: 1.3rem;
+			background-color: #e0de63;
+			position: absolute;
+			top: .85rem;
+			right: 1rem;
+			border-radius: 50px 50px 50px 50px;
+			transform: rotate(-20deg);
+			/* transform: rotate(20deg); */
+			display: flex;
+			transition: background-color .9s ease, transform .9s .3s ease;
+		}
+
+		.body-form-anonymous-1-switch {
+			transform: rotate(20deg);
+			background-color: #84f580;
+		}
+
+		.body-form-anonymous-2 {
+			height: 1.3rem;
+			position: relative;
+			width: 1.6rem;
+			background-color: #3cce7c;
+			border-radius: 50px 50px 50px 50px;
+			top: 0;
+			left: 0;
+			transition: width .9s ease;
+		}
+
+		.body-form-anonymous-2-switch {
+			width: 3.3rem;
+
+		}
+
+		.body-form-anonymous-3 {
+			width: 1.6rem;
+			height: 1.6rem;
+			background-color: #e86d20;
+			position: absolute;
+			top: -.1rem;
+			border-radius: 50%;
+			right: 0;
+			border: 1px solid #bce8f1;
+			transition: background-color .9s ease;
+		}
+
+		.body-form-anonymous-3-switch {
+			background-color: #47b634;
+		}
+
+
+		/* 提交 */
+		.body-form-submit {
+			position: relative;
+			top: -8.5rem;
+			left: 106rem;
+			width: 8rem;
+			height: 3rem;
+			text-align: center;
+			line-height: 3rem;
+			background-color: #ffbb62;
+			border-radius: 5px;
+			border: 1px solid #4cbd37;
+			cursor: pointer;
+			user-select: none;
+		}
+
+
+		/* 评论内容 */
+		#body-body {
+			width: 94vw;
+			background-color: #ffbb62;
+			position: relative;
+			border-radius: 10px;
+			left: calc(50% - 47vw);
+			padding-left: 10vw;
+		}
+
+		#body-body-ul {
+			overflow: hidden;
+			transition: all .6s ease-in-out;
+			padding: 3rem 0;
+		}
+
+		.title-lis {
+			width: 70vw;
+			background-color: #ffffff;
+			margin: 10px;
+			cursor: inherit;
+			border-radius: 5px;
+			padding: 0 0 4rem 0;
+			overflow: hidden;
+			left: 0;
+			transition: all .5s ease-in-out;
+			top: 0;
+			position: relative;
+		}
+
+		.title-lis-hidden {
+			height: 0 !important;
+			padding: 0;
+			/* margin-bottom: -0rem; */
+			/* top: -20rem; */
+		}
+
+
+		.body-lis-name {
+			position: relative;
+			background: #ffffff;
+			text-align: center;
+			line-height: 3rem;
+			cursor: pointer;
+			letter-spacing: .5rem;
+			transition: left .4s, right .4s, bottom .8s, opacity .4s .1s;
+			left: 2rem;
+			opacity: 1;
+		}
+
+		.body-lis-name-hidden {
+			opacity: 0;
+			left: -15rem;
+		}
+
+		.body-lis-name::after {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: .5rem;
+			background: #c7c9d2;
+			display: block;
+			border-radius: 3px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			top: 2rem;
+			transition: width .7s, transform .3s .3s;
+			transform: translateX(0);
+			cursor: pointer;
+		}
+
+		.title-lis:hover .body-lis-name::after {
+			transform: translateX(-10%);
+			width: 120%;
+		}
+
+		.body-lis-time {
+			font: 200 1.2rem "";
+			position: absolute;
+			display: flex;
+			flex-wrap: nowrap;
+			width: 13rem;
+			justify-content: center;
+			align-items: center;
+			top: 1rem;
+			transition: left .4s, right .4s, bottom .8s, opacity .4s .1s;
+			right: 1rem;
+			background: white;
+			opacity: 1;
+		}
+
+		.body-lis-time-hidden {
+			opacity: 0;
+			right: -14rem;
+		}
+
+
+		.body-lis-main-top {
+			width: 100%;
+			height: 1px;
+			background: #bdbdbd;
+			position: relative;
+			display: flex;
+			top: .5rem;
+		}
+
+		.body-lis-title {
+			text-indent: 3rem;
+			font: 2rem "STKaiti";
+			width: 100rem;
+			/* width: 95rem; */
+			height: auto;
+			background: #efefef;
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			line-height: 3rem;
+			left: 2.5rem;
+			border-radius: 10px;
+			user-select: none;
+			bottom: -2rem;
+			transition: left .4s, right .4s, bottom .8s, opacity .4s .1s;
+			opacity: 1;
+		}
+
+		.body-lis-title-hidden {
+			opacity: 0;
+			/* bottom: -2rem; */
+			bottom: -20rem;
+		}
+
+		.body-lis-set {
+			position: absolute;
+			top: 60%;
+			left: 100rem;
+			width: 2rem;
+			height: 2rem;
+			background-color: #987878;
+			cursor: pointer;
+		}
+
+		.body-lis-set-2 {
+			top: 50%;
+		}
+
+		/* emoji输入后样式 */
+		.boyd-form-form-main {
+			width: 20px;
+			height: 20px;
+			display: inline;
+		}
+
+		/* 警告框 */
+		#err {
+			width: 30rem;
+			position: fixed;
+			/* background-color: red; */
+			bottom: 1rem;
+			right: -5rem;
+		}
+
+		.body-err {
+			width: 25rem;
+			height: 5rem;
+			position: relative;
+			background-color: #98ea98;
+			border-radius: 10px;
+			bottom: 5rem;
+			right: -5rem;
+			transition: right .6s cubic-bezier(0, 1.5, .6, 1), top 2s, height .4s, margin-bottom .3s .2s,
+			margin-bottom .3s .2s, bottom 1.5s ease-in-out;
+			margin: 2rem 0;
+		}
+
+		.body-err-hidden {
+			right: -27rem;
+			height: 0;
+			margin: 0;
+		}
+
+		.body-err-img {
+			width: 2.5rem;
+			height: 2.5rem;
+			position: relative;
+			background: #90900f;
+			border-radius: 50%;
+			top: -1rem;
+			left: -1rem;
+			transition: all .6s;
+		}
+
+		.body-err-img-hidden {
+			width: .5rem;
+			height: .5rem;
+			margin-bottom: 2rem;
+		}
+
+		.body-err-span {
+			position: relative;
+			background: #bdbcc2;
+			top: -1.2rem;
+			left: 3rem;
+			font: 1.6rem "";
+			transition: all .6s;
+		}
+
+		.body-err-span-hidden {
+			top: -.2rem;
+			font: 1rem "";
+		}
+
+
+		/* 音乐播放 */
+		#body-music {
+			width: 10rem;
+			height: 8rem;
+			position: fixed;
+			bottom: 10rem;
+			left: 0;
+			background: red;
+			background-size: 10rem;
+			cursor: pointer;
+			transition: left .5s cubic-bezier(0, 1.5, .6, 1);
+		}
+
+		.music-div {
+			width: 8rem;
+			height: 8rem;
+			border-radius: 50%;
+			position: relative;
+			z-index: 2;
+			background: #c8c3e0 url("file/music-bg.jpg") no-repeat 0;
+		}
+
+		.music-play {
+			width: 8rem;
+			height: 8rem;
+			border-radius: 50%;
+			position: relative;
+			background: rgba(211, 193, 193, 0.27);
+			z-index: -1;
+			text-align: center;
+			line-height: 8rem;
+			color: white;
+		}
+
+		.music-show {
+			width: 2rem;
+			height: 8rem;
+			position: absolute;
+			background: #66ff00;
+			line-height: 8rem;
+			text-align-last: center;
+			top: 0;
+			left: 8rem;
+		}
+
+		@media (min-width: 1200px) {
+			html {
+				background-color: white;
+			}
+
+			/* center */
+			.heard-nav-center {
+				position: absolute;
+				top: 0;
+				left: 30%;
+				background-color: #ffffff;
+				height: 5rem;
+				width: 55rem;
+			}
+
+			.heard-nav-center-ul-li {
+				background: #ffffff;
+				height: 5rem;
+				position: relative;
+				z-index: 1;
+				width: 9rem;
+				display: flex;
+				padding-top: 1.4rem;
+				justify-content: center;
+				transition: color .5s ease-in-out;
+			}
+
+
+			/* 搜索图片位置 */
+			.heard-nav-right-search-img-input-show {
+				top: 1.5rem;
+				width: 2.7rem;
+				left: -8rem;
+			}
+
+			.heard-nav-right-search {
+				width: 70rem;
+				height: 4rem;
+				position: absolute;
+				top: .8rem;
+				left: 25%;
+				padding-left: 1rem;
+				font: 1.5rem "";
+				border: none;
+				outline: none;
+				background-color: #32c750;
+				color: white;
+			}
+
+			.heard-nav-right-search::placeholder {
+				padding-left: .2rem;
+				color: white;
+				font: 1.5rem "";
+			}
+
+		}
+
+		@media (max-width: 1200px) {
+			html {
+				background-color: #b29def;
+			}
+
+			/* 	center */
+			.heard-nav-center {
+				position: absolute;
+				top: 0;
+				left: 20%;
+				background-color: #ffffff;
+				height: 5rem;
+				width: 55rem;
+				transition: all .6s ease-in-out;
+			}
+
+			/* 搜索图片位置 */
+			.heard-nav-right-search-img-input-show {
+				top: 1.5rem;
+				width: 2.7rem;
+				left: -1rem;
+			}
+
+			/* 	搜索下拉框宽度 */
+			.heard-nav-right-input-hint {
+				width: 60rem;
+				background-color: #9cd7ad;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 5.6rem;
+				margin: auto;
+				/* 旋转轴 */
+				transform-origin: top;
+				transform: perspective(10rem) rotateX(270deg);
+				transition: all .4s .3s;
+				border-radius: 0 0 10px 10px;
+			}
+
+			.heard-nav-right-input-hint-switch {
+				transform: perspective(20rem) rotateX(360deg);
+				background-color: #0066ff;
+			}
+
+			#heard-nav-right-input-hint-ul {
+				margin-top: 2rem;
+				z-index: 10;
+				position: relative;
+			}
+
+			#heard-nav-right-input-hint-ul > li {
+				font: 1.5rem/3rem "";
+				padding-left: 5rem;
+				z-index: 10;
+				position: relative;
+			}
+
+			#heard-nav-right-input-hint-ul > li:hover {
+				background-color: burlywood;
+			}
+
+			.heard-nav-right-input-hint-ul-li-foc {
+				background-color: #c8e5bc;
+				border-bottom: 1px solid palegreen;
+			}
+
+			/* 	搜索框 */
+			.heard-nav-right-search {
+				width: 50rem;
+				height: 4rem;
+				position: absolute;
+				top: .8rem;
+				left: 25%;
+				padding-left: 1rem;
+				font: 1.5rem "";
+				border: none;
+				outline: none;
+				background-color: #32c761;
+				color: white;
+			}
+
+			.heard-nav-right-search::placeholder {
+				padding-left: .2rem;
+				color: white;
+				font: 1.5rem "";
+			}
+		}
+
+		@media (max-width: 970px) {
+			html {
+				background-color: #b3ef9b;
+			}
+
+			/* center */
+			.heard-nav-center {
+				position: absolute;
+				top: 0;
+				left: 25%;
+				background-color: #ffffff;
+				height: 5rem;
+				width: 40rem;
+			}
+
+			#heard-nav-center-ul {
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.heard-nav-center-ul-li {
+				background: #7cd281;
+				height: 5rem;
+				position: relative;
+				z-index: 1;
+				width: 6rem;
+				display: flex;
+				padding-top: 1.4rem;
+				justify-content: center;
+				transition: color .5s ease-in-out;
+				align-items: center;
+			}
+
+			.heard-nav-center-li-img-div {
+				display: none;
+			}
+
+			.heard-nav-right-search-switch {
+				width: 6rem;
+				height: 3px;
+				background-color: #cff599;
+				position: absolute;
+				bottom: -4px;
+				border-radius: 50px 50px 50px 50px;
+				box-shadow: 0 0 2px 2px #91e884;
+				z-index: 2;
+				left: .3rem;
+				transition: all .4s cubic-bezier(0, .4, .6, 1.2);
+			}
+
+			/* 	right */
+			#heard-nav-right {
+				position: absolute;
+				right: 10vw;
+				top: 0;
+				height: 5rem;
+				background: #c8f3e3;
+			}
+
+			/* 搜索图片位置 */
+			.heard-nav-right-search-img-input-show {
+				top: 1.5rem;
+				width: 2.7rem;
+				left: -12rem;
+			}
+
+			.heard-nav-right-search {
+				width: 40rem;
+				height: 4rem;
+				position: absolute;
+				top: .8rem;
+				left: 25%;
+				padding-left: 1rem;
+				font: 1.3rem "";
+				border: none;
+				outline: none;
+				background-color: #32c784;
+				color: white;
+			}
+
+			.heard-nav-right-search::placeholder {
+				padding-left: .2rem;
+				color: white;
+				font: 1.3rem "";
+			}
+
+			/* 	下拉提示内容 */
+			.heard-nav-right-input-hint {
+				width: 50rem;
+				background-color: #9cd7ad;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 5.6rem;
+				margin: auto;
+				/* 旋转轴 */
+				transform-origin: top;
+				transform: perspective(10rem) rotateX(270deg);
+				transition: all .4s .3s;
+				border-radius: 0 0 10px 10px;
+			}
+
+			.heard-nav-right-input-hint-switch {
+				transform: perspective(20rem) rotateX(360deg);
+				background-color: #0066ff;
+			}
+
+			#heard-nav-right-input-hint-ul {
+				margin-top: 2rem;
+				z-index: 10;
+				position: relative;
+			}
+
+			#heard-nav-right-input-hint-ul > li {
+				font: 1.3rem/2.6rem "";
+				z-index: 10;
+				position: relative;
+				padding-left: 5rem;
+			}
+
+			#heard-nav-right-input-hint-ul > li:hover {
+				background-color: burlywood;
+			}
+
+			.heard-nav-right-input-hint-ul-li-foc {
+				background-color: #c8e5bc;
+				border-bottom: 1px solid palegreen;
+			}
+
+		}
+
+		@media (max-width: 750px) {
+			html {
+				background-color: #a1daec;
+			}
+
+			#heard {
+				width: 100%;
+				height: 5rem;
+				background: #ffffff;
+				position: sticky;
+				top: 0;
+				padding: 0 3rem 0 3rem;
+				font: 15px "";
+				border-bottom: 2px solid red;
+			}
+
+			/* 	logo */
+			.heard-nav-left {
+				position: relative;
+				font: 1.4em/5rem "";
+				top: 0;
+			}
+
+
+			/* 	center */
+			.heard-nav-center-small {
+				width: 3.5rem;
+				height: 3.5rem;
+				border: 2px solid red;
+				position: absolute;
+				top: -4.2rem;
+				cursor: pointer;
+				right: 3rem;
+			}
+
+			.heard-nav-right-search-switch {
+				display: none;
+			}
+
+			.heard-nav-center-smalls {
+				display: block;
+				width: 2.5rem;
+				height: .4rem;
+				background-color: #da3939;
+				position: relative;
+				transition: transform .5s ease-in-out, left .5s ease-in-out, opacity .2s ease-in-out, top .4s ease-in-out;
+				left: .3rem;
+				border-radius: 50px 50px 50px 50px;
+			}
+
+			.heard-nav-center-small-1 {
+				top: .4rem;
+			}
+
+			.heard-nav-center-small-2 {
+				top: .9rem;
+			}
+
+			.heard-nav-center-small-3 {
+				top: 1.4rem;
+			}
+
+			.heard-nav-center-small-2-switch {
+				opacity: 0;
+			}
+
+			.heard-nav-center-small-1-switch {
+				transform: rotate(45deg);
+				top: 1.3rem;
+				left: .4rem;
+			}
+
+			.heard-nav-center-small-3-switch {
+				transform: rotate(-45deg);
+				top: .5rem;
+				left: .4rem;
+			}
+
+			/* 	搜索 */
+			#heard-nav-right {
+				position: absolute;
+				right: 28vw;
+				top: 0;
+				height: 5rem;
+				background: white;
+			}
+
+			#heard-nav-right-search-img-div {
+				width: 3.5rem;
+				height: 3.5rem;
+				background-color: #dadec1;
+				border: 0 solid #abea8d;
+				border-radius: 50%;
+				box-sizing: border-box;
+				transition: all .3s ease-in-out;
+				margin-top: .5rem;
+				cursor: pointer;
+				z-index: 5;
+			}
+
+			#heard-nav-right-search-img-div:hover {
+				border: 1.75rem solid #e34a4a;
+			}
+
+			.heard-nav-right-search-img {
+				width: 2rem;
+				position: absolute;
+				top: 1.3rem;
+				left: .6rem;
+				z-index: 5;
+				transition: all .5s ease-in-out;
+			}
+
+			/* 	center选项样式 */
+			.heard-nav-center {
+				position: absolute;
+				top: 5rem;
+				left: 0;
+				background-color: #6790c5;
+				width: 100%;
+				height: 0;
+				border-radius: 0 0 10px 10px;
+			}
+
+			#heard-nav-center-ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				background-color: #2f88be;
+				height: 0;
+				overflow: hidden;
+				transition: height .5s ease-in-out;
+			}
+
+			.heard-nav-center-ul-li {
+				background: #cc757d;
+				height: 3.9rem;
+				position: relative;
+				align-items: center;
+				z-index: 1;
+				display: flex;
+				padding-top: .4rem;
+				width: 100%;
+				justify-content: left;
+				padding-left: 3rem;
+				transition: color .5s ease-in-out;
+				/* margin-top: .2rem; */
+			}
+
+			.heard-nav-center-ul-li:hover {
+				color: red;
+			}
+
+			.heard-nav-center-li-img-div {
+				display: inline-block;
+				background: url("file/piaoliuping.png") no-repeat 0;
+				background-size: 2rem;
+				width: 2rem;
+				height: 2rem;
+				position: relative;
+			}
+
+			.heard-nav-right-input-div {
+				width: 100%;
+				height: 5.6rem;
+				background: #c73232;
+				position: absolute;
+				top: -5.6rem;
+				left: 0;
+				z-index: 3;
+				transition: all .2s ease-in-out;
+			}
+
+			.heard-nav-right-search-img-input-show {
+				top: 1.5rem;
+				width: 2.2rem;
+				left: 15vw;
+			}
+
+			/* 	center-search */
+			.heard-nav-right-search {
+				width: 50vw;
+				height: 3rem;
+				position: absolute;
+				top: 1rem;
+				left: 15%;
+				padding-left: 1rem;
+				font: 1.2rem "";
+				border: none;
+				outline: none;
+				background-color: #6ec732;
+				color: white;
+			}
+
+			.heard-nav-right-search::placeholder {
+				padding-left: .2rem;
+				color: white;
+				font: 1.1rem "";
+			}
+
+
+			/* 	下拉提示内容 */
+			.heard-nav-right-input-hint {
+				z-index: 10;
+				width: auto;
+				background-color: #9cd7ad;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 5.6rem;
+				margin: auto;
+				/* 旋转轴 */
+				transform-origin: top;
+				transform: perspective(10rem) rotateX(270deg);
+				transition: all .4s .3s;
+				border-radius: 0 0 10px 10px;
+			}
+
+			.heard-nav-right-input-hint-switch {
+				transform: perspective(20rem) rotateX(360deg);
+				background-color: #0066ff;
+			}
+
+			#heard-nav-right-input-hint-ul {
+				z-index: 10;
+				margin-top: 2rem;
+				position: relative;
+			}
+
+			#heard-nav-right-input-hint-ul > li {
+				z-index: 10;
+				font: 1.2rem/2.4rem "";
+				padding-left: 5rem;
+			}
+
+			#heard-nav-right-input-hint-ul > li:hover {
+				background-color: burlywood;
+			}
+		}
+
+	</style>
+</head>
+<body>
+<!--    导航条-->
+<div id="heard">
+	<nav id="heard-nav">
+
+		<div class="heard-nav-left">
+			err space
+		</div>
+
+		<div class="heard-nav-center">
+			<div class="heard-nav-center-small">
+				<span class="heard-nav-center-smalls heard-nav-center-small-1"></span>
+				<span class="heard-nav-center-smalls heard-nav-center-small-2 "></span>
+				<span class="heard-nav-center-smalls heard-nav-center-small-3"></span>
+			</div>
+			<div id="heard-nav-right-search-switch" class="heard-nav-right-search-switch"></div>
+			<ul id="heard-nav-center-ul">
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-1"></div>
+					留言板
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-2"></div>
+					漂流瓶
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-3"></div>
+					记录
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-4"></div>
+					emo
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-5"></div>
+					我的
+				</li>
+				<li class="heard-nav-center-ul-li">
+					<div class="heard-nav-center-li-img-div heard-nav-center-li-img-div-6"></div>
+					关于
+				</li>
+			</ul>
+		</div>
+
+		<div id="heard-nav-right">
+			<div id="heard-nav-right-search-img-div">
+				<img id="heard-nav-right-search-img" alt="搜索" class="heard-nav-right-search-img"
+				     src="file/-fangdajing.png">
+			</div>
+		</div>
+
+		<div class="heard-nav-right-input-div">
+			<label for="heard-nav-right-search">
+				<input id="heard-nav-right-search" class="heard-nav-right-search" placeholder="搜索..." type="search"
+				       value="">
+			</label>
+			<!--			<div class="heard-nav-right-input-cancel">-->
+			<!--				<div class="heard-nav-right-input-cancel-1"></div>-->
+			<!--				<div class="heard-nav-right-input-cancel-2"></div>-->
+			<!--			</div>-->
+			<div class="heard-nav-right-input-hint">
+				<ul id="heard-nav-right-input-hint-ul">
+					<li>第一条提示</li>
+					<li>第二条提示</li>
+					<li>第三条提示</li>
+					<li>第四条提示</li>
+					<li>第五条提示</li>
+					<li>第五条提示</li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+</div>
+<!--    导航条下的图片-->
+<div id="heard-top">
+	<h1 class="heard-top-title">
+		留言板
+	</h1>
+	<span class="heard-top-main">
+		这里包含了所有参观者或用户的一些留言，您也可以在这里发布自己的观点，我们保留您匿名的权力，不过在匿名状态下，您的用词和语句会被严格限制，望您谅解
+	</span>
+	<span class="heard-top-main-title">
+
+	</span>
+</div>
+<hr>
+<!--    发送评论-->
+<div id="body-form">
+	<div class="body-form-title">
+		发送评论
+	</div>
+	<label for="body-form-test"></label>
+
+	<!--	<textarea class="body-form-input" cols="30" id="body-form-test" name="heard-form-text" placeholder=" 输入你的评论"-->
+	<!--	          rows="10"></textarea>-->
+	<div id="body-form-test" class="body-form-input" contenteditable=true></div>
+	<div class="body-form-emoji">
+		表情
+	</div>
+
+	<!--			Emoji表情 -->
+	<ul id="body-form-emoji-ul" class="body-form-emoji-ul ">
+
+	</ul>
+
+	<!--    填写信息-->
+	<div class="body-form-i">
+		填写您的信息
+	</div>
+	<div id="body-form-i-body" class="body-form-i-body ">
+		<label for="body-form-i-body-name">
+			昵称
+			<input id="body-form-i-body-name" class="body-form-i-body-name" name="body-form-i-body-name" type="text">
+		</label>
+		<br>
+		<label for="body-form-i-body-email">
+			邮箱
+			<input id="body-form-i-body-email" class="body-form-i-body-email" name="body-form-i-body-email" type="text">
+		</label>
+	</div>
+
+	<!--    是否匿名-->
+	<div class="body-form-anonymous">
+		匿名发布
+		<div id="body-form-anonymous-1" class="body-form-anonymous-1">
+			<div id="body-form-anonymous-2" class="body-form-anonymous-2">
+				<div id="body-form-anonymous-3" class="body-form-anonymous-3"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<!--	提交评论-->
+	<div class="heard-form-about">
+		隐私声明：本站会自动保存您的IP（承诺非特殊情况不会公开您的IP），但请注意您的言行
+	</div>
+	<div id="body-form-submit" class="body-form-submit">
+		提交评论
+	</div>
+
+</div>
+<hr>
+<!--    评论内容-->
+<div id="body-body">
+	<ul id="body-body-ul"></ul>
+</div>
+
+<!--    音乐播放-->
+<div id="body-music">
+	<div id="music-div" class="music-div">
+		<div class="music-play">
+			停
+		</div>
+	</div>
+	<div class="music-show"> ></div>
+	<audio id="body-music-audio" autoplay="autoplay">
+		<source src="file/上上%20-%20青春大概.mp3" srcset="" type="audio/mpeg">
+	</audio>
+</div>
+
+<!--    警告框-->
+<div id="err"></div>
+</body>
+<script crossorigin="anonymous" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<script src="emojis.js"></script>
+<script src="node_modules/crypto-js/index.js"></script>
+<script src="node_modules/crypto-js/crypto-js.js"></script>
+<script>
+	window.onload = function () {
+		let body_anonymous_flag = true
+		let selection = document.getSelection()
+		let emoji_ul = $(`#body-form-emoji-ul`)
+		let body_form_main = $('#body-form-test')
+		let position = ''
+		for (let wcEmojiElement of wcEmoji) {
+			let li = document.createElement('LI')
+			$(li).addClass('body-form-emoji-lis')
+			let img = document.createElement('IMG')
+			img.classList.add('body-form-emoji-lis-gif')
+			img.src = wcEmojiElement.src
+			img.alt = wcEmojiElement.alt
+			li.appendChild(img)
+			emoji_ul.append(li)
+		}
+
+		let emoji_lis_img = $('.body-form-emoji-lis-gif')
+
+		/**
+		 * 失去焦点时，可能会点击按钮，这时就记录焦点的位置
+		 */
+		body_form_main.blur(function () {
+			position = window.getSelection().getRangeAt(0)
+		})
+
+		/**
+		 * 当点击表情时，就讲指定的按钮复制一份，并将获取到的按钮添加到刚刚获取到的焦点位置
+		 */
+		emoji_lis_img.click(function () {
+			if (position === '') {
+				let div = document.getElementById('body-form-test')
+				div.focus()
+				const range = window.getSelection()
+				range.selectAllChildren(div)
+				range.collapseToEnd()
+				position = window.getSelection().getRangeAt(0)
+			}
+			let that = $(this).clone()
+			$(that).addClass('boyd-form-form-main')
+			position.insertNode(that[0])
+			window.getSelection().collapseToEnd()
+			body_form_main.focus()
+		})
+
+		/* 导航条 */
+		let heard_index = 0
+		let heard_lis = $(`.heard-nav-center-ul-li`)
+		let heard_switch_div = $(`#heard-nav-right-search-switch`)
+		// 滑块的切换
+		heard_lis.hover(function () {
+			heard_switch_div.css({
+				left: $(this).position().left,
+			})
+		}, function () {
+			heard_switch_div.css({
+				left: $(heard_lis[heard_index]).position().left,
+			})
+		})
+
+		let heard_right_search = $(`#heard-nav-right`)
+		let heard_right_img = $(`#heard-nav-right-search-img`)
+		let heard_right_input = $(`.heard-nav-right-input-div:eq(0)`)
+		let heard_right_hint = $(`.heard-nav-right-input-hint:eq(0)`)
+		let heard_right_hint_lis = $(`#heard-nav-right-input-hint-ul > li`)
+		let heard_search = $(`#heard-nav-right-search`)
+
+		let heard_right_cancel = $(`.heard-nav-right-input-cancel:eq(0)`)
+
+		let right_flag_1 = true
+		let right_flag_2 = true
+		let right_hint_lis_index = -1
+		let right_hint_lis_index_index = right_hint_lis_index
+
+		let heard_small_cho = $(`.heard-nav-center-small:eq(0)`)
+		let heard_small_ul = $(`#heard-nav-center-ul`)
+		let heard_smalls_1 = $(`.heard-nav-center-small-1:eq(0)`)
+		let heard_smalls_2 = $(`.heard-nav-center-small-2:eq(0)`)
+		let heard_smalls_3 = $(`.heard-nav-center-small-3:eq(0)`)
+
+		let heard_small_index = true
+
+		function heard_right_co () {
+			heard_right_img.addClass('heard-nav-right-search-img-input-show')
+			heard_right_input.css({
+				top: 0,
+			})
+			heard_right_hint.addClass('heard-nav-right-input-hint-switch')
+			// $(heard_search).focus()
+			setTimeout(function () {
+				document.onclick = heard_input_blur
+			}, 40)
+			// 键盘的下翻
+			document.onkeydown = heard_right_hint_li
+			right_flag_1 = false
+			// 因为搜索框是折叠上去的，所以直接获取焦点会追到顶部获取焦点（滚动条乱跳）
+			// ，所以这里当事件发生事，延迟一点进行赋予焦点
+			setTimeout(function () {
+				heard_search.focus()
+			}, 150)
+		}
+
+		heard_right_cancel.click(heard_input_blur)
+		// 放大镜的事件切换
+		heard_right_search.click(function () {
+			if (right_flag_1) {
+				heard_right_co()
+			} else {
+				console.log('我是假')
+				goSearch()
+			}
+
+			if (!heard_small_index) {
+				heard_small_ul.css({
+					height: 0,
+				})
+				heard_small_index = true
+				heard_smalls_1.removeClass('heard-nav-center-small-1-switch')
+				heard_smalls_2.removeClass('heard-nav-center-small-2-switch')
+				heard_smalls_3.removeClass('heard-nav-center-small-3-switch')
+			}
+		})
+
+		/**
+		 * 取消事件的样式
+		 */
+		function heard_input_blur () {
+			console.log('取消样式')
+			right_flag_1 = true
+			heard_right_img.removeClass('heard-nav-right-search-img-input-show')
+			heard_right_input.css({
+				top: '-5.6rem',
+			})
+			heard_right_hint.css({
+				display: 'none',
+			})
+			setTimeout(function () {
+				heard_right_hint.css({
+					display: 'block',
+				})
+			}, 500)
+			heard_right_hint.removeClass('heard-nav-right-input-hint-switch')
+			document.onclick = null
+			document.onkeydown = null
+			$(heard_right_hint_lis[right_hint_lis_index]).removeClass('heard-nav-right-input-hint-ul-li-foc')
+			right_hint_lis_index = -1
+			heard_search.val('')
+		}
+
+		// 叉号
+		// heard_right_img.click(goSearch)
+
+		// 点击区域的判断
+		heard_right_input.click(function () {
+			document.onclick = null
+			setTimeout(function () {
+				document.onclick = heard_input_blur
+			}, 40)
+		})
+
+		//	键盘控制选项的选择
+		function heard_right_hint_li (event) {
+			if ('ArrowDown' === event.key) {
+
+				heard_right_hint_lis[right_hint_lis_index = right_hint_lis_index === heard_right_hint_lis.length - 1 ?
+						0 : ++right_hint_lis_index
+						].classList.add('heard-nav-right-input-hint-ul-li-foc')
+
+				heard_right_hint_lis[right_hint_lis_index_index = right_hint_lis_index === 0 ?
+						heard_right_hint_lis.length - 1 : right_hint_lis_index - 1
+						].classList.remove('heard-nav-right-input-hint-ul-li-foc')
+				heard_search.val(heard_right_hint_lis[right_hint_lis_index].innerText)
+			} else if ('ArrowUp' === event.key) {
+				right_hint_lis_index = right_hint_lis_index === -1 ? 0 : right_hint_lis_index
+				heard_right_hint_lis[right_hint_lis_index = right_hint_lis_index === 0 ?
+						heard_right_hint_lis.length - 1 : --right_hint_lis_index
+						].classList.add('heard-nav-right-input-hint-ul-li-foc')
+
+				heard_right_hint_lis[right_hint_lis_index_index = right_hint_lis_index === heard_right_hint_lis.length -
+				1 ? 0 : right_hint_lis_index + 1
+						].classList.remove('heard-nav-right-input-hint-ul-li-foc')
+
+				heard_search.val(heard_right_hint_lis[right_hint_lis_index].innerText)
+			} else if (event.key === 'Enter') {
+				console.log(heard_right_hint_lis[right_hint_lis_index].innerText)
+				// 开始搜索
+			}
+		}
+
+		// 点击标签搜索
+
+		heard_right_hint_lis.click(goSearch_click)
+
+		function goSearch_click () {
+			heard_search.val(this.innerText)
+			//	开始搜索
+		}
+
+		/**
+		 * 开始搜索
+		 * 点击时触发，点击回车触发
+		 * 当input中为空时，不能搜索
+		 */
+		function goSearch () {
+			if ($.trim(heard_search.val()) === '') {
+				alert('内容不能为空')
+			} else {
+				alert(heard_search.val())
+			}
+		}
+
+		/**
+		 * 选中指定的内容
+		 */
+		function chooseLi () {
+
+		}
+
+		// 顶部菜单的三个小横杠
+		heard_small_cho.click(function () {
+			if (heard_small_index) {
+				heard_small_ul.css({
+					height: '25rem',
+				})
+				heard_smalls_1.addClass('heard-nav-center-small-1-switch')
+				heard_smalls_2.addClass('heard-nav-center-small-2-switch')
+				heard_smalls_3.addClass('heard-nav-center-small-3-switch')
+				heard_small_index = false
+			} else {
+				heard_small_ul.css({
+					height: 0,
+				})
+				heard_small_index = true
+				heard_smalls_1.removeClass('heard-nav-center-small-1-switch')
+				heard_smalls_2.removeClass('heard-nav-center-small-2-switch')
+				heard_smalls_3.removeClass('heard-nav-center-small-3-switch')
+			}
+		})
+
+		//	点击表情按钮，出现表情列表
+		let emoji_btn = $(`.body-form-emoji:eq(0)`)
+		let emoji_flag = true
+		let emoji_time
+		emoji_btn.click(function () {
+			if (emoji_flag) {
+				emoji_ul.addClass('body-form-emoji-ul-switch')
+				emoji_time = setTimeout(function () {
+					$(document).click(emoji_click)
+				}, 200)
+				emoji_flag = false
+			}
+		})
+
+		function emoji_click (event) {
+			if (func2(event.target, emoji_ul[0])) {
+				emoji_ul.addClass('body-form-emoji-ul-switch')
+				emoji_flag = false
+			} else {
+				emoji_ul.removeClass('body-form-emoji-ul-switch')
+				$(document).off('click', emoji_click)
+				// document.onclick = null
+				emoji_flag = true
+			}
+		}
+
+		/**
+		 * 判断触发点击的元素是否是指定的元素
+		 * @param that 要判断的元素
+		 * @param the 目标元素
+		 */
+		function func2 (that, the) {
+			return that === null || the === null ? false : func3(that, the)
+		}
+
+		function func3 (that, the) {
+			if (that === the) {
+				return true
+			}
+			if ($(that)[0].tagName === 'BODY') {
+				return false
+			}
+			return func3($(that).parent()[0], the)
+		}
+
+		//	填写信息框的大小切换
+		let body_form = $(`.body-form-i:eq(0)`)
+		let body_form_body = $(`#body-form-i-body`)
+		let body_form_flag = true
+		let body_form_time
+		body_form.click(function () {
+			if (body_form_flag) {
+				body_form_body.addClass('body-form-i-body-switch')
+				body_form_time = setTimeout(function () {
+					document.onclick = body_form_click
+				}, 200)
+				body_form_flag = false
+			}
+		})
+
+		function body_form_click (event) {
+			if (func2(event.target, body_form_body[0])) {
+				body_form_body.addClass('body-form-i-body-switch')
+				body_form_flag = false
+			} else {
+				body_form_body.removeClass('body-form-i-body-switch')
+				document.onclick = null
+				body_form_flag = true
+			}
+		}
+
+// 评论提交
+		let submit = $(`#body-form-submit`)
+
+		// 判断用户名是否合法
+		let user_name = $(`#body-form-i-body-name`)
+		let user_eMail = $(`#body-form-i-body-email`)
+
+		submit.click(function () {
+			if (user_name.val().length !== 0 || user_eMail.val().length !== 0) {
+				if (user_name.val().length >= 10) {
+					toErr('用户名过长')
+					return
+				}
+				if (!/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(user_eMail.val())) {
+					toErr('邮箱格式非法')
+					return
+				}
+				body_anonymous_flag = false
+				anonymous_btn_click()
+			} else {
+				body_anonymous_flag = true
+				anonymous_btn_click()
+			}
+
+			let main = body_form_main.html().replace(/^[&nbsp; ]*[&nbsp;]*|[&nbsp; ]*$/gm, '')
+			if (main.length === 0) {
+				toErr('不能发布空内容')
+			} else {
+				if (statisticsText(main) >= 500) {
+					toErr('文本内容过长')
+				} else {
+					//	这里的内容一定是合法的长度
+					let str = strShorten(body_form_main.html())
+					$.get('http://127.0.0.1:3000/getKey', {
+						'Access-Control-Allow-Origin': 'http://127.0.0.1:3000',
+						'Access-Control-Allow-Credentials': 'true',
+						'Origin': 'http://127.0.0.1:3000',
+					}, function (data) {
+						$.post('http://127.0.0.1:3000/sendComment', {
+							name: encrypt(data.key, data.offset, user_name.val()),
+							eMail: encrypt(data.key, data.offset, user_eMail.val()),
+							isAnonymous: !body_anonymous_flag,
+							content: str,
+						}, function (data) {
+							console.log(data)
+						})
+
+					})
+
+					toErr('发送成功')
+				}
+			}
+		})
+
+		//	匿名按钮的转换
+		let body_anonymous_btn = $(`.body-form-anonymous:eq(0)`)
+		let body_anonymous_1 = $(`#body-form-anonymous-1`)
+		let body_anonymous_2 = $(`#body-form-anonymous-2`)
+		let body_anonymous_3 = $(`#body-form-anonymous-3`)
+
+		body_anonymous_btn.click(anonymous_btn_click)
+
+		function anonymous_btn_click () {
+			if (body_anonymous_flag) {
+				body_anonymous_1.addClass('body-form-anonymous-1-switch')
+				body_anonymous_2.addClass('body-form-anonymous-2-switch')
+				body_anonymous_3.addClass('body-form-anonymous-3-switch')
+				body_anonymous_flag = false
+			} else {
+				body_anonymous_1.removeClass('body-form-anonymous-1-switch')
+				body_anonymous_2.removeClass('body-form-anonymous-2-switch')
+				body_anonymous_3.removeClass('body-form-anonymous-3-switch')
+				body_anonymous_flag = true
+			}
+		}
+
+		let errs = $(`#err`)
+
+		function toErr (str) {
+			let div = document.createElement('div')
+			div.classList.add('body-err')
+			div.classList.add('body-err-hidden')
+			div.innerHTML = `
+					<div class="body-err-img body-err-img-hidden"></div>
+					<span class="body-err-span body-err-span-hidden">
+						${str}
+					</span>`
+			setTimeout(function () {
+				$(div).removeClass('body-err-hidden')
+				$(div).find('.body-err-img:eq(0)').removeClass('body-err-img-hidden')
+				$(div).find('.body-err-span:eq(0)').removeClass('body-err-span-hidden')
+			}, 100)
+			setTimeout(function () {
+				div.style.bottom = '50rem'
+				setTimeout(function () {
+					div.remove()
+				}, 400)
+			}, 3000)
+
+			errs.append(div)
+		}
+
+		//	评论内容
+		let body_body = $(`#body-body`)
+		let body_ul = $(`#body-body-ul`)
+
+		// 根据样式进行新增项目
+		$(document).scroll(function () {
+			let scrollTop = $(document).scrollTop()
+			if (scrollTop + document.documentElement.clientHeight + 10 >= $(document).height()) {
+				for (let i = 0, len = 3; i < len; i++) {
+					let main_title = '我是测试添加的测试内容'
+					let date = new Date()
+					let main_time = date.getFullYear() + '-' + date.getMonth() + 1 + '-' + date.getDate() + '  ' +
+							date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+					let main_user_name = '李四'
+					let li = document.createElement('li')
+					li.innerHTML = `
+							<span class="body-lis-name body-lis-name-hidden">
+								${main_user_name}
+							</span>
+			 				<div class="body-lis-time body-lis-time-hidden">
+								${main_time}
+							</div>
+			 				<div class="body-lis-main-top"></div>
+							<div class="body-lis-title body-lis-title-hidden">
+								${main_title}
+							</div>
+				`
+					li.classList.add('title-lis')
+					li.classList.add('title-lis-index')
+					body_ul.append(li)
+					setTimeout(function () {
+						$(li).find('.body-lis-name:eq(0)').removeClass('body-lis-name-hidden')
+						$(li).find('.body-lis-time:eq(0)').removeClass('body-lis-time-hidden')
+						$(li).find('.body-lis-title:eq(0)').removeClass('body-lis-title-hidden')
+					}, 100)
+					li.style.height = $(li).height() + 35 + 'px'
+				}
+			}
+			// 最顶层的内容进行删除
+			let timer = null
+			if (body_ul.height() >= 1000 && scrollTop >= 1100) {
+				let title_lis = $(`.title-lis-index:eq(0)`)
+				timer = setInterval(debounce(function () {
+					title_lis.find('.body-lis-name:eq(0)').addClass('body-lis-name-hidden')
+					title_lis.find('.body-lis-time:eq(0)').addClass('body-lis-time-hidden')
+					title_lis.find('.body-lis-title:eq(0)').addClass('body-lis-title-hidden')
+					setTimeout(function () {
+						title_lis.addClass('title-lis-hidden')
+					}, 700)
+					setTimeout(function () {
+						title_lis.remove()
+					}, 1700)
+					title_lis.removeClass('title-lis-index')
+				}, 10), 480)
+			} else {
+				clearInterval(timer)
+			}
+		})
+
+		/**
+		 * 节流的方法
+		 * @param callBack 防抖要执行的回调函数
+		 * @param time 多久执行一次，默认值为1秒
+		 * @returns {(function(): void)|*} 具体方法使用闭包形式返回
+		 */
+		function debounce (callBack, time = 1000) {
+			let flag = true
+			return function () {
+				let timer = null
+				if (flag) {
+					flag = false
+					callBack()
+					// callBack.call(this)
+					timer = setTimeout(() => {
+						flag = true
+						clearTimeout(timer)
+					}, time)
+				}
+			}
+		}
+
+		//	音乐播放
+		let music = $(`#body-music`)
+		let music_div = $(`#music-div`)
+		let music_show = $(`.music-show:eq(0)`)
+		let music_audio = $(`#body-music-audio`)
+		let elementById = document.getElementById('body-music-audio')
+		let music_flag = true
+		// 暂停，开始
+		music_div.click(function () {
+			if (music_flag) {
+				elementById.pause()
+				music_flag = false
+			} else {
+				elementById.play()
+				music_flag = true
+			}
+		})
+		//	切换
+		let music_show_flag = true
+		music_show.click(function () {
+			if (music_show_flag) {
+				music.css({
+					left: '-8rem',
+				})
+				music_show_flag = false
+			} else {
+				music.css({
+					left: 0,
+				})
+				music_show_flag = true
+			}
+		})
+
+		/**
+		 * 统计文本中文字数量
+		 * @param {string} str
+		 */
+		function statisticsText (str) {
+			let exg = /\s*<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis\/*\w*.gif" alt="[\u4E00-\u9FA5]*\w*">\s*/g
+			let string = '<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis'
+
+			if (exg.test(str)) {
+				// 带有表情时的文本实际的长度
+				let num1 = str.replace(exg, '').length
+
+				// 表情的长度
+				let num2 = 0
+
+				// 记录第一次出现字符的下标
+				let index = str.indexOf(string)
+				while (index >= 0) {
+					num2++
+					index = str.indexOf(string, index + 1)
+				}
+				return num2 + num1
+			} else {
+				return str.length
+			}
+		}
+
+		/**
+		 * 要发送到后端的字符串
+		 * @param str 原本的内容
+		 * @returns {*} 转换后要发送的内容
+		 */
+		function strShorten (str) {
+			let exg = /<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis\//g
+			let sbuStr = '%^~?'
+			return str.replace(exg, sbuStr)
+		}
+
+		/**
+		 * 将获取到的字符串转换成可以在页面渲染的内容
+		 * @param str 后端的字符串
+		 * @returns {*} 可以在页面渲染的内容
+		 */
+		function strLong (str) {
+			let string = '%^~?'
+			let strings = '<img class="body-form-emoji-lis-gif boyd-form-form-main" src="Emojis/'
+			let num = str.indexOf(string)
+			if (num >= 0) {
+				return str.replaceAll(string, strings)
+			} else {
+				return str
+			}
+		}
+
+		/**
+		 * AES 解密【先将字符串进行base64的转换，然后进行加密】
+		 * @param key 密钥
+		 * @param offset 偏移量（必须是16位）
+		 * @param string 要加密的内容（必须是16位）
+		 * @returns {*} 要发送到前端的解密内容
+		 * @constructor
+		 */
+		function decrypt (key, offset, string) {
+
+			let decryption = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(string))
+			return CryptoJS.AES.decrypt(decryption, CryptoJS.enc.Utf8.parse(key), {
+				iv: CryptoJS.enc.Utf8.parse(offset),
+				mode: CryptoJS.mode.CBC,
+				padding: CryptoJS.pad.Pkcs7,
+			}).toString(CryptoJS.enc.Utf8).toString()
+		}
+
+		/**
+		 * 加密方法
+		 * @param key 加密的密钥
+		 * @param offset 偏移量
+		 * @param string 要加密的字符串
+		 * @returns {string} 返回要发送到后端的加密的内容
+		 * @constructor
+		 */
+		function encrypt (key, offset, string) {
+			let encryption = CryptoJS.enc.Utf8.parse(string)
+			return CryptoJS.AES.encrypt(encryption, CryptoJS.enc.Utf8.parse(key), {
+				iv: CryptoJS.enc.Utf8.parse(offset),
+				mode: CryptoJS.mode.CBC,
+				padding: CryptoJS.pad.Pkcs7,
+			}).ciphertext.toString().toUpperCase()
+		}
+
+	}
+	</script>
+	</html>

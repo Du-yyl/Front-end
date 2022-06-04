@@ -1,0 +1,50 @@
+[2022-01-14T15:37:36.843] [DEBUG] cheese - Some debug message
+[2022-01-14T15:37:36.848] [DEBUG] cheese - Url {
+  protocol: 'https:',
+  slashes: true,
+  auth: null,
+  host: 'www.baidu.com:443',
+  port: '443',
+  hostname: 'www.baidu.com',
+  hash: '#tag=3',
+  search: '?id=2',
+  query: 'id=2',
+  pathname: '/path/index.html',
+  path: '/path/index.html?id=2',
+  href: 'https://www.baidu.com:443/path/index.html?id=2#tag=3'
+}
+[2022-01-14T15:37:42.107] [DEBUG] cheese - Some debug message
+[2022-01-14T15:37:42.110] [DEBUG] cheese - Url {
+  protocol: 'https:',
+  slashes: true,
+  auth: null,
+  host: 'www.baidu.com:443',
+  port: '443',
+  hostname: 'www.baidu.com',
+  hash: '#tag=3',
+  search: '?id=2',
+  query: 'id=2',
+  pathname: '/path/index.html',
+  path: '/path/index.html?id=2',
+  href: 'https://www.baidu.com:443/path/index.html?id=2#tag=3'
+}
+[2022-01-14T15:42:11.752] [DEBUG] cheese - Some debug message
+[2022-01-14T15:42:11.755] [DEBUG] cheese - %7B%0A%20%20protocol:%20%27https:%27,%0A%20%20slashes:%20true,%0A%20%20auth:%20null,%0A%20%20host:%20%27www.baidu.com:443%27,%0A%20%20port:%20%27443%27,%0A%20%20hostname:%20%27www.baidu.com%27,%0A%20%20hash:%20%27#tag=3%27,%0A%20%20search:%20%27?id=2%27,%0A%20%20query:%20%27id=2%27,%0A%20%20pathname:%20%27/path/index.html%27,%0A%20%20path:%20%27/path/index.html?id=2%27,%0A%20%20href:%20%27https://www.baidu.com:443/path/index.html?id=2#tag=3%27%0A%7D
+[2022-01-14T15:42:54.008] [DEBUG] cheese - Some debug message
+[2022-01-14T15:42:54.010] [DEBUG] cheese - https://www.baidu.com:443/path/index.html?id=2#tag=3
+[2022-01-14T15:47:08.470] [DEBUG] cheese - Some debug message
+[2022-01-14T15:47:08.473] [DEBUG] cheese - https://www.hao123.com/
+[2022-01-14T15:47:29.000] [DEBUG] cheese - Some debug message
+[2022-01-14T15:47:29.004] [DEBUG] cheese - https://www.hao123.com/b
+[2022-01-14T15:47:41.231] [DEBUG] cheese - Some debug message
+[2022-01-14T15:47:41.235] [INFO] cheese - 
+[2022-01-14T15:47:50.573] [DEBUG] cheese - Some debug message
+[2022-01-14T15:47:50.576] [WARN] cheese - https://www.hao123.com/b
+[2022-01-14T15:48:22.015] [WARN] cheese - https://www.hao123.com/b
+[2022-01-14T15:48:30.037] [INFO] cheese - 
+[2022-01-14T15:48:54.114] [INFO] cheese - 
+[2022-01-14T15:49:01.897] [DEBUG] cheese - https://www.hao123.com/b
+[2022-01-14T18:55:17.427] [DEBUG] cheese - https://www.hao123.com/b
+[2022-01-14T18:55:17.430] [DEBUG] cheese - URLSearchParams { 'https://www.baidu.com:443/path/index.html?id' => '2#tag=3' }
+[2022-01-14T18:59:59.520] [DEBUG] cheese - https://www.hao123.com/b
+[2022-01-14T18:59:59.523] [DEBUG] cheese - 2

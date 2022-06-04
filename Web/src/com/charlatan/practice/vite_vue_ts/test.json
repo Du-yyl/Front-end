@@ -1,0 +1,5163 @@
+{
+  "msg": "",
+  "code": "succeed",
+  "login_status": 0,
+  "mall_uid": "epet_0",
+  "mall_user": "",
+  "sys_time": 1654310426,
+  "hash": "",
+  "epet_site": "epet",
+  "page_can_pull_up": true,
+  "page_title": "猫咪首页",
+  "sensor": {
+    "page_type": "首页",
+    "page_pam": "猫咪首页",
+    "big_type": "猫猫"
+  },
+  "real_page_id": 1,
+  "datas": {
+    "navs": {
+      "bg_color": "#ffffff",
+      "menus": {
+        "default_color": {
+          "default_color": "#ffffff",
+          "choose_color": "#ffffff"
+        },
+        "float_color": {
+          "default_color": "#333333",
+          "choose_color": "#333333"
+        },
+        "data": []
+      },
+      "search": {
+        "placeholder": "原始猎食渴望Orijen"
+      },
+      "pet_name": "猫猫",
+      "pet_img": "https://img2.epetbar.com/2020-08/17/15/b0fda150a9dcee0339e1e9c36220febc.png",
+      "searchList": [
+        {
+          "sort": "110",
+          "words": "拜耳驱虫好物"
+        },
+        {
+          "sort": "105",
+          "words": "渴望"
+        },
+        {
+          "sort": "105",
+          "words": "领爱肯拿100元券"
+        },
+        {
+          "sort": "100",
+          "words": "巅峰30元优惠券"
+        }
+      ]
+    },
+    "list": [
+      {
+        "index": "2433",
+        "module_name_for_google_utm": "菜单",
+        "is_show": 1,
+        "type": "3",
+        "is_dynamic": "0",
+        "type_name": "栏目菜单二",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "menu_column": 5,
+        "menus": [
+          {
+            "name": "【新】国际495-猫",
+            "image": "https://img2.epetbar.com/2021-01/15/17/f4fcdd2f7db68eeb3991551ea17fe12d.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/orderTopic/1556?pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.【新】国际495-猫",
+                "click_info": "首页.精选.栏目菜单.【新】国际495-猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "国际495",
+            "image": "https://img2.epetbar.com/2020-04/08/16/c6050ef4ff6f41831c20f36ddc55734c.png",
+            "img_size": "150X158",
+            "target": {
+              "mode": "epethk_index",
+              "param": "9",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.国际495",
+                "click_info": "首页.精选.栏目菜单.国际495",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "0元兑礼-猫",
+            "image": "https://img2.epetbar.com/2020-12/15/17/f7ed21299557b4f847747a6497f0ed4a.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/experience/index?pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.0元兑礼-猫",
+                "click_info": "首页.精选.栏目菜单.0元兑礼-猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "周期配送495-猫",
+            "image": "https://img2.epetbar.com/2020-04/08/16/90d6c0bad136060581aae1cd9d17acc5.png",
+            "img_size": "150X158",
+            "target": {
+              "mode": "web",
+              "param": "http://wap.epet.com/app/orderTopic/724?pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.周期配送495-猫",
+                "click_info": "首页.精选.栏目菜单.周期配送495-猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "【新】周期配送495-猫",
+            "image": "https://img2.epetbar.com/2020-11/16/23/ca0783128a380c9dba72034d194eef51.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/orderTopic/804?pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.【新】周期配送495-猫",
+                "click_info": "首页.精选.栏目菜单.【新】周期配送495-猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "在线问诊",
+            "image": "https://img2.epetbar.com/2021-01/18/09/51017eb87903def091f1acf5c55cba10.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/answer?pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.在线问诊",
+                "click_info": "首页.精选.栏目菜单.在线问诊",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "品牌特卖495（猫）",
+            "image": "https://img2.epetbar.com/2020-04/08/16/b4e66c52d87b99f084dd4c826e485bd1.png",
+            "img_size": "150X158",
+            "target": {
+              "mode": "web",
+              "param": "https://sale.epet.com/m/mould/temai/cat.html?pet_type=cat&pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.品牌特卖495（猫）",
+                "click_info": "首页.精选.栏目菜单.品牌特卖495（猫）",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "【新】特价尾货 猫猫",
+            "image": "https://img2.epetbar.com/2020-11/17/00/e0a064ed4806fe9ff60c97a8fd1b0c86.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/activity/cleargoods.html?fw=0&pet_type=cat&pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.【新】特价尾货 猫猫",
+                "click_info": "首页.精选.栏目菜单.【新】特价尾货 猫猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "特价尾货 猫猫",
+            "image": "https://img2.epetbar.com/2020-07/16/09/63f24bba3bc7fbcf527e08870944f7b4.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/activity/cleargoods.html?fw=0&pet_type=cat&pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.特价尾货 猫猫",
+                "click_info": "首页.精选.栏目菜单.特价尾货 猫猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "签到抽奖 猫",
+            "image": "https://img2.epetbar.com/2020-04/08/16/ddfa88ef8bbf120108eb915a13cadf9f.png",
+            "img_size": "150X158",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/sign/index?&pet_type=cat&pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.签到抽奖 猫",
+                "click_info": "首页.精选.栏目菜单.签到抽奖 猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "【新】签到抽奖 猫",
+            "image": "https://img2.epetbar.com/2020-11/17/00/c7b2ca6a96edba95d7469f74f8fd08c8.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/sign/index?&pet_type=cat&pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.【新】签到抽奖 猫",
+                "click_info": "首页.精选.栏目菜单.【新】签到抽奖 猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "【新】助力砍价 猫",
+            "image": "https://img2.epetbar.com/2020-11/17/00/ac77995ab6bc13afd9610310e004720c.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/shareprice/index?utm_source=%E7%8C%AB%E7%8C%AB%E9%A6%96%E9%A1%B5&utm_campaign=%E7%8C%AB%E5%92%AA%E9%A6%96%E9%A1%B5&utm_content=%E9%A6%96%E9%A1%B5&pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.【新】助力砍价 猫",
+                "click_info": "首页.精选.栏目菜单.【新】助力砍价 猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "省心套餐 猫",
+            "image": "https://img2.epetbar.com/2020-04/08/17/c738a2eee0563118afb1e42ff2f6038e.png",
+            "img_size": "150X158",
+            "target": {
+              "mode": "web",
+              "param": "http://wap.epet.com/app/orderTopic/365?pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.省心套餐 猫",
+                "click_info": "首页.精选.栏目菜单.省心套餐 猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "【新】养宠工具 猫",
+            "image": "https://img2.epetbar.com/2020-12/22/16/8fa11d44875defc55a3eaed549f68596.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/opgc/knowledgeBase?pet_type=cat&...%2585%25B7&pettype=2&pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.【新】养宠工具 猫",
+                "click_info": "首页.精选.栏目菜单.【新】养宠工具 猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "养宠工具",
+            "image": "https://img2.epetbar.com/2020-11/17/00/b3266849f32f2e965e78acd5b6840c48.gif",
+            "img_size": "150X130",
+            "target": {
+              "mode": "pop_menu",
+              "param": "68",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.养宠工具",
+                "click_info": "首页.精选.栏目菜单.养宠工具",
+                "button_name": "服务器配置点击"
+              }
+            }
+          },
+          {
+            "name": "【新】超值专区 猫",
+            "image": "https://img2.epetbar.com/2020-11/17/00/fa08b6a68cd414da20c69c4d2d82617b.png",
+            "img_size": "150X130",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/orderTopic/514?pet_type=cat",
+              "sensor": {
+                "referer_detail": "首页.精选.栏目菜单.【新】超值专区 猫",
+                "click_info": "首页.精选.栏目菜单.【新】超值专区 猫",
+                "button_name": "服务器配置点击"
+              }
+            }
+          }
+        ],
+        "is_first": 1
+      },
+      {
+        "index": "3692",
+        "module_name_for_google_utm": "新人专享标题",
+        "is_show": 1,
+        "type": "21",
+        "is_dynamic": "1",
+        "type_name": "自定义Title模板",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "title_height": "110",
+          "top_line": {
+            "isline": 0,
+            "line_color": "",
+            "padding": "",
+            "line_image": {}
+          },
+          "bottom_line": {
+            "isline": 1,
+            "line_color": "#e7e7e7",
+            "padding": "10",
+            "line_image": {}
+          },
+          "left": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2018-07/24/17/74cc42b90c376edfd109e91d70130cd3.jpg",
+              "img_size": "285x110",
+              "target": {
+                "mode": "",
+                "param": "",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:",
+                  "click_info": "首页.精选.自定义title.param:",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          },
+          "center": {},
+          "right": {}
+        }
+      },
+      {
+        "index": "27",
+        "module_name_for_google_utm": "首页-天天惊喜-猫",
+        "is_show": 1,
+        "type": "8",
+        "is_dynamic": "1",
+        "type_name": null,
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "begtime": "1654304400",
+        "title": "本场结束",
+        "time": "1654311600",
+        "goods": [
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/02/03/135454_698440.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "229.00",
+            "little_price": "省91.00",
+            "gid": "110401",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:110401",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:110401",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/010/23/0104536_295709.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "4.50",
+            "little_price": "省11.40",
+            "gid": "1236103",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:1236103",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:1236103",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/goods/sales/201905150102054_796862.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "20.00",
+            "little_price": "省18.00",
+            "gid": "130385",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:130385",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:130385",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2021/011/11/115347_210972.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "28.00",
+            "little_price": "省90.00",
+            "gid": "1406409",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:1406409",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:1406409",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/03/11/141519_295163.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "42.00",
+            "little_price": "省90.00",
+            "gid": "467134",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:467134",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:467134",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/02/03/113512_385983.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "99.00",
+            "little_price": "省119.00",
+            "gid": "174893",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:174893",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:174893",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2021/07/05/161337_851497.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "175.00",
+            "little_price": "省143.00",
+            "gid": "713704",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:713704",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:713704",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2021/01/29/093954_397241.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "43.00",
+            "little_price": "省26.00",
+            "gid": "1252920",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:1252920",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:1252920",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2016-05/21/10/5047268d148d95815f418679c9b7ad48.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "119.00",
+            "little_price": "省50.00",
+            "gid": "157494",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:157494",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:157494",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/010/14/114129_701213.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "8.00",
+            "little_price": "省11.50",
+            "gid": "695103",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:695103",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:695103",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2021/08/09/112522_489527.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "7.00",
+            "little_price": "省11.00",
+            "gid": "1338546",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:1338546",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:1338546",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/02/03/113333_830172.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "119.00",
+            "little_price": "省139.00",
+            "gid": "174894",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:174894",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:174894",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/03/06/094706_425758.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "109.00",
+            "little_price": "省39.00",
+            "gid": "111387",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:111387",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:111387",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/09/22/145540_618357.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "348.00",
+            "little_price": "省193.00",
+            "gid": "218328",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:218328",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:218328",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/011/19/212459_423353.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "21.00",
+            "little_price": "省33.00",
+            "gid": "256567",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:256567",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:256567",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/12/29/0104444_606563.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "21.00",
+            "little_price": "省12.00",
+            "gid": "121095",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:121095",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:121095",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2021/08/09/112512_64752.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "2.00",
+            "little_price": "省5.00",
+            "gid": "1338544",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:1338544",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:1338544",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2021/04/27/164211_200510.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "11.00",
+            "little_price": "省25.00",
+            "gid": "170855",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:170855",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:170855",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/12/29/0104233_392335.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "17.00",
+            "little_price": "省10.67",
+            "gid": "121094",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:121094",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:121094",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/03/11/141641_671659.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "42.00",
+            "little_price": "省90.00",
+            "gid": "467136",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:467136",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:467136",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2016-03/25/16/b7a9ce4825c6ad5dffa5e9c19f9f47d7.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "390.00",
+            "little_price": "省99.00",
+            "gid": "157634",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:157634",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:157634",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2016-03/25/16/4ed508935159d7980bfd80520d316ff0.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "383.00",
+            "little_price": "省106.00",
+            "gid": "157638",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:157638",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:157638",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2017-09/26/15/455bc8f7800e44fbd0404da3d57eb43b.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "98.80",
+            "little_price": "省16.90",
+            "gid": "220419",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:220419",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:220419",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2017-09/22/09/d281c3de50b9d3d01eec7c29b625e078.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "82.20",
+            "little_price": "省14.00",
+            "gid": "220083",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:220083",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:220083",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2017-03/24/10/8a1c49da44c3bead9e194dc919386c9e.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "81.90",
+            "little_price": "省47.10",
+            "gid": "196799",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:196799",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:196799",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2016-01/05/16/13870bba4a7357cc1183e526778c4386.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "79.40",
+            "little_price": "省40.60",
+            "gid": "166988",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:166988",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:166988",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2017-04/27/14/432e7ddc5237ad70b14d6561a4da958c.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "78.00",
+            "little_price": "省0.00",
+            "gid": "199949",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:199949",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:199949",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2017-09/21/20/a3d24940c48c6c23e4b184eb3c46fd89.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "71.10",
+            "little_price": "省12.10",
+            "gid": "220089",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:220089",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:220089",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2015-10/31/8/4e5d59a3ea78489d439e3e69c9ef258a.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "66.60",
+            "little_price": "省108.40",
+            "gid": "167302",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:167302",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:167302",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2021/06/02/095649_249265.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "35.90",
+            "little_price": "省7.00",
+            "gid": "115041",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:115041",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:115041",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/goods/sales/upload_file_20194178392.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "16.60",
+            "little_price": "省11.40",
+            "gid": "195252",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:195252",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:195252",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/goods/sales/upload_file_20194176521.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "15.00",
+            "little_price": "省10.00",
+            "gid": "176084",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:176084",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:176084",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2015-07/21/20be59845dd2ab5c1878d340fe63b8b0.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "14.80",
+            "little_price": "省11.20",
+            "gid": "160647",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:160647",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:160647",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2017-09/20/19/6413f71f0db287c094c074d34d4bfe5d.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "10.80",
+            "little_price": "省6.20",
+            "gid": "219694",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:219694",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:219694",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2017-09/21/10/3334aecec3f907e58af779c367c06dc0.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "10.80",
+            "little_price": "省8.20",
+            "gid": "219802",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:219802",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:219802",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2021/06/02/095649_249265.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "9.70",
+            "little_price": "省1.20",
+            "gid": "119639",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:119639",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:119639",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/2016-12/12/10/9faeb4b3555a92412d1f4b39cd73438c.png",
+              "img_size": "165x165"
+            },
+            "sale_price": "2.80",
+            "little_price": "省1.10",
+            "gid": "119637",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:119637",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:119637",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          },
+          {
+            "image": {
+              "image": "https://img1.epetbar.com/common/upload/commonfile/2020/09/23/0104928_745151.jpg",
+              "img_size": "165x165"
+            },
+            "sale_price": "2.20",
+            "little_price": "省2.30",
+            "gid": "112845",
+            "presubject": null,
+            "target": {
+              "mode": "miaosha",
+              "param": {
+                "title": "每日疯抢"
+              },
+              "sensor": {
+                "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:112845",
+                "click_info": "首页.精选.每日疯抢.tid:09:00|gid:112845",
+                "button_name": "服务器配置点击"
+              }
+            },
+            "vip": {}
+          }
+        ],
+        "right_image": {
+          "image": "https://img2.epetbar.com/nowater/2018-02/02/12/0e7b95a6cae2f593c0277eac64f94794.png",
+          "img_size": "135x68",
+          "target": {
+            "mode": "surprise",
+            "param": {
+              "title": "每日疯抢",
+              "tid": "09:00"
+            }
+          }
+        },
+        "surprise_icon": {
+          "image": "https://static.epetbar.com/static_wap/appmall/main/new_index_icon_suprice.png?version=03",
+          "img_size": "146x33",
+          "target": {}
+        }
+      },
+      {
+        "index": "58",
+        "module_name_for_google_utm": "华丽分割线",
+        "is_show": 1,
+        "type": "100",
+        "is_dynamic": "0",
+        "type_name": "模块分割线",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "image": "",
+          "img_size": "750x25",
+          "target": {}
+        }
+      },
+      {
+        "index": "7524",
+        "module_name_for_google_utm": "1",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5614",
+                "atid": 0,
+                "img_size": "750x165",
+                "target": {},
+                "src": "https://img2.epetbar.com/2022-06/02/11/77f0134b93d867f49cbb44d63d58c060.jpg",
+                "title": "品牌日+品类日",
+                "bgcolor": "",
+                "param": {},
+                "rule": {},
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/77f0134b93d867f49cbb44d63d58c060.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7525",
+        "module_name_for_google_utm": "2",
+        "is_show": 1,
+        "type": "202",
+        "is_dynamic": "0",
+        "type_name": "单广告轮播图模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "images": [
+            {
+              "img_url": "https://img2.epetbar.com/2022-06/02/11/eb0b6e96a6f7669d9545e5091e3216be.png?x-oss-process=style/water",
+              "img_size": "750x218",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/orderTopic/3621",
+                "sensor": {
+                  "referer_detail": "首页.精选.广告图.advid:5615",
+                  "click_info": "首页.精选.广告图.advid:5615",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "img_url": "https://img2.epetbar.com/2022-06/02/11/4a09b1f35eb604cc95414a33f807265c.png?x-oss-process=style/water",
+              "img_size": "750x218",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/orderTopic/3631",
+                "sensor": {
+                  "referer_detail": "首页.精选.广告图.advid:5616",
+                  "click_info": "首页.精选.广告图.advid:5616",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "img_url": "https://img2.epetbar.com/2022-06/02/11/819fc9066a45c216d4cddaed15d36d17.png?x-oss-process=style/water",
+              "img_size": "750x218",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/orderTopic/3632",
+                "sensor": {
+                  "referer_detail": "首页.精选.广告图.advid:5617",
+                  "click_info": "首页.精选.广告图.advid:5617",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "img_url": "https://img2.epetbar.com/2022-06/02/11/67f934d4c7f3b68d76e576ce5141c2da.png?x-oss-process=style/water",
+              "img_size": "750x218",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/orderTopic/3615",
+                "sensor": {
+                  "referer_detail": "首页.精选.广告图.advid:5618",
+                  "click_info": "首页.精选.广告图.advid:5618",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "img_url": "https://img2.epetbar.com/2022-06/02/11/adc8093f19b5b2f078ccf4224a6befa0.png?x-oss-process=style/water",
+              "img_size": "750x218",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/orderTopic/3619",
+                "sensor": {
+                  "referer_detail": "首页.精选.广告图.advid:5619",
+                  "click_info": "首页.精选.广告图.advid:5619",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "img_url": "https://img2.epetbar.com/2022-06/02/11/ccfb97af33339d07e73e56ea9ad4ff35.png?x-oss-process=style/water",
+              "img_size": "750x218",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/orderTopic/3617",
+                "sensor": {
+                  "referer_detail": "首页.精选.广告图.advid:5620",
+                  "click_info": "首页.精选.广告图.advid:5620",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ],
+          "background_img": {
+            "img_url": "https://img2.epetbar.com/nowater/2022-06/02/11/76cee1774ee8c9b8b7cb546a51d0493d.jpg",
+            "img_size": "750x218",
+            "target": {}
+          }
+        }
+      },
+      {
+        "index": "7526",
+        "module_name_for_google_utm": "3",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5621",
+                "atid": 0,
+                "img_size": "750x219",
+                "target": {},
+                "src": "https://img2.epetbar.com/2022-06/02/11/0bd0bde3e8e9d14dca8c411819086e5a.jpg",
+                "title": "品牌日+品类日",
+                "bgcolor": "",
+                "param": {},
+                "rule": {},
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/0bd0bde3e8e9d14dca8c411819086e5a.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7673",
+        "module_name_for_google_utm": "4",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5622",
+                "atid": 0,
+                "img_size": "750x338",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/1b9023ca07eb606ba1126ce3d995de59.gif",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/1b9023ca07eb606ba1126ce3d995de59.gif?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "1355",
+        "module_name_for_google_utm": "品牌特卖标题",
+        "is_show": 1,
+        "type": "21",
+        "is_dynamic": "0",
+        "type_name": "自定义Title模板",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "title_height": "80",
+          "top_line": {
+            "isline": 0,
+            "line_color": "",
+            "padding": "",
+            "line_image": {}
+          },
+          "bottom_line": {
+            "isline": 1,
+            "line_color": "#e7e7e7",
+            "padding": "10",
+            "line_image": {}
+          },
+          "left": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2017-12/13/16/70adf3f7cc4cbe58a7dc4865c4b4f932.jpg",
+              "img_size": "285x110",
+              "target": {
+                "mode": "web",
+                "param": "https://sale.epet.com/m/mould/temai/main.html",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:https://sale.epet.com/m/mould/temai/main.html",
+                  "click_info": "首页.精选.自定义title.param:https://sale.epet.com/m/mould/temai/main.html",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          },
+          "center": {},
+          "right": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2017-12/13/17/e9aea7ada15165227f1bfb15ba530875.jpg",
+              "img_size": "120x110",
+              "target": {
+                "mode": "web",
+                "param": "https://sale.epet.com/m/mould/temai/main.html",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:https://sale.epet.com/m/mould/temai/main.html",
+                  "click_info": "首页.精选.自定义title.param:https://sale.epet.com/m/mould/temai/main.html",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "index": "7674",
+        "module_name_for_google_utm": "5",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5623",
+                "atid": 0,
+                "img_size": "750x112",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3622"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/9f5dcafda365010c0af8ceeee4006feb.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3622"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3622"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/9f5dcafda365010c0af8ceeee4006feb.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7527",
+        "module_name_for_google_utm": "菜单",
+        "is_show": 1,
+        "type": "252",
+        "is_dynamic": "0",
+        "type_name": "[1.15]菜单",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "bg_image": "https://img2.epetbar.com/nowater/2021-01/04/09/45522670cc7e06cd7462e5579a673a87.png",
+          "menus": [
+            {
+              "name": "E宠进口-猫猫",
+              "img_url": "https://img2.epetbar.com/2022-06/01/14/c6498104c1485f09e16050c0a143cd77.jpg",
+              "img_size": "150X132",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/orderTopic/2937?pet_type=cat",
+                "sensor": {
+                  "referer_detail": "首页.精选.一级菜单.E宠进口-猫猫",
+                  "click_info": "首页.精选.一级菜单.E宠进口-猫猫",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "name": "E宠公益-猫狗",
+              "img_url": "https://img2.epetbar.com/2022-06/01/14/82840a4625f79facd6b3087b36606c9b.jpg",
+              "img_size": "150X132",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/eWelfare?pet_type=cat",
+                "sensor": {
+                  "referer_detail": "首页.精选.一级菜单.E宠公益-猫狗",
+                  "click_info": "首页.精选.一级菜单.E宠公益-猫狗",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "name": "养宠工具-猫狗",
+              "img_url": "https://img2.epetbar.com/2022-06/01/14/a1ff9b8ad2357a2e660dd101e2973670.jpg",
+              "img_size": "150X132",
+              "target": {
+                "mode": "pop_menu",
+                "param": [],
+                "sensor": {
+                  "referer_detail": "首页.精选.一级菜单.养宠工具-猫狗",
+                  "click_info": "首页.精选.一级菜单.养宠工具-猫狗",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "name": "批次抽检-猫猫",
+              "img_url": "https://img2.epetbar.com/2022-06/01/14/e475ee574cfd8c9cc1e724c3305ffb43.jpg",
+              "img_size": "150X132",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/orderTopic/3302?pet_type=cat",
+                "sensor": {
+                  "referer_detail": "首页.精选.一级菜单.批次抽检-猫猫",
+                  "click_info": "首页.精选.一级菜单.批次抽检-猫猫",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "name": "特价尾货-猫猫",
+              "img_url": "https://img2.epetbar.com/2022-06/01/14/f271398e047a93c6b4c2a197b281e56f.jpg",
+              "img_size": "150X132",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/activity/cleargoods.html?fw=0&pet_type=cat&pet_type=cat",
+                "sensor": {
+                  "referer_detail": "首页.精选.一级菜单.特价尾货-猫猫",
+                  "click_info": "首页.精选.一级菜单.特价尾货-猫猫",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ],
+          "menu_column": 5,
+          "color": "#7CDCBF",
+          "bg_color": "#EAEAEA"
+        }
+      },
+      {
+        "index": "7580",
+        "module_name_for_google_utm": "氛围图",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5638",
+                "atid": 0,
+                "img_size": "750x195",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/15/322f99698e3df1817f5197fe3c73f8a1.gif",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/15/322f99698e3df1817f5197fe3c73f8a1.gif?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7684",
+        "module_name_for_google_utm": "物流",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5637",
+                "atid": 0,
+                "img_size": "750x97",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3385"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/15/162846f6dd63453304baed9a13a257cc.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3385"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3385"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/15/162846f6dd63453304baed9a13a257cc.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7581",
+        "module_name_for_google_utm": "魔法来袭",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5624",
+                "atid": 0,
+                "img_size": "750x118",
+                "target": {},
+                "src": "https://img2.epetbar.com/2022-06/02/11/086d5cb192cf401273b15fbfc9d1eeee.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {},
+                "rule": {},
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/086d5cb192cf401273b15fbfc9d1eeee.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7582",
+        "module_name_for_google_utm": "优惠券+预售价",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5625",
+                "atid": 0,
+                "img_size": "375x307",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/300f97113750d21c09a7851d2dfcef91.jpg",
+                "title": "1",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/300f97113750d21c09a7851d2dfcef91.jpg?x-oss-process=style/water"
+              }
+            ],
+            [
+              {
+                "advid": "5626",
+                "atid": 0,
+                "img_size": "375x307",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3626"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/360cb25b11114fa009e83063ba8d1620.jpg",
+                "title": "2",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3626"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3626"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/360cb25b11114fa009e83063ba8d1620.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7583",
+        "module_name_for_google_utm": "0元兑礼+买3免1",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5627",
+                "atid": 0,
+                "img_size": "375x308",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3624"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/1b3cd67285755895f159a0cd4078309b.jpg",
+                "title": "1",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3624"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3624"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/1b3cd67285755895f159a0cd4078309b.jpg?x-oss-process=style/water"
+              }
+            ],
+            [
+              {
+                "advid": "5628",
+                "atid": 0,
+                "img_size": "375x308",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3628"
+                },
+                "src": "https://img2.epetbar.com/2022-06/03/17/7d476bf9618917bc7d25c9929312628f.jpg",
+                "title": "2",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3628"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3628"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/03/17/7d476bf9618917bc7d25c9929312628f.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7584",
+        "module_name_for_google_utm": "爆款冰点价",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5629",
+                "atid": 0,
+                "img_size": "750x124",
+                "target": {},
+                "src": "https://img2.epetbar.com/2022-06/02/11/a671122b65a3333050e32a3dc9514b5c.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {},
+                "rule": {},
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/a671122b65a3333050e32a3dc9514b5c.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7675",
+        "module_name_for_google_utm": "冰点价商品",
+        "is_show": 1,
+        "type": "259",
+        "is_dynamic": "0",
+        "type_name": "单品推荐",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "color_conf": {
+            "bg_start_color": "#e4bb97",
+            "bg_end_color": "#e66a17",
+            "angle_mark_text_color": "#ffffff",
+            "angle_mark_bg_color": "#e24000",
+            "title_text_color": "#e24000",
+            "price_bg_color": "#c527ff",
+            "price_text_color": "#ffffff",
+            "underline_price_color": "#ffffff",
+            "goods_bg_color": "#ffffff"
+          },
+          "goods_list": [
+            {
+              "mark": "详情领￥150券",
+              "img_url": "https://img2.epetbar.com/2017-08/16/10/2f8880a76fee119085b55c8bda27958a.jpg@!200w-c",
+              "title": "美国原装进口Instinct生鲜本能百利猫粮/生鲜系列 无谷鸡肉配方全猫粮 10磅(4.5kg)",
+              "sale_price": "488",
+              "market_price": "488",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "210543"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐210543",
+                  "click_info": "首页.单品推荐.210543",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "立省47元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/09/29/122612_885511.jpg@!200w-c",
+              "title": "博来恩 2.5~7.5kg猫用内外同驱滴剂 整盒",
+              "sale_price": "235",
+              "market_price": "282",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "232546"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐232546",
+                  "click_info": "首页.单品推荐.232546",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "立省7元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/04/08/155737_658067.jpg@!200w-c",
+              "title": "泰国进口珍致 猫罐头 5罐送1罐青春装 整盒425g+85g",
+              "sale_price": "49",
+              "market_price": "56",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "175004"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐175004",
+                  "click_info": "首页.单品推荐.175004",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "立省21元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/07/12/112900_899788.jpg@!200w-c",
+              "title": "洁珊 膨润土强凝聚力猫砂9L*2袋",
+              "sale_price": "55",
+              "market_price": "76",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "737512"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐737512",
+                  "click_info": "首页.单品推荐.737512",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "7586",
+        "module_name_for_google_utm": "进口主粮楼层",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5630",
+                "atid": 0,
+                "img_size": "750x124",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3631"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/91cf07fc0dad71ef103424471c8eeadd.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3631"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3631"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/91cf07fc0dad71ef103424471c8eeadd.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7676",
+        "module_name_for_google_utm": "进口主粮商品",
+        "is_show": 1,
+        "type": "259",
+        "is_dynamic": "0",
+        "type_name": "单品推荐",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "color_conf": {
+            "bg_start_color": "#e4bb97",
+            "bg_end_color": "#e66a17",
+            "angle_mark_text_color": "#ffffff",
+            "angle_mark_bg_color": "#e24000",
+            "title_text_color": "#e24000",
+            "price_bg_color": "#c527ff",
+            "price_text_color": "#ffffff",
+            "underline_price_color": "#ffffff",
+            "goods_bg_color": "#ffffff"
+          },
+          "goods_list": [
+            {
+              "mark": "详情领￥70券",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/02/03/135454_698440.jpg@!200w-c",
+              "title": "加拿大原装进口原始猎食渴望Orijen 全肉配方全猫粮  1.8kg",
+              "sale_price": "319",
+              "market_price": "320",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "110401"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐110401",
+                  "click_info": "首页.单品推荐.110401",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "限时5.6折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/010/01/131325_475401.jpeg@!200w-c",
+              "title": "【保质期2022年10月】美国原装进口卡比CANIDAE 无谷系列猫粮-元素鲜三文鱼 10lb",
+              "sale_price": "249",
+              "market_price": "449",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "1398707"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐1398707",
+                  "click_info": "首页.单品推荐.1398707",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "详情领￥55券",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/02/26/1601057_846342.jpg@!200w-c",
+              "title": "加拿大原装进口 爱肯拿Acana 无谷深海鱼配方全猫粮 1.8kg",
+              "sale_price": "245",
+              "market_price": "245",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "131639"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐131639",
+                  "click_info": "首页.单品推荐.131639",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "限时7.2折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/07/13/094708_81257.jpg@!200w-c",
+              "title": "耐吉斯SOLUTION 加拿大版 火鸡肉配方全价幼猫粮 6kg",
+              "sale_price": "329",
+              "market_price": "460",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "224296"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐224296",
+                  "click_info": "首页.单品推荐.224296",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "7588",
+        "module_name_for_google_utm": "国产主粮楼层",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5631",
+                "atid": 0,
+                "img_size": "750x125",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3632"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/58e64f3e23ff5eaadbcb08e6bd1f1544.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3632"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3632"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/58e64f3e23ff5eaadbcb08e6bd1f1544.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7677",
+        "module_name_for_google_utm": "国产主粮商品",
+        "is_show": 1,
+        "type": "259",
+        "is_dynamic": "0",
+        "type_name": "单品推荐",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "color_conf": {
+            "bg_start_color": "#e4bb97",
+            "bg_end_color": "#e66a17",
+            "angle_mark_text_color": "#ffffff",
+            "angle_mark_bg_color": "#e24000",
+            "title_text_color": "#e24000",
+            "price_bg_color": "#c527ff",
+            "price_text_color": "#ffffff",
+            "underline_price_color": "#ffffff",
+            "goods_bg_color": "#ffffff"
+          },
+          "goods_list": [
+            {
+              "mark": "限时5.2折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/011/23/163745_797244.jpg@!200w-c",
+              "title": "醇粹Purich 室内全猫粮 10kg ",
+              "sale_price": "159",
+              "market_price": "309",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "250131"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐250131",
+                  "click_info": "首页.单品推荐.250131",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "限时5.8折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/12/22/122624_233044.jpg@!200w-c",
+              "title": "伯纳天纯Pure&Natural 添加金枪鱼紫薯蔓越莓幼猫粮 10kg  ",
+              "sale_price": "295",
+              "market_price": "509",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "176561"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐176561",
+                  "click_info": "首页.单品推荐.176561",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "限时7.7折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/02/07/120516_849256.jpg@!200w-c",
+              "title": "冠能 室内猫成年期全价猫粮 7kg",
+              "sale_price": "348",
+              "market_price": "453",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "218334"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐218334",
+                  "click_info": "首页.单品推荐.218334",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "详情领￥140券",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/07/28/0955010_879798.jpg@!200w-c",
+              "title": "倍内菲 无谷鹿肉＋三文鱼生鲜配方猫粮 15LB/6.8kg",
+              "sale_price": "390",
+              "market_price": "390",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "257082"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐257082",
+                  "click_info": "首页.单品推荐.257082",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "7590",
+        "module_name_for_google_utm": "保健楼层",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5632",
+                "atid": 0,
+                "img_size": "750x130",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3615"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/d4239e6e1eddc8a7b1ae3ed7ed2762e4.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3615"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3615"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/d4239e6e1eddc8a7b1ae3ed7ed2762e4.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7678",
+        "module_name_for_google_utm": "保健商品",
+        "is_show": 1,
+        "type": "259",
+        "is_dynamic": "0",
+        "type_name": "单品推荐",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "color_conf": {
+            "bg_start_color": "#e4bb97",
+            "bg_end_color": "#e66a17",
+            "angle_mark_text_color": "#ffffff",
+            "angle_mark_bg_color": "#e24000",
+            "title_text_color": "#e24000",
+            "price_bg_color": "#c527ff",
+            "price_text_color": "#ffffff",
+            "underline_price_color": "#ffffff",
+            "goods_bg_color": "#ffffff"
+          },
+          "goods_list": [
+            {
+              "mark": "限时6.9折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2022/05/20/110545_437942.jpg@!200w-c",
+              "title": "德国原装进口 拜耳Bayer 猫用拜宠清 四粒装",
+              "sale_price": "109",
+              "market_price": "158",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "680077"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐680077",
+                  "click_info": "首页.单品推荐.680077",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "限时2.5折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/04/02/092254_610715.jpg@!200w-c",
+              "title": "【卫仕组合装】营养膏+化毛膏两支装",
+              "sale_price": "43",
+              "market_price": "175",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "696323"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐696323",
+                  "click_info": "首页.单品推荐.696323",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "立省13元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/03/17/141951_722492.jpg@!200w-c",
+              "title": "卫仕 猫多维 复合维生素片 200片",
+              "sale_price": "55",
+              "market_price": "68",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "250507"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐250507",
+                  "click_info": "首页.单品推荐.250507",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "立省20元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/03/17/142039_73904.jpg@!200w-c",
+              "title": "卫仕 猫力肠 复合益生菌片 200片",
+              "sale_price": "48",
+              "market_price": "68",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "250508"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐250508",
+                  "click_info": "首页.单品推荐.250508",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "7679",
+        "module_name_for_google_utm": "零食楼层",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5633",
+                "atid": 0,
+                "img_size": "750x132",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3619"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/65b7386d745703e04e2b9b965cfaade8.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3619"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3619"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/65b7386d745703e04e2b9b965cfaade8.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7680",
+        "module_name_for_google_utm": "零食商品",
+        "is_show": 1,
+        "type": "259",
+        "is_dynamic": "0",
+        "type_name": "单品推荐",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "color_conf": {
+            "bg_start_color": "#e4bb97",
+            "bg_end_color": "#e66a17",
+            "angle_mark_text_color": "#ffffff",
+            "angle_mark_bg_color": "#e24000",
+            "title_text_color": "#e24000",
+            "price_bg_color": "#c527ff",
+            "price_text_color": "#ffffff",
+            "underline_price_color": "#ffffff",
+            "goods_bg_color": "#ffffff"
+          },
+          "goods_list": [
+            {
+              "mark": "立省7元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/04/08/155737_658067.jpg@!200w-c",
+              "title": "泰国进口珍致 猫罐头 5罐送1罐青春装 整盒425g+85g",
+              "sale_price": "49",
+              "market_price": "56",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "175004"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐175004",
+                  "click_info": "首页.单品推荐.175004",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "立省14元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/011/17/143214_834701.jpg@!200w-c",
+              "title": "BOTH 成猫山羊奶布丁 桶装50粒",
+              "sale_price": "42",
+              "market_price": "56",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "147432"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐147432",
+                  "click_info": "首页.单品推荐.147432",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "限时6折",
+              "img_url": "https://img2.epetbar.com/goods/sales/20190508171431_650695.jpg@!200w-c",
+              "title": "路斯 猫用小鱼饼干 金枪鱼+猫薄荷 80g",
+              "sale_price": "5.9",
+              "market_price": "9.9",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "167674"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐167674",
+                  "click_info": "首页.单品推荐.167674",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "立省3元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/06/02/092200_396318.jpg@!200w-c",
+              "title": "希宝sheba 海鲜汤汁系列吞拿鱼配方清汤鱼片成猫罐 85g",
+              "sale_price": "7.9",
+              "market_price": "10.9",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "128131"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐128131",
+                  "click_info": "首页.单品推荐.128131",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "7681",
+        "module_name_for_google_utm": "生活楼层",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5634",
+                "atid": 0,
+                "img_size": "750x132",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3617"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/0898d7380e962f6689b037f43881dbfe.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3617"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3617"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/0898d7380e962f6689b037f43881dbfe.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7682",
+        "module_name_for_google_utm": "生活商品",
+        "is_show": 1,
+        "type": "259",
+        "is_dynamic": "0",
+        "type_name": "单品推荐",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "#7a3c8b",
+          "padding_color": ""
+        },
+        "data": {
+          "color_conf": {
+            "bg_start_color": "#e4bb97",
+            "bg_end_color": "#e66a17",
+            "angle_mark_text_color": "#ffffff",
+            "angle_mark_bg_color": "#e24000",
+            "title_text_color": "#e24000",
+            "price_bg_color": "#c527ff",
+            "price_text_color": "#ffffff",
+            "underline_price_color": "#ffffff",
+            "goods_bg_color": "#ffffff"
+          },
+          "goods_list": [
+            {
+              "mark": "限时6折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/08/17/110518_496391.jpg@!200w-c",
+              "title": "俏尾巴 天然钠基膨润土豆腐混合猫砂 2.5kg *3袋",
+              "sale_price": "52",
+              "market_price": "86.7",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "806761"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐806761",
+                  "click_info": "首页.单品推荐.806761",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "限时3.7折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/07/27/0100208_303125.jpg@!200w-c",
+              "title": "俏尾巴SmartTail 犬猫通用氨基酸洁足泡沫 150ml",
+              "sale_price": "11",
+              "market_price": "29.9",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "1388889"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐1388889",
+                  "click_info": "首页.单品推荐.1388889",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "限时6.5折",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/011/19/162030_28262.JPG@!200w-c",
+              "title": "洁客 奶香豆腐猫砂 2.72kg",
+              "sale_price": "29",
+              "market_price": "45",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "1372922"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐1372922",
+                  "click_info": "首页.单品推荐.1372922",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "mark": "立省3元",
+              "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/08/07/161212_23732.jpg@!200w-c",
+              "title": "爱丽思IRIS 加厚洁垫/尿片 AS-88 小号 88片装",
+              "sale_price": "32",
+              "market_price": "35",
+              "target": {
+                "mode": "goods_extend",
+                "param": {
+                  "gid": "172243"
+                },
+                "sensor": {
+                  "referer_detail": "首页.单品推荐172243",
+                  "click_info": "首页.单品推荐.172243",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "7607",
+        "module_name_for_google_utm": "底图",
+        "is_show": 1,
+        "type": "203",
+        "is_dynamic": "0",
+        "type_name": "通用广告模板(>=415)",
+        "css": {
+          "margin_bottom": 20,
+          "background_color": "#f7f7f7",
+          "padding_color": ""
+        },
+        "data": {
+          "show_notice": 0,
+          "column_images": [
+            [
+              {
+                "advid": "5635",
+                "atid": 0,
+                "img_size": "750x264",
+                "target": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "src": "https://img2.epetbar.com/2022-06/02/11/c51bf12afa8cae3039294959c11d196b.jpg",
+                "title": "品牌日",
+                "bgcolor": "",
+                "param": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "rule": {
+                  "mode": "web",
+                  "param": "https://wap.epet.com/app/orderTopic/3621"
+                },
+                "img_url": "https://img2.epetbar.com/2022-06/02/11/c51bf12afa8cae3039294959c11d196b.jpg?x-oss-process=style/water"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "index": "7447",
+        "module_name_for_google_utm": "单单有礼",
+        "is_show": 1,
+        "type": "258",
+        "is_dynamic": "1",
+        "type_name": "单单有礼",
+        "css": {
+          "margin_bottom": 20,
+          "background_color": "#f7f7f7",
+          "padding_color": ""
+        },
+        "data": {
+          "margin_bottom": "20",
+          "background_color": "#f7f7f7",
+          "padding_color": "",
+          "left_title": "单单有礼",
+          "right_title": "签到抽奖",
+          "sign_url": "https://wap.epet.com/app/sign/index",
+          "sign": {
+            "level_appendtext": "V1奖励更丰富",
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/sign/index"
+            },
+            "dataList": [
+              {
+                "day": 1,
+                "done": 0,
+                "group_key": "",
+                "desc": "",
+                "image": "https://static.epetbar.com/epet_wap_img/sign/sign_coin0.png"
+              },
+              {
+                "day": 2,
+                "done": 0,
+                "group_key": "",
+                "desc": "",
+                "image": "https://static.epetbar.com/epet_wap_img/sign/sign_coin0.png"
+              },
+              {
+                "day": 3,
+                "done": 0,
+                "group_key": "",
+                "desc": "",
+                "image": "https://static.epetbar.com/epet_wap_img/sign/sign_coin0.png"
+              }
+            ]
+          },
+          "vipTost": {
+            "target": {
+              "mode": "web",
+              "param": "https://wap.epet.com/app/experience/index?pet_type=cat"
+            },
+            "tips": "6767位家长已领",
+            "list": [
+              {
+                "id": "451",
+                "subject": "俏尾巴 粘毛器 替换装",
+                "stock": "19",
+                "emoney": "0",
+                "cash": "0.00",
+                "threshold": 0,
+                "show_threshold": "",
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/08/09/112512_64752.jpg@!200w-c",
+                "btn": {
+                  "param": {
+                    "gid": "1338544",
+                    "pam": "451"
+                  }
+                },
+                "price": "7.00",
+                "is_vip": 0
+              },
+              {
+                "id": "371",
+                "subject": "小宠EHD 肠胃宝 益生菌制剂 5g/包",
+                "stock": "18",
+                "emoney": "0",
+                "cash": "0.00",
+                "threshold": 99,
+                "show_threshold": "",
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/01/15/163348_499899.jpg@!200w-c",
+                "btn": {
+                  "param": {
+                    "gid": "120422",
+                    "pam": "371"
+                  }
+                },
+                "price": "6.60",
+                "is_vip": 0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "index": "3654",
+        "module_name_for_google_utm": "VIP标题",
+        "is_show": 1,
+        "type": "21",
+        "is_dynamic": "0",
+        "type_name": "自定义Title模板",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "title_height": "110",
+          "top_line": {
+            "isline": 0,
+            "line_color": "",
+            "padding": "",
+            "line_image": {}
+          },
+          "bottom_line": {
+            "isline": 0,
+            "line_color": "",
+            "padding": "",
+            "line_image": {}
+          },
+          "left": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2018-06/25/16/4acf17d88fdf20b74e99a8141cb2be21.jpg",
+              "img_size": "285x110",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/vip/Main.html",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:https://wap.epet.com/vip/Main.html",
+                  "click_info": "首页.精选.自定义title.param:https://wap.epet.com/vip/Main.html",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          },
+          "center": {},
+          "right": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2018-06/25/16/23bfea37be824f456529cc822f740e06.jpg",
+              "img_size": "120x110",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/vip/Main.html",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:https://wap.epet.com/vip/Main.html",
+                  "click_info": "首页.精选.自定义title.param:https://wap.epet.com/vip/Main.html",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "index": "2122",
+        "module_name_for_google_utm": "华丽的分割线",
+        "is_show": 1,
+        "type": "100",
+        "is_dynamic": "0",
+        "type_name": "模块分割线",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "image": "",
+          "img_size": "750x25",
+          "target": {}
+        }
+      },
+      {
+        "index": "7448",
+        "module_name_for_google_utm": "每日疯抢",
+        "is_show": 1,
+        "type": "235",
+        "is_dynamic": "1",
+        "type_name": "每日疯抢4个",
+        "css": {
+          "margin_bottom": 20,
+          "background_color": "#f7f7f7",
+          "padding_color": ""
+        },
+        "data": {
+          "title": "09点场",
+          "stateTitle": "正在疯抢",
+          "state": 1,
+          "left": {
+            "img_url": "https://static.epetbar.com/static_wap/appmall/main/index_icon_berserk_mark_529.png?version=03",
+            "img_size": "160x32",
+            "target": {}
+          },
+          "goods": [
+            {
+              "discount_img": {
+                "img_url": "",
+                "img_size": ""
+              },
+              "image": {
+                "img_url": "https://img1.epetbar.com/common/upload/commonfile/2020/12/29/0104233_392335.jpg",
+                "img_size": "165x165"
+              },
+              "sale_price": "17.00",
+              "little_price": "27.67",
+              "subject": "【临期商品10月到期】爱乐滴 单支/2ml ",
+              "brandName": "维克Virbac",
+              "discount": "6.3折",
+              "reduce_price": "",
+              "gid": "121094",
+              "target": {
+                "mode": "miaosha",
+                "param": {
+                  "title": "每日疯抢",
+                  "tid": "09:00"
+                },
+                "sensor": {
+                  "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:121094",
+                  "click_info": "首页.精选.每日疯抢.tid:09:00|gid:121094",
+                  "button_name": "服务器配置点击"
+                }
+              },
+              "vip": {}
+            },
+            {
+              "discount_img": {
+                "img_url": "",
+                "img_size": ""
+              },
+              "image": {
+                "img_url": "https://img1.epetbar.com/2017-03/24/10/8a1c49da44c3bead9e194dc919386c9e.jpg",
+                "img_size": "165x165"
+              },
+              "sale_price": "81.90",
+              "little_price": "129.00",
+              "subject": "美国贝适安Petsafe旗下 Drinkwell*铂金版饮水器备用马达与适配器",
+              "brandName": "贝适安PetSafe",
+              "discount": "6.3折",
+              "reduce_price": "",
+              "gid": "196799",
+              "target": {
+                "mode": "miaosha",
+                "param": {
+                  "title": "每日疯抢",
+                  "tid": "09:00"
+                },
+                "sensor": {
+                  "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:196799",
+                  "click_info": "首页.精选.每日疯抢.tid:09:00|gid:196799",
+                  "button_name": "服务器配置点击"
+                }
+              },
+              "vip": {}
+            },
+            {
+              "discount_img": {
+                "img_url": "",
+                "img_size": ""
+              },
+              "image": {
+                "img_url": "https://img1.epetbar.com/2017-04/27/14/432e7ddc5237ad70b14d6561a4da958c.jpg",
+                "img_size": "165x165"
+              },
+              "sale_price": "78.00",
+              "little_price": "78.00",
+              "subject": "伟嘉 营养加油站全价幼猫猫粮 海洋鱼味 2kg ",
+              "brandName": "伟嘉whiskas",
+              "discount": "10折",
+              "reduce_price": "",
+              "gid": "199949",
+              "target": {
+                "mode": "miaosha",
+                "param": {
+                  "title": "每日疯抢",
+                  "tid": "09:00"
+                },
+                "sensor": {
+                  "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:199949",
+                  "click_info": "首页.精选.每日疯抢.tid:09:00|gid:199949",
+                  "button_name": "服务器配置点击"
+                }
+              },
+              "vip": {}
+            },
+            {
+              "discount_img": {
+                "img_url": "",
+                "img_size": ""
+              },
+              "image": {
+                "img_url": "https://img1.epetbar.com/2016-03/25/16/b7a9ce4825c6ad5dffa5e9c19f9f47d7.jpg",
+                "img_size": "165x165"
+              },
+              "sale_price": "390.00",
+              "little_price": "489.00",
+              "subject": "彼痞客ppark 多功能 猫用外出包 颜色随机",
+              "brandName": "彼痞客ppark",
+              "discount": "",
+              "reduce_price": "省99",
+              "gid": "157634",
+              "target": {
+                "mode": "miaosha",
+                "param": {
+                  "title": "每日疯抢",
+                  "tid": "09:00"
+                },
+                "sensor": {
+                  "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:157634",
+                  "click_info": "首页.精选.每日疯抢.tid:09:00|gid:157634",
+                  "button_name": "服务器配置点击"
+                }
+              },
+              "vip": {}
+            },
+            {
+              "discount_img": {
+                "img_url": "",
+                "img_size": ""
+              },
+              "image": {
+                "img_url": "https://img1.epetbar.com/common/upload/commonfile/2020/02/03/113333_830172.jpg",
+                "img_size": "165x165"
+              },
+              "sale_price": "119.00",
+              "little_price": "258.00",
+              "subject": "【临期商品10月到期】爱乐滴 6支/盒 4ml/10kg以上 整盒",
+              "brandName": "维克Virbac",
+              "discount": "",
+              "reduce_price": "省139",
+              "gid": "174894",
+              "target": {
+                "mode": "miaosha",
+                "param": {
+                  "title": "每日疯抢",
+                  "tid": "09:00"
+                },
+                "sensor": {
+                  "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:174894",
+                  "click_info": "首页.精选.每日疯抢.tid:09:00|gid:174894",
+                  "button_name": "服务器配置点击"
+                }
+              },
+              "vip": {}
+            },
+            {
+              "discount_img": {
+                "img_url": "",
+                "img_size": ""
+              },
+              "image": {
+                "img_url": "https://img1.epetbar.com/common/upload/commonfile/2021/06/02/095649_249265.jpg",
+                "img_size": "165x165"
+              },
+              "sale_price": "9.70",
+              "little_price": "10.90",
+              "subject": "伟嘉 吞拿鱼及三文鱼味成猫粮 300g",
+              "brandName": "伟嘉whiskas",
+              "discount": "9折",
+              "reduce_price": "",
+              "gid": "119639",
+              "target": {
+                "mode": "miaosha",
+                "param": {
+                  "title": "每日疯抢",
+                  "tid": "09:00"
+                },
+                "sensor": {
+                  "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:119639",
+                  "click_info": "首页.精选.每日疯抢.tid:09:00|gid:119639",
+                  "button_name": "服务器配置点击"
+                }
+              },
+              "vip": {}
+            },
+            {
+              "discount_img": {
+                "img_url": "",
+                "img_size": ""
+              },
+              "image": {
+                "img_url": "https://img1.epetbar.com/common/upload/commonfile/2021/04/27/164211_200510.jpg",
+                "img_size": "165x165"
+              },
+              "sale_price": "11.00",
+              "little_price": "36.00",
+              "subject": "益生菌 5*5g/盒",
+              "brandName": "麦德氏",
+              "discount": "3.1折",
+              "reduce_price": "",
+              "gid": "170855",
+              "target": {
+                "mode": "miaosha",
+                "param": {
+                  "title": "每日疯抢",
+                  "tid": "09:00"
+                },
+                "sensor": {
+                  "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:170855",
+                  "click_info": "首页.精选.每日疯抢.tid:09:00|gid:170855",
+                  "button_name": "服务器配置点击"
+                }
+              },
+              "vip": {}
+            },
+            {
+              "discount_img": {
+                "img_url": "",
+                "img_size": ""
+              },
+              "image": {
+                "img_url": "https://img1.epetbar.com/goods/sales/upload_file_20194176521.jpg",
+                "img_size": "165x165"
+              },
+              "sale_price": "15.00",
+              "little_price": "25.00",
+              "subject": "BeaconPet 绿洲之光饮水机系列   专用活性炭过滤芯 2片/盒",
+              "brandName": "BeaconPet",
+              "discount": "6折",
+              "reduce_price": "",
+              "gid": "176084",
+              "target": {
+                "mode": "miaosha",
+                "param": {
+                  "title": "每日疯抢",
+                  "tid": "09:00"
+                },
+                "sensor": {
+                  "referer_detail": "首页.精选.每日疯抢.tid:09:00|gid:176084",
+                  "click_info": "首页.精选.每日疯抢.tid:09:00|gid:176084",
+                  "button_name": "服务器配置点击"
+                }
+              },
+              "vip": {}
+            }
+          ]
+        }
+      },
+      {
+        "index": "1352",
+        "module_name_for_google_utm": "体验馆标题",
+        "is_show": 1,
+        "type": "21",
+        "is_dynamic": "0",
+        "type_name": "自定义Title模板",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "title_height": "80",
+          "top_line": {
+            "isline": 0,
+            "line_color": "",
+            "padding": "",
+            "line_image": {}
+          },
+          "bottom_line": {
+            "isline": 0,
+            "line_color": "",
+            "padding": "",
+            "line_image": {}
+          },
+          "left": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2018-02/07/10/9af52c2961a337c7b19adc28b6068a5a.jpg",
+              "img_size": "285x110",
+              "target": {
+                "mode": "web",
+                "param": "http://wap.epet.com/union/trials/main.html",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:http://wap.epet.com/union/trials/main.html",
+                  "click_info": "首页.精选.自定义title.param:http://wap.epet.com/union/trials/main.html",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          },
+          "center": {},
+          "right": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2017-12/13/13/5cfcbe65444cb2ce687118f8dc0ceca2.jpg",
+              "img_size": "120x110",
+              "target": {
+                "mode": "web",
+                "param": "http://wap.epet.com/union/trials/main.html",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:http://wap.epet.com/union/trials/main.html",
+                  "click_info": "首页.精选.自定义title.param:http://wap.epet.com/union/trials/main.html",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "index": "2969",
+        "module_name_for_google_utm": "华丽的分割线",
+        "is_show": 1,
+        "type": "100",
+        "is_dynamic": "0",
+        "type_name": "模块分割线",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "image": "",
+          "img_size": "750x25",
+          "target": {}
+        }
+      },
+      {
+        "index": "7168",
+        "module_name_for_google_utm": "非标板块",
+        "is_show": 1,
+        "type": "256",
+        "is_dynamic": "0",
+        "type_name": "[1.15]非标品推荐模板",
+        "css": {
+          "margin_bottom": 20,
+          "background_color": "#f7f7f7",
+          "padding_color": ""
+        },
+        "data": {
+          "title": "养宠风尚 拒绝平庸",
+          "target": {
+            "mode": "web",
+            "param": "https://wap.epet.com/app/orderTopic/1955"
+          },
+          "list": [
+            {
+              "gid": "1168402",
+              "goods_img": "https://img2.epetbar.com/common/upload/commonfile/2020/09/24/142941_802695.jpg?x-oss-process=style/waterfall&$1=300",
+              "no_stock_img": "",
+              "img_src": "https://img2.epetbar.com/nowater/2021-05/07/11/a660df15a0a73b447fd85494a8be9046.jpg?x-oss-process=style/waterfall&$1=350",
+              "buytype": "",
+              "buytype_background_color": "#7EE4C8",
+              "buytype_background_color_end": "#81ECCC",
+              "title": "起驾回宫 宫廷御喵房",
+              "sale_price": "117.00",
+              "market_price": "139.00",
+              "be_interested": "1764人感兴趣",
+              "target": {
+                "mode": "goods",
+                "param": "1168402"
+              }
+            },
+            {
+              "gid": "1398723",
+              "goods_img": "https://img2.epetbar.com/common/upload/commonfile/2021/09/26/142819_338929.jpg?x-oss-process=style/waterfall&$1=300",
+              "no_stock_img": "",
+              "img_src": "https://img2.epetbar.com/nowater/2021-11/22/17/bf9c942b94745b902753c1ffb33f3f9c.jpg?x-oss-process=style/waterfall&$1=350",
+              "buytype": "",
+              "buytype_background_color": "#7EE4C8",
+              "buytype_background_color_end": "#81ECCC",
+              "title": "看我妖娆身姿让人称赞",
+              "sale_price": "11.00",
+              "market_price": "20.00",
+              "be_interested": "1181人感兴趣",
+              "target": {
+                "mode": "goods",
+                "param": "1398723"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "2973",
+        "module_name_for_google_utm": "小剧场标题",
+        "is_show": 1,
+        "type": "21",
+        "is_dynamic": "0",
+        "type_name": "自定义Title模板",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "title_height": "110",
+          "top_line": {
+            "isline": 0,
+            "line_color": "",
+            "padding": "",
+            "line_image": {}
+          },
+          "bottom_line": {
+            "isline": 0,
+            "line_color": "",
+            "padding": "",
+            "line_image": {}
+          },
+          "left": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2017-12/13/16/ef5a8dee1393526fed2afe5059fb8c58.jpg",
+              "img_size": "285x110",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/epetube/index",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:https://wap.epet.com/app/epetube/index",
+                  "click_info": "首页.精选.自定义title.param:https://wap.epet.com/app/epetube/index",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          },
+          "center": {},
+          "right": {
+            "type": "image",
+            "text": {},
+            "img": {
+              "image": "https://img2.epetbar.com/nowater/2017-12/13/16/415c0eb8c9b2726d51aad24fc3e76939.jpg",
+              "img_size": "120x110",
+              "target": {
+                "mode": "web",
+                "param": "https://wap.epet.com/app/epetube/index",
+                "sensor": {
+                  "referer_detail": "首页.精选.自定义title.param:https://wap.epet.com/app/epetube/index",
+                  "click_info": "首页.精选.自定义title.param:https://wap.epet.com/app/epetube/index",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "index": "2978",
+        "module_name_for_google_utm": "小剧场视频推荐",
+        "is_show": 1,
+        "type": "104",
+        "is_dynamic": "0",
+        "type_name": "首页视频列表",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": []
+      },
+      {
+        "index": "2974",
+        "module_name_for_google_utm": "华丽的分割线",
+        "is_show": 1,
+        "type": "100",
+        "is_dynamic": "0",
+        "type_name": "模块分割线",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "image": "",
+          "img_size": "750x25",
+          "target": {}
+        }
+      },
+      {
+        "index": "3117",
+        "module_name_for_google_utm": "华丽的分割线",
+        "is_show": 1,
+        "type": "100",
+        "is_dynamic": "0",
+        "type_name": "模块分割线",
+        "css": {
+          "margin_bottom": 0,
+          "background_color": "",
+          "padding_color": ""
+        },
+        "value": {
+          "image": "",
+          "img_size": "750x25",
+          "target": {}
+        }
+      },
+      {
+        "index": "7165",
+        "module_name_for_google_utm": "单品推荐",
+        "is_show": 1,
+        "type": "253",
+        "is_dynamic": "0",
+        "type_name": "[1.15]爆单推荐",
+        "css": {
+          "margin_bottom": 20,
+          "background_color": "#F7F7F7",
+          "padding_color": ""
+        },
+        "data": {
+          "title": "心选特惠",
+          "subtitle": "严选好物降价啦！",
+          "target": {
+            "mode": "web",
+            "param": "https://wap.epet.com/app/orderTopic/1954"
+          },
+          "list": [
+            {
+              "goods_img": "https://img2.epetbar.com/common/upload/commonfile/2022/05/20/0104402_153540.jpg?x-oss-process=style/waterfall&$1=300",
+              "no_stock_img": "",
+              "img_src": "",
+              "buytype": "多件折扣",
+              "buytype_background_color": "#7EE4C8",
+              "buytype_background_color_end": "#81ECCC",
+              "title": "德国原装进口拜耳Bayer 索来多 猫用体外驱虫项圈 ",
+              "sale_price": "176.00",
+              "market_price": "358.00",
+              "be_interested": "1147人感兴趣",
+              "target": {
+                "mode": "goods",
+                "param": "466140"
+              }
+            },
+            {
+              "goods_img": "https://img2.epetbar.com/common/upload/commonfile/2021/08/13/153046_285282.jpg?x-oss-process=style/waterfall&$1=300",
+              "no_stock_img": "",
+              "img_src": "",
+              "buytype": "",
+              "buytype_background_color": "#7EE4C8",
+              "buytype_background_color_end": "#81ECCC",
+              "title": "思想动物猫砂",
+              "sale_price": "32.00",
+              "market_price": "58.00",
+              "be_interested": "796人感兴趣",
+              "target": {
+                "mode": "goods",
+                "param": "820234"
+              }
+            },
+            {
+              "goods_img": "https://img2.epetbar.com/common/upload/commonfile/2020/011/17/144227_234995.jpg?x-oss-process=style/waterfall&$1=300",
+              "no_stock_img": "",
+              "img_src": "",
+              "buytype": "",
+              "buytype_background_color": "#7EE4C8",
+              "buytype_background_color_end": "#81ECCC",
+              "title": "BOTH奶粉",
+              "sale_price": "85.00",
+              "market_price": "118.00",
+              "be_interested": "1004人感兴趣",
+              "target": {
+                "mode": "goods",
+                "param": "120177"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "3777",
+        "module_name_for_google_utm": "猜你喜欢-标题",
+        "is_show": 1,
+        "type": "208",
+        "is_dynamic": "0",
+        "type_name": "标题模板(>=415)",
+        "css": {
+          "margin_bottom": 40,
+          "background_color": "#ffffff",
+          "padding_color": ""
+        },
+        "data": {
+          "left": {
+            "img_url": "https://img2.epetbar.com/nowater/2018-10/18/20/158151f3eb01287793a5c9f792d2da1f.png",
+            "img_size": "340x46",
+            "target": {
+              "sensor": {
+                "referer_detail": "首页.精选.标题模板",
+                "click_info": "首页.精选.标题模板",
+                "button_name": "服务器配置点击"
+              },
+              "mode": "no_need_jump",
+              "param": ""
+            }
+          },
+          "right": {}
+        }
+      },
+      {
+        "index": "3778",
+        "module_name_for_google_utm": "猜你喜欢-营销",
+        "is_show": 1,
+        "type": 218,
+        "is_dynamic": "0",
+        "type_name": "首页猜你喜欢新模板",
+        "css": {
+          "margin_bottom": 20,
+          "background_color": "#f3f4f5",
+          "padding_color": ""
+        },
+        "data": {
+          "cateid": "0",
+          "goods": [
+            {
+              "gid": 119235,
+              "photo": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/09/010/174432_771833.jpg",
+                "img_size": "165x165"
+              },
+              "subject": "百加世NOW FRESH 无谷幼猫粮 8磅",
+              "sale_price": "409.00",
+              "activity": [],
+              "sensor": {
+                "event_source": "商品列表页"
+              },
+              "unit_price": "56.49元/斤",
+              "country_image": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+                "img_size": "108x30"
+              },
+              "target": {
+                "mode": "goods",
+                "param": 119235,
+                "sensor": {
+                  "page_type": "首页",
+                  "page_pam": "",
+                  "event_source": "首页",
+                  "event_source_pam": "猜你喜欢-营销",
+                  "event_source_model": "猜你喜欢",
+                  "referer_detail": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "click_info": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "gid": 105058,
+              "photo": {
+                "img_url": "https://img2.epetbar.com/2016-12/12/10/585d5aa19e6a9f8c836e0c8bd19556b8.png",
+                "img_size": "165x165"
+              },
+              "subject": "伟嘉 精选牛肉妙鲜包 成猫 85g",
+              "sale_price": "3.90",
+              "activity": [],
+              "sensor": {
+                "event_source": "商品列表页"
+              },
+              "target": {
+                "mode": "goods",
+                "param": 105058,
+                "sensor": {
+                  "page_type": "首页",
+                  "page_pam": "",
+                  "event_source": "首页",
+                  "event_source_pam": "猜你喜欢-营销",
+                  "event_source_model": "猜你喜欢",
+                  "referer_detail": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "click_info": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "gid": 120343,
+              "photo": {
+                "img_url": "https://img2.epetbar.com/goods/sales/20190530133554_30842.jpg",
+                "img_size": "165x165"
+              },
+              "subject": "美国贝适安Petsafe旗下Drinkwell  经典型活氧喷泉猫用饮水机1.5L",
+              "sale_price": "289.00",
+              "activity": [],
+              "sensor": {
+                "event_source": "商品列表页"
+              },
+              "target": {
+                "mode": "goods",
+                "param": 120343,
+                "sensor": {
+                  "page_type": "首页",
+                  "page_pam": "",
+                  "event_source": "首页",
+                  "event_source_pam": "猜你喜欢-营销",
+                  "event_source_model": "猜你喜欢",
+                  "referer_detail": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "click_info": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "gid": 131639,
+              "photo": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/02/26/1601057_846342.jpg",
+                "img_size": "165x165"
+              },
+              "subject": "加拿大原装进口 爱肯拿Acana 无谷深海鱼配方全猫粮 1.8kg",
+              "sale_price": "245.00",
+              "activity": [],
+              "sensor": {
+                "event_source": "商品列表页"
+              },
+              "unit_price": "68.05元/斤",
+              "country_image": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+                "img_size": "108x30"
+              },
+              "title_image": {
+                "img_url": "https://static.epetbar.com/static_www/goods/v4/gtype_3.png",
+                "img_size": "60x30"
+              },
+              "target": {
+                "mode": "goods",
+                "param": 131639,
+                "sensor": {
+                  "page_type": "首页",
+                  "page_pam": "",
+                  "event_source": "首页",
+                  "event_source_pam": "猜你喜欢-营销",
+                  "event_source_model": "猜你喜欢",
+                  "referer_detail": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "click_info": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "gid": 121377,
+              "photo": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/12/25/114719_431088.jpg",
+                "img_size": "165x165"
+              },
+              "subject": "美国原装进口倍酷PetAg\t猫用全效代母乳粉 340g",
+              "sale_price": "228.00",
+              "activity": [],
+              "sensor": {
+                "event_source": "商品列表页"
+              },
+              "country_image": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/143b7ea7399146885f19d11af44d5a27.jpg",
+                "img_size": "108x30"
+              },
+              "target": {
+                "mode": "goods",
+                "param": 121377,
+                "sensor": {
+                  "page_type": "首页",
+                  "page_pam": "",
+                  "event_source": "首页",
+                  "event_source_pam": "猜你喜欢-营销",
+                  "event_source_model": "猜你喜欢",
+                  "referer_detail": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "click_info": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            },
+            {
+              "gid": 220609,
+              "photo": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/03/010/122559_565271.jpg",
+                "img_size": "165x165"
+              },
+              "subject": "顽皮Wanpy 鸡肉+金枪鱼配方猫用鲜封包 70g",
+              "sale_price": "3.20",
+              "activity": [],
+              "sensor": {
+                "event_source": "商品列表页"
+              },
+              "target": {
+                "mode": "goods",
+                "param": 220609,
+                "sensor": {
+                  "page_type": "首页",
+                  "page_pam": "",
+                  "event_source": "首页",
+                  "event_source_pam": "猜你喜欢-营销",
+                  "event_source_model": "猜你喜欢",
+                  "referer_detail": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "click_info": "首页.精选.猜你喜欢.猜你喜欢-营销",
+                  "button_name": "服务器配置点击"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "index": "5735",
+        "module_name_for_google_utm": "猜你喜欢",
+        "is_show": 1,
+        "type": "221",
+        "is_dynamic": "1",
+        "type_name": "猜你喜欢465",
+        "css": {
+          "margin_bottom": 40,
+          "background_color": "#F7F7F7",
+          "padding_color": ""
+        },
+        "page_can_pull_up": true,
+        "data": {
+          "list": [
+            {
+              "need_submit": {
+                "id": "111388",
+                "type": "goods"
+              },
+              "gid": 111388,
+              "sold": "1.8w+人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/03/06/0102131_620310.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "皇家royal canin 室内成猫粮 2k...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {
+                "content": "立省12.00",
+                "bg_color": "#FFA400",
+                "font_color": "#FFFFFF"
+              },
+              "left_top_flag_img_url": "",
+              "left_top_flag_img": {
+                "img_url": "",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "",
+              "goods_properties": [
+                "成猫",
+                "鸡肉",
+                "小包"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "129.00",
+                "market_price": "141.00",
+                "price_prefix": "",
+                "tag_content": "降￥12",
+                "tag_color_flag": "yellow",
+                "gutou_pet_price_after_discount": "129.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {
+                "price": "",
+                "img": {
+                  "img_url": "https://static.epetbar.com/static_www/goods/v4/subscription/sub_list_new.png",
+                  "img_size": "26X26"
+                },
+                "complete_logo_img": {
+                  "img_url": "https://static.epetbar.com/static_app/app_home/cycle_sale_icon1.png",
+                  "img_size": "82X22"
+                },
+                "tag": "周期配送"
+              },
+              "rank_detail": {
+                "gid": "111388",
+                "message": "入选猫猫长胖要吃什么粮？榜单",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "132"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 111388,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_111388_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_111388_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "228332",
+                "type": "goods"
+              },
+              "gid": 228332,
+              "sold": "892人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/08/13/153706_544503.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "加拿大原装进口纽顿nutram number...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {
+                "content": "立省182.00",
+                "bg_color": "#FFA400",
+                "font_color": "#FFFFFF"
+              },
+              "left_top_flag_img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+              "left_top_flag_img": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "加拿大",
+              "goods_properties": [
+                "全年龄猫",
+                "鱼肉",
+                "小包"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "368.00",
+                "market_price": "550.00",
+                "price_prefix": "",
+                "tag_content": "6.6折",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "368.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "228332",
+                "message": "入选进口猫粮热销榜",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "86"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 228332,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_228332_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_228332_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "105260",
+                "type": "goods"
+              },
+              "gid": 105260,
+              "sold": "2.2w+人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/03/09/0104028_469727.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "皇家royal canin BK34 1-4...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {},
+              "left_top_flag_img_url": "",
+              "left_top_flag_img": {
+                "img_url": "",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "",
+              "goods_properties": [
+                "奶猫",
+                "怀孕哺乳期猫",
+                "鸡肉"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "31.00",
+                "market_price": "39.00",
+                "price_prefix": "",
+                "tag_content": "7.9折",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "31.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {},
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 105260,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_105260_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_105260_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "154316",
+                "type": "goods"
+              },
+              "gid": 154316,
+              "sold": "4.9w+人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/02/04/172228_127892.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "雷米高 澳丽得 海洋鱼味全猫粮 500g ",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {},
+              "left_top_flag_img_url": "",
+              "left_top_flag_img": {
+                "img_url": "",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "",
+              "goods_properties": [
+                "全年龄猫",
+                "鸡肉",
+                "超小包"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "6.00",
+                "market_price": "8.80",
+                "price_prefix": "",
+                "tag_content": "6.8折",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "6.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "154316",
+                "message": "入选护肤美毛猫粮排行榜",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "154"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 154316,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_154316_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_154316_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "250131",
+                "type": "goods"
+              },
+              "gid": 250131,
+              "sold": "533人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/011/23/163745_797244.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "醇粹Purich 室内全猫粮 10kg ",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {
+                "content": "立省150.00",
+                "bg_color": "#FFA400",
+                "font_color": "#FFFFFF"
+              },
+              "left_top_flag_img_url": "",
+              "left_top_flag_img": {
+                "img_url": "",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "",
+              "goods_properties": [
+                "成猫",
+                "鱼肉",
+                "中包"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "159.00",
+                "market_price": "309.00",
+                "price_prefix": "",
+                "tag_content": "5.1折",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "159.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {
+                "price": "",
+                "img": {
+                  "img_url": "https://static.epetbar.com/static_www/goods/v4/subscription/sub_list_new.png",
+                  "img_size": "26X26"
+                },
+                "complete_logo_img": {
+                  "img_url": "https://static.epetbar.com/static_app/app_home/cycle_sale_icon1.png",
+                  "img_size": "82X22"
+                },
+                "tag": "周期配送"
+              },
+              "rank_detail": {
+                "gid": "250131",
+                "message": "入选护肤美毛猫粮排行榜",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "154"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 250131,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_250131_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_250131_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "129979",
+                "type": "goods"
+              },
+              "gid": 129979,
+              "sold": "1.7w+人购买",
+              "type": "goods",
+              "has_video": 1,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/08/13/152533_170118.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "【保质期2022年11月】加拿大原装进口 原...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {},
+              "left_top_flag_img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+              "left_top_flag_img": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "加拿大",
+              "goods_properties": [
+                "全年龄猫",
+                "鱼肉",
+                "膨化"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "795.00",
+                "market_price": "800.00",
+                "price_prefix": "",
+                "tag_content": "",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "795.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "129979",
+                "message": "入选喵主爱吃榜—鱼肉篇榜单",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "93"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 129979,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_129979_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_129979_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "462683",
+                "type": "goods"
+              },
+              "gid": 462683,
+              "sold": "249人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/07/16/111839_766289.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "加拿大进口素力高Solid Gold 无谷物...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {
+                "content": "立省50.00",
+                "bg_color": "#FFA400",
+                "font_color": "#FFFFFF"
+              },
+              "left_top_flag_img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+              "left_top_flag_img": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "加拿大",
+              "goods_properties": [
+                "全年龄猫",
+                "鸡肉",
+                "中包"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "368.00",
+                "market_price": "418.00",
+                "price_prefix": "",
+                "tag_content": "降￥50",
+                "tag_color_flag": "yellow",
+                "gutou_pet_price_after_discount": "368.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "462683",
+                "message": "入选猫猫喜爱榜",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "174"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 462683,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_462683_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_462683_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "131641",
+                "type": "goods"
+              },
+              "gid": 131641,
+              "sold": "9320人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/02/26/161246_755367.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "加拿大原装进口 爱肯拿Acana 无谷深海鱼...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {},
+              "left_top_flag_img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+              "left_top_flag_img": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "加拿大",
+              "goods_properties": [
+                "全年龄猫",
+                "鱼肉",
+                "中包"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "700.00",
+                "market_price": "720.00",
+                "price_prefix": "",
+                "tag_content": "",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "700.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "131641",
+                "message": "入选WDJ权威推荐榜",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "91"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 131641,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_131641_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_131641_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "176562",
+                "type": "goods"
+              },
+              "gid": 176562,
+              "sold": "4890人购买",
+              "type": "goods",
+              "has_video": 1,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/12/22/122859_183701.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "伯纳天纯Pure&Natural 添加金枪鱼...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {
+                "content": "立省204.00",
+                "bg_color": "#FFA400",
+                "font_color": "#FFFFFF"
+              },
+              "left_top_flag_img_url": "",
+              "left_top_flag_img": {
+                "img_url": "",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "",
+              "goods_properties": [
+                "成猫",
+                "鱼肉",
+                "中包"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "285.00",
+                "market_price": "489.00",
+                "price_prefix": "",
+                "tag_content": "5.8折",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "285.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "176562",
+                "message": "入选国货之光榜单",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "162"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 176562,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_176562_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_176562_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "210540",
+                "type": "goods"
+              },
+              "gid": 210540,
+              "sold": "538人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/2017-08/16/10/46eeb1cdb0eb691a5b8c6da9aa487128.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "美国原装进口 Instinct生鲜本能百利猫...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {},
+              "left_top_flag_img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/143b7ea7399146885f19d11af44d5a27.jpg",
+              "left_top_flag_img": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/143b7ea7399146885f19d11af44d5a27.jpg",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "美国",
+              "goods_properties": [
+                "全年龄猫",
+                "鸭肉",
+                "膨化"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "448.00",
+                "market_price": "547.20",
+                "price_prefix": "",
+                "tag_content": "",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "448.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {},
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 210540,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_210540_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_210540_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "210543",
+                "type": "goods"
+              },
+              "gid": 210543,
+              "sold": "3240人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/2017-08/16/10/2f8880a76fee119085b55c8bda27958a.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "美国原装进口Instinct生鲜本能百利猫粮...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {},
+              "left_top_flag_img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/143b7ea7399146885f19d11af44d5a27.jpg",
+              "left_top_flag_img": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/143b7ea7399146885f19d11af44d5a27.jpg",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "美国",
+              "goods_properties": [
+                "全年龄猫",
+                "鸡肉",
+                "冻干"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "488.00",
+                "market_price": "506.00",
+                "price_prefix": "",
+                "tag_content": "",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "488.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {},
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 210543,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_210543_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_210543_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "144407",
+                "type": "goods"
+              },
+              "gid": 144407,
+              "sold": "6418人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/08/13/152611_510075.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "【保质期2022年11月】加拿大原装进口 爱...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {},
+              "left_top_flag_img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+              "left_top_flag_img": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "加拿大",
+              "goods_properties": [
+                "全年龄猫",
+                "鸡肉",
+                "禽肉"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "235.00",
+                "market_price": "299.00",
+                "price_prefix": "",
+                "tag_content": "",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "235.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "144407",
+                "message": "入选高“回头率”好食榜",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "124"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 144407,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_144407_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_144407_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "255709",
+                "type": "goods"
+              },
+              "gid": 255709,
+              "sold": "164人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/12/03/170152_706480.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "雷米高 澳丽得深海三种鱼全价猫粮 2kg",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {
+                "content": "立省21.00",
+                "bg_color": "#FFA400",
+                "font_color": "#FFFFFF"
+              },
+              "left_top_flag_img_url": "",
+              "left_top_flag_img": {
+                "img_url": "",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "",
+              "goods_properties": [
+                "全年龄猫",
+                "肠胃调理",
+                "鱼肉"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "28.00",
+                "market_price": "49.00",
+                "price_prefix": "",
+                "tag_content": "5.7折",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "28.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {},
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 255709,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_255709_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_255709_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "1264024",
+                "type": "goods"
+              },
+              "gid": 1264024,
+              "sold": "123人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2021/02/07/152124_544085.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "醇粹Purich 添加三文鱼无谷冻干猫粮 5...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {
+                "content": "立省110.00",
+                "bg_color": "#FFA400",
+                "font_color": "#FFFFFF"
+              },
+              "left_top_flag_img_url": "",
+              "left_top_flag_img": {
+                "img_url": "",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "",
+              "goods_properties": [
+                "全年龄猫",
+                "鱼肉",
+                "中包"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "149.00",
+                "market_price": "259.00",
+                "price_prefix": "",
+                "tag_content": "5.7折",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "149.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {},
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 1264024,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_1264024_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_1264024_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "119433",
+                "type": "goods"
+              },
+              "gid": 119433,
+              "sold": "1.8w+人购买",
+              "type": "goods",
+              "has_video": 1,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2020/02/03/135758_713265.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "加拿大原装进口 原始猎食渴望  全肉配方 全...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {},
+              "left_top_flag_img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+              "left_top_flag_img": {
+                "img_url": "https://img2.epetbar.com/nowater/2016-08/12/16/a5b3b8bc1114ddffce177d007b6346a9.jpg",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "加拿大",
+              "goods_properties": [
+                "全年龄猫",
+                "鸡肉",
+                "禽肉"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "700.00",
+                "market_price": "774.00",
+                "price_prefix": "",
+                "tag_content": "",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "700.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "119433",
+                "message": "入选WDJ权威推荐榜",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "91"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 119433,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_119433_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_119433_6",
+                "rank_model_id": "6"
+              }
+            },
+            {
+              "need_submit": {
+                "id": "1398952",
+                "type": "goods"
+              },
+              "gid": 1398952,
+              "sold": "123人购买",
+              "type": "goods",
+              "has_video": 0,
+              "img": {
+                "img_url": "https://img2.epetbar.com/common/upload/commonfile/2022/05/010/154412_317610.jpg@!300w-c",
+                "img_size": "300X300"
+              },
+              "title": "醇粹Purich 黑标全价冻干鸡胸肉猫粮 5...",
+              "sub_title": {
+                "bg_img": {},
+                "bg_img_left_logo": {},
+                "content": "",
+                "bg_color_flag": "pink",
+                "font_color": "#FF5757",
+                "has_border_radius": false
+              },
+              "left_top_tag": {
+                "content": "立省103.00",
+                "bg_color": "#FFA400",
+                "font_color": "#FFFFFF"
+              },
+              "left_top_flag_img_url": "",
+              "left_top_flag_img": {
+                "img_url": "",
+                "img_size": "70X40"
+              },
+              "left_top_flag_name": "",
+              "goods_properties": [
+                "幼猫",
+                "成猫",
+                "鸡肉"
+              ],
+              "activity_tags": [],
+              "tags_v490": [],
+              "normal_price": {
+                "price": "176.00",
+                "market_price": "279.00",
+                "price_prefix": "",
+                "tag_content": "6.3折",
+                "tag_color_flag": "pink",
+                "gutou_pet_price_after_discount": "176.00",
+                "gutou_pet_tag": [],
+                "gutou_pet_price_prefix": ""
+              },
+              "subscribe": {},
+              "rank_detail": {
+                "gid": "1398952",
+                "message": "入选猫猫喜爱榜",
+                "icon": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                "icon_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/16/441af4aaab5be5a2ef56822c060c804d.png",
+                  "img_size": "20X20"
+                },
+                "target": {
+                  "mode": "rank",
+                  "param": "174"
+                },
+                "bg_img": {
+                  "img_url": "https://img2.epetbar.com/nowater/2019-12/24/15/f21e0cf044f2fc066ba22850b59a6c3a.png",
+                  "img_size": "345X100"
+                },
+                "bg_img_right": []
+              },
+              "discount_code": {},
+              "group_buy": {},
+              "recommend_reason": "",
+              "target": {
+                "mode": "goods",
+                "param": 1398952,
+                "sensor": {
+                  "referer_detail": "猫咪首页.猜你喜欢.商品推荐.goods_2_1398952_6"
+                }
+              },
+              "shence": {
+                "page_type": "首页",
+                "page_pam": "",
+                "event_source": "猜你喜欢",
+                "event_source_pam": "",
+                "click_info": "goods_2_1398952_6",
+                "rank_model_id": "6"
+              }
+            }
+          ],
+          "header": {
+            "menus": [
+              {
+                "name": "全部",
+                "selected": 1,
+                "type": "main",
+                "filters": {
+                  "tag": "all",
+                  "pet_type": ""
+                }
+              },
+              {
+                "name": "进口",
+                "selected": 0,
+                "type": "select",
+                "filters": {
+                  "tag": "import",
+                  "pet_type": ""
+                }
+              },
+              {
+                "name": "主粮",
+                "selected": 0,
+                "type": "select",
+                "filters": {
+                  "tag": "grain",
+                  "pet_type": ""
+                }
+              },
+              {
+                "name": "零食",
+                "selected": 0,
+                "type": "select",
+                "filters": {
+                  "tag": "snacks",
+                  "pet_type": ""
+                }
+              },
+              {
+                "name": "养护",
+                "selected": 0,
+                "type": "select",
+                "filters": {
+                  "tag": "curing",
+                  "pet_type": ""
+                }
+              },
+              {
+                "name": "日用",
+                "selected": 0,
+                "type": "select",
+                "filters": {
+                  "tag": "dailyuse",
+                  "pet_type": ""
+                }
+              }
+            ],
+            "icon": {
+              "img_url": "https://axhub.im/ax9/67bba171a2c2a27a/images/猜你喜欢方案/u304.png",
+              "img_size": "30X30"
+            },
+            "title": "猜你喜欢"
+          },
+          "is_recommend_by_pet": 0
+        }
+      }
+    ],
+    "extend": {
+      "icon_version": "532"
+    },
+    "current_page_name": "猫咪首页",
+    "searchFontColor": "#c77357",
+    "searchBgColor": "#ffdfd2",
+    "iconColor": "#b6571e",
+    "bgColor": "#c85623",
+    "petFontColor": "#fff0f3",
+    "petColor": "#fff0f3",
+    "newUserConfig": {
+      "money": "100",
+      "text": "新用户礼包",
+      "target_url": "https://wap.epet.com/app/newfangled/index"
+    }
+  },
+  "show_subscription_dialog": {},
+  "code_remind": {},
+  "alert_target": [
+    {
+      "text": "我知道了",
+      "target": ""
+    }
+  ]
+}
