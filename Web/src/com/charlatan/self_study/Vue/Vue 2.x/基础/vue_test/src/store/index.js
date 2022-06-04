@@ -59,7 +59,7 @@ const mutations = {
 }
 //  用于存储数据
 const state = {
-    sum: 0,
+    sum: 0
 }
 
 // 创建并导出 Store

@@ -9,9 +9,9 @@
   */
 export default class ScorePanel {
     constructor(grade = ScorePanel.highestGrade) {
-        this._score = 0;
         this._level = 1;
         this.upScore = 10;
+        this._score = 0;
         this.grade = grade;
         this.scoEle = document.getElementById('score');
         this.levEle = document.getElementById('panel');

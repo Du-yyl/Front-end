@@ -19,9 +19,6 @@ export default class Snake {
     get X() {
         return this.head.offsetLeft;
     }
-    get Y() {
-        return this.head.offsetTop;
-    }
     set X(value) {
         if (this.X !== value) {
             let number = this.throughXY(value);
@@ -40,6 +37,9 @@ export default class Snake {
             this.head.style.left = number + 'px';
             this.checkHeadBody();
         }
+    }
+    get Y() {
+        return this.head.offsetTop;
     }
     set Y(value) {
         if (this.Y !== value) {

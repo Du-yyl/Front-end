@@ -10,21 +10,11 @@
 
 import Vue from 'vue'
 import App from './App'
-
-// 引入组件库
-// import ElementUI from 'element-ui'
-// 引入全部样式
-// import 'element-ui/lib/theme-chalk/index.css'
-// 使用 ui 样式
-// Vue.use(ElementUI)
-// 按需引入样式
-// 引入指定的内容
-import { Button, Row } from 'element-ui'
-// 注册引入的组件
-Vue.component(Button.name, Button)
-Vue.component(Row)
+import store from './store'
 
 Vue.config.productionTip = false
 const vm = new Vue({
-    el: '#app', render: createElement => createElement(App),
+    el: '#app',
+    render: createElement => createElement(App),
+    store,
 })

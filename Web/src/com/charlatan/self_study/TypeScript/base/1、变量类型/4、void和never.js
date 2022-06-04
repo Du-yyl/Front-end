@@ -1,9 +1,7 @@
-'use strict'
-
-function sum () {
-    return undefined
+"use strict";
+function sum() {
+    return undefined;
 }
-
-function sam () {
-    throw new Error('错误')
+function sam() {
+    throw new Error('错误');
 }
